@@ -1,5 +1,5 @@
 baseurl     = "https://toby-marks.github.io/tobybase/"  # the baseurl for your website
-title       = "tobybase.com"             # blog title
+title       = "tobybase"             # blog title
 paginate    = 10                     # the number of posts on a page
 publishDir  = "docs"
 
