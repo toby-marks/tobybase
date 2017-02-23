@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Unix/Linux on tobybase.com</title>
+    <link>http://localhost:1313/tags/unix/linux/index.xml</link>
+    <description>Recent content in Unix/Linux on tobybase.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>2015 ~ Toby Marks</copyright>
+    <atom:link href="/tags/unix/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+      
+        
+          <item>
+            <title>How to Use ps to List Top Memory, CPU Eating Processes</title>
+            <link>http://localhost:1313/blog/2013/07/24/how-to-use-ps-to-list-top-memory-cpu-eating-processes/</link>
+            <pubDate>Wed, 24 Jul 2013 21:42:00 +0000</pubDate>
+            
+            <guid>http://localhost:1313/blog/2013/07/24/how-to-use-ps-to-list-top-memory-cpu-eating-processes/</guid>
+            <description>&lt;p&gt;The &lt;code&gt;ps&lt;/code&gt; command is a versatile and configurable way to look at the processes running on your system, though I&amp;rsquo;ve generally gotten by with a lazy &lt;code&gt;ps -ef&lt;/code&gt; to find out whatever I needed to know. Recently, though, a client&amp;rsquo;s server began running out of memory, and as a number of processes were running on the server, the culprit was not immediately clear. I wanted to provide them with a quick, simple diagnostic tool they could use the next time they received an alert.&lt;/p&gt;
+
+&lt;p&gt;If you look at the man page for &lt;code&gt;ps&lt;/code&gt; you&amp;rsquo;ll find a number of options available for sorting the list of processes returned as well as for filtering the columns displayed.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2013-07-24-linux-unix-use-ps-to-list-top-memory-cpu-eating-processes/ac6287b65af17b95d247ea063f0aa1bfc6f106f3b69adf0ae73ed8258d3a6c7b.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Some examples of &lt;code&gt;ps&lt;/code&gt; options, from RHEL 5.6:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;-e&lt;/strong&gt;&lt;br /&gt;
+select all processes&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;-a&lt;/strong&gt;&lt;br /&gt;
+select all &amp;ldquo;child&amp;rdquo; processes&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;-U &amp;lt;user&amp;gt;&lt;/strong&gt;&lt;br /&gt;
+select all processes for a specified user&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;-p &amp;lt;pid&amp;gt;&lt;/strong&gt;&lt;br /&gt;
+select by process id&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;-f&lt;/strong&gt;&lt;br /&gt;
+full-format listing; adds columns and shows process arguments&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;-o&lt;/strong&gt;&lt;br /&gt;
+user-defined format&lt;/p&gt;
+
+&lt;p&gt;Many others are available, of course, but in order to keep it simple for the client I wanted to show the top 10 processes in terms of memory utilization, with the pid, memory usage, and process name displayed. Here is what I came up with:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;$ ps -eo pid,user,pmem,args O R | tail -n &lt;span style=&#34;color: #009999&#34;&gt;10&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;And here is an explanation:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ps&lt;/strong&gt;&lt;br /&gt;
+shows running processes&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;-e&lt;/strong&gt;&lt;br /&gt;
+show all processes&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;-o pid,user,poem,args&lt;/strong&gt;&lt;br /&gt;
+show the pid, %mem, and process columns&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;O R&lt;/strong&gt;&lt;br /&gt;
+sort by memory usage (ascending)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;tail&lt;/strong&gt;&lt;br /&gt;
+shows only the last lines&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;-n 10&lt;/strong&gt;&lt;br /&gt;
+show the last 10 lines&lt;/p&gt;
+
+&lt;p&gt;I liked the concept so much that I decided to adapt it for OS X, where the &lt;code&gt;ps&lt;/code&gt; command takes a slightly different set of arguments. To my .bash_profile file I added the following lines:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #00aaaa&#34;&gt;alias&lt;/span&gt; &lt;span style=&#34;color: #aa0000&#34;&gt;psmem&lt;/span&gt;=&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;while :; do clear; ps -ecm -o %mem,rss,pid,user,state,args | head -n 10; sleep 5; done&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #00aaaa&#34;&gt;alias&lt;/span&gt; &lt;span style=&#34;color: #aa0000&#34;&gt;pscpu&lt;/span&gt;=&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;while :; do clear; ps -ecr -o %cpu,pid,user,state,args | head -n 10; sleep 2; done&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;I have one alias for retrieving my top memory-utilizing processes and one for my top CPU-utilizing processes. The &lt;code&gt;while&lt;/code&gt; loop in the alias implements a functionality similar to that of the Linux &lt;code&gt;watch&lt;/code&gt; command, clearing the screen and running the process indefinitely until it is forcibly quit. For my own purposes I wanted to display some additional columns, like username and process state. I also changed the sort ordering to display the largest processes at the top of the list.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2013-07-24-linux-unix-use-ps-to-list-top-memory-cpu-eating-processes/2bcd3b2c40d8bc37893b47399aed325508e95c655492de8866a8365eede7008f.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</description>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>How To Make Bash Scripts crontab-Compatible</title>
+            <link>http://localhost:1313/blog/2012/04/05/how-to-make-bash-scripts-crontab-compatible/</link>
+            <pubDate>Thu, 05 Apr 2012 21:19:05 +0000</pubDate>
+            
+            <guid>http://localhost:1313/blog/2012/04/05/how-to-make-bash-scripts-crontab-compatible/</guid>
+            <description>&lt;p&gt;When writing shell scripts in bash, consider whether your script can be automated in a batch scheduler like cron. If you reference any external resources in your script relative to the directory in which it resides, those references may break when running your script through cron.&lt;/p&gt;
+
+&lt;p&gt;By default, crontab runs scripts in the user&amp;rsquo;s home directory, as specified in &lt;code&gt;/etc/passwd&lt;/code&gt;. For user &amp;ldquo;Tim&amp;rdquo; with home directory &lt;code&gt;/home/tim&lt;/code&gt;, a sample crontab might look something like the following:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #009999&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color: #009999&#34;&gt;0&lt;/span&gt; * * * runme.sh
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Every night at midnight, cron will try to run the file &lt;code&gt;/home/tim/runme.sh&lt;/code&gt;. However, if &lt;code&gt;runme.sh&lt;/code&gt; is actually in a sub-directory under &lt;code&gt;~tim&lt;/code&gt;, you will need to tell cron how to reach the file. One option would be to qualify the path in crontab, like so:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #009999&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color: #009999&#34;&gt;0&lt;/span&gt; * * * ~/bin/runme.sh
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now cron can find the file. However, if the script makes references to other files inside of &lt;code&gt;/bin&lt;/code&gt; in a path-relative way, those references will be broken.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #aaaaaa; font-style: italic&#34;&gt;#!/bin/bash&lt;/span&gt;
+&lt;span style=&#34;color: #aaaaaa; font-style: italic&#34;&gt;#runme.sh&lt;/span&gt;
+./runthis.sh      &lt;span style=&#34;color: #aaaaaa; font-style: italic&#34;&gt;# can&amp;#39;t find this file when running under cron&lt;/span&gt;
+./runthat.sh      &lt;span style=&#34;color: #aaaaaa; font-style: italic&#34;&gt;# can&amp;#39;t find this file when running under cron&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;That&amp;rsquo;s because to cron &lt;code&gt;./&lt;/code&gt; is not the directory in which the script is running, but rather whatever is defined as the base directory; in the default case, the user&amp;rsquo;s home directory.&lt;/p&gt;
+
+&lt;p&gt;It is possible to specify the base directory in the crontab file itself by defining the special variable &lt;code&gt;HOME&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #aa0000&#34;&gt;HOME&lt;/span&gt;=/home/tim/bin
+&lt;span style=&#34;color: #009999&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color: #009999&#34;&gt;0&lt;/span&gt; * * * runme.sh
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;However, you may not always have control over how your crontab is configured. Perhaps a system administrator is in charge of all the schedules on your server. Or you may organize your scripts in several different directories.&lt;/p&gt;
+
+&lt;p&gt;An easy solution is to start your bash scripts with the following command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #00aaaa&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color: #0000aa&#34;&gt;$(&lt;/span&gt;dirname &lt;span style=&#34;color: #aa0000&#34;&gt;$0&lt;/span&gt;&lt;span style=&#34;color: #0000aa&#34;&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The program &lt;code&gt;dirname&lt;/code&gt; returns the directory portion of the fully qualified path name sent to it. The &lt;code&gt;$0&lt;/code&gt; argument in this context is name of the running script. Basically, this code ensures that the current working directory is the same as the directory in which your script is running. That way all your path-relative references are correct whether running manually or through a scheduler.&lt;/p&gt;
+</description>
+          </item>
+        
+      
+    
+  </channel>
+</rss>

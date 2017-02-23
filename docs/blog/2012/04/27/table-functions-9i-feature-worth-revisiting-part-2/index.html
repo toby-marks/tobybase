@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Table Functions: 9i Feature Worth Revisiting (Part 2)">
+    <meta name="author" content="Toby Marks">
+
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <title>Table Functions: 9i Feature Worth Revisiting (Part 2) &middot; tobybase.com</title>
+
+   	
+    
+        <link rel="stylesheet" href="http://localhost:1313//css/theme/cosmo.css">
+    
+
+    <link rel="stylesheet" href="http://localhost:1313//css/font-awesome.min.css">
+
+   	
+   	<link rel="stylesheet" href="http://localhost:1313//css/style.css">
+
+
+    
+    <script src="http://localhost:1313//js/jquery.min-2.1.4.js"></script>
+    <script src="http://localhost:1313//js/bootstrap.min-3.3.5.js"></script>
+
+    
+    <link href="" rel="alternate" type="application/rss+xml" title="tobybase.com" />
+</head>
+<body lang="en-US">
+    
+    <div class="container">
+    <div class="row">
+        <div class="navbar navbar-default " role="navigation">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="http://localhost:1313/"><img src="/img/logo.png" height="100%"></a>
+            </div>
+            <div class="navbar-collapse collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="http://localhost:1313/">Home</a></li>
+                    <li><a href="http://localhost:1313//post/">Blog</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-offset-1 col-md-10">
+			<h3>Table Functions: 9i Feature Worth Revisiting (Part 2)</h3>
+				<span class="label label-primary">04/27/2012</span> in 
+				
+					
+					<a href="/categories/splaining">Splaining</a>
+				 using tags
+				
+					
+					<a href="/tags/oracle">oracle</a>
+				
+					 , 
+					<a href="/tags/plsql">plsql</a>
+				
+					 , 
+					<a href="/tags/pipelined-table-functions">pipelined table functions</a>
+				
+			</small>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-offset-1 col-md-10">
+			<br>
+			<p>In <a href="/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-1/-1">part one of this series</a> I showed a simple example of how table functions can be used to treat PL/SQL collection types as tables in a SQL query. We used a nested table collection type to which we manually added a few entries. In this example, I intend to show a more practical use of table functions using all three PL/SQL collection types: associative arrays, nested tables, and VARRAYs.</p>
+
+<p>Let&rsquo;s revisit a use case I alluded to in my earlier blog entry: incorporating LDAP data into a query. Suppose your task is to code a custom authorization scheme for an enterprise application reporting system. You want row access to be determined by a user&rsquo;s group memberships in the company&rsquo;s Active Directory server. If a user is assigned to &ldquo;the Company A group&rdquo; in Active Directory, he gets to see Company A&rsquo;s data. You can configure that kind of restriction at a database level using <a href="http://www.oracle.com/technetwork/database/security/index-088277.html">Oracle&rsquo;s Virtual Private Database</a> feature. Configuring VPD is beyond the scope of this blog entry, but ultimately you will be associating a table to a portion of a SQL WHERE clause that gets appended to every query written against that table. You can find more documentation on VPD <a href="http://download.oracle.com/docs/cd/B28359_01/network.111/b28531/vpd.htm">on the OTN site</a>. In this case, let&rsquo;s assume you know that another team has written a PL/SQL database package to query data from Active Directory, and you want to make use of that code. The only problem is that all the functions in that package return collections of various types, and you need to be able to access that information from the WHERE clause you are building with VPD. This is where table functions come in handy.</p>
+
+<p>Let&rsquo;s begin by setting up our example schema. We&rsquo;ll be looking at client sales data. First, let&rsquo;s set up our clients.</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>    <span style="color: #0000aa">CREATE</span> <span style="color: #0000aa">TABLE</span> clients (
+      client_id <span style="color: #00aaaa">NUMBER</span>,
+      client_name VARCHAR2(<span style="color: #009999">50</span>));
+      
+    <span style="color: #0000aa">INSERT</span> <span style="color: #0000aa">INTO</span> clients <span style="color: #0000aa">VALUES</span> (<span style="color: #009999">100</span>, <span style="color: #aa5500">&#39;Timco Industries&#39;</span>);
+    <span style="color: #0000aa">INSERT</span> <span style="color: #0000aa">INTO</span> clients <span style="color: #0000aa">VALUES</span> (<span style="color: #009999">200</span>, <span style="color: #aa5500">&#39;Moneybros&#39;</span>);
+    <span style="color: #0000aa">INSERT</span> <span style="color: #0000aa">INTO</span> clients <span style="color: #0000aa">VALUES</span> (<span style="color: #009999">300</span>, <span style="color: #aa5500">&#39;The Monacle Corporation&#39;</span>);
+    <span style="color: #0000aa">INSERT</span> <span style="color: #0000aa">INTO</span> clients <span style="color: #0000aa">VALUES</span> (<span style="color: #009999">400</span>, <span style="color: #aa5500">&#39;Schmapple&#39;</span>);
+</pre></div>
+
+<p>We also need application users who will be logging in to view the report data. We&rsquo;ll assume each application user is uniquely linked to a user in Active Directory via the external_id column.</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>    <span style="color: #0000aa">CREATE</span> <span style="color: #0000aa">TABLE</span> users (
+      sequence_number <span style="color: #00aaaa">NUMBER</span>,
+      user_name VARCHAR2(<span style="color: #009999">20</span>),
+      external_id VARCHAR2(<span style="color: #009999">20</span>),
+      first_name VARCHAR2(<span style="color: #009999">30</span>),
+      last_name VARCHAR2(<span style="color: #009999">30</span>));
+      
+    <span style="color: #0000aa">INSERT</span> <span style="color: #0000aa">INTO</span> users <span style="color: #0000aa">VALUES</span> (<span style="color: #009999">1</span>, <span style="color: #aa5500">&#39;JACKA&#39;</span>, <span style="color: #aa5500">&#39;jaugusti&#39;</span>, <span style="color: #aa5500">&#39;Jack&#39;</span>, <span style="color: #aa5500">&#39;Augustine&#39;</span>);
+    <span style="color: #0000aa">INSERT</span> <span style="color: #0000aa">INTO</span> users <span style="color: #0000aa">VALUES</span> (<span style="color: #009999">2</span>, <span style="color: #aa5500">&#39;KENKI&#39;</span>, <span style="color: #aa5500">&#39;kkidd&#39;</span>, <span style="color: #aa5500">&#39;Ken&#39;</span>, <span style="color: #aa5500">&#39;Kidd&#39;</span>);
+    <span style="color: #0000aa">INSERT</span> <span style="color: #0000aa">INTO</span> users <span style="color: #0000aa">VALUES</span> (<span style="color: #009999">3</span>, <span style="color: #aa5500">&#39;BRIAH&#39;</span>, <span style="color: #aa5500">&#39;bhill&#39;</span>, <span style="color: #aa5500">&#39;Brian&#39;</span>, <span style="color: #aa5500">&#39;Hill&#39;</span>);
+    <span style="color: #0000aa">INSERT</span> <span style="color: #0000aa">INTO</span> users <span style="color: #0000aa">VALUES</span> (<span style="color: #009999">4</span>, <span style="color: #aa5500">&#39;KEOVO&#39;</span>, <span style="color: #aa5500">&#39;kvongkas&#39;</span>, <span style="color: #aa5500">&#39;Keo&#39;</span>, <span style="color: #aa5500">&#39;Vongkaseum&#39;</span>);
+</pre></div>
+
+<p>Finally, we need a data table on which to report.</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>    <span style="color: #0000aa">CREATE</span> <span style="color: #0000aa">TABLE</span> quarterly_sales_data (
+      sequence_number <span style="color: #00aaaa">NUMBER</span>,
+      client_id <span style="color: #00aaaa">NUMBER</span>,
+      sales_year <span style="color: #00aaaa">NUMBER</span>,
+      sales_quarter <span style="color: #00aaaa">NUMBER</span>,
+      sales_amount <span style="color: #00aaaa">NUMBER</span>);
+      
+    <span style="color: #0000aa">INSERT</span> <span style="color: #0000aa">INTO</span> quarterly_sales_data <span style="color: #0000aa">VALUES</span> (<span style="color: #009999">1</span>, <span style="color: #009999">100</span>, <span style="color: #009999">2011</span>, <span style="color: #009999">1</span>, <span style="color: #009999">20000</span>);
+    <span style="color: #0000aa">INSERT</span> <span style="color: #0000aa">INTO</span> quarterly_sales_data <span style="color: #0000aa">VALUES</span> (<span style="color: #009999">2</span>, <span style="color: #009999">100</span>, <span style="color: #009999">2011</span>, <span style="color: #009999">2</span>, <span style="color: #009999">17500</span>);
+    <span style="color: #0000aa">INSERT</span> <span style="color: #0000aa">INTO</span> quarterly_sales_data <span style="color: #0000aa">VALUES</span> (<span style="color: #009999">3</span>, <span style="color: #009999">100</span>, <span style="color: #009999">2011</span>, <span style="color: #009999">3</span>, <span style="color: #009999">33000</span>);
+    <span style="color: #0000aa">INSERT</span> <span style="color: #0000aa">INTO</span> quarterly_sales_data <span style="color: #0000aa">VALUES</span> (<span style="color: #009999">4</span>, <span style="color: #009999">200</span>, <span style="color: #009999">2011</span>, <span style="color: #009999">1</span>, <span style="color: #009999">4500</span>);
+    <span style="color: #0000aa">INSERT</span> <span style="color: #0000aa">INTO</span> quarterly_sales_data <span style="color: #0000aa">VALUES</span> (<span style="color: #009999">5</span>, <span style="color: #009999">200</span>, <span style="color: #009999">2011</span>, <span style="color: #009999">2</span>, <span style="color: #009999">7000</span>);
+    <span style="color: #0000aa">INSERT</span> <span style="color: #0000aa">INTO</span> quarterly_sales_data <span style="color: #0000aa">VALUES</span> (<span style="color: #009999">6</span>, <span style="color: #009999">200</span>, <span style="color: #009999">2011</span>, <span style="color: #009999">3</span>, <span style="color: #009999">6300</span>);
+    <span style="color: #0000aa">INSERT</span> <span style="color: #0000aa">INTO</span> quarterly_sales_data <span style="color: #0000aa">VALUES</span> (<span style="color: #009999">7</span>, <span style="color: #009999">300</span>, <span style="color: #009999">2011</span>, <span style="color: #009999">1</span>, <span style="color: #009999">11100</span>);
+    <span style="color: #0000aa">INSERT</span> <span style="color: #0000aa">INTO</span> quarterly_sales_data <span style="color: #0000aa">VALUES</span> (<span style="color: #009999">8</span>, <span style="color: #009999">300</span>, <span style="color: #009999">2011</span>, <span style="color: #009999">2</span>, <span style="color: #009999">12800</span>);
+    <span style="color: #0000aa">INSERT</span> <span style="color: #0000aa">INTO</span> quarterly_sales_data <span style="color: #0000aa">VALUES</span> (<span style="color: #009999">9</span>, <span style="color: #009999">300</span>, <span style="color: #009999">2011</span>, <span style="color: #009999">3</span>, <span style="color: #009999">14000</span>);
+    <span style="color: #0000aa">INSERT</span> <span style="color: #0000aa">INTO</span> quarterly_sales_data <span style="color: #0000aa">VALUES</span> (<span style="color: #009999">10</span>, <span style="color: #009999">400</span>, <span style="color: #009999">2011</span>, <span style="color: #009999">1</span>, <span style="color: #009999">55600</span>);
+    <span style="color: #0000aa">INSERT</span> <span style="color: #0000aa">INTO</span> quarterly_sales_data <span style="color: #0000aa">VALUES</span> (<span style="color: #009999">11</span>, <span style="color: #009999">400</span>, <span style="color: #009999">2011</span>, <span style="color: #009999">2</span>, <span style="color: #009999">80000</span>);
+    <span style="color: #0000aa">INSERT</span> <span style="color: #0000aa">INTO</span> quarterly_sales_data <span style="color: #0000aa">VALUES</span> (<span style="color: #009999">12</span>, <span style="color: #009999">400</span>, <span style="color: #009999">2011</span>, <span style="color: #009999">3</span>, <span style="color: #009999">78500</span>);
+</pre></div>
+
+<p>Our basic report query will look something like this:</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>    <span style="color: #0000aa">SELECT</span> client_name, sales_year, sales_quarter, sales_amount
+      <span style="color: #0000aa">FROM</span> quarterly_sales_data <span style="color: #0000aa">NATURAL</span> <span style="color: #0000aa">JOIN</span> clients;
+</pre></div>
+
+<p>Our Active Directory groups will be TIMCO_GRP, MONEYBROS_GRP, MONACLE_GRP, and SCHMAPPLE_GRP. If a user belongs to one or more of these groups, he has permission to view the respective client&rsquo;s data.</p>
+
+<p>Now we need a function that returns data from Active Directory. Just to keep it simple we will create a package that hardcodes the group memberships and returns them as collections of various types. We will then look at how table functions can be used to transform each one of those collections into an aggregate result set. (NOTE: querying LDAP directories from PL/SQL is not too difficult, and might serve as the basis for a future blog entry.)</p>
+
+<p>Here&rsquo;s our function. We&rsquo;ve placed it in a package called LDAP_UTIL.</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>    <span style="color: #0000aa">CREATE</span> <span style="color: #0000aa">OR</span> <span style="color: #0000aa">REPLACE</span> PACKAGE ldap_util <span style="color: #0000aa">AS</span>
+    
+      <span style="color: #0000aa">TYPE</span> ldap_entry_typ <span style="color: #0000aa">IS</span> RECORD (
+        cn VARCHAR2(<span style="color: #009999">30</span>),
+        description VARCHAR2(<span style="color: #009999">1000</span>),
+        distinguished_name VARCHAR2(<span style="color: #009999">200</span>),
+        name VARCHAR2(<span style="color: #009999">30</span>),
+        samaccountname VARCHAR2(<span style="color: #009999">30</span>));
+        
+      <span style="color: #0000aa">TYPE</span> ldap_groups_nt <span style="color: #0000aa">IS</span> <span style="color: #0000aa">TABLE</span> <span style="color: #0000aa">OF</span> ldap_entry_typ;
+      <span style="color: #0000aa">TYPE</span> ldap_groups_aa <span style="color: #0000aa">IS</span> <span style="color: #0000aa">TABLE</span> <span style="color: #0000aa">OF</span> ldap_entry_typ <span style="color: #0000aa">INDEX</span> <span style="color: #0000aa">BY</span> PLS_INTEGER;
+      <span style="color: #0000aa">TYPE</span> ldap_groups_va <span style="color: #0000aa">IS</span> VARRAY(<span style="color: #009999">100</span>) <span style="color: #0000aa">of</span> ldap_entry_typ;
+      
+      <span style="color: #0000aa">FUNCTION</span> get_user_groups_nt (p_user VARCHAR2) <span style="color: #0000aa">RETURN</span> ldap_groups_nt;
+      <span style="color: #0000aa">FUNCTION</span> get_user_groups_aa (p_user VARCHAR2) <span style="color: #0000aa">RETURN</span> ldap_groups_aa;
+      <span style="color: #0000aa">FUNCTION</span> get_user_groups_va (p_user VARCHAR2) <span style="color: #0000aa">RETURN</span> ldap_groups_va;
+      
+    <span style="color: #0000aa">END</span> ldap_util;
+    /
+    <span style="color: #0000aa">SHOW</span> ERRORS
+    
+    <span style="color: #0000aa">CREATE</span> <span style="color: #0000aa">OR</span> <span style="color: #0000aa">REPLACE</span> PACKAGE BODY ldap_util <span style="color: #0000aa">AS</span>
+      
+      <span style="color: #0000aa">FUNCTION</span> get_user_groups_nt (p_user VARCHAR2) <span style="color: #0000aa">RETURN</span> ldap_groups_nt <span style="color: #0000aa">IS</span>
+        l_groups ldap_groups_nt := ldap_groups_nt();
+      <span style="color: #0000aa">BEGIN</span>
+        <span style="color: #0000aa">CASE</span> p_user
+          <span style="color: #0000aa">WHEN</span> <span style="color: #aa5500">&#39;jaugusti&#39;</span> <span style="color: #0000aa">THEN</span>
+    
+            l_groups.extend;
+            l_groups(<span style="color: #009999">1</span>).cn := <span style="color: #aa5500">&#39;TIMCO_GRP&#39;</span>;
+            l_groups(<span style="color: #009999">1</span>).description := <span style="color: #aa5500">&#39;Employees working on the Timco Industries account.&#39;</span>;
+            l_groups(<span style="color: #009999">1</span>).distinguished_name := <span style="color: #aa5500">&#39;CN=TIMCO_GRP,OU=Global Groups,DC=acme,DC=com&#39;</span>;
+            l_groups(<span style="color: #009999">1</span>).name := <span style="color: #aa5500">&#39;TIMCO_GRP&#39;</span>;
+            l_groups(<span style="color: #009999">1</span>).samaccountname := <span style="color: #aa5500">&#39;TIMCO_GRP&#39;</span>;
+    
+          <span style="color: #0000aa">WHEN</span> <span style="color: #aa5500">&#39;kkidd&#39;</span> <span style="color: #0000aa">THEN</span>
+    
+            l_groups.extend;
+            l_groups(<span style="color: #009999">1</span>).cn := <span style="color: #aa5500">&#39;MONEYBROS_GRP&#39;</span>;
+            l_groups(<span style="color: #009999">1</span>).description := <span style="color: #aa5500">&#39;Employees working on the Moneybros account.&#39;</span>;
+            l_groups(<span style="color: #009999">1</span>).distinguished_name := <span style="color: #aa5500">&#39;CN=MONEYBROS_GRP,OU=Global Groups,DC=acme,DC=com&#39;</span>;
+            l_groups(<span style="color: #009999">1</span>).name := <span style="color: #aa5500">&#39;MONEYBROS_GRP&#39;</span>;
+            l_groups(<span style="color: #009999">1</span>).samaccountname := <span style="color: #aa5500">&#39;MONEYBROS_GRP&#39;</span>;
+    
+          <span style="color: #0000aa">WHEN</span> <span style="color: #aa5500">&#39;bhill&#39;</span> <span style="color: #0000aa">THEN</span>
+    
+            l_groups.extend;
+            l_groups(<span style="color: #009999">1</span>).cn := <span style="color: #aa5500">&#39;TIMCO_GRP&#39;</span>;
+            l_groups(<span style="color: #009999">1</span>).description := <span style="color: #aa5500">&#39;Employees working on the Timco Industries account.&#39;</span>;
+            l_groups(<span style="color: #009999">1</span>).distinguished_name := <span style="color: #aa5500">&#39;CN=TIMCO_GRP,OU=Global Groups,DC=acme,DC=com&#39;</span>;
+            l_groups(<span style="color: #009999">1</span>).name := <span style="color: #aa5500">&#39;TIMCO_GRP&#39;</span>;
+            l_groups(<span style="color: #009999">1</span>).samaccountname := <span style="color: #aa5500">&#39;TIMCO_GRP&#39;</span>;
+    
+            l_groups.extend;
+            l_groups(<span style="color: #009999">2</span>).cn := <span style="color: #aa5500">&#39;MONACLE_GRP&#39;</span>;
+            l_groups(<span style="color: #009999">2</span>).description := <span style="color: #aa5500">&#39;Employees working on the Monacle Corporation account.&#39;</span>;
+            l_groups(<span style="color: #009999">2</span>).distinguished_name := <span style="color: #aa5500">&#39;CN=MONACLE_GRP,OU=Global Groups,DC=acme,DC=com&#39;</span>;
+            l_groups(<span style="color: #009999">2</span>).name := <span style="color: #aa5500">&#39;MONACLE_GRP&#39;</span>;
+            l_groups(<span style="color: #009999">2</span>).samaccountname := <span style="color: #aa5500">&#39;MONACLE_GRP&#39;</span>;
+    
+          <span style="color: #0000aa">WHEN</span> <span style="color: #aa5500">&#39;kvongkas&#39;</span> <span style="color: #0000aa">THEN</span>
+    
+            l_groups.extend;
+            l_groups(<span style="color: #009999">1</span>).cn := <span style="color: #aa5500">&#39;MONEYBROS_GRP&#39;</span>;
+            l_groups(<span style="color: #009999">1</span>).description := <span style="color: #aa5500">&#39;Employees working on the Moneybros account.&#39;</span>;
+            l_groups(<span style="color: #009999">1</span>).distinguished_name := <span style="color: #aa5500">&#39;CN=MONEYBROS_GRP,OU=Global Groups,DC=acme,DC=com&#39;</span>;
+            l_groups(<span style="color: #009999">1</span>).name := <span style="color: #aa5500">&#39;MONEYBROS_GRP&#39;</span>;
+            l_groups(<span style="color: #009999">1</span>).samaccountname := <span style="color: #aa5500">&#39;MONEYBROS_GRP&#39;</span>;
+    
+            l_groups.extend;
+            l_groups(<span style="color: #009999">2</span>).cn := <span style="color: #aa5500">&#39;MONACLE_GRP&#39;</span>;
+            l_groups(<span style="color: #009999">2</span>).description := <span style="color: #aa5500">&#39;Employees working on the Monacle Corporation account.&#39;</span>;
+            l_groups(<span style="color: #009999">2</span>).distinguished_name := <span style="color: #aa5500">&#39;CN=MONACLE_GRP,OU=Global Groups,DC=acme,DC=com&#39;</span>;
+            l_groups(<span style="color: #009999">2</span>).name := <span style="color: #aa5500">&#39;MONACLE_GRP&#39;</span>;
+            l_groups(<span style="color: #009999">2</span>).samaccountname := <span style="color: #aa5500">&#39;MONACLE_GRP&#39;</span>;
+    
+            l_groups.extend;
+            l_groups(<span style="color: #009999">3</span>).cn := <span style="color: #aa5500">&#39;SCHMAPPLE_GRP&#39;</span>;
+            l_groups(<span style="color: #009999">3</span>).description := <span style="color: #aa5500">&#39;Employees working on the Schmapple account.&#39;</span>;
+            l_groups(<span style="color: #009999">3</span>).distinguished_name := <span style="color: #aa5500">&#39;CN=SCHMAPPLE_GRP,OU=Global Groups,DC=acme,DC=com&#39;</span>;
+            l_groups(<span style="color: #009999">3</span>).name := <span style="color: #aa5500">&#39;SCHMAPPLE_GRP&#39;</span>;
+            l_groups(<span style="color: #009999">3</span>).samaccountname := <span style="color: #aa5500">&#39;SCHMAPPLE_GRP&#39;</span>;
+    
+        <span style="color: #0000aa">END</span> <span style="color: #0000aa">CASE</span>;
+        <span style="color: #0000aa">RETURN</span> l_groups;
+      <span style="color: #0000aa">END</span> get_user_groups_nt;
+      
+      <span style="color: #0000aa">FUNCTION</span> get_user_groups_aa (p_user VARCHAR2) <span style="color: #0000aa">RETURN</span> ldap_groups_aa <span style="color: #0000aa">IS</span>
+        l_groups ldap_groups_aa;
+      <span style="color: #0000aa">BEGIN</span>
+        <span style="color: #0000aa">CASE</span> p_user
+          <span style="color: #0000aa">WHEN</span> <span style="color: #aa5500">&#39;jaugusti&#39;</span> <span style="color: #0000aa">THEN</span>
+    
+            l_groups(<span style="color: #009999">1</span>).cn := <span style="color: #aa5500">&#39;TIMCO_GRP&#39;</span>;
+            l_groups(<span style="color: #009999">1</span>).description := <span style="color: #aa5500">&#39;Employees working on the Timco Industries account.&#39;</span>;
+            l_groups(<span style="color: #009999">1</span>).distinguished_name := <span style="color: #aa5500">&#39;CN=TIMCO_GRP,OU=Global Groups,DC=acme,DC=com&#39;</span>;
+            l_groups(<span style="color: #009999">1</span>).name := <span style="color: #aa5500">&#39;TIMCO_GRP&#39;</span>;
+            l_groups(<span style="color: #009999">1</span>).samaccountname := <span style="color: #aa5500">&#39;TIMCO_GRP&#39;</span>;
+    
+          <span style="color: #0000aa">WHEN</span> <span style="color: #aa5500">&#39;kkidd&#39;</span> <span style="color: #0000aa">THEN</span>
+    
+            l_groups(<span style="color: #009999">1</span>).cn := <span style="color: #aa5500">&#39;MONEYBROS_GRP&#39;</span>;
+            l_groups(<span style="color: #009999">1</span>).description := <span style="color: #aa5500">&#39;Employees working on the Moneybros account.&#39;</span>;
+            l_groups(<span style="color: #009999">1</span>).distinguished_name := <span style="color: #aa5500">&#39;CN=MONEYBROS_GRP,OU=Global Groups,DC=acme,DC=com&#39;</span>;
+            l_groups(<span style="color: #009999">1</span>).name := <span style="color: #aa5500">&#39;MONEYBROS_GRP&#39;</span>;
+            l_groups(<span style="color: #009999">1</span>).samaccountname := <span style="color: #aa5500">&#39;MONEYBROS_GRP&#39;</span>;
+    
+          <span style="color: #0000aa">WHEN</span> <span style="color: #aa5500">&#39;bhill&#39;</span> <span style="color: #0000aa">THEN</span>
+    
+            l_groups(<span style="color: #009999">1</span>).cn := <span style="color: #aa5500">&#39;TIMCO_GRP&#39;</span>;
+            l_groups(<span style="color: #009999">1</span>).description := <span style="color: #aa5500">&#39;Employees working on the Timco Industries account.&#39;</span>;
+            l_groups(<span style="color: #009999">1</span>).distinguished_name := <span style="color: #aa5500">&#39;CN=TIMCO_GRP,OU=Global Groups,DC=acme,DC=com&#39;</span>;
+            l_groups(<span style="color: #009999">1</span>).name := <span style="color: #aa5500">&#39;TIMCO_GRP&#39;</span>;
+            l_groups(<span style="color: #009999">1</span>).samaccountname := <span style="color: #aa5500">&#39;TIMCO_GRP&#39;</span>;
+    
+            l_groups(<span style="color: #009999">2</span>).cn := <span style="color: #aa5500">&#39;MONACLE_GRP&#39;</span>;
+            l_groups(<span style="color: #009999">2</span>).description := <span style="color: #aa5500">&#39;Employees working on the Monacle Corporation account.&#39;</span>;
+            l_groups(<span style="color: #009999">2</span>).distinguished_name := <span style="color: #aa5500">&#39;CN=MONACLE_GRP,OU=Global Groups,DC=acme,DC=com&#39;</span>;
+            l_groups(<span style="color: #009999">2</span>).name := <span style="color: #aa5500">&#39;MONACLE_GRP&#39;</span>;
+            l_groups(<span style="color: #009999">2</span>).samaccountname := <span style="color: #aa5500">&#39;MONACLE_GRP&#39;</span>;
+    
+          <span style="color: #0000aa">WHEN</span> <span style="color: #aa5500">&#39;kvongkas&#39;</span> <span style="color: #0000aa">THEN</span>
+    
+            l_groups(<span style="color: #009999">1</span>).cn := <span style="color: #aa5500">&#39;MONEYBROS_GRP&#39;</span>;
+            l_groups(<span style="color: #009999">1</span>).description := <span style="color: #aa5500">&#39;Employees working on the Moneybros account.&#39;</span>;
+            l_groups(<span style="color: #009999">1</span>).distinguished_name := <span style="color: #aa5500">&#39;CN=MONEYBROS_GRP,OU=Global Groups,DC=acme,DC=com&#39;</span>;
+            l_groups(<span style="color: #009999">1</span>).name := <span style="color: #aa5500">&#39;MONEYBROS_GRP&#39;</span>;
+            l_groups(<span style="color: #009999">1</span>).samaccountname := <span style="color: #aa5500">&#39;MONEYBROS_GRP&#39;</span>;
+    
+            l_groups(<span style="color: #009999">2</span>).cn := <span style="color: #aa5500">&#39;MONACLE_GRP&#39;</span>;
+            l_groups(<span style="color: #009999">2</span>).description := <span style="color: #aa5500">&#39;Employees working on the Monacle Corporation account.&#39;</span>;
+            l_groups(<span style="color: #009999">2</span>).distinguished_name := <span style="color: #aa5500">&#39;CN=MONACLE_GRP,OU=Global Groups,DC=acme,DC=com&#39;</span>;
+            l_groups(<span style="color: #009999">2</span>).name := <span style="color: #aa5500">&#39;MONACLE_GRP&#39;</span>;
+            l_groups(<span style="color: #009999">2</span>).samaccountname := <span style="color: #aa5500">&#39;MONACLE_GRP&#39;</span>;
+    
+            l_groups(<span style="color: #009999">3</span>).cn := <span style="color: #aa5500">&#39;SCHMAPPLE_GRP&#39;</span>;
+            l_groups(<span style="color: #009999">3</span>).description := <span style="color: #aa5500">&#39;Employees working on the Schmapple account.&#39;</span>;
+            l_groups(<span style="color: #009999">3</span>).distinguished_name := <span style="color: #aa5500">&#39;CN=SCHMAPPLE_GRP,OU=Global Groups,DC=acme,DC=com&#39;</span>;
+            l_groups(<span style="color: #009999">3</span>).name := <span style="color: #aa5500">&#39;SCHMAPPLE_GRP&#39;</span>;
+            l_groups(<span style="color: #009999">3</span>).samaccountname := <span style="color: #aa5500">&#39;SCHMAPPLE_GRP&#39;</span>;
+    
+        <span style="color: #0000aa">END</span> <span style="color: #0000aa">CASE</span>;
+        <span style="color: #0000aa">RETURN</span> l_groups;
+      <span style="color: #0000aa">END</span> get_user_groups_aa;
+      
+      <span style="color: #0000aa">FUNCTION</span> get_user_groups_va (p_user VARCHAR2) <span style="color: #0000aa">RETURN</span> ldap_groups_va <span style="color: #0000aa">IS</span>
+        l_groups ldap_groups_va := ldap_groups_va();
+      <span style="color: #0000aa">BEGIN</span>
+        <span style="color: #0000aa">CASE</span> p_user
+          <span style="color: #0000aa">WHEN</span> <span style="color: #aa5500">&#39;jaugusti&#39;</span> <span style="color: #0000aa">THEN</span>
+    
+            l_groups.extend;
+            l_groups(<span style="color: #009999">1</span>).cn := <span style="color: #aa5500">&#39;TIMCO_GRP&#39;</span>;
+            l_groups(<span style="color: #009999">1</span>).description := <span style="color: #aa5500">&#39;Employees working on the Timco Industries account.&#39;</span>;
+            l_groups(<span style="color: #009999">1</span>).distinguished_name := <span style="color: #aa5500">&#39;CN=TIMCO_GRP,OU=Global Groups,DC=acme,DC=com&#39;</span>;
+            l_groups(<span style="color: #009999">1</span>).name := <span style="color: #aa5500">&#39;TIMCO_GRP&#39;</span>;
+            l_groups(<span style="color: #009999">1</span>).samaccountname := <span style="color: #aa5500">&#39;TIMCO_GRP&#39;</span>;
+    
+          <span style="color: #0000aa">WHEN</span> <span style="color: #aa5500">&#39;kkidd&#39;</span> <span style="color: #0000aa">THEN</span>
+    
+            l_groups.extend;
+            l_groups(<span style="color: #009999">1</span>).cn := <span style="color: #aa5500">&#39;MONEYBROS_GRP&#39;</span>;
+            l_groups(<span style="color: #009999">1</span>).description := <span style="color: #aa5500">&#39;Employees working on the Moneybros account.&#39;</span>;
+            l_groups(<span style="color: #009999">1</span>).distinguished_name := <span style="color: #aa5500">&#39;CN=MONEYBROS_GRP,OU=Global Groups,DC=acme,DC=com&#39;</span>;
+            l_groups(<span style="color: #009999">1</span>).name := <span style="color: #aa5500">&#39;MONEYBROS_GRP&#39;</span>;
+            l_groups(<span style="color: #009999">1</span>).samaccountname := <span style="color: #aa5500">&#39;MONEYBROS_GRP&#39;</span>;
+    
+          <span style="color: #0000aa">WHEN</span> <span style="color: #aa5500">&#39;bhill&#39;</span> <span style="color: #0000aa">THEN</span>
+    
+            l_groups.extend;
+            l_groups(<span style="color: #009999">1</span>).cn := <span style="color: #aa5500">&#39;TIMCO_GRP&#39;</span>;
+            l_groups(<span style="color: #009999">1</span>).description := <span style="color: #aa5500">&#39;Employees working on the Timco Industries account.&#39;</span>;
+            l_groups(<span style="color: #009999">1</span>).distinguished_name := <span style="color: #aa5500">&#39;CN=TIMCO_GRP,OU=Global Groups,DC=acme,DC=com&#39;</span>;
+            l_groups(<span style="color: #009999">1</span>).name := <span style="color: #aa5500">&#39;TIMCO_GRP&#39;</span>;
+            l_groups(<span style="color: #009999">1</span>).samaccountname := <span style="color: #aa5500">&#39;TIMCO_GRP&#39;</span>;
+    
+            l_groups.extend;
+            l_groups(<span style="color: #009999">2</span>).cn := <span style="color: #aa5500">&#39;MONACLE_GRP&#39;</span>;
+            l_groups(<span style="color: #009999">2</span>).description := <span style="color: #aa5500">&#39;Employees working on the Monacle Corporation account.&#39;</span>;
+            l_groups(<span style="color: #009999">2</span>).distinguished_name := <span style="color: #aa5500">&#39;CN=MONACLE_GRP,OU=Global Groups,DC=acme,DC=com&#39;</span>;
+            l_groups(<span style="color: #009999">2</span>).name := <span style="color: #aa5500">&#39;MONACLE_GRP&#39;</span>;
+            l_groups(<span style="color: #009999">2</span>).samaccountname := <span style="color: #aa5500">&#39;MONACLE_GRP&#39;</span>;
+    
+          <span style="color: #0000aa">WHEN</span> <span style="color: #aa5500">&#39;kvongkas&#39;</span> <span style="color: #0000aa">THEN</span>
+    
+            l_groups.extend;
+            l_groups(<span style="color: #009999">1</span>).cn := <span style="color: #aa5500">&#39;MONEYBROS_GRP&#39;</span>;
+            l_groups(<span style="color: #009999">1</span>).description := <span style="color: #aa5500">&#39;Employees working on the Moneybros account.&#39;</span>;
+            l_groups(<span style="color: #009999">1</span>).distinguished_name := <span style="color: #aa5500">&#39;CN=MONEYBROS_GRP,OU=Global Groups,DC=acme,DC=com&#39;</span>;
+            l_groups(<span style="color: #009999">1</span>).name := <span style="color: #aa5500">&#39;MONEYBROS_GRP&#39;</span>;
+            l_groups(<span style="color: #009999">1</span>).samaccountname := <span style="color: #aa5500">&#39;MONEYBROS_GRP&#39;</span>;
+    
+            l_groups.extend;
+            l_groups(<span style="color: #009999">2</span>).cn := <span style="color: #aa5500">&#39;MONACLE_GRP&#39;</span>;
+            l_groups(<span style="color: #009999">2</span>).description := <span style="color: #aa5500">&#39;Employees working on the Monacle Corporation account.&#39;</span>;
+            l_groups(<span style="color: #009999">2</span>).distinguished_name := <span style="color: #aa5500">&#39;CN=MONACLE_GRP,OU=Global Groups,DC=acme,DC=com&#39;</span>;
+            l_groups(<span style="color: #009999">2</span>).name := <span style="color: #aa5500">&#39;MONACLE_GRP&#39;</span>;
+            l_groups(<span style="color: #009999">2</span>).samaccountname := <span style="color: #aa5500">&#39;MONACLE_GRP&#39;</span>;
+    
+            l_groups.extend;
+            l_groups(<span style="color: #009999">3</span>).cn := <span style="color: #aa5500">&#39;SCHMAPPLE_GRP&#39;</span>;
+            l_groups(<span style="color: #009999">3</span>).description := <span style="color: #aa5500">&#39;Employees working on the Schmapple account.&#39;</span>;
+            l_groups(<span style="color: #009999">3</span>).distinguished_name := <span style="color: #aa5500">&#39;CN=SCHMAPPLE_GRP,OU=Global Groups,DC=acme,DC=com&#39;</span>;
+            l_groups(<span style="color: #009999">3</span>).name := <span style="color: #aa5500">&#39;SCHMAPPLE_GRP&#39;</span>;
+            l_groups(<span style="color: #009999">3</span>).samaccountname := <span style="color: #aa5500">&#39;SCHMAPPLE_GRP&#39;</span>;
+    
+        <span style="color: #0000aa">END</span> <span style="color: #0000aa">CASE</span>;
+        <span style="color: #0000aa">RETURN</span> l_groups;
+      <span style="color: #0000aa">END</span> get_user_groups_va;
+      
+    <span style="color: #0000aa">END</span> ldap_util;
+    /
+    <span style="color: #0000aa">SHOW</span> ERRORS
+</pre></div>
+
+<p>As you can see, LDAP_UTIL has three functions that return the three kinds of collections in PL/SQL: nested tables, associative arrays, and varrays.</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>    <span style="color: #0000aa">FUNCTION</span> get_user_groups_nt (p_user VARCHAR2) <span style="color: #0000aa">RETURN</span> ldap_groups_nt;
+    <span style="color: #0000aa">FUNCTION</span> get_user_groups_aa (p_user VARCHAR2) <span style="color: #0000aa">RETURN</span> ldap_groups_aa;
+    <span style="color: #0000aa">FUNCTION</span> get_user_groups_va (p_user VARCHAR2) <span style="color: #0000aa">RETURN</span> ldap_groups_va;
+</pre></div>
+
+<p>The collections consist of a group of records representing &ldquo;group&rdquo; data from Active Directory.</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>    <span style="color: #0000aa">TYPE</span> ldap_entry_typ <span style="color: #0000aa">IS</span> RECORD (
+        cn VARCHAR2(<span style="color: #009999">30</span>),
+        description VARCHAR2(<span style="color: #009999">1000</span>),
+        distinguished_name VARCHAR2(<span style="color: #009999">200</span>),
+        name VARCHAR2(<span style="color: #009999">30</span>),
+        samaccountname VARCHAR2(<span style="color: #009999">30</span>));
+</pre></div>
+
+<p>The p_user parameter would be the user&rsquo;s network id, corresponding to the sAMAccountName attribute in Active Directory; since we&rsquo;re hardcoding group data this is not important to us at the moment. The point is you pass in a username and you get a collection of groups.</p>
+
+<p>Using the same technique we demonstrated in part one, we now create a wrapper package of pipelined functions to transform the collection data into something we can query - an aggregate result set.</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>    <span style="color: #0000aa">CREATE</span> <span style="color: #0000aa">OR</span> <span style="color: #0000aa">REPLACE</span> PACKAGE ldap_util_pipelined <span style="color: #0000aa">AS</span>
+    
+      <span style="color: #0000aa">FUNCTION</span> get_user_groups_nt (p_user VARCHAR2) <span style="color: #0000aa">RETURN</span> ldap_util.ldap_groups_nt PIPELINED;
+      <span style="color: #0000aa">FUNCTION</span> get_user_groups_aa (p_user VARCHAR2) <span style="color: #0000aa">RETURN</span> ldap_util.ldap_groups_nt PIPELINED;
+      <span style="color: #0000aa">FUNCTION</span> get_user_groups_va (p_user VARCHAR2) <span style="color: #0000aa">RETURN</span> ldap_util.ldap_groups_va PIPELINED;
+      
+    <span style="color: #0000aa">END</span> ldap_util_pipelined;
+    /
+    <span style="color: #0000aa">SHOW</span> ERRORS
+    
+    <span style="color: #0000aa">CREATE</span> <span style="color: #0000aa">OR</span> <span style="color: #0000aa">REPLACE</span> PACKAGE BODY ldap_util_pipelined <span style="color: #0000aa">AS</span>
+    
+      <span style="color: #0000aa">FUNCTION</span> get_user_groups_nt (p_user VARCHAR2) 
+      <span style="color: #0000aa">RETURN</span> ldap_util.ldap_groups_nt PIPELINED <span style="color: #0000aa">IS</span>
+        l_groups ldap_util.ldap_groups_nt;
+      <span style="color: #0000aa">BEGIN</span>
+        l_groups := ldap_util.get_user_groups_nt(p_user);
+        <span style="color: #0000aa">FOR</span> i <span style="color: #0000aa">IN</span> <span style="color: #009999">1</span> .. l_groups.<span style="color: #0000aa">count</span> LOOP
+          PIPE <span style="color: #0000aa">ROW</span> (l_groups(i));
+        <span style="color: #0000aa">END</span> LOOP;
+        <span style="color: #0000aa">RETURN</span>;
+      <span style="color: #0000aa">END</span> get_user_groups_nt;
+      
+      <span style="color: #0000aa">FUNCTION</span> get_user_groups_aa (p_user VARCHAR2) 
+      <span style="color: #0000aa">RETURN</span> ldap_util.ldap_groups_nt PIPELINED <span style="color: #0000aa">IS</span>
+        l_groups ldap_util.ldap_groups_aa;
+      <span style="color: #0000aa">BEGIN</span>
+        l_groups := ldap_util.get_user_groups_aa(p_user);
+        <span style="color: #0000aa">FOR</span> i <span style="color: #0000aa">IN</span> <span style="color: #009999">1</span> .. l_groups.<span style="color: #0000aa">count</span> LOOP
+          PIPE <span style="color: #0000aa">ROW</span> (l_groups(i));
+        <span style="color: #0000aa">END</span> LOOP;
+        <span style="color: #0000aa">RETURN</span>;
+      <span style="color: #0000aa">END</span> get_user_groups_aa;
+      
+      <span style="color: #0000aa">FUNCTION</span> get_user_groups_va (p_user VARCHAR2) 
+      <span style="color: #0000aa">RETURN</span> ldap_util.ldap_groups_va PIPELINED <span style="color: #0000aa">IS</span>
+        l_groups ldap_util.ldap_groups_va;
+      <span style="color: #0000aa">BEGIN</span>
+        l_groups := ldap_util.get_user_groups_va(p_user);
+        <span style="color: #0000aa">FOR</span> i <span style="color: #0000aa">IN</span> <span style="color: #009999">1</span> .. l_groups.<span style="color: #0000aa">count</span> LOOP
+          PIPE <span style="color: #0000aa">ROW</span> (l_groups(i));
+        <span style="color: #0000aa">END</span> LOOP;
+        <span style="color: #0000aa">RETURN</span>;
+      <span style="color: #0000aa">END</span> get_user_groups_va;
+    
+    <span style="color: #0000aa">END</span> ldap_util_pipelined;
+    /
+    <span style="color: #0000aa">SHOW</span> ERRORS
+</pre></div>
+
+<p>Note the return types of the three functions in ldap_util_pipelined.</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>    <span style="color: #0000aa">FUNCTION</span> get_user_groups_nt (p_user VARCHAR2) <span style="color: #0000aa">RETURN</span> ldap_util.ldap_groups_nt PIPELINED;
+    <span style="color: #0000aa">FUNCTION</span> get_user_groups_aa (p_user VARCHAR2) <span style="color: #0000aa">RETURN</span> ldap_util.ldap_groups_nt PIPELINED;
+    <span style="color: #0000aa">FUNCTION</span> get_user_groups_va (p_user VARCHAR2) <span style="color: #0000aa">RETURN</span> ldap_util.ldap_groups_va PIPELINED;
+</pre></div>
+
+<p>The first two return a nested table collection, while the third returns a VARRAY. These two collections can be pipelined because they correspond to native SQL datatypes in Oracle; not so for associative arrays. In order to pipeline the associative array returned from ldap_util.get_user_groups_aa, we need to map that collection to one of the other types. Here, we map it to a nested table. The iterative logic is the same, though, as the other two functions.</p>
+
+<p>Now we can verify that our approach worked by issuing some simple queries, supported by the SQL &ldquo;TABLE&rdquo; construct.</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>    <span style="color: #0000aa">SQL</span>&gt; <span style="color: #0000aa">select</span> * <span style="color: #0000aa">from</span> <span style="color: #0000aa">table</span>(ldap_util_pipelined.get_user_groups_nt(<span style="color: #aa5500">&#39;jaugusti&#39;</span>));
+    
+    CN        DESCRIPTION                                        DISTINGUISHED_NAME                            NAME      SAMACCOUN
+    <span style="color: #aaaaaa; font-style: italic">--------- -------------------------------------------------- --------------------------------------------- --------- ---------</span>
+    TIMCO_GRP Employees working <span style="color: #0000aa">on</span> the Timco Industries account. CN=TIMCO_GRP,OU=<span style="color: #0000aa">Global</span> Groups,DC=acme,DC=com  TIMCO_GRP TIMCO_GRP
+</pre></div>
+
+<p>As you can see, the individual attributes of the record structure form the columns of our new table, and we can reference those columns directly, if we wish.</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>    <span style="color: #0000aa">SQL</span>&gt; <span style="color: #0000aa">select</span> cn <span style="color: #0000aa">from</span> <span style="color: #0000aa">table</span>(ldap_util_pipelined.get_user_groups_nt(<span style="color: #aa5500">&#39;kvongkas&#39;</span>));
+    
+    CN
+    <span style="color: #aaaaaa; font-style: italic">---------------</span>
+    MONEYBROS_GRP
+    MONACLE_GRP
+    SCHMAPPLE_GRP
+</pre></div>
+
+<p>All that&rsquo;s left for us at this point is to construct a WHERE clause condition to use with Oracle&rsquo;s Virtual Private Database feature to limit data returned from queries against the table QUARTERLY_SALES_DATA. That condition could look something like this, assuming that our application connects to the database as the logged in user.</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>    client_id <span style="color: #0000aa">IN</span> (<span style="color: #0000aa">SELECT</span> <span style="color: #0000aa">CASE</span> cn
+                           <span style="color: #0000aa">WHEN</span> <span style="color: #aa5500">&#39;TIMCO_GRP&#39;</span> <span style="color: #0000aa">THEN</span> <span style="color: #009999">100</span>
+                           <span style="color: #0000aa">WHEN</span> <span style="color: #aa5500">&#39;MONEYBROS_GRP&#39;</span> <span style="color: #0000aa">THEN</span> <span style="color: #009999">200</span>
+                           <span style="color: #0000aa">WHEN</span> <span style="color: #aa5500">&#39;MONACLE_GRP&#39;</span> <span style="color: #0000aa">THEN</span> <span style="color: #009999">300</span>
+                           <span style="color: #0000aa">WHEN</span> <span style="color: #aa5500">&#39;SCHMAPPLE_GRP&#39;</span> <span style="color: #0000aa">THEN</span> <span style="color: #009999">400</span>
+                         <span style="color: #0000aa">END</span>
+                    <span style="color: #0000aa">FROM</span> <span style="color: #0000aa">TABLE</span>(ldap_util_pipelined.get_user_groups_nt(<span style="color: #0000aa">USER</span>)))
+</pre></div>
+
+<p>Here the mapping between AD group name and client ID is hardcoded in the CASE expression. A more flexible way would be to create a mapping table. Also, this is probably not a case study in writing a well performing VPD clause, but the real point here is that using SQL table functions and PL/SQL pipelined functions, we can translate data retrieved from an API, LDAP directory, or web service into table-like structures that we can query, join, and otherwise manipulate just like real tables.</p>
+
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<hr>
+		</div>
+	</div>
+</div>
+
+    <div class="container">
+        <div class="row col-md-12">
+            <footer>
+                <div class="pull-left">
+                    <p>
+                        &copy; 2015 ~ Toby Marks ~ Powered By <a href="http://hugo.spf13.com">Hugo</a> ~ <a href="http://localhost:1313//license/">License</a>
+                    </p>
+                </div>
+
+                
+                <div class="pull-right">
+                    
+                        <a href="https://www.linkedin.com/in/tobymarks" target="_blank">
+                        <i class="fa fa-linkedin fa-2x"></i></a>
+                    
+                    
+                    
+                        <a href="https://twitter.com/toby_marks" target="_blank">
+                        <i class="fa fa-twitter-square fa-2x"></i></a>
+                    
+                    
+                        <a href="https://github.com/toby-marks" target="_blank">
+                        <i class="fa fa-github-square fa-2x"></i></a>
+                    
+                    
+                    
+                    
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    
+    </body>
+</html>
+

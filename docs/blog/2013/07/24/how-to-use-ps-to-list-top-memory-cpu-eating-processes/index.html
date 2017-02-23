@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="How to Use ps to List Top Memory, CPU Eating Processes">
+    <meta name="author" content="Toby Marks">
+
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <title>How to Use ps to List Top Memory, CPU Eating Processes &middot; tobybase.com</title>
+
+   	
+    
+        <link rel="stylesheet" href="http://localhost:1313//css/theme/cosmo.css">
+    
+
+    <link rel="stylesheet" href="http://localhost:1313//css/font-awesome.min.css">
+
+   	
+   	<link rel="stylesheet" href="http://localhost:1313//css/style.css">
+
+
+    
+    <script src="http://localhost:1313//js/jquery.min-2.1.4.js"></script>
+    <script src="http://localhost:1313//js/bootstrap.min-3.3.5.js"></script>
+
+    
+    <link href="" rel="alternate" type="application/rss+xml" title="tobybase.com" />
+</head>
+<body lang="en-US">
+    
+    <div class="container">
+    <div class="row">
+        <div class="navbar navbar-default " role="navigation">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="http://localhost:1313/"><img src="/img/logo.png" height="100%"></a>
+            </div>
+            <div class="navbar-collapse collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="http://localhost:1313/">Home</a></li>
+                    <li><a href="http://localhost:1313//post/">Blog</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-offset-1 col-md-10">
+			<h3>How to Use ps to List Top Memory, CPU Eating Processes</h3>
+				<span class="label label-primary">07/24/2013</span> in 
+				
+					
+					<a href="/categories/howtos">HowTos</a>
+				 using tags
+				
+					
+					<a href="/tags/unix/linux">unix/linux</a>
+				
+					 , 
+					<a href="/tags/macos">macos</a>
+				
+			</small>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-offset-1 col-md-10">
+			<br>
+			<p>The <code>ps</code> command is a versatile and configurable way to look at the processes running on your system, though I&rsquo;ve generally gotten by with a lazy <code>ps -ef</code> to find out whatever I needed to know. Recently, though, a client&rsquo;s server began running out of memory, and as a number of processes were running on the server, the culprit was not immediately clear. I wanted to provide them with a quick, simple diagnostic tool they could use the next time they received an alert.</p>
+
+<p>If you look at the man page for <code>ps</code> you&rsquo;ll find a number of options available for sorting the list of processes returned as well as for filtering the columns displayed.</p>
+
+<p><img src="/img/2013-07-24-linux-unix-use-ps-to-list-top-memory-cpu-eating-processes/ac6287b65af17b95d247ea063f0aa1bfc6f106f3b69adf0ae73ed8258d3a6c7b.png" alt="" /></p>
+
+<p>Some examples of <code>ps</code> options, from RHEL 5.6:</p>
+
+<p><strong>-e</strong><br />
+select all processes</p>
+
+<p><strong>-a</strong><br />
+select all &ldquo;child&rdquo; processes</p>
+
+<p><strong>-U &lt;user&gt;</strong><br />
+select all processes for a specified user</p>
+
+<p><strong>-p &lt;pid&gt;</strong><br />
+select by process id</p>
+
+<p><strong>-f</strong><br />
+full-format listing; adds columns and shows process arguments</p>
+
+<p><strong>-o</strong><br />
+user-defined format</p>
+
+<p>Many others are available, of course, but in order to keep it simple for the client I wanted to show the top 10 processes in terms of memory utilization, with the pid, memory usage, and process name displayed. Here is what I came up with:</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>$ ps -eo pid,user,pmem,args O R | tail -n <span style="color: #009999">10</span>
+</pre></div>
+
+<p>And here is an explanation:</p>
+
+<p><strong>ps</strong><br />
+shows running processes</p>
+
+<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-e</strong><br />
+show all processes</p>
+
+<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-o pid,user,poem,args</strong><br />
+show the pid, %mem, and process columns</p>
+
+<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;O R</strong><br />
+sort by memory usage (ascending)</p>
+
+<p><strong>tail</strong><br />
+shows only the last lines</p>
+
+<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-n 10</strong><br />
+show the last 10 lines</p>
+
+<p>I liked the concept so much that I decided to adapt it for OS X, where the <code>ps</code> command takes a slightly different set of arguments. To my .bash_profile file I added the following lines:</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span><span style="color: #00aaaa">alias</span> <span style="color: #aa0000">psmem</span>=<span style="color: #aa5500">&quot;while :; do clear; ps -ecm -o %mem,rss,pid,user,state,args | head -n 10; sleep 5; done&quot;</span>
+<span style="color: #00aaaa">alias</span> <span style="color: #aa0000">pscpu</span>=<span style="color: #aa5500">&quot;while :; do clear; ps -ecr -o %cpu,pid,user,state,args | head -n 10; sleep 2; done&quot;</span>
+</pre></div>
+
+<p>I have one alias for retrieving my top memory-utilizing processes and one for my top CPU-utilizing processes. The <code>while</code> loop in the alias implements a functionality similar to that of the Linux <code>watch</code> command, clearing the screen and running the process indefinitely until it is forcibly quit. For my own purposes I wanted to display some additional columns, like username and process state. I also changed the sort ordering to display the largest processes at the top of the list.</p>
+
+<p><img src="/img/2013-07-24-linux-unix-use-ps-to-list-top-memory-cpu-eating-processes/2bcd3b2c40d8bc37893b47399aed325508e95c655492de8866a8365eede7008f.png" alt="" /></p>
+
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<hr>
+		</div>
+	</div>
+</div>
+
+    <div class="container">
+        <div class="row col-md-12">
+            <footer>
+                <div class="pull-left">
+                    <p>
+                        &copy; 2015 ~ Toby Marks ~ Powered By <a href="http://hugo.spf13.com">Hugo</a> ~ <a href="http://localhost:1313//license/">License</a>
+                    </p>
+                </div>
+
+                
+                <div class="pull-right">
+                    
+                        <a href="https://www.linkedin.com/in/tobymarks" target="_blank">
+                        <i class="fa fa-linkedin fa-2x"></i></a>
+                    
+                    
+                    
+                        <a href="https://twitter.com/toby_marks" target="_blank">
+                        <i class="fa fa-twitter-square fa-2x"></i></a>
+                    
+                    
+                        <a href="https://github.com/toby-marks" target="_blank">
+                        <i class="fa fa-github-square fa-2x"></i></a>
+                    
+                    
+                    
+                    
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    
+    </body>
+</html>
+

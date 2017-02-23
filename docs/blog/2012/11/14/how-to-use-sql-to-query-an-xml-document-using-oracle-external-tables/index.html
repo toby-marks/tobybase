@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="How To Use SQL to Query an XML Document Using Oracle External Tables">
+    <meta name="author" content="Toby Marks">
+
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <title>How To Use SQL to Query an XML Document Using Oracle External Tables &middot; tobybase.com</title>
+
+   	
+    
+        <link rel="stylesheet" href="http://localhost:1313//css/theme/cosmo.css">
+    
+
+    <link rel="stylesheet" href="http://localhost:1313//css/font-awesome.min.css">
+
+   	
+   	<link rel="stylesheet" href="http://localhost:1313//css/style.css">
+
+
+    
+    <script src="http://localhost:1313//js/jquery.min-2.1.4.js"></script>
+    <script src="http://localhost:1313//js/bootstrap.min-3.3.5.js"></script>
+
+    
+    <link href="" rel="alternate" type="application/rss+xml" title="tobybase.com" />
+</head>
+<body lang="en-US">
+    
+    <div class="container">
+    <div class="row">
+        <div class="navbar navbar-default " role="navigation">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="http://localhost:1313/"><img src="/img/logo.png" height="100%"></a>
+            </div>
+            <div class="navbar-collapse collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="http://localhost:1313/">Home</a></li>
+                    <li><a href="http://localhost:1313//post/">Blog</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-offset-1 col-md-10">
+			<h3>How To Use SQL to Query an XML Document Using Oracle External Tables</h3>
+				<span class="label label-primary">11/14/2012</span> in 
+				
+					
+					<a href="/categories/howtos">HowTos</a>
+				 using tags
+				
+					
+					<a href="/tags/oracle">oracle</a>
+				
+					 , 
+					<a href="/tags/xml">xml</a>
+				
+					 , 
+					<a href="/tags/sql">sql</a>
+				
+					 , 
+					<a href="/tags/external-tables">external tables</a>
+				
+			</small>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-offset-1 col-md-10">
+			<br>
+			<p>Oracle&rsquo;s <a href="http://docs.oracle.com/cd/B28359_01/server.111/b28319/et_concepts.htm">external table feature</a> allows you to treat structured files on the database server as tables for query and DML purposes. To use an example from the linked documentation, a tab-delimited file like this:</p>
+
+<pre><code>56   november, 15, 1980  baker             mary       alice     09/01/2004
+87   december, 20, 1970  roper             lisa       marie     01/01/1999
+</code></pre>
+
+<p>&hellip;could be queried like this:</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span><span style="color: #0000aa">SELECT</span> employee_number,
+       employee_first_name,
+       substr(employee_middle_name, <span style="color: #009999">1</span>, <span style="color: #009999">1</span>),
+       employee_last_name,
+       employee_hire_date,
+       to_date(employee_dob,<span style="color: #aa5500">&#39;month, dd, yyyy&#39;</span>)
+  <span style="color: #0000aa">FROM</span> employees;
+</pre></div>
+
+<p>After defining the external table like this:</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>    <span style="color: #0000aa">CREATE</span> <span style="color: #0000aa">TABLE</span> employees
+           (employee_number      <span style="color: #00aaaa">CHAR</span>(<span style="color: #009999">5</span>),
+            employee_dob         <span style="color: #00aaaa">CHAR</span>(<span style="color: #009999">20</span>),
+            employee_last_name   <span style="color: #00aaaa">CHAR</span>(<span style="color: #009999">20</span>),
+            employee_first_name  <span style="color: #00aaaa">CHAR</span>(<span style="color: #009999">15</span>),
+            employee_middle_name <span style="color: #00aaaa">CHAR</span>(<span style="color: #009999">15</span>),
+            employee_hire_date   <span style="color: #00aaaa">DATE</span>)
+         ORGANIZATION <span style="color: #0000aa">EXTERNAL</span>
+           (<span style="color: #0000aa">TYPE</span> ORACLE_LOADER
+            <span style="color: #0000aa">DEFAULT</span> DIRECTORY def_dir1
+            <span style="color: #0000aa">ACCESS</span> <span style="color: #0000aa">PARAMETERS</span>
+              (RECORDS DELIMITED <span style="color: #0000aa">BY</span> NEWLINE
+               FIELDS (employee_number      <span style="color: #00aaaa">CHAR</span>(<span style="color: #009999">2</span>),
+                       employee_dob         <span style="color: #00aaaa">CHAR</span>(<span style="color: #009999">20</span>),
+                       employee_last_name   <span style="color: #00aaaa">CHAR</span>(<span style="color: #009999">18</span>),
+                       employee_first_name  <span style="color: #00aaaa">CHAR</span>(<span style="color: #009999">11</span>),
+                       employee_middle_name <span style="color: #00aaaa">CHAR</span>(<span style="color: #009999">11</span>),
+                       employee_hire_date   <span style="color: #00aaaa">CHAR</span>(<span style="color: #009999">10</span>) date_format <span style="color: #00aaaa">DATE</span> mask <span style="color: #0000aa">&quot;mm/dd/yyyy&quot;</span>
+                      )
+              )
+            <span style="color: #0000aa">LOCATION</span> (<span style="color: #aa5500">&#39;info.dat&#39;</span>)
+           );
+</pre></div>
+
+<p>Assuming of course that the file&rsquo;s name is <code>info.dat</code>, and its path on the filesystem has already been created as a directory object <code>DEF_DIR1</code> in the database.</p>
+
+<p>A similar technique exists for querying simple XML files, taking advantage of <a href="http://docs.oracle.com/cd/E11882_01/appdev.112/e23094/toc.htm">Oracle&rsquo;s XML DB</a> features. _HT to <a href="https://forums.oracle.com/forums/profile.jspa?userID=695787">odie_63</a> on the XML DB forums for introducing me to this method._</p>
+
+<p>Suppose you have a simple XML file (elements, but no attributes; no complex column types - it could work for the preceding, but I&rsquo;m not sure) like so.</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>    <span style="color: #1e90ff; font-weight: bold">&lt;Employees&gt;</span>
+        <span style="color: #1e90ff; font-weight: bold">&lt;Employee&gt;</span>
+            <span style="color: #1e90ff; font-weight: bold">&lt;id&gt;</span>1234<span style="color: #1e90ff; font-weight: bold">&lt;/id&gt;</span>
+            <span style="color: #1e90ff; font-weight: bold">&lt;lastname&gt;</span>Jetson<span style="color: #1e90ff; font-weight: bold">&lt;/lastname&gt;</span>
+            <span style="color: #1e90ff; font-weight: bold">&lt;firstname&gt;</span>George<span style="color: #1e90ff; font-weight: bold">&lt;/firstname&gt;</span>
+            <span style="color: #1e90ff; font-weight: bold">&lt;department&gt;</span>10<span style="color: #1e90ff; font-weight: bold">&lt;/department&gt;</span>
+            <span style="color: #1e90ff; font-weight: bold">&lt;salary&gt;</span>50000.00<span style="color: #1e90ff; font-weight: bold">&lt;/salary&gt;</span>
+        <span style="color: #1e90ff; font-weight: bold">&lt;/Employee&gt;</span>
+        <span style="color: #1e90ff; font-weight: bold">&lt;Employee&gt;</span>
+            <span style="color: #1e90ff; font-weight: bold">&lt;id&gt;</span>1235<span style="color: #1e90ff; font-weight: bold">&lt;/id&gt;</span>
+            <span style="color: #1e90ff; font-weight: bold">&lt;lastname&gt;</span>Crackorn<span style="color: #1e90ff; font-weight: bold">&lt;/lastname&gt;</span>
+            <span style="color: #1e90ff; font-weight: bold">&lt;firstname&gt;</span>James<span style="color: #1e90ff; font-weight: bold">&lt;/firstname&gt;</span>
+            <span style="color: #1e90ff; font-weight: bold">&lt;department&gt;</span>10<span style="color: #1e90ff; font-weight: bold">&lt;/department&gt;</span>
+            <span style="color: #1e90ff; font-weight: bold">&lt;salary&gt;</span>40000.00<span style="color: #1e90ff; font-weight: bold">&lt;/salary&gt;</span>
+        <span style="color: #1e90ff; font-weight: bold">&lt;/Employee&gt;</span>
+        <span style="color: #1e90ff; font-weight: bold">&lt;Employee&gt;</span>
+            <span style="color: #1e90ff; font-weight: bold">&lt;id&gt;</span>1236<span style="color: #1e90ff; font-weight: bold">&lt;/id&gt;</span>
+            <span style="color: #1e90ff; font-weight: bold">&lt;lastname&gt;</span>Hoffman<span style="color: #1e90ff; font-weight: bold">&lt;/lastname&gt;</span>
+            <span style="color: #1e90ff; font-weight: bold">&lt;firstname&gt;</span>Burl<span style="color: #1e90ff; font-weight: bold">&lt;/firstname&gt;</span>
+            <span style="color: #1e90ff; font-weight: bold">&lt;department&gt;</span>20<span style="color: #1e90ff; font-weight: bold">&lt;/department&gt;</span>
+            <span style="color: #1e90ff; font-weight: bold">&lt;salary&gt;</span>75000.00<span style="color: #1e90ff; font-weight: bold">&lt;/salary&gt;</span>
+        <span style="color: #1e90ff; font-weight: bold">&lt;/Employee&gt;</span>
+    <span style="color: #1e90ff; font-weight: bold">&lt;/Employees&gt;</span>
+</pre></div>
+
+<p>Place it on the database server in a readable directory, e.g. <code>/home/oracle</code>. Name it <code>employees.xml</code>.</p>
+
+<p>Now execute the following in SQL*Plus:</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>    <span style="color: #0000aa">SQL</span>&gt; <span style="color: #0000aa">CREATE</span> <span style="color: #0000aa">OR</span> <span style="color: #0000aa">REPLACE</span> DIRECTORY XML_DIR <span style="color: #0000aa">AS</span> <span style="color: #aa5500">&#39;/home/oracle&#39;</span>;
+    
+    <span style="color: #0000aa">SQL</span>&gt; <span style="color: #0000aa">CREATE</span> <span style="color: #0000aa">OR</span> <span style="color: #0000aa">REPLACE</span> <span style="color: #0000aa">VIEW</span> employees_v <span style="color: #0000aa">AS</span>
+    <span style="color: #0000aa">SELECT</span> *
+    <span style="color: #0000aa">FROM</span> XMLTable(<span style="color: #aa5500">&#39;/Employees/Employee&#39;</span>
+            passing xmltype(
+                     bfilename(<span style="color: #aa5500">&#39;XML_DIR&#39;</span>,<span style="color: #aa5500">&#39;employees.xml&#39;</span>)
+                    , nls_charset_id(<span style="color: #aa5500">&#39;AL32UTF8&#39;</span>)
+                    )
+            columns id           <span style="color: #00aaaa">number</span> path <span style="color: #aa5500">&#39;id&#39;</span>
+                  , lastname     varchar2(<span style="color: #009999">30</span>) path <span style="color: #aa5500">&#39;lastname&#39;</span>
+                  , firstname    varchar2(<span style="color: #009999">30</span>) path <span style="color: #aa5500">&#39;firstname&#39;</span>
+                  , department   <span style="color: #00aaaa">number</span> path <span style="color: #aa5500">&#39;department&#39;</span>
+                  , salary       <span style="color: #00aaaa">number</span> path <span style="color: #aa5500">&#39;salary&#39;</span>
+           );
+
+    <span style="color: #0000aa">SQL</span>&gt; <span style="color: #0000aa">SELECT</span> * <span style="color: #0000aa">FROM</span> employees_v;
+    ID   LASTNAME FIRSTNAME DEPARTMENT SALARY
+    <span style="color: #aaaaaa; font-style: italic">---- -------- --------- ---------- ------</span>
+    <span style="color: #009999">1234</span> Jetson   George    <span style="color: #009999">10</span>         <span style="color: #009999">50000</span>    
+    <span style="color: #009999">1235</span> Crackorn James     <span style="color: #009999">10</span>         <span style="color: #009999">40000</span>
+    <span style="color: #009999">1236</span> Hoffman  Burl      <span style="color: #009999">20</span>         <span style="color: #009999">75000</span>
+</pre></div>
+
+<p>You can modify construction of the view to read from multiple files by using a simple <code>UNION</code> operator, or you can make the source filename dynamic so you can switch datasets at runtime. Here&rsquo;s how you might do something like that:</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>    <span style="color: #0000aa">SQL</span>&gt; <span style="color: #0000aa">CREATE</span> <span style="color: #0000aa">OR</span> <span style="color: #0000aa">REPLACE</span> <span style="color: #0000aa">VIEW</span> employees_v <span style="color: #0000aa">AS</span>
+    <span style="color: #0000aa">SELECT</span> *
+    <span style="color: #0000aa">FROM</span> XMLTable(<span style="color: #aa5500">&#39;/Employees/Employee&#39;</span>
+            passing xmltype(
+                     bfilename(<span style="color: #aa5500">&#39;XML_DIR&#39;</span>, userenv(<span style="color: #aa5500">&#39;CLIENT_INFO&#39;</span>))
+                    , nls_charset_id(<span style="color: #aa5500">&#39;AL32UTF8&#39;</span>)
+                    )
+            columns id           <span style="color: #00aaaa">number</span> path <span style="color: #aa5500">&#39;id&#39;</span>
+                  , lastname     varchar2(<span style="color: #009999">30</span>) path <span style="color: #aa5500">&#39;lastname&#39;</span>
+                  , firstname    varchar2(<span style="color: #009999">30</span>) path <span style="color: #aa5500">&#39;firstname&#39;</span>
+                  , department   <span style="color: #00aaaa">number</span> path <span style="color: #aa5500">&#39;department&#39;</span>
+                  , salary       <span style="color: #00aaaa">number</span> path <span style="color: #aa5500">&#39;salary&#39;</span>
+           );
+</pre></div>
+
+<p>Then at runtime, specify the file you want to use like this:</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>    <span style="color: #0000aa">SQL</span>&gt; <span style="color: #0000aa">exec</span> dbms_application_info.set_client_info(<span style="color: #aa5500">&#39;employees_01.xml&#39;</span>);
+    
+    <span style="color: #0000aa">SQL</span>&gt; <span style="color: #0000aa">SELECT</span> * <span style="color: #0000aa">FROM</span> employees_v;
+    ID   LASTNAME FIRSTNAME DEPARTMENT SALARY
+    <span style="color: #aaaaaa; font-style: italic">---- -------- --------- ---------- ------</span>
+    <span style="color: #009999">1234</span> Jetson   George    <span style="color: #009999">10</span>         <span style="color: #009999">50000</span>    
+    <span style="color: #009999">1235</span> Crackorn James     <span style="color: #009999">10</span>         <span style="color: #009999">40000</span>
+    <span style="color: #009999">1236</span> Hoffman  Burl      <span style="color: #009999">20</span>         <span style="color: #009999">75000</span>
+
+    <span style="color: #0000aa">SQL</span>&gt; <span style="color: #0000aa">exec</span> dbms_application_info.set_client_info(<span style="color: #aa5500">&#39;employees_02.xml&#39;</span>);
+    
+    <span style="color: #0000aa">SQL</span>&gt; <span style="color: #0000aa">SELECT</span> * <span style="color: #0000aa">FROM</span> employees_v;
+    ID   LASTNAME FIRSTNAME DEPARTMENT SALARY
+    <span style="color: #aaaaaa; font-style: italic">---- -------- --------- ---------- ------</span>
+    <span style="color: #009999">1234</span> Ringwald Malory    <span style="color: #009999">30</span>         <span style="color: #009999">63000</span>    
+    <span style="color: #009999">1235</span> Dulles   Bob       <span style="color: #009999">10</span>         <span style="color: #009999">100000</span>
+    <span style="color: #009999">1236</span> Stein    Frank     <span style="color: #009999">50</span>         <span style="color: #009999">55000</span>
+</pre></div>
+
+<p>Why might this be useful? Suppose you have an arbitrary number of identically structured XML files in a directory that you want to import into a relational database table. Using a shell script you can, for each file in the directory,</p>
+
+<ul>
+<li>log in to SQL*Plus</li>
+<li>set the <code>CLIENT_INFO</code> variable to the name of the current file</li>
+<li>perform a simple insert into your table reading all records from the view</li>
+</ul>
+
+<p>You might even create a cron job to monitor a particular directory for new XML files, processing them into tables and then deleting or archiving the files when done.</p>
+
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<hr>
+		</div>
+	</div>
+</div>
+
+    <div class="container">
+        <div class="row col-md-12">
+            <footer>
+                <div class="pull-left">
+                    <p>
+                        &copy; 2015 ~ Toby Marks ~ Powered By <a href="http://hugo.spf13.com">Hugo</a> ~ <a href="http://localhost:1313//license/">License</a>
+                    </p>
+                </div>
+
+                
+                <div class="pull-right">
+                    
+                        <a href="https://www.linkedin.com/in/tobymarks" target="_blank">
+                        <i class="fa fa-linkedin fa-2x"></i></a>
+                    
+                    
+                    
+                        <a href="https://twitter.com/toby_marks" target="_blank">
+                        <i class="fa fa-twitter-square fa-2x"></i></a>
+                    
+                    
+                        <a href="https://github.com/toby-marks" target="_blank">
+                        <i class="fa fa-github-square fa-2x"></i></a>
+                    
+                    
+                    
+                    
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    
+    </body>
+</html>
+

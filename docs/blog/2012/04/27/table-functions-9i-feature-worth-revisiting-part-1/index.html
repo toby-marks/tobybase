@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Table Functions: 9i Feature Worth Revisiting (Part 1)">
+    <meta name="author" content="Toby Marks">
+
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <title>Table Functions: 9i Feature Worth Revisiting (Part 1) &middot; tobybase.com</title>
+
+   	
+    
+        <link rel="stylesheet" href="http://localhost:1313//css/theme/cosmo.css">
+    
+
+    <link rel="stylesheet" href="http://localhost:1313//css/font-awesome.min.css">
+
+   	
+   	<link rel="stylesheet" href="http://localhost:1313//css/style.css">
+
+
+    
+    <script src="http://localhost:1313//js/jquery.min-2.1.4.js"></script>
+    <script src="http://localhost:1313//js/bootstrap.min-3.3.5.js"></script>
+
+    
+    <link href="" rel="alternate" type="application/rss+xml" title="tobybase.com" />
+</head>
+<body lang="en-US">
+    
+    <div class="container">
+    <div class="row">
+        <div class="navbar navbar-default " role="navigation">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="http://localhost:1313/"><img src="/img/logo.png" height="100%"></a>
+            </div>
+            <div class="navbar-collapse collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="http://localhost:1313/">Home</a></li>
+                    <li><a href="http://localhost:1313//post/">Blog</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-offset-1 col-md-10">
+			<h3>Table Functions: 9i Feature Worth Revisiting (Part 1)</h3>
+				<span class="label label-primary">04/27/2012</span> in 
+				
+					
+					<a href="/categories/splaining">Splaining</a>
+				 using tags
+				
+					
+					<a href="/tags/oracle">oracle</a>
+				
+					 , 
+					<a href="/tags/plsql">plsql</a>
+				
+					 , 
+					<a href="/tags/pipelined-table-functions">pipelined table functions</a>
+				
+			</small>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-offset-1 col-md-10">
+			<br>
+			<p>Yes, they&rsquo;ve been around for a while, but if you haven&rsquo;t made use of table functions lately you might want to reacquaint yourself with this old gem. Table functions allow you to query the contents of PL/SQL collection types using SQL&rsquo;s TABLE operator. Here is a simple example.</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>    <span style="color: #0000aa">CREATE</span> <span style="color: #0000aa">OR</span> <span style="color: #0000aa">REPLACE</span> PACKAGE example <span style="color: #0000aa">AS</span>
+    
+         <span style="color: #0000aa">TYPE</span> nested_table_typ <span style="color: #0000aa">IS</span> <span style="color: #0000aa">TABLE</span> <span style="color: #0000aa">OF</span> VARCHAR2(<span style="color: #009999">100</span>);
+    
+         <span style="color: #0000aa">FUNCTION</span> get_nested_table_data <span style="color: #0000aa">RETURN</span> nested_table_typ PIPELINED;
+    
+    <span style="color: #0000aa">END</span> example;
+    /
+    
+    <span style="color: #0000aa">CREATE</span> <span style="color: #0000aa">OR</span> <span style="color: #0000aa">REPLACE</span> PACKAGE BODY example <span style="color: #0000aa">AS</span>
+    
+         <span style="color: #0000aa">FUNCTION</span> get_nested_table_data <span style="color: #0000aa">RETURN</span> nested_table_typ PIPELINED <span style="color: #0000aa">IS</span>
+         <span style="color: #0000aa">BEGIN</span>
+              PIPE <span style="color: #0000aa">ROW</span> (<span style="color: #aa5500">&#39;one&#39;</span>);
+              PIPE <span style="color: #0000aa">ROW</span> (<span style="color: #aa5500">&#39;two&#39;</span>);
+              PIPE <span style="color: #0000aa">ROW</span> (<span style="color: #aa5500">&#39;three&#39;</span>);
+              <span style="color: #0000aa">RETURN</span>;
+         <span style="color: #0000aa">END</span> get_nested_table_data;
+    
+    <span style="color: #0000aa">END</span> example;
+    /
+</pre></div>
+
+<p>The package function example.get_nested_table_data returns a PL/SQL collection — in this case, a nested table. The PIPELINED directive instructs the function to return data to the calling query as rows are populated by the PIPE ROW command. That way, you don&rsquo;t need to wait for the function to finish before you get results from your query.</p>
+
+<p>The function can be invoked from the SELECT clause of a query in the usual way, and will return a valid result.</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>    <span style="color: #0000aa">SELECT</span> example.get_nested_table_data <span style="color: #0000aa">FROM</span> dual;
+    
+    GET_NESTED_TABLE_DATA
+    <span style="color: #aaaaaa; font-style: italic">-------------------------------</span>
+    <span style="color: #0000aa">SCHEMA</span>.SYS_PLSQL_166672_9_1(one,two,three)
+</pre></div>
+
+<p>This is possible because nested tables and VARRAYs are supported as native types in SQL. The other type of PL/SQL collection, associative arrays, are not. Therefore you cannot use an associative array as the return type of a pipelined table function. However, it&rsquo;s pretty trivial to create a wrapper function that translates an associative array into a nested table. You wouldn&rsquo;t necessarily take this approach in your own code, but it comes in handy when you&rsquo;re transforming data coming from a third party package or function.</p>
+
+<p>But what if you need the contents of the collection presented as a table, with one record per entry in the collection? This is where the TABLE operator comes in handy.</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>    <span style="color: #0000aa">SELECT</span> column_value <span style="color: #0000aa">FROM</span> <span style="color: #0000aa">TABLE</span>(example.get_nested_table_data);
+    
+    COLUMN_VALUE
+    <span style="color: #aaaaaa; font-style: italic">-------------------</span>
+    one
+    two
+    three
+</pre></div>
+
+<p>The TABLE operator casts a collection type as an aggregated result set, meaning it allows you to query it as if it were a table.</p>
+
+<p>Why would you need to do this?</p>
+
+<p>One reason might be because you want to query or join data retrieved from a web service, or from an LDAP server. Another reason might be to simplify a complex query with lots of unions, case statements, and subqueries by fetching, manipulating, and combining your data inside a PL/SQL function. You can leverage the ease and maintainability of building your collection in a procedural manner, while still having access to the collection data from SQL. There is some overhead associated with that approach, though, so you&rsquo;ll want to be careful about applying it in performance-critical situations. Still, though, it&rsquo;s worth considering when the complexity of SQL constructs gets out of hand.</p>
+
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<hr>
+		</div>
+	</div>
+</div>
+
+    <div class="container">
+        <div class="row col-md-12">
+            <footer>
+                <div class="pull-left">
+                    <p>
+                        &copy; 2015 ~ Toby Marks ~ Powered By <a href="http://hugo.spf13.com">Hugo</a> ~ <a href="http://localhost:1313//license/">License</a>
+                    </p>
+                </div>
+
+                
+                <div class="pull-right">
+                    
+                        <a href="https://www.linkedin.com/in/tobymarks" target="_blank">
+                        <i class="fa fa-linkedin fa-2x"></i></a>
+                    
+                    
+                    
+                        <a href="https://twitter.com/toby_marks" target="_blank">
+                        <i class="fa fa-twitter-square fa-2x"></i></a>
+                    
+                    
+                        <a href="https://github.com/toby-marks" target="_blank">
+                        <i class="fa fa-github-square fa-2x"></i></a>
+                    
+                    
+                    
+                    
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    
+    </body>
+</html>
+

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Invalidating Toplink Session Cache To Avoid Stale Data">
+    <meta name="author" content="Toby Marks">
+
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <title>Invalidating Toplink Session Cache To Avoid Stale Data &middot; tobybase.com</title>
+
+   	
+    
+        <link rel="stylesheet" href="http://localhost:1313//css/theme/cosmo.css">
+    
+
+    <link rel="stylesheet" href="http://localhost:1313//css/font-awesome.min.css">
+
+   	
+   	<link rel="stylesheet" href="http://localhost:1313//css/style.css">
+
+
+    
+    <script src="http://localhost:1313//js/jquery.min-2.1.4.js"></script>
+    <script src="http://localhost:1313//js/bootstrap.min-3.3.5.js"></script>
+
+    
+    <link href="" rel="alternate" type="application/rss+xml" title="tobybase.com" />
+</head>
+<body lang="en-US">
+    
+    <div class="container">
+    <div class="row">
+        <div class="navbar navbar-default " role="navigation">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="http://localhost:1313/"><img src="/img/logo.png" height="100%"></a>
+            </div>
+            <div class="navbar-collapse collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="http://localhost:1313/">Home</a></li>
+                    <li><a href="http://localhost:1313//post/">Blog</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-offset-1 col-md-10">
+			<h3>Invalidating Toplink Session Cache To Avoid Stale Data</h3>
+				<span class="label label-primary">03/09/2012</span> in 
+				
+					
+					<a href="/categories/war-stories">War Stories</a>
+				 using tags
+				
+					
+					<a href="/tags/oracle">oracle</a>
+				
+					 , 
+					<a href="/tags/java">java</a>
+				
+					 , 
+					<a href="/tags/toplink">toplink</a>
+				
+					 , 
+					<a href="/tags/oracle-application-server">oracle application server</a>
+				
+					 , 
+					<a href="/tags/weblogic">weblogic</a>
+				
+			</small>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-offset-1 col-md-10">
+			<br>
+			<p>Toplink is a Java framework that maps objects to database tables. It is the reference implementation for the Java Persistence Architecture, or JPA. Developers use Toplink to manage data persistence (storage), queries, and transactions in an Oracle database. By default, Toplink makes use of a special cache called a Session Cache, maintained on the server, which is meant to speed up performance. Queried data is stored in the Session Cache and used in subsequent queries to reduce or eliminate calls to the database.</p>
+
+<p>One problem with this approach is how to deal with &ldquo;stale data&rdquo;. In other words, what happens when data is changing in the database? How does the developer ensure that the cached data is current?</p>
+
+<p>I ran into this issue recently when consulting with one of our clients on a third-party J2EE application that used Toplink for its persistence layer. What we noticed was that at a certain point in the business process the application was clearly displaying stale data. The &ldquo;status&rdquo; column on a certain record was being changed in the database (as could be verified by a SQL query), but the application still displayed the prior status. Refreshing the screen and requerying the data had no effect. The problem was that the status was being changed through a custom stored procedure which performed direct updates on the screen&rsquo;s underlying table. This approach was technically against the directives of the third-party application vendor, who insisted that all such changes to the database be made via calls to its own web services. That was for good reason. The web services they provided as an API for custom development were the same ones used by the screens to query data. They used the same Toplink Session Cache. Changes made through the web services, therefore, would have updated the cache, thereby avoiding the problem. As it was, the client had unintentionally created out-of-sync scenario between the cache and the database, and the status information displayed on the screen was invalid.</p>
+
+<p>The most obvious solution would have been to modify the custom procedure to make use of the provided APIs. However, we didn&rsquo;t have an API in this instance that provided exactly the required functionality. Having the software vendor modify or extend the API for our purposes would have been prohibitively expensive, in both time and money.</p>
+
+<p>Another possibility we considered was to have the vendor make a smaller modification to bypass the Toplink cache for queries on that screen. It is possible to disable caching per table, through the global configuration file persistence.xml, or as a property of an individual query. However, the vendor was not predisposed to introduce what they viewed as a &ldquo;hack&rdquo; to accommodate our custom functionality.</p>
+
+<p>Ultimately we decided to implement a tacked-on solution that would arrive at the same goal and eliminate the need for an additional iteration through the vendor&rsquo;s dev/test cycle. We created a custom servlet, installed in the third-party application itself, that invalidated the Toplink Session Cache for a specified table or, as an additional method, for all tables. Invalidating the cache means that the next time a query is executed against that table, the  cache is bypassed and data is retrieved directly from the database. To make it easier for the non-Java in-house developers to use, we created a custom wrapper package to mask the call to the servlet. A call to this package was added to the client&rsquo;s custom code just after the record in question was updated and commited.</p>
+
+<p>The solution consisted of two Java classes, JAR&rsquo;ed and deployed as a library in the third-party application&rsquo;s WEB-INF/lib directory.</p>
+
+<p>CacheInvalidator.java<br />
+CacheInvalidatorServlet.java</p>
+
+<p>The web application configuration file web.xml was also modified to add a reference to the new &ldquo;cacheinvalidator&rdquo; servlet.</p>
+
+<p>The code was adapted from the following documentation, available on Oracle Tech Net:</p>
+
+<p><a href="http://www.oracle.com/technetwork/middleware/ias/index-097190.html">Database Change Notification and TopLink Cache Invalidation</a><br />
+<a href="http://www.oracle.com/technetwork/middleware/ias/index-100679.html">Oracle TopLink Cache Invalidation</a></p>
+
+<p>The two methods of CacheInvalidator that do the actual work are shown here. The first takes tablename as an argument, so that the invalidation can be targeted. The second invalidates, or effectively wipes, the entire cache.</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span><span style="color: #0000aa">public</span> <span style="color: #00aaaa">void</span> <span style="color: #00aa00">invalidateClass</span>(Session session, String tableName) <span style="color: #0000aa">throws</span> Exception { 
+    <span style="color: #0000aa">if</span>(tableName == <span style="color: #0000aa">null</span> || tableName.<span style="color: #1e90ff">trim</span>().<span style="color: #1e90ff">equals</span>(<span style="color: #aa5500">&quot;&quot;</span>)) { 
+        <span style="color: #0000aa">throw</span> <span style="color: #0000aa">new</span> Exception(<span style="color: #aa5500">&quot;tableName cannot be null&quot;</span>); 
+    } 
+    Class baseClass = (Class)tableNameToClass.<span style="color: #1e90ff">get</span>(tableName); 
+    <span style="color: #0000aa">if</span>(baseClass == <span style="color: #0000aa">null</span>) { 
+        <span style="color: #0000aa">throw</span> <span style="color: #0000aa">new</span> Exception(<span style="color: #aa5500">&quot;table \&quot;&quot;</span> + tableName + <span style="color: #aa5500">&quot;\&quot; not found in cache&quot;</span>); 
+    } 
+ 
+    <span style="color: #aaaaaa; font-style: italic">// invalidate in TopLink cache the object corresponding to the baseClass </span>
+    session.<span style="color: #1e90ff">getIdentityMapAccessor</span>().<span style="color: #1e90ff">invalidateClass</span>(baseClass); 
+} 
+ 
+<span style="color: #aaaaaa; font-style: italic">// invalidate all objects in the cache </span>
+<span style="color: #0000aa">public</span> <span style="color: #00aaaa">void</span> <span style="color: #00aa00">invalidateAllClasses</span>(Session session) { 
+    <span style="color: #aaaaaa; font-style: italic">// invalidate in TopLink cache the object corresponding to the baseClass </span>
+    session.<span style="color: #1e90ff">getIdentityMapAccessor</span>().<span style="color: #1e90ff">invalidateAll</span>(); 
+} 
+</pre></div>
+
+<p>The CacheInvalidatorServlet takes a table name or the special keyword &ldquo;ALL&rdquo; as a parameter and calls the corresponding method in CacheInvalidator.</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>String oName = request.<span style="color: #1e90ff">getParameter</span>(<span style="color: #aa5500">&quot;objectName&quot;</span>); 
+String responseString = <span style="color: #aa5500">&quot;&quot;</span>; 
+
+<span style="color: #0000aa">try</span> { 
+    SessionManager manager = SessionManager.<span style="color: #1e90ff">getManager</span>(); 
+    <span style="color: #aaaaaa; font-style: italic">//SESSIONNAME defined in sessions.xml </span>
+    Server server = (Server)manager.<span style="color: #1e90ff">getSession</span>(<span style="color: #aa5500">&quot;SESSIONNAME&quot;</span>); 
+    Session session = server.<span style="color: #1e90ff">getActiveSession</span>(); 
+
+    CacheInvalidator invalidator = <span style="color: #0000aa">new</span> CacheInvalidator(session); 
+    <span style="color: #0000aa">if</span> (oName.<span style="color: #1e90ff">equals</span>(<span style="color: #aa5500">&quot;ALL&quot;</span>)) { 
+        invalidator.<span style="color: #1e90ff">invalidateAllClasses</span>(session); 
+        responseString = <span style="color: #aa5500">&quot;successfully invalidated toplink cache for all tables.&quot;</span>; 
+    } <span style="color: #0000aa">else</span> { 
+        invalidator.<span style="color: #1e90ff">invalidateClass</span>(session, oName); 
+        responseString = <span style="color: #aa5500">&quot;successfully invalidated toplink cache for table: &quot;</span>+oName; 
+    } 
+} <span style="color: #0000aa">catch</span> (Exception e) { 
+    responseString = e.<span style="color: #1e90ff">getMessage</span>(); 
+} 
+</pre></div>
+
+<p>Calling a servlet from PL/SQL is not particularly complicated, but in our case involved the lookup of server information stored in the database. The wrapper package allowed us to provide the developers with a simple, one-line invocation.</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>p_servlet_response := utl_http.request(<span style="color: #aa5500">&#39;http://&#39;</span>||l_app_server_host||<span style="color: #aa5500">&#39;:&#39;</span>
+          ||l_app_server_port||<span style="color: #aa5500">&#39;/jedi/cacheinvalidatorservlet?objectName=&#39;</span>
+          ||p_obj_to_invalidate);
+</pre></div>
+
+<p>After making a call to our cacheinvalidator package subsequent to updating the status record, the stale data problem was eliminated in the application.</p>
+
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<hr>
+		</div>
+	</div>
+</div>
+
+    <div class="container">
+        <div class="row col-md-12">
+            <footer>
+                <div class="pull-left">
+                    <p>
+                        &copy; 2015 ~ Toby Marks ~ Powered By <a href="http://hugo.spf13.com">Hugo</a> ~ <a href="http://localhost:1313//license/">License</a>
+                    </p>
+                </div>
+
+                
+                <div class="pull-right">
+                    
+                        <a href="https://www.linkedin.com/in/tobymarks" target="_blank">
+                        <i class="fa fa-linkedin fa-2x"></i></a>
+                    
+                    
+                    
+                        <a href="https://twitter.com/toby_marks" target="_blank">
+                        <i class="fa fa-twitter-square fa-2x"></i></a>
+                    
+                    
+                        <a href="https://github.com/toby-marks" target="_blank">
+                        <i class="fa fa-github-square fa-2x"></i></a>
+                    
+                    
+                    
+                    
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    
+    </body>
+</html>
+

@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Macos on tobybase.com</title>
+    <link>http://localhost:1313/tags/macos/index.xml</link>
+    <description>Recent content in Macos on tobybase.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>2015 ~ Toby Marks</copyright>
+    <atom:link href="/tags/macos/index.xml" rel="self" type="application/rss+xml" />
+    
+      
+        
+          <item>
+            <title>What to do when the Juniper Network Connect app on OS X does not connect</title>
+            <link>http://localhost:1313/blog/2016/02/04/what-to-do-when-the-juniper-network-connect-app-on-os-x-does-not-connect/</link>
+            <pubDate>Thu, 04 Feb 2016 22:50:09 +0000</pubDate>
+            
+            <guid>http://localhost:1313/blog/2016/02/04/what-to-do-when-the-juniper-network-connect-app-on-os-x-does-not-connect/</guid>
+            <description>&lt;p&gt;If you use Juniper&amp;rsquo;s Network Connect app to connect to your office VPN over HTTPS, you might occasionally experience strange errors like &amp;ldquo;A software error caused the Network Connect tunneling service to terminate.&amp;rdquo; Shortly after that, the application may either crash or prompt you for login credentials again.&lt;/p&gt;
+
+&lt;p&gt;The solution involves removing all of the Network Connect files and allowing your browser to download and install the app all over again, as it did the first time you tried to connect to your office VPN.&lt;/p&gt;
+
+&lt;p&gt;(Note: as a precaution you may want to simply move the Network Connect.app file from /Applications to ~/Desktop, just in case your browser is not able to download it as needed.)&lt;/p&gt;
+
+&lt;p&gt;To remove all files associated with the Network Connect application, execute the following commands in Terminal.app.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #aaaaaa; font-style: italic&#34;&gt;# sudo rm -rf /Applications/Network\ Connect.app`&lt;/span&gt;
+&lt;span style=&#34;color: #aaaaaa; font-style: italic&#34;&gt;# sudo rm -rf /usr/local/juniper`&lt;/span&gt;
+&lt;span style=&#34;color: #aaaaaa; font-style: italic&#34;&gt;# sudo rm -rf ~/Library/Application\ Support/Juniper\ Networks`&lt;/span&gt;
+&lt;span style=&#34;color: #aaaaaa; font-style: italic&#34;&gt;# sudo rm ~/Library/Preferences/net.juniper.NetworkConnect.plist`&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now try connecting to your office VPN again and the browser should prompt you to redownload the application. When I tried this I got an error the first time on Firefox saying the installation failed, but I was able to manually verify that the files were in place. My second attempt succeeded. Go figure.&lt;/p&gt;
+</description>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>How to Use ps to List Top Memory, CPU Eating Processes</title>
+            <link>http://localhost:1313/blog/2013/07/24/how-to-use-ps-to-list-top-memory-cpu-eating-processes/</link>
+            <pubDate>Wed, 24 Jul 2013 21:42:00 +0000</pubDate>
+            
+            <guid>http://localhost:1313/blog/2013/07/24/how-to-use-ps-to-list-top-memory-cpu-eating-processes/</guid>
+            <description>&lt;p&gt;The &lt;code&gt;ps&lt;/code&gt; command is a versatile and configurable way to look at the processes running on your system, though I&amp;rsquo;ve generally gotten by with a lazy &lt;code&gt;ps -ef&lt;/code&gt; to find out whatever I needed to know. Recently, though, a client&amp;rsquo;s server began running out of memory, and as a number of processes were running on the server, the culprit was not immediately clear. I wanted to provide them with a quick, simple diagnostic tool they could use the next time they received an alert.&lt;/p&gt;
+
+&lt;p&gt;If you look at the man page for &lt;code&gt;ps&lt;/code&gt; you&amp;rsquo;ll find a number of options available for sorting the list of processes returned as well as for filtering the columns displayed.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2013-07-24-linux-unix-use-ps-to-list-top-memory-cpu-eating-processes/ac6287b65af17b95d247ea063f0aa1bfc6f106f3b69adf0ae73ed8258d3a6c7b.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Some examples of &lt;code&gt;ps&lt;/code&gt; options, from RHEL 5.6:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;-e&lt;/strong&gt;&lt;br /&gt;
+select all processes&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;-a&lt;/strong&gt;&lt;br /&gt;
+select all &amp;ldquo;child&amp;rdquo; processes&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;-U &amp;lt;user&amp;gt;&lt;/strong&gt;&lt;br /&gt;
+select all processes for a specified user&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;-p &amp;lt;pid&amp;gt;&lt;/strong&gt;&lt;br /&gt;
+select by process id&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;-f&lt;/strong&gt;&lt;br /&gt;
+full-format listing; adds columns and shows process arguments&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;-o&lt;/strong&gt;&lt;br /&gt;
+user-defined format&lt;/p&gt;
+
+&lt;p&gt;Many others are available, of course, but in order to keep it simple for the client I wanted to show the top 10 processes in terms of memory utilization, with the pid, memory usage, and process name displayed. Here is what I came up with:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;$ ps -eo pid,user,pmem,args O R | tail -n &lt;span style=&#34;color: #009999&#34;&gt;10&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;And here is an explanation:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ps&lt;/strong&gt;&lt;br /&gt;
+shows running processes&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;-e&lt;/strong&gt;&lt;br /&gt;
+show all processes&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;-o pid,user,poem,args&lt;/strong&gt;&lt;br /&gt;
+show the pid, %mem, and process columns&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;O R&lt;/strong&gt;&lt;br /&gt;
+sort by memory usage (ascending)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;tail&lt;/strong&gt;&lt;br /&gt;
+shows only the last lines&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;-n 10&lt;/strong&gt;&lt;br /&gt;
+show the last 10 lines&lt;/p&gt;
+
+&lt;p&gt;I liked the concept so much that I decided to adapt it for OS X, where the &lt;code&gt;ps&lt;/code&gt; command takes a slightly different set of arguments. To my .bash_profile file I added the following lines:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #00aaaa&#34;&gt;alias&lt;/span&gt; &lt;span style=&#34;color: #aa0000&#34;&gt;psmem&lt;/span&gt;=&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;while :; do clear; ps -ecm -o %mem,rss,pid,user,state,args | head -n 10; sleep 5; done&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #00aaaa&#34;&gt;alias&lt;/span&gt; &lt;span style=&#34;color: #aa0000&#34;&gt;pscpu&lt;/span&gt;=&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;while :; do clear; ps -ecr -o %cpu,pid,user,state,args | head -n 10; sleep 2; done&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;I have one alias for retrieving my top memory-utilizing processes and one for my top CPU-utilizing processes. The &lt;code&gt;while&lt;/code&gt; loop in the alias implements a functionality similar to that of the Linux &lt;code&gt;watch&lt;/code&gt; command, clearing the screen and running the process indefinitely until it is forcibly quit. For my own purposes I wanted to display some additional columns, like username and process state. I also changed the sort ordering to display the largest processes at the top of the list.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2013-07-24-linux-unix-use-ps-to-list-top-memory-cpu-eating-processes/2bcd3b2c40d8bc37893b47399aed325508e95c655492de8866a8365eede7008f.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</description>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>How to Fix SQL Developer on a Retina Display Mac(book)</title>
+            <link>http://localhost:1313/blog/2013/07/19/how-to-fix-sql-developer-on-a-retina-display-macbook/</link>
+            <pubDate>Fri, 19 Jul 2013 22:32:00 +0000</pubDate>
+            
+            <guid>http://localhost:1313/blog/2013/07/19/how-to-fix-sql-developer-on-a-retina-display-macbook/</guid>
+            <description>&lt;p&gt;I just purchased a new Macbook Pro 13-inch with Retina Display and was horrified to see how fuzzy SQL Developer looked on the high-res screen. Thanks to Thunderforge on the &lt;a href=&#34;http://stackoverflow.com/questions/15181079/apple-retina-display-support-in-java-jdk-1-7-for-awt-swing&#34;&gt;Stack Overflow forums&lt;/a&gt; for this tip:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Java 7u40 Early Access now supports HiDPI (Retina) displays, as
+shown by this &lt;a href=&#34;http://download.java.net/jdk7u40/changes/jdk7u40-b28.html?q=download/jdk7u40/changes/jdk7u40-b28.html&#34;&gt;changelog&lt;/a&gt;. So retina support is now available on Java 6, Java 7u40 or higher, and Java 8.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I am currently running the &lt;a href=&#34;http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/sqldev-download-v4-1925679.html&#34;&gt;Early Adopter release of SQL Developer 4.0&lt;/a&gt; which requires JDK 1.7. I&amp;rsquo;m not sure what the state of Java 8 is on the Mac, so I opted to upgrade my JDK from 1.7.0_25 to 1.7.0_40. After that I had nice, sharp lines back in SQL Developer and all my other Java apps.&lt;/p&gt;
+
+&lt;p&gt;Thanks to Oracle&amp;rsquo;s Java team for addressing this!&lt;/p&gt;
+</description>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Button Hotkeys in SQL Developer on OS X</title>
+            <link>http://localhost:1313/blog/2013/01/09/button-hotkeys-in-sql-developer-on-os-x/</link>
+            <pubDate>Wed, 09 Jan 2013 19:09:45 +0000</pubDate>
+            
+            <guid>http://localhost:1313/blog/2013/01/09/button-hotkeys-in-sql-developer-on-os-x/</guid>
+            <description>&lt;p&gt;In Windows, most applications provide menu and button accelerator keys that allow you to control the application without having to use a mouse. Java Swing apps like SQL Developer allow you to do the same, ostensibly in a cross-platform compatible manner.&lt;/p&gt;
+
+&lt;p&gt;One place I use this frequently is the Enter Binds dialog window that pops up when running a query using bind variables.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2013-01-09-button-hotkeys-in-sql-developer-on-os-x/f953827dc3e74e57df43fd0e48ff22b40ce119efaa74ce3712fd989522b02a6f.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In Java 6 on OS X, the hotkey for pressing the Help and Apply buttons was OPTION-H and OPTION-A, respectively.&lt;/p&gt;
+
+&lt;p&gt;I initially thought this capability had been broken in Java 7 on OS X, but I discovered today that it has been merely changed to CONTROL-OPTION-H and CONTROL-OPTION-A.&lt;/p&gt;
+
+&lt;p&gt;Does anyone know if this is a configurable property of the application or Java virtual machine? If possible, I&amp;rsquo;d like to set it back to the simpler 1.6 way.&lt;/p&gt;
+</description>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>How To Fix High CPU Usage by SQL Developer on OS X</title>
+            <link>http://localhost:1313/blog/2012/07/20/how-to-fix-high-cpu-usage-by-sql-developer-on-os-x/</link>
+            <pubDate>Fri, 20 Jul 2012 16:32:00 +0000</pubDate>
+            
+            <guid>http://localhost:1313/blog/2012/07/20/how-to-fix-high-cpu-usage-by-sql-developer-on-os-x/</guid>
+            <description>&lt;p&gt;I&amp;rsquo;ve been fighting for a couple of years now with an annoying performance bug in SQL Developer for OS X. After using the application for a while CPU usage would spike to around 100%, even when idle. This is a known issue associated with the &amp;ldquo;Look and Feel&amp;rdquo; preference.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2012-07-20-easy-fix-for-high-cpu-usage-in-sql-developer-on-os-x/b5b8f447d6dc433b4253c4814df5746e70e6e1e85235b391c9fef8b19e9f84d8.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Basically, don&amp;rsquo;t use the &amp;ldquo;Mac OS X&amp;rdquo; setting. Instead, use the &amp;ldquo;Oracle&amp;rdquo; setting. The theme doesn&amp;rsquo;t matter.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2012-07-20-easy-fix-for-high-cpu-usage-in-sql-developer-on-os-x/aa9173adfc0090dc8b5b7fb471547c26a5243ca8f21c670580cd41df9cbd263f.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;That fixes the CPU issue, but somewhat annoyingly moves the menu out of the menu bar at the top of the screen and into the application window, a la Windows, making the interface inconsistent with pretty much every other app I use on my Mac. &lt;a href=&#34;https://forums.oracle.com/forums/thread.jspa?threadID=1980688&amp;amp;start=15&amp;amp;tstart=30&#34;&gt;Until recently&lt;/a&gt;, that is. The big news is that &lt;em&gt;as of SQL Developer 3.1, the menu is restored to the top of the screen&lt;/em&gt; when using the Oracle Look and Feel. So for those who had been holding out (like myself) with the more native LaF, you can make the switch now and avoid the most annoying part of the performance/usability compromise.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2012-07-20-easy-fix-for-high-cpu-usage-in-sql-developer-on-os-x/cfa32760a6b880df4f2b44e0c1db8a5155ee4c59233b761517416ef7f5c602f7.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</description>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>How To Run Oracle Forms 11g Applications on OS X Lion</title>
+            <link>http://localhost:1313/blog/2012/07/12/how-to-run-oracle-forms-11g-applications-on-os-x-lion/</link>
+            <pubDate>Thu, 12 Jul 2012 22:28:24 +0000</pubDate>
+            
+            <guid>http://localhost:1313/blog/2012/07/12/how-to-run-oracle-forms-11g-applications-on-os-x-lion/</guid>
+            <description>&lt;p&gt;Need to run your company&amp;rsquo;s Oracle Forms application from your Mac, and can&amp;rsquo;t? Annoyed with having to crank up a virtual machine for just that one task? Even with the latest published Java version for OS X (1.6.0_33, as of today), you may find that some of the newer Forms applications just won&amp;rsquo;t run. Well, fret no longer. A solution may already be here, at least for Safari and Firefox.&lt;/p&gt;
+
+&lt;p&gt;Although it&amp;rsquo;s not a strictly certified configuration, you may have better luck by running the JRE 1.7 Java plug-in, which was recently made available as a pre-release download. This works for OS X Lion 10.7.3 and above. Download the plug-in &lt;a href=&#34;http://jdk7.java.net/macportpreview/&#34;&gt;from here&lt;/a&gt; and follow the simple instructions on the page to install it. Now give your application another try, and hopefully you&amp;rsquo;ll get the results I did!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2012-07-12-run-oracle-forms-11g-applications-on-os-x-lion/8267cef641541001f78e2a3845a1349c5cc5c74dc6bf17b8a32fe537d9beaadd.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</description>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>OS X Software for Oracle Developers</title>
+            <link>http://localhost:1313/blog/2012/06/27/os-x-software-for-oracle-developers/</link>
+            <pubDate>Wed, 27 Jun 2012 21:39:00 +0000</pubDate>
+            
+            <guid>http://localhost:1313/blog/2012/06/27/os-x-software-for-oracle-developers/</guid>
+            <description>
+
+&lt;p&gt;One of the great things about working for &lt;a href=&#34;http://www.enkitec.com/&#34;&gt;Enkitec&lt;/a&gt; is that it&amp;rsquo;s a very Mac-friendly shop. When I arrived there in 2007 there were a handful of us running Macs and the attitude at the top seemed to be respectful, but skeptical. They allowed me to use my own laptop, which at the time was a 15-inch Intel Core2 Duo Macbook Pro, with the understanding that I could request a standard-issue Dell laptop at any time should the need arise. It never did. Since that time a large number of my coworkers have made the switch, abandoning their bulky, slow Dell Latitude laptops for 13-inch Macbook Pros, as have both owners of the company.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve been a Mac user since 1998, since the advent of the original &lt;a href=&#34;http://en.wikipedia.org/wiki/IMac_G3&#34;&gt;bondi blue iMac&lt;/a&gt;, a machine that I greatly loved, as far as you can love a machine (and no farther!). I&amp;rsquo;ve used a Mac at work since about the year 2000, a good while before &lt;a href=&#34;http://en.wikipedia.org/wiki/OS_X&#34;&gt;OS X&lt;/a&gt; really hit the mainstream. Back in those days about the only thing I could hope to accomplish on it at the office was email, iTunes, looking up something on the internet, and running an &lt;code&gt;SSH&lt;/code&gt; session or two. Still, I faithfully carried my little &lt;a href=&#34;http://www.everymac.com/systems/apple/ibook/specs/ibook_900_14.html&#34;&gt;white plastic iBook G3&lt;/a&gt; to work every day just because I enjoyed using the damn thing so much. I looked for any opportunity at all to integrate it into whatever I was doing at work. Over the years that came to include more and more stuff. I still remember how excited I was the day Oracle Applications earned &lt;a href=&#34;http://support.apple.com/kb/DL1184?viewlocale=en_US&amp;amp;locale=en_US&#34;&gt;Gold Certification on OS 9&lt;/a&gt;! Woohoo! I desperately needed a life.&lt;/p&gt;
+
+&lt;p&gt;The advent and acceptance of OS X changed everything. The Unix underpinnings gave legitimacy to the Mac as a serious &amp;ldquo;office&amp;rdquo; platform. I went from using my laptop as a toy to using it as a companion system, then a few years later as my primary system, then finally as my only system. Likewise, the number of Windows applications I needed to run on a daily basis, even in VMWare, was reduced from several to none. Hallelujah. In the same timeframe I also went from being the &amp;ldquo;office mac weirdo&amp;rdquo; to one of several &amp;ldquo;elite mac-using jackasses&amp;rdquo;, to just another one of the guys. Or so they tell me to my face.&lt;/p&gt;
+
+&lt;p&gt;One of the questions I&amp;rsquo;m asked most often by coworkers &lt;a href=&#34;http://www.youtube.com/watch?v=l2-UuIEOcss&#34;&gt;switching to the Mac&lt;/a&gt; is what software they should download first. This is my list.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;[Note: I provide links to the developer&amp;rsquo;s sites, but many of these apps are available in the App Store.]&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;crucial-stuff&#34;&gt;Crucial Stuff&lt;/h2&gt;
+
+&lt;p&gt;These are the tools any Mac user, but particularly those working in IT, should have in their arsenal.&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&#34;text-decoration:line-through&#34;&gt;* &lt;a href=&#34;http://manytricks.com/butler/&#34;&gt;Butler&lt;/a&gt;&lt;/span&gt;&lt;br /&gt;
+&lt;span style=&#34;text-decoration:line-through&#34;&gt; The one and only truly critical app in this list, Butler is an application launcher, search tool, universal bookmark manager, iTunes remote controller, Applescript launcher, keyboard macro tool, pasteboard manager and more. It puts the contents of your Mac at your fingertips and I couldn&amp;rsquo;t imagine using a computer without it. Indispensable.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Update:&lt;/em&gt; Since I wrote this article I&amp;rsquo;ve made the switch to &lt;a href=&#34;http://www.alfredapp.com&#34;&gt;Alfred&lt;/a&gt; for accomplishing essentially the same tasks. I was a longtime Butler user and supporter, even while more popular apps like &lt;a href=&#34;http://qsapp.com&#34;&gt;Quicksilver&lt;/a&gt; came and went(?), but it has become evident that Butler is no longer being actively developed, while Alfred continues to add significant new functionality, like the enhanced scripting capabilities in version 2.0. There is currently a sizable community of people &lt;a href=&#34;http://www.alfredforum.com/forum/3-share-your-workflows/&#34;&gt;developing sophisticated workflows&lt;/a&gt; for Alfred, but the most compelling feature is the integration with 1Password (see below) that allows you to open and log in to your password protected web sites using a keyboard shortcut. My only complaint is that I preferred the iTunes automation in Butler (also found in Alfred, but works differently), but I imagine Butler&amp;rsquo;s conceits could be mimicked by using a custom workflow in Alfred.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://agilebits.com/onepassword/mac&#34;&gt;1Password&lt;/a&gt;&lt;br /&gt;
+Universal password manager, syncs with iPad and iPhone version. Use it to store the hundreds of passwords you accumulate both personally and on the job. A plugin for Safari, Chrome, and Firefox handles automatic entry of password credentials on websites you visit.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.microsoft.com/mac&#34;&gt;MS Office&lt;/a&gt;&lt;br /&gt;
+Or at least just Word and Excel. &lt;em&gt;Never&lt;/em&gt; use Powerpoint. See below. It&amp;rsquo;s true that there are plenty of alternatives these days like OpenOffice, LibreOffice, Google Docs, etc., but unless everybody in your workplace has standardized on those tools, you&amp;rsquo;re bound to run across conversion issues that can sometimes be a serious nuisance.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.apple.com/iwork/&#34;&gt;iWork&lt;/a&gt;&lt;br /&gt;
+Yes, I recommend both office suites, as Pages is vastly superior to Word as a composition tool and Keynote simply demolishes Powerpoint for presentations. Faster, lighter, easier to use — the whole iWork suite is worth it just for Keynote. Companion apps for iPad and iPhone are cheap and automatically sync your documents. Personally I use always use Keynote for creating presentations and working with Powerpoint slideshows, I use Pages whenever I can, and I use Numbers when I want to create a visually sharp chart/spreadsheet combo for presentations that I won&amp;rsquo;t be handing off to other people to modify.&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&#34;text-decoration:line-through&#34;&gt;&lt;a href=&#34;http://growl.info/&#34;&gt;Growl&lt;/a&gt;&lt;/span&gt;
+&lt;span style=&#34;text-decoration:line-through&#34;&gt;Perhaps soon to be obsoleted by the new &lt;a href=&#34;http://www.apple.com/osx/whats-new/features.html#notification&#34;&gt;Notification Center&lt;/a&gt; feature of &lt;a href=&#34;http://www.apple.com/osx/&#34;&gt;OS X Mountain Lion&lt;/a&gt;, Growl provides a heads-up display for various things happening on the Mac. I use it mostly for email notifications, but the feedback it provides when attaching an external device or connecting to a network is often helpful.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Update:&lt;/em&gt; Dead in the water. Absorbed into notifications in Mountain Lion.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.barebones.com/products/bbedit/&#34;&gt;BBEdit&lt;/a&gt;/&lt;a href=&#34;http://www.barebones.com/products/textwrangler/&#34;&gt;TextWrangler&lt;/a&gt;&lt;br /&gt;
+A good text editor goes a very long way, as any coder can tell you. Some people &lt;a href=&#34;http://www.43folders.com/2005/12/12/text-setup&#34;&gt;organize their whole lives&lt;/a&gt; with text files, though. Emacs is also available, but it doesn&amp;rsquo;t have the Mac sensibilities of this storied old tool. If you&amp;rsquo;d rather not spend the money, TextWrangler is the free, stripped-down counterpart.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://evernote.com/evernote/&#34;&gt;Evernote&lt;/a&gt;&lt;br /&gt;
+Solves the problem of how to catalog, archive, and make available the vast library of information you accumulate over the years. Companion apps for iPad and iPhone put all your information at your fingertips. Can also be used as a collaborative tool for teams.&lt;/p&gt;
+
+&lt;h2 id=&#34;software-for-the-oracle-developer&#34;&gt;Software for the Oracle Developer&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.oracle.com/technetwork/developer-tools/sql-developer/overview/index.html&#34;&gt;SQL Developer&lt;/a&gt;&lt;br /&gt;
+Oracle&amp;rsquo;s free tool for SQL and PL/SQL development.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://netbeans.org/&#34;&gt;NetBeans&lt;/a&gt; and/or &lt;a href=&#34;http://www.oracle.com/technetwork/developer-tools/jdev/overview/index.html&#34;&gt;JDeveloper&lt;/a&gt;&lt;br /&gt;
+For J2EE development. Netbeans is the better tool, IMO, unless you need to work with &lt;a href=&#34;http://www.oracle.com/technetwork/developer-tools/adf/overview/index.html&#34;&gt;Oracle ADF&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.virtualbox.org/&#34;&gt;VirtualBox&lt;/a&gt;&lt;br /&gt;
+I&amp;rsquo;ve used VMWare Fusion for years and recently tried VirtualBox to take advantage of &lt;a href=&#34;http://www.oracle.com/technetwork/community/developer-vm/index.html&#34;&gt;Oracle&amp;rsquo;s developer VMs&lt;/a&gt;, and have been impressed with the performance and configurability. Beat&amp;rsquo;s VMWare&amp;rsquo;s price, as well.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.oracle.com/technetwork/topics/intel-macsoft-096467.html&#34;&gt;Oracle 10g Instant Client&lt;/a&gt;&lt;br /&gt;
+Can&amp;rsquo;t beat the convenience of being able to connect to a database without having to boot a VM.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://cord.sourceforge.net/&#34;&gt;CoRD&lt;/a&gt;&lt;br /&gt;
+For remote desktop (RDP) connections. Traditionally, it&amp;rsquo;s been a better, more reliable option than &lt;a href=&#34;http://www.microsoft.com/mac/remote-desktop-client&#34;&gt;Microsoft&amp;rsquo;s Remote Desktop app&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.citrix.com/English/ss/downloads/details.asp?downloadId=2323407&amp;amp;productId=1689163&#34;&gt;Citrix Receiver&lt;/a&gt;&lt;br /&gt;
+Needed If your company publishes corporate apps with Citrix Webapps, and many do.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://visualvm.java.net/&#34;&gt;VisualVM&lt;/a&gt;&lt;br /&gt;
+Performance analysis/debugging tool for Java apps.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://directory.apache.org/studio/&#34;&gt;Apache Directory Studio&lt;/a&gt;&lt;br /&gt;
+A useful and fully-featured LDAP tool.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.wireshark.org/&#34;&gt;Wireshark&lt;/a&gt;&lt;br /&gt;
+Packet sniffer.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.syntevo.com/smartcvs/index.html&#34;&gt;SmartCVS&lt;/a&gt;/&lt;a href=&#34;http://www.syntevo.com/smartsvn/index.html&#34;&gt;SmartSVN&lt;/a&gt;&lt;br /&gt;
+ My tools of choice for easy source code manaagement.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.macports.org/&#34;&gt;MacPorts&lt;/a&gt;&lt;br /&gt;
+Download and compile Unix software.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.amazon.com/gp/feature.html/ref=kcp_mac_mkt_lnd?docId=1000464931&#34;&gt;Kindle&lt;/a&gt; /&lt;a href=&#34;http://www.amazon.com/gp/feature.html/?docId=1000778781&#34;&gt;Send to Kindle&lt;/a&gt;&lt;br /&gt;
+Take advantage of Kindle&amp;rsquo;s massive collection of technical ebooks. The &amp;lsquo;Send to Kindle&amp;rsquo; tool allows you to upload your own PDFs for reading in the Kindle app.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.bruji.com/bwana/&#34;&gt;Bwana&lt;/a&gt;&lt;br /&gt;
+Read &lt;code&gt;man&lt;/code&gt; pages in a browser window.&lt;/p&gt;
+
+&lt;h2 id=&#34;productivity-apps&#34;&gt;Productivity Apps&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.omnigroup.com/products/omnifocus/&#34;&gt;OmniFocus&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://www.davidco.com/about-gtd&#34;&gt;GTD&lt;/a&gt; task/life management tool. Companion apps for iPhone, iPad keep everything in sync and support location-based notes.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://flyingmeat.com/acorn/&#34;&gt;Acorn&lt;/a&gt;&lt;br /&gt;
+Also might have chosen &lt;a href=&#34;http://www.pixelmator.com/&#34;&gt;Pixelmator&lt;/a&gt;, but this is the one I own. Almost everybody could use a good image editor at some time or other. Pixelmator is supposed to be closer to Photoshop.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://skitch.com/&#34;&gt;Skitch&lt;/a&gt;&lt;br /&gt;
+Screenshot markup tool. Integrates with &lt;a href=&#34;http://www.evernote.com/evernote/&#34;&gt;Evernote&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;for-sharing-and-collaboration&#34;&gt;For Sharing and Collaboration&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.dropbox.com/downloading?os=mac&#34;&gt;Dropbox&lt;/a&gt;&lt;br /&gt;
+Disk space in the cloud with sharing and privacy features. Integrates with many applications on Mac, iPhone, iPad.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://spideroak.com/&#34;&gt;SpiderOak&lt;/a&gt;&lt;br /&gt;
+More secure alternative to Dropbox for sensitive files.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.wuala.com/&#34;&gt;Wuala&lt;/a&gt;&lt;br /&gt;
+Another secure cloud-based storage option.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.wellredapps.com/products/dropkey/&#34;&gt;DropKey&lt;/a&gt;&lt;br /&gt;
+A brain dead easy way to send secure, encrypted email attachments!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.skype.com/intl/en-us/get-skype/on-your-computer/macosx/&#34;&gt;Skype&lt;/a&gt;&lt;br /&gt;
+Video phone for talking to your PC-using buddies. For your Mac brothers you should use &lt;a href=&#34;http://www.apple.com/mac/facetime/&#34;&gt;Facetime&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.google.com/+/learnmore/hangouts/&#34;&gt;Google Hangouts&lt;/a&gt;&lt;br /&gt;
+I have some anecdotal evidence that this may be a more stable video conferencing solution than Skype. I&amp;rsquo;ll update as I gain more experience using the two.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.teamviewer.com/en/download/index.aspx&#34;&gt;TeamViewer&lt;/a&gt;&lt;br /&gt;
+Free screen sharing software, if you don&amp;rsquo;t have access to &lt;a href=&#34;http://www.gotomeeting.com/&#34;&gt;GoToMeeting&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;system-tools&#34;&gt;System Tools&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.ragingmenace.com/software/menumeters/&#34;&gt;MenuMeters&lt;/a&gt;&lt;br /&gt;
+Lightweight system monitor that sits in the menu bar. Measures CPU, memory, network, and disk usage.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.shirt-pocket.com/SuperDuper/SuperDuperDescription.html&#34;&gt;SuperDuper!&lt;/a&gt;&lt;br /&gt;
+Creates bootable, up-to-date copies of your entire hard drive! Great, possibly indispensable, for recovering from a hard disk failure. Can also be used just to sync disk contents. Only copies changed data during file sync. Very efficient.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.coriolis-systems.com/iDefrag.php/&#34;&gt;iDefrag&lt;/a&gt;&lt;br /&gt;
+Defrag utility. You shouldn&amp;rsquo;t need to do it ever in OS X, but I&amp;rsquo;m hoping it prolongs the life of my hard drive. Anybody got any real statistics on that? By the way don&amp;rsquo;t try this on an SSD drive! It&amp;rsquo;ll decrease the life of the drive.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.coriolis-systems.com/iPartition.php&#34;&gt;iPartition&lt;/a&gt;&lt;br /&gt;
+Disk Utility does pretty much everything this app does, except for allowing you to partition a disk without data loss. Unfortunately, this will not work if the disk is too full or badly fragmented. That&amp;rsquo;s when iDefrag really comes in handy.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://rixstep.com/4/0/clix/&#34;&gt;CLIX&lt;/a&gt;&lt;br /&gt;
+GUI tool for executing Unix commands. Comes with a large library of useful commands, including many Mac-specific ones. Can be used as a learning tool and you can add your own scripts.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.omnigroup.com/products/omnidisksweeper/&#34;&gt;OmniDiskSweeper&lt;/a&gt; and/or &lt;a href=&#34;http://grandperspectiv.sourceforge.net/&#34;&gt;GrandPerspective&lt;/a&gt;&lt;br /&gt;
+Analyze the contents and sizes of the stuff on your hard drive. GrandPerspective provides a better visualization, but you don&amp;rsquo;t always need the &amp;ldquo;fluff&amp;rdquo;.&lt;/p&gt;
+
+&lt;h2 id=&#34;internet-tools&#34;&gt;Internet Tools&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://nolobe.com/interarchy/&#34;&gt;Interarchy&lt;/a&gt;&lt;br /&gt;
+FTP/SFTP tool with numerous useful features. Download an entire website or keep remote sites in sync with local folders. &lt;a href=&#34;http://panic.com/transmit/&#34;&gt;Transmit&lt;/a&gt; is also popular.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.google.com/mac/&#34;&gt;Chrome&lt;/a&gt;&lt;br /&gt;
+The web browser. (I use Webkit.)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.mozilla.org/en-US/firefox/new/&#34;&gt;Firefox&lt;/a&gt;&lt;br /&gt;
+The web browser. (See above.)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://nightly.webkit.org/&#34;&gt;Webkit&lt;/a&gt;&lt;br /&gt;
+See what&amp;rsquo;s coming down the pipe in Safari.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.transmissionbt.com/&#34;&gt;Transmission&lt;/a&gt;&lt;br /&gt;
+BitTorrent client.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.videolan.org/vlc/download-macosx.html&#34;&gt;VLC&lt;/a&gt;&lt;br /&gt;
+Open source media player. Plays a wide variety of formats.&lt;/p&gt;
+
+&lt;h2 id=&#34;if-you-have-the-money&#34;&gt;If You Have The Money&amp;hellip;&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.smilesoftware.com/PDFpenPro/&#34;&gt;PDFPenPro&lt;/a&gt;&lt;br /&gt;
+Create, edit, sign, mark up, footnote, redact, and otherwise manipulate PDFs. Also does OCR and tables of contents. Very nice tool. Companion app for iPad.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.omnigroup.com/products/omnigraffle/&#34;&gt;OmniGraffle&lt;/a&gt;&lt;br /&gt;
+Like Visio, only a thousand times better. The Omni Group&amp;rsquo;s flagship product. Wish very much I owned this one.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.omnigroup.com/products/omniplan/&#34;&gt;OmniPlan&lt;/a&gt;&lt;br /&gt;
+Does to MS Project what Keynote does to Powerpoint. Bought my copy a few versions back when it was far less expensive, and it still has all the project tracking features I need.&lt;/p&gt;
+
+&lt;h2 id=&#34;obscure-use-cases&#34;&gt;Obscure Use Cases&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://cutedgesystems.com/software/MailServeForLion/&#34;&gt;MailServe for Lion&lt;/a&gt;&lt;br /&gt;
+Automates configuration of OS X&amp;rsquo;s built in Postfix mail server. I&amp;rsquo;ve had to use this in the past when I was unable to connect to the corporate email server and didn&amp;rsquo;t want to send files through Gmail. (Did I mention I despise most web mail clients?)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.joshjacob.com/mac-development/tnef.php&#34;&gt;TNEF&amp;rsquo;s Enough&lt;/a&gt;&lt;br /&gt;
+Used it once to extract the Word document embedded in a &lt;code&gt;winmail.dat&lt;/code&gt; attachment from MS Outlook.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.arrowbit.com/info/pstbridgepro&#34;&gt;PST Bridge&lt;/a&gt;&lt;br /&gt;
+Used convert or read PST files (basically mail archives) generated by MS Outlook.&lt;/p&gt;
+
+&lt;h2 id=&#34;just-for-fun&#34;&gt;Just for Fun&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.blacktree.com/&#34;&gt;Nocturne&lt;/a&gt;&lt;br /&gt;
+Invert your screen colors to reduce strain on the eyes at night, or to conserve battery power. Neat effect.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.bannister.org/software/ao.htm&#34;&gt;Audio Overload&lt;/a&gt;&lt;br /&gt;
+Pass the time by listening to music from the console video games of long ago. Video game music files found separately, somewhere out there on the &lt;a href=&#34;http://www.google.com/&#34;&gt;internet&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;That&amp;rsquo;s it for now. Hope you find something useful.&lt;/p&gt;
+</description>
+          </item>
+        
+      
+    
+  </channel>
+</rss>

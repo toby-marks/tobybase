@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="How to Avoid the &#34;Job scheduling failed because the user has no permission to access this report&#34; Error in BI Publisher">
+    <meta name="author" content="Toby Marks">
+
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <title>How to Avoid the &#34;Job scheduling failed because the user has no permission to access this report&#34; Error in BI Publisher &middot; tobybase.com</title>
+
+   	
+    
+        <link rel="stylesheet" href="http://localhost:1313//css/theme/cosmo.css">
+    
+
+    <link rel="stylesheet" href="http://localhost:1313//css/font-awesome.min.css">
+
+   	
+   	<link rel="stylesheet" href="http://localhost:1313//css/style.css">
+
+
+    
+    <script src="http://localhost:1313//js/jquery.min-2.1.4.js"></script>
+    <script src="http://localhost:1313//js/bootstrap.min-3.3.5.js"></script>
+
+    
+    <link href="" rel="alternate" type="application/rss+xml" title="tobybase.com" />
+</head>
+<body lang="en-US">
+    
+    <div class="container">
+    <div class="row">
+        <div class="navbar navbar-default " role="navigation">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="http://localhost:1313/"><img src="/img/logo.png" height="100%"></a>
+            </div>
+            <div class="navbar-collapse collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="http://localhost:1313/">Home</a></li>
+                    <li><a href="http://localhost:1313//post/">Blog</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-offset-1 col-md-10">
+			<h3>How to Avoid the &#34;Job scheduling failed because the user has no permission to access this report&#34; Error in BI Publisher</h3>
+				<span class="label label-primary">08/27/2012</span> in 
+				
+					
+					<a href="/categories/howtos">HowTos</a>
+				 using tags
+				
+					
+					<a href="/tags/oracle">oracle</a>
+				
+					 , 
+					<a href="/tags/bi-publisher">bi publisher</a>
+				
+					 , 
+					<a href="/tags/ldap">ldap</a>
+				
+					 , 
+					<a href="/tags/bi">bi</a>
+				
+					 , 
+					<a href="/tags/reporting">reporting</a>
+				
+			</small>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-offset-1 col-md-10">
+			<br>
+			<p><img src="/img/2012-08-27-bi-publisher-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report/864dbb90dbf623eb4f36b26a3ecf315cfec7121cf33e16730b6060c6572dfb35.jpg" alt="" /></p>
+
+<p>You can get this error if you are trying to schedule a report and your BI Publisher installation uses LDAP authentication.</p>
+
+<p>To avoid it, make sure that the &ldquo;Administrator&rdquo; account you use to connect to your LDAP server is in the XMLP_ADMIN group. The LDAP settings are located on the Admin tab, under Security Settings / Security Configuration.</p>
+
+<p><img src="/img/2012-08-27-bi-publisher-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report/c44997adb44d6687468d544341fcd25b818ebdd46087d1849c38e855ee874488.jpg" alt="" /></p>
+
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<hr>
+		</div>
+	</div>
+</div>
+
+    <div class="container">
+        <div class="row col-md-12">
+            <footer>
+                <div class="pull-left">
+                    <p>
+                        &copy; 2015 ~ Toby Marks ~ Powered By <a href="http://hugo.spf13.com">Hugo</a> ~ <a href="http://localhost:1313//license/">License</a>
+                    </p>
+                </div>
+
+                
+                <div class="pull-right">
+                    
+                        <a href="https://www.linkedin.com/in/tobymarks" target="_blank">
+                        <i class="fa fa-linkedin fa-2x"></i></a>
+                    
+                    
+                    
+                        <a href="https://twitter.com/toby_marks" target="_blank">
+                        <i class="fa fa-twitter-square fa-2x"></i></a>
+                    
+                    
+                        <a href="https://github.com/toby-marks" target="_blank">
+                        <i class="fa fa-github-square fa-2x"></i></a>
+                    
+                    
+                    
+                    
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    
+    </body>
+</html>
+

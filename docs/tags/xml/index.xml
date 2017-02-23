@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Xml on tobybase.com</title>
+    <link>http://localhost:1313/tags/xml/index.xml</link>
+    <description>Recent content in Xml on tobybase.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>2015 ~ Toby Marks</copyright>
+    <atom:link href="/tags/xml/index.xml" rel="self" type="application/rss+xml" />
+    
+      
+        
+          <item>
+            <title>How To Use SQL to Query an XML Document Using Oracle External Tables</title>
+            <link>http://localhost:1313/blog/2012/11/14/how-to-use-sql-to-query-an-xml-document-using-oracle-external-tables/</link>
+            <pubDate>Wed, 14 Nov 2012 00:00:00 +0000</pubDate>
+            
+            <guid>http://localhost:1313/blog/2012/11/14/how-to-use-sql-to-query-an-xml-document-using-oracle-external-tables/</guid>
+            <description>&lt;p&gt;Oracle&amp;rsquo;s &lt;a href=&#34;http://docs.oracle.com/cd/B28359_01/server.111/b28319/et_concepts.htm&#34;&gt;external table feature&lt;/a&gt; allows you to treat structured files on the database server as tables for query and DML purposes. To use an example from the linked documentation, a tab-delimited file like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;56   november, 15, 1980  baker             mary       alice     09/01/2004
+87   december, 20, 1970  roper             lisa       marie     01/01/1999
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&amp;hellip;could be queried like this:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #0000aa&#34;&gt;SELECT&lt;/span&gt; employee_number,
+       employee_first_name,
+       substr(employee_middle_name, &lt;span style=&#34;color: #009999&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color: #009999&#34;&gt;1&lt;/span&gt;),
+       employee_last_name,
+       employee_hire_date,
+       to_date(employee_dob,&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;month, dd, yyyy&amp;#39;&lt;/span&gt;)
+  &lt;span style=&#34;color: #0000aa&#34;&gt;FROM&lt;/span&gt; employees;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;After defining the external table like this:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;    &lt;span style=&#34;color: #0000aa&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color: #0000aa&#34;&gt;TABLE&lt;/span&gt; employees
+           (employee_number      &lt;span style=&#34;color: #00aaaa&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color: #009999&#34;&gt;5&lt;/span&gt;),
+            employee_dob         &lt;span style=&#34;color: #00aaaa&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color: #009999&#34;&gt;20&lt;/span&gt;),
+            employee_last_name   &lt;span style=&#34;color: #00aaaa&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color: #009999&#34;&gt;20&lt;/span&gt;),
+            employee_first_name  &lt;span style=&#34;color: #00aaaa&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color: #009999&#34;&gt;15&lt;/span&gt;),
+            employee_middle_name &lt;span style=&#34;color: #00aaaa&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color: #009999&#34;&gt;15&lt;/span&gt;),
+            employee_hire_date   &lt;span style=&#34;color: #00aaaa&#34;&gt;DATE&lt;/span&gt;)
+         ORGANIZATION &lt;span style=&#34;color: #0000aa&#34;&gt;EXTERNAL&lt;/span&gt;
+           (&lt;span style=&#34;color: #0000aa&#34;&gt;TYPE&lt;/span&gt; ORACLE_LOADER
+            &lt;span style=&#34;color: #0000aa&#34;&gt;DEFAULT&lt;/span&gt; DIRECTORY def_dir1
+            &lt;span style=&#34;color: #0000aa&#34;&gt;ACCESS&lt;/span&gt; &lt;span style=&#34;color: #0000aa&#34;&gt;PARAMETERS&lt;/span&gt;
+              (RECORDS DELIMITED &lt;span style=&#34;color: #0000aa&#34;&gt;BY&lt;/span&gt; NEWLINE
+               FIELDS (employee_number      &lt;span style=&#34;color: #00aaaa&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color: #009999&#34;&gt;2&lt;/span&gt;),
+                       employee_dob         &lt;span style=&#34;color: #00aaaa&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color: #009999&#34;&gt;20&lt;/span&gt;),
+                       employee_last_name   &lt;span style=&#34;color: #00aaaa&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color: #009999&#34;&gt;18&lt;/span&gt;),
+                       employee_first_name  &lt;span style=&#34;color: #00aaaa&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color: #009999&#34;&gt;11&lt;/span&gt;),
+                       employee_middle_name &lt;span style=&#34;color: #00aaaa&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color: #009999&#34;&gt;11&lt;/span&gt;),
+                       employee_hire_date   &lt;span style=&#34;color: #00aaaa&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color: #009999&#34;&gt;10&lt;/span&gt;) date_format &lt;span style=&#34;color: #00aaaa&#34;&gt;DATE&lt;/span&gt; mask &lt;span style=&#34;color: #0000aa&#34;&gt;&amp;quot;mm/dd/yyyy&amp;quot;&lt;/span&gt;
+                      )
+              )
+            &lt;span style=&#34;color: #0000aa&#34;&gt;LOCATION&lt;/span&gt; (&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;info.dat&amp;#39;&lt;/span&gt;)
+           );
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Assuming of course that the file&amp;rsquo;s name is &lt;code&gt;info.dat&lt;/code&gt;, and its path on the filesystem has already been created as a directory object &lt;code&gt;DEF_DIR1&lt;/code&gt; in the database.&lt;/p&gt;
+
+&lt;p&gt;A similar technique exists for querying simple XML files, taking advantage of &lt;a href=&#34;http://docs.oracle.com/cd/E11882_01/appdev.112/e23094/toc.htm&#34;&gt;Oracle&amp;rsquo;s XML DB&lt;/a&gt; features. _HT to &lt;a href=&#34;https://forums.oracle.com/forums/profile.jspa?userID=695787&#34;&gt;odie_63&lt;/a&gt; on the XML DB forums for introducing me to this method._&lt;/p&gt;
+
+&lt;p&gt;Suppose you have a simple XML file (elements, but no attributes; no complex column types - it could work for the preceding, but I&amp;rsquo;m not sure) like so.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;    &lt;span style=&#34;color: #1e90ff; font-weight: bold&#34;&gt;&amp;lt;Employees&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color: #1e90ff; font-weight: bold&#34;&gt;&amp;lt;Employee&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color: #1e90ff; font-weight: bold&#34;&gt;&amp;lt;id&amp;gt;&lt;/span&gt;1234&lt;span style=&#34;color: #1e90ff; font-weight: bold&#34;&gt;&amp;lt;/id&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color: #1e90ff; font-weight: bold&#34;&gt;&amp;lt;lastname&amp;gt;&lt;/span&gt;Jetson&lt;span style=&#34;color: #1e90ff; font-weight: bold&#34;&gt;&amp;lt;/lastname&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color: #1e90ff; font-weight: bold&#34;&gt;&amp;lt;firstname&amp;gt;&lt;/span&gt;George&lt;span style=&#34;color: #1e90ff; font-weight: bold&#34;&gt;&amp;lt;/firstname&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color: #1e90ff; font-weight: bold&#34;&gt;&amp;lt;department&amp;gt;&lt;/span&gt;10&lt;span style=&#34;color: #1e90ff; font-weight: bold&#34;&gt;&amp;lt;/department&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color: #1e90ff; font-weight: bold&#34;&gt;&amp;lt;salary&amp;gt;&lt;/span&gt;50000.00&lt;span style=&#34;color: #1e90ff; font-weight: bold&#34;&gt;&amp;lt;/salary&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color: #1e90ff; font-weight: bold&#34;&gt;&amp;lt;/Employee&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color: #1e90ff; font-weight: bold&#34;&gt;&amp;lt;Employee&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color: #1e90ff; font-weight: bold&#34;&gt;&amp;lt;id&amp;gt;&lt;/span&gt;1235&lt;span style=&#34;color: #1e90ff; font-weight: bold&#34;&gt;&amp;lt;/id&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color: #1e90ff; font-weight: bold&#34;&gt;&amp;lt;lastname&amp;gt;&lt;/span&gt;Crackorn&lt;span style=&#34;color: #1e90ff; font-weight: bold&#34;&gt;&amp;lt;/lastname&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color: #1e90ff; font-weight: bold&#34;&gt;&amp;lt;firstname&amp;gt;&lt;/span&gt;James&lt;span style=&#34;color: #1e90ff; font-weight: bold&#34;&gt;&amp;lt;/firstname&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color: #1e90ff; font-weight: bold&#34;&gt;&amp;lt;department&amp;gt;&lt;/span&gt;10&lt;span style=&#34;color: #1e90ff; font-weight: bold&#34;&gt;&amp;lt;/department&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color: #1e90ff; font-weight: bold&#34;&gt;&amp;lt;salary&amp;gt;&lt;/span&gt;40000.00&lt;span style=&#34;color: #1e90ff; font-weight: bold&#34;&gt;&amp;lt;/salary&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color: #1e90ff; font-weight: bold&#34;&gt;&amp;lt;/Employee&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color: #1e90ff; font-weight: bold&#34;&gt;&amp;lt;Employee&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color: #1e90ff; font-weight: bold&#34;&gt;&amp;lt;id&amp;gt;&lt;/span&gt;1236&lt;span style=&#34;color: #1e90ff; font-weight: bold&#34;&gt;&amp;lt;/id&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color: #1e90ff; font-weight: bold&#34;&gt;&amp;lt;lastname&amp;gt;&lt;/span&gt;Hoffman&lt;span style=&#34;color: #1e90ff; font-weight: bold&#34;&gt;&amp;lt;/lastname&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color: #1e90ff; font-weight: bold&#34;&gt;&amp;lt;firstname&amp;gt;&lt;/span&gt;Burl&lt;span style=&#34;color: #1e90ff; font-weight: bold&#34;&gt;&amp;lt;/firstname&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color: #1e90ff; font-weight: bold&#34;&gt;&amp;lt;department&amp;gt;&lt;/span&gt;20&lt;span style=&#34;color: #1e90ff; font-weight: bold&#34;&gt;&amp;lt;/department&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color: #1e90ff; font-weight: bold&#34;&gt;&amp;lt;salary&amp;gt;&lt;/span&gt;75000.00&lt;span style=&#34;color: #1e90ff; font-weight: bold&#34;&gt;&amp;lt;/salary&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color: #1e90ff; font-weight: bold&#34;&gt;&amp;lt;/Employee&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color: #1e90ff; font-weight: bold&#34;&gt;&amp;lt;/Employees&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Place it on the database server in a readable directory, e.g. &lt;code&gt;/home/oracle&lt;/code&gt;. Name it &lt;code&gt;employees.xml&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Now execute the following in SQL*Plus:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;    &lt;span style=&#34;color: #0000aa&#34;&gt;SQL&lt;/span&gt;&amp;gt; &lt;span style=&#34;color: #0000aa&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color: #0000aa&#34;&gt;OR&lt;/span&gt; &lt;span style=&#34;color: #0000aa&#34;&gt;REPLACE&lt;/span&gt; DIRECTORY XML_DIR &lt;span style=&#34;color: #0000aa&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;/home/oracle&amp;#39;&lt;/span&gt;;
+    
+    &lt;span style=&#34;color: #0000aa&#34;&gt;SQL&lt;/span&gt;&amp;gt; &lt;span style=&#34;color: #0000aa&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color: #0000aa&#34;&gt;OR&lt;/span&gt; &lt;span style=&#34;color: #0000aa&#34;&gt;REPLACE&lt;/span&gt; &lt;span style=&#34;color: #0000aa&#34;&gt;VIEW&lt;/span&gt; employees_v &lt;span style=&#34;color: #0000aa&#34;&gt;AS&lt;/span&gt;
+    &lt;span style=&#34;color: #0000aa&#34;&gt;SELECT&lt;/span&gt; *
+    &lt;span style=&#34;color: #0000aa&#34;&gt;FROM&lt;/span&gt; XMLTable(&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;/Employees/Employee&amp;#39;&lt;/span&gt;
+            passing xmltype(
+                     bfilename(&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;XML_DIR&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;employees.xml&amp;#39;&lt;/span&gt;)
+                    , nls_charset_id(&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;AL32UTF8&amp;#39;&lt;/span&gt;)
+                    )
+            columns id           &lt;span style=&#34;color: #00aaaa&#34;&gt;number&lt;/span&gt; path &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;id&amp;#39;&lt;/span&gt;
+                  , lastname     varchar2(&lt;span style=&#34;color: #009999&#34;&gt;30&lt;/span&gt;) path &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;lastname&amp;#39;&lt;/span&gt;
+                  , firstname    varchar2(&lt;span style=&#34;color: #009999&#34;&gt;30&lt;/span&gt;) path &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;firstname&amp;#39;&lt;/span&gt;
+                  , department   &lt;span style=&#34;color: #00aaaa&#34;&gt;number&lt;/span&gt; path &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;department&amp;#39;&lt;/span&gt;
+                  , salary       &lt;span style=&#34;color: #00aaaa&#34;&gt;number&lt;/span&gt; path &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;salary&amp;#39;&lt;/span&gt;
+           );
+
+    &lt;span style=&#34;color: #0000aa&#34;&gt;SQL&lt;/span&gt;&amp;gt; &lt;span style=&#34;color: #0000aa&#34;&gt;SELECT&lt;/span&gt; * &lt;span style=&#34;color: #0000aa&#34;&gt;FROM&lt;/span&gt; employees_v;
+    ID   LASTNAME FIRSTNAME DEPARTMENT SALARY
+    &lt;span style=&#34;color: #aaaaaa; font-style: italic&#34;&gt;---- -------- --------- ---------- ------&lt;/span&gt;
+    &lt;span style=&#34;color: #009999&#34;&gt;1234&lt;/span&gt; Jetson   George    &lt;span style=&#34;color: #009999&#34;&gt;10&lt;/span&gt;         &lt;span style=&#34;color: #009999&#34;&gt;50000&lt;/span&gt;    
+    &lt;span style=&#34;color: #009999&#34;&gt;1235&lt;/span&gt; Crackorn James     &lt;span style=&#34;color: #009999&#34;&gt;10&lt;/span&gt;         &lt;span style=&#34;color: #009999&#34;&gt;40000&lt;/span&gt;
+    &lt;span style=&#34;color: #009999&#34;&gt;1236&lt;/span&gt; Hoffman  Burl      &lt;span style=&#34;color: #009999&#34;&gt;20&lt;/span&gt;         &lt;span style=&#34;color: #009999&#34;&gt;75000&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;You can modify construction of the view to read from multiple files by using a simple &lt;code&gt;UNION&lt;/code&gt; operator, or you can make the source filename dynamic so you can switch datasets at runtime. Here&amp;rsquo;s how you might do something like that:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;    &lt;span style=&#34;color: #0000aa&#34;&gt;SQL&lt;/span&gt;&amp;gt; &lt;span style=&#34;color: #0000aa&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color: #0000aa&#34;&gt;OR&lt;/span&gt; &lt;span style=&#34;color: #0000aa&#34;&gt;REPLACE&lt;/span&gt; &lt;span style=&#34;color: #0000aa&#34;&gt;VIEW&lt;/span&gt; employees_v &lt;span style=&#34;color: #0000aa&#34;&gt;AS&lt;/span&gt;
+    &lt;span style=&#34;color: #0000aa&#34;&gt;SELECT&lt;/span&gt; *
+    &lt;span style=&#34;color: #0000aa&#34;&gt;FROM&lt;/span&gt; XMLTable(&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;/Employees/Employee&amp;#39;&lt;/span&gt;
+            passing xmltype(
+                     bfilename(&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;XML_DIR&amp;#39;&lt;/span&gt;, userenv(&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;CLIENT_INFO&amp;#39;&lt;/span&gt;))
+                    , nls_charset_id(&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;AL32UTF8&amp;#39;&lt;/span&gt;)
+                    )
+            columns id           &lt;span style=&#34;color: #00aaaa&#34;&gt;number&lt;/span&gt; path &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;id&amp;#39;&lt;/span&gt;
+                  , lastname     varchar2(&lt;span style=&#34;color: #009999&#34;&gt;30&lt;/span&gt;) path &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;lastname&amp;#39;&lt;/span&gt;
+                  , firstname    varchar2(&lt;span style=&#34;color: #009999&#34;&gt;30&lt;/span&gt;) path &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;firstname&amp;#39;&lt;/span&gt;
+                  , department   &lt;span style=&#34;color: #00aaaa&#34;&gt;number&lt;/span&gt; path &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;department&amp;#39;&lt;/span&gt;
+                  , salary       &lt;span style=&#34;color: #00aaaa&#34;&gt;number&lt;/span&gt; path &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;salary&amp;#39;&lt;/span&gt;
+           );
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Then at runtime, specify the file you want to use like this:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;    &lt;span style=&#34;color: #0000aa&#34;&gt;SQL&lt;/span&gt;&amp;gt; &lt;span style=&#34;color: #0000aa&#34;&gt;exec&lt;/span&gt; dbms_application_info.set_client_info(&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;employees_01.xml&amp;#39;&lt;/span&gt;);
+    
+    &lt;span style=&#34;color: #0000aa&#34;&gt;SQL&lt;/span&gt;&amp;gt; &lt;span style=&#34;color: #0000aa&#34;&gt;SELECT&lt;/span&gt; * &lt;span style=&#34;color: #0000aa&#34;&gt;FROM&lt;/span&gt; employees_v;
+    ID   LASTNAME FIRSTNAME DEPARTMENT SALARY
+    &lt;span style=&#34;color: #aaaaaa; font-style: italic&#34;&gt;---- -------- --------- ---------- ------&lt;/span&gt;
+    &lt;span style=&#34;color: #009999&#34;&gt;1234&lt;/span&gt; Jetson   George    &lt;span style=&#34;color: #009999&#34;&gt;10&lt;/span&gt;         &lt;span style=&#34;color: #009999&#34;&gt;50000&lt;/span&gt;    
+    &lt;span style=&#34;color: #009999&#34;&gt;1235&lt;/span&gt; Crackorn James     &lt;span style=&#34;color: #009999&#34;&gt;10&lt;/span&gt;         &lt;span style=&#34;color: #009999&#34;&gt;40000&lt;/span&gt;
+    &lt;span style=&#34;color: #009999&#34;&gt;1236&lt;/span&gt; Hoffman  Burl      &lt;span style=&#34;color: #009999&#34;&gt;20&lt;/span&gt;         &lt;span style=&#34;color: #009999&#34;&gt;75000&lt;/span&gt;
+
+    &lt;span style=&#34;color: #0000aa&#34;&gt;SQL&lt;/span&gt;&amp;gt; &lt;span style=&#34;color: #0000aa&#34;&gt;exec&lt;/span&gt; dbms_application_info.set_client_info(&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;employees_02.xml&amp;#39;&lt;/span&gt;);
+    
+    &lt;span style=&#34;color: #0000aa&#34;&gt;SQL&lt;/span&gt;&amp;gt; &lt;span style=&#34;color: #0000aa&#34;&gt;SELECT&lt;/span&gt; * &lt;span style=&#34;color: #0000aa&#34;&gt;FROM&lt;/span&gt; employees_v;
+    ID   LASTNAME FIRSTNAME DEPARTMENT SALARY
+    &lt;span style=&#34;color: #aaaaaa; font-style: italic&#34;&gt;---- -------- --------- ---------- ------&lt;/span&gt;
+    &lt;span style=&#34;color: #009999&#34;&gt;1234&lt;/span&gt; Ringwald Malory    &lt;span style=&#34;color: #009999&#34;&gt;30&lt;/span&gt;         &lt;span style=&#34;color: #009999&#34;&gt;63000&lt;/span&gt;    
+    &lt;span style=&#34;color: #009999&#34;&gt;1235&lt;/span&gt; Dulles   Bob       &lt;span style=&#34;color: #009999&#34;&gt;10&lt;/span&gt;         &lt;span style=&#34;color: #009999&#34;&gt;100000&lt;/span&gt;
+    &lt;span style=&#34;color: #009999&#34;&gt;1236&lt;/span&gt; Stein    Frank     &lt;span style=&#34;color: #009999&#34;&gt;50&lt;/span&gt;         &lt;span style=&#34;color: #009999&#34;&gt;55000&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Why might this be useful? Suppose you have an arbitrary number of identically structured XML files in a directory that you want to import into a relational database table. Using a shell script you can, for each file in the directory,&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;log in to SQL*Plus&lt;/li&gt;
+&lt;li&gt;set the &lt;code&gt;CLIENT_INFO&lt;/code&gt; variable to the name of the current file&lt;/li&gt;
+&lt;li&gt;perform a simple insert into your table reading all records from the view&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You might even create a cron job to monitor a particular directory for new XML files, processing them into tables and then deleting or archiving the files when done.&lt;/p&gt;
+</description>
+          </item>
+        
+      
+    
+  </channel>
+</rss>

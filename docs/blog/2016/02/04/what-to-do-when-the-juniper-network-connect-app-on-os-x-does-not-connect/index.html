@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="What to do when the Juniper Network Connect app on OS X does not connect">
+    <meta name="author" content="Toby Marks">
+
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <title>What to do when the Juniper Network Connect app on OS X does not connect &middot; tobybase.com</title>
+
+   	
+    
+        <link rel="stylesheet" href="http://localhost:1313//css/theme/cosmo.css">
+    
+
+    <link rel="stylesheet" href="http://localhost:1313//css/font-awesome.min.css">
+
+   	
+   	<link rel="stylesheet" href="http://localhost:1313//css/style.css">
+
+
+    
+    <script src="http://localhost:1313//js/jquery.min-2.1.4.js"></script>
+    <script src="http://localhost:1313//js/bootstrap.min-3.3.5.js"></script>
+
+    
+    <link href="" rel="alternate" type="application/rss+xml" title="tobybase.com" />
+</head>
+<body lang="en-US">
+    
+    <div class="container">
+    <div class="row">
+        <div class="navbar navbar-default " role="navigation">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="http://localhost:1313/"><img src="/img/logo.png" height="100%"></a>
+            </div>
+            <div class="navbar-collapse collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="http://localhost:1313/">Home</a></li>
+                    <li><a href="http://localhost:1313//post/">Blog</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-offset-1 col-md-10">
+			<h3>What to do when the Juniper Network Connect app on OS X does not connect</h3>
+				<span class="label label-primary">02/04/2016</span> in 
+				
+					
+					<a href="/categories/howtos">HowTos</a>
+				 using tags
+				
+					
+					<a href="/tags/macos">macos</a>
+				
+					 , 
+					<a href="/tags/vpn">vpn</a>
+				
+					 , 
+					<a href="/tags/juniper">juniper</a>
+				
+					 , 
+					<a href="/tags/utilities">utilities</a>
+				
+			</small>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-offset-1 col-md-10">
+			<br>
+			<p>If you use Juniper&rsquo;s Network Connect app to connect to your office VPN over HTTPS, you might occasionally experience strange errors like &ldquo;A software error caused the Network Connect tunneling service to terminate.&rdquo; Shortly after that, the application may either crash or prompt you for login credentials again.</p>
+
+<p>The solution involves removing all of the Network Connect files and allowing your browser to download and install the app all over again, as it did the first time you tried to connect to your office VPN.</p>
+
+<p>(Note: as a precaution you may want to simply move the Network Connect.app file from /Applications to ~/Desktop, just in case your browser is not able to download it as needed.)</p>
+
+<p>To remove all files associated with the Network Connect application, execute the following commands in Terminal.app.</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span><span style="color: #aaaaaa; font-style: italic"># sudo rm -rf /Applications/Network\ Connect.app`</span>
+<span style="color: #aaaaaa; font-style: italic"># sudo rm -rf /usr/local/juniper`</span>
+<span style="color: #aaaaaa; font-style: italic"># sudo rm -rf ~/Library/Application\ Support/Juniper\ Networks`</span>
+<span style="color: #aaaaaa; font-style: italic"># sudo rm ~/Library/Preferences/net.juniper.NetworkConnect.plist`</span>
+</pre></div>
+
+<p>Now try connecting to your office VPN again and the browser should prompt you to redownload the application. When I tried this I got an error the first time on Firefox saying the installation failed, but I was able to manually verify that the files were in place. My second attempt succeeded. Go figure.</p>
+
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<hr>
+		</div>
+	</div>
+</div>
+
+    <div class="container">
+        <div class="row col-md-12">
+            <footer>
+                <div class="pull-left">
+                    <p>
+                        &copy; 2015 ~ Toby Marks ~ Powered By <a href="http://hugo.spf13.com">Hugo</a> ~ <a href="http://localhost:1313//license/">License</a>
+                    </p>
+                </div>
+
+                
+                <div class="pull-right">
+                    
+                        <a href="https://www.linkedin.com/in/tobymarks" target="_blank">
+                        <i class="fa fa-linkedin fa-2x"></i></a>
+                    
+                    
+                    
+                        <a href="https://twitter.com/toby_marks" target="_blank">
+                        <i class="fa fa-twitter-square fa-2x"></i></a>
+                    
+                    
+                        <a href="https://github.com/toby-marks" target="_blank">
+                        <i class="fa fa-github-square fa-2x"></i></a>
+                    
+                    
+                    
+                    
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    
+    </body>
+</html>
+
