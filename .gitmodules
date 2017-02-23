@@ -169,8 +169,8 @@
 [submodule "grid-side"]
 	path = grid-side
 	url = https://github.com/chipsenkbeil/grid-side.git
-[submodule "hugo-multi-bootswatch"]
-	path = hugo-multi-bootswatch
+[submodule "themes/hugo-multi-bootswatch"]
+	path = themes/hugo-multi-bootswatch
 	url = https://github.com/mpas/hugo-multi-bootswatch.git
 [submodule "hugo-mdl"]
 	path = hugo-mdl
