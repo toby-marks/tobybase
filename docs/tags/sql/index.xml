@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sql on tobybase.com</title>
-    <link>http://localhost:1313/tags/sql/index.xml</link>
+    <link>https://toby-marks.github.io/tobybase/tags/sql/index.xml</link>
     <description>Recent content in Sql on tobybase.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2015 ~ Toby Marks</copyright>
-    <atom:link href="/tags/sql/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tobybase/tags/sql/index.xml" rel="self" type="application/rss+xml" />
     
       
         
           <item>
             <title>How To Use SQL to Query an XML Document Using Oracle External Tables</title>
-            <link>http://localhost:1313/blog/2012/11/14/how-to-use-sql-to-query-an-xml-document-using-oracle-external-tables/</link>
+            <link>https://toby-marks.github.io/tobybase/blog/2012/11/14/how-to-use-sql-to-query-an-xml-document-using-oracle-external-tables/</link>
             <pubDate>Wed, 14 Nov 2012 00:00:00 +0000</pubDate>
             
-            <guid>http://localhost:1313/blog/2012/11/14/how-to-use-sql-to-query-an-xml-document-using-oracle-external-tables/</guid>
+            <guid>https://toby-marks.github.io/tobybase/blog/2012/11/14/how-to-use-sql-to-query-an-xml-document-using-oracle-external-tables/</guid>
             <description>&lt;p&gt;Oracle&amp;rsquo;s &lt;a href=&#34;http://docs.oracle.com/cd/B28359_01/server.111/b28319/et_concepts.htm&#34;&gt;external table feature&lt;/a&gt; allows you to treat structured files on the database server as tables for query and DML purposes. To use an example from the linked documentation, a tab-delimited file like this:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;56   november, 15, 1980  baker             mary       alice     09/01/2004
@@ -169,10 +169,10 @@
         
           <item>
             <title>Use DML Error Logging</title>
-            <link>http://localhost:1313/blog/2012/06/07/use-dml-error-logging/</link>
+            <link>https://toby-marks.github.io/tobybase/blog/2012/06/07/use-dml-error-logging/</link>
             <pubDate>Thu, 07 Jun 2012 17:04:00 +0000</pubDate>
             
-            <guid>http://localhost:1313/blog/2012/06/07/use-dml-error-logging/</guid>
+            <guid>https://toby-marks.github.io/tobybase/blog/2012/06/07/use-dml-error-logging/</guid>
             <description>&lt;p&gt;Introduced with Oracle 10gR2, DML Error Logging allows you to make standard SQL &lt;code&gt;INSERT&lt;/code&gt;, &lt;code&gt;UPDATE&lt;/code&gt;, and &lt;code&gt;MERGE&lt;/code&gt; statements behave more like the SQL*Loader utility, logging errors to a table rather than failing and rolling back the first time an error condition is encountered.&lt;/p&gt;
 
 &lt;p&gt;The syntax is the same for all DML statements. Just add the following clause to the end of your DML:&lt;/p&gt;

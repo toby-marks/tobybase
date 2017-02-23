@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Links on tobybase.com</title>
-    <link>http://localhost:1313/link/index.xml</link>
+    <link>https://toby-marks.github.io/tobybase/link/index.xml</link>
     <description>Recent content in Links on tobybase.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2015 ~ Toby Marks</copyright>
     <lastBuildDate>Wed, 24 Jul 2013 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/link/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tobybase/link/index.xml" rel="self" type="application/rss+xml" />
     
       
         <item>
           <title>Linklog: Use Preview to view formatted man pages</title>
-          <link>http://localhost:1313/link/2013-07-24-view-man-pages/</link>
+          <link>https://toby-marks.github.io/tobybase/link/2013-07-24-view-man-pages/</link>
           <pubDate>Wed, 24 Jul 2013 00:00:00 +0000</pubDate>
           <author>Anonymous</author>
-          <guid>http://localhost:1313/link/2013-07-24-view-man-pages/</guid>
+          <guid>https://toby-marks.github.io/tobybase/link/2013-07-24-view-man-pages/</guid>
           <description>&lt;p&gt;This is an elegant solution for viewing, searching, and archiving man pages that eliminates the necessity for third party apps.&lt;br /&gt;
 &lt;em&gt;Update:&lt;/em&gt; still works in macOS Sierra.&lt;/p&gt;
 </description>
@@ -26,10 +26,10 @@
       
         <item>
           <title>Linklog: Safari 5.1.7 on my MacBookPro OSX 10.7.4 freezes unexpectedly</title>
-          <link>http://localhost:1313/link/2012-07-25-safari-517-freezes-on-macbook-pro/</link>
+          <link>https://toby-marks.github.io/tobybase/link/2012-07-25-safari-517-freezes-on-macbook-pro/</link>
           <pubDate>Wed, 25 Jul 2012 00:00:00 +0000</pubDate>
           <author>Apple Discussion Forum</author>
-          <guid>http://localhost:1313/link/2012-07-25-safari-517-freezes-on-macbook-pro/</guid>
+          <guid>https://toby-marks.github.io/tobybase/link/2012-07-25-safari-517-freezes-on-macbook-pro/</guid>
           <description>&lt;p&gt;Lately I&amp;rsquo;ve been experiencing strange problems when clicking on links in Safari 5.1.7. Usually the progress indicator would either flash momentarily and do nothing, or else it would never appear at all. Pages would sometimes load, but after an unusual delay and with no indication that the browser was actually doing anything. I switched to Chrome as my default browser for a few days, but that was about all I could stand. A little research on the forums showed this fix, which appears to have worked for me.&lt;/p&gt;
 </description>
         </item>
@@ -38,10 +38,10 @@
       
         <item>
           <title>Linklog: Oracle Database Row versus Set Processing, Surprise!</title>
-          <link>http://localhost:1313/link/2012-06-01-Oracle-row-vs-set-processing/</link>
+          <link>https://toby-marks.github.io/tobybase/link/2012-06-01-Oracle-row-vs-set-processing/</link>
           <pubDate>Fri, 01 Jun 2012 00:00:00 +0000</pubDate>
           <author>Craig Shallahamer</author>
-          <guid>http://localhost:1313/link/2012-06-01-Oracle-row-vs-set-processing/</guid>
+          <guid>https://toby-marks.github.io/tobybase/link/2012-06-01-Oracle-row-vs-set-processing/</guid>
           <description>&lt;p&gt;To folks writing database-driven reports for the web: Craig Shallahamer shows why you should let the (Oracle) database handle as much of your selection and transformation logic as possible.&lt;/p&gt;
 </description>
         </item>
@@ -50,10 +50,10 @@
       
         <item>
           <title>Linklog: SQLFiddle</title>
-          <link>http://localhost:1313/link/2012-05-25-SQLFiddle-is-a-SQL-sandbox/</link>
+          <link>https://toby-marks.github.io/tobybase/link/2012-05-25-SQLFiddle-is-a-SQL-sandbox/</link>
           <pubDate>Fri, 25 May 2012 00:00:00 +0000</pubDate>
           <author>Jake Feasel</author>
-          <guid>http://localhost:1313/link/2012-05-25-SQLFiddle-is-a-SQL-sandbox/</guid>
+          <guid>https://toby-marks.github.io/tobybase/link/2012-05-25-SQLFiddle-is-a-SQL-sandbox/</guid>
           <description>&lt;p&gt;Build your own mini-schema and run queries against it. Publish your experiments for your friends to tweak. Or try out the examples from your favorite SQL book without having to build a database first. Works for Oracle, PostgreSQL, MySQL, and SQL Server flavors. Pretty cool!&lt;/p&gt;
 </description>
         </item>

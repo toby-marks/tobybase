@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Howtos on tobybase.com</title>
-    <link>http://localhost:1313/categories/howtos/index.xml</link>
+    <link>https://toby-marks.github.io/tobybase/categories/howtos/index.xml</link>
     <description>Recent content in Howtos on tobybase.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2015 ~ Toby Marks</copyright>
-    <atom:link href="/categories/howtos/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tobybase/categories/howtos/index.xml" rel="self" type="application/rss+xml" />
     
       
         
           <item>
             <title>What to do when the Juniper Network Connect app on OS X does not connect</title>
-            <link>http://localhost:1313/blog/2016/02/04/what-to-do-when-the-juniper-network-connect-app-on-os-x-does-not-connect/</link>
+            <link>https://toby-marks.github.io/tobybase/blog/2016/02/04/what-to-do-when-the-juniper-network-connect-app-on-os-x-does-not-connect/</link>
             <pubDate>Thu, 04 Feb 2016 22:50:09 +0000</pubDate>
             
-            <guid>http://localhost:1313/blog/2016/02/04/what-to-do-when-the-juniper-network-connect-app-on-os-x-does-not-connect/</guid>
+            <guid>https://toby-marks.github.io/tobybase/blog/2016/02/04/what-to-do-when-the-juniper-network-connect-app-on-os-x-does-not-connect/</guid>
             <description>&lt;p&gt;If you use Juniper&amp;rsquo;s Network Connect app to connect to your office VPN over HTTPS, you might occasionally experience strange errors like &amp;ldquo;A software error caused the Network Connect tunneling service to terminate.&amp;rdquo; Shortly after that, the application may either crash or prompt you for login credentials again.&lt;/p&gt;
 
 &lt;p&gt;The solution involves removing all of the Network Connect files and allowing your browser to download and install the app all over again, as it did the first time you tried to connect to your office VPN.&lt;/p&gt;
@@ -40,15 +40,15 @@
         
           <item>
             <title>How to Use ps to List Top Memory, CPU Eating Processes</title>
-            <link>http://localhost:1313/blog/2013/07/24/how-to-use-ps-to-list-top-memory-cpu-eating-processes/</link>
+            <link>https://toby-marks.github.io/tobybase/blog/2013/07/24/how-to-use-ps-to-list-top-memory-cpu-eating-processes/</link>
             <pubDate>Wed, 24 Jul 2013 21:42:00 +0000</pubDate>
             
-            <guid>http://localhost:1313/blog/2013/07/24/how-to-use-ps-to-list-top-memory-cpu-eating-processes/</guid>
+            <guid>https://toby-marks.github.io/tobybase/blog/2013/07/24/how-to-use-ps-to-list-top-memory-cpu-eating-processes/</guid>
             <description>&lt;p&gt;The &lt;code&gt;ps&lt;/code&gt; command is a versatile and configurable way to look at the processes running on your system, though I&amp;rsquo;ve generally gotten by with a lazy &lt;code&gt;ps -ef&lt;/code&gt; to find out whatever I needed to know. Recently, though, a client&amp;rsquo;s server began running out of memory, and as a number of processes were running on the server, the culprit was not immediately clear. I wanted to provide them with a quick, simple diagnostic tool they could use the next time they received an alert.&lt;/p&gt;
 
 &lt;p&gt;If you look at the man page for &lt;code&gt;ps&lt;/code&gt; you&amp;rsquo;ll find a number of options available for sorting the list of processes returned as well as for filtering the columns displayed.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2013-07-24-linux-unix-use-ps-to-list-top-memory-cpu-eating-processes/ac6287b65af17b95d247ea063f0aa1bfc6f106f3b69adf0ae73ed8258d3a6c7b.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://toby-marks.github.io/tobybase/img/2013-07-24-linux-unix-use-ps-to-list-top-memory-cpu-eating-processes/ac6287b65af17b95d247ea063f0aa1bfc6f106f3b69adf0ae73ed8258d3a6c7b.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Some examples of &lt;code&gt;ps&lt;/code&gt; options, from RHEL 5.6:&lt;/p&gt;
 
@@ -101,7 +101,7 @@ show the last 10 lines&lt;/p&gt;
 
 &lt;p&gt;I have one alias for retrieving my top memory-utilizing processes and one for my top CPU-utilizing processes. The &lt;code&gt;while&lt;/code&gt; loop in the alias implements a functionality similar to that of the Linux &lt;code&gt;watch&lt;/code&gt; command, clearing the screen and running the process indefinitely until it is forcibly quit. For my own purposes I wanted to display some additional columns, like username and process state. I also changed the sort ordering to display the largest processes at the top of the list.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2013-07-24-linux-unix-use-ps-to-list-top-memory-cpu-eating-processes/2bcd3b2c40d8bc37893b47399aed325508e95c655492de8866a8365eede7008f.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://toby-marks.github.io/tobybase/img/2013-07-24-linux-unix-use-ps-to-list-top-memory-cpu-eating-processes/2bcd3b2c40d8bc37893b47399aed325508e95c655492de8866a8365eede7008f.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </description>
           </item>
         
@@ -111,10 +111,10 @@ show the last 10 lines&lt;/p&gt;
         
           <item>
             <title>How to Fix SQL Developer on a Retina Display Mac(book)</title>
-            <link>http://localhost:1313/blog/2013/07/19/how-to-fix-sql-developer-on-a-retina-display-macbook/</link>
+            <link>https://toby-marks.github.io/tobybase/blog/2013/07/19/how-to-fix-sql-developer-on-a-retina-display-macbook/</link>
             <pubDate>Fri, 19 Jul 2013 22:32:00 +0000</pubDate>
             
-            <guid>http://localhost:1313/blog/2013/07/19/how-to-fix-sql-developer-on-a-retina-display-macbook/</guid>
+            <guid>https://toby-marks.github.io/tobybase/blog/2013/07/19/how-to-fix-sql-developer-on-a-retina-display-macbook/</guid>
             <description>&lt;p&gt;I just purchased a new Macbook Pro 13-inch with Retina Display and was horrified to see how fuzzy SQL Developer looked on the high-res screen. Thanks to Thunderforge on the &lt;a href=&#34;http://stackoverflow.com/questions/15181079/apple-retina-display-support-in-java-jdk-1-7-for-awt-swing&#34;&gt;Stack Overflow forums&lt;/a&gt; for this tip:&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -134,15 +134,15 @@ shown by this &lt;a href=&#34;http://download.java.net/jdk7u40/changes/jdk7u40-b
         
           <item>
             <title>How To Reset Page Numbering Between Document Sections in BI Publisher&#39;s Template Builder for Word</title>
-            <link>http://localhost:1313/blog/2013/06/14/how-to-reset-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/</link>
+            <link>https://toby-marks.github.io/tobybase/blog/2013/06/14/how-to-reset-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/</link>
             <pubDate>Fri, 14 Jun 2013 21:47:00 +0000</pubDate>
             
-            <guid>http://localhost:1313/blog/2013/06/14/how-to-reset-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/</guid>
+            <guid>https://toby-marks.github.io/tobybase/blog/2013/06/14/how-to-reset-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/</guid>
             <description>&lt;p&gt;Under normal circumstances, it is fairly easy in Microsoft Word to &lt;a href=&#34;http://www.youtube.com/watch?v=E1WtKR6FDM4&#34;&gt;reset page numbering&lt;/a&gt; when starting a new section of your document. However, such a simple thing can be non-trivial when dealing with the BI Publisher Template Builder plugin for Microsoft Office (&lt;a href=&#34;http://www.oracle.com/technetwork/middleware/bi-publisher/downloads/index.html&#34;&gt;available from Oracle&lt;/a&gt; — see BI Publisher Desktop).&lt;/p&gt;
 
 &lt;p&gt;In short, doing this the normal way did not work for me, and in researching the issue I ran across a &lt;a href=&#34;http://stackoverflow.com/questions/9603481/rtf-number-of-pages-page-x-of-y&#34;&gt;number&lt;/a&gt; &lt;a href=&#34;https://forums.oracle.com/thread/2493003&#34;&gt;of&lt;/a&gt; &lt;a href=&#34;https://forums.oracle.com/thread/496869&#34;&gt;folks&lt;/a&gt; who were having the same problem. Page numbering was simply not being reset between sections, or worse, did not take into account a fluid document size based upon available data.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2013-06-14-resetting-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/9f704cdbd7a5ec85bff722e3469edae0993faa219b4e42459782b94f692aa53e.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://toby-marks.github.io/tobybase/img/2013-06-14-resetting-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/9f704cdbd7a5ec85bff722e3469edae0993faa219b4e42459782b94f692aa53e.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;One &lt;a href=&#34;https://forums.oracle.com/thread/2225641&#34;&gt;suggestion I read&lt;/a&gt; said to wrap the page number cells in a BI Publisher repeating group using for-each@section, like so:&lt;/p&gt;
 
@@ -154,19 +154,19 @@ shown by this &lt;a href=&#34;http://download.java.net/jdk7u40/changes/jdk7u40-b
 
 &lt;p&gt;RTF files can be a little confusing, but most of the &amp;ldquo;junk&amp;rdquo; in the files is just special codes for formatting the text. I was able to find my way around easily enough by searching for labels or keywords from the document. By searching for the first few words from the second section of the document (in this case, &amp;ldquo;Sender&amp;rsquo;s Receipt&amp;rdquo;), I was able to spot where the section break should go.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2013-06-14-resetting-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/0d902604df4939682bb7821c4044affb3b03f809274551b8172827bc846d7b2d.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://toby-marks.github.io/tobybase/img/2013-06-14-resetting-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/0d902604df4939682bb7821c4044affb3b03f809274551b8172827bc846d7b2d.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Checking the RTF spec, I could see that the &lt;code&gt;\page&lt;/code&gt; directive shown above was the page break between two sections of my document where I wanted to reset the page numbering. To create the section break, I inserted the following RTF directives at that point:&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;\sect \sectd \pgnstarts1\pgnrestart&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2013-06-14-resetting-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/466447c609e7fa65f188357e7531def7cb8f1443944e602f62e3eff984f1388d.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://toby-marks.github.io/tobybase/img/2013-06-14-resetting-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/466447c609e7fa65f188357e7531def7cb8f1443944e602f62e3eff984f1388d.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Since the default behavior of the section break is to start on a new page, I found I had to remove the &lt;code&gt;\page&lt;/code&gt; directive to avoid an extra page being inserted between the document sections.&lt;/p&gt;
 
 &lt;p&gt;Interestingly, resetting the page numbering also works when calculating total number of pages, whereby the total is from the section, not the entire document, even though the NumPages field is used instead of SectionPages! Go figure, but it worked for me.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2013-06-14-resetting-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/1efc8813e70f4ee7bda4647b6fd38f4dce646c46b41e20fb482a3443e5bbb17a.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://toby-marks.github.io/tobybase/img/2013-06-14-resetting-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/1efc8813e70f4ee7bda4647b6fd38f4dce646c46b41e20fb482a3443e5bbb17a.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </description>
           </item>
         
@@ -176,10 +176,10 @@ shown by this &lt;a href=&#34;http://download.java.net/jdk7u40/changes/jdk7u40-b
         
           <item>
             <title>Generate PDF Reports for Free in Oracle Apex Using PL-JRXML2PDF and iReport Designer</title>
-            <link>http://localhost:1313/blog/2012/12/18/generate-pdf-reports-for-free-in-oracle-apex-using-pl-jrxml2pdf-and-ireport-designer/</link>
+            <link>https://toby-marks.github.io/tobybase/blog/2012/12/18/generate-pdf-reports-for-free-in-oracle-apex-using-pl-jrxml2pdf-and-ireport-designer/</link>
             <pubDate>Tue, 18 Dec 2012 00:00:00 +0000</pubDate>
             
-            <guid>http://localhost:1313/blog/2012/12/18/generate-pdf-reports-for-free-in-oracle-apex-using-pl-jrxml2pdf-and-ireport-designer/</guid>
+            <guid>https://toby-marks.github.io/tobybase/blog/2012/12/18/generate-pdf-reports-for-free-in-oracle-apex-using-pl-jrxml2pdf-and-ireport-designer/</guid>
             <description>
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
   &lt;iframe src=&#34;//player.vimeo.com/video/55818132&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
@@ -196,10 +196,10 @@ shown by this &lt;a href=&#34;http://download.java.net/jdk7u40/changes/jdk7u40-b
         
           <item>
             <title>How To Use SQL to Query an XML Document Using Oracle External Tables</title>
-            <link>http://localhost:1313/blog/2012/11/14/how-to-use-sql-to-query-an-xml-document-using-oracle-external-tables/</link>
+            <link>https://toby-marks.github.io/tobybase/blog/2012/11/14/how-to-use-sql-to-query-an-xml-document-using-oracle-external-tables/</link>
             <pubDate>Wed, 14 Nov 2012 00:00:00 +0000</pubDate>
             
-            <guid>http://localhost:1313/blog/2012/11/14/how-to-use-sql-to-query-an-xml-document-using-oracle-external-tables/</guid>
+            <guid>https://toby-marks.github.io/tobybase/blog/2012/11/14/how-to-use-sql-to-query-an-xml-document-using-oracle-external-tables/</guid>
             <description>&lt;p&gt;Oracle&amp;rsquo;s &lt;a href=&#34;http://docs.oracle.com/cd/B28359_01/server.111/b28319/et_concepts.htm&#34;&gt;external table feature&lt;/a&gt; allows you to treat structured files on the database server as tables for query and DML purposes. To use an example from the linked documentation, a tab-delimited file like this:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;56   november, 15, 1980  baker             mary       alice     09/01/2004
@@ -352,11 +352,11 @@ shown by this &lt;a href=&#34;http://download.java.net/jdk7u40/changes/jdk7u40-b
         
           <item>
             <title>How To Restrict Access to BI Publisher Reports</title>
-            <link>http://localhost:1313/blog/2012/11/12/how-to-restrict-access-to-bi-publisher-reports/</link>
+            <link>https://toby-marks.github.io/tobybase/blog/2012/11/12/how-to-restrict-access-to-bi-publisher-reports/</link>
             <pubDate>Mon, 12 Nov 2012 18:12:00 +0000</pubDate>
             
-            <guid>http://localhost:1313/blog/2012/11/12/how-to-restrict-access-to-bi-publisher-reports/</guid>
-            <description>&lt;p&gt;In &lt;a href=&#34;http://localhost:1313/blog/2012/11/12/how-to-configure-oracle-bi-publisher-to-authenticate-with-active-directory/&#34;&gt;my last post&lt;/a&gt;  I described how to configure BI Publisher to authenticate against an LDAP server, typically a corporate Active Directory server. Aside from authentication, you can also use LDAP group membership to determine who has access to a given report. Here&amp;rsquo;s how you do it.&lt;/p&gt;
+            <guid>https://toby-marks.github.io/tobybase/blog/2012/11/12/how-to-restrict-access-to-bi-publisher-reports/</guid>
+            <description>&lt;p&gt;In &lt;a href=&#34;https://toby-marks.github.io/tobybase/tobybase/blog/2012/11/12/how-to-configure-oracle-bi-publisher-to-authenticate-with-active-directory/&#34;&gt;my last post&lt;/a&gt;  I described how to configure BI Publisher to authenticate against an LDAP server, typically a corporate Active Directory server. Aside from authentication, you can also use LDAP group membership to determine who has access to a given report. Here&amp;rsquo;s how you do it.&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Create a group in your LDAP/AD directory and assign your target users to that group.&lt;/li&gt;
@@ -401,10 +401,10 @@ shown by this &lt;a href=&#34;http://download.java.net/jdk7u40/changes/jdk7u40-b
         
           <item>
             <title>How To Configure Oracle BI Publisher to Authenticate With Active Directory</title>
-            <link>http://localhost:1313/blog/2012/11/12/how-to-configure-oracle-bi-publisher-to-authenticate-with-active-directory/</link>
+            <link>https://toby-marks.github.io/tobybase/blog/2012/11/12/how-to-configure-oracle-bi-publisher-to-authenticate-with-active-directory/</link>
             <pubDate>Mon, 12 Nov 2012 17:32:00 +0000</pubDate>
             
-            <guid>http://localhost:1313/blog/2012/11/12/how-to-configure-oracle-bi-publisher-to-authenticate-with-active-directory/</guid>
+            <guid>https://toby-marks.github.io/tobybase/blog/2012/11/12/how-to-configure-oracle-bi-publisher-to-authenticate-with-active-directory/</guid>
             <description>&lt;ul&gt;
 &lt;li&gt;Log in to BI Publisher as an administrator.&lt;/li&gt;
 &lt;li&gt;Click on the Admin tab.&lt;/li&gt;
@@ -537,17 +537,17 @@ XMLP_TEMPLATE_DESIGNER&lt;/p&gt;
         
           <item>
             <title>How to Avoid the &#34;Job scheduling failed because the user has no permission to access this report&#34; Error in BI Publisher</title>
-            <link>http://localhost:1313/blog/2012/08/27/how-to-avoid-the-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report-error-in-bi-publisher/</link>
+            <link>https://toby-marks.github.io/tobybase/blog/2012/08/27/how-to-avoid-the-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report-error-in-bi-publisher/</link>
             <pubDate>Mon, 27 Aug 2012 20:48:08 +0000</pubDate>
             
-            <guid>http://localhost:1313/blog/2012/08/27/how-to-avoid-the-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report-error-in-bi-publisher/</guid>
-            <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2012-08-27-bi-publisher-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report/864dbb90dbf623eb4f36b26a3ecf315cfec7121cf33e16730b6060c6572dfb35.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+            <guid>https://toby-marks.github.io/tobybase/blog/2012/08/27/how-to-avoid-the-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report-error-in-bi-publisher/</guid>
+            <description>&lt;p&gt;&lt;img src=&#34;https://toby-marks.github.io/tobybase/img/2012-08-27-bi-publisher-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report/864dbb90dbf623eb4f36b26a3ecf315cfec7121cf33e16730b6060c6572dfb35.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;You can get this error if you are trying to schedule a report and your BI Publisher installation uses LDAP authentication.&lt;/p&gt;
 
 &lt;p&gt;To avoid it, make sure that the &amp;ldquo;Administrator&amp;rdquo; account you use to connect to your LDAP server is in the XMLP_ADMIN group. The LDAP settings are located on the Admin tab, under Security Settings / Security Configuration.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2012-08-27-bi-publisher-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report/c44997adb44d6687468d544341fcd25b818ebdd46087d1849c38e855ee874488.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://toby-marks.github.io/tobybase/img/2012-08-27-bi-publisher-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report/c44997adb44d6687468d544341fcd25b818ebdd46087d1849c38e855ee874488.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </description>
           </item>
         
@@ -557,21 +557,21 @@ XMLP_TEMPLATE_DESIGNER&lt;/p&gt;
         
           <item>
             <title>How To Fix High CPU Usage by SQL Developer on OS X</title>
-            <link>http://localhost:1313/blog/2012/07/20/how-to-fix-high-cpu-usage-by-sql-developer-on-os-x/</link>
+            <link>https://toby-marks.github.io/tobybase/blog/2012/07/20/how-to-fix-high-cpu-usage-by-sql-developer-on-os-x/</link>
             <pubDate>Fri, 20 Jul 2012 16:32:00 +0000</pubDate>
             
-            <guid>http://localhost:1313/blog/2012/07/20/how-to-fix-high-cpu-usage-by-sql-developer-on-os-x/</guid>
+            <guid>https://toby-marks.github.io/tobybase/blog/2012/07/20/how-to-fix-high-cpu-usage-by-sql-developer-on-os-x/</guid>
             <description>&lt;p&gt;I&amp;rsquo;ve been fighting for a couple of years now with an annoying performance bug in SQL Developer for OS X. After using the application for a while CPU usage would spike to around 100%, even when idle. This is a known issue associated with the &amp;ldquo;Look and Feel&amp;rdquo; preference.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2012-07-20-easy-fix-for-high-cpu-usage-in-sql-developer-on-os-x/b5b8f447d6dc433b4253c4814df5746e70e6e1e85235b391c9fef8b19e9f84d8.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://toby-marks.github.io/tobybase/img/2012-07-20-easy-fix-for-high-cpu-usage-in-sql-developer-on-os-x/b5b8f447d6dc433b4253c4814df5746e70e6e1e85235b391c9fef8b19e9f84d8.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Basically, don&amp;rsquo;t use the &amp;ldquo;Mac OS X&amp;rdquo; setting. Instead, use the &amp;ldquo;Oracle&amp;rdquo; setting. The theme doesn&amp;rsquo;t matter.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2012-07-20-easy-fix-for-high-cpu-usage-in-sql-developer-on-os-x/aa9173adfc0090dc8b5b7fb471547c26a5243ca8f21c670580cd41df9cbd263f.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://toby-marks.github.io/tobybase/img/2012-07-20-easy-fix-for-high-cpu-usage-in-sql-developer-on-os-x/aa9173adfc0090dc8b5b7fb471547c26a5243ca8f21c670580cd41df9cbd263f.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;That fixes the CPU issue, but somewhat annoyingly moves the menu out of the menu bar at the top of the screen and into the application window, a la Windows, making the interface inconsistent with pretty much every other app I use on my Mac. &lt;a href=&#34;https://forums.oracle.com/forums/thread.jspa?threadID=1980688&amp;amp;start=15&amp;amp;tstart=30&#34;&gt;Until recently&lt;/a&gt;, that is. The big news is that &lt;em&gt;as of SQL Developer 3.1, the menu is restored to the top of the screen&lt;/em&gt; when using the Oracle Look and Feel. So for those who had been holding out (like myself) with the more native LaF, you can make the switch now and avoid the most annoying part of the performance/usability compromise.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2012-07-20-easy-fix-for-high-cpu-usage-in-sql-developer-on-os-x/cfa32760a6b880df4f2b44e0c1db8a5155ee4c59233b761517416ef7f5c602f7.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://toby-marks.github.io/tobybase/img/2012-07-20-easy-fix-for-high-cpu-usage-in-sql-developer-on-os-x/cfa32760a6b880df4f2b44e0c1db8a5155ee4c59233b761517416ef7f5c602f7.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </description>
           </item>
         
@@ -581,15 +581,15 @@ XMLP_TEMPLATE_DESIGNER&lt;/p&gt;
         
           <item>
             <title>How To Run Oracle Forms 11g Applications on OS X Lion</title>
-            <link>http://localhost:1313/blog/2012/07/12/how-to-run-oracle-forms-11g-applications-on-os-x-lion/</link>
+            <link>https://toby-marks.github.io/tobybase/blog/2012/07/12/how-to-run-oracle-forms-11g-applications-on-os-x-lion/</link>
             <pubDate>Thu, 12 Jul 2012 22:28:24 +0000</pubDate>
             
-            <guid>http://localhost:1313/blog/2012/07/12/how-to-run-oracle-forms-11g-applications-on-os-x-lion/</guid>
+            <guid>https://toby-marks.github.io/tobybase/blog/2012/07/12/how-to-run-oracle-forms-11g-applications-on-os-x-lion/</guid>
             <description>&lt;p&gt;Need to run your company&amp;rsquo;s Oracle Forms application from your Mac, and can&amp;rsquo;t? Annoyed with having to crank up a virtual machine for just that one task? Even with the latest published Java version for OS X (1.6.0_33, as of today), you may find that some of the newer Forms applications just won&amp;rsquo;t run. Well, fret no longer. A solution may already be here, at least for Safari and Firefox.&lt;/p&gt;
 
 &lt;p&gt;Although it&amp;rsquo;s not a strictly certified configuration, you may have better luck by running the JRE 1.7 Java plug-in, which was recently made available as a pre-release download. This works for OS X Lion 10.7.3 and above. Download the plug-in &lt;a href=&#34;http://jdk7.java.net/macportpreview/&#34;&gt;from here&lt;/a&gt; and follow the simple instructions on the page to install it. Now give your application another try, and hopefully you&amp;rsquo;ll get the results I did!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2012-07-12-run-oracle-forms-11g-applications-on-os-x-lion/8267cef641541001f78e2a3845a1349c5cc5c74dc6bf17b8a32fe537d9beaadd.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://toby-marks.github.io/tobybase/img/2012-07-12-run-oracle-forms-11g-applications-on-os-x-lion/8267cef641541001f78e2a3845a1349c5cc5c74dc6bf17b8a32fe537d9beaadd.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </description>
           </item>
         
@@ -599,10 +599,10 @@ XMLP_TEMPLATE_DESIGNER&lt;/p&gt;
         
           <item>
             <title>How To Use a Perl CGI Script to Show Real Web Server Host Name</title>
-            <link>http://localhost:1313/blog/2012/07/02/how-to-use-a-perl-cgi-script-to-show-real-web-server-host-name/</link>
+            <link>https://toby-marks.github.io/tobybase/blog/2012/07/02/how-to-use-a-perl-cgi-script-to-show-real-web-server-host-name/</link>
             <pubDate>Mon, 02 Jul 2012 22:40:00 +0000</pubDate>
             
-            <guid>http://localhost:1313/blog/2012/07/02/how-to-use-a-perl-cgi-script-to-show-real-web-server-host-name/</guid>
+            <guid>https://toby-marks.github.io/tobybase/blog/2012/07/02/how-to-use-a-perl-cgi-script-to-show-real-web-server-host-name/</guid>
             <description>&lt;p&gt;Here is a short and simple Perl CGI script that you can use to expose the hostname of your web server, as opposed to just the server/domain portion of the URL string:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;    &lt;span style=&#34;color: #aaaaaa; font-style: italic&#34;&gt;#!/usr/bin/perl&lt;/span&gt;
     
@@ -652,10 +652,10 @@ XMLP_TEMPLATE_DESIGNER&lt;/p&gt;
         
           <item>
             <title>How To Make Bash Scripts crontab-Compatible</title>
-            <link>http://localhost:1313/blog/2012/04/05/how-to-make-bash-scripts-crontab-compatible/</link>
+            <link>https://toby-marks.github.io/tobybase/blog/2012/04/05/how-to-make-bash-scripts-crontab-compatible/</link>
             <pubDate>Thu, 05 Apr 2012 21:19:05 +0000</pubDate>
             
-            <guid>http://localhost:1313/blog/2012/04/05/how-to-make-bash-scripts-crontab-compatible/</guid>
+            <guid>https://toby-marks.github.io/tobybase/blog/2012/04/05/how-to-make-bash-scripts-crontab-compatible/</guid>
             <description>&lt;p&gt;When writing shell scripts in bash, consider whether your script can be automated in a batch scheduler like cron. If you reference any external resources in your script relative to the directory in which it resides, those references may break when running your script through cron.&lt;/p&gt;
 
 &lt;p&gt;By default, crontab runs scripts in the user&amp;rsquo;s home directory, as specified in &lt;code&gt;/etc/passwd&lt;/code&gt;. For user &amp;ldquo;Tim&amp;rdquo; with home directory &lt;code&gt;/home/tim&lt;/code&gt;, a sample crontab might look something like the following:&lt;/p&gt;

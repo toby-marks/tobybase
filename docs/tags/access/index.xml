@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Access on tobybase.com</title>
-    <link>http://localhost:1313/tags/access/index.xml</link>
+    <link>https://toby-marks.github.io/tobybase/tags/access/index.xml</link>
     <description>Recent content in Access on tobybase.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2015 ~ Toby Marks</copyright>
-    <atom:link href="/tags/access/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tobybase/tags/access/index.xml" rel="self" type="application/rss+xml" />
     
       
         
           <item>
             <title>ODBC Connection Fails for MS Access App on Citrix </title>
-            <link>http://localhost:1313/blog/2012/05/11/odbc-connection-fails-for-ms-access-app-on-citrix/</link>
+            <link>https://toby-marks.github.io/tobybase/blog/2012/05/11/odbc-connection-fails-for-ms-access-app-on-citrix/</link>
             <pubDate>Fri, 11 May 2012 20:54:00 +0000</pubDate>
             
-            <guid>http://localhost:1313/blog/2012/05/11/odbc-connection-fails-for-ms-access-app-on-citrix/</guid>
+            <guid>https://toby-marks.github.io/tobybase/blog/2012/05/11/odbc-connection-fails-for-ms-access-app-on-citrix/</guid>
             <description>&lt;p&gt;I ran into an interesting problem recently when attempting to publish an MS Access application with &lt;a href=&#34;http://www.citrix.com/English/ps2/products/product.asp?contentID=186&amp;amp;ntref=footer&#34;&gt;Citrix XenApp&lt;/a&gt;. The application pulled data from an Oracle database, so an ODBC connection was created on the Citrix server. What we found was that when a non-privileged user tried to run the application, the connection failed. When the Citrix server admin ran it, however, it worked. Furthermore, as long as the admin was logged in, anybody else could run the application successfully; when he logged out, the users&amp;rsquo; connections broke again.&lt;/p&gt;
 
 &lt;p&gt;Since Access is not my area of expertise, we finally contacted Microsoft tech support after trying a few suggestions we dug up in our own research. The support analyst clued us in to the following solution, which I pulled from an Oracle Primavera &lt;a href=&#34;http://docs.oracle.com/cd/E16688_01/Technical_Documentation/Terminal_Services_and_Citrix/Terminal%20Services%20and%20Citrix.pdf&#34;&gt;setup document&lt;/a&gt;.&lt;/p&gt;
