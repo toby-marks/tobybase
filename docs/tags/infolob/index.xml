@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Infolob on tobybase</title>
-    <link>https://toby-marks.github.io/tobybase/tags/infolob/index.xml</link>
+    <link>http://www.tobybase.com/tags/infolob/index.xml</link>
     <description>Recent content in Infolob on tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2015 ~ Toby Marks</copyright>
-    <atom:link href="/tobybase/tags/infolob/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/infolob/index.xml" rel="self" type="application/rss+xml" />
     
       
         
           <item>
             <title>Announcing… tobybase.com</title>
-            <link>https://toby-marks.github.io/tobybase/blog/2017/01/17/announcing-tobybase.com/</link>
+            <link>http://www.tobybase.com/blog/2017/01/17/announcing-tobybase.com/</link>
             <pubDate>Tue, 17 Jan 2017 22:58:59 -0600</pubDate>
             
-            <guid>https://toby-marks.github.io/tobybase/blog/2017/01/17/announcing-tobybase.com/</guid>
+            <guid>http://www.tobybase.com/blog/2017/01/17/announcing-tobybase.com/</guid>
             <description>&lt;p&gt;Welcome one and all to my new professional blog, &lt;a href=&#34;http://tobybase.com/&#34; title=&#34;Redirects to the website you are now on&#34;&gt;tobybase.com&lt;/a&gt;. My name is Toby Marks and I work as a &lt;a href=&#34;http://oracle.com&#34; title=&#34;Oracle&#39;s website&#34;&gt;Oracle&lt;/a&gt; Consultant at &lt;a href=&#34;http://infolob.com/&#34; title=&#34;My company&#39;s website&#34;&gt;Infolob Solutions&lt;/a&gt; in &lt;a href=&#34;https://en.wikipedia.org/wiki/Las_Colinas&#34; title=&#34;Some info about sunny Las Colinas&#34;&gt;Irving, Texas&lt;/a&gt;. My &lt;a href=&#34;http://tjmoracle.tumblr.com/&#34; title=&#34;My old blog&#34;&gt;old blog&lt;/a&gt; is still up on &lt;a href=&#34;http://tumblr.com/&#34; title=&#34;Go to Tumblr&#34;&gt;Tumblr&lt;/a&gt;, and there are a &lt;a href=&#34;https://tmblr.co/Z9fAmvZapPzC&#34; title=&#34;Create PDF Reports in Oracle Apex&#34;&gt;few&lt;/a&gt; &lt;a href=&#34;https://tmblr.co/Z9fAmvXEB6iL&#34; title=&#34;Query an XML File Like an External Table&#34;&gt;items&lt;/a&gt; &lt;a href=&#34;https://tmblr.co/Z9fAmvOFEN-N&#34; title=&#34;OS X Software for Oracle Developers&#34;&gt;there&lt;/a&gt; that folks still find useful. Most of the content is a bit dated, though, as I&amp;rsquo;ve been out of the blogging game for a while.&lt;/p&gt;
 
 &lt;p&gt;This is my attempt to turn that around.&lt;/p&gt;

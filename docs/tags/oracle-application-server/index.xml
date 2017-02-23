@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Oracle Application Server on tobybase</title>
-    <link>https://toby-marks.github.io/tobybase/tags/oracle-application-server/index.xml</link>
+    <link>http://www.tobybase.com/tags/oracle-application-server/index.xml</link>
     <description>Recent content in Oracle Application Server on tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2015 ~ Toby Marks</copyright>
-    <atom:link href="/tobybase/tags/oracle-application-server/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/oracle-application-server/index.xml" rel="self" type="application/rss+xml" />
     
       
         
           <item>
             <title>Invalidating Toplink Session Cache To Avoid Stale Data</title>
-            <link>https://toby-marks.github.io/tobybase/blog/2012/03/09/invalidating-toplink-session-cache-to-avoid-stale-data/</link>
+            <link>http://www.tobybase.com/blog/2012/03/09/invalidating-toplink-session-cache-to-avoid-stale-data/</link>
             <pubDate>Fri, 09 Mar 2012 18:42:00 +0000</pubDate>
             
-            <guid>https://toby-marks.github.io/tobybase/blog/2012/03/09/invalidating-toplink-session-cache-to-avoid-stale-data/</guid>
+            <guid>http://www.tobybase.com/blog/2012/03/09/invalidating-toplink-session-cache-to-avoid-stale-data/</guid>
             <description>&lt;p&gt;Toplink is a Java framework that maps objects to database tables. It is the reference implementation for the Java Persistence Architecture, or JPA. Developers use Toplink to manage data persistence (storage), queries, and transactions in an Oracle database. By default, Toplink makes use of a special cache called a Session Cache, maintained on the server, which is meant to speed up performance. Queried data is stored in the Session Cache and used in subsequent queries to reduce or eliminate calls to the database.&lt;/p&gt;
 
 &lt;p&gt;One problem with this approach is how to deal with &amp;ldquo;stale data&amp;rdquo;. In other words, what happens when data is changing in the database? How does the developer ensure that the cached data is current?&lt;/p&gt;
