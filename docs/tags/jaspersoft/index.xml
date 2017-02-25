@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jaspersoft on tobybase</title>
-    <link>http://www.tobybase.com/tags/jaspersoft/index.xml</link>
+    <link>http://tobybase.com/tags/jaspersoft/index.xml</link>
     <description>Recent content in Jaspersoft on tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
@@ -13,10 +13,10 @@
         
           <item>
             <title>Generate PDF Reports for Free in Oracle Apex Using PL-JRXML2PDF and iReport Designer</title>
-            <link>http://www.tobybase.com/blog/2012/12/18/generate-pdf-reports-for-free-in-oracle-apex-using-pl-jrxml2pdf-and-ireport-designer/</link>
+            <link>http://tobybase.com/blog/2012/12/18/generate-pdf-reports-for-free-in-oracle-apex-using-pl-jrxml2pdf-and-ireport-designer/</link>
             <pubDate>Tue, 18 Dec 2012 00:00:00 +0000</pubDate>
             
-            <guid>http://www.tobybase.com/blog/2012/12/18/generate-pdf-reports-for-free-in-oracle-apex-using-pl-jrxml2pdf-and-ireport-designer/</guid>
+            <guid>http://tobybase.com/blog/2012/12/18/generate-pdf-reports-for-free-in-oracle-apex-using-pl-jrxml2pdf-and-ireport-designer/</guid>
             <description>
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
   &lt;iframe src=&#34;//player.vimeo.com/video/55818132&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;

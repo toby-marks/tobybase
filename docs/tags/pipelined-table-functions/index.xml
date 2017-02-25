@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pipelined Table Functions on tobybase</title>
-    <link>http://www.tobybase.com/tags/pipelined-table-functions/index.xml</link>
+    <link>http://tobybase.com/tags/pipelined-table-functions/index.xml</link>
     <description>Recent content in Pipelined Table Functions on tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
@@ -13,11 +13,11 @@
         
           <item>
             <title>Table Functions: 9i Feature Worth Revisiting (Part 2)</title>
-            <link>http://www.tobybase.com/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-2/</link>
+            <link>http://tobybase.com/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-2/</link>
             <pubDate>Fri, 27 Apr 2012 22:35:00 +0000</pubDate>
             
-            <guid>http://www.tobybase.com/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-2/</guid>
-            <description>&lt;p&gt;In &lt;a href=&#34;http://www.tobybase.com/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-1/-1&#34;&gt;part one of this series&lt;/a&gt; I showed a simple example of how table functions can be used to treat PL/SQL collection types as tables in a SQL query. We used a nested table collection type to which we manually added a few entries. In this example, I intend to show a more practical use of table functions using all three PL/SQL collection types: associative arrays, nested tables, and VARRAYs.&lt;/p&gt;
+            <guid>http://tobybase.com/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-2/</guid>
+            <description>&lt;p&gt;In &lt;a href=&#34;http://tobybase.com/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-1/-1&#34;&gt;part one of this series&lt;/a&gt; I showed a simple example of how table functions can be used to treat PL/SQL collection types as tables in a SQL query. We used a nested table collection type to which we manually added a few entries. In this example, I intend to show a more practical use of table functions using all three PL/SQL collection types: associative arrays, nested tables, and VARRAYs.&lt;/p&gt;
 
 &lt;p&gt;Let&amp;rsquo;s revisit a use case I alluded to in my earlier blog entry: incorporating LDAP data into a query. Suppose your task is to code a custom authorization scheme for an enterprise application reporting system. You want row access to be determined by a user&amp;rsquo;s group memberships in the company&amp;rsquo;s Active Directory server. If a user is assigned to &amp;ldquo;the Company A group&amp;rdquo; in Active Directory, he gets to see Company A&amp;rsquo;s data. You can configure that kind of restriction at a database level using &lt;a href=&#34;http://www.oracle.com/technetwork/database/security/index-088277.html&#34;&gt;Oracle&amp;rsquo;s Virtual Private Database&lt;/a&gt; feature. Configuring VPD is beyond the scope of this blog entry, but ultimately you will be associating a table to a portion of a SQL WHERE clause that gets appended to every query written against that table. You can find more documentation on VPD &lt;a href=&#34;http://download.oracle.com/docs/cd/B28359_01/network.111/b28531/vpd.htm&#34;&gt;on the OTN site&lt;/a&gt;. In this case, let&amp;rsquo;s assume you know that another team has written a PL/SQL database package to query data from Active Directory, and you want to make use of that code. The only problem is that all the functions in that package return collections of various types, and you need to be able to access that information from the WHERE clause you are building with VPD. This is where table functions come in handy.&lt;/p&gt;
 
@@ -408,10 +408,10 @@
         
           <item>
             <title>Table Functions: 9i Feature Worth Revisiting (Part 1)</title>
-            <link>http://www.tobybase.com/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-1/</link>
+            <link>http://tobybase.com/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-1/</link>
             <pubDate>Fri, 27 Apr 2012 22:27:00 +0000</pubDate>
             
-            <guid>http://www.tobybase.com/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-1/</guid>
+            <guid>http://tobybase.com/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-1/</guid>
             <description>&lt;p&gt;Yes, they&amp;rsquo;ve been around for a while, but if you haven&amp;rsquo;t made use of table functions lately you might want to reacquaint yourself with this old gem. Table functions allow you to query the contents of PL/SQL collection types using SQL&amp;rsquo;s TABLE operator. Here is a simple example.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;    &lt;span style=&#34;color: #0000aa&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color: #0000aa&#34;&gt;OR&lt;/span&gt; &lt;span style=&#34;color: #0000aa&#34;&gt;REPLACE&lt;/span&gt; PACKAGE example &lt;span style=&#34;color: #0000aa&#34;&gt;AS&lt;/span&gt;
     
