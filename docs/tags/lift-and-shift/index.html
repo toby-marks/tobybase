@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Lift And Shift">
+    <meta name="author" content="Toby Marks">
+
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <title>Tags &middot; tobybase</title>
+
+   	
+    
+        <link rel="preload" href="http://tobybase.com/css/theme/cosmo.css" as="style" onload="this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="http://tobybase.com/css/theme/cosmo.css"></noscript>
+    
+
+    <link rel="preload" href="http://tobybase.com/css/font-awesome.min.css" as="stylesheet" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="http://tobybase.com/css/font-awesome.min.css"></noscript>
+
+   	
+   	<link rel="preload" href="http://tobybase.com/css/style.css" as="stylesheet" onload="this.rel='stylesheet'">
+   	<noscript><link rel="stylesheet" href="http://tobybase.com/css/style.css"></noscript>
+
+    <script>
+ 
+(function(w){
+	"use strict";
+	 
+	var loadCSS = function( href, before, media ){
+		
+		
+		
+			
+		
+		var doc = w.document;
+		var ss = doc.createElement( "link" );
+		var ref;
+		if( before ){
+			ref = before;
+		}
+		else {
+			var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
+			ref = refs[ refs.length - 1];
+		}
+
+		var sheets = doc.styleSheets;
+		ss.rel = "stylesheet";
+		ss.href = href;
+		
+		ss.media = "only x";
+
+		
+		function ready( cb ){
+			if( doc.body ){
+				return cb();
+			}
+			setTimeout(function(){
+				ready( cb );
+			});
+		}
+		
+			
+			
+		ready( function(){
+			ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
+		});
+		
+		var onloadcssdefined = function( cb ){
+			var resolvedHref = ss.href;
+			var i = sheets.length;
+			while( i-- ){
+				if( sheets[ i ].href === resolvedHref ){
+					return cb();
+				}
+			}
+			setTimeout(function() {
+				onloadcssdefined( cb );
+			});
+		};
+
+		function loadCB(){
+			if( ss.addEventListener ){
+				ss.removeEventListener( "load", loadCB );
+			}
+			ss.media = media || "all";
+		}
+
+		
+		if( ss.addEventListener ){
+			ss.addEventListener( "load", loadCB);
+		}
+		ss.onloadcssdefined = onloadcssdefined;
+		onloadcssdefined( loadCB );
+		return ss;
+	};
+	
+	if( typeof exports !== "undefined" ){
+		exports.loadCSS = loadCSS;
+	}
+	else {
+		w.loadCSS = loadCSS;
+	}
+}( typeof global !== "undefined" ? global : this ));
+ 
+(function( w ){
+  
+  if( !w.loadCSS ){
+    return;
+  }
+  var rp = loadCSS.relpreload = {};
+  rp.support = function(){
+    try {
+      return w.document.createElement( "link" ).relList.supports( "preload" );
+    } catch (e) {
+      return false;
+    }
+  };
+
+  
+  rp.poly = function(){
+    var links = w.document.getElementsByTagName( "link" );
+    for( var i = 0; i < links.length; i++ ){
+      var link = links[ i ];
+      if( link.rel === "preload" && link.getAttribute( "as" ) === "style" ){
+        w.loadCSS( link.href, link, link.getAttribute( "media" ) );
+        link.rel = null;
+      }
+    }
+  };
+
+  
+  if( !rp.support() ){
+    rp.poly();
+    var run = w.setInterval( rp.poly, 300 );
+    if( w.addEventListener ){
+      w.addEventListener( "load", function(){
+        rp.poly();
+        w.clearInterval( run );
+      } );
+    }
+    if( w.attachEvent ){
+      w.attachEvent( "onload", function(){
+        w.clearInterval( run );
+      } )
+    }
+  }
+}( this ));
+    </script>
+    
+    
+    <link href="http://tobybase.com/tags/lift-and-shift/index.xml" rel="alternate" type="application/rss+xml" title="tobybase" />
+</head>
+<body lang="en-US">
+    
+    <div class="container">
+    <div class="row">
+        <div class="navbar navbar-default " role="navigation">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="http://tobybase.com"><img src="http://tobybase.com/img/logo.png" height="100%"></a>
+            </div>
+            <div class="navbar-collapse collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="http://tobybase.com">Home</a></li>
+                    <li><a href="http://tobybase.com/post/">Blog</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+	<div class="row">
+		<div class="text-center">
+			<h3>
+				
+					Posts
+				</h3>
+	    </div>
+    </div>
+	<div class="row">
+		<div class="col-md-offset-1 col-md-10">
+			<ul>
+				
+								
+		        		<div class="row">
+	<div class="col-md-offset-2 col-md-6 col-md-offset-2 col-md-6">
+		<h4><a href="http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-4/">Move Your VM to Oracle Cloud - Part 4</a></h4>
+	</div>
+	<div class="col-md-4 col-md-4">
+		<h4>03/10/2017</h4>
+	</div>
+</div>
+
+		        	
+			    
+								
+		        		<div class="row">
+	<div class="col-md-offset-2 col-md-6 col-md-offset-2 col-md-6">
+		<h4><a href="http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-3/">Move Your VM to Oracle Cloud - Part 3</a></h4>
+	</div>
+	<div class="col-md-4 col-md-4">
+		<h4>03/10/2017</h4>
+	</div>
+</div>
+
+		        	
+			    
+								
+		        		<div class="row">
+	<div class="col-md-offset-2 col-md-6 col-md-offset-2 col-md-6">
+		<h4><a href="http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-2/">Move Your VM to Oracle Cloud - Part 2</a></h4>
+	</div>
+	<div class="col-md-4 col-md-4">
+		<h4>03/10/2017</h4>
+	</div>
+</div>
+
+		        	
+			    
+								
+		        		<div class="row">
+	<div class="col-md-offset-2 col-md-6 col-md-offset-2 col-md-6">
+		<h4><a href="http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-1/">Move Your VM to Oracle Cloud - Part 1</a></h4>
+	</div>
+	<div class="col-md-4 col-md-4">
+		<h4>03/10/2017</h4>
+	</div>
+</div>
+
+		        	
+			    
+		    </ul>
+		</div>
+    </div>
+	<div class="row">
+		<hr>
+	</div>
+
+    <div class="container">
+        <div class="row col-md-12">
+            <footer>
+                <div class="pull-left">
+                    <p>
+                        &copy; 2015 ~ Toby Marks ~ Powered By <a href="http://hugo.spf13.com">Hugo</a> ~ <a href="http://tobybase.com/license/">License</a>
+                    </p>
+                </div>
+
+                
+                <div class="pull-right">
+                    
+                        <a href="https://www.linkedin.com/in/tobymarks" target="_blank">
+                        <i class="fa fa-linkedin fa-2x"></i></a>
+                    
+                    
+                    
+                        <a href="https://twitter.com/toby_marks" target="_blank">
+                        <i class="fa fa-twitter-square fa-2x"></i></a>
+                    
+                    
+                        <a href="https://github.com/toby-marks" target="_blank">
+                        <i class="fa fa-github-square fa-2x"></i></a>
+                    
+                    
+                    
+                    
+                        <a href="http://tobybase.com/tags/lift-and-shift/index.xml" target="_blank">
+                        <i class="fa fa-rss-square fa-2x"></i></a>
+                    
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    
+    <script src="http://tobybase.com/js/jquery.min-2.1.4.js"></script>
+    <script src="http://tobybase.com/js/bootstrap.min-3.3.5.js"></script>
+
+    
+    </body>
+</html>
+

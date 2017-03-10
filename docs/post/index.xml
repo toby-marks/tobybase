@@ -7,8 +7,112 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2015 ~ Toby Marks</copyright>
-    <lastBuildDate>Tue, 17 Jan 2017 22:58:59 -0600</lastBuildDate>
+    <lastBuildDate>Fri, 10 Mar 2017 14:56:00 +0000</lastBuildDate>
     <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+      
+        
+          <item>
+            <title>Move Your VM to Oracle Cloud - Part 4</title>
+            <link>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-4/</link>
+            <pubDate>Fri, 10 Mar 2017 14:56:00 +0000</pubDate>
+            
+            <guid>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-4/</guid>
+            <description>&lt;p&gt;In the last of a four-part video series, our Director of Cloud Services Brian Hill creates a new compute instance in Oracle Cloud Compute Services based on his custom Windows virtual machine image.&lt;/p&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/c1_2foZ7MQc&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
+
+</description>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Move Your VM to Oracle Cloud - Part 3</title>
+            <link>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-3/</link>
+            <pubDate>Fri, 10 Mar 2017 14:53:00 +0000</pubDate>
+            
+            <guid>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-3/</guid>
+            <description>&lt;p&gt;In part three of a four-part video series, our Director of Cloud Services Brian Hill creates a bootable storage volume in Oracle Cloud Compute Services with his new Windows image.&lt;/p&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/mwsMputHP-M&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
+
+</description>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Move Your VM to Oracle Cloud - Part 2</title>
+            <link>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-2/</link>
+            <pubDate>Fri, 10 Mar 2017 14:47:00 +0000</pubDate>
+            
+            <guid>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-2/</guid>
+            <description>&lt;p&gt;In part two of a four-part video series, our Director of Cloud Services Brian Hill creates an image in Oracle Cloud Compute Services based on a Windows virtual machine.&lt;/p&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/bA7zyOh-JiY&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
+
+</description>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Move Your VM to Oracle Cloud - Part 1</title>
+            <link>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-1/</link>
+            <pubDate>Fri, 10 Mar 2017 14:41:00 +0000</pubDate>
+            
+            <guid>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-1/</guid>
+            <description>&lt;p&gt;In part one of a four-part video series, our Director of Cloud Services Brian Hill demonstrates how to prepare your virtual machine for upload to the cloud.&lt;/p&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/lwFCj0Z4JSU&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
+
+</description>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Announcing the Infolob YouTube Channel</title>
+            <link>http://tobybase.com/blog/2017/03/10/announcing-the-infolob-youtube-channel/</link>
+            <pubDate>Fri, 10 Mar 2017 00:00:00 +0000</pubDate>
+            
+            <guid>http://tobybase.com/blog/2017/03/10/announcing-the-infolob-youtube-channel/</guid>
+            <description>&lt;p&gt;I am honored to work with some wonderful and truly &lt;em&gt;smart&lt;/em&gt; folks over at &lt;a href=&#34;http://www.infolob.com/&#34;&gt;Infolob&lt;/a&gt; in Irving, Texas. The company recently started a &lt;a href=&#34;https://www.youtube.com/channel/UCLfDjdjW6RRvKYrz_aS0Jmw&#34;&gt;YouTube channel&lt;/a&gt; and we are looking to add lots of great videos soon for your enjoyment and education.&lt;/p&gt;
+
+&lt;p&gt;Check us out!&lt;/p&gt;
+
+&lt;p&gt;In this short Oracle Platinum Partner Spotlight video, our Chief Technologist Tim Fox explains what we do as a company and the kinds of services we provide.&lt;/p&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/g6Zenoy8GGs&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
+
+</description>
+          </item>
+        
+      
     
       
         
@@ -573,147 +677,6 @@ XMLP_ANALYZER_ONLINE&lt;br /&gt;
 XMLP_TEMPLATE_DESIGNER&lt;/p&gt;
 
 &lt;p&gt;You can read more about those roles and what they do &lt;a href=&#34;http://docs.oracle.com/cd/E10383_01/doc/bip.1013/b40017/T421739T475591.htm&#34;&gt;in the Oracle Documentation&lt;/a&gt;.&lt;/p&gt;
-</description>
-          </item>
-        
-      
-    
-      
-        
-          <item>
-            <title>Use Firebug&#39;s console.debug Command to Analyze Javascript, DOM Objects</title>
-            <link>http://tobybase.com/blog/2012/10/26/use-firebugs-console.debug-command-to-analyze-javascript-dom-objects/</link>
-            <pubDate>Fri, 26 Oct 2012 21:09:00 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2012/10/26/use-firebugs-console.debug-command-to-analyze-javascript-dom-objects/</guid>
-            <description>&lt;p&gt;Occasionally when debugging my Javascript code I need to be able to analyze the properties of an unknown object; for instance, an unexpected DOM object passed to an event handler. How do you analyze the properties of an object when you don&amp;rsquo;t know what the object is? I was looking for a way to list all the properties of a generic Javascript or DOM object when I stumbled across this blog post by Andrew Peters. In it, he very clearly outlines two ways of doing this, but the one I found most useful was Firebug&amp;rsquo;s &lt;code&gt;console.debug&lt;/code&gt; command. You&amp;rsquo;ll need to use Firefox with the Firebug extension for this, but the results are impressive.&lt;/p&gt;
-
-&lt;p&gt;When you want to debug an object, simply pass it as a parameter to &lt;code&gt;console.debug&lt;/code&gt;. Here is an example where I wanted to find out about the event trigger object passed to my event handler:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2012-10-26-use-firebugs-consoledebug-command-to-analyze-javascript-dom-objects/eda67a171f00051639dcf0d35e00ebfdd9309cf03876d1d915dfd7b1f1f7766f.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;After triggering the event, I opened the Firebug window and navigated to the console. From there I could drill down on the displayed results to get information about my unknown DOM object.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2012-10-26-use-firebugs-consoledebug-command-to-analyze-javascript-dom-objects/55db6e09e44319deee6ef4a9938a20d72369d922637897e02b1b7d20a900cb43.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2012-10-26-use-firebugs-consoledebug-command-to-analyze-javascript-dom-objects/38a39525404522f27ab3bf776a697f7e486f958723402ccff101a98014d54c0d.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Turns out in this case that the event handler was attached to the wrong object, due to the &amp;ldquo;id&amp;rdquo; value being placed one level above in the DOM hierarchy than I was expecting. Tricky, but I was able to spot the problem immediately using this method.&lt;/p&gt;
-</description>
-          </item>
-        
-      
-    
-      
-        
-          <item>
-            <title>How to Avoid the &#34;Job scheduling failed because the user has no permission to access this report&#34; Error in BI Publisher</title>
-            <link>http://tobybase.com/blog/2012/08/27/how-to-avoid-the-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report-error-in-bi-publisher/</link>
-            <pubDate>Mon, 27 Aug 2012 20:48:08 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2012/08/27/how-to-avoid-the-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report-error-in-bi-publisher/</guid>
-            <description>&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2012-08-27-bi-publisher-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report/864dbb90dbf623eb4f36b26a3ecf315cfec7121cf33e16730b6060c6572dfb35.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;You can get this error if you are trying to schedule a report and your BI Publisher installation uses LDAP authentication.&lt;/p&gt;
-
-&lt;p&gt;To avoid it, make sure that the &amp;ldquo;Administrator&amp;rdquo; account you use to connect to your LDAP server is in the XMLP_ADMIN group. The LDAP settings are located on the Admin tab, under Security Settings / Security Configuration.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2012-08-27-bi-publisher-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report/c44997adb44d6687468d544341fcd25b818ebdd46087d1849c38e855ee874488.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-</description>
-          </item>
-        
-      
-    
-      
-        
-          <item>
-            <title>How To Fix High CPU Usage by SQL Developer on OS X</title>
-            <link>http://tobybase.com/blog/2012/07/20/how-to-fix-high-cpu-usage-by-sql-developer-on-os-x/</link>
-            <pubDate>Fri, 20 Jul 2012 16:32:00 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2012/07/20/how-to-fix-high-cpu-usage-by-sql-developer-on-os-x/</guid>
-            <description>&lt;p&gt;I&amp;rsquo;ve been fighting for a couple of years now with an annoying performance bug in SQL Developer for OS X. After using the application for a while CPU usage would spike to around 100%, even when idle. This is a known issue associated with the &amp;ldquo;Look and Feel&amp;rdquo; preference.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2012-07-20-easy-fix-for-high-cpu-usage-in-sql-developer-on-os-x/b5b8f447d6dc433b4253c4814df5746e70e6e1e85235b391c9fef8b19e9f84d8.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Basically, don&amp;rsquo;t use the &amp;ldquo;Mac OS X&amp;rdquo; setting. Instead, use the &amp;ldquo;Oracle&amp;rdquo; setting. The theme doesn&amp;rsquo;t matter.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2012-07-20-easy-fix-for-high-cpu-usage-in-sql-developer-on-os-x/aa9173adfc0090dc8b5b7fb471547c26a5243ca8f21c670580cd41df9cbd263f.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;That fixes the CPU issue, but somewhat annoyingly moves the menu out of the menu bar at the top of the screen and into the application window, a la Windows, making the interface inconsistent with pretty much every other app I use on my Mac. &lt;a href=&#34;https://forums.oracle.com/forums/thread.jspa?threadID=1980688&amp;amp;start=15&amp;amp;tstart=30&#34;&gt;Until recently&lt;/a&gt;, that is. The big news is that &lt;em&gt;as of SQL Developer 3.1, the menu is restored to the top of the screen&lt;/em&gt; when using the Oracle Look and Feel. So for those who had been holding out (like myself) with the more native LaF, you can make the switch now and avoid the most annoying part of the performance/usability compromise.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2012-07-20-easy-fix-for-high-cpu-usage-in-sql-developer-on-os-x/cfa32760a6b880df4f2b44e0c1db8a5155ee4c59233b761517416ef7f5c602f7.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-</description>
-          </item>
-        
-      
-    
-      
-        
-          <item>
-            <title>How To Run Oracle Forms 11g Applications on OS X Lion</title>
-            <link>http://tobybase.com/blog/2012/07/12/how-to-run-oracle-forms-11g-applications-on-os-x-lion/</link>
-            <pubDate>Thu, 12 Jul 2012 22:28:24 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2012/07/12/how-to-run-oracle-forms-11g-applications-on-os-x-lion/</guid>
-            <description>&lt;p&gt;Need to run your company&amp;rsquo;s Oracle Forms application from your Mac, and can&amp;rsquo;t? Annoyed with having to crank up a virtual machine for just that one task? Even with the latest published Java version for OS X (1.6.0_33, as of today), you may find that some of the newer Forms applications just won&amp;rsquo;t run. Well, fret no longer. A solution may already be here, at least for Safari and Firefox.&lt;/p&gt;
-
-&lt;p&gt;Although it&amp;rsquo;s not a strictly certified configuration, you may have better luck by running the JRE 1.7 Java plug-in, which was recently made available as a pre-release download. This works for OS X Lion 10.7.3 and above. Download the plug-in &lt;a href=&#34;http://jdk7.java.net/macportpreview/&#34;&gt;from here&lt;/a&gt; and follow the simple instructions on the page to install it. Now give your application another try, and hopefully you&amp;rsquo;ll get the results I did!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2012-07-12-run-oracle-forms-11g-applications-on-os-x-lion/8267cef641541001f78e2a3845a1349c5cc5c74dc6bf17b8a32fe537d9beaadd.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-</description>
-          </item>
-        
-      
-    
-      
-        
-          <item>
-            <title>How To Use a Perl CGI Script to Show Real Web Server Host Name</title>
-            <link>http://tobybase.com/blog/2012/07/02/how-to-use-a-perl-cgi-script-to-show-real-web-server-host-name/</link>
-            <pubDate>Mon, 02 Jul 2012 22:40:00 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2012/07/02/how-to-use-a-perl-cgi-script-to-show-real-web-server-host-name/</guid>
-            <description>&lt;p&gt;Here is a short and simple Perl CGI script that you can use to expose the hostname of your web server, as opposed to just the server/domain portion of the URL string:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;    &lt;span style=&#34;color: #aaaaaa; font-style: italic&#34;&gt;#!/usr/bin/perl&lt;/span&gt;
-    
-    &lt;span style=&#34;color: #0000aa&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;Content-type: text/html\n\n&amp;quot;&lt;/span&gt;;
-    &lt;span style=&#34;color: #0000aa&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #aa5500&#34;&gt;`hostname`&lt;/span&gt;;
-    
-    &lt;span style=&#34;color: #009999&#34;&gt;1&lt;/span&gt;;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Name the file something like &lt;code&gt;hostname.cgi&lt;/code&gt; and place it in your web server&amp;rsquo;s &lt;code&gt;/cgi-bin/&lt;/code&gt; directory, or if your web server is configured appropriately, just name it &lt;code&gt;hostname.pl&lt;/code&gt; and drop it wherever you like.&lt;/p&gt;
-
-&lt;p&gt;The following script can be used to dump all the CGI environment variables.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;    &lt;span style=&#34;color: #aaaaaa; font-style: italic&#34;&gt;#!/usr/bin/perl&lt;/span&gt;
-    
-    &lt;span style=&#34;color: #0000aa&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;Content-type: text/html\n\n&amp;quot;&lt;/span&gt;;
-    &lt;span style=&#34;color: #0000aa&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;&amp;lt;font size=+1&amp;gt;Environment&amp;lt;/font&amp;gt;\n&amp;quot;&lt;/span&gt;;
-    &lt;span style=&#34;color: #0000aa&#34;&gt;foreach&lt;/span&gt; (&lt;span style=&#34;color: #00aaaa&#34;&gt;sort&lt;/span&gt; &lt;span style=&#34;color: #00aaaa&#34;&gt;keys&lt;/span&gt; &lt;span style=&#34;color: #aa0000&#34;&gt;%ENV&lt;/span&gt;)
-    {
-      &lt;span style=&#34;color: #0000aa&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;&amp;lt;b&amp;gt;$_&amp;lt;/b&amp;gt;: $ENV{$_}&amp;lt;br&amp;gt;\n&amp;quot;&lt;/span&gt;;
-    }
-    
-    &lt;span style=&#34;color: #009999&#34;&gt;1&lt;/span&gt;;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Note that this includes &lt;code&gt;SERVER_NAME&lt;/code&gt;, but what that really gives you is the &amp;ldquo;server&amp;rdquo; portion of the URL string. In other words, if your URL is http:&amp;#47;&amp;#47;www.google.com&amp;#47;, then the &lt;code&gt;SERVER_NAME&lt;/code&gt; CGI environment variable would be &amp;ldquo;www.google.com&amp;rdquo;. Fine, but the first script can be used to identify the actual server being called, for example, when your page is hosted on multiple servers load-balanced under a virtual domain name.&lt;/p&gt;
-
-&lt;p&gt;Of course, you could combine the two scripts to give you everything:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;    &lt;span style=&#34;color: #aaaaaa; font-style: italic&#34;&gt;#!/usr/bin/perl&lt;/span&gt;
-    
-    &lt;span style=&#34;color: #0000aa&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;Content-type: text/html\n\n&amp;quot;&lt;/span&gt;;
-    &lt;span style=&#34;color: #0000aa&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;&amp;lt;font size=+1&amp;gt;Environment&amp;lt;/font&amp;gt;\n&amp;quot;&lt;/span&gt;;
-    &lt;span style=&#34;color: #0000aa&#34;&gt;foreach&lt;/span&gt; (&lt;span style=&#34;color: #00aaaa&#34;&gt;sort&lt;/span&gt; &lt;span style=&#34;color: #00aaaa&#34;&gt;keys&lt;/span&gt; &lt;span style=&#34;color: #aa0000&#34;&gt;%ENV&lt;/span&gt;)
-    {
-      &lt;span style=&#34;color: #0000aa&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;&amp;lt;b&amp;gt;$_&amp;lt;/b&amp;gt;: $ENV{$_}&amp;lt;br&amp;gt;\n&amp;quot;&lt;/span&gt;;
-    }
-    
-    &lt;span style=&#34;color: #0000aa&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;&amp;lt;b&amp;gt;REAL SERVER HOSTNAME:&amp;lt;/b&amp;gt; &amp;quot;&lt;/span&gt;,&lt;span style=&#34;color: #aa5500&#34;&gt;`hostname`&lt;/span&gt;;
-    
-    &lt;span style=&#34;color: #009999&#34;&gt;1&lt;/span&gt;;
-&lt;/pre&gt;&lt;/div&gt;
 </description>
           </item>
         

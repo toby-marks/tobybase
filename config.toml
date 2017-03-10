@@ -1,7 +1,9 @@
-baseurl     = "http://tobybase.com"  # the baseurl for your website
-title       = "tobybase"             # blog title
-paginate    = 10                     # the number of posts on a page
-publishDir  = "docs"
+baseurl             = "http://tobybase.com"  # the baseurl for your website
+title               = "tobybase"             # blog title
+paginate            = 10                     # the number of posts on a page
+publishDir          = "docs"
+theme               = "hugo-multi-bootswatch"
+disqusShortname     = "tobybase-com"
 
 # insert color codes directly into page. used for server-side syntax highlighting with pygments.
 pygmentsuseclasses = false

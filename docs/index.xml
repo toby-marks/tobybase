@@ -7,8 +7,112 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2015 ~ Toby Marks</copyright>
-    <lastBuildDate>Thu, 23 Feb 2017 11:32:23 -0600</lastBuildDate>
+    <lastBuildDate>Fri, 10 Mar 2017 14:56:00 +0000</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+      
+        
+          <item>
+            <title>Move Your VM to Oracle Cloud - Part 4</title>
+            <link>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-4/</link>
+            <pubDate>Fri, 10 Mar 2017 14:56:00 +0000</pubDate>
+            
+            <guid>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-4/</guid>
+            <description>&lt;p&gt;In the last of a four-part video series, our Director of Cloud Services Brian Hill creates a new compute instance in Oracle Cloud Compute Services based on his custom Windows virtual machine image.&lt;/p&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/c1_2foZ7MQc&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
+
+</description>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Move Your VM to Oracle Cloud - Part 3</title>
+            <link>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-3/</link>
+            <pubDate>Fri, 10 Mar 2017 14:53:00 +0000</pubDate>
+            
+            <guid>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-3/</guid>
+            <description>&lt;p&gt;In part three of a four-part video series, our Director of Cloud Services Brian Hill creates a bootable storage volume in Oracle Cloud Compute Services with his new Windows image.&lt;/p&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/mwsMputHP-M&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
+
+</description>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Move Your VM to Oracle Cloud - Part 2</title>
+            <link>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-2/</link>
+            <pubDate>Fri, 10 Mar 2017 14:47:00 +0000</pubDate>
+            
+            <guid>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-2/</guid>
+            <description>&lt;p&gt;In part two of a four-part video series, our Director of Cloud Services Brian Hill creates an image in Oracle Cloud Compute Services based on a Windows virtual machine.&lt;/p&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/bA7zyOh-JiY&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
+
+</description>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Move Your VM to Oracle Cloud - Part 1</title>
+            <link>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-1/</link>
+            <pubDate>Fri, 10 Mar 2017 14:41:00 +0000</pubDate>
+            
+            <guid>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-1/</guid>
+            <description>&lt;p&gt;In part one of a four-part video series, our Director of Cloud Services Brian Hill demonstrates how to prepare your virtual machine for upload to the cloud.&lt;/p&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/lwFCj0Z4JSU&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
+
+</description>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Announcing the Infolob YouTube Channel</title>
+            <link>http://tobybase.com/blog/2017/03/10/announcing-the-infolob-youtube-channel/</link>
+            <pubDate>Fri, 10 Mar 2017 00:00:00 +0000</pubDate>
+            
+            <guid>http://tobybase.com/blog/2017/03/10/announcing-the-infolob-youtube-channel/</guid>
+            <description>&lt;p&gt;I am honored to work with some wonderful and truly &lt;em&gt;smart&lt;/em&gt; folks over at &lt;a href=&#34;http://www.infolob.com/&#34;&gt;Infolob&lt;/a&gt; in Irving, Texas. The company recently started a &lt;a href=&#34;https://www.youtube.com/channel/UCLfDjdjW6RRvKYrz_aS0Jmw&#34;&gt;YouTube channel&lt;/a&gt; and we are looking to add lots of great videos soon for your enjoyment and education.&lt;/p&gt;
+
+&lt;p&gt;Check us out!&lt;/p&gt;
+
+&lt;p&gt;In this short Oracle Platinum Partner Spotlight video, our Chief Technologist Tim Fox explains what we do as a company and the kinds of services we provide.&lt;/p&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/g6Zenoy8GGs&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
+
+</description>
+          </item>
+        
+      
     
       
     
@@ -406,249 +510,6 @@ shown by this &lt;a href=&#34;http://download.java.net/jdk7u40/changes/jdk7u40-b
 </description>
           </item>
         
-      
-    
-      
-        
-          <item>
-            <title>How To Restrict Access to BI Publisher Reports</title>
-            <link>http://tobybase.com/blog/2012/11/12/how-to-restrict-access-to-bi-publisher-reports/</link>
-            <pubDate>Mon, 12 Nov 2012 18:12:00 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2012/11/12/how-to-restrict-access-to-bi-publisher-reports/</guid>
-            <description>&lt;p&gt;In &lt;a href=&#34;http://tobybase.com/blog/2012/11/12/how-to-configure-oracle-bi-publisher-to-authenticate-with-active-directory/&#34;&gt;my last post&lt;/a&gt;  I described how to configure BI Publisher to authenticate against an LDAP server, typically a corporate Active Directory server. Aside from authentication, you can also use LDAP group membership to determine who has access to a given report. Here&amp;rsquo;s how you do it.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Create a group in your LDAP/AD directory and assign your target users to that group.&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Revisit your LDAP authentication settings. These are located on the Admin Tab, on the Security Configuration page. In particular, look at the value for Group Search Filter.&lt;/p&gt;
-
-&lt;p&gt;e.g.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;(&amp;amp;(objectClass=group)(|(CN=XMLP\*)(CN=DEPT_GROUP_\*)))
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;In case you don&amp;rsquo;t recognize it, this is an LDAP query string. This query string determines which groups BI Publisher &amp;ldquo;sees&amp;rdquo;, or recognizes, when setting up report access. The groups returned by this query will determine the set from which you can choose when configuring which groups see which reports.&lt;/p&gt;
-
-&lt;p&gt;Here is a deconstruction of the query string:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;(&amp;amp;&lt;/strong&gt; &lt;em&gt;Logical AND over the following conditions&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;(objectClass=group)&lt;/strong&gt; &lt;em&gt;Return LDAP groups, as opposed to users or computers, etc.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;(|&lt;/strong&gt; &lt;em&gt;Logical OR over the following conditions&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;(CN=XMLP*)&lt;/strong&gt; &lt;em&gt;Return groups whose name starts with &amp;ldquo;XMLP&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;(CN=DEPT_GROUP_*)&lt;/strong&gt; &lt;em&gt;Return groups whose name starts with &amp;ldquo;DEPT_GROUP_&amp;ldquo;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;A quick primer on LDAP query syntax &lt;a href=&#34;http://wiki.pentaho.com/display/ServerDoc2x/LDAP+Search+Filter+Syntax&#34;&gt;can be found here.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Modify this query string to include the group you just created.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Bounce BI Publisher.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Log in to BI Publisher as an administrator. Go to the Admin tab, and then to the Roles and Permissions page.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Click on the role/group you just created, and using the shuttle control on the next page, select which reports your new group should have access to. If necessary, you may need to revoke permissions on your report from other groups, or move your report to the top level of the report folder hierarchy in order to segregate access appropriately.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-          </item>
-        
-      
-    
-      
-        
-          <item>
-            <title>How To Configure Oracle BI Publisher to Authenticate With Active Directory</title>
-            <link>http://tobybase.com/blog/2012/11/12/how-to-configure-oracle-bi-publisher-to-authenticate-with-active-directory/</link>
-            <pubDate>Mon, 12 Nov 2012 17:32:00 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2012/11/12/how-to-configure-oracle-bi-publisher-to-authenticate-with-active-directory/</guid>
-            <description>&lt;ul&gt;
-&lt;li&gt;Log in to BI Publisher as an administrator.&lt;/li&gt;
-&lt;li&gt;Click on the Admin tab.&lt;/li&gt;
-&lt;li&gt;Click on Security Configuration.&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;For Security Model, choose LDAP and enter the following parameters:&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Setting&lt;/th&gt;
-&lt;th&gt;Example Value&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;URL&lt;/td&gt;
-&lt;td&gt;ldap://ad.mycompany.com:389  &lt;cite style=&#34;color:red; font-size:smaller&#34;&gt;Your company&amp;rsquo;s LDAP server and port.&lt;/cite&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Administrator Username&lt;/td&gt;
-&lt;td&gt;CN=ADMIN,OU=Users,OU=Shared Services,DC=mycompany,DC=com  &lt;cite style=&#34;color:red; font-size:smaller&#34;&gt;The fully qualified DN of the account you use to sign in to LDAP.&lt;/cite&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Administrator Password&lt;/td&gt;
-&lt;td&gt;myxlplyx  &lt;cite style=&#34;color:red; font-size:smaller&#34;&gt;The password for the above account.&lt;/cite&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Distinguished Name for Users&lt;/td&gt;
-&lt;td&gt;DC=mycompany,DC=com  &lt;cite style=&#34;color:red; font-size:smaller&#34;&gt;The &amp;ldquo;root&amp;rdquo; level at which to search for users.&lt;/cite&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Distinguished Name for Groups&lt;/td&gt;
-&lt;td&gt;OU=Global Groups,DC=mycompany,DC=com  &lt;cite style=&#34;color:red; font-size:smaller&#34;&gt;The &amp;ldquo;root&amp;rdquo; level at which to search from groups.&lt;/cite&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Group Search Filter&lt;/td&gt;
-&lt;td&gt;(&amp;amp;(objectClass=group)(&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Group Attribute Name&lt;/td&gt;
-&lt;td&gt;cn&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Group Member Attribute Name&lt;/td&gt;
-&lt;td&gt;member&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Member Of Group Attribute Name&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Group Description Attribute Name&lt;/td&gt;
-&lt;td&gt;description&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;JNDI Context Factory Class&lt;/td&gt;
-&lt;td&gt;com.sun.jndi.ldap.LdapCtxFactory&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Group Retrieval Page Size&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;attribute used for RDN&lt;/td&gt;
-&lt;td&gt;sAMAccountName  &lt;cite style=&#34;color:red; font-size:smaller&#34;&gt;Allows users to log in to BI Publisher using their corporate AD account name.&lt;/cite&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Automatically clear LDAP cache&lt;/td&gt;
-&lt;td&gt;Checked&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Ldap Cache Interval&lt;/td&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Ldap Cache Interval Unit&lt;/td&gt;
-&lt;td&gt;Hour&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Default User Group Name&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Attribute Names for Data Query Bind Variables&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Bounce BI Publisher.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Try logging in with your corporate AD credentials. Remember, you need to be assigned to one of the following special groups in Active Directory if you want developer or admin privileges in BI Publisher:&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;XMLP_ADMIN&lt;br /&gt;
-XMLP_DEVELOPER&lt;br /&gt;
-XMLP_SCHEDULER&lt;br /&gt;
-XMLP_ANALYZER_EXCEL&lt;br /&gt;
-XMLP_ANALYZER_ONLINE&lt;br /&gt;
-XMLP_TEMPLATE_DESIGNER&lt;/p&gt;
-
-&lt;p&gt;You can read more about those roles and what they do &lt;a href=&#34;http://docs.oracle.com/cd/E10383_01/doc/bip.1013/b40017/T421739T475591.htm&#34;&gt;in the Oracle Documentation&lt;/a&gt;.&lt;/p&gt;
-</description>
-          </item>
-        
-      
-    
-      
-        
-          <item>
-            <title>Use Firebug&#39;s console.debug Command to Analyze Javascript, DOM Objects</title>
-            <link>http://tobybase.com/blog/2012/10/26/use-firebugs-console.debug-command-to-analyze-javascript-dom-objects/</link>
-            <pubDate>Fri, 26 Oct 2012 21:09:00 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2012/10/26/use-firebugs-console.debug-command-to-analyze-javascript-dom-objects/</guid>
-            <description>&lt;p&gt;Occasionally when debugging my Javascript code I need to be able to analyze the properties of an unknown object; for instance, an unexpected DOM object passed to an event handler. How do you analyze the properties of an object when you don&amp;rsquo;t know what the object is? I was looking for a way to list all the properties of a generic Javascript or DOM object when I stumbled across this blog post by Andrew Peters. In it, he very clearly outlines two ways of doing this, but the one I found most useful was Firebug&amp;rsquo;s &lt;code&gt;console.debug&lt;/code&gt; command. You&amp;rsquo;ll need to use Firefox with the Firebug extension for this, but the results are impressive.&lt;/p&gt;
-
-&lt;p&gt;When you want to debug an object, simply pass it as a parameter to &lt;code&gt;console.debug&lt;/code&gt;. Here is an example where I wanted to find out about the event trigger object passed to my event handler:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2012-10-26-use-firebugs-consoledebug-command-to-analyze-javascript-dom-objects/eda67a171f00051639dcf0d35e00ebfdd9309cf03876d1d915dfd7b1f1f7766f.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;After triggering the event, I opened the Firebug window and navigated to the console. From there I could drill down on the displayed results to get information about my unknown DOM object.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2012-10-26-use-firebugs-consoledebug-command-to-analyze-javascript-dom-objects/55db6e09e44319deee6ef4a9938a20d72369d922637897e02b1b7d20a900cb43.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2012-10-26-use-firebugs-consoledebug-command-to-analyze-javascript-dom-objects/38a39525404522f27ab3bf776a697f7e486f958723402ccff101a98014d54c0d.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Turns out in this case that the event handler was attached to the wrong object, due to the &amp;ldquo;id&amp;rdquo; value being placed one level above in the DOM hierarchy than I was expecting. Tricky, but I was able to spot the problem immediately using this method.&lt;/p&gt;
-</description>
-          </item>
-        
-      
-    
-      
-        
-          <item>
-            <title>How to Avoid the &#34;Job scheduling failed because the user has no permission to access this report&#34; Error in BI Publisher</title>
-            <link>http://tobybase.com/blog/2012/08/27/how-to-avoid-the-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report-error-in-bi-publisher/</link>
-            <pubDate>Mon, 27 Aug 2012 20:48:08 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2012/08/27/how-to-avoid-the-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report-error-in-bi-publisher/</guid>
-            <description>&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2012-08-27-bi-publisher-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report/864dbb90dbf623eb4f36b26a3ecf315cfec7121cf33e16730b6060c6572dfb35.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;You can get this error if you are trying to schedule a report and your BI Publisher installation uses LDAP authentication.&lt;/p&gt;
-
-&lt;p&gt;To avoid it, make sure that the &amp;ldquo;Administrator&amp;rdquo; account you use to connect to your LDAP server is in the XMLP_ADMIN group. The LDAP settings are located on the Admin tab, under Security Settings / Security Configuration.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2012-08-27-bi-publisher-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report/c44997adb44d6687468d544341fcd25b818ebdd46087d1849c38e855ee874488.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-</description>
-          </item>
-        
-      
-    
-      
-        <item>
-          <title>Linklog: Safari 5.1.7 on my MacBookPro OSX 10.7.4 freezes unexpectedly</title>
-          <link>http://tobybase.com/link/2012-07-25-safari-517-freezes-on-macbook-pro/</link>
-          <pubDate>Wed, 25 Jul 2012 00:00:00 +0000</pubDate>
-          <author>Apple Discussion Forum</author>
-          <guid>http://tobybase.com/link/2012-07-25-safari-517-freezes-on-macbook-pro/</guid>
-          <description>&lt;p&gt;Lately I&amp;rsquo;ve been experiencing strange problems when clicking on links in Safari 5.1.7. Usually the progress indicator would either flash momentarily and do nothing, or else it would never appear at all. Pages would sometimes load, but after an unusual delay and with no indication that the browser was actually doing anything. I switched to Chrome as my default browser for a few days, but that was about all I could stand. A little research on the forums showed this fix, which appears to have worked for me.&lt;/p&gt;
-</description>
-        </item>
       
     
   </channel>
