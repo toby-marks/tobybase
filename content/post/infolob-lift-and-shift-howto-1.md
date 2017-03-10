@@ -1,7 +1,7 @@
 +++
 date = "2017-03-10T14:41:00Z"
 categories = ["Education"]
-tags = ["cloud", "brian hill", "lift and shift", "oracle cloud services", "virtual machines", "windows"]
+tags = ["cloud", "brian hill", "lift and shift", "oracle cloud services", "virtual machines", "windows", "infolob"]
 title = "Move Your VM to Oracle Cloud - Part 1"
 
 +++
