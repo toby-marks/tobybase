@@ -14,143 +14,19 @@
 
    	
     
-        <link rel="preload" href="http://tobybase.com/css/theme/cosmo.css" as="style" onload="this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="http://tobybase.com/css/theme/cosmo.css"></noscript>
+        <link rel="stylesheet" href="http://localhost:1313/css/theme/cosmo.css">
     
 
-    <link rel="preload" href="http://tobybase.com/css/font-awesome.min.css" as="stylesheet" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="http://tobybase.com/css/font-awesome.min.css"></noscript>
+    <link rel="stylesheet" href="http://localhost:1313/css/font-awesome.min.css">
 
    	
-   	<link rel="preload" href="http://tobybase.com/css/style.css" as="stylesheet" onload="this.rel='stylesheet'">
-   	<noscript><link rel="stylesheet" href="http://tobybase.com/css/style.css"></noscript>
+   	<link rel="stylesheet" href="http://localhost:1313/css/style.css">
 
-    <script>
- 
-(function(w){
-	"use strict";
-	 
-	var loadCSS = function( href, before, media ){
-		
-		
-		
-			
-		
-		var doc = w.document;
-		var ss = doc.createElement( "link" );
-		var ref;
-		if( before ){
-			ref = before;
-		}
-		else {
-			var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
-			ref = refs[ refs.length - 1];
-		}
 
-		var sheets = doc.styleSheets;
-		ss.rel = "stylesheet";
-		ss.href = href;
-		
-		ss.media = "only x";
-
-		
-		function ready( cb ){
-			if( doc.body ){
-				return cb();
-			}
-			setTimeout(function(){
-				ready( cb );
-			});
-		}
-		
-			
-			
-		ready( function(){
-			ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
-		});
-		
-		var onloadcssdefined = function( cb ){
-			var resolvedHref = ss.href;
-			var i = sheets.length;
-			while( i-- ){
-				if( sheets[ i ].href === resolvedHref ){
-					return cb();
-				}
-			}
-			setTimeout(function() {
-				onloadcssdefined( cb );
-			});
-		};
-
-		function loadCB(){
-			if( ss.addEventListener ){
-				ss.removeEventListener( "load", loadCB );
-			}
-			ss.media = media || "all";
-		}
-
-		
-		if( ss.addEventListener ){
-			ss.addEventListener( "load", loadCB);
-		}
-		ss.onloadcssdefined = onloadcssdefined;
-		onloadcssdefined( loadCB );
-		return ss;
-	};
-	
-	if( typeof exports !== "undefined" ){
-		exports.loadCSS = loadCSS;
-	}
-	else {
-		w.loadCSS = loadCSS;
-	}
-}( typeof global !== "undefined" ? global : this ));
- 
-(function( w ){
-  
-  if( !w.loadCSS ){
-    return;
-  }
-  var rp = loadCSS.relpreload = {};
-  rp.support = function(){
-    try {
-      return w.document.createElement( "link" ).relList.supports( "preload" );
-    } catch (e) {
-      return false;
-    }
-  };
-
-  
-  rp.poly = function(){
-    var links = w.document.getElementsByTagName( "link" );
-    for( var i = 0; i < links.length; i++ ){
-      var link = links[ i ];
-      if( link.rel === "preload" && link.getAttribute( "as" ) === "style" ){
-        w.loadCSS( link.href, link, link.getAttribute( "media" ) );
-        link.rel = null;
-      }
-    }
-  };
-
-  
-  if( !rp.support() ){
-    rp.poly();
-    var run = w.setInterval( rp.poly, 300 );
-    if( w.addEventListener ){
-      w.addEventListener( "load", function(){
-        rp.poly();
-        w.clearInterval( run );
-      } );
-    }
-    if( w.attachEvent ){
-      w.attachEvent( "onload", function(){
-        w.clearInterval( run );
-      } )
-    }
-  }
-}( this ));
-    </script>
     
+    <script src="http://localhost:1313/js/jquery.min-2.1.4.js"></script>
+    <script src="http://localhost:1313/js/bootstrap.min-3.3.5.js"></script>
+
     
     <link href="" rel="alternate" type="application/rss+xml" title="tobybase" />
 </head>
@@ -160,12 +36,12 @@
     <div class="row">
         <div class="navbar navbar-default " role="navigation">
             <div class="navbar-header">
-                <a class="navbar-brand" href="http://tobybase.com"><img src="http://tobybase.com/img/logo.png" id="logographic"></a>
+                <a class="navbar-brand" href="http://localhost:1313"><img src="http://localhost:1313/img/logo.png" id="logographic"></a>
             </div>
             <div class="navbar-collapse collapse navbar-responsive-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="http://tobybase.com">Home</a></li>
-                    <li><a href="http://tobybase.com/post/">Blog</a></li>
+                    <li><a href="http://localhost:1313">Home</a></li>
+                    <li><a href="http://localhost:1313/post/">Blog</a></li>
                     
                 </ul>
             </div>
@@ -206,33 +82,23 @@
 			<p>When writing shell scripts in bash, consider whether your script can be automated in a batch scheduler like cron. If you reference any external resources in your script relative to the directory in which it resides, those references may break when running your script through cron.</p>
 
 <p>By default, crontab runs scripts in the user&rsquo;s home directory, as specified in <code>/etc/passwd</code>. For user &ldquo;Tim&rdquo; with home directory <code>/home/tim</code>, a sample crontab might look something like the following:</p>
-<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span><span style="color: #009999">0</span> <span style="color: #009999">0</span> * * * runme.sh
-</pre></div>
-
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#099">0</span> <span style="color:#099">0</span> * * * runme.sh</code></pre></div>
 <p>Every night at midnight, cron will try to run the file <code>/home/tim/runme.sh</code>. However, if <code>runme.sh</code> is actually in a sub-directory under <code>~tim</code>, you will need to tell cron how to reach the file. One option would be to qualify the path in crontab, like so:</p>
-<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span><span style="color: #009999">0</span> <span style="color: #009999">0</span> * * * ~/bin/runme.sh
-</pre></div>
-
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#099">0</span> <span style="color:#099">0</span> * * * ~/bin/runme.sh</code></pre></div>
 <p>Now cron can find the file. However, if the script makes references to other files inside of <code>/bin</code> in a path-relative way, those references will be broken.</p>
-<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span><span style="color: #aaaaaa; font-style: italic">#!/bin/bash</span>
-<span style="color: #aaaaaa; font-style: italic">#runme.sh</span>
-./runthis.sh      <span style="color: #aaaaaa; font-style: italic"># can&#39;t find this file when running under cron</span>
-./runthat.sh      <span style="color: #aaaaaa; font-style: italic"># can&#39;t find this file when running under cron</span>
-</pre></div>
-
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#4c8317">#!/bin/bash
+</span><span style="color:#4c8317"></span><span style="color:#aaa;font-style:italic">#runme.sh
+</span><span style="color:#aaa;font-style:italic"></span>./runthis.sh      <span style="color:#aaa;font-style:italic"># can&#39;t find this file when running under cron
+</span><span style="color:#aaa;font-style:italic"></span>./runthat.sh      # can<span style="color:#f00;background-color:#faa">&#39;</span>t find this file when running under cron</code></pre></div>
 <p>That&rsquo;s because to cron <code>./</code> is not the directory in which the script is running, but rather whatever is defined as the base directory; in the default case, the user&rsquo;s home directory.</p>
 
 <p>It is possible to specify the base directory in the crontab file itself by defining the special variable <code>HOME</code>.</p>
-<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span><span style="color: #aa0000">HOME</span>=/home/tim/bin
-<span style="color: #009999">0</span> <span style="color: #009999">0</span> * * * runme.sh
-</pre></div>
-
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#a00">HOME</span>=/home/tim/bin
+<span style="color:#099">0</span> <span style="color:#099">0</span> * * * runme.sh</code></pre></div>
 <p>However, you may not always have control over how your crontab is configured. Perhaps a system administrator is in charge of all the schedules on your server. Or you may organize your scripts in several different directories.</p>
 
 <p>An easy solution is to start your bash scripts with the following command:</p>
-<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span><span style="color: #00aaaa">cd</span> <span style="color: #0000aa">$(</span>dirname <span style="color: #aa0000">$0</span><span style="color: #0000aa">)</span>
-</pre></div>
-
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#0aa">cd</span> <span style="color:#00a">$(</span>dirname <span style="color:#a00">$0</span><span style="color:#00a">)</span></code></pre></div>
 <p>The program <code>dirname</code> returns the directory portion of the fully qualified path name sent to it. The <code>$0</code> argument in this context is name of the running script. Basically, this code ensures that the current working directory is the same as the directory in which your script is running. That way all your path-relative references are correct whether running manually or through a scheduler.</p>
 
 		</div>
@@ -245,20 +111,25 @@
 	</div>
 
 <div id="disqus_thread"></div>
-<script type="text/javascript">
-    var disqus_shortname = 'tobybase-com';
-    var disqus_identifier = 'http:\/\/tobybase.com\/blog\/2012\/04\/05\/how-to-make-bash-scripts-crontab-compatible\/';
-    var disqus_title = 'How To Make Bash Scripts crontab-Compatible';
-    var disqus_url = 'http:\/\/tobybase.com\/blog\/2012\/04\/05\/how-to-make-bash-scripts-crontab-compatible\/';
-
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
     (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tobybase-com" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
     })();
 </script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
 	<div class="row">
 		<div class="col-md-12">
@@ -272,7 +143,7 @@
             <footer>
                 <div class="pull-left">
                     <p>
-                        &copy; 2015 ~ Toby Marks ~ Powered By <a href="http://hugo.spf13.com">Hugo</a> ~ <a href="http://tobybase.com/license/">License</a>
+                        &copy; 2015 ~ Toby Marks ~ Powered By <a href="http://hugo.spf13.com">Hugo</a> - version: 0.31.1 ~ <a href="http://localhost:1313/license">License</a>
                     </p>
                 </div>
 
@@ -298,10 +169,6 @@
             </footer>
         </div>
     </div>
-
-    
-    <script src="http://tobybase.com/js/jquery.min-2.1.4.js"></script>
-    <script src="http://tobybase.com/js/bootstrap.min-3.3.5.js"></script>
 
     
     </body>

@@ -2,21 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Java on tobybase</title>
-    <link>http://tobybase.com/tags/java/index.xml</link>
+    <link>http://localhost:1313/tags/java/</link>
     <description>Recent content in Java on tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2015 ~ Toby Marks</copyright>
-    <atom:link href="/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 19 Jul 2013 22:32:00 +0000</lastBuildDate>
+    <atom:link href="/tags/java/" rel="self" type="application/rss+xml" />
     
       
         
           <item>
             <title>How to Fix SQL Developer on a Retina Display Mac(book)</title>
-            <link>http://tobybase.com/blog/2013/07/19/how-to-fix-sql-developer-on-a-retina-display-macbook/</link>
+            <link>http://localhost:1313/blog/2013/07/19/how-to-fix-sql-developer-on-a-retina-display-macbook/</link>
             <pubDate>Fri, 19 Jul 2013 22:32:00 +0000</pubDate>
             
-            <guid>http://tobybase.com/blog/2013/07/19/how-to-fix-sql-developer-on-a-retina-display-macbook/</guid>
+            <guid>http://localhost:1313/blog/2013/07/19/how-to-fix-sql-developer-on-a-retina-display-macbook/</guid>
             <description>&lt;p&gt;I just purchased a new Macbook Pro 13-inch with Retina Display and was horrified to see how fuzzy SQL Developer looked on the high-res screen. Thanks to Thunderforge on the &lt;a href=&#34;http://stackoverflow.com/questions/15181079/apple-retina-display-support-in-java-jdk-1-7-for-awt-swing&#34;&gt;Stack Overflow forums&lt;/a&gt; for this tip:&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -36,15 +37,15 @@ shown by this &lt;a href=&#34;http://download.java.net/jdk7u40/changes/jdk7u40-b
         
           <item>
             <title>How To Run Oracle Forms 11g Applications on OS X Lion</title>
-            <link>http://tobybase.com/blog/2012/07/12/how-to-run-oracle-forms-11g-applications-on-os-x-lion/</link>
+            <link>http://localhost:1313/blog/2012/07/12/how-to-run-oracle-forms-11g-applications-on-os-x-lion/</link>
             <pubDate>Thu, 12 Jul 2012 22:28:24 +0000</pubDate>
             
-            <guid>http://tobybase.com/blog/2012/07/12/how-to-run-oracle-forms-11g-applications-on-os-x-lion/</guid>
+            <guid>http://localhost:1313/blog/2012/07/12/how-to-run-oracle-forms-11g-applications-on-os-x-lion/</guid>
             <description>&lt;p&gt;Need to run your company&amp;rsquo;s Oracle Forms application from your Mac, and can&amp;rsquo;t? Annoyed with having to crank up a virtual machine for just that one task? Even with the latest published Java version for OS X (1.6.0_33, as of today), you may find that some of the newer Forms applications just won&amp;rsquo;t run. Well, fret no longer. A solution may already be here, at least for Safari and Firefox.&lt;/p&gt;
 
 &lt;p&gt;Although it&amp;rsquo;s not a strictly certified configuration, you may have better luck by running the JRE 1.7 Java plug-in, which was recently made available as a pre-release download. This works for OS X Lion 10.7.3 and above. Download the plug-in &lt;a href=&#34;http://jdk7.java.net/macportpreview/&#34;&gt;from here&lt;/a&gt; and follow the simple instructions on the page to install it. Now give your application another try, and hopefully you&amp;rsquo;ll get the results I did!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2012-07-12-run-oracle-forms-11g-applications-on-os-x-lion/8267cef641541001f78e2a3845a1349c5cc5c74dc6bf17b8a32fe537d9beaadd.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2012-07-12-run-oracle-forms-11g-applications-on-os-x-lion/8267cef641541001f78e2a3845a1349c5cc5c74dc6bf17b8a32fe537d9beaadd.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </description>
           </item>
         
@@ -54,17 +55,17 @@ shown by this &lt;a href=&#34;http://download.java.net/jdk7u40/changes/jdk7u40-b
         
           <item>
             <title>Discovering Command-line Java Profiling Tools</title>
-            <link>http://tobybase.com/blog/2012/05/02/discovering-command-line-java-profiling-tools/</link>
+            <link>http://localhost:1313/blog/2012/05/02/discovering-command-line-java-profiling-tools/</link>
             <pubDate>Wed, 02 May 2012 21:41:00 +0000</pubDate>
             
-            <guid>http://tobybase.com/blog/2012/05/02/discovering-command-line-java-profiling-tools/</guid>
+            <guid>http://localhost:1313/blog/2012/05/02/discovering-command-line-java-profiling-tools/</guid>
             <description>&lt;p&gt;At my current client I am responsible for administering a third-party Java appplication that unfortunately generates a lot of performance complaints. It&amp;rsquo;s a multi-tiered system with the middle-tier running on Oracle Appication Server 10.1.3. I am already familiar with GUI profiling tools like &lt;code&gt;jconsole&lt;/code&gt; and &lt;code&gt;jvisualvm&lt;/code&gt;, both of which are included with Oracle&amp;rsquo;s JDK, and I have played around with the profiling capabilities in NetBeans. All of these profiling tools are fairly similar to one another in look and functionality.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941369/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/687cc5e71ab082d921ea083c2a3389f33608bdb578a2505ba98647dca59edd1c.jpg&#34; alt=&#34;Profiling the JVM with jconsole&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941369/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://localhost:1313/img/2012-05-02-discovering-command-line-java-profiling-tools/687cc5e71ab082d921ea083c2a3389f33608bdb578a2505ba98647dca59edd1c.jpg&#34; alt=&#34;Profiling the JVM with jconsole&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/6990855922/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/062326cdf1e49a33f125692cdc43927df553db0aa59ae2e13a028e5e9119ddbd.jpg&#34; alt=&#34;Profiling the JVM with jvisualvm&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/6990855922/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://localhost:1313/img/2012-05-02-discovering-command-line-java-profiling-tools/062326cdf1e49a33f125692cdc43927df553db0aa59ae2e13a028e5e9119ddbd.jpg&#34; alt=&#34;Profiling the JVM with jvisualvm&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/6990855902/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/70254026909062fd761740bc71f569e1dfeffd3aeaa574ba1cfb794e3029ea62.jpg&#34; alt=&#34;Profiling the JVM with NetBeans&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/6990855902/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://localhost:1313/img/2012-05-02-discovering-command-line-java-profiling-tools/70254026909062fd761740bc71f569e1dfeffd3aeaa574ba1cfb794e3029ea62.jpg&#34; alt=&#34;Profiling the JVM with NetBeans&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Using any one of these tools, I can view the size and utilization of the heap, see the status of running threads, monitor CPU loads, pull garbage collection statistics, and generate a memory dump. All of these are adequate for monitoring application performance in real-time, but while working with the application vendor to diagnose problems I found it necessary to be able to report on application performance over longer spans of time, say days or even weeks. We were trying to show patterns of eroding performance, or possibly spot instances of very slow memory leaks in parts of the application that got used less frequently. In any event, it required a way to monitor all of these details without having to have my eyes on the screen the whole time.&lt;/p&gt;
 
@@ -72,7 +73,7 @@ shown by this &lt;a href=&#34;http://download.java.net/jdk7u40/changes/jdk7u40-b
 
 &lt;p&gt;Recent versions of the JDK come packaged with some nifty command line tools to assist with profiling your Java applications. They can all be found in the &lt;code&gt;/bin&lt;/code&gt; directory under the JDK base directory.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941341/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/9ca305047f95051bbdc678ea66f9e4923a830b21f3264ebc3b87e9bd385f5765.jpg&#34; alt=&#34;Commands bundled with the JDK&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941341/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://localhost:1313/img/2012-05-02-discovering-command-line-java-profiling-tools/9ca305047f95051bbdc678ea66f9e4923a830b21f3264ebc3b87e9bd385f5765.jpg&#34; alt=&#34;Commands bundled with the JDK&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;##jps&lt;/p&gt;
 
@@ -80,7 +81,7 @@ shown by this &lt;a href=&#34;http://download.java.net/jdk7u40/changes/jdk7u40-b
 
 &lt;p&gt;Each Java process is identified by the &amp;ldquo;VMID&amp;rdquo; returned by &lt;code&gt;jps&lt;/code&gt;, usually corresponding to the process ID on the host system. It is this VMID which is required as an argument to all of the other tools we will discuss, so be sure to always use &lt;code&gt;jps&lt;/code&gt; to correctly identify your processes to the other tools.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941355/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/c3b76d4b16d988867798b352027c036e5bb4f1ebb07abfaf453bbb7094470ab4.jpg&#34; alt=&#34;Running jps&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941355/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://localhost:1313/img/2012-05-02-discovering-command-line-java-profiling-tools/c3b76d4b16d988867798b352027c036e5bb4f1ebb07abfaf453bbb7094470ab4.jpg&#34; alt=&#34;Running jps&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;##jstack&lt;/p&gt;
 
@@ -90,22 +91,22 @@ shown by this &lt;a href=&#34;http://download.java.net/jdk7u40/changes/jdk7u40-b
 
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; If you have a 64-bit JDK, you&amp;rsquo;ll want to use the &lt;code&gt;-J-d64&lt;/code&gt; flag when running the command.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941351/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/23352a26f3e67df6c159d8ff4c130b2d47be1bc8e37d78bc8178e0aa65e04182.jpg&#34; alt=&#34;Running jstack&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941351/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://localhost:1313/img/2012-05-02-discovering-command-line-java-profiling-tools/23352a26f3e67df6c159d8ff4c130b2d47be1bc8e37d78bc8178e0aa65e04182.jpg&#34; alt=&#34;Running jstack&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;##jmap &amp;amp; jhat&lt;/p&gt;
 
 &lt;p&gt;These two tools work together to help you analyze the contents of the heap. Use &lt;code&gt;jmap&lt;/code&gt; to generate a heap dump, and &lt;code&gt;jhat&lt;/code&gt; to help analyze the dump file.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941291/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/ad70746c91dd43d7a093fa3e7c180ce863a605f0ccd511774c8c62b4203731b1.jpg&#34; alt=&#34;Running jmap and jhat&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941291/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://localhost:1313/img/2012-05-02-discovering-command-line-java-profiling-tools/ad70746c91dd43d7a093fa3e7c180ce863a605f0ccd511774c8c62b4203731b1.jpg&#34; alt=&#34;Running jmap and jhat&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;Jhat&lt;/code&gt; works by spawning an HTTP server that presents the contents of the heap as a web page, allowing you to drill down on a specific object to view its members and references. In order to get the most out of &lt;code&gt;jhat&lt;/code&gt;, however, it would be worth investigating OQL, the &lt;strong&gt;O&lt;/strong&gt;bject &lt;strong&gt;Q&lt;/strong&gt;uery &lt;strong&gt;L&lt;/strong&gt;anguage, as the web page generated by &lt;code&gt;jhat&lt;/code&gt; allows you to run OQL queries against the heap. If you know a little about your application class structure, this makes your heap analysis far more efficient. Thankfully, the &lt;code&gt;jhat&lt;/code&gt; web page provides you with a short primer.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/6990855834/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/036aef8b8bc95e25c21a1bfb219fcc19e8e084e6ee60643a57a3ff72f83b69ec.jpg&#34; alt=&#34;OQL help page&#34; /&gt;&lt;/a&gt;
-&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941267/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/c59f79354e9bb6223492707dd27ebffb018449445204453ba610396b89d74fdc.jpg&#34; alt=&#34;OQL primer&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/6990855834/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://localhost:1313/img/2012-05-02-discovering-command-line-java-profiling-tools/036aef8b8bc95e25c21a1bfb219fcc19e8e084e6ee60643a57a3ff72f83b69ec.jpg&#34; alt=&#34;OQL help page&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941267/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://localhost:1313/img/2012-05-02-discovering-command-line-java-profiling-tools/c59f79354e9bb6223492707dd27ebffb018449445204453ba610396b89d74fdc.jpg&#34; alt=&#34;OQL primer&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;Jmap&lt;/code&gt; is good for more than just generating heap dumps, however. When used with the &lt;code&gt;-heap&lt;/code&gt; option it gives you a nicely formatted heap usage summary.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941255/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/d6c27680e007dae747ef2cac7218faf0f918d2cf68cb1023d7e0ece182369233.jpg&#34; alt=&#34;jmap with the -heap option&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941255/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://localhost:1313/img/2012-05-02-discovering-command-line-java-profiling-tools/d6c27680e007dae747ef2cac7218faf0f918d2cf68cb1023d7e0ece182369233.jpg&#34; alt=&#34;jmap with the -heap option&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Now I was getting closer to my goal. In fact, this was originally the output I parsed during my first attempt at statistics gathering. Unfortunately, what I found while running on an RHEL 4.7 box with JDK 1.6.0_30 was that &lt;code&gt;jmap&lt;/code&gt; would from time to time inexplicably refuse to attach to my Java process, leaving gaping holes in my report. I noticed &lt;a href=&#34;http://ubuntuforums.org/showthread.php?t=1886859&#34;&gt;similar&lt;/a&gt; &lt;a href=&#34;https://forums.oracle.com/forums/thread.jspa?threadID=1693766&#34;&gt;complaints&lt;/a&gt; &lt;a href=&#34;http://blog.thecodingmachine.com/fr/comment/reply/91&#34;&gt;online&lt;/a&gt;, so I figured there may be problems with it.&lt;/p&gt;
 
@@ -161,10 +162,10 @@ HotSpot compilation method statistics.&lt;/li&gt;
         
           <item>
             <title>Invalidating Toplink Session Cache To Avoid Stale Data</title>
-            <link>http://tobybase.com/blog/2012/03/09/invalidating-toplink-session-cache-to-avoid-stale-data/</link>
+            <link>http://localhost:1313/blog/2012/03/09/invalidating-toplink-session-cache-to-avoid-stale-data/</link>
             <pubDate>Fri, 09 Mar 2012 18:42:00 +0000</pubDate>
             
-            <guid>http://tobybase.com/blog/2012/03/09/invalidating-toplink-session-cache-to-avoid-stale-data/</guid>
+            <guid>http://localhost:1313/blog/2012/03/09/invalidating-toplink-session-cache-to-avoid-stale-data/</guid>
             <description>&lt;p&gt;Toplink is a Java framework that maps objects to database tables. It is the reference implementation for the Java Persistence Architecture, or JPA. Developers use Toplink to manage data persistence (storage), queries, and transactions in an Oracle database. By default, Toplink makes use of a special cache called a Session Cache, maintained on the server, which is meant to speed up performance. Queried data is stored in the Session Cache and used in subsequent queries to reduce or eliminate calls to the database.&lt;/p&gt;
 
 &lt;p&gt;One problem with this approach is how to deal with &amp;ldquo;stale data&amp;rdquo;. In other words, what happens when data is changing in the database? How does the developer ensure that the cached data is current?&lt;/p&gt;
@@ -190,55 +191,49 @@ CacheInvalidatorServlet.java&lt;/p&gt;
 &lt;a href=&#34;http://www.oracle.com/technetwork/middleware/ias/index-100679.html&#34;&gt;Oracle TopLink Cache Invalidation&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;The two methods of CacheInvalidator that do the actual work are shown here. The first takes tablename as an argument, so that the invalidation can be targeted. The second invalidates, or effectively wipes, the entire cache.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #0000aa&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color: #00aaaa&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color: #00aa00&#34;&gt;invalidateClass&lt;/span&gt;(Session session, String tableName) &lt;span style=&#34;color: #0000aa&#34;&gt;throws&lt;/span&gt; Exception { 
-    &lt;span style=&#34;color: #0000aa&#34;&gt;if&lt;/span&gt;(tableName == &lt;span style=&#34;color: #0000aa&#34;&gt;null&lt;/span&gt; || tableName.&lt;span style=&#34;color: #1e90ff&#34;&gt;trim&lt;/span&gt;().&lt;span style=&#34;color: #1e90ff&#34;&gt;equals&lt;/span&gt;(&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;)) { 
-        &lt;span style=&#34;color: #0000aa&#34;&gt;throw&lt;/span&gt; &lt;span style=&#34;color: #0000aa&#34;&gt;new&lt;/span&gt; Exception(&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;tableName cannot be null&amp;quot;&lt;/span&gt;); 
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#00a&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#0aa&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#0a0&#34;&gt;invalidateClass&lt;/span&gt;(Session session, String tableName) &lt;span style=&#34;color:#00a&#34;&gt;throws&lt;/span&gt; Exception { 
+    &lt;span style=&#34;color:#00a&#34;&gt;if&lt;/span&gt;(tableName == &lt;span style=&#34;color:#00a&#34;&gt;null&lt;/span&gt; || tableName.&lt;span style=&#34;color:#1e90ff&#34;&gt;trim&lt;/span&gt;().&lt;span style=&#34;color:#1e90ff&#34;&gt;equals&lt;/span&gt;(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;)) { 
+        &lt;span style=&#34;color:#00a&#34;&gt;throw&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;new&lt;/span&gt; Exception(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#34;tableName cannot be null&amp;#34;&lt;/span&gt;); 
     } 
-    Class baseClass = (Class)tableNameToClass.&lt;span style=&#34;color: #1e90ff&#34;&gt;get&lt;/span&gt;(tableName); 
-    &lt;span style=&#34;color: #0000aa&#34;&gt;if&lt;/span&gt;(baseClass == &lt;span style=&#34;color: #0000aa&#34;&gt;null&lt;/span&gt;) { 
-        &lt;span style=&#34;color: #0000aa&#34;&gt;throw&lt;/span&gt; &lt;span style=&#34;color: #0000aa&#34;&gt;new&lt;/span&gt; Exception(&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;table \&amp;quot;&amp;quot;&lt;/span&gt; + tableName + &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;\&amp;quot; not found in cache&amp;quot;&lt;/span&gt;); 
+    Class baseClass = (Class)tableNameToClass.&lt;span style=&#34;color:#1e90ff&#34;&gt;get&lt;/span&gt;(tableName); 
+    &lt;span style=&#34;color:#00a&#34;&gt;if&lt;/span&gt;(baseClass == &lt;span style=&#34;color:#00a&#34;&gt;null&lt;/span&gt;) { 
+        &lt;span style=&#34;color:#00a&#34;&gt;throw&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;new&lt;/span&gt; Exception(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#34;table \&amp;#34;&amp;#34;&lt;/span&gt; + tableName + &lt;span style=&#34;color:#a50&#34;&gt;&amp;#34;\&amp;#34; not found in cache&amp;#34;&lt;/span&gt;); 
     } 
  
-    &lt;span style=&#34;color: #aaaaaa; font-style: italic&#34;&gt;// invalidate in TopLink cache the object corresponding to the baseClass &lt;/span&gt;
-    session.&lt;span style=&#34;color: #1e90ff&#34;&gt;getIdentityMapAccessor&lt;/span&gt;().&lt;span style=&#34;color: #1e90ff&#34;&gt;invalidateClass&lt;/span&gt;(baseClass); 
+    &lt;span style=&#34;color:#aaa;font-style:italic&#34;&gt;// invalidate in TopLink cache the object corresponding to the baseClass 
+&lt;/span&gt;&lt;span style=&#34;color:#aaa;font-style:italic&#34;&gt;&lt;/span&gt;    session.&lt;span style=&#34;color:#1e90ff&#34;&gt;getIdentityMapAccessor&lt;/span&gt;().&lt;span style=&#34;color:#1e90ff&#34;&gt;invalidateClass&lt;/span&gt;(baseClass); 
 } 
  
-&lt;span style=&#34;color: #aaaaaa; font-style: italic&#34;&gt;// invalidate all objects in the cache &lt;/span&gt;
-&lt;span style=&#34;color: #0000aa&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color: #00aaaa&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color: #00aa00&#34;&gt;invalidateAllClasses&lt;/span&gt;(Session session) { 
-    &lt;span style=&#34;color: #aaaaaa; font-style: italic&#34;&gt;// invalidate in TopLink cache the object corresponding to the baseClass &lt;/span&gt;
-    session.&lt;span style=&#34;color: #1e90ff&#34;&gt;getIdentityMapAccessor&lt;/span&gt;().&lt;span style=&#34;color: #1e90ff&#34;&gt;invalidateAll&lt;/span&gt;(); 
-} 
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;span style=&#34;color:#aaa;font-style:italic&#34;&gt;// invalidate all objects in the cache 
+&lt;/span&gt;&lt;span style=&#34;color:#aaa;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#00a&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#0aa&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#0a0&#34;&gt;invalidateAllClasses&lt;/span&gt;(Session session) { 
+    &lt;span style=&#34;color:#aaa;font-style:italic&#34;&gt;// invalidate in TopLink cache the object corresponding to the baseClass 
+&lt;/span&gt;&lt;span style=&#34;color:#aaa;font-style:italic&#34;&gt;&lt;/span&gt;    session.&lt;span style=&#34;color:#1e90ff&#34;&gt;getIdentityMapAccessor&lt;/span&gt;().&lt;span style=&#34;color:#1e90ff&#34;&gt;invalidateAll&lt;/span&gt;(); 
+} &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;The CacheInvalidatorServlet takes a table name or the special keyword &amp;ldquo;ALL&amp;rdquo; as a parameter and calls the corresponding method in CacheInvalidator.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;String oName = request.&lt;span style=&#34;color: #1e90ff&#34;&gt;getParameter&lt;/span&gt;(&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;objectName&amp;quot;&lt;/span&gt;); 
-String responseString = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;; 
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;String oName = request.&lt;span style=&#34;color:#1e90ff&#34;&gt;getParameter&lt;/span&gt;(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#34;objectName&amp;#34;&lt;/span&gt;); 
+String responseString = &lt;span style=&#34;color:#a50&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;; 
 
-&lt;span style=&#34;color: #0000aa&#34;&gt;try&lt;/span&gt; { 
-    SessionManager manager = SessionManager.&lt;span style=&#34;color: #1e90ff&#34;&gt;getManager&lt;/span&gt;(); 
-    &lt;span style=&#34;color: #aaaaaa; font-style: italic&#34;&gt;//SESSIONNAME defined in sessions.xml &lt;/span&gt;
-    Server server = (Server)manager.&lt;span style=&#34;color: #1e90ff&#34;&gt;getSession&lt;/span&gt;(&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;SESSIONNAME&amp;quot;&lt;/span&gt;); 
-    Session session = server.&lt;span style=&#34;color: #1e90ff&#34;&gt;getActiveSession&lt;/span&gt;(); 
+&lt;span style=&#34;color:#00a&#34;&gt;try&lt;/span&gt; { 
+    SessionManager manager = SessionManager.&lt;span style=&#34;color:#1e90ff&#34;&gt;getManager&lt;/span&gt;(); 
+    &lt;span style=&#34;color:#aaa;font-style:italic&#34;&gt;//SESSIONNAME defined in sessions.xml 
+&lt;/span&gt;&lt;span style=&#34;color:#aaa;font-style:italic&#34;&gt;&lt;/span&gt;    Server server = (Server)manager.&lt;span style=&#34;color:#1e90ff&#34;&gt;getSession&lt;/span&gt;(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#34;SESSIONNAME&amp;#34;&lt;/span&gt;); 
+    Session session = server.&lt;span style=&#34;color:#1e90ff&#34;&gt;getActiveSession&lt;/span&gt;(); 
 
-    CacheInvalidator invalidator = &lt;span style=&#34;color: #0000aa&#34;&gt;new&lt;/span&gt; CacheInvalidator(session); 
-    &lt;span style=&#34;color: #0000aa&#34;&gt;if&lt;/span&gt; (oName.&lt;span style=&#34;color: #1e90ff&#34;&gt;equals&lt;/span&gt;(&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;ALL&amp;quot;&lt;/span&gt;)) { 
-        invalidator.&lt;span style=&#34;color: #1e90ff&#34;&gt;invalidateAllClasses&lt;/span&gt;(session); 
-        responseString = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;successfully invalidated toplink cache for all tables.&amp;quot;&lt;/span&gt;; 
-    } &lt;span style=&#34;color: #0000aa&#34;&gt;else&lt;/span&gt; { 
-        invalidator.&lt;span style=&#34;color: #1e90ff&#34;&gt;invalidateClass&lt;/span&gt;(session, oName); 
-        responseString = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;successfully invalidated toplink cache for table: &amp;quot;&lt;/span&gt;+oName; 
+    CacheInvalidator invalidator = &lt;span style=&#34;color:#00a&#34;&gt;new&lt;/span&gt; CacheInvalidator(session); 
+    &lt;span style=&#34;color:#00a&#34;&gt;if&lt;/span&gt; (oName.&lt;span style=&#34;color:#1e90ff&#34;&gt;equals&lt;/span&gt;(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#34;ALL&amp;#34;&lt;/span&gt;)) { 
+        invalidator.&lt;span style=&#34;color:#1e90ff&#34;&gt;invalidateAllClasses&lt;/span&gt;(session); 
+        responseString = &lt;span style=&#34;color:#a50&#34;&gt;&amp;#34;successfully invalidated toplink cache for all tables.&amp;#34;&lt;/span&gt;; 
+    } &lt;span style=&#34;color:#00a&#34;&gt;else&lt;/span&gt; { 
+        invalidator.&lt;span style=&#34;color:#1e90ff&#34;&gt;invalidateClass&lt;/span&gt;(session, oName); 
+        responseString = &lt;span style=&#34;color:#a50&#34;&gt;&amp;#34;successfully invalidated toplink cache for table: &amp;#34;&lt;/span&gt;+oName; 
     } 
-} &lt;span style=&#34;color: #0000aa&#34;&gt;catch&lt;/span&gt; (Exception e) { 
-    responseString = e.&lt;span style=&#34;color: #1e90ff&#34;&gt;getMessage&lt;/span&gt;(); 
-} 
-&lt;/pre&gt;&lt;/div&gt;
-
+} &lt;span style=&#34;color:#00a&#34;&gt;catch&lt;/span&gt; (Exception e) { 
+    responseString = e.&lt;span style=&#34;color:#1e90ff&#34;&gt;getMessage&lt;/span&gt;(); 
+} &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Calling a servlet from PL/SQL is not particularly complicated, but in our case involved the lookup of server information stored in the database. The wrapper package allowed us to provide the developers with a simple, one-line invocation.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;p_servlet_response := utl_http.request(&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;http://&amp;#39;&lt;/span&gt;||l_app_server_host||&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;:&amp;#39;&lt;/span&gt;
-          ||l_app_server_port||&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;/jedi/cacheinvalidatorservlet?objectName=&amp;#39;&lt;/span&gt;
-          ||p_obj_to_invalidate);
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;p_servlet_response := utl_http.request(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;http://&amp;#39;&lt;/span&gt;||l_app_server_host||&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;:&amp;#39;&lt;/span&gt;
+          ||l_app_server_port||&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;/jedi/cacheinvalidatorservlet?objectName=&amp;#39;&lt;/span&gt;
+          ||p_obj_to_invalidate);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;After making a call to our cacheinvalidator package subsequent to updating the status record, the stale data problem was eliminated in the application.&lt;/p&gt;
 </description>
           </item>

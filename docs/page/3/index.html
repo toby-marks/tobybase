@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en-US" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 <head>
-	<meta name="generator" content="Hugo 0.18.1" />
+	<meta name="generator" content="Hugo 0.31.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -15,145 +15,21 @@
 
    	
     
-        <link rel="preload" href="http://tobybase.com/css/theme/cosmo.css" as="style" onload="this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="http://tobybase.com/css/theme/cosmo.css"></noscript>
+        <link rel="stylesheet" href="http://localhost:1313/css/theme/cosmo.css">
     
 
-    <link rel="preload" href="http://tobybase.com/css/font-awesome.min.css" as="stylesheet" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="http://tobybase.com/css/font-awesome.min.css"></noscript>
+    <link rel="stylesheet" href="http://localhost:1313/css/font-awesome.min.css">
 
    	
-   	<link rel="preload" href="http://tobybase.com/css/style.css" as="stylesheet" onload="this.rel='stylesheet'">
-   	<noscript><link rel="stylesheet" href="http://tobybase.com/css/style.css"></noscript>
+   	<link rel="stylesheet" href="http://localhost:1313/css/style.css">
 
-    <script>
- 
-(function(w){
-	"use strict";
-	 
-	var loadCSS = function( href, before, media ){
-		
-		
-		
-			
-		
-		var doc = w.document;
-		var ss = doc.createElement( "link" );
-		var ref;
-		if( before ){
-			ref = before;
-		}
-		else {
-			var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
-			ref = refs[ refs.length - 1];
-		}
 
-		var sheets = doc.styleSheets;
-		ss.rel = "stylesheet";
-		ss.href = href;
-		
-		ss.media = "only x";
-
-		
-		function ready( cb ){
-			if( doc.body ){
-				return cb();
-			}
-			setTimeout(function(){
-				ready( cb );
-			});
-		}
-		
-			
-			
-		ready( function(){
-			ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
-		});
-		
-		var onloadcssdefined = function( cb ){
-			var resolvedHref = ss.href;
-			var i = sheets.length;
-			while( i-- ){
-				if( sheets[ i ].href === resolvedHref ){
-					return cb();
-				}
-			}
-			setTimeout(function() {
-				onloadcssdefined( cb );
-			});
-		};
-
-		function loadCB(){
-			if( ss.addEventListener ){
-				ss.removeEventListener( "load", loadCB );
-			}
-			ss.media = media || "all";
-		}
-
-		
-		if( ss.addEventListener ){
-			ss.addEventListener( "load", loadCB);
-		}
-		ss.onloadcssdefined = onloadcssdefined;
-		onloadcssdefined( loadCB );
-		return ss;
-	};
-	
-	if( typeof exports !== "undefined" ){
-		exports.loadCSS = loadCSS;
-	}
-	else {
-		w.loadCSS = loadCSS;
-	}
-}( typeof global !== "undefined" ? global : this ));
- 
-(function( w ){
-  
-  if( !w.loadCSS ){
-    return;
-  }
-  var rp = loadCSS.relpreload = {};
-  rp.support = function(){
-    try {
-      return w.document.createElement( "link" ).relList.supports( "preload" );
-    } catch (e) {
-      return false;
-    }
-  };
-
-  
-  rp.poly = function(){
-    var links = w.document.getElementsByTagName( "link" );
-    for( var i = 0; i < links.length; i++ ){
-      var link = links[ i ];
-      if( link.rel === "preload" && link.getAttribute( "as" ) === "style" ){
-        w.loadCSS( link.href, link, link.getAttribute( "media" ) );
-        link.rel = null;
-      }
-    }
-  };
-
-  
-  if( !rp.support() ){
-    rp.poly();
-    var run = w.setInterval( rp.poly, 300 );
-    if( w.addEventListener ){
-      w.addEventListener( "load", function(){
-        rp.poly();
-        w.clearInterval( run );
-      } );
-    }
-    if( w.attachEvent ){
-      w.attachEvent( "onload", function(){
-        w.clearInterval( run );
-      } )
-    }
-  }
-}( this ));
-    </script>
     
+    <script src="http://localhost:1313/js/jquery.min-2.1.4.js"></script>
+    <script src="http://localhost:1313/js/bootstrap.min-3.3.5.js"></script>
+
     
-    <link href="http://tobybase.com/index.xml" rel="alternate" type="application/rss+xml" title="tobybase" />
+    <link href="http://localhost:1313/index.xml" rel="alternate" type="application/rss+xml" title="tobybase" />
 </head>
 <body lang="en-US">
     
@@ -161,12 +37,12 @@
     <div class="row">
         <div class="navbar navbar-default " role="navigation">
             <div class="navbar-header">
-                <a class="navbar-brand" href="http://tobybase.com"><img src="http://tobybase.com/img/logo.png" id="logographic"></a>
+                <a class="navbar-brand" href="http://localhost:1313"><img src="http://localhost:1313/img/logo.png" id="logographic"></a>
             </div>
             <div class="navbar-collapse collapse navbar-responsive-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="http://tobybase.com">Home</a></li>
-                    <li><a href="http://tobybase.com/post/">Blog</a></li>
+                    <li><a href="http://localhost:1313">Home</a></li>
+                    <li><a href="http://localhost:1313/post/">Blog</a></li>
                     
                 </ul>
             </div>
@@ -184,7 +60,7 @@
 			<div class="row">
 				
 				<div class="col-md-offset-1 col-md-10">
-					<h3><a href="http://tobybase.com/blog/2012/07/20/how-to-fix-high-cpu-usage-by-sql-developer-on-os-x/">How To Fix High CPU Usage by SQL Developer on OS X</a></h3>
+					<h3><a href="http://localhost:1313/blog/2012/07/20/how-to-fix-high-cpu-usage-by-sql-developer-on-os-x/">How To Fix High CPU Usage by SQL Developer on OS X</a></h3>
 						<small><span class="label label-primary">
 							
 								07/20/2012
@@ -218,7 +94,7 @@
 Basically, don&rsquo;t use the &ldquo;Mac OS X&rdquo; setting. Instead, use the &ldquo;Oracle&rdquo; setting. The theme doesn&rsquo;t matter.
 That fixes the CPU issue, but somewhat annoyingly moves the menu out of the menu bar at the top of the screen and into the application window, a la Windows, making the interface inconsistent with pretty much every other app I use on my Mac.
 					  		<br>
-						  	<a href="http://tobybase.com/blog/2012/07/20/how-to-fix-high-cpu-usage-by-sql-developer-on-os-x/">
+						  	<a href="http://localhost:1313/blog/2012/07/20/how-to-fix-high-cpu-usage-by-sql-developer-on-os-x/">
 						  	
 						  		Read more
 						  	</a>
@@ -240,7 +116,7 @@ That fixes the CPU issue, but somewhat annoyingly moves the menu out of the menu
 			<div class="row">
 				
 				<div class="col-md-offset-1 col-md-10">
-					<h3><a href="http://tobybase.com/blog/2012/07/12/how-to-run-oracle-forms-11g-applications-on-os-x-lion/">How To Run Oracle Forms 11g Applications on OS X Lion</a></h3>
+					<h3><a href="http://localhost:1313/blog/2012/07/12/how-to-run-oracle-forms-11g-applications-on-os-x-lion/">How To Run Oracle Forms 11g Applications on OS X Lion</a></h3>
 						<small><span class="label label-primary">
 							
 								07/12/2012
@@ -272,7 +148,7 @@ That fixes the CPU issue, but somewhat annoyingly moves the menu out of the menu
 	  					
 	  		  				Need to run your company&rsquo;s Oracle Forms application from your Mac, and can&rsquo;t? Annoyed with having to crank up a virtual machine for just that one task? Even with the latest published Java version for OS X (1.6.0_33, as of today), you may find that some of the newer Forms applications just won&rsquo;t run. Well, fret no longer. A solution may already be here, at least for Safari and Firefox.
 					  		<br>
-						  	<a href="http://tobybase.com/blog/2012/07/12/how-to-run-oracle-forms-11g-applications-on-os-x-lion/">
+						  	<a href="http://localhost:1313/blog/2012/07/12/how-to-run-oracle-forms-11g-applications-on-os-x-lion/">
 						  	
 						  		Read more
 						  	</a>
@@ -294,7 +170,7 @@ That fixes the CPU issue, but somewhat annoyingly moves the menu out of the menu
 			<div class="row">
 				
 				<div class="col-md-offset-1 col-md-10">
-					<h3><a href="http://tobybase.com/blog/2012/07/02/how-to-use-a-perl-cgi-script-to-show-real-web-server-host-name/">How To Use a Perl CGI Script to Show Real Web Server Host Name</a></h3>
+					<h3><a href="http://localhost:1313/blog/2012/07/02/how-to-use-a-perl-cgi-script-to-show-real-web-server-host-name/">How To Use a Perl CGI Script to Show Real Web Server Host Name</a></h3>
 						<small><span class="label label-primary">
 							
 								07/02/2012
@@ -322,9 +198,9 @@ That fixes the CPU issue, but somewhat annoyingly moves the menu out of the menu
 					
 	  					
 	  		  				Here is a short and simple Perl CGI script that you can use to expose the hostname of your web server, as opposed to just the server/domain portion of the URL string:
- #!/usr/bin/perl print &quot;Content-type: text/html\n\n&quot;; print `hostname`; 1;  Name the file something like hostname.cgi and place it in your web server&rsquo;s /cgi-bin/ directory, or if your web server is configured appropriately, just name it hostname.pl and drop it wherever you like.
+#!/usr/bin/perl print &#34;Content-type: text/html\n\n&#34;; print `hostname`; 1; Name the file something like hostname.cgi and place it in your web server&rsquo;s /cgi-bin/ directory, or if your web server is configured appropriately, just name it hostname.pl and drop it wherever you like.
 					  		<br>
-						  	<a href="http://tobybase.com/blog/2012/07/02/how-to-use-a-perl-cgi-script-to-show-real-web-server-host-name/">
+						  	<a href="http://localhost:1313/blog/2012/07/02/how-to-use-a-perl-cgi-script-to-show-real-web-server-host-name/">
 						  	
 						  		Read more
 						  	</a>
@@ -346,7 +222,7 @@ That fixes the CPU issue, but somewhat annoyingly moves the menu out of the menu
 			<div class="row">
 				
 				<div class="col-md-offset-1 col-md-10">
-					<h3><a href="http://tobybase.com/blog/2012/06/27/os-x-software-for-oracle-developers/">OS X Software for Oracle Developers</a></h3>
+					<h3><a href="http://localhost:1313/blog/2012/06/27/os-x-software-for-oracle-developers/">OS X Software for Oracle Developers</a></h3>
 						<small><span class="label label-primary">
 							
 								06/27/2012
@@ -375,7 +251,7 @@ That fixes the CPU issue, but somewhat annoyingly moves the menu out of the menu
 	  					
 	  		  				One of the great things about working for Enkitec is that it&rsquo;s a very Mac-friendly shop. When I arrived there in 2007 there were a handful of us running Macs and the attitude at the top seemed to be respectful, but skeptical. They allowed me to use my own laptop, which at the time was a 15-inch Intel Core2 Duo Macbook Pro, with the understanding that I could request a standard-issue Dell laptop at any time should the need arise.
 					  		<br>
-						  	<a href="http://tobybase.com/blog/2012/06/27/os-x-software-for-oracle-developers/">
+						  	<a href="http://localhost:1313/blog/2012/06/27/os-x-software-for-oracle-developers/">
 						  	
 						  		Read more
 						  	</a>
@@ -397,7 +273,7 @@ That fixes the CPU issue, but somewhat annoyingly moves the menu out of the menu
 			<div class="row">
 				
 				<div class="col-md-offset-1 col-md-10">
-					<h3><a href="http://tobybase.com/blog/2012/06/07/use-dml-error-logging/">Use DML Error Logging</a></h3>
+					<h3><a href="http://localhost:1313/blog/2012/06/07/use-dml-error-logging/">Use DML Error Logging</a></h3>
 						<small><span class="label label-primary">
 							
 								06/07/2012
@@ -426,9 +302,9 @@ That fixes the CPU issue, but somewhat annoyingly moves the menu out of the menu
 	  					
 	  		  				Introduced with Oracle 10gR2, DML Error Logging allows you to make standard SQL INSERT, UPDATE, and MERGE statements behave more like the SQL*Loader utility, logging errors to a table rather than failing and rolling back the first time an error condition is encountered.
 The syntax is the same for all DML statements. Just add the following clause to the end of your DML:
- LOG ERRORS  The database will automatically create an error log table for you.
+LOG ERRORS  The database will automatically create an error log table for you.
 					  		<br>
-						  	<a href="http://tobybase.com/blog/2012/06/07/use-dml-error-logging/">
+						  	<a href="http://localhost:1313/blog/2012/06/07/use-dml-error-logging/">
 						  	
 						  		Read more
 						  	</a>
@@ -458,7 +334,7 @@ The syntax is the same for all DML statements. Just add the following clause to 
 						
 							Linklog:
 						
-					</b>&nbsp;Craig Shallahamer: <a href="http://tobybase.com/link/2012-06-01-Oracle-row-vs-set-processing/">Oracle Database Row versus Set Processing, Surprise!</a>
+					</b>&nbsp;Craig Shallahamer: <a href="http://localhost:1313/link/2012-06-01-oracle-row-vs-set-processing/">Oracle Database Row versus Set Processing, Surprise!</a>
 				</small>
 				<small>
 					<p>To folks writing database-driven reports for the web: Craig Shallahamer shows why you should let the (Oracle) database handle as much of your selection and transformation logic as possible.</p>
@@ -487,7 +363,7 @@ The syntax is the same for all DML statements. Just add the following clause to 
 						
 							Linklog:
 						
-					</b>&nbsp;Jake Feasel: <a href="http://tobybase.com/link/2012-05-25-SQLFiddle-is-a-SQL-sandbox/">SQLFiddle</a>
+					</b>&nbsp;Jake Feasel: <a href="http://localhost:1313/link/2012-05-25-sqlfiddle-is-a-sql-sandbox/">SQLFiddle</a>
 				</small>
 				<small>
 					<p>Build your own mini-schema and run queries against it. Publish your experiments for your friends to tweak. Or try out the examples from your favorite SQL book without having to build a database first. Works for Oracle, PostgreSQL, MySQL, and SQL Server flavors. Pretty cool!</p>
@@ -508,7 +384,7 @@ The syntax is the same for all DML statements. Just add the following clause to 
 			<div class="row">
 				
 				<div class="col-md-offset-1 col-md-10">
-					<h3><a href="http://tobybase.com/blog/2012/05/11/odbc-connection-fails-for-ms-access-app-on-citrix/">ODBC Connection Fails for MS Access App on Citrix </a></h3>
+					<h3><a href="http://localhost:1313/blog/2012/05/11/odbc-connection-fails-for-ms-access-app-on-citrix/">ODBC Connection Fails for MS Access App on Citrix </a></h3>
 						<small><span class="label label-primary">
 							
 								05/11/2012
@@ -546,7 +422,7 @@ The syntax is the same for all DML statements. Just add the following clause to 
 	  					
 	  		  				I ran into an interesting problem recently when attempting to publish an MS Access application with Citrix XenApp. The application pulled data from an Oracle database, so an ODBC connection was created on the Citrix server. What we found was that when a non-privileged user tried to run the application, the connection failed. When the Citrix server admin ran it, however, it worked. Furthermore, as long as the admin was logged in, anybody else could run the application successfully; when he logged out, the users&rsquo; connections broke again.
 					  		<br>
-						  	<a href="http://tobybase.com/blog/2012/05/11/odbc-connection-fails-for-ms-access-app-on-citrix/">
+						  	<a href="http://localhost:1313/blog/2012/05/11/odbc-connection-fails-for-ms-access-app-on-citrix/">
 						  	
 						  		Read more
 						  	</a>
@@ -568,7 +444,7 @@ The syntax is the same for all DML statements. Just add the following clause to 
 			<div class="row">
 				
 				<div class="col-md-offset-1 col-md-10">
-					<h3><a href="http://tobybase.com/blog/2012/05/02/discovering-command-line-java-profiling-tools/">Discovering Command-line Java Profiling Tools</a></h3>
+					<h3><a href="http://localhost:1313/blog/2012/05/02/discovering-command-line-java-profiling-tools/">Discovering Command-line Java Profiling Tools</a></h3>
 						<small><span class="label label-primary">
 							
 								05/02/2012
@@ -612,7 +488,7 @@ The syntax is the same for all DML statements. Just add the following clause to 
 	  					
 	  		  				At my current client I am responsible for administering a third-party Java appplication that unfortunately generates a lot of performance complaints. It&rsquo;s a multi-tiered system with the middle-tier running on Oracle Appication Server 10.1.3. I am already familiar with GUI profiling tools like jconsole and jvisualvm, both of which are included with Oracle&rsquo;s JDK, and I have played around with the profiling capabilities in NetBeans. All of these profiling tools are fairly similar to one another in look and functionality.
 					  		<br>
-						  	<a href="http://tobybase.com/blog/2012/05/02/discovering-command-line-java-profiling-tools/">
+						  	<a href="http://localhost:1313/blog/2012/05/02/discovering-command-line-java-profiling-tools/">
 						  	
 						  		Read more
 						  	</a>
@@ -634,7 +510,7 @@ The syntax is the same for all DML statements. Just add the following clause to 
 			<div class="row">
 				
 				<div class="col-md-offset-1 col-md-10">
-					<h3><a href="http://tobybase.com/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-2/">Table Functions: 9i Feature Worth Revisiting (Part 2)</a></h3>
+					<h3><a href="http://localhost:1313/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-2/">Table Functions: 9i Feature Worth Revisiting (Part 2)</a></h3>
 						<small><span class="label label-primary">
 							
 								04/27/2012
@@ -663,7 +539,7 @@ The syntax is the same for all DML statements. Just add the following clause to 
 	  					
 	  		  				In part one of this series I showed a simple example of how table functions can be used to treat PL/SQL collection types as tables in a SQL query. We used a nested table collection type to which we manually added a few entries. In this example, I intend to show a more practical use of table functions using all three PL/SQL collection types: associative arrays, nested tables, and VARRAYs.
 					  		<br>
-						  	<a href="http://tobybase.com/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-2/">
+						  	<a href="http://localhost:1313/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-2/">
 						  	
 						  		Read more
 						  	</a>
@@ -686,41 +562,78 @@ The syntax is the same for all DML statements. Just add the following clause to 
             <div class="col-md-12">
                 <div class="text-center">
                     
+
+<ul class="pagination">
     
-    <ul class="pagination">
-        
-        <li>
-            <a href="/" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
-        </li>
-        
-        <li
-        >
-        <a href="/page/2/" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
-        </li>
-        
-        <li
-        ><a href="/">1</a></li>
-        
-        <li
-        ><a href="/page/2/">2</a></li>
-        
-        <li
-        class="active"><a href="/page/3/">3</a></li>
-        
-        <li
-        ><a href="/page/4/">4</a></li>
-        
-        <li
-        >
-        <a href="/page/4/" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
-        </li>
-        
-        <li>
-            <a href="/page/4/" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
-        </li>
-        
-    </ul>
+    <li>
+        <a href="/" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+    </li>
     
+    <li
+    >
+    <a href="/page/2/" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+    </li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li
+    ><a href="/">1</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li
+    ><a href="/page/2/">2</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li
+    class="active"><a href="/page/3/">3</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li
+    ><a href="/page/4/">4</a></li>
+    
+    
+    <li
+    >
+    <a href="/page/4/" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+    </li>
+    
+    <li>
+        <a href="/page/4/" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    </li>
+    
+</ul>
+
                 </div>
             </div>
         </div>
@@ -735,7 +648,7 @@ The syntax is the same for all DML statements. Just add the following clause to 
             <footer>
                 <div class="pull-left">
                     <p>
-                        &copy; 2015 ~ Toby Marks ~ Powered By <a href="http://hugo.spf13.com">Hugo</a> ~ <a href="http://tobybase.com/license/">License</a>
+                        &copy; 2015 ~ Toby Marks ~ Powered By <a href="http://hugo.spf13.com">Hugo</a> - version: 0.31.1 ~ <a href="http://localhost:1313/license">License</a>
                     </p>
                 </div>
 
@@ -757,17 +670,13 @@ The syntax is the same for all DML statements. Just add the following clause to 
                     
                     
                     
-                        <a href="http://tobybase.com/index.xml" target="_blank">
+                        <a href="http://localhost:1313/index.xml" target="_blank">
                         <i class="fa fa-rss-square fa-2x"></i></a>
                     
                 </div>
             </footer>
         </div>
     </div>
-
-    
-    <script src="http://tobybase.com/js/jquery.min-2.1.4.js"></script>
-    <script src="http://tobybase.com/js/bootstrap.min-3.3.5.js"></script>
 
     
     </body>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en-US" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 <head>
-	<meta name="generator" content="Hugo 0.18.1" />
+	<meta name="generator" content="Hugo 0.31.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -15,145 +15,21 @@
 
    	
     
-        <link rel="preload" href="http://tobybase.com/css/theme/cosmo.css" as="style" onload="this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="http://tobybase.com/css/theme/cosmo.css"></noscript>
+        <link rel="stylesheet" href="http://localhost:1313/css/theme/cosmo.css">
     
 
-    <link rel="preload" href="http://tobybase.com/css/font-awesome.min.css" as="stylesheet" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="http://tobybase.com/css/font-awesome.min.css"></noscript>
+    <link rel="stylesheet" href="http://localhost:1313/css/font-awesome.min.css">
 
    	
-   	<link rel="preload" href="http://tobybase.com/css/style.css" as="stylesheet" onload="this.rel='stylesheet'">
-   	<noscript><link rel="stylesheet" href="http://tobybase.com/css/style.css"></noscript>
+   	<link rel="stylesheet" href="http://localhost:1313/css/style.css">
 
-    <script>
- 
-(function(w){
-	"use strict";
-	 
-	var loadCSS = function( href, before, media ){
-		
-		
-		
-			
-		
-		var doc = w.document;
-		var ss = doc.createElement( "link" );
-		var ref;
-		if( before ){
-			ref = before;
-		}
-		else {
-			var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
-			ref = refs[ refs.length - 1];
-		}
 
-		var sheets = doc.styleSheets;
-		ss.rel = "stylesheet";
-		ss.href = href;
-		
-		ss.media = "only x";
-
-		
-		function ready( cb ){
-			if( doc.body ){
-				return cb();
-			}
-			setTimeout(function(){
-				ready( cb );
-			});
-		}
-		
-			
-			
-		ready( function(){
-			ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
-		});
-		
-		var onloadcssdefined = function( cb ){
-			var resolvedHref = ss.href;
-			var i = sheets.length;
-			while( i-- ){
-				if( sheets[ i ].href === resolvedHref ){
-					return cb();
-				}
-			}
-			setTimeout(function() {
-				onloadcssdefined( cb );
-			});
-		};
-
-		function loadCB(){
-			if( ss.addEventListener ){
-				ss.removeEventListener( "load", loadCB );
-			}
-			ss.media = media || "all";
-		}
-
-		
-		if( ss.addEventListener ){
-			ss.addEventListener( "load", loadCB);
-		}
-		ss.onloadcssdefined = onloadcssdefined;
-		onloadcssdefined( loadCB );
-		return ss;
-	};
-	
-	if( typeof exports !== "undefined" ){
-		exports.loadCSS = loadCSS;
-	}
-	else {
-		w.loadCSS = loadCSS;
-	}
-}( typeof global !== "undefined" ? global : this ));
- 
-(function( w ){
-  
-  if( !w.loadCSS ){
-    return;
-  }
-  var rp = loadCSS.relpreload = {};
-  rp.support = function(){
-    try {
-      return w.document.createElement( "link" ).relList.supports( "preload" );
-    } catch (e) {
-      return false;
-    }
-  };
-
-  
-  rp.poly = function(){
-    var links = w.document.getElementsByTagName( "link" );
-    for( var i = 0; i < links.length; i++ ){
-      var link = links[ i ];
-      if( link.rel === "preload" && link.getAttribute( "as" ) === "style" ){
-        w.loadCSS( link.href, link, link.getAttribute( "media" ) );
-        link.rel = null;
-      }
-    }
-  };
-
-  
-  if( !rp.support() ){
-    rp.poly();
-    var run = w.setInterval( rp.poly, 300 );
-    if( w.addEventListener ){
-      w.addEventListener( "load", function(){
-        rp.poly();
-        w.clearInterval( run );
-      } );
-    }
-    if( w.attachEvent ){
-      w.attachEvent( "onload", function(){
-        w.clearInterval( run );
-      } )
-    }
-  }
-}( this ));
-    </script>
     
+    <script src="http://localhost:1313/js/jquery.min-2.1.4.js"></script>
+    <script src="http://localhost:1313/js/bootstrap.min-3.3.5.js"></script>
+
     
-    <link href="http://tobybase.com/index.xml" rel="alternate" type="application/rss+xml" title="tobybase" />
+    <link href="http://localhost:1313/index.xml" rel="alternate" type="application/rss+xml" title="tobybase" />
 </head>
 <body lang="en-US">
     
@@ -161,12 +37,12 @@
     <div class="row">
         <div class="navbar navbar-default " role="navigation">
             <div class="navbar-header">
-                <a class="navbar-brand" href="http://tobybase.com"><img src="http://tobybase.com/img/logo.png" id="logographic"></a>
+                <a class="navbar-brand" href="http://localhost:1313"><img src="http://localhost:1313/img/logo.png" id="logographic"></a>
             </div>
             <div class="navbar-collapse collapse navbar-responsive-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="http://tobybase.com">Home</a></li>
-                    <li><a href="http://tobybase.com/post/">Blog</a></li>
+                    <li><a href="http://localhost:1313">Home</a></li>
+                    <li><a href="http://localhost:1313/post/">Blog</a></li>
                     
                 </ul>
             </div>
@@ -184,7 +60,7 @@
 			<div class="row">
 				
 				<div class="col-md-offset-1 col-md-10">
-					<h3><a href="http://tobybase.com/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-1/">Table Functions: 9i Feature Worth Revisiting (Part 1)</a></h3>
+					<h3><a href="http://localhost:1313/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-1/">Table Functions: 9i Feature Worth Revisiting (Part 1)</a></h3>
 						<small><span class="label label-primary">
 							
 								04/27/2012
@@ -212,9 +88,9 @@
 					
 	  					
 	  		  				Yes, they&rsquo;ve been around for a while, but if you haven&rsquo;t made use of table functions lately you might want to reacquaint yourself with this old gem. Table functions allow you to query the contents of PL/SQL collection types using SQL&rsquo;s TABLE operator. Here is a simple example.
- CREATE OR REPLACE PACKAGE example AS TYPE nested_table_typ IS TABLE OF VARCHAR2(100); FUNCTION get_nested_table_data RETURN nested_table_typ PIPELINED; END example; / CREATE OR REPLACE PACKAGE BODY example AS FUNCTION get_nested_table_data RETURN nested_table_typ PIPELINED IS BEGIN PIPE ROW (&#39;one&#39;); PIPE ROW (&#39;two&#39;); PIPE ROW (&#39;three&#39;); RETURN; END get_nested_table_data; END example; /  The package function example.
+CREATE OR REPLACE PACKAGE example AS TYPE nested_table_typ IS TABLE OF VARCHAR2(100); FUNCTION get_nested_table_data RETURN nested_table_typ PIPELINED; END example; / CREATE OR REPLACE PACKAGE BODY example AS FUNCTION get_nested_table_data RETURN nested_table_typ PIPELINED IS BEGIN PIPE ROW (&#39;one&#39;); PIPE ROW (&#39;two&#39;); PIPE ROW (&#39;three&#39;); RETURN; END get_nested_table_data; END example; / The package function example.
 					  		<br>
-						  	<a href="http://tobybase.com/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-1/">
+						  	<a href="http://localhost:1313/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-1/">
 						  	
 						  		Read more
 						  	</a>
@@ -236,7 +112,7 @@
 			<div class="row">
 				
 				<div class="col-md-offset-1 col-md-10">
-					<h3><a href="http://tobybase.com/blog/2012/04/05/how-to-make-bash-scripts-crontab-compatible/">How To Make Bash Scripts crontab-Compatible</a></h3>
+					<h3><a href="http://localhost:1313/blog/2012/04/05/how-to-make-bash-scripts-crontab-compatible/">How To Make Bash Scripts crontab-Compatible</a></h3>
 						<small><span class="label label-primary">
 							
 								04/05/2012
@@ -269,7 +145,7 @@
 	  		  				When writing shell scripts in bash, consider whether your script can be automated in a batch scheduler like cron. If you reference any external resources in your script relative to the directory in which it resides, those references may break when running your script through cron.
 By default, crontab runs scripts in the user&rsquo;s home directory, as specified in /etc/passwd. For user &ldquo;Tim&rdquo; with home directory /home/tim, a sample crontab might look something like the following:
 					  		<br>
-						  	<a href="http://tobybase.com/blog/2012/04/05/how-to-make-bash-scripts-crontab-compatible/">
+						  	<a href="http://localhost:1313/blog/2012/04/05/how-to-make-bash-scripts-crontab-compatible/">
 						  	
 						  		Read more
 						  	</a>
@@ -291,7 +167,7 @@ By default, crontab runs scripts in the user&rsquo;s home directory, as specifie
 			<div class="row">
 				
 				<div class="col-md-offset-1 col-md-10">
-					<h3><a href="http://tobybase.com/blog/2012/03/09/invalidating-toplink-session-cache-to-avoid-stale-data/">Invalidating Toplink Session Cache To Avoid Stale Data</a></h3>
+					<h3><a href="http://localhost:1313/blog/2012/03/09/invalidating-toplink-session-cache-to-avoid-stale-data/">Invalidating Toplink Session Cache To Avoid Stale Data</a></h3>
 						<small><span class="label label-primary">
 							
 								03/09/2012
@@ -326,7 +202,7 @@ By default, crontab runs scripts in the user&rsquo;s home directory, as specifie
 	  					
 	  		  				Toplink is a Java framework that maps objects to database tables. It is the reference implementation for the Java Persistence Architecture, or JPA. Developers use Toplink to manage data persistence (storage), queries, and transactions in an Oracle database. By default, Toplink makes use of a special cache called a Session Cache, maintained on the server, which is meant to speed up performance. Queried data is stored in the Session Cache and used in subsequent queries to reduce or eliminate calls to the database.
 					  		<br>
-						  	<a href="http://tobybase.com/blog/2012/03/09/invalidating-toplink-session-cache-to-avoid-stale-data/">
+						  	<a href="http://localhost:1313/blog/2012/03/09/invalidating-toplink-session-cache-to-avoid-stale-data/">
 						  	
 						  		Read more
 						  	</a>
@@ -349,41 +225,78 @@ By default, crontab runs scripts in the user&rsquo;s home directory, as specifie
             <div class="col-md-12">
                 <div class="text-center">
                     
+
+<ul class="pagination">
     
-    <ul class="pagination">
-        
-        <li>
-            <a href="/" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
-        </li>
-        
-        <li
-        >
-        <a href="/page/3/" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
-        </li>
-        
-        <li
-        ><a href="/">1</a></li>
-        
-        <li
-        ><a href="/page/2/">2</a></li>
-        
-        <li
-        ><a href="/page/3/">3</a></li>
-        
-        <li
-        class="active"><a href="/page/4/">4</a></li>
-        
-        <li
-        class="disabled">
-        <a href="" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
-        </li>
-        
-        <li>
-            <a href="/page/4/" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
-        </li>
-        
-    </ul>
+    <li>
+        <a href="/" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+    </li>
     
+    <li
+    >
+    <a href="/page/3/" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+    </li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li
+    ><a href="/">1</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li
+    ><a href="/page/2/">2</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li
+    ><a href="/page/3/">3</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li
+    class="active"><a href="/page/4/">4</a></li>
+    
+    
+    <li
+    class="disabled">
+    <a href="" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+    </li>
+    
+    <li>
+        <a href="/page/4/" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    </li>
+    
+</ul>
+
                 </div>
             </div>
         </div>
@@ -398,7 +311,7 @@ By default, crontab runs scripts in the user&rsquo;s home directory, as specifie
             <footer>
                 <div class="pull-left">
                     <p>
-                        &copy; 2015 ~ Toby Marks ~ Powered By <a href="http://hugo.spf13.com">Hugo</a> ~ <a href="http://tobybase.com/license/">License</a>
+                        &copy; 2015 ~ Toby Marks ~ Powered By <a href="http://hugo.spf13.com">Hugo</a> - version: 0.31.1 ~ <a href="http://localhost:1313/license">License</a>
                     </p>
                 </div>
 
@@ -420,17 +333,13 @@ By default, crontab runs scripts in the user&rsquo;s home directory, as specifie
                     
                     
                     
-                        <a href="http://tobybase.com/index.xml" target="_blank">
+                        <a href="http://localhost:1313/index.xml" target="_blank">
                         <i class="fa fa-rss-square fa-2x"></i></a>
                     
                 </div>
             </footer>
         </div>
     </div>
-
-    
-    <script src="http://tobybase.com/js/jquery.min-2.1.4.js"></script>
-    <script src="http://tobybase.com/js/bootstrap.min-3.3.5.js"></script>
 
     
     </body>

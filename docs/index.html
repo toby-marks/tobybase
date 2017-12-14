@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en-US" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 <head>
-	<meta name="generator" content="Hugo 0.18.1" />
+	<meta name="generator" content="Hugo 0.31.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -15,145 +15,21 @@
 
    	
     
-        <link rel="preload" href="http://tobybase.com/css/theme/cosmo.css" as="style" onload="this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="http://tobybase.com/css/theme/cosmo.css"></noscript>
+        <link rel="stylesheet" href="http://localhost:1313/css/theme/cosmo.css">
     
 
-    <link rel="preload" href="http://tobybase.com/css/font-awesome.min.css" as="stylesheet" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="http://tobybase.com/css/font-awesome.min.css"></noscript>
+    <link rel="stylesheet" href="http://localhost:1313/css/font-awesome.min.css">
 
    	
-   	<link rel="preload" href="http://tobybase.com/css/style.css" as="stylesheet" onload="this.rel='stylesheet'">
-   	<noscript><link rel="stylesheet" href="http://tobybase.com/css/style.css"></noscript>
+   	<link rel="stylesheet" href="http://localhost:1313/css/style.css">
 
-    <script>
- 
-(function(w){
-	"use strict";
-	 
-	var loadCSS = function( href, before, media ){
-		
-		
-		
-			
-		
-		var doc = w.document;
-		var ss = doc.createElement( "link" );
-		var ref;
-		if( before ){
-			ref = before;
-		}
-		else {
-			var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
-			ref = refs[ refs.length - 1];
-		}
 
-		var sheets = doc.styleSheets;
-		ss.rel = "stylesheet";
-		ss.href = href;
-		
-		ss.media = "only x";
-
-		
-		function ready( cb ){
-			if( doc.body ){
-				return cb();
-			}
-			setTimeout(function(){
-				ready( cb );
-			});
-		}
-		
-			
-			
-		ready( function(){
-			ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
-		});
-		
-		var onloadcssdefined = function( cb ){
-			var resolvedHref = ss.href;
-			var i = sheets.length;
-			while( i-- ){
-				if( sheets[ i ].href === resolvedHref ){
-					return cb();
-				}
-			}
-			setTimeout(function() {
-				onloadcssdefined( cb );
-			});
-		};
-
-		function loadCB(){
-			if( ss.addEventListener ){
-				ss.removeEventListener( "load", loadCB );
-			}
-			ss.media = media || "all";
-		}
-
-		
-		if( ss.addEventListener ){
-			ss.addEventListener( "load", loadCB);
-		}
-		ss.onloadcssdefined = onloadcssdefined;
-		onloadcssdefined( loadCB );
-		return ss;
-	};
-	
-	if( typeof exports !== "undefined" ){
-		exports.loadCSS = loadCSS;
-	}
-	else {
-		w.loadCSS = loadCSS;
-	}
-}( typeof global !== "undefined" ? global : this ));
- 
-(function( w ){
-  
-  if( !w.loadCSS ){
-    return;
-  }
-  var rp = loadCSS.relpreload = {};
-  rp.support = function(){
-    try {
-      return w.document.createElement( "link" ).relList.supports( "preload" );
-    } catch (e) {
-      return false;
-    }
-  };
-
-  
-  rp.poly = function(){
-    var links = w.document.getElementsByTagName( "link" );
-    for( var i = 0; i < links.length; i++ ){
-      var link = links[ i ];
-      if( link.rel === "preload" && link.getAttribute( "as" ) === "style" ){
-        w.loadCSS( link.href, link, link.getAttribute( "media" ) );
-        link.rel = null;
-      }
-    }
-  };
-
-  
-  if( !rp.support() ){
-    rp.poly();
-    var run = w.setInterval( rp.poly, 300 );
-    if( w.addEventListener ){
-      w.addEventListener( "load", function(){
-        rp.poly();
-        w.clearInterval( run );
-      } );
-    }
-    if( w.attachEvent ){
-      w.attachEvent( "onload", function(){
-        w.clearInterval( run );
-      } )
-    }
-  }
-}( this ));
-    </script>
     
+    <script src="http://localhost:1313/js/jquery.min-2.1.4.js"></script>
+    <script src="http://localhost:1313/js/bootstrap.min-3.3.5.js"></script>
+
     
-    <link href="http://tobybase.com/index.xml" rel="alternate" type="application/rss+xml" title="tobybase" />
+    <link href="http://localhost:1313/index.xml" rel="alternate" type="application/rss+xml" title="tobybase" />
 </head>
 <body lang="en-US">
     
@@ -161,12 +37,12 @@
     <div class="row">
         <div class="navbar navbar-default " role="navigation">
             <div class="navbar-header">
-                <a class="navbar-brand" href="http://tobybase.com"><img src="http://tobybase.com/img/logo.png" id="logographic"></a>
+                <a class="navbar-brand" href="http://localhost:1313"><img src="http://localhost:1313/img/logo.png" id="logographic"></a>
             </div>
             <div class="navbar-collapse collapse navbar-responsive-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="http://tobybase.com">Home</a></li>
-                    <li><a href="http://tobybase.com/post/">Blog</a></li>
+                    <li><a href="http://localhost:1313">Home</a></li>
+                    <li><a href="http://localhost:1313/post/">Blog</a></li>
                     
                 </ul>
             </div>
@@ -184,7 +60,7 @@
 			<div class="row">
 				
 				<div class="col-md-offset-1 col-md-10">
-					<h3><a href="http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-4/">Move Your VM to Oracle Cloud - Part 4</a></h3>
+					<h3><a href="http://localhost:1313/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-4/">Move Your VM to Oracle Cloud - Part 4</a></h3>
 						<small><span class="label label-primary">
 							
 								03/10/2017
@@ -226,7 +102,7 @@
 	  		  				In the last of a four-part video series, our Director of Cloud Services Brian Hill creates a new compute instance in Oracle Cloud Compute Services based on his custom Windows virtual machine image.
   
 					  		<br>
-						  	<a href="http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-4/">
+						  	<a href="http://localhost:1313/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-4/">
 						  	
 						  		Read more
 						  	</a>
@@ -248,7 +124,7 @@
 			<div class="row">
 				
 				<div class="col-md-offset-1 col-md-10">
-					<h3><a href="http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-3/">Move Your VM to Oracle Cloud - Part 3</a></h3>
+					<h3><a href="http://localhost:1313/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-3/">Move Your VM to Oracle Cloud - Part 3</a></h3>
 						<small><span class="label label-primary">
 							
 								03/10/2017
@@ -290,7 +166,7 @@
 	  		  				In part three of a four-part video series, our Director of Cloud Services Brian Hill creates a bootable storage volume in Oracle Cloud Compute Services with his new Windows image.
   
 					  		<br>
-						  	<a href="http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-3/">
+						  	<a href="http://localhost:1313/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-3/">
 						  	
 						  		Read more
 						  	</a>
@@ -312,7 +188,7 @@
 			<div class="row">
 				
 				<div class="col-md-offset-1 col-md-10">
-					<h3><a href="http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-2/">Move Your VM to Oracle Cloud - Part 2</a></h3>
+					<h3><a href="http://localhost:1313/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-2/">Move Your VM to Oracle Cloud - Part 2</a></h3>
 						<small><span class="label label-primary">
 							
 								03/10/2017
@@ -354,7 +230,7 @@
 	  		  				In part two of a four-part video series, our Director of Cloud Services Brian Hill creates an image in Oracle Cloud Compute Services based on a Windows virtual machine.
   
 					  		<br>
-						  	<a href="http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-2/">
+						  	<a href="http://localhost:1313/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-2/">
 						  	
 						  		Read more
 						  	</a>
@@ -376,7 +252,7 @@
 			<div class="row">
 				
 				<div class="col-md-offset-1 col-md-10">
-					<h3><a href="http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-1/">Move Your VM to Oracle Cloud - Part 1</a></h3>
+					<h3><a href="http://localhost:1313/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-1/">Move Your VM to Oracle Cloud - Part 1</a></h3>
 						<small><span class="label label-primary">
 							
 								03/10/2017
@@ -418,7 +294,7 @@
 	  		  				In part one of a four-part video series, our Director of Cloud Services Brian Hill demonstrates how to prepare your virtual machine for upload to the cloud.
   
 					  		<br>
-						  	<a href="http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-1/">
+						  	<a href="http://localhost:1313/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-1/">
 						  	
 						  		Read more
 						  	</a>
@@ -440,7 +316,7 @@
 			<div class="row">
 				
 				<div class="col-md-offset-1 col-md-10">
-					<h3><a href="http://tobybase.com/blog/2017/03/10/announcing-the-infolob-youtube-channel/">Announcing the Infolob YouTube Channel</a></h3>
+					<h3><a href="http://localhost:1313/blog/2017/03/10/announcing-the-infolob-youtube-channel/">Announcing the Infolob YouTube Channel</a></h3>
 						<small><span class="label label-primary">
 							
 								03/10/2017
@@ -468,7 +344,7 @@
 Check us out!
 In this short Oracle Platinum Partner Spotlight video, our Chief Technologist Tim Fox explains what we do as a company and the kinds of services we provide.
 					  		<br>
-						  	<a href="http://tobybase.com/blog/2017/03/10/announcing-the-infolob-youtube-channel/">
+						  	<a href="http://localhost:1313/blog/2017/03/10/announcing-the-infolob-youtube-channel/">
 						  	
 						  		Read more
 						  	</a>
@@ -493,7 +369,7 @@ In this short Oracle Platinum Partner Spotlight video, our Chief Technologist Ti
 			<div class="row">
 				
 				<div class="col-md-offset-1 col-md-10">
-					<h3><a href="http://tobybase.com/blog/2017/01/17/announcing-tobybase.com/">Announcing… tobybase.com</a></h3>
+					<h3><a href="http://localhost:1313/blog/2017/01/17/announcing-tobybase.com/">Announcing… tobybase.com</a></h3>
 						<small><span class="label label-primary">
 							
 								01/17/2017
@@ -523,7 +399,7 @@ In this short Oracle Platinum Partner Spotlight video, our Chief Technologist Ti
 	  		  				Welcome one and all to my new professional blog, tobybase.com. My name is Toby Marks and I work as a Oracle Consultant at Infolob Solutions in Irving, Texas. My old blog is still up on Tumblr, and there are a few items there that folks still find useful. Most of the content is a bit dated, though, as I&rsquo;ve been out of the blogging game for a while.
 This is my attempt to turn that around.
 					  		<br>
-						  	<a href="http://tobybase.com/blog/2017/01/17/announcing-tobybase.com/">
+						  	<a href="http://localhost:1313/blog/2017/01/17/announcing-tobybase.com/">
 						  	
 						  		Read more
 						  	</a>
@@ -545,7 +421,7 @@ This is my attempt to turn that around.
 			<div class="row">
 				
 				<div class="col-md-offset-1 col-md-10">
-					<h3><a href="http://tobybase.com/blog/2016/02/04/what-to-do-when-the-juniper-network-connect-app-on-os-x-does-not-connect/">What to do when the Juniper Network Connect app on OS X does not connect</a></h3>
+					<h3><a href="http://localhost:1313/blog/2016/02/04/what-to-do-when-the-juniper-network-connect-app-on-os-x-does-not-connect/">What to do when the Juniper Network Connect app on OS X does not connect</a></h3>
 						<small><span class="label label-primary">
 							
 								02/04/2016
@@ -578,7 +454,7 @@ This is my attempt to turn that around.
 	  		  				If you use Juniper&rsquo;s Network Connect app to connect to your office VPN over HTTPS, you might occasionally experience strange errors like &ldquo;A software error caused the Network Connect tunneling service to terminate.&rdquo; Shortly after that, the application may either crash or prompt you for login credentials again.
 The solution involves removing all of the Network Connect files and allowing your browser to download and install the app all over again, as it did the first time you tried to connect to your office VPN.
 					  		<br>
-						  	<a href="http://tobybase.com/blog/2016/02/04/what-to-do-when-the-juniper-network-connect-app-on-os-x-does-not-connect/">
+						  	<a href="http://localhost:1313/blog/2016/02/04/what-to-do-when-the-juniper-network-connect-app-on-os-x-does-not-connect/">
 						  	
 						  		Read more
 						  	</a>
@@ -600,7 +476,7 @@ The solution involves removing all of the Network Connect files and allowing you
 			<div class="row">
 				
 				<div class="col-md-offset-1 col-md-10">
-					<h3><a href="http://tobybase.com/blog/2013/07/24/how-to-use-ps-to-list-top-memory-cpu-eating-processes/">How to Use ps to List Top Memory, CPU Eating Processes</a></h3>
+					<h3><a href="http://localhost:1313/blog/2013/07/24/how-to-use-ps-to-list-top-memory-cpu-eating-processes/">How to Use ps to List Top Memory, CPU Eating Processes</a></h3>
 						<small><span class="label label-primary">
 							
 								07/24/2013
@@ -626,7 +502,7 @@ The solution involves removing all of the Network Connect files and allowing you
 	  					
 	  		  				The ps command is a versatile and configurable way to look at the processes running on your system, though I&rsquo;ve generally gotten by with a lazy ps -ef to find out whatever I needed to know. Recently, though, a client&rsquo;s server began running out of memory, and as a number of processes were running on the server, the culprit was not immediately clear. I wanted to provide them with a quick, simple diagnostic tool they could use the next time they received an alert.
 					  		<br>
-						  	<a href="http://tobybase.com/blog/2013/07/24/how-to-use-ps-to-list-top-memory-cpu-eating-processes/">
+						  	<a href="http://localhost:1313/blog/2013/07/24/how-to-use-ps-to-list-top-memory-cpu-eating-processes/">
 						  	
 						  		Read more
 						  	</a>
@@ -656,7 +532,7 @@ The solution involves removing all of the Network Connect files and allowing you
 						
 							Linklog:
 						
-					</b>&nbsp;Anonymous: <a href="http://tobybase.com/link/2013-07-24-view-man-pages/">Use Preview to view formatted man pages</a>
+					</b>&nbsp;Anonymous: <a href="http://localhost:1313/link/2013-07-24-view-man-pages/">Use Preview to view formatted man pages</a>
 				</small>
 				<small>
 					<p>This is an elegant solution for viewing, searching, and archiving man pages that eliminates the necessity for third party apps.<br />
@@ -679,41 +555,78 @@ The solution involves removing all of the Network Connect files and allowing you
             <div class="col-md-12">
                 <div class="text-center">
                     
+
+<ul class="pagination">
     
-    <ul class="pagination">
-        
-        <li>
-            <a href="/" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
-        </li>
-        
-        <li
-        class="disabled">
-        <a href="" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
-        </li>
-        
-        <li
-        class="active"><a href="/">1</a></li>
-        
-        <li
-        ><a href="/page/2/">2</a></li>
-        
-        <li
-        ><a href="/page/3/">3</a></li>
-        
-        <li
-        ><a href="/page/4/">4</a></li>
-        
-        <li
-        >
-        <a href="/page/2/" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
-        </li>
-        
-        <li>
-            <a href="/page/4/" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
-        </li>
-        
-    </ul>
+    <li>
+        <a href="/" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+    </li>
     
+    <li
+    class="disabled">
+    <a href="" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+    </li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li
+    class="active"><a href="/">1</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li
+    ><a href="/page/2/">2</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li
+    ><a href="/page/3/">3</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li
+    ><a href="/page/4/">4</a></li>
+    
+    
+    <li
+    >
+    <a href="/page/2/" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+    </li>
+    
+    <li>
+        <a href="/page/4/" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    </li>
+    
+</ul>
+
                 </div>
             </div>
         </div>
@@ -728,7 +641,7 @@ The solution involves removing all of the Network Connect files and allowing you
             <footer>
                 <div class="pull-left">
                     <p>
-                        &copy; 2015 ~ Toby Marks ~ Powered By <a href="http://hugo.spf13.com">Hugo</a> ~ <a href="http://tobybase.com/license/">License</a>
+                        &copy; 2015 ~ Toby Marks ~ Powered By <a href="http://hugo.spf13.com">Hugo</a> - version: 0.31.1 ~ <a href="http://localhost:1313/license">License</a>
                     </p>
                 </div>
 
@@ -750,17 +663,13 @@ The solution involves removing all of the Network Connect files and allowing you
                     
                     
                     
-                        <a href="http://tobybase.com/index.xml" target="_blank">
+                        <a href="http://localhost:1313/index.xml" target="_blank">
                         <i class="fa fa-rss-square fa-2x"></i></a>
                     
                 </div>
             </footer>
         </div>
     </div>
-
-    
-    <script src="http://tobybase.com/js/jquery.min-2.1.4.js"></script>
-    <script src="http://tobybase.com/js/bootstrap.min-3.3.5.js"></script>
 
     
     </body>

@@ -2,26 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Education on tobybase</title>
-    <link>http://tobybase.com/categories/education/index.xml</link>
+    <link>http://localhost:1313/categories/education/</link>
     <description>Recent content in Education on tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2015 ~ Toby Marks</copyright>
-    <atom:link href="/categories/education/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Mar 2017 14:56:00 +0000</lastBuildDate>
+    <atom:link href="/categories/education/" rel="self" type="application/rss+xml" />
     
       
         
           <item>
             <title>Move Your VM to Oracle Cloud - Part 4</title>
-            <link>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-4/</link>
+            <link>http://localhost:1313/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-4/</link>
             <pubDate>Fri, 10 Mar 2017 14:56:00 +0000</pubDate>
             
-            <guid>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-4/</guid>
+            <guid>http://localhost:1313/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-4/</guid>
             <description>&lt;p&gt;In the last of a four-part video series, our Director of Cloud Services Brian Hill creates a new compute instance in Oracle Cloud Compute Services based on his custom Windows virtual machine image.&lt;/p&gt;
 
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//www.youtube.com/embed/c1_2foZ7MQc&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/c1_2foZ7MQc&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34; title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
  &lt;/div&gt;
 
 </description>
@@ -33,15 +34,15 @@
         
           <item>
             <title>Move Your VM to Oracle Cloud - Part 3</title>
-            <link>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-3/</link>
+            <link>http://localhost:1313/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-3/</link>
             <pubDate>Fri, 10 Mar 2017 14:53:00 +0000</pubDate>
             
-            <guid>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-3/</guid>
+            <guid>http://localhost:1313/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-3/</guid>
             <description>&lt;p&gt;In part three of a four-part video series, our Director of Cloud Services Brian Hill creates a bootable storage volume in Oracle Cloud Compute Services with his new Windows image.&lt;/p&gt;
 
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//www.youtube.com/embed/mwsMputHP-M&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/mwsMputHP-M&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34; title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
  &lt;/div&gt;
 
 </description>
@@ -53,15 +54,15 @@
         
           <item>
             <title>Move Your VM to Oracle Cloud - Part 2</title>
-            <link>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-2/</link>
+            <link>http://localhost:1313/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-2/</link>
             <pubDate>Fri, 10 Mar 2017 14:47:00 +0000</pubDate>
             
-            <guid>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-2/</guid>
+            <guid>http://localhost:1313/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-2/</guid>
             <description>&lt;p&gt;In part two of a four-part video series, our Director of Cloud Services Brian Hill creates an image in Oracle Cloud Compute Services based on a Windows virtual machine.&lt;/p&gt;
 
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//www.youtube.com/embed/bA7zyOh-JiY&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/bA7zyOh-JiY&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34; title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
  &lt;/div&gt;
 
 </description>
@@ -73,15 +74,15 @@
         
           <item>
             <title>Move Your VM to Oracle Cloud - Part 1</title>
-            <link>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-1/</link>
+            <link>http://localhost:1313/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-1/</link>
             <pubDate>Fri, 10 Mar 2017 14:41:00 +0000</pubDate>
             
-            <guid>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-1/</guid>
+            <guid>http://localhost:1313/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-1/</guid>
             <description>&lt;p&gt;In part one of a four-part video series, our Director of Cloud Services Brian Hill demonstrates how to prepare your virtual machine for upload to the cloud.&lt;/p&gt;
 
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//www.youtube.com/embed/lwFCj0Z4JSU&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/lwFCj0Z4JSU&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34; title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
  &lt;/div&gt;
 
 </description>
@@ -93,10 +94,10 @@
         
           <item>
             <title>Announcing the Infolob YouTube Channel</title>
-            <link>http://tobybase.com/blog/2017/03/10/announcing-the-infolob-youtube-channel/</link>
+            <link>http://localhost:1313/blog/2017/03/10/announcing-the-infolob-youtube-channel/</link>
             <pubDate>Fri, 10 Mar 2017 00:00:00 +0000</pubDate>
             
-            <guid>http://tobybase.com/blog/2017/03/10/announcing-the-infolob-youtube-channel/</guid>
+            <guid>http://localhost:1313/blog/2017/03/10/announcing-the-infolob-youtube-channel/</guid>
             <description>&lt;p&gt;I am honored to work with some wonderful and truly &lt;em&gt;smart&lt;/em&gt; folks over at &lt;a href=&#34;http://www.infolob.com/&#34;&gt;Infolob&lt;/a&gt; in Irving, Texas. The company recently started a &lt;a href=&#34;https://www.youtube.com/channel/UCLfDjdjW6RRvKYrz_aS0Jmw&#34;&gt;YouTube channel&lt;/a&gt; and we are looking to add lots of great videos soon for your enjoyment and education.&lt;/p&gt;
 
 &lt;p&gt;Check us out!&lt;/p&gt;
@@ -105,7 +106,7 @@
 
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//www.youtube.com/embed/g6Zenoy8GGs&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/g6Zenoy8GGs&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34; title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
  &lt;/div&gt;
 
 </description>
