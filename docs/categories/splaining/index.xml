@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Splaining on Tobybase: A Tech Blog</title>
-    <link>http://tobybase.com/categories/splaining/</link>
+    <link>http://localhost:1313/categories/splaining/</link>
     <description>Recent content in Splaining on Tobybase: A Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
@@ -14,15 +14,15 @@
         
           <item>
             <title>Button Hotkeys in SQL Developer on OS X</title>
-            <link>http://tobybase.com/blog/2013/01/09/button-hotkeys-in-sql-developer-on-os-x/</link>
+            <link>http://localhost:1313/blog/2013/01/09/button-hotkeys-in-sql-developer-on-os-x/</link>
             <pubDate>Wed, 09 Jan 2013 19:09:45 +0000</pubDate>
             
-            <guid>http://tobybase.com/blog/2013/01/09/button-hotkeys-in-sql-developer-on-os-x/</guid>
+            <guid>http://localhost:1313/blog/2013/01/09/button-hotkeys-in-sql-developer-on-os-x/</guid>
             <description>&lt;p&gt;In Windows, most applications provide menu and button accelerator keys that allow you to control the application without having to use a mouse. Java Swing apps like SQL Developer allow you to do the same, ostensibly in a cross-platform compatible manner.&lt;/p&gt;
 
 &lt;p&gt;One place I use this frequently is the Enter Binds dialog window that pops up when running a query using bind variables.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2013-01-09-button-hotkeys-in-sql-developer-on-os-x/f953827dc3e74e57df43fd0e48ff22b40ce119efaa74ce3712fd989522b02a6f.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2013-01-09-button-hotkeys-in-sql-developer-on-os-x/f953827dc3e74e57df43fd0e48ff22b40ce119efaa74ce3712fd989522b02a6f.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;In Java 6 on OS X, the hotkey for pressing the Help and Apply buttons was OPTION-H and OPTION-A, respectively.&lt;/p&gt;
 
@@ -38,21 +38,21 @@
         
           <item>
             <title>Use Firebug&#39;s console.debug Command to Analyze Javascript, DOM Objects</title>
-            <link>http://tobybase.com/blog/2012/10/26/use-firebugs-console.debug-command-to-analyze-javascript-dom-objects/</link>
+            <link>http://localhost:1313/blog/2012/10/26/use-firebugs-console.debug-command-to-analyze-javascript-dom-objects/</link>
             <pubDate>Fri, 26 Oct 2012 21:09:00 +0000</pubDate>
             
-            <guid>http://tobybase.com/blog/2012/10/26/use-firebugs-console.debug-command-to-analyze-javascript-dom-objects/</guid>
+            <guid>http://localhost:1313/blog/2012/10/26/use-firebugs-console.debug-command-to-analyze-javascript-dom-objects/</guid>
             <description>&lt;p&gt;Occasionally when debugging my Javascript code I need to be able to analyze the properties of an unknown object; for instance, an unexpected DOM object passed to an event handler. How do you analyze the properties of an object when you don&amp;rsquo;t know what the object is? I was looking for a way to list all the properties of a generic Javascript or DOM object when I stumbled across this blog post by Andrew Peters. In it, he very clearly outlines two ways of doing this, but the one I found most useful was Firebug&amp;rsquo;s &lt;code&gt;console.debug&lt;/code&gt; command. You&amp;rsquo;ll need to use Firefox with the Firebug extension for this, but the results are impressive.&lt;/p&gt;
 
 &lt;p&gt;When you want to debug an object, simply pass it as a parameter to &lt;code&gt;console.debug&lt;/code&gt;. Here is an example where I wanted to find out about the event trigger object passed to my event handler:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2012-10-26-use-firebugs-consoledebug-command-to-analyze-javascript-dom-objects/eda67a171f00051639dcf0d35e00ebfdd9309cf03876d1d915dfd7b1f1f7766f.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2012-10-26-use-firebugs-consoledebug-command-to-analyze-javascript-dom-objects/eda67a171f00051639dcf0d35e00ebfdd9309cf03876d1d915dfd7b1f1f7766f.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;After triggering the event, I opened the Firebug window and navigated to the console. From there I could drill down on the displayed results to get information about my unknown DOM object.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2012-10-26-use-firebugs-consoledebug-command-to-analyze-javascript-dom-objects/55db6e09e44319deee6ef4a9938a20d72369d922637897e02b1b7d20a900cb43.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2012-10-26-use-firebugs-consoledebug-command-to-analyze-javascript-dom-objects/55db6e09e44319deee6ef4a9938a20d72369d922637897e02b1b7d20a900cb43.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2012-10-26-use-firebugs-consoledebug-command-to-analyze-javascript-dom-objects/38a39525404522f27ab3bf776a697f7e486f958723402ccff101a98014d54c0d.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2012-10-26-use-firebugs-consoledebug-command-to-analyze-javascript-dom-objects/38a39525404522f27ab3bf776a697f7e486f958723402ccff101a98014d54c0d.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Turns out in this case that the event handler was attached to the wrong object, due to the &amp;ldquo;id&amp;rdquo; value being placed one level above in the DOM hierarchy than I was expecting. Tricky, but I was able to spot the problem immediately using this method.&lt;/p&gt;
 </description>
@@ -64,10 +64,10 @@
         
           <item>
             <title>Use DML Error Logging</title>
-            <link>http://tobybase.com/blog/2012/06/07/use-dml-error-logging/</link>
+            <link>http://localhost:1313/blog/2012/06/07/use-dml-error-logging/</link>
             <pubDate>Thu, 07 Jun 2012 17:04:00 +0000</pubDate>
             
-            <guid>http://tobybase.com/blog/2012/06/07/use-dml-error-logging/</guid>
+            <guid>http://localhost:1313/blog/2012/06/07/use-dml-error-logging/</guid>
             <description>&lt;p&gt;Introduced with Oracle 10gR2, DML Error Logging allows you to make standard SQL &lt;code&gt;INSERT&lt;/code&gt;, &lt;code&gt;UPDATE&lt;/code&gt;, and &lt;code&gt;MERGE&lt;/code&gt; statements behave more like the SQL*Loader utility, logging errors to a table rather than failing and rolling back the first time an error condition is encountered.&lt;/p&gt;
 
 &lt;p&gt;The syntax is the same for all DML statements. Just add the following clause to the end of your DML:&lt;/p&gt;
@@ -138,17 +138,17 @@
         
           <item>
             <title>Discovering Command-line Java Profiling Tools</title>
-            <link>http://tobybase.com/blog/2012/05/02/discovering-command-line-java-profiling-tools/</link>
+            <link>http://localhost:1313/blog/2012/05/02/discovering-command-line-java-profiling-tools/</link>
             <pubDate>Wed, 02 May 2012 21:41:00 +0000</pubDate>
             
-            <guid>http://tobybase.com/blog/2012/05/02/discovering-command-line-java-profiling-tools/</guid>
+            <guid>http://localhost:1313/blog/2012/05/02/discovering-command-line-java-profiling-tools/</guid>
             <description>&lt;p&gt;At my current client I am responsible for administering a third-party Java appplication that unfortunately generates a lot of performance complaints. It&amp;rsquo;s a multi-tiered system with the middle-tier running on Oracle Appication Server 10.1.3. I am already familiar with GUI profiling tools like &lt;code&gt;jconsole&lt;/code&gt; and &lt;code&gt;jvisualvm&lt;/code&gt;, both of which are included with Oracle&amp;rsquo;s JDK, and I have played around with the profiling capabilities in NetBeans. All of these profiling tools are fairly similar to one another in look and functionality.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941369/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/687cc5e71ab082d921ea083c2a3389f33608bdb578a2505ba98647dca59edd1c.jpg&#34; alt=&#34;Profiling the JVM with jconsole&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941369/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://localhost:1313/img/2012-05-02-discovering-command-line-java-profiling-tools/687cc5e71ab082d921ea083c2a3389f33608bdb578a2505ba98647dca59edd1c.jpg&#34; alt=&#34;Profiling the JVM with jconsole&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/6990855922/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/062326cdf1e49a33f125692cdc43927df553db0aa59ae2e13a028e5e9119ddbd.jpg&#34; alt=&#34;Profiling the JVM with jvisualvm&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/6990855922/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://localhost:1313/img/2012-05-02-discovering-command-line-java-profiling-tools/062326cdf1e49a33f125692cdc43927df553db0aa59ae2e13a028e5e9119ddbd.jpg&#34; alt=&#34;Profiling the JVM with jvisualvm&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/6990855902/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/70254026909062fd761740bc71f569e1dfeffd3aeaa574ba1cfb794e3029ea62.jpg&#34; alt=&#34;Profiling the JVM with NetBeans&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/6990855902/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://localhost:1313/img/2012-05-02-discovering-command-line-java-profiling-tools/70254026909062fd761740bc71f569e1dfeffd3aeaa574ba1cfb794e3029ea62.jpg&#34; alt=&#34;Profiling the JVM with NetBeans&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Using any one of these tools, I can view the size and utilization of the heap, see the status of running threads, monitor CPU loads, pull garbage collection statistics, and generate a memory dump. All of these are adequate for monitoring application performance in real-time, but while working with the application vendor to diagnose problems I found it necessary to be able to report on application performance over longer spans of time, say days or even weeks. We were trying to show patterns of eroding performance, or possibly spot instances of very slow memory leaks in parts of the application that got used less frequently. In any event, it required a way to monitor all of these details without having to have my eyes on the screen the whole time.&lt;/p&gt;
 
@@ -156,7 +156,7 @@
 
 &lt;p&gt;Recent versions of the JDK come packaged with some nifty command line tools to assist with profiling your Java applications. They can all be found in the &lt;code&gt;/bin&lt;/code&gt; directory under the JDK base directory.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941341/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/9ca305047f95051bbdc678ea66f9e4923a830b21f3264ebc3b87e9bd385f5765.jpg&#34; alt=&#34;Commands bundled with the JDK&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941341/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://localhost:1313/img/2012-05-02-discovering-command-line-java-profiling-tools/9ca305047f95051bbdc678ea66f9e4923a830b21f3264ebc3b87e9bd385f5765.jpg&#34; alt=&#34;Commands bundled with the JDK&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;##jps&lt;/p&gt;
 
@@ -164,7 +164,7 @@
 
 &lt;p&gt;Each Java process is identified by the &amp;ldquo;VMID&amp;rdquo; returned by &lt;code&gt;jps&lt;/code&gt;, usually corresponding to the process ID on the host system. It is this VMID which is required as an argument to all of the other tools we will discuss, so be sure to always use &lt;code&gt;jps&lt;/code&gt; to correctly identify your processes to the other tools.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941355/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/c3b76d4b16d988867798b352027c036e5bb4f1ebb07abfaf453bbb7094470ab4.jpg&#34; alt=&#34;Running jps&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941355/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://localhost:1313/img/2012-05-02-discovering-command-line-java-profiling-tools/c3b76d4b16d988867798b352027c036e5bb4f1ebb07abfaf453bbb7094470ab4.jpg&#34; alt=&#34;Running jps&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;##jstack&lt;/p&gt;
 
@@ -174,22 +174,22 @@
 
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; If you have a 64-bit JDK, you&amp;rsquo;ll want to use the &lt;code&gt;-J-d64&lt;/code&gt; flag when running the command.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941351/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/23352a26f3e67df6c159d8ff4c130b2d47be1bc8e37d78bc8178e0aa65e04182.jpg&#34; alt=&#34;Running jstack&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941351/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://localhost:1313/img/2012-05-02-discovering-command-line-java-profiling-tools/23352a26f3e67df6c159d8ff4c130b2d47be1bc8e37d78bc8178e0aa65e04182.jpg&#34; alt=&#34;Running jstack&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;##jmap &amp;amp; jhat&lt;/p&gt;
 
 &lt;p&gt;These two tools work together to help you analyze the contents of the heap. Use &lt;code&gt;jmap&lt;/code&gt; to generate a heap dump, and &lt;code&gt;jhat&lt;/code&gt; to help analyze the dump file.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941291/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/ad70746c91dd43d7a093fa3e7c180ce863a605f0ccd511774c8c62b4203731b1.jpg&#34; alt=&#34;Running jmap and jhat&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941291/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://localhost:1313/img/2012-05-02-discovering-command-line-java-profiling-tools/ad70746c91dd43d7a093fa3e7c180ce863a605f0ccd511774c8c62b4203731b1.jpg&#34; alt=&#34;Running jmap and jhat&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;Jhat&lt;/code&gt; works by spawning an HTTP server that presents the contents of the heap as a web page, allowing you to drill down on a specific object to view its members and references. In order to get the most out of &lt;code&gt;jhat&lt;/code&gt;, however, it would be worth investigating OQL, the &lt;strong&gt;O&lt;/strong&gt;bject &lt;strong&gt;Q&lt;/strong&gt;uery &lt;strong&gt;L&lt;/strong&gt;anguage, as the web page generated by &lt;code&gt;jhat&lt;/code&gt; allows you to run OQL queries against the heap. If you know a little about your application class structure, this makes your heap analysis far more efficient. Thankfully, the &lt;code&gt;jhat&lt;/code&gt; web page provides you with a short primer.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/6990855834/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/036aef8b8bc95e25c21a1bfb219fcc19e8e084e6ee60643a57a3ff72f83b69ec.jpg&#34; alt=&#34;OQL help page&#34; /&gt;&lt;/a&gt;
-&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941267/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/c59f79354e9bb6223492707dd27ebffb018449445204453ba610396b89d74fdc.jpg&#34; alt=&#34;OQL primer&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/6990855834/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://localhost:1313/img/2012-05-02-discovering-command-line-java-profiling-tools/036aef8b8bc95e25c21a1bfb219fcc19e8e084e6ee60643a57a3ff72f83b69ec.jpg&#34; alt=&#34;OQL help page&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941267/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://localhost:1313/img/2012-05-02-discovering-command-line-java-profiling-tools/c59f79354e9bb6223492707dd27ebffb018449445204453ba610396b89d74fdc.jpg&#34; alt=&#34;OQL primer&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;Jmap&lt;/code&gt; is good for more than just generating heap dumps, however. When used with the &lt;code&gt;-heap&lt;/code&gt; option it gives you a nicely formatted heap usage summary.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941255/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/d6c27680e007dae747ef2cac7218faf0f918d2cf68cb1023d7e0ece182369233.jpg&#34; alt=&#34;jmap with the -heap option&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941255/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://localhost:1313/img/2012-05-02-discovering-command-line-java-profiling-tools/d6c27680e007dae747ef2cac7218faf0f918d2cf68cb1023d7e0ece182369233.jpg&#34; alt=&#34;jmap with the -heap option&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Now I was getting closer to my goal. In fact, this was originally the output I parsed during my first attempt at statistics gathering. Unfortunately, what I found while running on an RHEL 4.7 box with JDK 1.6.0_30 was that &lt;code&gt;jmap&lt;/code&gt; would from time to time inexplicably refuse to attach to my Java process, leaving gaping holes in my report. I noticed &lt;a href=&#34;http://ubuntuforums.org/showthread.php?t=1886859&#34;&gt;similar&lt;/a&gt; &lt;a href=&#34;https://forums.oracle.com/forums/thread.jspa?threadID=1693766&#34;&gt;complaints&lt;/a&gt; &lt;a href=&#34;http://blog.thecodingmachine.com/fr/comment/reply/91&#34;&gt;online&lt;/a&gt;, so I figured there may be problems with it.&lt;/p&gt;
 
@@ -245,11 +245,11 @@ HotSpot compilation method statistics.&lt;/li&gt;
         
           <item>
             <title>Table Functions: 9i Feature Worth Revisiting (Part 2)</title>
-            <link>http://tobybase.com/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-2/</link>
+            <link>http://localhost:1313/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-2/</link>
             <pubDate>Fri, 27 Apr 2012 22:35:00 +0000</pubDate>
             
-            <guid>http://tobybase.com/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-2/</guid>
-            <description>&lt;p&gt;In &lt;a href=&#34;http://tobybase.com/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-1/-1&#34;&gt;part one of this series&lt;/a&gt; I showed a simple example of how table functions can be used to treat PL/SQL collection types as tables in a SQL query. We used a nested table collection type to which we manually added a few entries. In this example, I intend to show a more practical use of table functions using all three PL/SQL collection types: associative arrays, nested tables, and VARRAYs.&lt;/p&gt;
+            <guid>http://localhost:1313/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-2/</guid>
+            <description>&lt;p&gt;In &lt;a href=&#34;http://localhost:1313/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-1/-1&#34;&gt;part one of this series&lt;/a&gt; I showed a simple example of how table functions can be used to treat PL/SQL collection types as tables in a SQL query. We used a nested table collection type to which we manually added a few entries. In this example, I intend to show a more practical use of table functions using all three PL/SQL collection types: associative arrays, nested tables, and VARRAYs.&lt;/p&gt;
 
 &lt;p&gt;Let&amp;rsquo;s revisit a use case I alluded to in my earlier blog entry: incorporating LDAP data into a query. Suppose your task is to code a custom authorization scheme for an enterprise application reporting system. You want row access to be determined by a user&amp;rsquo;s group memberships in the company&amp;rsquo;s Active Directory server. If a user is assigned to &amp;ldquo;the Company A group&amp;rdquo; in Active Directory, he gets to see Company A&amp;rsquo;s data. You can configure that kind of restriction at a database level using &lt;a href=&#34;http://www.oracle.com/technetwork/database/security/index-088277.html&#34;&gt;Oracle&amp;rsquo;s Virtual Private Database&lt;/a&gt; feature. Configuring VPD is beyond the scope of this blog entry, but ultimately you will be associating a table to a portion of a SQL WHERE clause that gets appended to every query written against that table. You can find more documentation on VPD &lt;a href=&#34;http://download.oracle.com/docs/cd/B28359_01/network.111/b28531/vpd.htm&#34;&gt;on the OTN site&lt;/a&gt;. In this case, let&amp;rsquo;s assume you know that another team has written a PL/SQL database package to query data from Active Directory, and you want to make use of that code. The only problem is that all the functions in that package return collections of various types, and you need to be able to access that information from the WHERE clause you are building with VPD. This is where table functions come in handy.&lt;/p&gt;
 
@@ -616,10 +616,10 @@ HotSpot compilation method statistics.&lt;/li&gt;
         
           <item>
             <title>Table Functions: 9i Feature Worth Revisiting (Part 1)</title>
-            <link>http://tobybase.com/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-1/</link>
+            <link>http://localhost:1313/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-1/</link>
             <pubDate>Fri, 27 Apr 2012 22:27:00 +0000</pubDate>
             
-            <guid>http://tobybase.com/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-1/</guid>
+            <guid>http://localhost:1313/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-1/</guid>
             <description>&lt;p&gt;Yes, they&amp;rsquo;ve been around for a while, but if you haven&amp;rsquo;t made use of table functions lately you might want to reacquaint yourself with this old gem. Table functions allow you to query the contents of PL/SQL collection types using SQL&amp;rsquo;s TABLE operator. Here is a simple example.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#00a&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;OR&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;REPLACE&lt;/span&gt; PACKAGE example &lt;span style=&#34;color:#00a&#34;&gt;AS&lt;/span&gt;
     

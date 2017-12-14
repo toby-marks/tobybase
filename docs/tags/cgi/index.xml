@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cgi on Tobybase: A Tech Blog</title>
-    <link>http://tobybase.com/tags/cgi/</link>
+    <link>http://localhost:1313/tags/cgi/</link>
     <description>Recent content in Cgi on Tobybase: A Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
@@ -14,10 +14,10 @@
         
           <item>
             <title>How To Use a Perl CGI Script to Show Real Web Server Host Name</title>
-            <link>http://tobybase.com/blog/2012/07/02/how-to-use-a-perl-cgi-script-to-show-real-web-server-host-name/</link>
+            <link>http://localhost:1313/blog/2012/07/02/how-to-use-a-perl-cgi-script-to-show-real-web-server-host-name/</link>
             <pubDate>Mon, 02 Jul 2012 22:40:00 +0000</pubDate>
             
-            <guid>http://tobybase.com/blog/2012/07/02/how-to-use-a-perl-cgi-script-to-show-real-web-server-host-name/</guid>
+            <guid>http://localhost:1313/blog/2012/07/02/how-to-use-a-perl-cgi-script-to-show-real-web-server-host-name/</guid>
             <description>&lt;p&gt;Here is a short and simple Perl CGI script that you can use to expose the hostname of your web server, as opposed to just the server/domain portion of the URL string:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-perl&#34; data-lang=&#34;perl&#34;&gt;    &lt;span style=&#34;color:#aaa;font-style:italic&#34;&gt;#!/usr/bin/perl&lt;/span&gt;
     

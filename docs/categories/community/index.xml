@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Community on Tobybase: A Tech Blog</title>
-    <link>http://tobybase.com/categories/community/</link>
+    <link>http://localhost:1313/categories/community/</link>
     <description>Recent content in Community on Tobybase: A Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
@@ -14,10 +14,10 @@
         
           <item>
             <title>OS X Software for Oracle Developers</title>
-            <link>http://tobybase.com/blog/2012/06/27/os-x-software-for-oracle-developers/</link>
+            <link>http://localhost:1313/blog/2012/06/27/os-x-software-for-oracle-developers/</link>
             <pubDate>Wed, 27 Jun 2012 21:39:00 +0000</pubDate>
             
-            <guid>http://tobybase.com/blog/2012/06/27/os-x-software-for-oracle-developers/</guid>
+            <guid>http://localhost:1313/blog/2012/06/27/os-x-software-for-oracle-developers/</guid>
             <description>
 
 &lt;p&gt;One of the great things about working for &lt;a href=&#34;http://www.enkitec.com/&#34;&gt;Enkitec&lt;/a&gt; is that it&amp;rsquo;s a very Mac-friendly shop. When I arrived there in 2007 there were a handful of us running Macs and the attitude at the top seemed to be respectful, but skeptical. They allowed me to use my own laptop, which at the time was a 15-inch Intel Core2 Duo Macbook Pro, with the understanding that I could request a standard-issue Dell laptop at any time should the need arise. It never did. Since that time a large number of my coworkers have made the switch, abandoning their bulky, slow Dell Latitude laptops for 13-inch Macbook Pros, as have both owners of the company.&lt;/p&gt;

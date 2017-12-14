@@ -1,4 +1,4 @@
-baseurl             = "http://tobybase.com"  # the baseurl for your website
+baseurl             = "http://localhost:1313"  # the baseurl for your website
 title               = "Tobybase: A Tech Blog"             # blog title
 paginate            = 10                     # the number of posts on a page
 publishDir          = "docs"
@@ -47,7 +47,7 @@ PygmentsCodeFences = true
     home_navbar_link = "Home"
 
     # name of the link to the blog page
-    blog_navbar_link = "Blog"
+    blog_navbar_link = "Articles"
 
     # name of the header used in the post list page
     posts_list_header = "Posts"

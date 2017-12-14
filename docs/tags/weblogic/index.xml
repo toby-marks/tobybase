@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Weblogic on Tobybase: A Tech Blog</title>
-    <link>http://tobybase.com/tags/weblogic/</link>
+    <link>http://localhost:1313/tags/weblogic/</link>
     <description>Recent content in Weblogic on Tobybase: A Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
@@ -14,10 +14,10 @@
         
           <item>
             <title>Invalidating Toplink Session Cache To Avoid Stale Data</title>
-            <link>http://tobybase.com/blog/2012/03/09/invalidating-toplink-session-cache-to-avoid-stale-data/</link>
+            <link>http://localhost:1313/blog/2012/03/09/invalidating-toplink-session-cache-to-avoid-stale-data/</link>
             <pubDate>Fri, 09 Mar 2012 18:42:00 +0000</pubDate>
             
-            <guid>http://tobybase.com/blog/2012/03/09/invalidating-toplink-session-cache-to-avoid-stale-data/</guid>
+            <guid>http://localhost:1313/blog/2012/03/09/invalidating-toplink-session-cache-to-avoid-stale-data/</guid>
             <description>&lt;p&gt;Toplink is a Java framework that maps objects to database tables. It is the reference implementation for the Java Persistence Architecture, or JPA. Developers use Toplink to manage data persistence (storage), queries, and transactions in an Oracle database. By default, Toplink makes use of a special cache called a Session Cache, maintained on the server, which is meant to speed up performance. Queried data is stored in the Session Cache and used in subsequent queries to reduce or eliminate calls to the database.&lt;/p&gt;
 
 &lt;p&gt;One problem with this approach is how to deal with &amp;ldquo;stale data&amp;rdquo;. In other words, what happens when data is changing in the database? How does the developer ensure that the cached data is current?&lt;/p&gt;
