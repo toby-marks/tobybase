@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Scripting on tobybase</title>
-    <link>http://localhost:1313/tags/scripting/</link>
-    <description>Recent content in Scripting on tobybase</description>
+    <title>Scripting on Tobybase: A Tech Blog</title>
+    <link>http://tobybase.com/tags/scripting/</link>
+    <description>Recent content in Scripting on Tobybase: A Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <copyright>2015 ~ Toby Marks</copyright>
+    <copyright>2017 ~ Toby Marks</copyright>
     <lastBuildDate>Mon, 02 Jul 2012 22:40:00 +0000</lastBuildDate>
     <atom:link href="/tags/scripting/" rel="self" type="application/rss+xml" />
     
@@ -14,10 +14,10 @@
         
           <item>
             <title>How To Use a Perl CGI Script to Show Real Web Server Host Name</title>
-            <link>http://localhost:1313/blog/2012/07/02/how-to-use-a-perl-cgi-script-to-show-real-web-server-host-name/</link>
+            <link>http://tobybase.com/blog/2012/07/02/how-to-use-a-perl-cgi-script-to-show-real-web-server-host-name/</link>
             <pubDate>Mon, 02 Jul 2012 22:40:00 +0000</pubDate>
             
-            <guid>http://localhost:1313/blog/2012/07/02/how-to-use-a-perl-cgi-script-to-show-real-web-server-host-name/</guid>
+            <guid>http://tobybase.com/blog/2012/07/02/how-to-use-a-perl-cgi-script-to-show-real-web-server-host-name/</guid>
             <description>&lt;p&gt;Here is a short and simple Perl CGI script that you can use to expose the hostname of your web server, as opposed to just the server/domain portion of the URL string:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-perl&#34; data-lang=&#34;perl&#34;&gt;    &lt;span style=&#34;color:#aaa;font-style:italic&#34;&gt;#!/usr/bin/perl&lt;/span&gt;
     
@@ -61,10 +61,10 @@
         
           <item>
             <title>How To Make Bash Scripts crontab-Compatible</title>
-            <link>http://localhost:1313/blog/2012/04/05/how-to-make-bash-scripts-crontab-compatible/</link>
+            <link>http://tobybase.com/blog/2012/04/05/how-to-make-bash-scripts-crontab-compatible/</link>
             <pubDate>Thu, 05 Apr 2012 21:19:05 +0000</pubDate>
             
-            <guid>http://localhost:1313/blog/2012/04/05/how-to-make-bash-scripts-crontab-compatible/</guid>
+            <guid>http://tobybase.com/blog/2012/04/05/how-to-make-bash-scripts-crontab-compatible/</guid>
             <description>&lt;p&gt;When writing shell scripts in bash, consider whether your script can be automated in a batch scheduler like cron. If you reference any external resources in your script relative to the directory in which it resides, those references may break when running your script through cron.&lt;/p&gt;
 
 &lt;p&gt;By default, crontab runs scripts in the user&amp;rsquo;s home directory, as specified in &lt;code&gt;/etc/passwd&lt;/code&gt;. For user &amp;ldquo;Tim&amp;rdquo; with home directory &lt;code&gt;/home/tim&lt;/code&gt;, a sample crontab might look something like the following:&lt;/p&gt;

@@ -1,5 +1,5 @@
-baseurl             = "http://localhost:1313"  # the baseurl for your website
-title               = "tobybase"             # blog title
+baseurl             = "http://tobybase.com"  # the baseurl for your website
+title               = "Tobybase: A Tech Blog"             # blog title
 paginate            = 10                     # the number of posts on a page
 publishDir          = "docs"
 theme               = "hugo-multi-bootswatch"
@@ -28,7 +28,7 @@ PygmentsCodeFences = true
     author = "Toby Marks"
 
     # copyright text; used in footer
-    copyright = "2015 ~ Toby Marks"
+    copyright = "2017 ~ Toby Marks"
 
     # social links, used in footer, these must be full URLs.
     twitter     = "https://twitter.com/toby_marks"
@@ -57,7 +57,7 @@ PygmentsCodeFences = true
 
 [params.theme]
     inverse = false     # indicating if the theme should use inversed colors
-    name = "cosmo"   # name of the theme to use
+    name = "united"   # name of the theme to use
 
     # list of possible theme names that can be used
     # name = "cerulean"

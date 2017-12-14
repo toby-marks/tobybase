@@ -5,31 +5,31 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="tobybase">
+    <meta name="description" content="Tobybase: A Tech Blog">
     <meta name="author" content="Toby Marks">
 
     <meta name="keyword" content="">
     <link rel="shortcut icon" href="/favicon.ico">
 
-    <title>tobybase</title>
+    <title>Tobybase: A Tech Blog</title>
 
    	
     
-        <link rel="stylesheet" href="http://localhost:1313/css/theme/cosmo.css">
+        <link rel="stylesheet" href="http://tobybase.com/css/theme/united.css">
     
 
-    <link rel="stylesheet" href="http://localhost:1313/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://tobybase.com/css/font-awesome.min.css">
 
    	
-   	<link rel="stylesheet" href="http://localhost:1313/css/style.css">
+   	<link rel="stylesheet" href="http://tobybase.com/css/style.css">
 
 
     
-    <script src="http://localhost:1313/js/jquery.min-2.1.4.js"></script>
-    <script src="http://localhost:1313/js/bootstrap.min-3.3.5.js"></script>
+    <script src="http://tobybase.com/js/jquery.min-2.1.4.js"></script>
+    <script src="http://tobybase.com/js/bootstrap.min-3.3.5.js"></script>
 
     
-    <link href="http://localhost:1313/index.xml" rel="alternate" type="application/rss+xml" title="tobybase" />
+    <link href="http://tobybase.com/index.xml" rel="alternate" type="application/rss+xml" title="Tobybase: A Tech Blog" />
 </head>
 <body lang="en-US">
     
@@ -37,12 +37,12 @@
     <div class="row">
         <div class="navbar navbar-default " role="navigation">
             <div class="navbar-header">
-                <a class="navbar-brand" href="http://localhost:1313"><img src="http://localhost:1313/img/logo.png" id="logographic"></a>
+                <a class="navbar-brand" href="http://tobybase.com"><img src="http://tobybase.com/img/logo.png" id="logographic"></a>
             </div>
             <div class="navbar-collapse collapse navbar-responsive-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="http://localhost:1313">Home</a></li>
-                    <li><a href="http://localhost:1313/post/">Blog</a></li>
+                    <li><a href="http://tobybase.com">Home</a></li>
+                    <li><a href="http://tobybase.com/post/">Blog</a></li>
                     
                 </ul>
             </div>
@@ -60,7 +60,7 @@
 			<div class="row">
 				
 				<div class="col-md-offset-1 col-md-10">
-					<h3><a href="http://localhost:1313/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-1/">Table Functions: 9i Feature Worth Revisiting (Part 1)</a></h3>
+					<h3><a href="http://tobybase.com/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-1/">Table Functions: 9i Feature Worth Revisiting (Part 1)</a></h3>
 						<small><span class="label label-primary">
 							
 								04/27/2012
@@ -90,7 +90,7 @@
 	  		  				Yes, they&rsquo;ve been around for a while, but if you haven&rsquo;t made use of table functions lately you might want to reacquaint yourself with this old gem. Table functions allow you to query the contents of PL/SQL collection types using SQL&rsquo;s TABLE operator. Here is a simple example.
 CREATE OR REPLACE PACKAGE example AS TYPE nested_table_typ IS TABLE OF VARCHAR2(100); FUNCTION get_nested_table_data RETURN nested_table_typ PIPELINED; END example; / CREATE OR REPLACE PACKAGE BODY example AS FUNCTION get_nested_table_data RETURN nested_table_typ PIPELINED IS BEGIN PIPE ROW (&#39;one&#39;); PIPE ROW (&#39;two&#39;); PIPE ROW (&#39;three&#39;); RETURN; END get_nested_table_data; END example; / The package function example.
 					  		<br>
-						  	<a href="http://localhost:1313/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-1/">
+						  	<a href="http://tobybase.com/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-1/">
 						  	
 						  		Read more
 						  	</a>
@@ -112,7 +112,7 @@ CREATE OR REPLACE PACKAGE example AS TYPE nested_table_typ IS TABLE OF VARCHAR2(
 			<div class="row">
 				
 				<div class="col-md-offset-1 col-md-10">
-					<h3><a href="http://localhost:1313/blog/2012/04/05/how-to-make-bash-scripts-crontab-compatible/">How To Make Bash Scripts crontab-Compatible</a></h3>
+					<h3><a href="http://tobybase.com/blog/2012/04/05/how-to-make-bash-scripts-crontab-compatible/">How To Make Bash Scripts crontab-Compatible</a></h3>
 						<small><span class="label label-primary">
 							
 								04/05/2012
@@ -145,7 +145,7 @@ CREATE OR REPLACE PACKAGE example AS TYPE nested_table_typ IS TABLE OF VARCHAR2(
 	  		  				When writing shell scripts in bash, consider whether your script can be automated in a batch scheduler like cron. If you reference any external resources in your script relative to the directory in which it resides, those references may break when running your script through cron.
 By default, crontab runs scripts in the user&rsquo;s home directory, as specified in /etc/passwd. For user &ldquo;Tim&rdquo; with home directory /home/tim, a sample crontab might look something like the following:
 					  		<br>
-						  	<a href="http://localhost:1313/blog/2012/04/05/how-to-make-bash-scripts-crontab-compatible/">
+						  	<a href="http://tobybase.com/blog/2012/04/05/how-to-make-bash-scripts-crontab-compatible/">
 						  	
 						  		Read more
 						  	</a>
@@ -167,7 +167,7 @@ By default, crontab runs scripts in the user&rsquo;s home directory, as specifie
 			<div class="row">
 				
 				<div class="col-md-offset-1 col-md-10">
-					<h3><a href="http://localhost:1313/blog/2012/03/09/invalidating-toplink-session-cache-to-avoid-stale-data/">Invalidating Toplink Session Cache To Avoid Stale Data</a></h3>
+					<h3><a href="http://tobybase.com/blog/2012/03/09/invalidating-toplink-session-cache-to-avoid-stale-data/">Invalidating Toplink Session Cache To Avoid Stale Data</a></h3>
 						<small><span class="label label-primary">
 							
 								03/09/2012
@@ -202,7 +202,7 @@ By default, crontab runs scripts in the user&rsquo;s home directory, as specifie
 	  					
 	  		  				Toplink is a Java framework that maps objects to database tables. It is the reference implementation for the Java Persistence Architecture, or JPA. Developers use Toplink to manage data persistence (storage), queries, and transactions in an Oracle database. By default, Toplink makes use of a special cache called a Session Cache, maintained on the server, which is meant to speed up performance. Queried data is stored in the Session Cache and used in subsequent queries to reduce or eliminate calls to the database.
 					  		<br>
-						  	<a href="http://localhost:1313/blog/2012/03/09/invalidating-toplink-session-cache-to-avoid-stale-data/">
+						  	<a href="http://tobybase.com/blog/2012/03/09/invalidating-toplink-session-cache-to-avoid-stale-data/">
 						  	
 						  		Read more
 						  	</a>
@@ -311,7 +311,7 @@ By default, crontab runs scripts in the user&rsquo;s home directory, as specifie
             <footer>
                 <div class="pull-left">
                     <p>
-                        &copy; 2015 ~ Toby Marks ~ Powered By <a href="http://hugo.spf13.com">Hugo</a> - version: 0.31.1 ~ <a href="http://localhost:1313/license">License</a>
+                        &copy; 2017 ~ Toby Marks ~ Powered By <a href="http://hugo.spf13.com">Hugo</a> - version: 0.31.1 ~ <a href="http://tobybase.com/license">License</a>
                     </p>
                 </div>
 
@@ -333,7 +333,7 @@ By default, crontab runs scripts in the user&rsquo;s home directory, as specifie
                     
                     
                     
-                        <a href="http://localhost:1313/index.xml" target="_blank">
+                        <a href="http://tobybase.com/index.xml" target="_blank">
                         <i class="fa fa-rss-square fa-2x"></i></a>
                     
                 </div>

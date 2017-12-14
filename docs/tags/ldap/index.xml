@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ldap on tobybase</title>
-    <link>http://localhost:1313/tags/ldap/</link>
-    <description>Recent content in Ldap on tobybase</description>
+    <title>Ldap on Tobybase: A Tech Blog</title>
+    <link>http://tobybase.com/tags/ldap/</link>
+    <description>Recent content in Ldap on Tobybase: A Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <copyright>2015 ~ Toby Marks</copyright>
+    <copyright>2017 ~ Toby Marks</copyright>
     <lastBuildDate>Mon, 12 Nov 2012 17:32:00 +0000</lastBuildDate>
     <atom:link href="/tags/ldap/" rel="self" type="application/rss+xml" />
     
@@ -14,10 +14,10 @@
         
           <item>
             <title>How To Configure Oracle BI Publisher to Authenticate With Active Directory</title>
-            <link>http://localhost:1313/blog/2012/11/12/how-to-configure-oracle-bi-publisher-to-authenticate-with-active-directory/</link>
+            <link>http://tobybase.com/blog/2012/11/12/how-to-configure-oracle-bi-publisher-to-authenticate-with-active-directory/</link>
             <pubDate>Mon, 12 Nov 2012 17:32:00 +0000</pubDate>
             
-            <guid>http://localhost:1313/blog/2012/11/12/how-to-configure-oracle-bi-publisher-to-authenticate-with-active-directory/</guid>
+            <guid>http://tobybase.com/blog/2012/11/12/how-to-configure-oracle-bi-publisher-to-authenticate-with-active-directory/</guid>
             <description>&lt;ul&gt;
 &lt;li&gt;Log in to BI Publisher as an administrator.&lt;/li&gt;
 &lt;li&gt;Click on the Admin tab.&lt;/li&gt;
@@ -150,17 +150,17 @@ XMLP_TEMPLATE_DESIGNER&lt;/p&gt;
         
           <item>
             <title>How to Avoid the &#34;Job scheduling failed because the user has no permission to access this report&#34; Error in BI Publisher</title>
-            <link>http://localhost:1313/blog/2012/08/27/how-to-avoid-the-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report-error-in-bi-publisher/</link>
+            <link>http://tobybase.com/blog/2012/08/27/how-to-avoid-the-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report-error-in-bi-publisher/</link>
             <pubDate>Mon, 27 Aug 2012 20:48:08 +0000</pubDate>
             
-            <guid>http://localhost:1313/blog/2012/08/27/how-to-avoid-the-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report-error-in-bi-publisher/</guid>
-            <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2012-08-27-bi-publisher-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report/864dbb90dbf623eb4f36b26a3ecf315cfec7121cf33e16730b6060c6572dfb35.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+            <guid>http://tobybase.com/blog/2012/08/27/how-to-avoid-the-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report-error-in-bi-publisher/</guid>
+            <description>&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2012-08-27-bi-publisher-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report/864dbb90dbf623eb4f36b26a3ecf315cfec7121cf33e16730b6060c6572dfb35.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;You can get this error if you are trying to schedule a report and your BI Publisher installation uses LDAP authentication.&lt;/p&gt;
 
 &lt;p&gt;To avoid it, make sure that the &amp;ldquo;Administrator&amp;rdquo; account you use to connect to your LDAP server is in the XMLP_ADMIN group. The LDAP settings are located on the Admin tab, under Security Settings / Security Configuration.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2012-08-27-bi-publisher-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report/c44997adb44d6687468d544341fcd25b818ebdd46087d1849c38e855ee874488.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2012-08-27-bi-publisher-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report/c44997adb44d6687468d544341fcd25b818ebdd46087d1849c38e855ee874488.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </description>
           </item>
         

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Windows on tobybase</title>
-    <link>http://localhost:1313/tags/windows/</link>
-    <description>Recent content in Windows on tobybase</description>
+    <title>Windows on Tobybase: A Tech Blog</title>
+    <link>http://tobybase.com/tags/windows/</link>
+    <description>Recent content in Windows on Tobybase: A Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <copyright>2015 ~ Toby Marks</copyright>
+    <copyright>2017 ~ Toby Marks</copyright>
     <lastBuildDate>Fri, 10 Mar 2017 14:56:00 +0000</lastBuildDate>
     <atom:link href="/tags/windows/" rel="self" type="application/rss+xml" />
     
@@ -14,10 +14,10 @@
         
           <item>
             <title>Move Your VM to Oracle Cloud - Part 4</title>
-            <link>http://localhost:1313/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-4/</link>
+            <link>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-4/</link>
             <pubDate>Fri, 10 Mar 2017 14:56:00 +0000</pubDate>
             
-            <guid>http://localhost:1313/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-4/</guid>
+            <guid>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-4/</guid>
             <description>&lt;p&gt;In the last of a four-part video series, our Director of Cloud Services Brian Hill creates a new compute instance in Oracle Cloud Compute Services based on his custom Windows virtual machine image.&lt;/p&gt;
 
 
@@ -34,10 +34,10 @@
         
           <item>
             <title>Move Your VM to Oracle Cloud - Part 3</title>
-            <link>http://localhost:1313/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-3/</link>
+            <link>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-3/</link>
             <pubDate>Fri, 10 Mar 2017 14:53:00 +0000</pubDate>
             
-            <guid>http://localhost:1313/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-3/</guid>
+            <guid>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-3/</guid>
             <description>&lt;p&gt;In part three of a four-part video series, our Director of Cloud Services Brian Hill creates a bootable storage volume in Oracle Cloud Compute Services with his new Windows image.&lt;/p&gt;
 
 
@@ -54,10 +54,10 @@
         
           <item>
             <title>Move Your VM to Oracle Cloud - Part 2</title>
-            <link>http://localhost:1313/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-2/</link>
+            <link>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-2/</link>
             <pubDate>Fri, 10 Mar 2017 14:47:00 +0000</pubDate>
             
-            <guid>http://localhost:1313/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-2/</guid>
+            <guid>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-2/</guid>
             <description>&lt;p&gt;In part two of a four-part video series, our Director of Cloud Services Brian Hill creates an image in Oracle Cloud Compute Services based on a Windows virtual machine.&lt;/p&gt;
 
 
@@ -74,10 +74,10 @@
         
           <item>
             <title>Move Your VM to Oracle Cloud - Part 1</title>
-            <link>http://localhost:1313/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-1/</link>
+            <link>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-1/</link>
             <pubDate>Fri, 10 Mar 2017 14:41:00 +0000</pubDate>
             
-            <guid>http://localhost:1313/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-1/</guid>
+            <guid>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-1/</guid>
             <description>&lt;p&gt;In part one of a four-part video series, our Director of Cloud Services Brian Hill demonstrates how to prepare your virtual machine for upload to the cloud.&lt;/p&gt;
 
 
@@ -94,10 +94,10 @@
         
           <item>
             <title>ODBC Connection Fails for MS Access App on Citrix </title>
-            <link>http://localhost:1313/blog/2012/05/11/odbc-connection-fails-for-ms-access-app-on-citrix/</link>
+            <link>http://tobybase.com/blog/2012/05/11/odbc-connection-fails-for-ms-access-app-on-citrix/</link>
             <pubDate>Fri, 11 May 2012 20:54:00 +0000</pubDate>
             
-            <guid>http://localhost:1313/blog/2012/05/11/odbc-connection-fails-for-ms-access-app-on-citrix/</guid>
+            <guid>http://tobybase.com/blog/2012/05/11/odbc-connection-fails-for-ms-access-app-on-citrix/</guid>
             <description>&lt;p&gt;I ran into an interesting problem recently when attempting to publish an MS Access application with &lt;a href=&#34;http://www.citrix.com/English/ps2/products/product.asp?contentID=186&amp;amp;ntref=footer&#34;&gt;Citrix XenApp&lt;/a&gt;. The application pulled data from an Oracle database, so an ODBC connection was created on the Citrix server. What we found was that when a non-privileged user tried to run the application, the connection failed. When the Citrix server admin ran it, however, it worked. Furthermore, as long as the admin was logged in, anybody else could run the application successfully; when he logged out, the users&amp;rsquo; connections broke again.&lt;/p&gt;
 
 &lt;p&gt;Since Access is not my area of expertise, we finally contacted Microsoft tech support after trying a few suggestions we dug up in our own research. The support analyst clued us in to the following solution, which I pulled from an Oracle Primavera &lt;a href=&#34;http://docs.oracle.com/cd/E16688_01/Technical_Documentation/Terminal_Services_and_Citrix/Terminal%20Services%20and%20Citrix.pdf&#34;&gt;setup document&lt;/a&gt;.&lt;/p&gt;
