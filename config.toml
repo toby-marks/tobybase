@@ -40,7 +40,7 @@ PygmentsCodeFences = true
 
     # show default summaries on the frontpage or not
     use_summaries = true
-    
+
 # naming of the elements in your blog/site
 [params.strings]
     # name of the link to the homepage
