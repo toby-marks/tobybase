@@ -14,18 +14,18 @@
 
    	
     
-        <link rel="stylesheet" href="http://localhost:1313/css/theme/united.css">
+        <link rel="stylesheet" href="http://tobybase.com/css/theme/united.css">
     
 
-    <link rel="stylesheet" href="http://localhost:1313/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://tobybase.com/css/font-awesome.min.css">
 
    	
-   	<link rel="stylesheet" href="http://localhost:1313/css/style.css">
+   	<link rel="stylesheet" href="http://tobybase.com/css/style.css">
 
 
     
-    <script src="http://localhost:1313/js/jquery.min-2.1.4.js"></script>
-    <script src="http://localhost:1313/js/bootstrap.min-3.3.5.js"></script>
+    <script src="http://tobybase.com/js/jquery.min-2.1.4.js"></script>
+    <script src="http://tobybase.com/js/bootstrap.min-3.3.5.js"></script>
 
     
     <link href="" rel="alternate" type="application/rss+xml" title="Tobybase: A Tech Blog" />
@@ -36,12 +36,12 @@
     <div class="row">
         <div class="navbar navbar-default " role="navigation">
             <div class="navbar-header">
-                <a class="navbar-brand" href="http://localhost:1313"><img src="http://localhost:1313/img/logo.png" id="logographic"></a>
+                <a class="navbar-brand" href="http://tobybase.com"><img src="http://tobybase.com/img/logo.png" id="logographic"></a>
             </div>
             <div class="navbar-collapse collapse navbar-responsive-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="http://localhost:1313">Home</a></li>
-                    <li><a href="http://localhost:1313/post/">Articles</a></li>
+                    <li><a href="http://tobybase.com">Home</a></li>
+                    <li><a href="http://tobybase.com/post/">Articles</a></li>
                     
                 </ul>
             </div>
@@ -82,23 +82,23 @@
 			<p>When writing shell scripts in bash, consider whether your script can be automated in a batch scheduler like cron. If you reference any external resources in your script relative to the directory in which it resides, those references may break when running your script through cron.</p>
 
 <p>By default, crontab runs scripts in the user&rsquo;s home directory, as specified in <code>/etc/passwd</code>. For user &ldquo;Tim&rdquo; with home directory <code>/home/tim</code>, a sample crontab might look something like the following:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#099">0</span> <span style="color:#099">0</span> * * * runme.sh</code></pre></div>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#00d;font-weight:bold">0</span> <span style="color:#00d;font-weight:bold">0</span> * * * runme.sh</code></pre></div>
 <p>Every night at midnight, cron will try to run the file <code>/home/tim/runme.sh</code>. However, if <code>runme.sh</code> is actually in a sub-directory under <code>~tim</code>, you will need to tell cron how to reach the file. One option would be to qualify the path in crontab, like so:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#099">0</span> <span style="color:#099">0</span> * * * ~/bin/runme.sh</code></pre></div>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#00d;font-weight:bold">0</span> <span style="color:#00d;font-weight:bold">0</span> * * * ~/bin/runme.sh</code></pre></div>
 <p>Now cron can find the file. However, if the script makes references to other files inside of <code>/bin</code> in a path-relative way, those references will be broken.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#4c8317">#!/bin/bash
-</span><span style="color:#4c8317"></span><span style="color:#aaa;font-style:italic">#runme.sh
-</span><span style="color:#aaa;font-style:italic"></span>./runthis.sh      <span style="color:#aaa;font-style:italic"># can&#39;t find this file when running under cron
-</span><span style="color:#aaa;font-style:italic"></span>./runthat.sh      # can<span style="color:#f00;background-color:#faa">&#39;</span>t find this file when running under cron</code></pre></div>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#c00;font-weight:bold">#!/bin/bash
+</span><span style="color:#c00;font-weight:bold"></span><span style="color:#888">#runme.sh
+</span><span style="color:#888"></span>./runthis.sh      <span style="color:#888"># can&#39;t find this file when running under cron
+</span><span style="color:#888"></span>./runthat.sh      # can<span style="color:#a61717;background-color:#e3d2d2">&#39;</span>t find this file when running under cron</code></pre></div>
 <p>That&rsquo;s because to cron <code>./</code> is not the directory in which the script is running, but rather whatever is defined as the base directory; in the default case, the user&rsquo;s home directory.</p>
 
 <p>It is possible to specify the base directory in the crontab file itself by defining the special variable <code>HOME</code>.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#a00">HOME</span>=/home/tim/bin
-<span style="color:#099">0</span> <span style="color:#099">0</span> * * * runme.sh</code></pre></div>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#369">HOME</span>=/home/tim/bin
+<span style="color:#00d;font-weight:bold">0</span> <span style="color:#00d;font-weight:bold">0</span> * * * runme.sh</code></pre></div>
 <p>However, you may not always have control over how your crontab is configured. Perhaps a system administrator is in charge of all the schedules on your server. Or you may organize your scripts in several different directories.</p>
 
 <p>An easy solution is to start your bash scripts with the following command:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#0aa">cd</span> <span style="color:#00a">$(</span>dirname <span style="color:#a00">$0</span><span style="color:#00a">)</span></code></pre></div>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#038">cd</span> <span style="color:#080;font-weight:bold">$(</span>dirname <span style="color:#369">$0</span><span style="color:#080;font-weight:bold">)</span></code></pre></div>
 <p>The program <code>dirname</code> returns the directory portion of the fully qualified path name sent to it. The <code>$0</code> argument in this context is name of the running script. Basically, this code ensures that the current working directory is the same as the directory in which your script is running. That way all your path-relative references are correct whether running manually or through a scheduler.</p>
 
 		</div>
@@ -143,7 +143,7 @@
             <footer>
                 <div class="pull-left">
                     <p>
-                        &copy; 2017 ~ Toby Marks ~ Powered By <a href="http://hugo.spf13.com">Hugo</a> - version: 0.31.1 ~ <a href="http://localhost:1313/license">License</a>
+                        &copy; 2017 ~ Toby Marks ~ Powered By <a href="http://hugo.spf13.com">Hugo</a> - version: 0.31.1 ~ <a href="http://tobybase.com/license">License</a>
                     </p>
                 </div>
 

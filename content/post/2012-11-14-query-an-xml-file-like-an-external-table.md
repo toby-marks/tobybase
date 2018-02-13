@@ -13,7 +13,7 @@ Oracle's [external table feature](http://docs.oracle.com/cd/B28359_01/server.111
 
 ...could be queried like this:
 
-```sql
+```SQL
 SELECT employee_number,
        employee_first_name,
        substr(employee_middle_name, 1, 1),
@@ -88,7 +88,7 @@ Now execute the following in SQL*Plus:
 
 ```sql
     SQL> CREATE OR REPLACE DIRECTORY XML_DIR AS '/home/oracle';
-    
+
     SQL> CREATE OR REPLACE VIEW employees_v AS
     SELECT *
     FROM XMLTable('/Employees/Employee'
@@ -131,9 +131,9 @@ You can modify construction of the view to read from multiple files by using a s
 
 Then at runtime, specify the file you want to use like this:
 
-```sql
+```plpgsql
     SQL> exec dbms_application_info.set_client_info('employees_01.xml');
-    
+
     SQL> SELECT * FROM employees_v;
     ID   LASTNAME FIRSTNAME DEPARTMENT SALARY
     ---- -------- --------- ---------- ------
@@ -142,7 +142,7 @@ Then at runtime, specify the file you want to use like this:
     1236 Hoffman  Burl      20         75000
 
     SQL> exec dbms_application_info.set_client_info('employees_02.xml');
-    
+
     SQL> SELECT * FROM employees_v;
     ID   LASTNAME FIRSTNAME DEPARTMENT SALARY
     ---- -------- --------- ---------- ------
@@ -151,7 +151,7 @@ Then at runtime, specify the file you want to use like this:
     1236 Stein    Frank     50         55000
 ```
 
-Why might this be useful? Suppose you have an arbitrary number of identically structured XML files in a directory that you want to import into a relational database table. Using a shell script you can, for each file in the directory, 
+Why might this be useful? Suppose you have an arbitrary number of identically structured XML files in a directory that you want to import into a relational database table. Using a shell script you can, for each file in the directory,
 
 + log in to SQL*Plus
 + set the `CLIENT_INFO` variable to the name of the current file

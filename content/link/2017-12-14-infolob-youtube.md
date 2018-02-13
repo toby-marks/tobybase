@@ -7,4 +7,4 @@ ref = "https://www.youtube.com/channel/UCLfDjdjW6RRvKYrz_aS0Jmw"
 type = "link"
 +++
 
-If you like us and find this content helpful, do the like and subscribe thing to stay informed.
+If you find this content helpful, do the like and subscribe thing to stay informed.

@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Perl on Tobybase: A Tech Blog</title>
-    <link>http://localhost:1313/tags/perl/</link>
+    <link>http://tobybase.com/tags/perl/</link>
     <description>Recent content in Perl on Tobybase: A Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
@@ -14,45 +14,45 @@
         
           <item>
             <title>How To Use a Perl CGI Script to Show Real Web Server Host Name</title>
-            <link>http://localhost:1313/blog/2012/07/02/how-to-use-a-perl-cgi-script-to-show-real-web-server-host-name/</link>
+            <link>http://tobybase.com/blog/2012/07/02/how-to-use-a-perl-cgi-script-to-show-real-web-server-host-name/</link>
             <pubDate>Mon, 02 Jul 2012 22:40:00 +0000</pubDate>
             
-            <guid>http://localhost:1313/blog/2012/07/02/how-to-use-a-perl-cgi-script-to-show-real-web-server-host-name/</guid>
+            <guid>http://tobybase.com/blog/2012/07/02/how-to-use-a-perl-cgi-script-to-show-real-web-server-host-name/</guid>
             <description>&lt;p&gt;Here is a short and simple Perl CGI script that you can use to expose the hostname of your web server, as opposed to just the server/domain portion of the URL string:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-perl&#34; data-lang=&#34;perl&#34;&gt;    &lt;span style=&#34;color:#aaa;font-style:italic&#34;&gt;#!/usr/bin/perl&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-perl&#34; data-lang=&#34;perl&#34;&gt;    &lt;span style=&#34;color:#888&#34;&gt;#!/usr/bin/perl&lt;/span&gt;
     
-    &lt;span style=&#34;color:#00a&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color:#a50&#34;&gt;&amp;#34;Content-type: text/html\n\n&amp;#34;&lt;/span&gt;;
-    &lt;span style=&#34;color:#00a&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color:#a50&#34;&gt;`hostname`&lt;/span&gt;;
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#34;Content-type: text/html\n\n&amp;#34;&lt;/span&gt;;
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;`hostname`&lt;/span&gt;;
     
-    &lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1&lt;/span&gt;;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Name the file something like &lt;code&gt;hostname.cgi&lt;/code&gt; and place it in your web server&amp;rsquo;s &lt;code&gt;/cgi-bin/&lt;/code&gt; directory, or if your web server is configured appropriately, just name it &lt;code&gt;hostname.pl&lt;/code&gt; and drop it wherever you like.&lt;/p&gt;
 
 &lt;p&gt;The following script can be used to dump all the CGI environment variables.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-perl&#34; data-lang=&#34;perl&#34;&gt;    &lt;span style=&#34;color:#aaa;font-style:italic&#34;&gt;#!/usr/bin/perl&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-perl&#34; data-lang=&#34;perl&#34;&gt;    &lt;span style=&#34;color:#888&#34;&gt;#!/usr/bin/perl&lt;/span&gt;
     
-    &lt;span style=&#34;color:#00a&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color:#a50&#34;&gt;&amp;#34;Content-type: text/html\n\n&amp;#34;&lt;/span&gt;;
-    &lt;span style=&#34;color:#00a&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color:#a50&#34;&gt;&amp;#34;&amp;lt;font size=+1&amp;gt;Environment&amp;lt;/font&amp;gt;\n&amp;#34;&lt;/span&gt;;
-    &lt;span style=&#34;color:#00a&#34;&gt;foreach&lt;/span&gt; (&lt;span style=&#34;color:#0aa&#34;&gt;sort&lt;/span&gt; &lt;span style=&#34;color:#0aa&#34;&gt;keys&lt;/span&gt; &lt;span style=&#34;color:#a00&#34;&gt;%ENV&lt;/span&gt;)
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#34;Content-type: text/html\n\n&amp;#34;&lt;/span&gt;;
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#34;&amp;lt;font size=+1&amp;gt;Environment&amp;lt;/font&amp;gt;\n&amp;#34;&lt;/span&gt;;
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;foreach&lt;/span&gt; (&lt;span style=&#34;color:#038&#34;&gt;sort&lt;/span&gt; &lt;span style=&#34;color:#038&#34;&gt;keys&lt;/span&gt; &lt;span style=&#34;color:#369&#34;&gt;%ENV&lt;/span&gt;)
     {
-      &lt;span style=&#34;color:#00a&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color:#a50&#34;&gt;&amp;#34;&amp;lt;b&amp;gt;$_&amp;lt;/b&amp;gt;: $ENV{$_}&amp;lt;br&amp;gt;\n&amp;#34;&lt;/span&gt;;
+      &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#34;&amp;lt;b&amp;gt;$_&amp;lt;/b&amp;gt;: $ENV{$_}&amp;lt;br&amp;gt;\n&amp;#34;&lt;/span&gt;;
     }
     
-    &lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1&lt;/span&gt;;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Note that this includes &lt;code&gt;SERVER_NAME&lt;/code&gt;, but what that really gives you is the &amp;ldquo;server&amp;rdquo; portion of the URL string. In other words, if your URL is http:&amp;#47;&amp;#47;www.google.com&amp;#47;, then the &lt;code&gt;SERVER_NAME&lt;/code&gt; CGI environment variable would be &amp;ldquo;www.google.com&amp;rdquo;. Fine, but the first script can be used to identify the actual server being called, for example, when your page is hosted on multiple servers load-balanced under a virtual domain name.&lt;/p&gt;
 
 &lt;p&gt;Of course, you could combine the two scripts to give you everything:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-perl&#34; data-lang=&#34;perl&#34;&gt;    &lt;span style=&#34;color:#aaa;font-style:italic&#34;&gt;#!/usr/bin/perl&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-perl&#34; data-lang=&#34;perl&#34;&gt;    &lt;span style=&#34;color:#888&#34;&gt;#!/usr/bin/perl&lt;/span&gt;
     
-    &lt;span style=&#34;color:#00a&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color:#a50&#34;&gt;&amp;#34;Content-type: text/html\n\n&amp;#34;&lt;/span&gt;;
-    &lt;span style=&#34;color:#00a&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color:#a50&#34;&gt;&amp;#34;&amp;lt;font size=+1&amp;gt;Environment&amp;lt;/font&amp;gt;\n&amp;#34;&lt;/span&gt;;
-    &lt;span style=&#34;color:#00a&#34;&gt;foreach&lt;/span&gt; (&lt;span style=&#34;color:#0aa&#34;&gt;sort&lt;/span&gt; &lt;span style=&#34;color:#0aa&#34;&gt;keys&lt;/span&gt; &lt;span style=&#34;color:#a00&#34;&gt;%ENV&lt;/span&gt;)
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#34;Content-type: text/html\n\n&amp;#34;&lt;/span&gt;;
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#34;&amp;lt;font size=+1&amp;gt;Environment&amp;lt;/font&amp;gt;\n&amp;#34;&lt;/span&gt;;
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;foreach&lt;/span&gt; (&lt;span style=&#34;color:#038&#34;&gt;sort&lt;/span&gt; &lt;span style=&#34;color:#038&#34;&gt;keys&lt;/span&gt; &lt;span style=&#34;color:#369&#34;&gt;%ENV&lt;/span&gt;)
     {
-      &lt;span style=&#34;color:#00a&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color:#a50&#34;&gt;&amp;#34;&amp;lt;b&amp;gt;$_&amp;lt;/b&amp;gt;: $ENV{$_}&amp;lt;br&amp;gt;\n&amp;#34;&lt;/span&gt;;
+      &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#34;&amp;lt;b&amp;gt;$_&amp;lt;/b&amp;gt;: $ENV{$_}&amp;lt;br&amp;gt;\n&amp;#34;&lt;/span&gt;;
     }
     
-    &lt;span style=&#34;color:#00a&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color:#a50&#34;&gt;&amp;#34;&amp;lt;b&amp;gt;REAL SERVER HOSTNAME:&amp;lt;/b&amp;gt; &amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#a50&#34;&gt;`hostname`&lt;/span&gt;;
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#34;&amp;lt;b&amp;gt;REAL SERVER HOSTNAME:&amp;lt;/b&amp;gt; &amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;`hostname`&lt;/span&gt;;
     
-    &lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1&lt;/span&gt;;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
           </item>
         
       

@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Weblogic on Tobybase: A Tech Blog</title>
-    <link>http://localhost:1313/tags/weblogic/</link>
+    <link>http://tobybase.com/tags/weblogic/</link>
     <description>Recent content in Weblogic on Tobybase: A Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
@@ -14,10 +14,10 @@
         
           <item>
             <title>Invalidating Toplink Session Cache To Avoid Stale Data</title>
-            <link>http://localhost:1313/blog/2012/03/09/invalidating-toplink-session-cache-to-avoid-stale-data/</link>
+            <link>http://tobybase.com/blog/2012/03/09/invalidating-toplink-session-cache-to-avoid-stale-data/</link>
             <pubDate>Fri, 09 Mar 2012 18:42:00 +0000</pubDate>
             
-            <guid>http://localhost:1313/blog/2012/03/09/invalidating-toplink-session-cache-to-avoid-stale-data/</guid>
+            <guid>http://tobybase.com/blog/2012/03/09/invalidating-toplink-session-cache-to-avoid-stale-data/</guid>
             <description>&lt;p&gt;Toplink is a Java framework that maps objects to database tables. It is the reference implementation for the Java Persistence Architecture, or JPA. Developers use Toplink to manage data persistence (storage), queries, and transactions in an Oracle database. By default, Toplink makes use of a special cache called a Session Cache, maintained on the server, which is meant to speed up performance. Queried data is stored in the Session Cache and used in subsequent queries to reduce or eliminate calls to the database.&lt;/p&gt;
 
 &lt;p&gt;One problem with this approach is how to deal with &amp;ldquo;stale data&amp;rdquo;. In other words, what happens when data is changing in the database? How does the developer ensure that the cached data is current?&lt;/p&gt;
@@ -43,48 +43,48 @@ CacheInvalidatorServlet.java&lt;/p&gt;
 &lt;a href=&#34;http://www.oracle.com/technetwork/middleware/ias/index-100679.html&#34;&gt;Oracle TopLink Cache Invalidation&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;The two methods of CacheInvalidator that do the actual work are shown here. The first takes tablename as an argument, so that the invalidation can be targeted. The second invalidates, or effectively wipes, the entire cache.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#00a&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#0aa&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#0a0&#34;&gt;invalidateClass&lt;/span&gt;(Session session, String tableName) &lt;span style=&#34;color:#00a&#34;&gt;throws&lt;/span&gt; Exception { 
-    &lt;span style=&#34;color:#00a&#34;&gt;if&lt;/span&gt;(tableName == &lt;span style=&#34;color:#00a&#34;&gt;null&lt;/span&gt; || tableName.&lt;span style=&#34;color:#1e90ff&#34;&gt;trim&lt;/span&gt;().&lt;span style=&#34;color:#1e90ff&#34;&gt;equals&lt;/span&gt;(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;)) { 
-        &lt;span style=&#34;color:#00a&#34;&gt;throw&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;new&lt;/span&gt; Exception(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#34;tableName cannot be null&amp;#34;&lt;/span&gt;); 
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#888;font-weight:bold&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#06b;font-weight:bold&#34;&gt;invalidateClass&lt;/span&gt;(Session session, String tableName) &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;throws&lt;/span&gt; Exception { 
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;if&lt;/span&gt;(tableName == &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;null&lt;/span&gt; || tableName.&lt;span style=&#34;color:#369&#34;&gt;trim&lt;/span&gt;().&lt;span style=&#34;color:#369&#34;&gt;equals&lt;/span&gt;(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;)) { 
+        &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;throw&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;new&lt;/span&gt; Exception(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#34;tableName cannot be null&amp;#34;&lt;/span&gt;); 
     } 
-    Class baseClass = (Class)tableNameToClass.&lt;span style=&#34;color:#1e90ff&#34;&gt;get&lt;/span&gt;(tableName); 
-    &lt;span style=&#34;color:#00a&#34;&gt;if&lt;/span&gt;(baseClass == &lt;span style=&#34;color:#00a&#34;&gt;null&lt;/span&gt;) { 
-        &lt;span style=&#34;color:#00a&#34;&gt;throw&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;new&lt;/span&gt; Exception(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#34;table \&amp;#34;&amp;#34;&lt;/span&gt; + tableName + &lt;span style=&#34;color:#a50&#34;&gt;&amp;#34;\&amp;#34; not found in cache&amp;#34;&lt;/span&gt;); 
+    Class baseClass = (Class)tableNameToClass.&lt;span style=&#34;color:#369&#34;&gt;get&lt;/span&gt;(tableName); 
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;if&lt;/span&gt;(baseClass == &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;null&lt;/span&gt;) { 
+        &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;throw&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;new&lt;/span&gt; Exception(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#34;table \&amp;#34;&amp;#34;&lt;/span&gt; + tableName + &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#34;\&amp;#34; not found in cache&amp;#34;&lt;/span&gt;); 
     } 
  
-    &lt;span style=&#34;color:#aaa;font-style:italic&#34;&gt;// invalidate in TopLink cache the object corresponding to the baseClass 
-&lt;/span&gt;&lt;span style=&#34;color:#aaa;font-style:italic&#34;&gt;&lt;/span&gt;    session.&lt;span style=&#34;color:#1e90ff&#34;&gt;getIdentityMapAccessor&lt;/span&gt;().&lt;span style=&#34;color:#1e90ff&#34;&gt;invalidateClass&lt;/span&gt;(baseClass); 
+    &lt;span style=&#34;color:#888&#34;&gt;// invalidate in TopLink cache the object corresponding to the baseClass 
+&lt;/span&gt;&lt;span style=&#34;color:#888&#34;&gt;&lt;/span&gt;    session.&lt;span style=&#34;color:#369&#34;&gt;getIdentityMapAccessor&lt;/span&gt;().&lt;span style=&#34;color:#369&#34;&gt;invalidateClass&lt;/span&gt;(baseClass); 
 } 
  
-&lt;span style=&#34;color:#aaa;font-style:italic&#34;&gt;// invalidate all objects in the cache 
-&lt;/span&gt;&lt;span style=&#34;color:#aaa;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#00a&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#0aa&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#0a0&#34;&gt;invalidateAllClasses&lt;/span&gt;(Session session) { 
-    &lt;span style=&#34;color:#aaa;font-style:italic&#34;&gt;// invalidate in TopLink cache the object corresponding to the baseClass 
-&lt;/span&gt;&lt;span style=&#34;color:#aaa;font-style:italic&#34;&gt;&lt;/span&gt;    session.&lt;span style=&#34;color:#1e90ff&#34;&gt;getIdentityMapAccessor&lt;/span&gt;().&lt;span style=&#34;color:#1e90ff&#34;&gt;invalidateAll&lt;/span&gt;(); 
+&lt;span style=&#34;color:#888&#34;&gt;// invalidate all objects in the cache 
+&lt;/span&gt;&lt;span style=&#34;color:#888&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#888;font-weight:bold&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#06b;font-weight:bold&#34;&gt;invalidateAllClasses&lt;/span&gt;(Session session) { 
+    &lt;span style=&#34;color:#888&#34;&gt;// invalidate in TopLink cache the object corresponding to the baseClass 
+&lt;/span&gt;&lt;span style=&#34;color:#888&#34;&gt;&lt;/span&gt;    session.&lt;span style=&#34;color:#369&#34;&gt;getIdentityMapAccessor&lt;/span&gt;().&lt;span style=&#34;color:#369&#34;&gt;invalidateAll&lt;/span&gt;(); 
 } &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;The CacheInvalidatorServlet takes a table name or the special keyword &amp;ldquo;ALL&amp;rdquo; as a parameter and calls the corresponding method in CacheInvalidator.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;String oName = request.&lt;span style=&#34;color:#1e90ff&#34;&gt;getParameter&lt;/span&gt;(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#34;objectName&amp;#34;&lt;/span&gt;); 
-String responseString = &lt;span style=&#34;color:#a50&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;; 
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;String oName = request.&lt;span style=&#34;color:#369&#34;&gt;getParameter&lt;/span&gt;(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#34;objectName&amp;#34;&lt;/span&gt;); 
+String responseString = &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;; 
 
-&lt;span style=&#34;color:#00a&#34;&gt;try&lt;/span&gt; { 
-    SessionManager manager = SessionManager.&lt;span style=&#34;color:#1e90ff&#34;&gt;getManager&lt;/span&gt;(); 
-    &lt;span style=&#34;color:#aaa;font-style:italic&#34;&gt;//SESSIONNAME defined in sessions.xml 
-&lt;/span&gt;&lt;span style=&#34;color:#aaa;font-style:italic&#34;&gt;&lt;/span&gt;    Server server = (Server)manager.&lt;span style=&#34;color:#1e90ff&#34;&gt;getSession&lt;/span&gt;(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#34;SESSIONNAME&amp;#34;&lt;/span&gt;); 
-    Session session = server.&lt;span style=&#34;color:#1e90ff&#34;&gt;getActiveSession&lt;/span&gt;(); 
+&lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;try&lt;/span&gt; { 
+    SessionManager manager = SessionManager.&lt;span style=&#34;color:#369&#34;&gt;getManager&lt;/span&gt;(); 
+    &lt;span style=&#34;color:#888&#34;&gt;//SESSIONNAME defined in sessions.xml 
+&lt;/span&gt;&lt;span style=&#34;color:#888&#34;&gt;&lt;/span&gt;    Server server = (Server)manager.&lt;span style=&#34;color:#369&#34;&gt;getSession&lt;/span&gt;(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#34;SESSIONNAME&amp;#34;&lt;/span&gt;); 
+    Session session = server.&lt;span style=&#34;color:#369&#34;&gt;getActiveSession&lt;/span&gt;(); 
 
-    CacheInvalidator invalidator = &lt;span style=&#34;color:#00a&#34;&gt;new&lt;/span&gt; CacheInvalidator(session); 
-    &lt;span style=&#34;color:#00a&#34;&gt;if&lt;/span&gt; (oName.&lt;span style=&#34;color:#1e90ff&#34;&gt;equals&lt;/span&gt;(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#34;ALL&amp;#34;&lt;/span&gt;)) { 
-        invalidator.&lt;span style=&#34;color:#1e90ff&#34;&gt;invalidateAllClasses&lt;/span&gt;(session); 
-        responseString = &lt;span style=&#34;color:#a50&#34;&gt;&amp;#34;successfully invalidated toplink cache for all tables.&amp;#34;&lt;/span&gt;; 
-    } &lt;span style=&#34;color:#00a&#34;&gt;else&lt;/span&gt; { 
-        invalidator.&lt;span style=&#34;color:#1e90ff&#34;&gt;invalidateClass&lt;/span&gt;(session, oName); 
-        responseString = &lt;span style=&#34;color:#a50&#34;&gt;&amp;#34;successfully invalidated toplink cache for table: &amp;#34;&lt;/span&gt;+oName; 
+    CacheInvalidator invalidator = &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;new&lt;/span&gt; CacheInvalidator(session); 
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;if&lt;/span&gt; (oName.&lt;span style=&#34;color:#369&#34;&gt;equals&lt;/span&gt;(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#34;ALL&amp;#34;&lt;/span&gt;)) { 
+        invalidator.&lt;span style=&#34;color:#369&#34;&gt;invalidateAllClasses&lt;/span&gt;(session); 
+        responseString = &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#34;successfully invalidated toplink cache for all tables.&amp;#34;&lt;/span&gt;; 
+    } &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;else&lt;/span&gt; { 
+        invalidator.&lt;span style=&#34;color:#369&#34;&gt;invalidateClass&lt;/span&gt;(session, oName); 
+        responseString = &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#34;successfully invalidated toplink cache for table: &amp;#34;&lt;/span&gt;+oName; 
     } 
-} &lt;span style=&#34;color:#00a&#34;&gt;catch&lt;/span&gt; (Exception e) { 
-    responseString = e.&lt;span style=&#34;color:#1e90ff&#34;&gt;getMessage&lt;/span&gt;(); 
+} &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;catch&lt;/span&gt; (Exception e) { 
+    responseString = e.&lt;span style=&#34;color:#369&#34;&gt;getMessage&lt;/span&gt;(); 
 } &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Calling a servlet from PL/SQL is not particularly complicated, but in our case involved the lookup of server information stored in the database. The wrapper package allowed us to provide the developers with a simple, one-line invocation.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;p_servlet_response := utl_http.request(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;http://&amp;#39;&lt;/span&gt;||l_app_server_host||&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;:&amp;#39;&lt;/span&gt;
-          ||l_app_server_port||&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;/jedi/cacheinvalidatorservlet?objectName=&amp;#39;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;p_servlet_response := utl_http.request(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;http://&amp;#39;&lt;/span&gt;||l_app_server_host||&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;:&amp;#39;&lt;/span&gt;
+          ||l_app_server_port||&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;/jedi/cacheinvalidatorservlet?objectName=&amp;#39;&lt;/span&gt;
           ||p_obj_to_invalidate);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;After making a call to our cacheinvalidator package subsequent to updating the status record, the stale data problem was eliminated in the application.&lt;/p&gt;
 </description>

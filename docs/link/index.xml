@@ -2,22 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Links on Tobybase: A Tech Blog</title>
-    <link>http://localhost:1313/link/</link>
+    <link>http://tobybase.com/link/</link>
     <description>Recent content in Links on Tobybase: A Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2017 ~ Toby Marks</copyright>
-    <lastBuildDate>Thu, 14 Dec 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 15 Dec 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/link/" rel="self" type="application/rss+xml" />
     
       
         <item>
+          <title>Linklog: 2107 Was Bad for Facebook. 2018 Will Be Worse.</title>
+          <link>http://tobybase.com/link/2017-12-15-2018-bad-year-for-facebook/</link>
+          <pubDate>Fri, 15 Dec 2017 00:00:00 +0000</pubDate>
+          <author>Bloomberg</author>
+          <guid>http://tobybase.com/link/2017-12-15-2018-bad-year-for-facebook/</guid>
+          <description>&lt;blockquote&gt;
+&lt;p&gt;While Facebook remains the biggest platform, Google and Twitter are facing similar pressure from governments in the U.S. and in Europe. Germany enacted a law requiring the social networks to remove hate speech promptly or face fines. In the U.S., the activities of a Russian troll farm during the 2016 election campaign prompted scrutiny of Facebook&amp;rsquo;s ad selling practices and a (rather ham-handed) legislative attempt to force some transparency.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The government has an incentive for fostering the growth and continued success of big social media platforms like Facebook and Twitter, because they operate essentially as large data warehouses on social thought, connections and behavior — supplying information that might be difficult or illegal to collect otherwise. Because of the monopoly these companies have on online self expression, and the potentially large and instantaneous impact of that form of expression, they serve as easy chokepoints for controlling the dissemination of ideas.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
           <title>Linklog: on YouTube</title>
-          <link>http://localhost:1313/link/2017-12-14-infolob-youtube/</link>
+          <link>http://tobybase.com/link/2017-12-14-infolob-youtube/</link>
           <pubDate>Thu, 14 Dec 2017 00:00:00 +0000</pubDate>
           <author>Infolob</author>
-          <guid>http://localhost:1313/link/2017-12-14-infolob-youtube/</guid>
-          <description>&lt;p&gt;If you like us and find this content helpful, do the like and subscribe thing to stay informed.&lt;/p&gt;
+          <guid>http://tobybase.com/link/2017-12-14-infolob-youtube/</guid>
+          <description>&lt;p&gt;If you find this content helpful, do the like and subscribe thing to stay informed.&lt;/p&gt;
 </description>
         </item>
       
@@ -25,10 +41,10 @@
       
         <item>
           <title>Linklog: Use Preview to view formatted man pages</title>
-          <link>http://localhost:1313/link/2013-07-24-view-man-pages/</link>
+          <link>http://tobybase.com/link/2013-07-24-view-man-pages/</link>
           <pubDate>Wed, 24 Jul 2013 00:00:00 +0000</pubDate>
           <author>Anonymous</author>
-          <guid>http://localhost:1313/link/2013-07-24-view-man-pages/</guid>
+          <guid>http://tobybase.com/link/2013-07-24-view-man-pages/</guid>
           <description>&lt;p&gt;This is an elegant solution for viewing, searching, and archiving man pages that eliminates the necessity for third party apps.&lt;br /&gt;
 &lt;em&gt;Update:&lt;/em&gt; still works in macOS Sierra.&lt;/p&gt;
 </description>
@@ -38,10 +54,10 @@
       
         <item>
           <title>Linklog: Safari 5.1.7 on my MacBookPro OSX 10.7.4 freezes unexpectedly</title>
-          <link>http://localhost:1313/link/2012-07-25-safari-517-freezes-on-macbook-pro/</link>
+          <link>http://tobybase.com/link/2012-07-25-safari-517-freezes-on-macbook-pro/</link>
           <pubDate>Wed, 25 Jul 2012 00:00:00 +0000</pubDate>
           <author>Apple Discussion Forum</author>
-          <guid>http://localhost:1313/link/2012-07-25-safari-517-freezes-on-macbook-pro/</guid>
+          <guid>http://tobybase.com/link/2012-07-25-safari-517-freezes-on-macbook-pro/</guid>
           <description>&lt;p&gt;Lately I&amp;rsquo;ve been experiencing strange problems when clicking on links in Safari 5.1.7. Usually the progress indicator would either flash momentarily and do nothing, or else it would never appear at all. Pages would sometimes load, but after an unusual delay and with no indication that the browser was actually doing anything. I switched to Chrome as my default browser for a few days, but that was about all I could stand. A little research on the forums showed this fix, which appears to have worked for me.&lt;/p&gt;
 </description>
         </item>
@@ -50,10 +66,10 @@
       
         <item>
           <title>Linklog: Oracle Database Row versus Set Processing, Surprise!</title>
-          <link>http://localhost:1313/link/2012-06-01-oracle-row-vs-set-processing/</link>
+          <link>http://tobybase.com/link/2012-06-01-oracle-row-vs-set-processing/</link>
           <pubDate>Fri, 01 Jun 2012 00:00:00 +0000</pubDate>
           <author>Craig Shallahamer</author>
-          <guid>http://localhost:1313/link/2012-06-01-oracle-row-vs-set-processing/</guid>
+          <guid>http://tobybase.com/link/2012-06-01-oracle-row-vs-set-processing/</guid>
           <description>&lt;p&gt;To folks writing database-driven reports for the web: Craig Shallahamer shows why you should let the (Oracle) database handle as much of your selection and transformation logic as possible.&lt;/p&gt;
 </description>
         </item>
@@ -62,10 +78,10 @@
       
         <item>
           <title>Linklog: SQLFiddle</title>
-          <link>http://localhost:1313/link/2012-05-25-sqlfiddle-is-a-sql-sandbox/</link>
+          <link>http://tobybase.com/link/2012-05-25-sqlfiddle-is-a-sql-sandbox/</link>
           <pubDate>Fri, 25 May 2012 00:00:00 +0000</pubDate>
           <author>Jake Feasel</author>
-          <guid>http://localhost:1313/link/2012-05-25-sqlfiddle-is-a-sql-sandbox/</guid>
+          <guid>http://tobybase.com/link/2012-05-25-sqlfiddle-is-a-sql-sandbox/</guid>
           <description>&lt;p&gt;Build your own mini-schema and run queries against it. Publish your experiments for your friends to tweak. Or try out the examples from your favorite SQL book without having to build a database first. Works for Oracle, PostgreSQL, MySQL, and SQL Server flavors. Pretty cool!&lt;/p&gt;
 </description>
         </item>

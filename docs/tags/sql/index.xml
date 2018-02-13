@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sql on Tobybase: A Tech Blog</title>
-    <link>http://localhost:1313/tags/sql/</link>
+    <link>http://tobybase.com/tags/sql/</link>
     <description>Recent content in Sql on Tobybase: A Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
@@ -14,10 +14,10 @@
         
           <item>
             <title>How To Use SQL to Query an XML Document Using Oracle External Tables</title>
-            <link>http://localhost:1313/blog/2012/11/14/how-to-use-sql-to-query-an-xml-document-using-oracle-external-tables/</link>
+            <link>http://tobybase.com/blog/2012/11/14/how-to-use-sql-to-query-an-xml-document-using-oracle-external-tables/</link>
             <pubDate>Wed, 14 Nov 2012 00:00:00 +0000</pubDate>
             
-            <guid>http://localhost:1313/blog/2012/11/14/how-to-use-sql-to-query-an-xml-document-using-oracle-external-tables/</guid>
+            <guid>http://tobybase.com/blog/2012/11/14/how-to-use-sql-to-query-an-xml-document-using-oracle-external-tables/</guid>
             <description>&lt;p&gt;Oracle&amp;rsquo;s &lt;a href=&#34;http://docs.oracle.com/cd/B28359_01/server.111/b28319/et_concepts.htm&#34;&gt;external table feature&lt;/a&gt; allows you to treat structured files on the database server as tables for query and DML purposes. To use an example from the linked documentation, a tab-delimited file like this:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;56   november, 15, 1980  baker             mary       alice     09/01/2004
@@ -25,121 +25,121 @@
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&amp;hellip;could be queried like this:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#00a&#34;&gt;SELECT&lt;/span&gt; employee_number,
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-SQL&#34; data-lang=&#34;SQL&#34;&gt;&lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;SELECT&lt;/span&gt; employee_number,
        employee_first_name,
-       substr(employee_middle_name, &lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;),
+       substr(employee_middle_name, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1&lt;/span&gt;),
        employee_last_name,
        employee_hire_date,
-       to_date(employee_dob,&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;month, dd, yyyy&amp;#39;&lt;/span&gt;)
-  &lt;span style=&#34;color:#00a&#34;&gt;FROM&lt;/span&gt; employees;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+       to_date(employee_dob,&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;month, dd, yyyy&amp;#39;&lt;/span&gt;)
+  &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FROM&lt;/span&gt; employees;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;After defining the external table like this:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#00a&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;TABLE&lt;/span&gt; employees
-           (employee_number      &lt;span style=&#34;color:#0aa&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color:#099&#34;&gt;5&lt;/span&gt;),
-            employee_dob         &lt;span style=&#34;color:#0aa&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color:#099&#34;&gt;20&lt;/span&gt;),
-            employee_last_name   &lt;span style=&#34;color:#0aa&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color:#099&#34;&gt;20&lt;/span&gt;),
-            employee_first_name  &lt;span style=&#34;color:#0aa&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color:#099&#34;&gt;15&lt;/span&gt;),
-            employee_middle_name &lt;span style=&#34;color:#0aa&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color:#099&#34;&gt;15&lt;/span&gt;),
-            employee_hire_date   &lt;span style=&#34;color:#0aa&#34;&gt;DATE&lt;/span&gt;)
-         ORGANIZATION &lt;span style=&#34;color:#00a&#34;&gt;EXTERNAL&lt;/span&gt;
-           (&lt;span style=&#34;color:#00a&#34;&gt;TYPE&lt;/span&gt; ORACLE_LOADER
-            &lt;span style=&#34;color:#00a&#34;&gt;DEFAULT&lt;/span&gt; DIRECTORY def_dir1
-            &lt;span style=&#34;color:#00a&#34;&gt;ACCESS&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;PARAMETERS&lt;/span&gt;
-              (RECORDS DELIMITED &lt;span style=&#34;color:#00a&#34;&gt;BY&lt;/span&gt; NEWLINE
-               FIELDS (employee_number      &lt;span style=&#34;color:#0aa&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color:#099&#34;&gt;2&lt;/span&gt;),
-                       employee_dob         &lt;span style=&#34;color:#0aa&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color:#099&#34;&gt;20&lt;/span&gt;),
-                       employee_last_name   &lt;span style=&#34;color:#0aa&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color:#099&#34;&gt;18&lt;/span&gt;),
-                       employee_first_name  &lt;span style=&#34;color:#0aa&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color:#099&#34;&gt;11&lt;/span&gt;),
-                       employee_middle_name &lt;span style=&#34;color:#0aa&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color:#099&#34;&gt;11&lt;/span&gt;),
-                       employee_hire_date   &lt;span style=&#34;color:#0aa&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color:#099&#34;&gt;10&lt;/span&gt;) date_format &lt;span style=&#34;color:#0aa&#34;&gt;DATE&lt;/span&gt; mask &lt;span style=&#34;color:#00a&#34;&gt;&amp;#34;mm/dd/yyyy&amp;#34;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;TABLE&lt;/span&gt; employees
+           (employee_number      &lt;span style=&#34;color:#038&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;5&lt;/span&gt;),
+            employee_dob         &lt;span style=&#34;color:#038&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;20&lt;/span&gt;),
+            employee_last_name   &lt;span style=&#34;color:#038&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;20&lt;/span&gt;),
+            employee_first_name  &lt;span style=&#34;color:#038&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;15&lt;/span&gt;),
+            employee_middle_name &lt;span style=&#34;color:#038&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;15&lt;/span&gt;),
+            employee_hire_date   &lt;span style=&#34;color:#038&#34;&gt;DATE&lt;/span&gt;)
+         ORGANIZATION &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;EXTERNAL&lt;/span&gt;
+           (&lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;TYPE&lt;/span&gt; ORACLE_LOADER
+            &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;DEFAULT&lt;/span&gt; DIRECTORY def_dir1
+            &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;ACCESS&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;PARAMETERS&lt;/span&gt;
+              (RECORDS DELIMITED &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;BY&lt;/span&gt; NEWLINE
+               FIELDS (employee_number      &lt;span style=&#34;color:#038&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2&lt;/span&gt;),
+                       employee_dob         &lt;span style=&#34;color:#038&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;20&lt;/span&gt;),
+                       employee_last_name   &lt;span style=&#34;color:#038&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;18&lt;/span&gt;),
+                       employee_first_name  &lt;span style=&#34;color:#038&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;11&lt;/span&gt;),
+                       employee_middle_name &lt;span style=&#34;color:#038&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;11&lt;/span&gt;),
+                       employee_hire_date   &lt;span style=&#34;color:#038&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;10&lt;/span&gt;) date_format &lt;span style=&#34;color:#038&#34;&gt;DATE&lt;/span&gt; mask &lt;span style=&#34;color:#a60;background-color:#fff0f0&#34;&gt;&amp;#34;mm/dd/yyyy&amp;#34;&lt;/span&gt;
                       )
               )
-            &lt;span style=&#34;color:#00a&#34;&gt;LOCATION&lt;/span&gt; (&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;info.dat&amp;#39;&lt;/span&gt;)
+            &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;LOCATION&lt;/span&gt; (&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;info.dat&amp;#39;&lt;/span&gt;)
            );&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Assuming of course that the file&amp;rsquo;s name is &lt;code&gt;info.dat&lt;/code&gt;, and its path on the filesystem has already been created as a directory object &lt;code&gt;DEF_DIR1&lt;/code&gt; in the database.&lt;/p&gt;
 
 &lt;p&gt;A similar technique exists for querying simple XML files, taking advantage of &lt;a href=&#34;http://docs.oracle.com/cd/E11882_01/appdev.112/e23094/toc.htm&#34;&gt;Oracle&amp;rsquo;s XML DB&lt;/a&gt; features. _HT to &lt;a href=&#34;https://forums.oracle.com/forums/profile.jspa?userID=695787&#34;&gt;odie_63&lt;/a&gt; on the XML DB forums for introducing me to this method._&lt;/p&gt;
 
 &lt;p&gt;Suppose you have a simple XML file (elements, but no attributes; no complex column types - it could work for the preceding, but I&amp;rsquo;m not sure) like so.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;    &lt;span style=&#34;color:#1e90ff;font-weight:bold&#34;&gt;&amp;lt;Employees&amp;gt;&lt;/span&gt;
-        &lt;span style=&#34;color:#1e90ff;font-weight:bold&#34;&gt;&amp;lt;Employee&amp;gt;&lt;/span&gt;
-            &lt;span style=&#34;color:#1e90ff;font-weight:bold&#34;&gt;&amp;lt;id&amp;gt;&lt;/span&gt;1234&lt;span style=&#34;color:#1e90ff;font-weight:bold&#34;&gt;&amp;lt;/id&amp;gt;&lt;/span&gt;
-            &lt;span style=&#34;color:#1e90ff;font-weight:bold&#34;&gt;&amp;lt;lastname&amp;gt;&lt;/span&gt;Jetson&lt;span style=&#34;color:#1e90ff;font-weight:bold&#34;&gt;&amp;lt;/lastname&amp;gt;&lt;/span&gt;
-            &lt;span style=&#34;color:#1e90ff;font-weight:bold&#34;&gt;&amp;lt;firstname&amp;gt;&lt;/span&gt;George&lt;span style=&#34;color:#1e90ff;font-weight:bold&#34;&gt;&amp;lt;/firstname&amp;gt;&lt;/span&gt;
-            &lt;span style=&#34;color:#1e90ff;font-weight:bold&#34;&gt;&amp;lt;department&amp;gt;&lt;/span&gt;10&lt;span style=&#34;color:#1e90ff;font-weight:bold&#34;&gt;&amp;lt;/department&amp;gt;&lt;/span&gt;
-            &lt;span style=&#34;color:#1e90ff;font-weight:bold&#34;&gt;&amp;lt;salary&amp;gt;&lt;/span&gt;50000.00&lt;span style=&#34;color:#1e90ff;font-weight:bold&#34;&gt;&amp;lt;/salary&amp;gt;&lt;/span&gt;
-        &lt;span style=&#34;color:#1e90ff;font-weight:bold&#34;&gt;&amp;lt;/Employee&amp;gt;&lt;/span&gt;
-        &lt;span style=&#34;color:#1e90ff;font-weight:bold&#34;&gt;&amp;lt;Employee&amp;gt;&lt;/span&gt;
-            &lt;span style=&#34;color:#1e90ff;font-weight:bold&#34;&gt;&amp;lt;id&amp;gt;&lt;/span&gt;1235&lt;span style=&#34;color:#1e90ff;font-weight:bold&#34;&gt;&amp;lt;/id&amp;gt;&lt;/span&gt;
-            &lt;span style=&#34;color:#1e90ff;font-weight:bold&#34;&gt;&amp;lt;lastname&amp;gt;&lt;/span&gt;Crackorn&lt;span style=&#34;color:#1e90ff;font-weight:bold&#34;&gt;&amp;lt;/lastname&amp;gt;&lt;/span&gt;
-            &lt;span style=&#34;color:#1e90ff;font-weight:bold&#34;&gt;&amp;lt;firstname&amp;gt;&lt;/span&gt;James&lt;span style=&#34;color:#1e90ff;font-weight:bold&#34;&gt;&amp;lt;/firstname&amp;gt;&lt;/span&gt;
-            &lt;span style=&#34;color:#1e90ff;font-weight:bold&#34;&gt;&amp;lt;department&amp;gt;&lt;/span&gt;10&lt;span style=&#34;color:#1e90ff;font-weight:bold&#34;&gt;&amp;lt;/department&amp;gt;&lt;/span&gt;
-            &lt;span style=&#34;color:#1e90ff;font-weight:bold&#34;&gt;&amp;lt;salary&amp;gt;&lt;/span&gt;40000.00&lt;span style=&#34;color:#1e90ff;font-weight:bold&#34;&gt;&amp;lt;/salary&amp;gt;&lt;/span&gt;
-        &lt;span style=&#34;color:#1e90ff;font-weight:bold&#34;&gt;&amp;lt;/Employee&amp;gt;&lt;/span&gt;
-        &lt;span style=&#34;color:#1e90ff;font-weight:bold&#34;&gt;&amp;lt;Employee&amp;gt;&lt;/span&gt;
-            &lt;span style=&#34;color:#1e90ff;font-weight:bold&#34;&gt;&amp;lt;id&amp;gt;&lt;/span&gt;1236&lt;span style=&#34;color:#1e90ff;font-weight:bold&#34;&gt;&amp;lt;/id&amp;gt;&lt;/span&gt;
-            &lt;span style=&#34;color:#1e90ff;font-weight:bold&#34;&gt;&amp;lt;lastname&amp;gt;&lt;/span&gt;Hoffman&lt;span style=&#34;color:#1e90ff;font-weight:bold&#34;&gt;&amp;lt;/lastname&amp;gt;&lt;/span&gt;
-            &lt;span style=&#34;color:#1e90ff;font-weight:bold&#34;&gt;&amp;lt;firstname&amp;gt;&lt;/span&gt;Burl&lt;span style=&#34;color:#1e90ff;font-weight:bold&#34;&gt;&amp;lt;/firstname&amp;gt;&lt;/span&gt;
-            &lt;span style=&#34;color:#1e90ff;font-weight:bold&#34;&gt;&amp;lt;department&amp;gt;&lt;/span&gt;20&lt;span style=&#34;color:#1e90ff;font-weight:bold&#34;&gt;&amp;lt;/department&amp;gt;&lt;/span&gt;
-            &lt;span style=&#34;color:#1e90ff;font-weight:bold&#34;&gt;&amp;lt;salary&amp;gt;&lt;/span&gt;75000.00&lt;span style=&#34;color:#1e90ff;font-weight:bold&#34;&gt;&amp;lt;/salary&amp;gt;&lt;/span&gt;
-        &lt;span style=&#34;color:#1e90ff;font-weight:bold&#34;&gt;&amp;lt;/Employee&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#1e90ff;font-weight:bold&#34;&gt;&amp;lt;/Employees&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;    &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;Employees&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;Employee&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;id&amp;gt;&lt;/span&gt;1234&lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/id&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;lastname&amp;gt;&lt;/span&gt;Jetson&lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/lastname&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;firstname&amp;gt;&lt;/span&gt;George&lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/firstname&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;department&amp;gt;&lt;/span&gt;10&lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/department&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;salary&amp;gt;&lt;/span&gt;50000.00&lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/salary&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/Employee&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;Employee&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;id&amp;gt;&lt;/span&gt;1235&lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/id&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;lastname&amp;gt;&lt;/span&gt;Crackorn&lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/lastname&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;firstname&amp;gt;&lt;/span&gt;James&lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/firstname&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;department&amp;gt;&lt;/span&gt;10&lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/department&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;salary&amp;gt;&lt;/span&gt;40000.00&lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/salary&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/Employee&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;Employee&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;id&amp;gt;&lt;/span&gt;1236&lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/id&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;lastname&amp;gt;&lt;/span&gt;Hoffman&lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/lastname&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;firstname&amp;gt;&lt;/span&gt;Burl&lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/firstname&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;department&amp;gt;&lt;/span&gt;20&lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/department&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;salary&amp;gt;&lt;/span&gt;75000.00&lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/salary&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/Employee&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/Employees&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Place it on the database server in a readable directory, e.g. &lt;code&gt;/home/oracle&lt;/code&gt;. Name it &lt;code&gt;employees.xml&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Now execute the following in SQL*Plus:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#00a&#34;&gt;SQL&lt;/span&gt;&amp;gt; &lt;span style=&#34;color:#00a&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;OR&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;REPLACE&lt;/span&gt; DIRECTORY XML_DIR &lt;span style=&#34;color:#00a&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;/home/oracle&amp;#39;&lt;/span&gt;;
-    
-    &lt;span style=&#34;color:#00a&#34;&gt;SQL&lt;/span&gt;&amp;gt; &lt;span style=&#34;color:#00a&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;OR&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;REPLACE&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;VIEW&lt;/span&gt; employees_v &lt;span style=&#34;color:#00a&#34;&gt;AS&lt;/span&gt;
-    &lt;span style=&#34;color:#00a&#34;&gt;SELECT&lt;/span&gt; *
-    &lt;span style=&#34;color:#00a&#34;&gt;FROM&lt;/span&gt; XMLTable(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;/Employees/Employee&amp;#39;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;SQL&lt;/span&gt;&amp;gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;OR&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;REPLACE&lt;/span&gt; DIRECTORY XML_DIR &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;/home/oracle&amp;#39;&lt;/span&gt;;
+
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;SQL&lt;/span&gt;&amp;gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;OR&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;REPLACE&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;VIEW&lt;/span&gt; employees_v &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;AS&lt;/span&gt;
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;SELECT&lt;/span&gt; *
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FROM&lt;/span&gt; XMLTable(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;/Employees/Employee&amp;#39;&lt;/span&gt;
             passing xmltype(
-                     bfilename(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;XML_DIR&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;employees.xml&amp;#39;&lt;/span&gt;)
-                    , nls_charset_id(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;AL32UTF8&amp;#39;&lt;/span&gt;)
+                     bfilename(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;XML_DIR&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;employees.xml&amp;#39;&lt;/span&gt;)
+                    , nls_charset_id(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;AL32UTF8&amp;#39;&lt;/span&gt;)
                     )
-            columns id           &lt;span style=&#34;color:#0aa&#34;&gt;number&lt;/span&gt; path &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;id&amp;#39;&lt;/span&gt;
-                  , lastname     varchar2(&lt;span style=&#34;color:#099&#34;&gt;30&lt;/span&gt;) path &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;lastname&amp;#39;&lt;/span&gt;
-                  , firstname    varchar2(&lt;span style=&#34;color:#099&#34;&gt;30&lt;/span&gt;) path &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;firstname&amp;#39;&lt;/span&gt;
-                  , department   &lt;span style=&#34;color:#0aa&#34;&gt;number&lt;/span&gt; path &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;department&amp;#39;&lt;/span&gt;
-                  , salary       &lt;span style=&#34;color:#0aa&#34;&gt;number&lt;/span&gt; path &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;salary&amp;#39;&lt;/span&gt;
+            columns id           &lt;span style=&#34;color:#038&#34;&gt;number&lt;/span&gt; path &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;id&amp;#39;&lt;/span&gt;
+                  , lastname     varchar2(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;30&lt;/span&gt;) path &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;lastname&amp;#39;&lt;/span&gt;
+                  , firstname    varchar2(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;30&lt;/span&gt;) path &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;firstname&amp;#39;&lt;/span&gt;
+                  , department   &lt;span style=&#34;color:#038&#34;&gt;number&lt;/span&gt; path &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;department&amp;#39;&lt;/span&gt;
+                  , salary       &lt;span style=&#34;color:#038&#34;&gt;number&lt;/span&gt; path &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;salary&amp;#39;&lt;/span&gt;
            );
 
-    &lt;span style=&#34;color:#00a&#34;&gt;SQL&lt;/span&gt;&amp;gt; &lt;span style=&#34;color:#00a&#34;&gt;SELECT&lt;/span&gt; * &lt;span style=&#34;color:#00a&#34;&gt;FROM&lt;/span&gt; employees_v;
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;SQL&lt;/span&gt;&amp;gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;SELECT&lt;/span&gt; * &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FROM&lt;/span&gt; employees_v;
     ID   LASTNAME FIRSTNAME DEPARTMENT SALARY
-    &lt;span style=&#34;color:#aaa;font-style:italic&#34;&gt;---- -------- --------- ---------- ------
-&lt;/span&gt;&lt;span style=&#34;color:#aaa;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#099&#34;&gt;1234&lt;/span&gt; Jetson   George    &lt;span style=&#34;color:#099&#34;&gt;10&lt;/span&gt;         &lt;span style=&#34;color:#099&#34;&gt;50000&lt;/span&gt;    
-    &lt;span style=&#34;color:#099&#34;&gt;1235&lt;/span&gt; Crackorn James     &lt;span style=&#34;color:#099&#34;&gt;10&lt;/span&gt;         &lt;span style=&#34;color:#099&#34;&gt;40000&lt;/span&gt;
-    &lt;span style=&#34;color:#099&#34;&gt;1236&lt;/span&gt; Hoffman  Burl      &lt;span style=&#34;color:#099&#34;&gt;20&lt;/span&gt;         &lt;span style=&#34;color:#099&#34;&gt;75000&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    &lt;span style=&#34;color:#888&#34;&gt;---- -------- --------- ---------- ------
+&lt;/span&gt;&lt;span style=&#34;color:#888&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1234&lt;/span&gt; Jetson   George    &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;10&lt;/span&gt;         &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;50000&lt;/span&gt;    
+    &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1235&lt;/span&gt; Crackorn James     &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;10&lt;/span&gt;         &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;40000&lt;/span&gt;
+    &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1236&lt;/span&gt; Hoffman  Burl      &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;20&lt;/span&gt;         &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;75000&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;You can modify construction of the view to read from multiple files by using a simple &lt;code&gt;UNION&lt;/code&gt; operator, or you can make the source filename dynamic so you can switch datasets at runtime. Here&amp;rsquo;s how you might do something like that:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#00a&#34;&gt;SQL&lt;/span&gt;&amp;gt; &lt;span style=&#34;color:#00a&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;OR&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;REPLACE&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;VIEW&lt;/span&gt; employees_v &lt;span style=&#34;color:#00a&#34;&gt;AS&lt;/span&gt;
-    &lt;span style=&#34;color:#00a&#34;&gt;SELECT&lt;/span&gt; *
-    &lt;span style=&#34;color:#00a&#34;&gt;FROM&lt;/span&gt; XMLTable(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;/Employees/Employee&amp;#39;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;SQL&lt;/span&gt;&amp;gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;OR&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;REPLACE&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;VIEW&lt;/span&gt; employees_v &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;AS&lt;/span&gt;
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;SELECT&lt;/span&gt; *
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FROM&lt;/span&gt; XMLTable(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;/Employees/Employee&amp;#39;&lt;/span&gt;
             passing xmltype(
-                     bfilename(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;XML_DIR&amp;#39;&lt;/span&gt;, userenv(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;CLIENT_INFO&amp;#39;&lt;/span&gt;))
-                    , nls_charset_id(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;AL32UTF8&amp;#39;&lt;/span&gt;)
+                     bfilename(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;XML_DIR&amp;#39;&lt;/span&gt;, userenv(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;CLIENT_INFO&amp;#39;&lt;/span&gt;))
+                    , nls_charset_id(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;AL32UTF8&amp;#39;&lt;/span&gt;)
                     )
-            columns id           &lt;span style=&#34;color:#0aa&#34;&gt;number&lt;/span&gt; path &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;id&amp;#39;&lt;/span&gt;
-                  , lastname     varchar2(&lt;span style=&#34;color:#099&#34;&gt;30&lt;/span&gt;) path &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;lastname&amp;#39;&lt;/span&gt;
-                  , firstname    varchar2(&lt;span style=&#34;color:#099&#34;&gt;30&lt;/span&gt;) path &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;firstname&amp;#39;&lt;/span&gt;
-                  , department   &lt;span style=&#34;color:#0aa&#34;&gt;number&lt;/span&gt; path &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;department&amp;#39;&lt;/span&gt;
-                  , salary       &lt;span style=&#34;color:#0aa&#34;&gt;number&lt;/span&gt; path &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;salary&amp;#39;&lt;/span&gt;
+            columns id           &lt;span style=&#34;color:#038&#34;&gt;number&lt;/span&gt; path &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;id&amp;#39;&lt;/span&gt;
+                  , lastname     varchar2(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;30&lt;/span&gt;) path &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;lastname&amp;#39;&lt;/span&gt;
+                  , firstname    varchar2(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;30&lt;/span&gt;) path &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;firstname&amp;#39;&lt;/span&gt;
+                  , department   &lt;span style=&#34;color:#038&#34;&gt;number&lt;/span&gt; path &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;department&amp;#39;&lt;/span&gt;
+                  , salary       &lt;span style=&#34;color:#038&#34;&gt;number&lt;/span&gt; path &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;salary&amp;#39;&lt;/span&gt;
            );&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Then at runtime, specify the file you want to use like this:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#00a&#34;&gt;SQL&lt;/span&gt;&amp;gt; &lt;span style=&#34;color:#00a&#34;&gt;exec&lt;/span&gt; dbms_application_info.set_client_info(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;employees_01.xml&amp;#39;&lt;/span&gt;);
-    
-    &lt;span style=&#34;color:#00a&#34;&gt;SQL&lt;/span&gt;&amp;gt; &lt;span style=&#34;color:#00a&#34;&gt;SELECT&lt;/span&gt; * &lt;span style=&#34;color:#00a&#34;&gt;FROM&lt;/span&gt; employees_v;
-    ID   LASTNAME FIRSTNAME DEPARTMENT SALARY
-    &lt;span style=&#34;color:#aaa;font-style:italic&#34;&gt;---- -------- --------- ---------- ------
-&lt;/span&gt;&lt;span style=&#34;color:#aaa;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#099&#34;&gt;1234&lt;/span&gt; Jetson   George    &lt;span style=&#34;color:#099&#34;&gt;10&lt;/span&gt;         &lt;span style=&#34;color:#099&#34;&gt;50000&lt;/span&gt;    
-    &lt;span style=&#34;color:#099&#34;&gt;1235&lt;/span&gt; Crackorn James     &lt;span style=&#34;color:#099&#34;&gt;10&lt;/span&gt;         &lt;span style=&#34;color:#099&#34;&gt;40000&lt;/span&gt;
-    &lt;span style=&#34;color:#099&#34;&gt;1236&lt;/span&gt; Hoffman  Burl      &lt;span style=&#34;color:#099&#34;&gt;20&lt;/span&gt;         &lt;span style=&#34;color:#099&#34;&gt;75000&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-plpgsql&#34; data-lang=&#34;plpgsql&#34;&gt;    SQL&amp;gt; exec dbms_application_info&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;.&lt;/span&gt;set_client_info(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;employees_01.xml&amp;#39;&lt;/span&gt;);
 
-    &lt;span style=&#34;color:#00a&#34;&gt;SQL&lt;/span&gt;&amp;gt; &lt;span style=&#34;color:#00a&#34;&gt;exec&lt;/span&gt; dbms_application_info.set_client_info(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;employees_02.xml&amp;#39;&lt;/span&gt;);
-    
-    &lt;span style=&#34;color:#00a&#34;&gt;SQL&lt;/span&gt;&amp;gt; &lt;span style=&#34;color:#00a&#34;&gt;SELECT&lt;/span&gt; * &lt;span style=&#34;color:#00a&#34;&gt;FROM&lt;/span&gt; employees_v;
+    SQL&amp;gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;SELECT&lt;/span&gt; * &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FROM&lt;/span&gt; employees_v;
     ID   LASTNAME FIRSTNAME DEPARTMENT SALARY
-    &lt;span style=&#34;color:#aaa;font-style:italic&#34;&gt;---- -------- --------- ---------- ------
-&lt;/span&gt;&lt;span style=&#34;color:#aaa;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#099&#34;&gt;1234&lt;/span&gt; Ringwald Malory    &lt;span style=&#34;color:#099&#34;&gt;30&lt;/span&gt;         &lt;span style=&#34;color:#099&#34;&gt;63000&lt;/span&gt;    
-    &lt;span style=&#34;color:#099&#34;&gt;1235&lt;/span&gt; Dulles   Bob       &lt;span style=&#34;color:#099&#34;&gt;10&lt;/span&gt;         &lt;span style=&#34;color:#099&#34;&gt;100000&lt;/span&gt;
-    &lt;span style=&#34;color:#099&#34;&gt;1236&lt;/span&gt; Stein    Frank     &lt;span style=&#34;color:#099&#34;&gt;50&lt;/span&gt;         &lt;span style=&#34;color:#099&#34;&gt;55000&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    &lt;span style=&#34;color:#888&#34;&gt;---- -------- --------- ---------- ------
+&lt;/span&gt;&lt;span style=&#34;color:#888&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1234&lt;/span&gt; Jetson   George    &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;10&lt;/span&gt;         &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;50000&lt;/span&gt;    
+    &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1235&lt;/span&gt; Crackorn James     &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;10&lt;/span&gt;         &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;40000&lt;/span&gt;
+    &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1236&lt;/span&gt; Hoffman  Burl      &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;20&lt;/span&gt;         &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;75000&lt;/span&gt;
+
+    SQL&amp;gt; exec dbms_application_info&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;.&lt;/span&gt;set_client_info(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;employees_02.xml&amp;#39;&lt;/span&gt;);
+
+    SQL&amp;gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;SELECT&lt;/span&gt; * &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FROM&lt;/span&gt; employees_v;
+    ID   LASTNAME FIRSTNAME DEPARTMENT SALARY
+    &lt;span style=&#34;color:#888&#34;&gt;---- -------- --------- ---------- ------
+&lt;/span&gt;&lt;span style=&#34;color:#888&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1234&lt;/span&gt; Ringwald Malory    &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;30&lt;/span&gt;         &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;63000&lt;/span&gt;    
+    &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1235&lt;/span&gt; Dulles   Bob       &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;10&lt;/span&gt;         &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;100000&lt;/span&gt;
+    &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1236&lt;/span&gt; Stein    Frank     &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;50&lt;/span&gt;         &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;55000&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Why might this be useful? Suppose you have an arbitrary number of identically structured XML files in a directory that you want to import into a relational database table. Using a shell script you can, for each file in the directory,&lt;/p&gt;
 
 &lt;ul&gt;
@@ -158,10 +158,10 @@
         
           <item>
             <title>Use DML Error Logging</title>
-            <link>http://localhost:1313/blog/2012/06/07/use-dml-error-logging/</link>
+            <link>http://tobybase.com/blog/2012/06/07/use-dml-error-logging/</link>
             <pubDate>Thu, 07 Jun 2012 17:04:00 +0000</pubDate>
             
-            <guid>http://localhost:1313/blog/2012/06/07/use-dml-error-logging/</guid>
+            <guid>http://tobybase.com/blog/2012/06/07/use-dml-error-logging/</guid>
             <description>&lt;p&gt;Introduced with Oracle 10gR2, DML Error Logging allows you to make standard SQL &lt;code&gt;INSERT&lt;/code&gt;, &lt;code&gt;UPDATE&lt;/code&gt;, and &lt;code&gt;MERGE&lt;/code&gt; statements behave more like the SQL*Loader utility, logging errors to a table rather than failing and rolling back the first time an error condition is encountered.&lt;/p&gt;
 
 &lt;p&gt;The syntax is the same for all DML statements. Just add the following clause to the end of your DML:&lt;/p&gt;
@@ -170,60 +170,60 @@
 &amp;gt; … the database assigns the default name generated by the DBMS&lt;em&gt;ERRLOG package. The default error log table name is ERR$&lt;/em&gt; followed by the first 25 characters of the name of the table upon which the DML operation is being executed.&lt;/p&gt;
 
 &lt;p&gt;In most cases you&amp;rsquo;ll probably want to specify your own log table, like this:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    LOG ERRORS &lt;span style=&#34;color:#00a&#34;&gt;INTO&lt;/span&gt; error_table&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    LOG ERRORS &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; error_table&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;If you do, you&amp;rsquo;ll need to create the table beforehand with &lt;code&gt;DBMS_ERRLOG&lt;/code&gt;.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#00a&#34;&gt;EXEC&lt;/span&gt; DBMS_ERRLOG.CREATE_ERROR_LOG(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;table&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;error_table&amp;#39;&lt;/span&gt;);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;EXEC&lt;/span&gt; DBMS_ERRLOG.CREATE_ERROR_LOG(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;table&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;error_table&amp;#39;&lt;/span&gt;);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Like SQL*Loader, you can specify a maximum number of errors to tolerate before failing and rolling back the transaction. You can also just say &lt;code&gt;UNLIMITED&lt;/code&gt; if you don&amp;rsquo;t ever want to fail the transaction.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    LOG ERRORS &lt;span style=&#34;color:#00a&#34;&gt;INTO&lt;/span&gt; error_table REJECT &lt;span style=&#34;color:#00a&#34;&gt;LIMIT&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;99&lt;/span&gt;
-    LOG ERRORS &lt;span style=&#34;color:#00a&#34;&gt;INTO&lt;/span&gt; error_table REJECT &lt;span style=&#34;color:#00a&#34;&gt;LIMIT&lt;/span&gt; UNLIMITED&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    LOG ERRORS &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; error_table REJECT &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;LIMIT&lt;/span&gt; &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;99&lt;/span&gt;
+    LOG ERRORS &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; error_table REJECT &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;LIMIT&lt;/span&gt; UNLIMITED&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Since the default limit is zero, it makes sense to always include this clause.&lt;/p&gt;
 
 &lt;p&gt;The last option is to specify a string that identifies that particular DML operation, so that you can group sets of errors in the log table. Here is an example that incorporates &lt;code&gt;SYSDATE&lt;/code&gt; to tag all errors belonging to this DML operation.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    LOG ERRORS &lt;span style=&#34;color:#00a&#34;&gt;INTO&lt;/span&gt; error_table (&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Import from external datasource &amp;#39;&lt;/span&gt;||TO_CHAR(SYSDATE)) REJECT &lt;span style=&#34;color:#00a&#34;&gt;LIMIT&lt;/span&gt; UNLIMITED&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    LOG ERRORS &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; error_table (&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Import from external datasource &amp;#39;&lt;/span&gt;||TO_CHAR(SYSDATE)) REJECT &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;LIMIT&lt;/span&gt; UNLIMITED&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Putting it all together, here is a short example demonstrating the use of DML Error Logging for merging data between two similar, but non-identically structured tables. An alternate strategy might have involved creating a custom interface table with a block of PL/SQL to perform inserts and mark the failed rows. Here, we take advantage of the native capabilities of the database to simplify and accelerate the process.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#00a&#34;&gt;create&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;table&lt;/span&gt; users_loc (id &lt;span style=&#34;color:#0aa&#34;&gt;number&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;primary&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;key&lt;/span&gt;, name varchar2(&lt;span style=&#34;color:#099&#34;&gt;75&lt;/span&gt;));
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;create&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;table&lt;/span&gt; users_loc (id &lt;span style=&#34;color:#038&#34;&gt;number&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;primary&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;key&lt;/span&gt;, name varchar2(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;75&lt;/span&gt;));
     
-    &lt;span style=&#34;color:#00a&#34;&gt;create&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;table&lt;/span&gt; users_ext (uuid varchar2(&lt;span style=&#34;color:#099&#34;&gt;10&lt;/span&gt;), fname varchar2(&lt;span style=&#34;color:#099&#34;&gt;15&lt;/span&gt;), lname varchar2(&lt;span style=&#34;color:#099&#34;&gt;20&lt;/span&gt;));
-    &lt;span style=&#34;color:#00a&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#00a&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;1000&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Scotty&amp;#39;&lt;/span&gt;,  &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;P&amp;#39;&lt;/span&gt;);
-    &lt;span style=&#34;color:#00a&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#00a&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;2000&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Melinda&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Manning&amp;#39;&lt;/span&gt;);
-    &lt;span style=&#34;color:#00a&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#00a&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;200J&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Jamie&amp;#39;&lt;/span&gt;,   &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Brooks&amp;#39;&lt;/span&gt;);
-    &lt;span style=&#34;color:#00a&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#00a&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;1000&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Jason&amp;#39;&lt;/span&gt;,   &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Jennings&amp;#39;&lt;/span&gt;);
-    &lt;span style=&#34;color:#00a&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#00a&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;4000&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Marcus&amp;#39;&lt;/span&gt;,  &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Nevada&amp;#39;&lt;/span&gt;);
-    &lt;span style=&#34;color:#00a&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#00a&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;AAAA&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Alfred&amp;#39;&lt;/span&gt;,  &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Butler&amp;#39;&lt;/span&gt;);
-    &lt;span style=&#34;color:#00a&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#00a&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;ABAB&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Simon&amp;#39;&lt;/span&gt;,   &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Jones&amp;#39;&lt;/span&gt;);
-    &lt;span style=&#34;color:#00a&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#00a&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;6000&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Joon&amp;#39;&lt;/span&gt;,    &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Patel&amp;#39;&lt;/span&gt;);
-    &lt;span style=&#34;color:#00a&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#00a&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;7000&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Wanda&amp;#39;&lt;/span&gt;,   &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Lutz&amp;#39;&lt;/span&gt;);
-    &lt;span style=&#34;color:#00a&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#00a&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;8000&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Joseph&amp;#39;&lt;/span&gt;,  &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;McBride&amp;#39;&lt;/span&gt;);
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;create&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;table&lt;/span&gt; users_ext (uuid varchar2(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;10&lt;/span&gt;), fname varchar2(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;15&lt;/span&gt;), lname varchar2(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;20&lt;/span&gt;));
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;1000&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Scotty&amp;#39;&lt;/span&gt;,  &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;P&amp;#39;&lt;/span&gt;);
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;2000&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Melinda&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Manning&amp;#39;&lt;/span&gt;);
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;200J&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Jamie&amp;#39;&lt;/span&gt;,   &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Brooks&amp;#39;&lt;/span&gt;);
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;1000&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Jason&amp;#39;&lt;/span&gt;,   &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Jennings&amp;#39;&lt;/span&gt;);
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;4000&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Marcus&amp;#39;&lt;/span&gt;,  &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Nevada&amp;#39;&lt;/span&gt;);
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;AAAA&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Alfred&amp;#39;&lt;/span&gt;,  &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Butler&amp;#39;&lt;/span&gt;);
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;ABAB&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Simon&amp;#39;&lt;/span&gt;,   &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Jones&amp;#39;&lt;/span&gt;);
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;6000&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Joon&amp;#39;&lt;/span&gt;,    &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Patel&amp;#39;&lt;/span&gt;);
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;7000&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Wanda&amp;#39;&lt;/span&gt;,   &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Lutz&amp;#39;&lt;/span&gt;);
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;8000&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Joseph&amp;#39;&lt;/span&gt;,  &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;McBride&amp;#39;&lt;/span&gt;);
     
-    &lt;span style=&#34;color:#00a&#34;&gt;exec&lt;/span&gt; dbms_errlog.create_error_log(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;users_loc&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;users_errs&amp;#39;&lt;/span&gt;);
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;exec&lt;/span&gt; dbms_errlog.create_error_log(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;users_loc&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;users_errs&amp;#39;&lt;/span&gt;);
     
-    &lt;span style=&#34;color:#00a&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;into&lt;/span&gt; users_loc (id, name) 
-    &lt;span style=&#34;color:#00a&#34;&gt;select&lt;/span&gt; uuid, 
-           fname||&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39; &amp;#39;&lt;/span&gt;||lname 
-      &lt;span style=&#34;color:#00a&#34;&gt;from&lt;/span&gt; users_ext 
-    log errors &lt;span style=&#34;color:#00a&#34;&gt;into&lt;/span&gt; users_errs (&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;import from users_ext: &amp;#39;&lt;/span&gt;||to_char(sysdate)) 
-    reject &lt;span style=&#34;color:#00a&#34;&gt;limit&lt;/span&gt; unlimited;
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;into&lt;/span&gt; users_loc (id, name) 
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;select&lt;/span&gt; uuid, 
+           fname||&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39; &amp;#39;&lt;/span&gt;||lname 
+      &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;from&lt;/span&gt; users_ext 
+    log errors &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;into&lt;/span&gt; users_errs (&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;import from users_ext: &amp;#39;&lt;/span&gt;||to_char(sysdate)) 
+    reject &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;limit&lt;/span&gt; unlimited;
     
     col ora_err_mesg$ format a40
     col ora_err_rowid$ format a15
     col ora_err_tag$ format a50
     col id format a10
     col name format a30
-    &lt;span style=&#34;color:#00a&#34;&gt;select&lt;/span&gt; * &lt;span style=&#34;color:#00a&#34;&gt;from&lt;/span&gt; users_errs;
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;select&lt;/span&gt; * &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;from&lt;/span&gt; users_errs;
     
     ORA_ERR_NUMBER$ ORA_ERR_MESG$                            ORA_ERR_ROWID$  ORA_ERR_OPTYP$ ORA_ERR_TAG$                                       ID         NAME                         
-    &lt;span style=&#34;color:#aaa;font-style:italic&#34;&gt;--------------- ---------------------------------------- --------------- -------------- -------------------------------------------------- ---------- ------------------------------
-&lt;/span&gt;&lt;span style=&#34;color:#aaa;font-style:italic&#34;&gt;&lt;/span&gt;               &lt;span style=&#34;color:#099&#34;&gt;1722&lt;/span&gt; ORA-&lt;span style=&#34;color:#099&#34;&gt;01722&lt;/span&gt;: invalid &lt;span style=&#34;color:#0aa&#34;&gt;number&lt;/span&gt;                                I              import &lt;span style=&#34;color:#00a&#34;&gt;from&lt;/span&gt; users_ext: &lt;span style=&#34;color:#099&#34;&gt;07&lt;/span&gt;-JUN-&lt;span style=&#34;color:#099&#34;&gt;2012&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;12&lt;/span&gt;:&lt;span style=&#34;color:#099&#34;&gt;00&lt;/span&gt;:&lt;span style=&#34;color:#099&#34;&gt;09&lt;/span&gt;        &lt;span style=&#34;color:#099&#34;&gt;200&lt;/span&gt;J       Jamie Brooks                   
+    &lt;span style=&#34;color:#888&#34;&gt;--------------- ---------------------------------------- --------------- -------------- -------------------------------------------------- ---------- ------------------------------
+&lt;/span&gt;&lt;span style=&#34;color:#888&#34;&gt;&lt;/span&gt;               &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1722&lt;/span&gt; ORA-&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;01722&lt;/span&gt;: invalid &lt;span style=&#34;color:#038&#34;&gt;number&lt;/span&gt;                                I              import &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;from&lt;/span&gt; users_ext: &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;07&lt;/span&gt;-JUN-&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2012&lt;/span&gt; &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;12&lt;/span&gt;:&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;00&lt;/span&gt;:&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;09&lt;/span&gt;        &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;200&lt;/span&gt;J       Jamie Brooks                   
                                                                                                                                                                                          
     
-                  &lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt; ORA-&lt;span style=&#34;color:#099&#34;&gt;00001&lt;/span&gt;: &lt;span style=&#34;color:#00a&#34;&gt;unique&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;constraint&lt;/span&gt; (NUCDBA.SYS                 I              import &lt;span style=&#34;color:#00a&#34;&gt;from&lt;/span&gt; users_ext: &lt;span style=&#34;color:#099&#34;&gt;07&lt;/span&gt;-JUN-&lt;span style=&#34;color:#099&#34;&gt;2012&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;12&lt;/span&gt;:&lt;span style=&#34;color:#099&#34;&gt;00&lt;/span&gt;:&lt;span style=&#34;color:#099&#34;&gt;09&lt;/span&gt;        &lt;span style=&#34;color:#099&#34;&gt;1000&lt;/span&gt;       Jason Jennings                 
+                  &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1&lt;/span&gt; ORA-&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;00001&lt;/span&gt;: &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;unique&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;constraint&lt;/span&gt; (NUCDBA.SYS                 I              import &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;from&lt;/span&gt; users_ext: &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;07&lt;/span&gt;-JUN-&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2012&lt;/span&gt; &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;12&lt;/span&gt;:&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;00&lt;/span&gt;:&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;09&lt;/span&gt;        &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1000&lt;/span&gt;       Jason Jennings                 
                     _C00128181) violated                                                                                                                                                 
                                                                                                                                                                                          
     
-               &lt;span style=&#34;color:#099&#34;&gt;1722&lt;/span&gt; ORA-&lt;span style=&#34;color:#099&#34;&gt;01722&lt;/span&gt;: invalid &lt;span style=&#34;color:#0aa&#34;&gt;number&lt;/span&gt;                                I              import &lt;span style=&#34;color:#00a&#34;&gt;from&lt;/span&gt; users_ext: &lt;span style=&#34;color:#099&#34;&gt;07&lt;/span&gt;-JUN-&lt;span style=&#34;color:#099&#34;&gt;2012&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;12&lt;/span&gt;:&lt;span style=&#34;color:#099&#34;&gt;00&lt;/span&gt;:&lt;span style=&#34;color:#099&#34;&gt;09&lt;/span&gt;        AAAA       Alfred Butler                  
+               &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1722&lt;/span&gt; ORA-&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;01722&lt;/span&gt;: invalid &lt;span style=&#34;color:#038&#34;&gt;number&lt;/span&gt;                                I              import &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;from&lt;/span&gt; users_ext: &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;07&lt;/span&gt;-JUN-&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2012&lt;/span&gt; &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;12&lt;/span&gt;:&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;00&lt;/span&gt;:&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;09&lt;/span&gt;        AAAA       Alfred Butler                  
                                                                                                                                                                                          
     
-               &lt;span style=&#34;color:#099&#34;&gt;1722&lt;/span&gt; ORA-&lt;span style=&#34;color:#099&#34;&gt;01722&lt;/span&gt;: invalid &lt;span style=&#34;color:#0aa&#34;&gt;number&lt;/span&gt;                                I              import &lt;span style=&#34;color:#00a&#34;&gt;from&lt;/span&gt; users_ext: &lt;span style=&#34;color:#099&#34;&gt;07&lt;/span&gt;-JUN-&lt;span style=&#34;color:#099&#34;&gt;2012&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;12&lt;/span&gt;:&lt;span style=&#34;color:#099&#34;&gt;00&lt;/span&gt;:&lt;span style=&#34;color:#099&#34;&gt;09&lt;/span&gt;        ABAB       Simon Jones                    &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+               &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1722&lt;/span&gt; ORA-&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;01722&lt;/span&gt;: invalid &lt;span style=&#34;color:#038&#34;&gt;number&lt;/span&gt;                                I              import &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;from&lt;/span&gt; users_ext: &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;07&lt;/span&gt;-JUN-&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2012&lt;/span&gt; &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;12&lt;/span&gt;:&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;00&lt;/span&gt;:&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;09&lt;/span&gt;        ABAB       Simon Jones                    &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
           </item>
         
       

@@ -14,18 +14,18 @@
 
    	
     
-        <link rel="stylesheet" href="http://localhost:1313/css/theme/united.css">
+        <link rel="stylesheet" href="http://tobybase.com/css/theme/united.css">
     
 
-    <link rel="stylesheet" href="http://localhost:1313/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://tobybase.com/css/font-awesome.min.css">
 
    	
-   	<link rel="stylesheet" href="http://localhost:1313/css/style.css">
+   	<link rel="stylesheet" href="http://tobybase.com/css/style.css">
 
 
     
-    <script src="http://localhost:1313/js/jquery.min-2.1.4.js"></script>
-    <script src="http://localhost:1313/js/bootstrap.min-3.3.5.js"></script>
+    <script src="http://tobybase.com/js/jquery.min-2.1.4.js"></script>
+    <script src="http://tobybase.com/js/bootstrap.min-3.3.5.js"></script>
 
     
     <link href="" rel="alternate" type="application/rss+xml" title="Tobybase: A Tech Blog" />
@@ -36,12 +36,12 @@
     <div class="row">
         <div class="navbar navbar-default " role="navigation">
             <div class="navbar-header">
-                <a class="navbar-brand" href="http://localhost:1313"><img src="http://localhost:1313/img/logo.png" id="logographic"></a>
+                <a class="navbar-brand" href="http://tobybase.com"><img src="http://tobybase.com/img/logo.png" id="logographic"></a>
             </div>
             <div class="navbar-collapse collapse navbar-responsive-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="http://localhost:1313">Home</a></li>
-                    <li><a href="http://localhost:1313/post/">Articles</a></li>
+                    <li><a href="http://tobybase.com">Home</a></li>
+                    <li><a href="http://tobybase.com/post/">Articles</a></li>
                     
                 </ul>
             </div>
@@ -77,43 +77,43 @@
 		<div class="col-md-offset-1 col-md-10">
 			<br>
 			<p>Yes, they&rsquo;ve been around for a while, but if you haven&rsquo;t made use of table functions lately you might want to reacquaint yourself with this old gem. Table functions allow you to query the contents of PL/SQL collection types using SQL&rsquo;s TABLE operator. Here is a simple example.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">    <span style="color:#00a">CREATE</span> <span style="color:#00a">OR</span> <span style="color:#00a">REPLACE</span> PACKAGE example <span style="color:#00a">AS</span>
-    
-         <span style="color:#00a">TYPE</span> nested_table_typ <span style="color:#00a">IS</span> <span style="color:#00a">TABLE</span> <span style="color:#00a">OF</span> VARCHAR2(<span style="color:#099">100</span>);
-    
-         <span style="color:#00a">FUNCTION</span> get_nested_table_data <span style="color:#00a">RETURN</span> nested_table_typ PIPELINED;
-    
-    <span style="color:#00a">END</span> example;
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plpgsql" data-lang="plpgsql">    <span style="color:#080;font-weight:bold">CREATE</span> <span style="color:#080;font-weight:bold">OR</span> <span style="color:#080;font-weight:bold">REPLACE</span> PACKAGE example <span style="color:#080;font-weight:bold">AS</span>
+
+         <span style="color:#080;font-weight:bold">TYPE</span> nested_table_typ <span style="color:#080;font-weight:bold">IS</span> <span style="color:#080;font-weight:bold">TABLE</span> <span style="color:#080;font-weight:bold">OF</span> VARCHAR2(<span style="color:#00d;font-weight:bold">100</span>);
+
+         <span style="color:#080;font-weight:bold">FUNCTION</span> get_nested_table_data <span style="color:#080;font-weight:bold">RETURN</span> nested_table_typ PIPELINED;
+
+    <span style="color:#080;font-weight:bold">END</span> example;
     /
-    
-    <span style="color:#00a">CREATE</span> <span style="color:#00a">OR</span> <span style="color:#00a">REPLACE</span> PACKAGE BODY example <span style="color:#00a">AS</span>
-    
-         <span style="color:#00a">FUNCTION</span> get_nested_table_data <span style="color:#00a">RETURN</span> nested_table_typ PIPELINED <span style="color:#00a">IS</span>
-         <span style="color:#00a">BEGIN</span>
-              PIPE <span style="color:#00a">ROW</span> (<span style="color:#a50">&#39;one&#39;</span>);
-              PIPE <span style="color:#00a">ROW</span> (<span style="color:#a50">&#39;two&#39;</span>);
-              PIPE <span style="color:#00a">ROW</span> (<span style="color:#a50">&#39;three&#39;</span>);
-              <span style="color:#00a">RETURN</span>;
-         <span style="color:#00a">END</span> get_nested_table_data;
-    
-    <span style="color:#00a">END</span> example;
+
+    <span style="color:#080;font-weight:bold">CREATE</span> <span style="color:#080;font-weight:bold">OR</span> <span style="color:#080;font-weight:bold">REPLACE</span> PACKAGE BODY example <span style="color:#080;font-weight:bold">AS</span>
+
+         <span style="color:#080;font-weight:bold">FUNCTION</span> get_nested_table_data <span style="color:#080;font-weight:bold">RETURN</span> nested_table_typ PIPELINED <span style="color:#080;font-weight:bold">IS</span>
+         <span style="color:#080;font-weight:bold">BEGIN</span>
+              PIPE <span style="color:#080;font-weight:bold">ROW</span> (<span style="color:#d20;background-color:#fff0f0"></span><span style="color:#d20;background-color:#fff0f0">&#39;one&#39;</span>);
+              PIPE <span style="color:#080;font-weight:bold">ROW</span> (<span style="color:#d20;background-color:#fff0f0"></span><span style="color:#d20;background-color:#fff0f0">&#39;two&#39;</span>);
+              PIPE <span style="color:#080;font-weight:bold">ROW</span> (<span style="color:#d20;background-color:#fff0f0"></span><span style="color:#d20;background-color:#fff0f0">&#39;three&#39;</span>);
+              <span style="color:#080;font-weight:bold">RETURN</span>;
+         <span style="color:#080;font-weight:bold">END</span> get_nested_table_data;
+
+    <span style="color:#080;font-weight:bold">END</span> example;
     /</code></pre></div>
 <p>The package function example.get_nested_table_data returns a PL/SQL collection — in this case, a nested table. The PIPELINED directive instructs the function to return data to the calling query as rows are populated by the PIPE ROW command. That way, you don&rsquo;t need to wait for the function to finish before you get results from your query.</p>
 
 <p>The function can be invoked from the SELECT clause of a query in the usual way, and will return a valid result.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">    <span style="color:#00a">SELECT</span> example.get_nested_table_data <span style="color:#00a">FROM</span> dual;
-    
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">    <span style="color:#080;font-weight:bold">SELECT</span> example.get_nested_table_data <span style="color:#080;font-weight:bold">FROM</span> dual;
+
     GET_NESTED_TABLE_DATA
-    <span style="color:#aaa;font-style:italic">-------------------------------
-</span><span style="color:#aaa;font-style:italic"></span>    <span style="color:#00a">SCHEMA</span>.SYS_PLSQL_166672_9_1(one,two,three)</code></pre></div>
+    <span style="color:#888">-------------------------------
+</span><span style="color:#888"></span>    <span style="color:#080;font-weight:bold">SCHEMA</span>.SYS_PLSQL_166672_9_1(one,two,three)</code></pre></div>
 <p>This is possible because nested tables and VARRAYs are supported as native types in SQL. The other type of PL/SQL collection, associative arrays, are not. Therefore you cannot use an associative array as the return type of a pipelined table function. However, it&rsquo;s pretty trivial to create a wrapper function that translates an associative array into a nested table. You wouldn&rsquo;t necessarily take this approach in your own code, but it comes in handy when you&rsquo;re transforming data coming from a third party package or function.</p>
 
 <p>But what if you need the contents of the collection presented as a table, with one record per entry in the collection? This is where the TABLE operator comes in handy.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">    <span style="color:#00a">SELECT</span> column_value <span style="color:#00a">FROM</span> <span style="color:#00a">TABLE</span>(example.get_nested_table_data);
-    
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">    <span style="color:#080;font-weight:bold">SELECT</span> column_value <span style="color:#080;font-weight:bold">FROM</span> <span style="color:#080;font-weight:bold">TABLE</span>(example.get_nested_table_data);
+
     COLUMN_VALUE
-    <span style="color:#aaa;font-style:italic">-------------------
-</span><span style="color:#aaa;font-style:italic"></span>    one
+    <span style="color:#888">-------------------
+</span><span style="color:#888"></span>    one
     two
     three</code></pre></div>
 <p>The TABLE operator casts a collection type as an aggregated result set, meaning it allows you to query it as if it were a table.</p>
@@ -164,7 +164,7 @@
             <footer>
                 <div class="pull-left">
                     <p>
-                        &copy; 2017 ~ Toby Marks ~ Powered By <a href="http://hugo.spf13.com">Hugo</a> - version: 0.31.1 ~ <a href="http://localhost:1313/license">License</a>
+                        &copy; 2017 ~ Toby Marks ~ Powered By <a href="http://hugo.spf13.com">Hugo</a> - version: 0.31.1 ~ <a href="http://tobybase.com/license">License</a>
                     </p>
                 </div>
 

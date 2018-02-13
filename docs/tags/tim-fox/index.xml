@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tim Fox on Tobybase: A Tech Blog</title>
-    <link>http://localhost:1313/tags/tim-fox/</link>
+    <link>http://tobybase.com/tags/tim-fox/</link>
     <description>Recent content in Tim Fox on Tobybase: A Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
@@ -14,10 +14,10 @@
         
           <item>
             <title>Announcing the Infolob YouTube Channel</title>
-            <link>http://localhost:1313/blog/2017/03/10/announcing-the-infolob-youtube-channel/</link>
+            <link>http://tobybase.com/blog/2017/03/10/announcing-the-infolob-youtube-channel/</link>
             <pubDate>Fri, 10 Mar 2017 00:00:00 +0000</pubDate>
             
-            <guid>http://localhost:1313/blog/2017/03/10/announcing-the-infolob-youtube-channel/</guid>
+            <guid>http://tobybase.com/blog/2017/03/10/announcing-the-infolob-youtube-channel/</guid>
             <description>&lt;p&gt;I am honored to work with some wonderful and truly &lt;em&gt;smart&lt;/em&gt; folks over at &lt;a href=&#34;http://www.infolob.com/&#34;&gt;Infolob&lt;/a&gt; in Irving, Texas. The company recently started a &lt;a href=&#34;https://www.youtube.com/channel/UCLfDjdjW6RRvKYrz_aS0Jmw&#34;&gt;YouTube channel&lt;/a&gt; and we are looking to add lots of great videos soon for your enjoyment and education.&lt;/p&gt;
 
 &lt;p&gt;Check us out!&lt;/p&gt;

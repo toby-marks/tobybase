@@ -8,18 +8,18 @@ tags        = ["oracle", "plsql", "pipelined table functions"]
 +++
 Yes, they've been around for a while, but if you haven't made use of table functions lately you might want to reacquaint yourself with this old gem. Table functions allow you to query the contents of PL/SQL collection types using SQL's TABLE operator. Here is a simple example.
 
-```sql
+```plpgsql
     CREATE OR REPLACE PACKAGE example AS
-    
+
          TYPE nested_table_typ IS TABLE OF VARCHAR2(100);
-    
+
          FUNCTION get_nested_table_data RETURN nested_table_typ PIPELINED;
-    
+
     END example;
     /
-    
+
     CREATE OR REPLACE PACKAGE BODY example AS
-    
+
          FUNCTION get_nested_table_data RETURN nested_table_typ PIPELINED IS
          BEGIN
               PIPE ROW ('one');
@@ -27,7 +27,7 @@ Yes, they've been around for a while, but if you haven't made use of table funct
               PIPE ROW ('three');
               RETURN;
          END get_nested_table_data;
-    
+
     END example;
     /
 ```
@@ -38,7 +38,7 @@ The function can be invoked from the SELECT clause of a query in the usual way, 
 
 ```sql
     SELECT example.get_nested_table_data FROM dual;
-    
+
     GET_NESTED_TABLE_DATA
     -------------------------------
     SCHEMA.SYS_PLSQL_166672_9_1(one,two,three)
@@ -50,7 +50,7 @@ But what if you need the contents of the collection presented as a table, with o
 
 ```sql
     SELECT column_value FROM TABLE(example.get_nested_table_data);
-    
+
     COLUMN_VALUE
     -------------------
     one

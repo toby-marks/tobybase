@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Splaining on Tobybase: A Tech Blog</title>
-    <link>http://localhost:1313/categories/splaining/</link>
+    <link>http://tobybase.com/categories/splaining/</link>
     <description>Recent content in Splaining on Tobybase: A Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
@@ -14,15 +14,15 @@
         
           <item>
             <title>Button Hotkeys in SQL Developer on OS X</title>
-            <link>http://localhost:1313/blog/2013/01/09/button-hotkeys-in-sql-developer-on-os-x/</link>
+            <link>http://tobybase.com/blog/2013/01/09/button-hotkeys-in-sql-developer-on-os-x/</link>
             <pubDate>Wed, 09 Jan 2013 19:09:45 +0000</pubDate>
             
-            <guid>http://localhost:1313/blog/2013/01/09/button-hotkeys-in-sql-developer-on-os-x/</guid>
+            <guid>http://tobybase.com/blog/2013/01/09/button-hotkeys-in-sql-developer-on-os-x/</guid>
             <description>&lt;p&gt;In Windows, most applications provide menu and button accelerator keys that allow you to control the application without having to use a mouse. Java Swing apps like SQL Developer allow you to do the same, ostensibly in a cross-platform compatible manner.&lt;/p&gt;
 
 &lt;p&gt;One place I use this frequently is the Enter Binds dialog window that pops up when running a query using bind variables.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2013-01-09-button-hotkeys-in-sql-developer-on-os-x/f953827dc3e74e57df43fd0e48ff22b40ce119efaa74ce3712fd989522b02a6f.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2013-01-09-button-hotkeys-in-sql-developer-on-os-x/f953827dc3e74e57df43fd0e48ff22b40ce119efaa74ce3712fd989522b02a6f.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;In Java 6 on OS X, the hotkey for pressing the Help and Apply buttons was OPTION-H and OPTION-A, respectively.&lt;/p&gt;
 
@@ -38,21 +38,21 @@
         
           <item>
             <title>Use Firebug&#39;s console.debug Command to Analyze Javascript, DOM Objects</title>
-            <link>http://localhost:1313/blog/2012/10/26/use-firebugs-console.debug-command-to-analyze-javascript-dom-objects/</link>
+            <link>http://tobybase.com/blog/2012/10/26/use-firebugs-console.debug-command-to-analyze-javascript-dom-objects/</link>
             <pubDate>Fri, 26 Oct 2012 21:09:00 +0000</pubDate>
             
-            <guid>http://localhost:1313/blog/2012/10/26/use-firebugs-console.debug-command-to-analyze-javascript-dom-objects/</guid>
+            <guid>http://tobybase.com/blog/2012/10/26/use-firebugs-console.debug-command-to-analyze-javascript-dom-objects/</guid>
             <description>&lt;p&gt;Occasionally when debugging my Javascript code I need to be able to analyze the properties of an unknown object; for instance, an unexpected DOM object passed to an event handler. How do you analyze the properties of an object when you don&amp;rsquo;t know what the object is? I was looking for a way to list all the properties of a generic Javascript or DOM object when I stumbled across this blog post by Andrew Peters. In it, he very clearly outlines two ways of doing this, but the one I found most useful was Firebug&amp;rsquo;s &lt;code&gt;console.debug&lt;/code&gt; command. You&amp;rsquo;ll need to use Firefox with the Firebug extension for this, but the results are impressive.&lt;/p&gt;
 
 &lt;p&gt;When you want to debug an object, simply pass it as a parameter to &lt;code&gt;console.debug&lt;/code&gt;. Here is an example where I wanted to find out about the event trigger object passed to my event handler:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2012-10-26-use-firebugs-consoledebug-command-to-analyze-javascript-dom-objects/eda67a171f00051639dcf0d35e00ebfdd9309cf03876d1d915dfd7b1f1f7766f.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2012-10-26-use-firebugs-consoledebug-command-to-analyze-javascript-dom-objects/eda67a171f00051639dcf0d35e00ebfdd9309cf03876d1d915dfd7b1f1f7766f.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;After triggering the event, I opened the Firebug window and navigated to the console. From there I could drill down on the displayed results to get information about my unknown DOM object.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2012-10-26-use-firebugs-consoledebug-command-to-analyze-javascript-dom-objects/55db6e09e44319deee6ef4a9938a20d72369d922637897e02b1b7d20a900cb43.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2012-10-26-use-firebugs-consoledebug-command-to-analyze-javascript-dom-objects/55db6e09e44319deee6ef4a9938a20d72369d922637897e02b1b7d20a900cb43.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2012-10-26-use-firebugs-consoledebug-command-to-analyze-javascript-dom-objects/38a39525404522f27ab3bf776a697f7e486f958723402ccff101a98014d54c0d.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2012-10-26-use-firebugs-consoledebug-command-to-analyze-javascript-dom-objects/38a39525404522f27ab3bf776a697f7e486f958723402ccff101a98014d54c0d.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Turns out in this case that the event handler was attached to the wrong object, due to the &amp;ldquo;id&amp;rdquo; value being placed one level above in the DOM hierarchy than I was expecting. Tricky, but I was able to spot the problem immediately using this method.&lt;/p&gt;
 </description>
@@ -64,10 +64,10 @@
         
           <item>
             <title>Use DML Error Logging</title>
-            <link>http://localhost:1313/blog/2012/06/07/use-dml-error-logging/</link>
+            <link>http://tobybase.com/blog/2012/06/07/use-dml-error-logging/</link>
             <pubDate>Thu, 07 Jun 2012 17:04:00 +0000</pubDate>
             
-            <guid>http://localhost:1313/blog/2012/06/07/use-dml-error-logging/</guid>
+            <guid>http://tobybase.com/blog/2012/06/07/use-dml-error-logging/</guid>
             <description>&lt;p&gt;Introduced with Oracle 10gR2, DML Error Logging allows you to make standard SQL &lt;code&gt;INSERT&lt;/code&gt;, &lt;code&gt;UPDATE&lt;/code&gt;, and &lt;code&gt;MERGE&lt;/code&gt; statements behave more like the SQL*Loader utility, logging errors to a table rather than failing and rolling back the first time an error condition is encountered.&lt;/p&gt;
 
 &lt;p&gt;The syntax is the same for all DML statements. Just add the following clause to the end of your DML:&lt;/p&gt;
@@ -76,60 +76,60 @@
 &amp;gt; … the database assigns the default name generated by the DBMS&lt;em&gt;ERRLOG package. The default error log table name is ERR$&lt;/em&gt; followed by the first 25 characters of the name of the table upon which the DML operation is being executed.&lt;/p&gt;
 
 &lt;p&gt;In most cases you&amp;rsquo;ll probably want to specify your own log table, like this:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    LOG ERRORS &lt;span style=&#34;color:#00a&#34;&gt;INTO&lt;/span&gt; error_table&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    LOG ERRORS &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; error_table&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;If you do, you&amp;rsquo;ll need to create the table beforehand with &lt;code&gt;DBMS_ERRLOG&lt;/code&gt;.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#00a&#34;&gt;EXEC&lt;/span&gt; DBMS_ERRLOG.CREATE_ERROR_LOG(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;table&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;error_table&amp;#39;&lt;/span&gt;);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;EXEC&lt;/span&gt; DBMS_ERRLOG.CREATE_ERROR_LOG(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;table&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;error_table&amp;#39;&lt;/span&gt;);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Like SQL*Loader, you can specify a maximum number of errors to tolerate before failing and rolling back the transaction. You can also just say &lt;code&gt;UNLIMITED&lt;/code&gt; if you don&amp;rsquo;t ever want to fail the transaction.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    LOG ERRORS &lt;span style=&#34;color:#00a&#34;&gt;INTO&lt;/span&gt; error_table REJECT &lt;span style=&#34;color:#00a&#34;&gt;LIMIT&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;99&lt;/span&gt;
-    LOG ERRORS &lt;span style=&#34;color:#00a&#34;&gt;INTO&lt;/span&gt; error_table REJECT &lt;span style=&#34;color:#00a&#34;&gt;LIMIT&lt;/span&gt; UNLIMITED&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    LOG ERRORS &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; error_table REJECT &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;LIMIT&lt;/span&gt; &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;99&lt;/span&gt;
+    LOG ERRORS &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; error_table REJECT &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;LIMIT&lt;/span&gt; UNLIMITED&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Since the default limit is zero, it makes sense to always include this clause.&lt;/p&gt;
 
 &lt;p&gt;The last option is to specify a string that identifies that particular DML operation, so that you can group sets of errors in the log table. Here is an example that incorporates &lt;code&gt;SYSDATE&lt;/code&gt; to tag all errors belonging to this DML operation.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    LOG ERRORS &lt;span style=&#34;color:#00a&#34;&gt;INTO&lt;/span&gt; error_table (&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Import from external datasource &amp;#39;&lt;/span&gt;||TO_CHAR(SYSDATE)) REJECT &lt;span style=&#34;color:#00a&#34;&gt;LIMIT&lt;/span&gt; UNLIMITED&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    LOG ERRORS &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; error_table (&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Import from external datasource &amp;#39;&lt;/span&gt;||TO_CHAR(SYSDATE)) REJECT &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;LIMIT&lt;/span&gt; UNLIMITED&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Putting it all together, here is a short example demonstrating the use of DML Error Logging for merging data between two similar, but non-identically structured tables. An alternate strategy might have involved creating a custom interface table with a block of PL/SQL to perform inserts and mark the failed rows. Here, we take advantage of the native capabilities of the database to simplify and accelerate the process.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#00a&#34;&gt;create&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;table&lt;/span&gt; users_loc (id &lt;span style=&#34;color:#0aa&#34;&gt;number&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;primary&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;key&lt;/span&gt;, name varchar2(&lt;span style=&#34;color:#099&#34;&gt;75&lt;/span&gt;));
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;create&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;table&lt;/span&gt; users_loc (id &lt;span style=&#34;color:#038&#34;&gt;number&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;primary&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;key&lt;/span&gt;, name varchar2(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;75&lt;/span&gt;));
     
-    &lt;span style=&#34;color:#00a&#34;&gt;create&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;table&lt;/span&gt; users_ext (uuid varchar2(&lt;span style=&#34;color:#099&#34;&gt;10&lt;/span&gt;), fname varchar2(&lt;span style=&#34;color:#099&#34;&gt;15&lt;/span&gt;), lname varchar2(&lt;span style=&#34;color:#099&#34;&gt;20&lt;/span&gt;));
-    &lt;span style=&#34;color:#00a&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#00a&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;1000&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Scotty&amp;#39;&lt;/span&gt;,  &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;P&amp;#39;&lt;/span&gt;);
-    &lt;span style=&#34;color:#00a&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#00a&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;2000&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Melinda&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Manning&amp;#39;&lt;/span&gt;);
-    &lt;span style=&#34;color:#00a&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#00a&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;200J&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Jamie&amp;#39;&lt;/span&gt;,   &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Brooks&amp;#39;&lt;/span&gt;);
-    &lt;span style=&#34;color:#00a&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#00a&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;1000&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Jason&amp;#39;&lt;/span&gt;,   &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Jennings&amp;#39;&lt;/span&gt;);
-    &lt;span style=&#34;color:#00a&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#00a&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;4000&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Marcus&amp;#39;&lt;/span&gt;,  &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Nevada&amp;#39;&lt;/span&gt;);
-    &lt;span style=&#34;color:#00a&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#00a&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;AAAA&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Alfred&amp;#39;&lt;/span&gt;,  &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Butler&amp;#39;&lt;/span&gt;);
-    &lt;span style=&#34;color:#00a&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#00a&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;ABAB&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Simon&amp;#39;&lt;/span&gt;,   &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Jones&amp;#39;&lt;/span&gt;);
-    &lt;span style=&#34;color:#00a&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#00a&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;6000&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Joon&amp;#39;&lt;/span&gt;,    &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Patel&amp;#39;&lt;/span&gt;);
-    &lt;span style=&#34;color:#00a&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#00a&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;7000&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Wanda&amp;#39;&lt;/span&gt;,   &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Lutz&amp;#39;&lt;/span&gt;);
-    &lt;span style=&#34;color:#00a&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#00a&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;8000&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Joseph&amp;#39;&lt;/span&gt;,  &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;McBride&amp;#39;&lt;/span&gt;);
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;create&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;table&lt;/span&gt; users_ext (uuid varchar2(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;10&lt;/span&gt;), fname varchar2(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;15&lt;/span&gt;), lname varchar2(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;20&lt;/span&gt;));
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;1000&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Scotty&amp;#39;&lt;/span&gt;,  &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;P&amp;#39;&lt;/span&gt;);
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;2000&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Melinda&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Manning&amp;#39;&lt;/span&gt;);
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;200J&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Jamie&amp;#39;&lt;/span&gt;,   &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Brooks&amp;#39;&lt;/span&gt;);
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;1000&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Jason&amp;#39;&lt;/span&gt;,   &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Jennings&amp;#39;&lt;/span&gt;);
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;4000&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Marcus&amp;#39;&lt;/span&gt;,  &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Nevada&amp;#39;&lt;/span&gt;);
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;AAAA&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Alfred&amp;#39;&lt;/span&gt;,  &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Butler&amp;#39;&lt;/span&gt;);
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;ABAB&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Simon&amp;#39;&lt;/span&gt;,   &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Jones&amp;#39;&lt;/span&gt;);
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;6000&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Joon&amp;#39;&lt;/span&gt;,    &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Patel&amp;#39;&lt;/span&gt;);
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;7000&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Wanda&amp;#39;&lt;/span&gt;,   &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Lutz&amp;#39;&lt;/span&gt;);
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;8000&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Joseph&amp;#39;&lt;/span&gt;,  &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;McBride&amp;#39;&lt;/span&gt;);
     
-    &lt;span style=&#34;color:#00a&#34;&gt;exec&lt;/span&gt; dbms_errlog.create_error_log(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;users_loc&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;users_errs&amp;#39;&lt;/span&gt;);
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;exec&lt;/span&gt; dbms_errlog.create_error_log(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;users_loc&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;users_errs&amp;#39;&lt;/span&gt;);
     
-    &lt;span style=&#34;color:#00a&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;into&lt;/span&gt; users_loc (id, name) 
-    &lt;span style=&#34;color:#00a&#34;&gt;select&lt;/span&gt; uuid, 
-           fname||&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39; &amp;#39;&lt;/span&gt;||lname 
-      &lt;span style=&#34;color:#00a&#34;&gt;from&lt;/span&gt; users_ext 
-    log errors &lt;span style=&#34;color:#00a&#34;&gt;into&lt;/span&gt; users_errs (&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;import from users_ext: &amp;#39;&lt;/span&gt;||to_char(sysdate)) 
-    reject &lt;span style=&#34;color:#00a&#34;&gt;limit&lt;/span&gt; unlimited;
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;into&lt;/span&gt; users_loc (id, name) 
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;select&lt;/span&gt; uuid, 
+           fname||&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39; &amp;#39;&lt;/span&gt;||lname 
+      &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;from&lt;/span&gt; users_ext 
+    log errors &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;into&lt;/span&gt; users_errs (&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;import from users_ext: &amp;#39;&lt;/span&gt;||to_char(sysdate)) 
+    reject &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;limit&lt;/span&gt; unlimited;
     
     col ora_err_mesg$ format a40
     col ora_err_rowid$ format a15
     col ora_err_tag$ format a50
     col id format a10
     col name format a30
-    &lt;span style=&#34;color:#00a&#34;&gt;select&lt;/span&gt; * &lt;span style=&#34;color:#00a&#34;&gt;from&lt;/span&gt; users_errs;
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;select&lt;/span&gt; * &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;from&lt;/span&gt; users_errs;
     
     ORA_ERR_NUMBER$ ORA_ERR_MESG$                            ORA_ERR_ROWID$  ORA_ERR_OPTYP$ ORA_ERR_TAG$                                       ID         NAME                         
-    &lt;span style=&#34;color:#aaa;font-style:italic&#34;&gt;--------------- ---------------------------------------- --------------- -------------- -------------------------------------------------- ---------- ------------------------------
-&lt;/span&gt;&lt;span style=&#34;color:#aaa;font-style:italic&#34;&gt;&lt;/span&gt;               &lt;span style=&#34;color:#099&#34;&gt;1722&lt;/span&gt; ORA-&lt;span style=&#34;color:#099&#34;&gt;01722&lt;/span&gt;: invalid &lt;span style=&#34;color:#0aa&#34;&gt;number&lt;/span&gt;                                I              import &lt;span style=&#34;color:#00a&#34;&gt;from&lt;/span&gt; users_ext: &lt;span style=&#34;color:#099&#34;&gt;07&lt;/span&gt;-JUN-&lt;span style=&#34;color:#099&#34;&gt;2012&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;12&lt;/span&gt;:&lt;span style=&#34;color:#099&#34;&gt;00&lt;/span&gt;:&lt;span style=&#34;color:#099&#34;&gt;09&lt;/span&gt;        &lt;span style=&#34;color:#099&#34;&gt;200&lt;/span&gt;J       Jamie Brooks                   
+    &lt;span style=&#34;color:#888&#34;&gt;--------------- ---------------------------------------- --------------- -------------- -------------------------------------------------- ---------- ------------------------------
+&lt;/span&gt;&lt;span style=&#34;color:#888&#34;&gt;&lt;/span&gt;               &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1722&lt;/span&gt; ORA-&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;01722&lt;/span&gt;: invalid &lt;span style=&#34;color:#038&#34;&gt;number&lt;/span&gt;                                I              import &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;from&lt;/span&gt; users_ext: &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;07&lt;/span&gt;-JUN-&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2012&lt;/span&gt; &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;12&lt;/span&gt;:&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;00&lt;/span&gt;:&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;09&lt;/span&gt;        &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;200&lt;/span&gt;J       Jamie Brooks                   
                                                                                                                                                                                          
     
-                  &lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt; ORA-&lt;span style=&#34;color:#099&#34;&gt;00001&lt;/span&gt;: &lt;span style=&#34;color:#00a&#34;&gt;unique&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;constraint&lt;/span&gt; (NUCDBA.SYS                 I              import &lt;span style=&#34;color:#00a&#34;&gt;from&lt;/span&gt; users_ext: &lt;span style=&#34;color:#099&#34;&gt;07&lt;/span&gt;-JUN-&lt;span style=&#34;color:#099&#34;&gt;2012&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;12&lt;/span&gt;:&lt;span style=&#34;color:#099&#34;&gt;00&lt;/span&gt;:&lt;span style=&#34;color:#099&#34;&gt;09&lt;/span&gt;        &lt;span style=&#34;color:#099&#34;&gt;1000&lt;/span&gt;       Jason Jennings                 
+                  &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1&lt;/span&gt; ORA-&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;00001&lt;/span&gt;: &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;unique&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;constraint&lt;/span&gt; (NUCDBA.SYS                 I              import &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;from&lt;/span&gt; users_ext: &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;07&lt;/span&gt;-JUN-&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2012&lt;/span&gt; &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;12&lt;/span&gt;:&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;00&lt;/span&gt;:&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;09&lt;/span&gt;        &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1000&lt;/span&gt;       Jason Jennings                 
                     _C00128181) violated                                                                                                                                                 
                                                                                                                                                                                          
     
-               &lt;span style=&#34;color:#099&#34;&gt;1722&lt;/span&gt; ORA-&lt;span style=&#34;color:#099&#34;&gt;01722&lt;/span&gt;: invalid &lt;span style=&#34;color:#0aa&#34;&gt;number&lt;/span&gt;                                I              import &lt;span style=&#34;color:#00a&#34;&gt;from&lt;/span&gt; users_ext: &lt;span style=&#34;color:#099&#34;&gt;07&lt;/span&gt;-JUN-&lt;span style=&#34;color:#099&#34;&gt;2012&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;12&lt;/span&gt;:&lt;span style=&#34;color:#099&#34;&gt;00&lt;/span&gt;:&lt;span style=&#34;color:#099&#34;&gt;09&lt;/span&gt;        AAAA       Alfred Butler                  
+               &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1722&lt;/span&gt; ORA-&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;01722&lt;/span&gt;: invalid &lt;span style=&#34;color:#038&#34;&gt;number&lt;/span&gt;                                I              import &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;from&lt;/span&gt; users_ext: &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;07&lt;/span&gt;-JUN-&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2012&lt;/span&gt; &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;12&lt;/span&gt;:&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;00&lt;/span&gt;:&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;09&lt;/span&gt;        AAAA       Alfred Butler                  
                                                                                                                                                                                          
     
-               &lt;span style=&#34;color:#099&#34;&gt;1722&lt;/span&gt; ORA-&lt;span style=&#34;color:#099&#34;&gt;01722&lt;/span&gt;: invalid &lt;span style=&#34;color:#0aa&#34;&gt;number&lt;/span&gt;                                I              import &lt;span style=&#34;color:#00a&#34;&gt;from&lt;/span&gt; users_ext: &lt;span style=&#34;color:#099&#34;&gt;07&lt;/span&gt;-JUN-&lt;span style=&#34;color:#099&#34;&gt;2012&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;12&lt;/span&gt;:&lt;span style=&#34;color:#099&#34;&gt;00&lt;/span&gt;:&lt;span style=&#34;color:#099&#34;&gt;09&lt;/span&gt;        ABAB       Simon Jones                    &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+               &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1722&lt;/span&gt; ORA-&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;01722&lt;/span&gt;: invalid &lt;span style=&#34;color:#038&#34;&gt;number&lt;/span&gt;                                I              import &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;from&lt;/span&gt; users_ext: &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;07&lt;/span&gt;-JUN-&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2012&lt;/span&gt; &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;12&lt;/span&gt;:&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;00&lt;/span&gt;:&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;09&lt;/span&gt;        ABAB       Simon Jones                    &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
           </item>
         
       
@@ -138,17 +138,17 @@
         
           <item>
             <title>Discovering Command-line Java Profiling Tools</title>
-            <link>http://localhost:1313/blog/2012/05/02/discovering-command-line-java-profiling-tools/</link>
+            <link>http://tobybase.com/blog/2012/05/02/discovering-command-line-java-profiling-tools/</link>
             <pubDate>Wed, 02 May 2012 21:41:00 +0000</pubDate>
             
-            <guid>http://localhost:1313/blog/2012/05/02/discovering-command-line-java-profiling-tools/</guid>
+            <guid>http://tobybase.com/blog/2012/05/02/discovering-command-line-java-profiling-tools/</guid>
             <description>&lt;p&gt;At my current client I am responsible for administering a third-party Java appplication that unfortunately generates a lot of performance complaints. It&amp;rsquo;s a multi-tiered system with the middle-tier running on Oracle Appication Server 10.1.3. I am already familiar with GUI profiling tools like &lt;code&gt;jconsole&lt;/code&gt; and &lt;code&gt;jvisualvm&lt;/code&gt;, both of which are included with Oracle&amp;rsquo;s JDK, and I have played around with the profiling capabilities in NetBeans. All of these profiling tools are fairly similar to one another in look and functionality.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941369/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://localhost:1313/img/2012-05-02-discovering-command-line-java-profiling-tools/687cc5e71ab082d921ea083c2a3389f33608bdb578a2505ba98647dca59edd1c.jpg&#34; alt=&#34;Profiling the JVM with jconsole&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941369/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/687cc5e71ab082d921ea083c2a3389f33608bdb578a2505ba98647dca59edd1c.jpg&#34; alt=&#34;Profiling the JVM with jconsole&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/6990855922/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://localhost:1313/img/2012-05-02-discovering-command-line-java-profiling-tools/062326cdf1e49a33f125692cdc43927df553db0aa59ae2e13a028e5e9119ddbd.jpg&#34; alt=&#34;Profiling the JVM with jvisualvm&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/6990855922/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/062326cdf1e49a33f125692cdc43927df553db0aa59ae2e13a028e5e9119ddbd.jpg&#34; alt=&#34;Profiling the JVM with jvisualvm&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/6990855902/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://localhost:1313/img/2012-05-02-discovering-command-line-java-profiling-tools/70254026909062fd761740bc71f569e1dfeffd3aeaa574ba1cfb794e3029ea62.jpg&#34; alt=&#34;Profiling the JVM with NetBeans&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/6990855902/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/70254026909062fd761740bc71f569e1dfeffd3aeaa574ba1cfb794e3029ea62.jpg&#34; alt=&#34;Profiling the JVM with NetBeans&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Using any one of these tools, I can view the size and utilization of the heap, see the status of running threads, monitor CPU loads, pull garbage collection statistics, and generate a memory dump. All of these are adequate for monitoring application performance in real-time, but while working with the application vendor to diagnose problems I found it necessary to be able to report on application performance over longer spans of time, say days or even weeks. We were trying to show patterns of eroding performance, or possibly spot instances of very slow memory leaks in parts of the application that got used less frequently. In any event, it required a way to monitor all of these details without having to have my eyes on the screen the whole time.&lt;/p&gt;
 
@@ -156,7 +156,7 @@
 
 &lt;p&gt;Recent versions of the JDK come packaged with some nifty command line tools to assist with profiling your Java applications. They can all be found in the &lt;code&gt;/bin&lt;/code&gt; directory under the JDK base directory.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941341/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://localhost:1313/img/2012-05-02-discovering-command-line-java-profiling-tools/9ca305047f95051bbdc678ea66f9e4923a830b21f3264ebc3b87e9bd385f5765.jpg&#34; alt=&#34;Commands bundled with the JDK&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941341/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/9ca305047f95051bbdc678ea66f9e4923a830b21f3264ebc3b87e9bd385f5765.jpg&#34; alt=&#34;Commands bundled with the JDK&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;##jps&lt;/p&gt;
 
@@ -164,7 +164,7 @@
 
 &lt;p&gt;Each Java process is identified by the &amp;ldquo;VMID&amp;rdquo; returned by &lt;code&gt;jps&lt;/code&gt;, usually corresponding to the process ID on the host system. It is this VMID which is required as an argument to all of the other tools we will discuss, so be sure to always use &lt;code&gt;jps&lt;/code&gt; to correctly identify your processes to the other tools.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941355/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://localhost:1313/img/2012-05-02-discovering-command-line-java-profiling-tools/c3b76d4b16d988867798b352027c036e5bb4f1ebb07abfaf453bbb7094470ab4.jpg&#34; alt=&#34;Running jps&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941355/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/c3b76d4b16d988867798b352027c036e5bb4f1ebb07abfaf453bbb7094470ab4.jpg&#34; alt=&#34;Running jps&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;##jstack&lt;/p&gt;
 
@@ -174,22 +174,22 @@
 
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; If you have a 64-bit JDK, you&amp;rsquo;ll want to use the &lt;code&gt;-J-d64&lt;/code&gt; flag when running the command.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941351/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://localhost:1313/img/2012-05-02-discovering-command-line-java-profiling-tools/23352a26f3e67df6c159d8ff4c130b2d47be1bc8e37d78bc8178e0aa65e04182.jpg&#34; alt=&#34;Running jstack&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941351/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/23352a26f3e67df6c159d8ff4c130b2d47be1bc8e37d78bc8178e0aa65e04182.jpg&#34; alt=&#34;Running jstack&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;##jmap &amp;amp; jhat&lt;/p&gt;
 
 &lt;p&gt;These two tools work together to help you analyze the contents of the heap. Use &lt;code&gt;jmap&lt;/code&gt; to generate a heap dump, and &lt;code&gt;jhat&lt;/code&gt; to help analyze the dump file.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941291/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://localhost:1313/img/2012-05-02-discovering-command-line-java-profiling-tools/ad70746c91dd43d7a093fa3e7c180ce863a605f0ccd511774c8c62b4203731b1.jpg&#34; alt=&#34;Running jmap and jhat&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941291/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/ad70746c91dd43d7a093fa3e7c180ce863a605f0ccd511774c8c62b4203731b1.jpg&#34; alt=&#34;Running jmap and jhat&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;Jhat&lt;/code&gt; works by spawning an HTTP server that presents the contents of the heap as a web page, allowing you to drill down on a specific object to view its members and references. In order to get the most out of &lt;code&gt;jhat&lt;/code&gt;, however, it would be worth investigating OQL, the &lt;strong&gt;O&lt;/strong&gt;bject &lt;strong&gt;Q&lt;/strong&gt;uery &lt;strong&gt;L&lt;/strong&gt;anguage, as the web page generated by &lt;code&gt;jhat&lt;/code&gt; allows you to run OQL queries against the heap. If you know a little about your application class structure, this makes your heap analysis far more efficient. Thankfully, the &lt;code&gt;jhat&lt;/code&gt; web page provides you with a short primer.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/6990855834/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://localhost:1313/img/2012-05-02-discovering-command-line-java-profiling-tools/036aef8b8bc95e25c21a1bfb219fcc19e8e084e6ee60643a57a3ff72f83b69ec.jpg&#34; alt=&#34;OQL help page&#34; /&gt;&lt;/a&gt;
-&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941267/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://localhost:1313/img/2012-05-02-discovering-command-line-java-profiling-tools/c59f79354e9bb6223492707dd27ebffb018449445204453ba610396b89d74fdc.jpg&#34; alt=&#34;OQL primer&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/6990855834/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/036aef8b8bc95e25c21a1bfb219fcc19e8e084e6ee60643a57a3ff72f83b69ec.jpg&#34; alt=&#34;OQL help page&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941267/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/c59f79354e9bb6223492707dd27ebffb018449445204453ba610396b89d74fdc.jpg&#34; alt=&#34;OQL primer&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;Jmap&lt;/code&gt; is good for more than just generating heap dumps, however. When used with the &lt;code&gt;-heap&lt;/code&gt; option it gives you a nicely formatted heap usage summary.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941255/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://localhost:1313/img/2012-05-02-discovering-command-line-java-profiling-tools/d6c27680e007dae747ef2cac7218faf0f918d2cf68cb1023d7e0ece182369233.jpg&#34; alt=&#34;jmap with the -heap option&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941255/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/d6c27680e007dae747ef2cac7218faf0f918d2cf68cb1023d7e0ece182369233.jpg&#34; alt=&#34;jmap with the -heap option&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Now I was getting closer to my goal. In fact, this was originally the output I parsed during my first attempt at statistics gathering. Unfortunately, what I found while running on an RHEL 4.7 box with JDK 1.6.0_30 was that &lt;code&gt;jmap&lt;/code&gt; would from time to time inexplicably refuse to attach to my Java process, leaving gaping holes in my report. I noticed &lt;a href=&#34;http://ubuntuforums.org/showthread.php?t=1886859&#34;&gt;similar&lt;/a&gt; &lt;a href=&#34;https://forums.oracle.com/forums/thread.jspa?threadID=1693766&#34;&gt;complaints&lt;/a&gt; &lt;a href=&#34;http://blog.thecodingmachine.com/fr/comment/reply/91&#34;&gt;online&lt;/a&gt;, so I figured there may be problems with it.&lt;/p&gt;
 
@@ -245,367 +245,367 @@ HotSpot compilation method statistics.&lt;/li&gt;
         
           <item>
             <title>Table Functions: 9i Feature Worth Revisiting (Part 2)</title>
-            <link>http://localhost:1313/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-2/</link>
+            <link>http://tobybase.com/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-2/</link>
             <pubDate>Fri, 27 Apr 2012 22:35:00 +0000</pubDate>
             
-            <guid>http://localhost:1313/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-2/</guid>
-            <description>&lt;p&gt;In &lt;a href=&#34;http://localhost:1313/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-1/-1&#34;&gt;part one of this series&lt;/a&gt; I showed a simple example of how table functions can be used to treat PL/SQL collection types as tables in a SQL query. We used a nested table collection type to which we manually added a few entries. In this example, I intend to show a more practical use of table functions using all three PL/SQL collection types: associative arrays, nested tables, and VARRAYs.&lt;/p&gt;
+            <guid>http://tobybase.com/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-2/</guid>
+            <description>&lt;p&gt;In &lt;a href=&#34;http://tobybase.com/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-1/-1&#34;&gt;part one of this series&lt;/a&gt; I showed a simple example of how table functions can be used to treat PL/SQL collection types as tables in a SQL query. We used a nested table collection type to which we manually added a few entries. In this example, I intend to show a more practical use of table functions using all three PL/SQL collection types: associative arrays, nested tables, and VARRAYs.&lt;/p&gt;
 
 &lt;p&gt;Let&amp;rsquo;s revisit a use case I alluded to in my earlier blog entry: incorporating LDAP data into a query. Suppose your task is to code a custom authorization scheme for an enterprise application reporting system. You want row access to be determined by a user&amp;rsquo;s group memberships in the company&amp;rsquo;s Active Directory server. If a user is assigned to &amp;ldquo;the Company A group&amp;rdquo; in Active Directory, he gets to see Company A&amp;rsquo;s data. You can configure that kind of restriction at a database level using &lt;a href=&#34;http://www.oracle.com/technetwork/database/security/index-088277.html&#34;&gt;Oracle&amp;rsquo;s Virtual Private Database&lt;/a&gt; feature. Configuring VPD is beyond the scope of this blog entry, but ultimately you will be associating a table to a portion of a SQL WHERE clause that gets appended to every query written against that table. You can find more documentation on VPD &lt;a href=&#34;http://download.oracle.com/docs/cd/B28359_01/network.111/b28531/vpd.htm&#34;&gt;on the OTN site&lt;/a&gt;. In this case, let&amp;rsquo;s assume you know that another team has written a PL/SQL database package to query data from Active Directory, and you want to make use of that code. The only problem is that all the functions in that package return collections of various types, and you need to be able to access that information from the WHERE clause you are building with VPD. This is where table functions come in handy.&lt;/p&gt;
 
 &lt;p&gt;Let&amp;rsquo;s begin by setting up our example schema. We&amp;rsquo;ll be looking at client sales data. First, let&amp;rsquo;s set up our clients.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#00a&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;TABLE&lt;/span&gt; clients (
-      client_id &lt;span style=&#34;color:#0aa&#34;&gt;NUMBER&lt;/span&gt;,
-      client_name VARCHAR2(&lt;span style=&#34;color:#099&#34;&gt;50&lt;/span&gt;));
-      
-    &lt;span style=&#34;color:#00a&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;INTO&lt;/span&gt; clients &lt;span style=&#34;color:#00a&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#099&#34;&gt;100&lt;/span&gt;, &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Timco Industries&amp;#39;&lt;/span&gt;);
-    &lt;span style=&#34;color:#00a&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;INTO&lt;/span&gt; clients &lt;span style=&#34;color:#00a&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#099&#34;&gt;200&lt;/span&gt;, &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Moneybros&amp;#39;&lt;/span&gt;);
-    &lt;span style=&#34;color:#00a&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;INTO&lt;/span&gt; clients &lt;span style=&#34;color:#00a&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#099&#34;&gt;300&lt;/span&gt;, &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;The Monacle Corporation&amp;#39;&lt;/span&gt;);
-    &lt;span style=&#34;color:#00a&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;INTO&lt;/span&gt; clients &lt;span style=&#34;color:#00a&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#099&#34;&gt;400&lt;/span&gt;, &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Schmapple&amp;#39;&lt;/span&gt;);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;TABLE&lt;/span&gt; clients (
+      client_id &lt;span style=&#34;color:#038&#34;&gt;NUMBER&lt;/span&gt;,
+      client_name VARCHAR2(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;50&lt;/span&gt;));
+
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; clients &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;100&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Timco Industries&amp;#39;&lt;/span&gt;);
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; clients &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;200&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Moneybros&amp;#39;&lt;/span&gt;);
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; clients &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;300&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;The Monacle Corporation&amp;#39;&lt;/span&gt;);
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; clients &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;400&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Schmapple&amp;#39;&lt;/span&gt;);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;We also need application users who will be logging in to view the report data. We&amp;rsquo;ll assume each application user is uniquely linked to a user in Active Directory via the external_id column.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#00a&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;TABLE&lt;/span&gt; users (
-      sequence_number &lt;span style=&#34;color:#0aa&#34;&gt;NUMBER&lt;/span&gt;,
-      user_name VARCHAR2(&lt;span style=&#34;color:#099&#34;&gt;20&lt;/span&gt;),
-      external_id VARCHAR2(&lt;span style=&#34;color:#099&#34;&gt;20&lt;/span&gt;),
-      first_name VARCHAR2(&lt;span style=&#34;color:#099&#34;&gt;30&lt;/span&gt;),
-      last_name VARCHAR2(&lt;span style=&#34;color:#099&#34;&gt;30&lt;/span&gt;));
-      
-    &lt;span style=&#34;color:#00a&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;INTO&lt;/span&gt; users &lt;span style=&#34;color:#00a&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;JACKA&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;jaugusti&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Jack&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Augustine&amp;#39;&lt;/span&gt;);
-    &lt;span style=&#34;color:#00a&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;INTO&lt;/span&gt; users &lt;span style=&#34;color:#00a&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#099&#34;&gt;2&lt;/span&gt;, &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;KENKI&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;kkidd&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Ken&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Kidd&amp;#39;&lt;/span&gt;);
-    &lt;span style=&#34;color:#00a&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;INTO&lt;/span&gt; users &lt;span style=&#34;color:#00a&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#099&#34;&gt;3&lt;/span&gt;, &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;BRIAH&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;bhill&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Brian&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Hill&amp;#39;&lt;/span&gt;);
-    &lt;span style=&#34;color:#00a&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;INTO&lt;/span&gt; users &lt;span style=&#34;color:#00a&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#099&#34;&gt;4&lt;/span&gt;, &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;KEOVO&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;kvongkas&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Keo&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Vongkaseum&amp;#39;&lt;/span&gt;);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;TABLE&lt;/span&gt; users (
+      sequence_number &lt;span style=&#34;color:#038&#34;&gt;NUMBER&lt;/span&gt;,
+      user_name VARCHAR2(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;20&lt;/span&gt;),
+      external_id VARCHAR2(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;20&lt;/span&gt;),
+      first_name VARCHAR2(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;30&lt;/span&gt;),
+      last_name VARCHAR2(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;30&lt;/span&gt;));
+
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; users &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;JACKA&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;jaugusti&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Jack&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Augustine&amp;#39;&lt;/span&gt;);
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; users &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;KENKI&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;kkidd&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Ken&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Kidd&amp;#39;&lt;/span&gt;);
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; users &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;3&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;BRIAH&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;bhill&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Brian&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Hill&amp;#39;&lt;/span&gt;);
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; users &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;4&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;KEOVO&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;kvongkas&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Keo&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Vongkaseum&amp;#39;&lt;/span&gt;);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Finally, we need a data table on which to report.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#00a&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;TABLE&lt;/span&gt; quarterly_sales_data (
-      sequence_number &lt;span style=&#34;color:#0aa&#34;&gt;NUMBER&lt;/span&gt;,
-      client_id &lt;span style=&#34;color:#0aa&#34;&gt;NUMBER&lt;/span&gt;,
-      sales_year &lt;span style=&#34;color:#0aa&#34;&gt;NUMBER&lt;/span&gt;,
-      sales_quarter &lt;span style=&#34;color:#0aa&#34;&gt;NUMBER&lt;/span&gt;,
-      sales_amount &lt;span style=&#34;color:#0aa&#34;&gt;NUMBER&lt;/span&gt;);
-      
-    &lt;span style=&#34;color:#00a&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;INTO&lt;/span&gt; quarterly_sales_data &lt;span style=&#34;color:#00a&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;100&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;2011&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;20000&lt;/span&gt;);
-    &lt;span style=&#34;color:#00a&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;INTO&lt;/span&gt; quarterly_sales_data &lt;span style=&#34;color:#00a&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#099&#34;&gt;2&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;100&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;2011&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;2&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;17500&lt;/span&gt;);
-    &lt;span style=&#34;color:#00a&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;INTO&lt;/span&gt; quarterly_sales_data &lt;span style=&#34;color:#00a&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#099&#34;&gt;3&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;100&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;2011&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;3&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;33000&lt;/span&gt;);
-    &lt;span style=&#34;color:#00a&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;INTO&lt;/span&gt; quarterly_sales_data &lt;span style=&#34;color:#00a&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#099&#34;&gt;4&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;200&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;2011&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;4500&lt;/span&gt;);
-    &lt;span style=&#34;color:#00a&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;INTO&lt;/span&gt; quarterly_sales_data &lt;span style=&#34;color:#00a&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#099&#34;&gt;5&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;200&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;2011&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;2&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;7000&lt;/span&gt;);
-    &lt;span style=&#34;color:#00a&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;INTO&lt;/span&gt; quarterly_sales_data &lt;span style=&#34;color:#00a&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#099&#34;&gt;6&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;200&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;2011&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;3&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;6300&lt;/span&gt;);
-    &lt;span style=&#34;color:#00a&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;INTO&lt;/span&gt; quarterly_sales_data &lt;span style=&#34;color:#00a&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#099&#34;&gt;7&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;300&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;2011&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;11100&lt;/span&gt;);
-    &lt;span style=&#34;color:#00a&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;INTO&lt;/span&gt; quarterly_sales_data &lt;span style=&#34;color:#00a&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#099&#34;&gt;8&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;300&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;2011&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;2&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;12800&lt;/span&gt;);
-    &lt;span style=&#34;color:#00a&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;INTO&lt;/span&gt; quarterly_sales_data &lt;span style=&#34;color:#00a&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#099&#34;&gt;9&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;300&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;2011&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;3&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;14000&lt;/span&gt;);
-    &lt;span style=&#34;color:#00a&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;INTO&lt;/span&gt; quarterly_sales_data &lt;span style=&#34;color:#00a&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#099&#34;&gt;10&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;400&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;2011&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;55600&lt;/span&gt;);
-    &lt;span style=&#34;color:#00a&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;INTO&lt;/span&gt; quarterly_sales_data &lt;span style=&#34;color:#00a&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#099&#34;&gt;11&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;400&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;2011&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;2&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;80000&lt;/span&gt;);
-    &lt;span style=&#34;color:#00a&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;INTO&lt;/span&gt; quarterly_sales_data &lt;span style=&#34;color:#00a&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#099&#34;&gt;12&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;400&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;2011&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;3&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;78500&lt;/span&gt;);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;TABLE&lt;/span&gt; quarterly_sales_data (
+      sequence_number &lt;span style=&#34;color:#038&#34;&gt;NUMBER&lt;/span&gt;,
+      client_id &lt;span style=&#34;color:#038&#34;&gt;NUMBER&lt;/span&gt;,
+      sales_year &lt;span style=&#34;color:#038&#34;&gt;NUMBER&lt;/span&gt;,
+      sales_quarter &lt;span style=&#34;color:#038&#34;&gt;NUMBER&lt;/span&gt;,
+      sales_amount &lt;span style=&#34;color:#038&#34;&gt;NUMBER&lt;/span&gt;);
+
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; quarterly_sales_data &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;100&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2011&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;20000&lt;/span&gt;);
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; quarterly_sales_data &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;100&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2011&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;17500&lt;/span&gt;);
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; quarterly_sales_data &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;3&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;100&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2011&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;3&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;33000&lt;/span&gt;);
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; quarterly_sales_data &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;4&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;200&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2011&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;4500&lt;/span&gt;);
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; quarterly_sales_data &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;5&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;200&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2011&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;7000&lt;/span&gt;);
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; quarterly_sales_data &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;6&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;200&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2011&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;3&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;6300&lt;/span&gt;);
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; quarterly_sales_data &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;7&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;300&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2011&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;11100&lt;/span&gt;);
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; quarterly_sales_data &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;8&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;300&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2011&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;12800&lt;/span&gt;);
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; quarterly_sales_data &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;9&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;300&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2011&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;3&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;14000&lt;/span&gt;);
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; quarterly_sales_data &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;10&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;400&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2011&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;55600&lt;/span&gt;);
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; quarterly_sales_data &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;11&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;400&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2011&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;80000&lt;/span&gt;);
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; quarterly_sales_data &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;12&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;400&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2011&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;3&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;78500&lt;/span&gt;);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Our basic report query will look something like this:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#00a&#34;&gt;SELECT&lt;/span&gt; client_name, sales_year, sales_quarter, sales_amount
-      &lt;span style=&#34;color:#00a&#34;&gt;FROM&lt;/span&gt; quarterly_sales_data &lt;span style=&#34;color:#00a&#34;&gt;NATURAL&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;JOIN&lt;/span&gt; clients;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;SELECT&lt;/span&gt; client_name, sales_year, sales_quarter, sales_amount
+      &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FROM&lt;/span&gt; quarterly_sales_data &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;NATURAL&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;JOIN&lt;/span&gt; clients;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Our Active Directory groups will be TIMCO_GRP, MONEYBROS_GRP, MONACLE_GRP, and SCHMAPPLE_GRP. If a user belongs to one or more of these groups, he has permission to view the respective client&amp;rsquo;s data.&lt;/p&gt;
 
 &lt;p&gt;Now we need a function that returns data from Active Directory. Just to keep it simple we will create a package that hardcodes the group memberships and returns them as collections of various types. We will then look at how table functions can be used to transform each one of those collections into an aggregate result set. (NOTE: querying LDAP directories from PL/SQL is not too difficult, and might serve as the basis for a future blog entry.)&lt;/p&gt;
 
 &lt;p&gt;Here&amp;rsquo;s our function. We&amp;rsquo;ve placed it in a package called LDAP_UTIL.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#00a&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;OR&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;REPLACE&lt;/span&gt; PACKAGE ldap_util &lt;span style=&#34;color:#00a&#34;&gt;AS&lt;/span&gt;
-    
-      &lt;span style=&#34;color:#00a&#34;&gt;TYPE&lt;/span&gt; ldap_entry_typ &lt;span style=&#34;color:#00a&#34;&gt;IS&lt;/span&gt; RECORD (
-        cn VARCHAR2(&lt;span style=&#34;color:#099&#34;&gt;30&lt;/span&gt;),
-        description VARCHAR2(&lt;span style=&#34;color:#099&#34;&gt;1000&lt;/span&gt;),
-        distinguished_name VARCHAR2(&lt;span style=&#34;color:#099&#34;&gt;200&lt;/span&gt;),
-        name VARCHAR2(&lt;span style=&#34;color:#099&#34;&gt;30&lt;/span&gt;),
-        samaccountname VARCHAR2(&lt;span style=&#34;color:#099&#34;&gt;30&lt;/span&gt;));
-        
-      &lt;span style=&#34;color:#00a&#34;&gt;TYPE&lt;/span&gt; ldap_groups_nt &lt;span style=&#34;color:#00a&#34;&gt;IS&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;TABLE&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;OF&lt;/span&gt; ldap_entry_typ;
-      &lt;span style=&#34;color:#00a&#34;&gt;TYPE&lt;/span&gt; ldap_groups_aa &lt;span style=&#34;color:#00a&#34;&gt;IS&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;TABLE&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;OF&lt;/span&gt; ldap_entry_typ &lt;span style=&#34;color:#00a&#34;&gt;INDEX&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;BY&lt;/span&gt; PLS_INTEGER;
-      &lt;span style=&#34;color:#00a&#34;&gt;TYPE&lt;/span&gt; ldap_groups_va &lt;span style=&#34;color:#00a&#34;&gt;IS&lt;/span&gt; VARRAY(&lt;span style=&#34;color:#099&#34;&gt;100&lt;/span&gt;) &lt;span style=&#34;color:#00a&#34;&gt;of&lt;/span&gt; ldap_entry_typ;
-      
-      &lt;span style=&#34;color:#00a&#34;&gt;FUNCTION&lt;/span&gt; get_user_groups_nt (p_user VARCHAR2) &lt;span style=&#34;color:#00a&#34;&gt;RETURN&lt;/span&gt; ldap_groups_nt;
-      &lt;span style=&#34;color:#00a&#34;&gt;FUNCTION&lt;/span&gt; get_user_groups_aa (p_user VARCHAR2) &lt;span style=&#34;color:#00a&#34;&gt;RETURN&lt;/span&gt; ldap_groups_aa;
-      &lt;span style=&#34;color:#00a&#34;&gt;FUNCTION&lt;/span&gt; get_user_groups_va (p_user VARCHAR2) &lt;span style=&#34;color:#00a&#34;&gt;RETURN&lt;/span&gt; ldap_groups_va;
-      
-    &lt;span style=&#34;color:#00a&#34;&gt;END&lt;/span&gt; ldap_util;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xxxx&#34; data-lang=&#34;xxxx&#34;&gt;    CREATE OR REPLACE PACKAGE ldap_util AS
+
+      TYPE ldap_entry_typ IS RECORD (
+        cn VARCHAR2(30),
+        description VARCHAR2(1000),
+        distinguished_name VARCHAR2(200),
+        name VARCHAR2(30),
+        samaccountname VARCHAR2(30));
+
+      TYPE ldap_groups_nt IS TABLE OF ldap_entry_typ;
+      TYPE ldap_groups_aa IS TABLE OF ldap_entry_typ INDEX BY PLS_INTEGER;
+      TYPE ldap_groups_va IS VARRAY(100) of ldap_entry_typ;
+
+      FUNCTION get_user_groups_nt (p_user VARCHAR2) RETURN ldap_groups_nt;
+      FUNCTION get_user_groups_aa (p_user VARCHAR2) RETURN ldap_groups_aa;
+      FUNCTION get_user_groups_va (p_user VARCHAR2) RETURN ldap_groups_va;
+
+    END ldap_util;
     /
-    &lt;span style=&#34;color:#00a&#34;&gt;SHOW&lt;/span&gt; ERRORS
-    
-    &lt;span style=&#34;color:#00a&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;OR&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;REPLACE&lt;/span&gt; PACKAGE BODY ldap_util &lt;span style=&#34;color:#00a&#34;&gt;AS&lt;/span&gt;
-      
-      &lt;span style=&#34;color:#00a&#34;&gt;FUNCTION&lt;/span&gt; get_user_groups_nt (p_user VARCHAR2) &lt;span style=&#34;color:#00a&#34;&gt;RETURN&lt;/span&gt; ldap_groups_nt &lt;span style=&#34;color:#00a&#34;&gt;IS&lt;/span&gt;
+    SHOW ERRORS
+
+    CREATE OR REPLACE PACKAGE BODY ldap_util AS
+
+      FUNCTION get_user_groups_nt (p_user VARCHAR2) RETURN ldap_groups_nt IS
         l_groups ldap_groups_nt := ldap_groups_nt();
-      &lt;span style=&#34;color:#00a&#34;&gt;BEGIN&lt;/span&gt;
-        &lt;span style=&#34;color:#00a&#34;&gt;CASE&lt;/span&gt; p_user
-          &lt;span style=&#34;color:#00a&#34;&gt;WHEN&lt;/span&gt; &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;jaugusti&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;THEN&lt;/span&gt;
-    
+      BEGIN
+        CASE p_user
+          WHEN &amp;#39;jaugusti&amp;#39; THEN
+
             l_groups.extend;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).cn := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;TIMCO_GRP&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).description := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Employees working on the Timco Industries account.&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).distinguished_name := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;CN=TIMCO_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).name := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;TIMCO_GRP&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).samaccountname := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;TIMCO_GRP&amp;#39;&lt;/span&gt;;
-    
-          &lt;span style=&#34;color:#00a&#34;&gt;WHEN&lt;/span&gt; &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;kkidd&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;THEN&lt;/span&gt;
-    
+            l_groups(1).cn := &amp;#39;TIMCO_GRP&amp;#39;;
+            l_groups(1).description := &amp;#39;Employees working on the Timco Industries account.&amp;#39;;
+            l_groups(1).distinguished_name := &amp;#39;CN=TIMCO_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;;
+            l_groups(1).name := &amp;#39;TIMCO_GRP&amp;#39;;
+            l_groups(1).samaccountname := &amp;#39;TIMCO_GRP&amp;#39;;
+
+          WHEN &amp;#39;kkidd&amp;#39; THEN
+
             l_groups.extend;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).cn := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;MONEYBROS_GRP&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).description := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Employees working on the Moneybros account.&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).distinguished_name := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;CN=MONEYBROS_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).name := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;MONEYBROS_GRP&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).samaccountname := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;MONEYBROS_GRP&amp;#39;&lt;/span&gt;;
-    
-          &lt;span style=&#34;color:#00a&#34;&gt;WHEN&lt;/span&gt; &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;bhill&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;THEN&lt;/span&gt;
-    
+            l_groups(1).cn := &amp;#39;MONEYBROS_GRP&amp;#39;;
+            l_groups(1).description := &amp;#39;Employees working on the Moneybros account.&amp;#39;;
+            l_groups(1).distinguished_name := &amp;#39;CN=MONEYBROS_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;;
+            l_groups(1).name := &amp;#39;MONEYBROS_GRP&amp;#39;;
+            l_groups(1).samaccountname := &amp;#39;MONEYBROS_GRP&amp;#39;;
+
+          WHEN &amp;#39;bhill&amp;#39; THEN
+
             l_groups.extend;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).cn := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;TIMCO_GRP&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).description := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Employees working on the Timco Industries account.&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).distinguished_name := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;CN=TIMCO_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).name := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;TIMCO_GRP&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).samaccountname := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;TIMCO_GRP&amp;#39;&lt;/span&gt;;
-    
+            l_groups(1).cn := &amp;#39;TIMCO_GRP&amp;#39;;
+            l_groups(1).description := &amp;#39;Employees working on the Timco Industries account.&amp;#39;;
+            l_groups(1).distinguished_name := &amp;#39;CN=TIMCO_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;;
+            l_groups(1).name := &amp;#39;TIMCO_GRP&amp;#39;;
+            l_groups(1).samaccountname := &amp;#39;TIMCO_GRP&amp;#39;;
+
             l_groups.extend;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;2&lt;/span&gt;).cn := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;MONACLE_GRP&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;2&lt;/span&gt;).description := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Employees working on the Monacle Corporation account.&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;2&lt;/span&gt;).distinguished_name := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;CN=MONACLE_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;2&lt;/span&gt;).name := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;MONACLE_GRP&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;2&lt;/span&gt;).samaccountname := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;MONACLE_GRP&amp;#39;&lt;/span&gt;;
-    
-          &lt;span style=&#34;color:#00a&#34;&gt;WHEN&lt;/span&gt; &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;kvongkas&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;THEN&lt;/span&gt;
-    
+            l_groups(2).cn := &amp;#39;MONACLE_GRP&amp;#39;;
+            l_groups(2).description := &amp;#39;Employees working on the Monacle Corporation account.&amp;#39;;
+            l_groups(2).distinguished_name := &amp;#39;CN=MONACLE_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;;
+            l_groups(2).name := &amp;#39;MONACLE_GRP&amp;#39;;
+            l_groups(2).samaccountname := &amp;#39;MONACLE_GRP&amp;#39;;
+
+          WHEN &amp;#39;kvongkas&amp;#39; THEN
+
             l_groups.extend;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).cn := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;MONEYBROS_GRP&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).description := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Employees working on the Moneybros account.&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).distinguished_name := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;CN=MONEYBROS_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).name := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;MONEYBROS_GRP&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).samaccountname := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;MONEYBROS_GRP&amp;#39;&lt;/span&gt;;
-    
+            l_groups(1).cn := &amp;#39;MONEYBROS_GRP&amp;#39;;
+            l_groups(1).description := &amp;#39;Employees working on the Moneybros account.&amp;#39;;
+            l_groups(1).distinguished_name := &amp;#39;CN=MONEYBROS_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;;
+            l_groups(1).name := &amp;#39;MONEYBROS_GRP&amp;#39;;
+            l_groups(1).samaccountname := &amp;#39;MONEYBROS_GRP&amp;#39;;
+
             l_groups.extend;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;2&lt;/span&gt;).cn := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;MONACLE_GRP&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;2&lt;/span&gt;).description := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Employees working on the Monacle Corporation account.&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;2&lt;/span&gt;).distinguished_name := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;CN=MONACLE_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;2&lt;/span&gt;).name := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;MONACLE_GRP&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;2&lt;/span&gt;).samaccountname := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;MONACLE_GRP&amp;#39;&lt;/span&gt;;
-    
+            l_groups(2).cn := &amp;#39;MONACLE_GRP&amp;#39;;
+            l_groups(2).description := &amp;#39;Employees working on the Monacle Corporation account.&amp;#39;;
+            l_groups(2).distinguished_name := &amp;#39;CN=MONACLE_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;;
+            l_groups(2).name := &amp;#39;MONACLE_GRP&amp;#39;;
+            l_groups(2).samaccountname := &amp;#39;MONACLE_GRP&amp;#39;;
+
             l_groups.extend;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;3&lt;/span&gt;).cn := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;SCHMAPPLE_GRP&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;3&lt;/span&gt;).description := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Employees working on the Schmapple account.&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;3&lt;/span&gt;).distinguished_name := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;CN=SCHMAPPLE_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;3&lt;/span&gt;).name := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;SCHMAPPLE_GRP&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;3&lt;/span&gt;).samaccountname := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;SCHMAPPLE_GRP&amp;#39;&lt;/span&gt;;
-    
-        &lt;span style=&#34;color:#00a&#34;&gt;END&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;CASE&lt;/span&gt;;
-        &lt;span style=&#34;color:#00a&#34;&gt;RETURN&lt;/span&gt; l_groups;
-      &lt;span style=&#34;color:#00a&#34;&gt;END&lt;/span&gt; get_user_groups_nt;
-      
-      &lt;span style=&#34;color:#00a&#34;&gt;FUNCTION&lt;/span&gt; get_user_groups_aa (p_user VARCHAR2) &lt;span style=&#34;color:#00a&#34;&gt;RETURN&lt;/span&gt; ldap_groups_aa &lt;span style=&#34;color:#00a&#34;&gt;IS&lt;/span&gt;
+            l_groups(3).cn := &amp;#39;SCHMAPPLE_GRP&amp;#39;;
+            l_groups(3).description := &amp;#39;Employees working on the Schmapple account.&amp;#39;;
+            l_groups(3).distinguished_name := &amp;#39;CN=SCHMAPPLE_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;;
+            l_groups(3).name := &amp;#39;SCHMAPPLE_GRP&amp;#39;;
+            l_groups(3).samaccountname := &amp;#39;SCHMAPPLE_GRP&amp;#39;;
+
+        END CASE;
+        RETURN l_groups;
+      END get_user_groups_nt;
+
+      FUNCTION get_user_groups_aa (p_user VARCHAR2) RETURN ldap_groups_aa IS
         l_groups ldap_groups_aa;
-      &lt;span style=&#34;color:#00a&#34;&gt;BEGIN&lt;/span&gt;
-        &lt;span style=&#34;color:#00a&#34;&gt;CASE&lt;/span&gt; p_user
-          &lt;span style=&#34;color:#00a&#34;&gt;WHEN&lt;/span&gt; &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;jaugusti&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;THEN&lt;/span&gt;
-    
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).cn := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;TIMCO_GRP&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).description := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Employees working on the Timco Industries account.&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).distinguished_name := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;CN=TIMCO_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).name := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;TIMCO_GRP&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).samaccountname := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;TIMCO_GRP&amp;#39;&lt;/span&gt;;
-    
-          &lt;span style=&#34;color:#00a&#34;&gt;WHEN&lt;/span&gt; &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;kkidd&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;THEN&lt;/span&gt;
-    
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).cn := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;MONEYBROS_GRP&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).description := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Employees working on the Moneybros account.&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).distinguished_name := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;CN=MONEYBROS_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).name := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;MONEYBROS_GRP&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).samaccountname := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;MONEYBROS_GRP&amp;#39;&lt;/span&gt;;
-    
-          &lt;span style=&#34;color:#00a&#34;&gt;WHEN&lt;/span&gt; &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;bhill&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;THEN&lt;/span&gt;
-    
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).cn := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;TIMCO_GRP&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).description := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Employees working on the Timco Industries account.&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).distinguished_name := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;CN=TIMCO_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).name := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;TIMCO_GRP&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).samaccountname := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;TIMCO_GRP&amp;#39;&lt;/span&gt;;
-    
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;2&lt;/span&gt;).cn := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;MONACLE_GRP&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;2&lt;/span&gt;).description := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Employees working on the Monacle Corporation account.&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;2&lt;/span&gt;).distinguished_name := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;CN=MONACLE_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;2&lt;/span&gt;).name := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;MONACLE_GRP&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;2&lt;/span&gt;).samaccountname := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;MONACLE_GRP&amp;#39;&lt;/span&gt;;
-    
-          &lt;span style=&#34;color:#00a&#34;&gt;WHEN&lt;/span&gt; &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;kvongkas&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;THEN&lt;/span&gt;
-    
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).cn := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;MONEYBROS_GRP&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).description := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Employees working on the Moneybros account.&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).distinguished_name := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;CN=MONEYBROS_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).name := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;MONEYBROS_GRP&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).samaccountname := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;MONEYBROS_GRP&amp;#39;&lt;/span&gt;;
-    
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;2&lt;/span&gt;).cn := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;MONACLE_GRP&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;2&lt;/span&gt;).description := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Employees working on the Monacle Corporation account.&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;2&lt;/span&gt;).distinguished_name := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;CN=MONACLE_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;2&lt;/span&gt;).name := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;MONACLE_GRP&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;2&lt;/span&gt;).samaccountname := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;MONACLE_GRP&amp;#39;&lt;/span&gt;;
-    
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;3&lt;/span&gt;).cn := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;SCHMAPPLE_GRP&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;3&lt;/span&gt;).description := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Employees working on the Schmapple account.&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;3&lt;/span&gt;).distinguished_name := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;CN=SCHMAPPLE_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;3&lt;/span&gt;).name := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;SCHMAPPLE_GRP&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;3&lt;/span&gt;).samaccountname := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;SCHMAPPLE_GRP&amp;#39;&lt;/span&gt;;
-    
-        &lt;span style=&#34;color:#00a&#34;&gt;END&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;CASE&lt;/span&gt;;
-        &lt;span style=&#34;color:#00a&#34;&gt;RETURN&lt;/span&gt; l_groups;
-      &lt;span style=&#34;color:#00a&#34;&gt;END&lt;/span&gt; get_user_groups_aa;
-      
-      &lt;span style=&#34;color:#00a&#34;&gt;FUNCTION&lt;/span&gt; get_user_groups_va (p_user VARCHAR2) &lt;span style=&#34;color:#00a&#34;&gt;RETURN&lt;/span&gt; ldap_groups_va &lt;span style=&#34;color:#00a&#34;&gt;IS&lt;/span&gt;
+      BEGIN
+        CASE p_user
+          WHEN &amp;#39;jaugusti&amp;#39; THEN
+
+            l_groups(1).cn := &amp;#39;TIMCO_GRP&amp;#39;;
+            l_groups(1).description := &amp;#39;Employees working on the Timco Industries account.&amp;#39;;
+            l_groups(1).distinguished_name := &amp;#39;CN=TIMCO_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;;
+            l_groups(1).name := &amp;#39;TIMCO_GRP&amp;#39;;
+            l_groups(1).samaccountname := &amp;#39;TIMCO_GRP&amp;#39;;
+
+          WHEN &amp;#39;kkidd&amp;#39; THEN
+
+            l_groups(1).cn := &amp;#39;MONEYBROS_GRP&amp;#39;;
+            l_groups(1).description := &amp;#39;Employees working on the Moneybros account.&amp;#39;;
+            l_groups(1).distinguished_name := &amp;#39;CN=MONEYBROS_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;;
+            l_groups(1).name := &amp;#39;MONEYBROS_GRP&amp;#39;;
+            l_groups(1).samaccountname := &amp;#39;MONEYBROS_GRP&amp;#39;;
+
+          WHEN &amp;#39;bhill&amp;#39; THEN
+
+            l_groups(1).cn := &amp;#39;TIMCO_GRP&amp;#39;;
+            l_groups(1).description := &amp;#39;Employees working on the Timco Industries account.&amp;#39;;
+            l_groups(1).distinguished_name := &amp;#39;CN=TIMCO_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;;
+            l_groups(1).name := &amp;#39;TIMCO_GRP&amp;#39;;
+            l_groups(1).samaccountname := &amp;#39;TIMCO_GRP&amp;#39;;
+
+            l_groups(2).cn := &amp;#39;MONACLE_GRP&amp;#39;;
+            l_groups(2).description := &amp;#39;Employees working on the Monacle Corporation account.&amp;#39;;
+            l_groups(2).distinguished_name := &amp;#39;CN=MONACLE_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;;
+            l_groups(2).name := &amp;#39;MONACLE_GRP&amp;#39;;
+            l_groups(2).samaccountname := &amp;#39;MONACLE_GRP&amp;#39;;
+
+          WHEN &amp;#39;kvongkas&amp;#39; THEN
+
+            l_groups(1).cn := &amp;#39;MONEYBROS_GRP&amp;#39;;
+            l_groups(1).description := &amp;#39;Employees working on the Moneybros account.&amp;#39;;
+            l_groups(1).distinguished_name := &amp;#39;CN=MONEYBROS_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;;
+            l_groups(1).name := &amp;#39;MONEYBROS_GRP&amp;#39;;
+            l_groups(1).samaccountname := &amp;#39;MONEYBROS_GRP&amp;#39;;
+
+            l_groups(2).cn := &amp;#39;MONACLE_GRP&amp;#39;;
+            l_groups(2).description := &amp;#39;Employees working on the Monacle Corporation account.&amp;#39;;
+            l_groups(2).distinguished_name := &amp;#39;CN=MONACLE_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;;
+            l_groups(2).name := &amp;#39;MONACLE_GRP&amp;#39;;
+            l_groups(2).samaccountname := &amp;#39;MONACLE_GRP&amp;#39;;
+
+            l_groups(3).cn := &amp;#39;SCHMAPPLE_GRP&amp;#39;;
+            l_groups(3).description := &amp;#39;Employees working on the Schmapple account.&amp;#39;;
+            l_groups(3).distinguished_name := &amp;#39;CN=SCHMAPPLE_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;;
+            l_groups(3).name := &amp;#39;SCHMAPPLE_GRP&amp;#39;;
+            l_groups(3).samaccountname := &amp;#39;SCHMAPPLE_GRP&amp;#39;;
+
+        END CASE;
+        RETURN l_groups;
+      END get_user_groups_aa;
+
+      FUNCTION get_user_groups_va (p_user VARCHAR2) RETURN ldap_groups_va IS
         l_groups ldap_groups_va := ldap_groups_va();
-      &lt;span style=&#34;color:#00a&#34;&gt;BEGIN&lt;/span&gt;
-        &lt;span style=&#34;color:#00a&#34;&gt;CASE&lt;/span&gt; p_user
-          &lt;span style=&#34;color:#00a&#34;&gt;WHEN&lt;/span&gt; &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;jaugusti&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;THEN&lt;/span&gt;
-    
+      BEGIN
+        CASE p_user
+          WHEN &amp;#39;jaugusti&amp;#39; THEN
+
             l_groups.extend;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).cn := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;TIMCO_GRP&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).description := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Employees working on the Timco Industries account.&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).distinguished_name := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;CN=TIMCO_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).name := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;TIMCO_GRP&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).samaccountname := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;TIMCO_GRP&amp;#39;&lt;/span&gt;;
-    
-          &lt;span style=&#34;color:#00a&#34;&gt;WHEN&lt;/span&gt; &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;kkidd&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;THEN&lt;/span&gt;
-    
+            l_groups(1).cn := &amp;#39;TIMCO_GRP&amp;#39;;
+            l_groups(1).description := &amp;#39;Employees working on the Timco Industries account.&amp;#39;;
+            l_groups(1).distinguished_name := &amp;#39;CN=TIMCO_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;;
+            l_groups(1).name := &amp;#39;TIMCO_GRP&amp;#39;;
+            l_groups(1).samaccountname := &amp;#39;TIMCO_GRP&amp;#39;;
+
+          WHEN &amp;#39;kkidd&amp;#39; THEN
+
             l_groups.extend;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).cn := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;MONEYBROS_GRP&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).description := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Employees working on the Moneybros account.&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).distinguished_name := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;CN=MONEYBROS_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).name := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;MONEYBROS_GRP&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).samaccountname := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;MONEYBROS_GRP&amp;#39;&lt;/span&gt;;
-    
-          &lt;span style=&#34;color:#00a&#34;&gt;WHEN&lt;/span&gt; &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;bhill&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;THEN&lt;/span&gt;
-    
+            l_groups(1).cn := &amp;#39;MONEYBROS_GRP&amp;#39;;
+            l_groups(1).description := &amp;#39;Employees working on the Moneybros account.&amp;#39;;
+            l_groups(1).distinguished_name := &amp;#39;CN=MONEYBROS_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;;
+            l_groups(1).name := &amp;#39;MONEYBROS_GRP&amp;#39;;
+            l_groups(1).samaccountname := &amp;#39;MONEYBROS_GRP&amp;#39;;
+
+          WHEN &amp;#39;bhill&amp;#39; THEN
+
             l_groups.extend;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).cn := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;TIMCO_GRP&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).description := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Employees working on the Timco Industries account.&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).distinguished_name := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;CN=TIMCO_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).name := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;TIMCO_GRP&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).samaccountname := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;TIMCO_GRP&amp;#39;&lt;/span&gt;;
-    
+            l_groups(1).cn := &amp;#39;TIMCO_GRP&amp;#39;;
+            l_groups(1).description := &amp;#39;Employees working on the Timco Industries account.&amp;#39;;
+            l_groups(1).distinguished_name := &amp;#39;CN=TIMCO_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;;
+            l_groups(1).name := &amp;#39;TIMCO_GRP&amp;#39;;
+            l_groups(1).samaccountname := &amp;#39;TIMCO_GRP&amp;#39;;
+
             l_groups.extend;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;2&lt;/span&gt;).cn := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;MONACLE_GRP&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;2&lt;/span&gt;).description := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Employees working on the Monacle Corporation account.&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;2&lt;/span&gt;).distinguished_name := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;CN=MONACLE_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;2&lt;/span&gt;).name := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;MONACLE_GRP&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;2&lt;/span&gt;).samaccountname := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;MONACLE_GRP&amp;#39;&lt;/span&gt;;
-    
-          &lt;span style=&#34;color:#00a&#34;&gt;WHEN&lt;/span&gt; &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;kvongkas&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;THEN&lt;/span&gt;
-    
+            l_groups(2).cn := &amp;#39;MONACLE_GRP&amp;#39;;
+            l_groups(2).description := &amp;#39;Employees working on the Monacle Corporation account.&amp;#39;;
+            l_groups(2).distinguished_name := &amp;#39;CN=MONACLE_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;;
+            l_groups(2).name := &amp;#39;MONACLE_GRP&amp;#39;;
+            l_groups(2).samaccountname := &amp;#39;MONACLE_GRP&amp;#39;;
+
+          WHEN &amp;#39;kvongkas&amp;#39; THEN
+
             l_groups.extend;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).cn := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;MONEYBROS_GRP&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).description := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Employees working on the Moneybros account.&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).distinguished_name := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;CN=MONEYBROS_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).name := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;MONEYBROS_GRP&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;).samaccountname := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;MONEYBROS_GRP&amp;#39;&lt;/span&gt;;
-    
+            l_groups(1).cn := &amp;#39;MONEYBROS_GRP&amp;#39;;
+            l_groups(1).description := &amp;#39;Employees working on the Moneybros account.&amp;#39;;
+            l_groups(1).distinguished_name := &amp;#39;CN=MONEYBROS_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;;
+            l_groups(1).name := &amp;#39;MONEYBROS_GRP&amp;#39;;
+            l_groups(1).samaccountname := &amp;#39;MONEYBROS_GRP&amp;#39;;
+
             l_groups.extend;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;2&lt;/span&gt;).cn := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;MONACLE_GRP&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;2&lt;/span&gt;).description := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Employees working on the Monacle Corporation account.&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;2&lt;/span&gt;).distinguished_name := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;CN=MONACLE_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;2&lt;/span&gt;).name := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;MONACLE_GRP&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;2&lt;/span&gt;).samaccountname := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;MONACLE_GRP&amp;#39;&lt;/span&gt;;
-    
+            l_groups(2).cn := &amp;#39;MONACLE_GRP&amp;#39;;
+            l_groups(2).description := &amp;#39;Employees working on the Monacle Corporation account.&amp;#39;;
+            l_groups(2).distinguished_name := &amp;#39;CN=MONACLE_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;;
+            l_groups(2).name := &amp;#39;MONACLE_GRP&amp;#39;;
+            l_groups(2).samaccountname := &amp;#39;MONACLE_GRP&amp;#39;;
+
             l_groups.extend;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;3&lt;/span&gt;).cn := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;SCHMAPPLE_GRP&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;3&lt;/span&gt;).description := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;Employees working on the Schmapple account.&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;3&lt;/span&gt;).distinguished_name := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;CN=SCHMAPPLE_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;3&lt;/span&gt;).name := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;SCHMAPPLE_GRP&amp;#39;&lt;/span&gt;;
-            l_groups(&lt;span style=&#34;color:#099&#34;&gt;3&lt;/span&gt;).samaccountname := &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;SCHMAPPLE_GRP&amp;#39;&lt;/span&gt;;
-    
-        &lt;span style=&#34;color:#00a&#34;&gt;END&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;CASE&lt;/span&gt;;
-        &lt;span style=&#34;color:#00a&#34;&gt;RETURN&lt;/span&gt; l_groups;
-      &lt;span style=&#34;color:#00a&#34;&gt;END&lt;/span&gt; get_user_groups_va;
-      
-    &lt;span style=&#34;color:#00a&#34;&gt;END&lt;/span&gt; ldap_util;
+            l_groups(3).cn := &amp;#39;SCHMAPPLE_GRP&amp;#39;;
+            l_groups(3).description := &amp;#39;Employees working on the Schmapple account.&amp;#39;;
+            l_groups(3).distinguished_name := &amp;#39;CN=SCHMAPPLE_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;;
+            l_groups(3).name := &amp;#39;SCHMAPPLE_GRP&amp;#39;;
+            l_groups(3).samaccountname := &amp;#39;SCHMAPPLE_GRP&amp;#39;;
+
+        END CASE;
+        RETURN l_groups;
+      END get_user_groups_va;
+
+    END ldap_util;
     /
-    &lt;span style=&#34;color:#00a&#34;&gt;SHOW&lt;/span&gt; ERRORS&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    SHOW ERRORS&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;As you can see, LDAP_UTIL has three functions that return the three kinds of collections in PL/SQL: nested tables, associative arrays, and varrays.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#00a&#34;&gt;FUNCTION&lt;/span&gt; get_user_groups_nt (p_user VARCHAR2) &lt;span style=&#34;color:#00a&#34;&gt;RETURN&lt;/span&gt; ldap_groups_nt;
-    &lt;span style=&#34;color:#00a&#34;&gt;FUNCTION&lt;/span&gt; get_user_groups_aa (p_user VARCHAR2) &lt;span style=&#34;color:#00a&#34;&gt;RETURN&lt;/span&gt; ldap_groups_aa;
-    &lt;span style=&#34;color:#00a&#34;&gt;FUNCTION&lt;/span&gt; get_user_groups_va (p_user VARCHAR2) &lt;span style=&#34;color:#00a&#34;&gt;RETURN&lt;/span&gt; ldap_groups_va;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FUNCTION&lt;/span&gt; get_user_groups_nt (p_user VARCHAR2) &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;RETURN&lt;/span&gt; ldap_groups_nt;
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FUNCTION&lt;/span&gt; get_user_groups_aa (p_user VARCHAR2) &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;RETURN&lt;/span&gt; ldap_groups_aa;
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FUNCTION&lt;/span&gt; get_user_groups_va (p_user VARCHAR2) &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;RETURN&lt;/span&gt; ldap_groups_va;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;The collections consist of a group of records representing &amp;ldquo;group&amp;rdquo; data from Active Directory.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#00a&#34;&gt;TYPE&lt;/span&gt; ldap_entry_typ &lt;span style=&#34;color:#00a&#34;&gt;IS&lt;/span&gt; RECORD (
-        cn VARCHAR2(&lt;span style=&#34;color:#099&#34;&gt;30&lt;/span&gt;),
-        description VARCHAR2(&lt;span style=&#34;color:#099&#34;&gt;1000&lt;/span&gt;),
-        distinguished_name VARCHAR2(&lt;span style=&#34;color:#099&#34;&gt;200&lt;/span&gt;),
-        name VARCHAR2(&lt;span style=&#34;color:#099&#34;&gt;30&lt;/span&gt;),
-        samaccountname VARCHAR2(&lt;span style=&#34;color:#099&#34;&gt;30&lt;/span&gt;));&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;TYPE&lt;/span&gt; ldap_entry_typ &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;IS&lt;/span&gt; RECORD (
+        cn VARCHAR2(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;30&lt;/span&gt;),
+        description VARCHAR2(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1000&lt;/span&gt;),
+        distinguished_name VARCHAR2(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;200&lt;/span&gt;),
+        name VARCHAR2(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;30&lt;/span&gt;),
+        samaccountname VARCHAR2(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;30&lt;/span&gt;));&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;The p_user parameter would be the user&amp;rsquo;s network id, corresponding to the sAMAccountName attribute in Active Directory; since we&amp;rsquo;re hardcoding group data this is not important to us at the moment. The point is you pass in a username and you get a collection of groups.&lt;/p&gt;
 
 &lt;p&gt;Using the same technique we demonstrated in part one, we now create a wrapper package of pipelined functions to transform the collection data into something we can query - an aggregate result set.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#00a&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;OR&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;REPLACE&lt;/span&gt; PACKAGE ldap_util_pipelined &lt;span style=&#34;color:#00a&#34;&gt;AS&lt;/span&gt;
-    
-      &lt;span style=&#34;color:#00a&#34;&gt;FUNCTION&lt;/span&gt; get_user_groups_nt (p_user VARCHAR2) &lt;span style=&#34;color:#00a&#34;&gt;RETURN&lt;/span&gt; ldap_util.ldap_groups_nt PIPELINED;
-      &lt;span style=&#34;color:#00a&#34;&gt;FUNCTION&lt;/span&gt; get_user_groups_aa (p_user VARCHAR2) &lt;span style=&#34;color:#00a&#34;&gt;RETURN&lt;/span&gt; ldap_util.ldap_groups_nt PIPELINED;
-      &lt;span style=&#34;color:#00a&#34;&gt;FUNCTION&lt;/span&gt; get_user_groups_va (p_user VARCHAR2) &lt;span style=&#34;color:#00a&#34;&gt;RETURN&lt;/span&gt; ldap_util.ldap_groups_va PIPELINED;
-      
-    &lt;span style=&#34;color:#00a&#34;&gt;END&lt;/span&gt; ldap_util_pipelined;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;OR&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;REPLACE&lt;/span&gt; PACKAGE ldap_util_pipelined &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;AS&lt;/span&gt;
+
+      &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FUNCTION&lt;/span&gt; get_user_groups_nt (p_user VARCHAR2) &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;RETURN&lt;/span&gt; ldap_util.ldap_groups_nt PIPELINED;
+      &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FUNCTION&lt;/span&gt; get_user_groups_aa (p_user VARCHAR2) &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;RETURN&lt;/span&gt; ldap_util.ldap_groups_nt PIPELINED;
+      &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FUNCTION&lt;/span&gt; get_user_groups_va (p_user VARCHAR2) &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;RETURN&lt;/span&gt; ldap_util.ldap_groups_va PIPELINED;
+
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;END&lt;/span&gt; ldap_util_pipelined;
     /
-    &lt;span style=&#34;color:#00a&#34;&gt;SHOW&lt;/span&gt; ERRORS
-    
-    &lt;span style=&#34;color:#00a&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;OR&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;REPLACE&lt;/span&gt; PACKAGE BODY ldap_util_pipelined &lt;span style=&#34;color:#00a&#34;&gt;AS&lt;/span&gt;
-    
-      &lt;span style=&#34;color:#00a&#34;&gt;FUNCTION&lt;/span&gt; get_user_groups_nt (p_user VARCHAR2) 
-      &lt;span style=&#34;color:#00a&#34;&gt;RETURN&lt;/span&gt; ldap_util.ldap_groups_nt PIPELINED &lt;span style=&#34;color:#00a&#34;&gt;IS&lt;/span&gt;
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;SHOW&lt;/span&gt; ERRORS
+
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;OR&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;REPLACE&lt;/span&gt; PACKAGE BODY ldap_util_pipelined &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;AS&lt;/span&gt;
+
+      &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FUNCTION&lt;/span&gt; get_user_groups_nt (p_user VARCHAR2)
+      &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;RETURN&lt;/span&gt; ldap_util.ldap_groups_nt PIPELINED &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;IS&lt;/span&gt;
         l_groups ldap_util.ldap_groups_nt;
-      &lt;span style=&#34;color:#00a&#34;&gt;BEGIN&lt;/span&gt;
+      &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;BEGIN&lt;/span&gt;
         l_groups := ldap_util.get_user_groups_nt(p_user);
-        &lt;span style=&#34;color:#00a&#34;&gt;FOR&lt;/span&gt; i &lt;span style=&#34;color:#00a&#34;&gt;IN&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt; .. l_groups.&lt;span style=&#34;color:#00a&#34;&gt;count&lt;/span&gt; LOOP
-          PIPE &lt;span style=&#34;color:#00a&#34;&gt;ROW&lt;/span&gt; (l_groups(i));
-        &lt;span style=&#34;color:#00a&#34;&gt;END&lt;/span&gt; LOOP;
-        &lt;span style=&#34;color:#00a&#34;&gt;RETURN&lt;/span&gt;;
-      &lt;span style=&#34;color:#00a&#34;&gt;END&lt;/span&gt; get_user_groups_nt;
-      
-      &lt;span style=&#34;color:#00a&#34;&gt;FUNCTION&lt;/span&gt; get_user_groups_aa (p_user VARCHAR2) 
-      &lt;span style=&#34;color:#00a&#34;&gt;RETURN&lt;/span&gt; ldap_util.ldap_groups_nt PIPELINED &lt;span style=&#34;color:#00a&#34;&gt;IS&lt;/span&gt;
+        &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FOR&lt;/span&gt; i &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;IN&lt;/span&gt; &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1&lt;/span&gt; .. l_groups.&lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;count&lt;/span&gt; LOOP
+          PIPE &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;ROW&lt;/span&gt; (l_groups(i));
+        &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;END&lt;/span&gt; LOOP;
+        &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;RETURN&lt;/span&gt;;
+      &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;END&lt;/span&gt; get_user_groups_nt;
+
+      &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FUNCTION&lt;/span&gt; get_user_groups_aa (p_user VARCHAR2)
+      &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;RETURN&lt;/span&gt; ldap_util.ldap_groups_nt PIPELINED &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;IS&lt;/span&gt;
         l_groups ldap_util.ldap_groups_aa;
-      &lt;span style=&#34;color:#00a&#34;&gt;BEGIN&lt;/span&gt;
+      &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;BEGIN&lt;/span&gt;
         l_groups := ldap_util.get_user_groups_aa(p_user);
-        &lt;span style=&#34;color:#00a&#34;&gt;FOR&lt;/span&gt; i &lt;span style=&#34;color:#00a&#34;&gt;IN&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt; .. l_groups.&lt;span style=&#34;color:#00a&#34;&gt;count&lt;/span&gt; LOOP
-          PIPE &lt;span style=&#34;color:#00a&#34;&gt;ROW&lt;/span&gt; (l_groups(i));
-        &lt;span style=&#34;color:#00a&#34;&gt;END&lt;/span&gt; LOOP;
-        &lt;span style=&#34;color:#00a&#34;&gt;RETURN&lt;/span&gt;;
-      &lt;span style=&#34;color:#00a&#34;&gt;END&lt;/span&gt; get_user_groups_aa;
-      
-      &lt;span style=&#34;color:#00a&#34;&gt;FUNCTION&lt;/span&gt; get_user_groups_va (p_user VARCHAR2) 
-      &lt;span style=&#34;color:#00a&#34;&gt;RETURN&lt;/span&gt; ldap_util.ldap_groups_va PIPELINED &lt;span style=&#34;color:#00a&#34;&gt;IS&lt;/span&gt;
+        &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FOR&lt;/span&gt; i &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;IN&lt;/span&gt; &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1&lt;/span&gt; .. l_groups.&lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;count&lt;/span&gt; LOOP
+          PIPE &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;ROW&lt;/span&gt; (l_groups(i));
+        &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;END&lt;/span&gt; LOOP;
+        &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;RETURN&lt;/span&gt;;
+      &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;END&lt;/span&gt; get_user_groups_aa;
+
+      &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FUNCTION&lt;/span&gt; get_user_groups_va (p_user VARCHAR2)
+      &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;RETURN&lt;/span&gt; ldap_util.ldap_groups_va PIPELINED &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;IS&lt;/span&gt;
         l_groups ldap_util.ldap_groups_va;
-      &lt;span style=&#34;color:#00a&#34;&gt;BEGIN&lt;/span&gt;
+      &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;BEGIN&lt;/span&gt;
         l_groups := ldap_util.get_user_groups_va(p_user);
-        &lt;span style=&#34;color:#00a&#34;&gt;FOR&lt;/span&gt; i &lt;span style=&#34;color:#00a&#34;&gt;IN&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt; .. l_groups.&lt;span style=&#34;color:#00a&#34;&gt;count&lt;/span&gt; LOOP
-          PIPE &lt;span style=&#34;color:#00a&#34;&gt;ROW&lt;/span&gt; (l_groups(i));
-        &lt;span style=&#34;color:#00a&#34;&gt;END&lt;/span&gt; LOOP;
-        &lt;span style=&#34;color:#00a&#34;&gt;RETURN&lt;/span&gt;;
-      &lt;span style=&#34;color:#00a&#34;&gt;END&lt;/span&gt; get_user_groups_va;
-    
-    &lt;span style=&#34;color:#00a&#34;&gt;END&lt;/span&gt; ldap_util_pipelined;
+        &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FOR&lt;/span&gt; i &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;IN&lt;/span&gt; &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1&lt;/span&gt; .. l_groups.&lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;count&lt;/span&gt; LOOP
+          PIPE &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;ROW&lt;/span&gt; (l_groups(i));
+        &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;END&lt;/span&gt; LOOP;
+        &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;RETURN&lt;/span&gt;;
+      &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;END&lt;/span&gt; get_user_groups_va;
+
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;END&lt;/span&gt; ldap_util_pipelined;
     /
-    &lt;span style=&#34;color:#00a&#34;&gt;SHOW&lt;/span&gt; ERRORS&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;SHOW&lt;/span&gt; ERRORS&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Note the return types of the three functions in ldap_util_pipelined.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#00a&#34;&gt;FUNCTION&lt;/span&gt; get_user_groups_nt (p_user VARCHAR2) &lt;span style=&#34;color:#00a&#34;&gt;RETURN&lt;/span&gt; ldap_util.ldap_groups_nt PIPELINED;
-    &lt;span style=&#34;color:#00a&#34;&gt;FUNCTION&lt;/span&gt; get_user_groups_aa (p_user VARCHAR2) &lt;span style=&#34;color:#00a&#34;&gt;RETURN&lt;/span&gt; ldap_util.ldap_groups_nt PIPELINED;
-    &lt;span style=&#34;color:#00a&#34;&gt;FUNCTION&lt;/span&gt; get_user_groups_va (p_user VARCHAR2) &lt;span style=&#34;color:#00a&#34;&gt;RETURN&lt;/span&gt; ldap_util.ldap_groups_va PIPELINED;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FUNCTION&lt;/span&gt; get_user_groups_nt (p_user VARCHAR2) &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;RETURN&lt;/span&gt; ldap_util.ldap_groups_nt PIPELINED;
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FUNCTION&lt;/span&gt; get_user_groups_aa (p_user VARCHAR2) &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;RETURN&lt;/span&gt; ldap_util.ldap_groups_nt PIPELINED;
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FUNCTION&lt;/span&gt; get_user_groups_va (p_user VARCHAR2) &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;RETURN&lt;/span&gt; ldap_util.ldap_groups_va PIPELINED;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;The first two return a nested table collection, while the third returns a VARRAY. These two collections can be pipelined because they correspond to native SQL datatypes in Oracle; not so for associative arrays. In order to pipeline the associative array returned from ldap_util.get_user_groups_aa, we need to map that collection to one of the other types. Here, we map it to a nested table. The iterative logic is the same, though, as the other two functions.&lt;/p&gt;
 
 &lt;p&gt;Now we can verify that our approach worked by issuing some simple queries, supported by the SQL &amp;ldquo;TABLE&amp;rdquo; construct.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#00a&#34;&gt;SQL&lt;/span&gt;&amp;gt; &lt;span style=&#34;color:#00a&#34;&gt;select&lt;/span&gt; * &lt;span style=&#34;color:#00a&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;table&lt;/span&gt;(ldap_util_pipelined.get_user_groups_nt(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;jaugusti&amp;#39;&lt;/span&gt;));
-    
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;SQL&lt;/span&gt;&amp;gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;select&lt;/span&gt; * &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;table&lt;/span&gt;(ldap_util_pipelined.get_user_groups_nt(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;jaugusti&amp;#39;&lt;/span&gt;));
+
     CN        DESCRIPTION                                        DISTINGUISHED_NAME                            NAME      SAMACCOUN
-    &lt;span style=&#34;color:#aaa;font-style:italic&#34;&gt;--------- -------------------------------------------------- --------------------------------------------- --------- ---------
-&lt;/span&gt;&lt;span style=&#34;color:#aaa;font-style:italic&#34;&gt;&lt;/span&gt;    TIMCO_GRP Employees working &lt;span style=&#34;color:#00a&#34;&gt;on&lt;/span&gt; the Timco Industries account. CN=TIMCO_GRP,OU=&lt;span style=&#34;color:#00a&#34;&gt;Global&lt;/span&gt; Groups,DC=acme,DC=com  TIMCO_GRP TIMCO_GRP&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    &lt;span style=&#34;color:#888&#34;&gt;--------- -------------------------------------------------- --------------------------------------------- --------- ---------
+&lt;/span&gt;&lt;span style=&#34;color:#888&#34;&gt;&lt;/span&gt;    TIMCO_GRP Employees working &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;on&lt;/span&gt; the Timco Industries account. CN=TIMCO_GRP,OU=&lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;Global&lt;/span&gt; Groups,DC=acme,DC=com  TIMCO_GRP TIMCO_GRP&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;As you can see, the individual attributes of the record structure form the columns of our new table, and we can reference those columns directly, if we wish.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#00a&#34;&gt;SQL&lt;/span&gt;&amp;gt; &lt;span style=&#34;color:#00a&#34;&gt;select&lt;/span&gt; cn &lt;span style=&#34;color:#00a&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;table&lt;/span&gt;(ldap_util_pipelined.get_user_groups_nt(&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;kvongkas&amp;#39;&lt;/span&gt;));
-    
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;SQL&lt;/span&gt;&amp;gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;select&lt;/span&gt; cn &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;table&lt;/span&gt;(ldap_util_pipelined.get_user_groups_nt(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;kvongkas&amp;#39;&lt;/span&gt;));
+
     CN
-    &lt;span style=&#34;color:#aaa;font-style:italic&#34;&gt;---------------
-&lt;/span&gt;&lt;span style=&#34;color:#aaa;font-style:italic&#34;&gt;&lt;/span&gt;    MONEYBROS_GRP
+    &lt;span style=&#34;color:#888&#34;&gt;---------------
+&lt;/span&gt;&lt;span style=&#34;color:#888&#34;&gt;&lt;/span&gt;    MONEYBROS_GRP
     MONACLE_GRP
     SCHMAPPLE_GRP&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;All that&amp;rsquo;s left for us at this point is to construct a WHERE clause condition to use with Oracle&amp;rsquo;s Virtual Private Database feature to limit data returned from queries against the table QUARTERLY_SALES_DATA. That condition could look something like this, assuming that our application connects to the database as the logged in user.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    client_id &lt;span style=&#34;color:#00a&#34;&gt;IN&lt;/span&gt; (&lt;span style=&#34;color:#00a&#34;&gt;SELECT&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;CASE&lt;/span&gt; cn
-                           &lt;span style=&#34;color:#00a&#34;&gt;WHEN&lt;/span&gt; &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;TIMCO_GRP&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;THEN&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;100&lt;/span&gt;
-                           &lt;span style=&#34;color:#00a&#34;&gt;WHEN&lt;/span&gt; &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;MONEYBROS_GRP&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;THEN&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;200&lt;/span&gt;
-                           &lt;span style=&#34;color:#00a&#34;&gt;WHEN&lt;/span&gt; &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;MONACLE_GRP&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;THEN&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;300&lt;/span&gt;
-                           &lt;span style=&#34;color:#00a&#34;&gt;WHEN&lt;/span&gt; &lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;SCHMAPPLE_GRP&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;THEN&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;400&lt;/span&gt;
-                         &lt;span style=&#34;color:#00a&#34;&gt;END&lt;/span&gt;
-                    &lt;span style=&#34;color:#00a&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;TABLE&lt;/span&gt;(ldap_util_pipelined.get_user_groups_nt(&lt;span style=&#34;color:#00a&#34;&gt;USER&lt;/span&gt;)))&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    client_id &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;IN&lt;/span&gt; (&lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;SELECT&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;CASE&lt;/span&gt; cn
+                           &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;WHEN&lt;/span&gt; &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;TIMCO_GRP&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;THEN&lt;/span&gt; &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;100&lt;/span&gt;
+                           &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;WHEN&lt;/span&gt; &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;MONEYBROS_GRP&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;THEN&lt;/span&gt; &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;200&lt;/span&gt;
+                           &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;WHEN&lt;/span&gt; &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;MONACLE_GRP&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;THEN&lt;/span&gt; &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;300&lt;/span&gt;
+                           &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;WHEN&lt;/span&gt; &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;SCHMAPPLE_GRP&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;THEN&lt;/span&gt; &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;400&lt;/span&gt;
+                         &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;END&lt;/span&gt;
+                    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;TABLE&lt;/span&gt;(ldap_util_pipelined.get_user_groups_nt(&lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;USER&lt;/span&gt;)))&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Here the mapping between AD group name and client ID is hardcoded in the CASE expression. A more flexible way would be to create a mapping table. Also, this is probably not a case study in writing a well performing VPD clause, but the real point here is that using SQL table functions and PL/SQL pipelined functions, we can translate data retrieved from an API, LDAP directory, or web service into table-like structures that we can query, join, and otherwise manipulate just like real tables.&lt;/p&gt;
 </description>
           </item>
@@ -616,48 +616,48 @@ HotSpot compilation method statistics.&lt;/li&gt;
         
           <item>
             <title>Table Functions: 9i Feature Worth Revisiting (Part 1)</title>
-            <link>http://localhost:1313/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-1/</link>
+            <link>http://tobybase.com/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-1/</link>
             <pubDate>Fri, 27 Apr 2012 22:27:00 +0000</pubDate>
             
-            <guid>http://localhost:1313/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-1/</guid>
+            <guid>http://tobybase.com/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-1/</guid>
             <description>&lt;p&gt;Yes, they&amp;rsquo;ve been around for a while, but if you haven&amp;rsquo;t made use of table functions lately you might want to reacquaint yourself with this old gem. Table functions allow you to query the contents of PL/SQL collection types using SQL&amp;rsquo;s TABLE operator. Here is a simple example.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#00a&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;OR&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;REPLACE&lt;/span&gt; PACKAGE example &lt;span style=&#34;color:#00a&#34;&gt;AS&lt;/span&gt;
-    
-         &lt;span style=&#34;color:#00a&#34;&gt;TYPE&lt;/span&gt; nested_table_typ &lt;span style=&#34;color:#00a&#34;&gt;IS&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;TABLE&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;OF&lt;/span&gt; VARCHAR2(&lt;span style=&#34;color:#099&#34;&gt;100&lt;/span&gt;);
-    
-         &lt;span style=&#34;color:#00a&#34;&gt;FUNCTION&lt;/span&gt; get_nested_table_data &lt;span style=&#34;color:#00a&#34;&gt;RETURN&lt;/span&gt; nested_table_typ PIPELINED;
-    
-    &lt;span style=&#34;color:#00a&#34;&gt;END&lt;/span&gt; example;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-plpgsql&#34; data-lang=&#34;plpgsql&#34;&gt;    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;OR&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;REPLACE&lt;/span&gt; PACKAGE example &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;AS&lt;/span&gt;
+
+         &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;TYPE&lt;/span&gt; nested_table_typ &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;IS&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;TABLE&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;OF&lt;/span&gt; VARCHAR2(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;100&lt;/span&gt;);
+
+         &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FUNCTION&lt;/span&gt; get_nested_table_data &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;RETURN&lt;/span&gt; nested_table_typ PIPELINED;
+
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;END&lt;/span&gt; example;
     /
-    
-    &lt;span style=&#34;color:#00a&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;OR&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;REPLACE&lt;/span&gt; PACKAGE BODY example &lt;span style=&#34;color:#00a&#34;&gt;AS&lt;/span&gt;
-    
-         &lt;span style=&#34;color:#00a&#34;&gt;FUNCTION&lt;/span&gt; get_nested_table_data &lt;span style=&#34;color:#00a&#34;&gt;RETURN&lt;/span&gt; nested_table_typ PIPELINED &lt;span style=&#34;color:#00a&#34;&gt;IS&lt;/span&gt;
-         &lt;span style=&#34;color:#00a&#34;&gt;BEGIN&lt;/span&gt;
-              PIPE &lt;span style=&#34;color:#00a&#34;&gt;ROW&lt;/span&gt; (&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;one&amp;#39;&lt;/span&gt;);
-              PIPE &lt;span style=&#34;color:#00a&#34;&gt;ROW&lt;/span&gt; (&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;two&amp;#39;&lt;/span&gt;);
-              PIPE &lt;span style=&#34;color:#00a&#34;&gt;ROW&lt;/span&gt; (&lt;span style=&#34;color:#a50&#34;&gt;&amp;#39;three&amp;#39;&lt;/span&gt;);
-              &lt;span style=&#34;color:#00a&#34;&gt;RETURN&lt;/span&gt;;
-         &lt;span style=&#34;color:#00a&#34;&gt;END&lt;/span&gt; get_nested_table_data;
-    
-    &lt;span style=&#34;color:#00a&#34;&gt;END&lt;/span&gt; example;
+
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;OR&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;REPLACE&lt;/span&gt; PACKAGE BODY example &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;AS&lt;/span&gt;
+
+         &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FUNCTION&lt;/span&gt; get_nested_table_data &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;RETURN&lt;/span&gt; nested_table_typ PIPELINED &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;IS&lt;/span&gt;
+         &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;BEGIN&lt;/span&gt;
+              PIPE &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;ROW&lt;/span&gt; (&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;one&amp;#39;&lt;/span&gt;);
+              PIPE &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;ROW&lt;/span&gt; (&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;two&amp;#39;&lt;/span&gt;);
+              PIPE &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;ROW&lt;/span&gt; (&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;three&amp;#39;&lt;/span&gt;);
+              &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;RETURN&lt;/span&gt;;
+         &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;END&lt;/span&gt; get_nested_table_data;
+
+    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;END&lt;/span&gt; example;
     /&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;The package function example.get_nested_table_data returns a PL/SQL collection — in this case, a nested table. The PIPELINED directive instructs the function to return data to the calling query as rows are populated by the PIPE ROW command. That way, you don&amp;rsquo;t need to wait for the function to finish before you get results from your query.&lt;/p&gt;
 
 &lt;p&gt;The function can be invoked from the SELECT clause of a query in the usual way, and will return a valid result.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#00a&#34;&gt;SELECT&lt;/span&gt; example.get_nested_table_data &lt;span style=&#34;color:#00a&#34;&gt;FROM&lt;/span&gt; dual;
-    
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;SELECT&lt;/span&gt; example.get_nested_table_data &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FROM&lt;/span&gt; dual;
+
     GET_NESTED_TABLE_DATA
-    &lt;span style=&#34;color:#aaa;font-style:italic&#34;&gt;-------------------------------
-&lt;/span&gt;&lt;span style=&#34;color:#aaa;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#00a&#34;&gt;SCHEMA&lt;/span&gt;.SYS_PLSQL_166672_9_1(one,two,three)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    &lt;span style=&#34;color:#888&#34;&gt;-------------------------------
+&lt;/span&gt;&lt;span style=&#34;color:#888&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;SCHEMA&lt;/span&gt;.SYS_PLSQL_166672_9_1(one,two,three)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;This is possible because nested tables and VARRAYs are supported as native types in SQL. The other type of PL/SQL collection, associative arrays, are not. Therefore you cannot use an associative array as the return type of a pipelined table function. However, it&amp;rsquo;s pretty trivial to create a wrapper function that translates an associative array into a nested table. You wouldn&amp;rsquo;t necessarily take this approach in your own code, but it comes in handy when you&amp;rsquo;re transforming data coming from a third party package or function.&lt;/p&gt;
 
 &lt;p&gt;But what if you need the contents of the collection presented as a table, with one record per entry in the collection? This is where the TABLE operator comes in handy.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#00a&#34;&gt;SELECT&lt;/span&gt; column_value &lt;span style=&#34;color:#00a&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;color:#00a&#34;&gt;TABLE&lt;/span&gt;(example.get_nested_table_data);
-    
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;SELECT&lt;/span&gt; column_value &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;TABLE&lt;/span&gt;(example.get_nested_table_data);
+
     COLUMN_VALUE
-    &lt;span style=&#34;color:#aaa;font-style:italic&#34;&gt;-------------------
-&lt;/span&gt;&lt;span style=&#34;color:#aaa;font-style:italic&#34;&gt;&lt;/span&gt;    one
+    &lt;span style=&#34;color:#888&#34;&gt;-------------------
+&lt;/span&gt;&lt;span style=&#34;color:#888&#34;&gt;&lt;/span&gt;    one
     two
     three&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;The TABLE operator casts a collection type as an aggregated result set, meaning it allows you to query it as if it were a table.&lt;/p&gt;

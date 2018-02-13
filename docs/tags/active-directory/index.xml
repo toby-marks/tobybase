@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Active Directory on Tobybase: A Tech Blog</title>
-    <link>http://localhost:1313/tags/active-directory/</link>
+    <link>http://tobybase.com/tags/active-directory/</link>
     <description>Recent content in Active Directory on Tobybase: A Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
@@ -14,10 +14,10 @@
         
           <item>
             <title>How To Configure Oracle BI Publisher to Authenticate With Active Directory</title>
-            <link>http://localhost:1313/blog/2012/11/12/how-to-configure-oracle-bi-publisher-to-authenticate-with-active-directory/</link>
+            <link>http://tobybase.com/blog/2012/11/12/how-to-configure-oracle-bi-publisher-to-authenticate-with-active-directory/</link>
             <pubDate>Mon, 12 Nov 2012 17:32:00 +0000</pubDate>
             
-            <guid>http://localhost:1313/blog/2012/11/12/how-to-configure-oracle-bi-publisher-to-authenticate-with-active-directory/</guid>
+            <guid>http://tobybase.com/blog/2012/11/12/how-to-configure-oracle-bi-publisher-to-authenticate-with-active-directory/</guid>
             <description>&lt;ul&gt;
 &lt;li&gt;Log in to BI Publisher as an administrator.&lt;/li&gt;
 &lt;li&gt;Click on the Admin tab.&lt;/li&gt;

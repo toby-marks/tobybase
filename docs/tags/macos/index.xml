@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Macos on Tobybase: A Tech Blog</title>
-    <link>http://localhost:1313/tags/macos/</link>
+    <link>http://tobybase.com/tags/macos/</link>
     <description>Recent content in Macos on Tobybase: A Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
@@ -14,10 +14,10 @@
         
           <item>
             <title>What to do when the Juniper Network Connect app on OS X does not connect</title>
-            <link>http://localhost:1313/blog/2016/02/04/what-to-do-when-the-juniper-network-connect-app-on-os-x-does-not-connect/</link>
+            <link>http://tobybase.com/blog/2016/02/04/what-to-do-when-the-juniper-network-connect-app-on-os-x-does-not-connect/</link>
             <pubDate>Thu, 04 Feb 2016 22:50:09 +0000</pubDate>
             
-            <guid>http://localhost:1313/blog/2016/02/04/what-to-do-when-the-juniper-network-connect-app-on-os-x-does-not-connect/</guid>
+            <guid>http://tobybase.com/blog/2016/02/04/what-to-do-when-the-juniper-network-connect-app-on-os-x-does-not-connect/</guid>
             <description>&lt;p&gt;If you use Juniper&amp;rsquo;s Network Connect app to connect to your office VPN over HTTPS, you might occasionally experience strange errors like &amp;ldquo;A software error caused the Network Connect tunneling service to terminate.&amp;rdquo; Shortly after that, the application may either crash or prompt you for login credentials again.&lt;/p&gt;
 
 &lt;p&gt;The solution involves removing all of the Network Connect files and allowing your browser to download and install the app all over again, as it did the first time you tried to connect to your office VPN.&lt;/p&gt;
@@ -25,10 +25,10 @@
 &lt;p&gt;(Note: as a precaution you may want to simply move the Network Connect.app file from /Applications to ~/Desktop, just in case your browser is not able to download it as needed.)&lt;/p&gt;
 
 &lt;p&gt;To remove all files associated with the Network Connect application, execute the following commands in Terminal.app.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#aaa;font-style:italic&#34;&gt;# sudo rm -rf /Applications/Network\ Connect.app`
-&lt;/span&gt;&lt;span style=&#34;color:#aaa;font-style:italic&#34;&gt;# sudo rm -rf /usr/local/juniper`
-&lt;/span&gt;&lt;span style=&#34;color:#aaa;font-style:italic&#34;&gt;# sudo rm -rf ~/Library/Application\ Support/Juniper\ Networks`
-&lt;/span&gt;&lt;span style=&#34;color:#aaa;font-style:italic&#34;&gt;&lt;/span&gt;# sudo rm ~/Library/Preferences/net.juniper.NetworkConnect.plist&lt;span style=&#34;color:#a50&#34;&gt;`&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#888&#34;&gt;# sudo rm -rf /Applications/Network\ Connect.app`
+&lt;/span&gt;&lt;span style=&#34;color:#888&#34;&gt;# sudo rm -rf /usr/local/juniper`
+&lt;/span&gt;&lt;span style=&#34;color:#888&#34;&gt;# sudo rm -rf ~/Library/Application\ Support/Juniper\ Networks`
+&lt;/span&gt;&lt;span style=&#34;color:#888&#34;&gt;&lt;/span&gt;# sudo rm ~/Library/Preferences/net.juniper.NetworkConnect.plist&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;`&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Now try connecting to your office VPN again and the browser should prompt you to redownload the application. When I tried this I got an error the first time on Firefox saying the installation failed, but I was able to manually verify that the files were in place. My second attempt succeeded. Go figure.&lt;/p&gt;
 </description>
           </item>
@@ -39,15 +39,15 @@
         
           <item>
             <title>How to Use ps to List Top Memory, CPU Eating Processes</title>
-            <link>http://localhost:1313/blog/2013/07/24/how-to-use-ps-to-list-top-memory-cpu-eating-processes/</link>
+            <link>http://tobybase.com/blog/2013/07/24/how-to-use-ps-to-list-top-memory-cpu-eating-processes/</link>
             <pubDate>Wed, 24 Jul 2013 21:42:00 +0000</pubDate>
             
-            <guid>http://localhost:1313/blog/2013/07/24/how-to-use-ps-to-list-top-memory-cpu-eating-processes/</guid>
+            <guid>http://tobybase.com/blog/2013/07/24/how-to-use-ps-to-list-top-memory-cpu-eating-processes/</guid>
             <description>&lt;p&gt;The &lt;code&gt;ps&lt;/code&gt; command is a versatile and configurable way to look at the processes running on your system, though I&amp;rsquo;ve generally gotten by with a lazy &lt;code&gt;ps -ef&lt;/code&gt; to find out whatever I needed to know. Recently, though, a client&amp;rsquo;s server began running out of memory, and as a number of processes were running on the server, the culprit was not immediately clear. I wanted to provide them with a quick, simple diagnostic tool they could use the next time they received an alert.&lt;/p&gt;
 
 &lt;p&gt;If you look at the man page for &lt;code&gt;ps&lt;/code&gt; you&amp;rsquo;ll find a number of options available for sorting the list of processes returned as well as for filtering the columns displayed.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2013-07-24-linux-unix-use-ps-to-list-top-memory-cpu-eating-processes/ac6287b65af17b95d247ea063f0aa1bfc6f106f3b69adf0ae73ed8258d3a6c7b.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2013-07-24-linux-unix-use-ps-to-list-top-memory-cpu-eating-processes/ac6287b65af17b95d247ea063f0aa1bfc6f106f3b69adf0ae73ed8258d3a6c7b.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Some examples of &lt;code&gt;ps&lt;/code&gt; options, from RHEL 5.6:&lt;/p&gt;
 
@@ -70,7 +70,7 @@ full-format listing; adds columns and shows process arguments&lt;/p&gt;
 user-defined format&lt;/p&gt;
 
 &lt;p&gt;Many others are available, of course, but in order to keep it simple for the client I wanted to show the top 10 processes in terms of memory utilization, with the pid, memory usage, and process name displayed. Here is what I came up with:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ ps -eo pid,user,pmem,args O R | tail -n &lt;span style=&#34;color:#099&#34;&gt;10&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ ps -eo pid,user,pmem,args O R | tail -n &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;10&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;And here is an explanation:&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;ps&lt;/strong&gt;&lt;br /&gt;
@@ -92,11 +92,11 @@ shows only the last lines&lt;/p&gt;
 show the last 10 lines&lt;/p&gt;
 
 &lt;p&gt;I liked the concept so much that I decided to adapt it for OS X, where the &lt;code&gt;ps&lt;/code&gt; command takes a slightly different set of arguments. To my .bash_profile file I added the following lines:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#0aa&#34;&gt;alias&lt;/span&gt; &lt;span style=&#34;color:#a00&#34;&gt;psmem&lt;/span&gt;=&lt;span style=&#34;color:#a50&#34;&gt;&amp;#34;while :; do clear; ps -ecm -o %mem,rss,pid,user,state,args | head -n 10; sleep 5; done&amp;#34;&lt;/span&gt;
-&lt;span style=&#34;color:#0aa&#34;&gt;alias&lt;/span&gt; &lt;span style=&#34;color:#a00&#34;&gt;pscpu&lt;/span&gt;=&lt;span style=&#34;color:#a50&#34;&gt;&amp;#34;while :; do clear; ps -ecr -o %cpu,pid,user,state,args | head -n 10; sleep 2; done&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#038&#34;&gt;alias&lt;/span&gt; &lt;span style=&#34;color:#369&#34;&gt;psmem&lt;/span&gt;=&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#34;while :; do clear; ps -ecm -o %mem,rss,pid,user,state,args | head -n 10; sleep 5; done&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#038&#34;&gt;alias&lt;/span&gt; &lt;span style=&#34;color:#369&#34;&gt;pscpu&lt;/span&gt;=&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#34;while :; do clear; ps -ecr -o %cpu,pid,user,state,args | head -n 10; sleep 2; done&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;I have one alias for retrieving my top memory-utilizing processes and one for my top CPU-utilizing processes. The &lt;code&gt;while&lt;/code&gt; loop in the alias implements a functionality similar to that of the Linux &lt;code&gt;watch&lt;/code&gt; command, clearing the screen and running the process indefinitely until it is forcibly quit. For my own purposes I wanted to display some additional columns, like username and process state. I also changed the sort ordering to display the largest processes at the top of the list.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2013-07-24-linux-unix-use-ps-to-list-top-memory-cpu-eating-processes/2bcd3b2c40d8bc37893b47399aed325508e95c655492de8866a8365eede7008f.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2013-07-24-linux-unix-use-ps-to-list-top-memory-cpu-eating-processes/2bcd3b2c40d8bc37893b47399aed325508e95c655492de8866a8365eede7008f.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </description>
           </item>
         
@@ -106,10 +106,10 @@ show the last 10 lines&lt;/p&gt;
         
           <item>
             <title>How to Fix SQL Developer on a Retina Display Mac(book)</title>
-            <link>http://localhost:1313/blog/2013/07/19/how-to-fix-sql-developer-on-a-retina-display-macbook/</link>
+            <link>http://tobybase.com/blog/2013/07/19/how-to-fix-sql-developer-on-a-retina-display-macbook/</link>
             <pubDate>Fri, 19 Jul 2013 22:32:00 +0000</pubDate>
             
-            <guid>http://localhost:1313/blog/2013/07/19/how-to-fix-sql-developer-on-a-retina-display-macbook/</guid>
+            <guid>http://tobybase.com/blog/2013/07/19/how-to-fix-sql-developer-on-a-retina-display-macbook/</guid>
             <description>&lt;p&gt;I just purchased a new Macbook Pro 13-inch with Retina Display and was horrified to see how fuzzy SQL Developer looked on the high-res screen. Thanks to Thunderforge on the &lt;a href=&#34;http://stackoverflow.com/questions/15181079/apple-retina-display-support-in-java-jdk-1-7-for-awt-swing&#34;&gt;Stack Overflow forums&lt;/a&gt; for this tip:&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -129,15 +129,15 @@ shown by this &lt;a href=&#34;http://download.java.net/jdk7u40/changes/jdk7u40-b
         
           <item>
             <title>Button Hotkeys in SQL Developer on OS X</title>
-            <link>http://localhost:1313/blog/2013/01/09/button-hotkeys-in-sql-developer-on-os-x/</link>
+            <link>http://tobybase.com/blog/2013/01/09/button-hotkeys-in-sql-developer-on-os-x/</link>
             <pubDate>Wed, 09 Jan 2013 19:09:45 +0000</pubDate>
             
-            <guid>http://localhost:1313/blog/2013/01/09/button-hotkeys-in-sql-developer-on-os-x/</guid>
+            <guid>http://tobybase.com/blog/2013/01/09/button-hotkeys-in-sql-developer-on-os-x/</guid>
             <description>&lt;p&gt;In Windows, most applications provide menu and button accelerator keys that allow you to control the application without having to use a mouse. Java Swing apps like SQL Developer allow you to do the same, ostensibly in a cross-platform compatible manner.&lt;/p&gt;
 
 &lt;p&gt;One place I use this frequently is the Enter Binds dialog window that pops up when running a query using bind variables.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2013-01-09-button-hotkeys-in-sql-developer-on-os-x/f953827dc3e74e57df43fd0e48ff22b40ce119efaa74ce3712fd989522b02a6f.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2013-01-09-button-hotkeys-in-sql-developer-on-os-x/f953827dc3e74e57df43fd0e48ff22b40ce119efaa74ce3712fd989522b02a6f.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;In Java 6 on OS X, the hotkey for pressing the Help and Apply buttons was OPTION-H and OPTION-A, respectively.&lt;/p&gt;
 
@@ -153,21 +153,21 @@ shown by this &lt;a href=&#34;http://download.java.net/jdk7u40/changes/jdk7u40-b
         
           <item>
             <title>How To Fix High CPU Usage by SQL Developer on OS X</title>
-            <link>http://localhost:1313/blog/2012/07/20/how-to-fix-high-cpu-usage-by-sql-developer-on-os-x/</link>
+            <link>http://tobybase.com/blog/2012/07/20/how-to-fix-high-cpu-usage-by-sql-developer-on-os-x/</link>
             <pubDate>Fri, 20 Jul 2012 16:32:00 +0000</pubDate>
             
-            <guid>http://localhost:1313/blog/2012/07/20/how-to-fix-high-cpu-usage-by-sql-developer-on-os-x/</guid>
+            <guid>http://tobybase.com/blog/2012/07/20/how-to-fix-high-cpu-usage-by-sql-developer-on-os-x/</guid>
             <description>&lt;p&gt;I&amp;rsquo;ve been fighting for a couple of years now with an annoying performance bug in SQL Developer for OS X. After using the application for a while CPU usage would spike to around 100%, even when idle. This is a known issue associated with the &amp;ldquo;Look and Feel&amp;rdquo; preference.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2012-07-20-easy-fix-for-high-cpu-usage-in-sql-developer-on-os-x/b5b8f447d6dc433b4253c4814df5746e70e6e1e85235b391c9fef8b19e9f84d8.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2012-07-20-easy-fix-for-high-cpu-usage-in-sql-developer-on-os-x/b5b8f447d6dc433b4253c4814df5746e70e6e1e85235b391c9fef8b19e9f84d8.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Basically, don&amp;rsquo;t use the &amp;ldquo;Mac OS X&amp;rdquo; setting. Instead, use the &amp;ldquo;Oracle&amp;rdquo; setting. The theme doesn&amp;rsquo;t matter.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2012-07-20-easy-fix-for-high-cpu-usage-in-sql-developer-on-os-x/aa9173adfc0090dc8b5b7fb471547c26a5243ca8f21c670580cd41df9cbd263f.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2012-07-20-easy-fix-for-high-cpu-usage-in-sql-developer-on-os-x/aa9173adfc0090dc8b5b7fb471547c26a5243ca8f21c670580cd41df9cbd263f.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;That fixes the CPU issue, but somewhat annoyingly moves the menu out of the menu bar at the top of the screen and into the application window, a la Windows, making the interface inconsistent with pretty much every other app I use on my Mac. &lt;a href=&#34;https://forums.oracle.com/forums/thread.jspa?threadID=1980688&amp;amp;start=15&amp;amp;tstart=30&#34;&gt;Until recently&lt;/a&gt;, that is. The big news is that &lt;em&gt;as of SQL Developer 3.1, the menu is restored to the top of the screen&lt;/em&gt; when using the Oracle Look and Feel. So for those who had been holding out (like myself) with the more native LaF, you can make the switch now and avoid the most annoying part of the performance/usability compromise.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2012-07-20-easy-fix-for-high-cpu-usage-in-sql-developer-on-os-x/cfa32760a6b880df4f2b44e0c1db8a5155ee4c59233b761517416ef7f5c602f7.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2012-07-20-easy-fix-for-high-cpu-usage-in-sql-developer-on-os-x/cfa32760a6b880df4f2b44e0c1db8a5155ee4c59233b761517416ef7f5c602f7.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </description>
           </item>
         
@@ -177,15 +177,15 @@ shown by this &lt;a href=&#34;http://download.java.net/jdk7u40/changes/jdk7u40-b
         
           <item>
             <title>How To Run Oracle Forms 11g Applications on OS X Lion</title>
-            <link>http://localhost:1313/blog/2012/07/12/how-to-run-oracle-forms-11g-applications-on-os-x-lion/</link>
+            <link>http://tobybase.com/blog/2012/07/12/how-to-run-oracle-forms-11g-applications-on-os-x-lion/</link>
             <pubDate>Thu, 12 Jul 2012 22:28:24 +0000</pubDate>
             
-            <guid>http://localhost:1313/blog/2012/07/12/how-to-run-oracle-forms-11g-applications-on-os-x-lion/</guid>
+            <guid>http://tobybase.com/blog/2012/07/12/how-to-run-oracle-forms-11g-applications-on-os-x-lion/</guid>
             <description>&lt;p&gt;Need to run your company&amp;rsquo;s Oracle Forms application from your Mac, and can&amp;rsquo;t? Annoyed with having to crank up a virtual machine for just that one task? Even with the latest published Java version for OS X (1.6.0_33, as of today), you may find that some of the newer Forms applications just won&amp;rsquo;t run. Well, fret no longer. A solution may already be here, at least for Safari and Firefox.&lt;/p&gt;
 
 &lt;p&gt;Although it&amp;rsquo;s not a strictly certified configuration, you may have better luck by running the JRE 1.7 Java plug-in, which was recently made available as a pre-release download. This works for OS X Lion 10.7.3 and above. Download the plug-in &lt;a href=&#34;http://jdk7.java.net/macportpreview/&#34;&gt;from here&lt;/a&gt; and follow the simple instructions on the page to install it. Now give your application another try, and hopefully you&amp;rsquo;ll get the results I did!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2012-07-12-run-oracle-forms-11g-applications-on-os-x-lion/8267cef641541001f78e2a3845a1349c5cc5c74dc6bf17b8a32fe537d9beaadd.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2012-07-12-run-oracle-forms-11g-applications-on-os-x-lion/8267cef641541001f78e2a3845a1349c5cc5c74dc6bf17b8a32fe537d9beaadd.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </description>
           </item>
         
@@ -195,10 +195,10 @@ shown by this &lt;a href=&#34;http://download.java.net/jdk7u40/changes/jdk7u40-b
         
           <item>
             <title>OS X Software for Oracle Developers</title>
-            <link>http://localhost:1313/blog/2012/06/27/os-x-software-for-oracle-developers/</link>
+            <link>http://tobybase.com/blog/2012/06/27/os-x-software-for-oracle-developers/</link>
             <pubDate>Wed, 27 Jun 2012 21:39:00 +0000</pubDate>
             
-            <guid>http://localhost:1313/blog/2012/06/27/os-x-software-for-oracle-developers/</guid>
+            <guid>http://tobybase.com/blog/2012/06/27/os-x-software-for-oracle-developers/</guid>
             <description>
 
 &lt;p&gt;One of the great things about working for &lt;a href=&#34;http://www.enkitec.com/&#34;&gt;Enkitec&lt;/a&gt; is that it&amp;rsquo;s a very Mac-friendly shop. When I arrived there in 2007 there were a handful of us running Macs and the attitude at the top seemed to be respectful, but skeptical. They allowed me to use my own laptop, which at the time was a 15-inch Intel Core2 Duo Macbook Pro, with the understanding that I could request a standard-issue Dell laptop at any time should the need arise. It never did. Since that time a large number of my coworkers have made the switch, abandoning their bulky, slow Dell Latitude laptops for 13-inch Macbook Pros, as have both owners of the company.&lt;/p&gt;

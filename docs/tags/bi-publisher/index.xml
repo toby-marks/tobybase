@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bi Publisher on Tobybase: A Tech Blog</title>
-    <link>http://localhost:1313/tags/bi-publisher/</link>
+    <link>http://tobybase.com/tags/bi-publisher/</link>
     <description>Recent content in Bi Publisher on Tobybase: A Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
@@ -14,15 +14,15 @@
         
           <item>
             <title>How To Reset Page Numbering Between Document Sections in BI Publisher&#39;s Template Builder for Word</title>
-            <link>http://localhost:1313/blog/2013/06/14/how-to-reset-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/</link>
+            <link>http://tobybase.com/blog/2013/06/14/how-to-reset-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/</link>
             <pubDate>Fri, 14 Jun 2013 21:47:00 +0000</pubDate>
             
-            <guid>http://localhost:1313/blog/2013/06/14/how-to-reset-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/</guid>
+            <guid>http://tobybase.com/blog/2013/06/14/how-to-reset-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/</guid>
             <description>&lt;p&gt;Under normal circumstances, it is fairly easy in Microsoft Word to &lt;a href=&#34;http://www.youtube.com/watch?v=E1WtKR6FDM4&#34;&gt;reset page numbering&lt;/a&gt; when starting a new section of your document. However, such a simple thing can be non-trivial when dealing with the BI Publisher Template Builder plugin for Microsoft Office (&lt;a href=&#34;http://www.oracle.com/technetwork/middleware/bi-publisher/downloads/index.html&#34;&gt;available from Oracle&lt;/a&gt; — see BI Publisher Desktop).&lt;/p&gt;
 
 &lt;p&gt;In short, doing this the normal way did not work for me, and in researching the issue I ran across a &lt;a href=&#34;http://stackoverflow.com/questions/9603481/rtf-number-of-pages-page-x-of-y&#34;&gt;number&lt;/a&gt; &lt;a href=&#34;https://forums.oracle.com/thread/2493003&#34;&gt;of&lt;/a&gt; &lt;a href=&#34;https://forums.oracle.com/thread/496869&#34;&gt;folks&lt;/a&gt; who were having the same problem. Page numbering was simply not being reset between sections, or worse, did not take into account a fluid document size based upon available data.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2013-06-14-resetting-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/9f704cdbd7a5ec85bff722e3469edae0993faa219b4e42459782b94f692aa53e.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2013-06-14-resetting-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/9f704cdbd7a5ec85bff722e3469edae0993faa219b4e42459782b94f692aa53e.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;One &lt;a href=&#34;https://forums.oracle.com/thread/2225641&#34;&gt;suggestion I read&lt;/a&gt; said to wrap the page number cells in a BI Publisher repeating group using for-each@section, like so:&lt;/p&gt;
 
@@ -34,19 +34,19 @@
 
 &lt;p&gt;RTF files can be a little confusing, but most of the &amp;ldquo;junk&amp;rdquo; in the files is just special codes for formatting the text. I was able to find my way around easily enough by searching for labels or keywords from the document. By searching for the first few words from the second section of the document (in this case, &amp;ldquo;Sender&amp;rsquo;s Receipt&amp;rdquo;), I was able to spot where the section break should go.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2013-06-14-resetting-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/0d902604df4939682bb7821c4044affb3b03f809274551b8172827bc846d7b2d.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2013-06-14-resetting-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/0d902604df4939682bb7821c4044affb3b03f809274551b8172827bc846d7b2d.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Checking the RTF spec, I could see that the &lt;code&gt;\page&lt;/code&gt; directive shown above was the page break between two sections of my document where I wanted to reset the page numbering. To create the section break, I inserted the following RTF directives at that point:&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;\sect \sectd \pgnstarts1\pgnrestart&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2013-06-14-resetting-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/466447c609e7fa65f188357e7531def7cb8f1443944e602f62e3eff984f1388d.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2013-06-14-resetting-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/466447c609e7fa65f188357e7531def7cb8f1443944e602f62e3eff984f1388d.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Since the default behavior of the section break is to start on a new page, I found I had to remove the &lt;code&gt;\page&lt;/code&gt; directive to avoid an extra page being inserted between the document sections.&lt;/p&gt;
 
 &lt;p&gt;Interestingly, resetting the page numbering also works when calculating total number of pages, whereby the total is from the section, not the entire document, even though the NumPages field is used instead of SectionPages! Go figure, but it worked for me.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2013-06-14-resetting-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/1efc8813e70f4ee7bda4647b6fd38f4dce646c46b41e20fb482a3443e5bbb17a.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2013-06-14-resetting-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/1efc8813e70f4ee7bda4647b6fd38f4dce646c46b41e20fb482a3443e5bbb17a.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </description>
           </item>
         
@@ -56,11 +56,11 @@
         
           <item>
             <title>How To Restrict Access to BI Publisher Reports</title>
-            <link>http://localhost:1313/blog/2012/11/12/how-to-restrict-access-to-bi-publisher-reports/</link>
+            <link>http://tobybase.com/blog/2012/11/12/how-to-restrict-access-to-bi-publisher-reports/</link>
             <pubDate>Mon, 12 Nov 2012 18:12:00 +0000</pubDate>
             
-            <guid>http://localhost:1313/blog/2012/11/12/how-to-restrict-access-to-bi-publisher-reports/</guid>
-            <description>&lt;p&gt;In &lt;a href=&#34;http://localhost:1313/blog/2012/11/12/how-to-configure-oracle-bi-publisher-to-authenticate-with-active-directory/&#34;&gt;my last post&lt;/a&gt;  I described how to configure BI Publisher to authenticate against an LDAP server, typically a corporate Active Directory server. Aside from authentication, you can also use LDAP group membership to determine who has access to a given report. Here&amp;rsquo;s how you do it.&lt;/p&gt;
+            <guid>http://tobybase.com/blog/2012/11/12/how-to-restrict-access-to-bi-publisher-reports/</guid>
+            <description>&lt;p&gt;In &lt;a href=&#34;http://tobybase.com/blog/2012/11/12/how-to-configure-oracle-bi-publisher-to-authenticate-with-active-directory/&#34;&gt;my last post&lt;/a&gt;  I described how to configure BI Publisher to authenticate against an LDAP server, typically a corporate Active Directory server. Aside from authentication, you can also use LDAP group membership to determine who has access to a given report. Here&amp;rsquo;s how you do it.&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Create a group in your LDAP/AD directory and assign your target users to that group.&lt;/li&gt;
@@ -105,10 +105,10 @@
         
           <item>
             <title>How To Configure Oracle BI Publisher to Authenticate With Active Directory</title>
-            <link>http://localhost:1313/blog/2012/11/12/how-to-configure-oracle-bi-publisher-to-authenticate-with-active-directory/</link>
+            <link>http://tobybase.com/blog/2012/11/12/how-to-configure-oracle-bi-publisher-to-authenticate-with-active-directory/</link>
             <pubDate>Mon, 12 Nov 2012 17:32:00 +0000</pubDate>
             
-            <guid>http://localhost:1313/blog/2012/11/12/how-to-configure-oracle-bi-publisher-to-authenticate-with-active-directory/</guid>
+            <guid>http://tobybase.com/blog/2012/11/12/how-to-configure-oracle-bi-publisher-to-authenticate-with-active-directory/</guid>
             <description>&lt;ul&gt;
 &lt;li&gt;Log in to BI Publisher as an administrator.&lt;/li&gt;
 &lt;li&gt;Click on the Admin tab.&lt;/li&gt;
@@ -241,17 +241,17 @@ XMLP_TEMPLATE_DESIGNER&lt;/p&gt;
         
           <item>
             <title>How to Avoid the &#34;Job scheduling failed because the user has no permission to access this report&#34; Error in BI Publisher</title>
-            <link>http://localhost:1313/blog/2012/08/27/how-to-avoid-the-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report-error-in-bi-publisher/</link>
+            <link>http://tobybase.com/blog/2012/08/27/how-to-avoid-the-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report-error-in-bi-publisher/</link>
             <pubDate>Mon, 27 Aug 2012 20:48:08 +0000</pubDate>
             
-            <guid>http://localhost:1313/blog/2012/08/27/how-to-avoid-the-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report-error-in-bi-publisher/</guid>
-            <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2012-08-27-bi-publisher-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report/864dbb90dbf623eb4f36b26a3ecf315cfec7121cf33e16730b6060c6572dfb35.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+            <guid>http://tobybase.com/blog/2012/08/27/how-to-avoid-the-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report-error-in-bi-publisher/</guid>
+            <description>&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2012-08-27-bi-publisher-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report/864dbb90dbf623eb4f36b26a3ecf315cfec7121cf33e16730b6060c6572dfb35.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;You can get this error if you are trying to schedule a report and your BI Publisher installation uses LDAP authentication.&lt;/p&gt;
 
 &lt;p&gt;To avoid it, make sure that the &amp;ldquo;Administrator&amp;rdquo; account you use to connect to your LDAP server is in the XMLP_ADMIN group. The LDAP settings are located on the Admin tab, under Security Settings / Security Configuration.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2012-08-27-bi-publisher-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report/c44997adb44d6687468d544341fcd25b818ebdd46087d1849c38e855ee874488.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2012-08-27-bi-publisher-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report/c44997adb44d6687468d544341fcd25b818ebdd46087d1849c38e855ee874488.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </description>
           </item>
         

@@ -1,4 +1,4 @@
-baseurl             = "http://localhost:1313"  # the baseurl for your website
+baseurl             = "http://tobybase.com"  # the baseurl for your website
 title               = "Tobybase: A Tech Blog"             # blog title
 paginate            = 10                     # the number of posts on a page
 publishDir          = "docs"
@@ -6,9 +6,10 @@ theme               = "hugo-multi-bootswatch"
 disqusShortname     = "tobybase-com"
 
 # insert color codes directly into page. used for server-side syntax highlighting with pygments.
+# pygmentsUseClassic = true
 pygmentsuseclasses = false
-pygmentsstyle = "autumn"
-PygmentsCodeFences = true
+pygmentsstyle = "pastie"
+pygmentsCodefences = true
 
 [permalinks]
     # Optional. Change the permalink format for the 'post' content type.

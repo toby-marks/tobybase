@@ -14,18 +14,18 @@
 
    	
     
-        <link rel="stylesheet" href="http://localhost:1313/css/theme/united.css">
+        <link rel="stylesheet" href="http://tobybase.com/css/theme/united.css">
     
 
-    <link rel="stylesheet" href="http://localhost:1313/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://tobybase.com/css/font-awesome.min.css">
 
    	
-   	<link rel="stylesheet" href="http://localhost:1313/css/style.css">
+   	<link rel="stylesheet" href="http://tobybase.com/css/style.css">
 
 
     
-    <script src="http://localhost:1313/js/jquery.min-2.1.4.js"></script>
-    <script src="http://localhost:1313/js/bootstrap.min-3.3.5.js"></script>
+    <script src="http://tobybase.com/js/jquery.min-2.1.4.js"></script>
+    <script src="http://tobybase.com/js/bootstrap.min-3.3.5.js"></script>
 
     
     <link href="" rel="alternate" type="application/rss+xml" title="Tobybase: A Tech Blog" />
@@ -36,12 +36,12 @@
     <div class="row">
         <div class="navbar navbar-default " role="navigation">
             <div class="navbar-header">
-                <a class="navbar-brand" href="http://localhost:1313"><img src="http://localhost:1313/img/logo.png" id="logographic"></a>
+                <a class="navbar-brand" href="http://tobybase.com"><img src="http://tobybase.com/img/logo.png" id="logographic"></a>
             </div>
             <div class="navbar-collapse collapse navbar-responsive-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="http://localhost:1313">Home</a></li>
-                    <li><a href="http://localhost:1313/post/">Articles</a></li>
+                    <li><a href="http://tobybase.com">Home</a></li>
+                    <li><a href="http://tobybase.com/post/">Articles</a></li>
                     
                 </ul>
             </div>
@@ -107,48 +107,48 @@ CacheInvalidatorServlet.java</p>
 <a href="http://www.oracle.com/technetwork/middleware/ias/index-100679.html">Oracle TopLink Cache Invalidation</a></p>
 
 <p>The two methods of CacheInvalidator that do the actual work are shown here. The first takes tablename as an argument, so that the invalidation can be targeted. The second invalidates, or effectively wipes, the entire cache.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#00a">public</span> <span style="color:#0aa">void</span> <span style="color:#0a0">invalidateClass</span>(Session session, String tableName) <span style="color:#00a">throws</span> Exception { 
-    <span style="color:#00a">if</span>(tableName == <span style="color:#00a">null</span> || tableName.<span style="color:#1e90ff">trim</span>().<span style="color:#1e90ff">equals</span>(<span style="color:#a50">&#34;&#34;</span>)) { 
-        <span style="color:#00a">throw</span> <span style="color:#00a">new</span> Exception(<span style="color:#a50">&#34;tableName cannot be null&#34;</span>); 
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#080;font-weight:bold">public</span> <span style="color:#888;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">invalidateClass</span>(Session session, String tableName) <span style="color:#080;font-weight:bold">throws</span> Exception { 
+    <span style="color:#080;font-weight:bold">if</span>(tableName == <span style="color:#080;font-weight:bold">null</span> || tableName.<span style="color:#369">trim</span>().<span style="color:#369">equals</span>(<span style="color:#d20;background-color:#fff0f0">&#34;&#34;</span>)) { 
+        <span style="color:#080;font-weight:bold">throw</span> <span style="color:#080;font-weight:bold">new</span> Exception(<span style="color:#d20;background-color:#fff0f0">&#34;tableName cannot be null&#34;</span>); 
     } 
-    Class baseClass = (Class)tableNameToClass.<span style="color:#1e90ff">get</span>(tableName); 
-    <span style="color:#00a">if</span>(baseClass == <span style="color:#00a">null</span>) { 
-        <span style="color:#00a">throw</span> <span style="color:#00a">new</span> Exception(<span style="color:#a50">&#34;table \&#34;&#34;</span> + tableName + <span style="color:#a50">&#34;\&#34; not found in cache&#34;</span>); 
+    Class baseClass = (Class)tableNameToClass.<span style="color:#369">get</span>(tableName); 
+    <span style="color:#080;font-weight:bold">if</span>(baseClass == <span style="color:#080;font-weight:bold">null</span>) { 
+        <span style="color:#080;font-weight:bold">throw</span> <span style="color:#080;font-weight:bold">new</span> Exception(<span style="color:#d20;background-color:#fff0f0">&#34;table \&#34;&#34;</span> + tableName + <span style="color:#d20;background-color:#fff0f0">&#34;\&#34; not found in cache&#34;</span>); 
     } 
  
-    <span style="color:#aaa;font-style:italic">// invalidate in TopLink cache the object corresponding to the baseClass 
-</span><span style="color:#aaa;font-style:italic"></span>    session.<span style="color:#1e90ff">getIdentityMapAccessor</span>().<span style="color:#1e90ff">invalidateClass</span>(baseClass); 
+    <span style="color:#888">// invalidate in TopLink cache the object corresponding to the baseClass 
+</span><span style="color:#888"></span>    session.<span style="color:#369">getIdentityMapAccessor</span>().<span style="color:#369">invalidateClass</span>(baseClass); 
 } 
  
-<span style="color:#aaa;font-style:italic">// invalidate all objects in the cache 
-</span><span style="color:#aaa;font-style:italic"></span><span style="color:#00a">public</span> <span style="color:#0aa">void</span> <span style="color:#0a0">invalidateAllClasses</span>(Session session) { 
-    <span style="color:#aaa;font-style:italic">// invalidate in TopLink cache the object corresponding to the baseClass 
-</span><span style="color:#aaa;font-style:italic"></span>    session.<span style="color:#1e90ff">getIdentityMapAccessor</span>().<span style="color:#1e90ff">invalidateAll</span>(); 
+<span style="color:#888">// invalidate all objects in the cache 
+</span><span style="color:#888"></span><span style="color:#080;font-weight:bold">public</span> <span style="color:#888;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">invalidateAllClasses</span>(Session session) { 
+    <span style="color:#888">// invalidate in TopLink cache the object corresponding to the baseClass 
+</span><span style="color:#888"></span>    session.<span style="color:#369">getIdentityMapAccessor</span>().<span style="color:#369">invalidateAll</span>(); 
 } </code></pre></div>
 <p>The CacheInvalidatorServlet takes a table name or the special keyword &ldquo;ALL&rdquo; as a parameter and calls the corresponding method in CacheInvalidator.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">String oName = request.<span style="color:#1e90ff">getParameter</span>(<span style="color:#a50">&#34;objectName&#34;</span>); 
-String responseString = <span style="color:#a50">&#34;&#34;</span>; 
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">String oName = request.<span style="color:#369">getParameter</span>(<span style="color:#d20;background-color:#fff0f0">&#34;objectName&#34;</span>); 
+String responseString = <span style="color:#d20;background-color:#fff0f0">&#34;&#34;</span>; 
 
-<span style="color:#00a">try</span> { 
-    SessionManager manager = SessionManager.<span style="color:#1e90ff">getManager</span>(); 
-    <span style="color:#aaa;font-style:italic">//SESSIONNAME defined in sessions.xml 
-</span><span style="color:#aaa;font-style:italic"></span>    Server server = (Server)manager.<span style="color:#1e90ff">getSession</span>(<span style="color:#a50">&#34;SESSIONNAME&#34;</span>); 
-    Session session = server.<span style="color:#1e90ff">getActiveSession</span>(); 
+<span style="color:#080;font-weight:bold">try</span> { 
+    SessionManager manager = SessionManager.<span style="color:#369">getManager</span>(); 
+    <span style="color:#888">//SESSIONNAME defined in sessions.xml 
+</span><span style="color:#888"></span>    Server server = (Server)manager.<span style="color:#369">getSession</span>(<span style="color:#d20;background-color:#fff0f0">&#34;SESSIONNAME&#34;</span>); 
+    Session session = server.<span style="color:#369">getActiveSession</span>(); 
 
-    CacheInvalidator invalidator = <span style="color:#00a">new</span> CacheInvalidator(session); 
-    <span style="color:#00a">if</span> (oName.<span style="color:#1e90ff">equals</span>(<span style="color:#a50">&#34;ALL&#34;</span>)) { 
-        invalidator.<span style="color:#1e90ff">invalidateAllClasses</span>(session); 
-        responseString = <span style="color:#a50">&#34;successfully invalidated toplink cache for all tables.&#34;</span>; 
-    } <span style="color:#00a">else</span> { 
-        invalidator.<span style="color:#1e90ff">invalidateClass</span>(session, oName); 
-        responseString = <span style="color:#a50">&#34;successfully invalidated toplink cache for table: &#34;</span>+oName; 
+    CacheInvalidator invalidator = <span style="color:#080;font-weight:bold">new</span> CacheInvalidator(session); 
+    <span style="color:#080;font-weight:bold">if</span> (oName.<span style="color:#369">equals</span>(<span style="color:#d20;background-color:#fff0f0">&#34;ALL&#34;</span>)) { 
+        invalidator.<span style="color:#369">invalidateAllClasses</span>(session); 
+        responseString = <span style="color:#d20;background-color:#fff0f0">&#34;successfully invalidated toplink cache for all tables.&#34;</span>; 
+    } <span style="color:#080;font-weight:bold">else</span> { 
+        invalidator.<span style="color:#369">invalidateClass</span>(session, oName); 
+        responseString = <span style="color:#d20;background-color:#fff0f0">&#34;successfully invalidated toplink cache for table: &#34;</span>+oName; 
     } 
-} <span style="color:#00a">catch</span> (Exception e) { 
-    responseString = e.<span style="color:#1e90ff">getMessage</span>(); 
+} <span style="color:#080;font-weight:bold">catch</span> (Exception e) { 
+    responseString = e.<span style="color:#369">getMessage</span>(); 
 } </code></pre></div>
 <p>Calling a servlet from PL/SQL is not particularly complicated, but in our case involved the lookup of server information stored in the database. The wrapper package allowed us to provide the developers with a simple, one-line invocation.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">p_servlet_response := utl_http.request(<span style="color:#a50">&#39;http://&#39;</span>||l_app_server_host||<span style="color:#a50">&#39;:&#39;</span>
-          ||l_app_server_port||<span style="color:#a50">&#39;/jedi/cacheinvalidatorservlet?objectName=&#39;</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">p_servlet_response := utl_http.request(<span style="color:#d20;background-color:#fff0f0">&#39;http://&#39;</span>||l_app_server_host||<span style="color:#d20;background-color:#fff0f0">&#39;:&#39;</span>
+          ||l_app_server_port||<span style="color:#d20;background-color:#fff0f0">&#39;/jedi/cacheinvalidatorservlet?objectName=&#39;</span>
           ||p_obj_to_invalidate);</code></pre></div>
 <p>After making a call to our cacheinvalidator package subsequent to updating the status record, the stale data problem was eliminated in the application.</p>
 
@@ -194,7 +194,7 @@ String responseString = <span style="color:#a50">&#34;&#34;</span>;
             <footer>
                 <div class="pull-left">
                     <p>
-                        &copy; 2017 ~ Toby Marks ~ Powered By <a href="http://hugo.spf13.com">Hugo</a> - version: 0.31.1 ~ <a href="http://localhost:1313/license">License</a>
+                        &copy; 2017 ~ Toby Marks ~ Powered By <a href="http://hugo.spf13.com">Hugo</a> - version: 0.31.1 ~ <a href="http://tobybase.com/license">License</a>
                     </p>
                 </div>
 
