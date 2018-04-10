@@ -2,47 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cron on Tobybase: A Tech Blog</title>
-    <link>http://tobybase.com/tags/cron/</link>
+    <link>http://localhost:1313/tags/cron/</link>
     <description>Recent content in Cron on Tobybase: A Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>2017 ~ Toby Marks</copyright>
+    <managingEditor>toby.marks@infolob.com (Toby Marks)</managingEditor>
+    <webMaster>toby.marks@infolob.com (Toby Marks)</webMaster>
     <lastBuildDate>Thu, 05 Apr 2012 21:19:05 +0000</lastBuildDate>
-    <atom:link href="/tags/cron/" rel="self" type="application/rss+xml" />
     
-      
-        
-          <item>
-            <title>How To Make Bash Scripts crontab-Compatible</title>
-            <link>http://tobybase.com/blog/2012/04/05/how-to-make-bash-scripts-crontab-compatible/</link>
-            <pubDate>Thu, 05 Apr 2012 21:19:05 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2012/04/05/how-to-make-bash-scripts-crontab-compatible/</guid>
-            <description>&lt;p&gt;When writing shell scripts in bash, consider whether your script can be automated in a batch scheduler like cron. If you reference any external resources in your script relative to the directory in which it resides, those references may break when running your script through cron.&lt;/p&gt;
-
-&lt;p&gt;By default, crontab runs scripts in the user&amp;rsquo;s home directory, as specified in &lt;code&gt;/etc/passwd&lt;/code&gt;. For user &amp;ldquo;Tim&amp;rdquo; with home directory &lt;code&gt;/home/tim&lt;/code&gt;, a sample crontab might look something like the following:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;0&lt;/span&gt; * * * runme.sh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Every night at midnight, cron will try to run the file &lt;code&gt;/home/tim/runme.sh&lt;/code&gt;. However, if &lt;code&gt;runme.sh&lt;/code&gt; is actually in a sub-directory under &lt;code&gt;~tim&lt;/code&gt;, you will need to tell cron how to reach the file. One option would be to qualify the path in crontab, like so:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;0&lt;/span&gt; * * * ~/bin/runme.sh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Now cron can find the file. However, if the script makes references to other files inside of &lt;code&gt;/bin&lt;/code&gt; in a path-relative way, those references will be broken.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#c00;font-weight:bold&#34;&gt;#!/bin/bash
-&lt;/span&gt;&lt;span style=&#34;color:#c00;font-weight:bold&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#888&#34;&gt;#runme.sh
-&lt;/span&gt;&lt;span style=&#34;color:#888&#34;&gt;&lt;/span&gt;./runthis.sh      &lt;span style=&#34;color:#888&#34;&gt;# can&amp;#39;t find this file when running under cron
-&lt;/span&gt;&lt;span style=&#34;color:#888&#34;&gt;&lt;/span&gt;./runthat.sh      # can&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;&amp;#39;&lt;/span&gt;t find this file when running under cron&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;That&amp;rsquo;s because to cron &lt;code&gt;./&lt;/code&gt; is not the directory in which the script is running, but rather whatever is defined as the base directory; in the default case, the user&amp;rsquo;s home directory.&lt;/p&gt;
-
-&lt;p&gt;It is possible to specify the base directory in the crontab file itself by defining the special variable &lt;code&gt;HOME&lt;/code&gt;.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#369&#34;&gt;HOME&lt;/span&gt;=/home/tim/bin
-&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;0&lt;/span&gt; * * * runme.sh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;However, you may not always have control over how your crontab is configured. Perhaps a system administrator is in charge of all the schedules on your server. Or you may organize your scripts in several different directories.&lt;/p&gt;
-
-&lt;p&gt;An easy solution is to start your bash scripts with the following command:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#038&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;$(&lt;/span&gt;dirname &lt;span style=&#34;color:#369&#34;&gt;$0&lt;/span&gt;&lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;The program &lt;code&gt;dirname&lt;/code&gt; returns the directory portion of the fully qualified path name sent to it. The &lt;code&gt;$0&lt;/code&gt; argument in this context is name of the running script. Basically, this code ensures that the current working directory is the same as the directory in which your script is running. That way all your path-relative references are correct whether running manually or through a scheduler.&lt;/p&gt;
-</description>
-          </item>
-        
-      
+	<atom:link href="http://localhost:1313/tags/cron/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How To Make Bash Scripts crontab-Compatible</title>
+      <link>http://localhost:1313/blog/2012/04/05/how-to-make-bash-scripts-crontab-compatible/</link>
+      <pubDate>Thu, 05 Apr 2012 21:19:05 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/blog/2012/04/05/how-to-make-bash-scripts-crontab-compatible/</guid>
+      <description>When writing shell scripts in bash, consider whether your script can be automated in a batch scheduler like cron. If you reference any external resources in your script relative to the directory in which it resides, those references may break when running your script through cron.
+By default, crontab runs scripts in the user&amp;rsquo;s home directory, as specified in /etc/passwd. For user &amp;ldquo;Tim&amp;rdquo; with home directory /home/tim, a sample crontab might look something like the following:</description>
+    </item>
     
   </channel>
 </rss>

@@ -2,43 +2,537 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Tobybase: A Tech Blog</title>
-    <link>http://tobybase.com/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Tobybase: A Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>2017 ~ Toby Marks</copyright>
+    <managingEditor>toby.marks@infolob.com (Toby Marks)</managingEditor>
+    <webMaster>toby.marks@infolob.com (Toby Marks)</webMaster>
     <lastBuildDate>Fri, 11 May 2012 20:54:00 +0000</lastBuildDate>
-    <atom:link href="/tags/" rel="self" type="application/rss+xml" />
     
-      
+	<atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     
-      
     
-      
+    <item>
+      <title>Access</title>
+      <link>http://localhost:1313/tags/access/</link>
+      <pubDate>Fri, 11 May 2012 20:54:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/access/</guid>
+      <description></description>
+    </item>
     
-      
+    <item>
+      <title>Active Directory</title>
+      <link>http://localhost:1313/tags/active-directory/</link>
+      <pubDate>Mon, 12 Nov 2012 17:32:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/active-directory/</guid>
+      <description></description>
+    </item>
     
-      
+    <item>
+      <title>Application Express</title>
+      <link>http://localhost:1313/tags/application-express/</link>
+      <pubDate>Tue, 18 Dec 2012 00:00:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/application-express/</guid>
+      <description></description>
+    </item>
     
-      
+    <item>
+      <title>Bash</title>
+      <link>http://localhost:1313/tags/bash/</link>
+      <pubDate>Thu, 05 Apr 2012 21:19:05 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/bash/</guid>
+      <description></description>
+    </item>
     
-      
+    <item>
+      <title>Bi</title>
+      <link>http://localhost:1313/tags/bi/</link>
+      <pubDate>Fri, 14 Jun 2013 21:47:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/bi/</guid>
+      <description></description>
+    </item>
     
-      
+    <item>
+      <title>Bi Publisher</title>
+      <link>http://localhost:1313/tags/bi-publisher/</link>
+      <pubDate>Fri, 14 Jun 2013 21:47:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/bi-publisher/</guid>
+      <description></description>
+    </item>
     
-      
+    <item>
+      <title>Brian Hill</title>
+      <link>http://localhost:1313/tags/brian-hill/</link>
+      <pubDate>Fri, 10 Mar 2017 14:56:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/brian-hill/</guid>
+      <description></description>
+    </item>
     
-      
+    <item>
+      <title>Cgi</title>
+      <link>http://localhost:1313/tags/cgi/</link>
+      <pubDate>Mon, 02 Jul 2012 22:40:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/cgi/</guid>
+      <description></description>
+    </item>
     
-      
+    <item>
+      <title>Citrix</title>
+      <link>http://localhost:1313/tags/citrix/</link>
+      <pubDate>Fri, 11 May 2012 20:54:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/citrix/</guid>
+      <description></description>
+    </item>
     
-      
+    <item>
+      <title>Cloud</title>
+      <link>http://localhost:1313/tags/cloud/</link>
+      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/cloud/</guid>
+      <description></description>
+    </item>
     
-      
+    <item>
+      <title>Cron</title>
+      <link>http://localhost:1313/tags/cron/</link>
+      <pubDate>Thu, 05 Apr 2012 21:19:05 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/cron/</guid>
+      <description></description>
+    </item>
     
-      
+    <item>
+      <title>Css</title>
+      <link>http://localhost:1313/tags/css/</link>
+      <pubDate>Fri, 26 Oct 2012 21:09:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/css/</guid>
+      <description></description>
+    </item>
     
-      
+    <item>
+      <title>External Tables</title>
+      <link>http://localhost:1313/tags/external-tables/</link>
+      <pubDate>Wed, 14 Nov 2012 00:00:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/external-tables/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Firefox</title>
+      <link>http://localhost:1313/tags/firefox/</link>
+      <pubDate>Fri, 26 Oct 2012 21:09:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/firefox/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Html</title>
+      <link>http://localhost:1313/tags/html/</link>
+      <pubDate>Fri, 26 Oct 2012 21:09:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Iaas</title>
+      <link>http://localhost:1313/tags/iaas/</link>
+      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/iaas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Infolob</title>
+      <link>http://localhost:1313/tags/infolob/</link>
+      <pubDate>Fri, 10 Mar 2017 14:56:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/infolob/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Instrumentation</title>
+      <link>http://localhost:1313/tags/instrumentation/</link>
+      <pubDate>Wed, 02 May 2012 21:41:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/instrumentation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ireport</title>
+      <link>http://localhost:1313/tags/ireport/</link>
+      <pubDate>Tue, 18 Dec 2012 00:00:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/ireport/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jaspersoft</title>
+      <link>http://localhost:1313/tags/jaspersoft/</link>
+      <pubDate>Tue, 18 Dec 2012 00:00:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/jaspersoft/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Java</title>
+      <link>http://localhost:1313/tags/java/</link>
+      <pubDate>Fri, 19 Jul 2013 22:32:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Javascript</title>
+      <link>http://localhost:1313/tags/javascript/</link>
+      <pubDate>Fri, 26 Oct 2012 21:09:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jhat</title>
+      <link>http://localhost:1313/tags/jhat/</link>
+      <pubDate>Wed, 02 May 2012 21:41:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/jhat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jmap</title>
+      <link>http://localhost:1313/tags/jmap/</link>
+      <pubDate>Wed, 02 May 2012 21:41:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/jmap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jstack</title>
+      <link>http://localhost:1313/tags/jstack/</link>
+      <pubDate>Wed, 02 May 2012 21:41:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/jstack/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jstat</title>
+      <link>http://localhost:1313/tags/jstat/</link>
+      <pubDate>Wed, 02 May 2012 21:41:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/jstat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Juniper</title>
+      <link>http://localhost:1313/tags/juniper/</link>
+      <pubDate>Thu, 04 Feb 2016 22:50:09 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/juniper/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jvm</title>
+      <link>http://localhost:1313/tags/jvm/</link>
+      <pubDate>Wed, 02 May 2012 21:41:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/jvm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ldap</title>
+      <link>http://localhost:1313/tags/ldap/</link>
+      <pubDate>Mon, 12 Nov 2012 17:32:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/ldap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lift and Shift</title>
+      <link>http://localhost:1313/tags/lift-and-shift/</link>
+      <pubDate>Fri, 10 Mar 2017 14:56:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/lift-and-shift/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Macos</title>
+      <link>http://localhost:1313/tags/macos/</link>
+      <pubDate>Thu, 04 Feb 2016 22:50:09 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/macos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Me</title>
+      <link>http://localhost:1313/tags/me/</link>
+      <pubDate>Tue, 17 Jan 2017 22:58:59 -0600</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/me/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Odbc</title>
+      <link>http://localhost:1313/tags/odbc/</link>
+      <pubDate>Fri, 11 May 2012 20:54:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/odbc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Office</title>
+      <link>http://localhost:1313/tags/office/</link>
+      <pubDate>Fri, 11 May 2012 20:54:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/office/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Oracle</title>
+      <link>http://localhost:1313/tags/oracle/</link>
+      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/oracle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Oracle Application Server</title>
+      <link>http://localhost:1313/tags/oracle-application-server/</link>
+      <pubDate>Fri, 09 Mar 2012 18:42:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/oracle-application-server/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Oracle Cloud Services</title>
+      <link>http://localhost:1313/tags/oracle-cloud-services/</link>
+      <pubDate>Fri, 10 Mar 2017 14:56:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/oracle-cloud-services/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Oracle Forms</title>
+      <link>http://localhost:1313/tags/oracle-forms/</link>
+      <pubDate>Thu, 12 Jul 2012 22:28:24 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/oracle-forms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Perl</title>
+      <link>http://localhost:1313/tags/perl/</link>
+      <pubDate>Mon, 02 Jul 2012 22:40:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/perl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pipelined Table Functions</title>
+      <link>http://localhost:1313/tags/pipelined-table-functions/</link>
+      <pubDate>Fri, 27 Apr 2012 22:35:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/pipelined-table-functions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pl Jrxml2pdf</title>
+      <link>http://localhost:1313/tags/pl-jrxml2pdf/</link>
+      <pubDate>Tue, 18 Dec 2012 00:00:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/pl-jrxml2pdf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Plsql</title>
+      <link>http://localhost:1313/tags/plsql/</link>
+      <pubDate>Fri, 27 Apr 2012 22:35:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/plsql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Profiling</title>
+      <link>http://localhost:1313/tags/profiling/</link>
+      <pubDate>Wed, 02 May 2012 21:41:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/profiling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reporting</title>
+      <link>http://localhost:1313/tags/reporting/</link>
+      <pubDate>Fri, 14 Jun 2013 21:47:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/reporting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Scripting</title>
+      <link>http://localhost:1313/tags/scripting/</link>
+      <pubDate>Mon, 02 Jul 2012 22:40:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/scripting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sql</title>
+      <link>http://localhost:1313/tags/sql/</link>
+      <pubDate>Wed, 14 Nov 2012 00:00:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/sql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sql Developer</title>
+      <link>http://localhost:1313/tags/sql-developer/</link>
+      <pubDate>Fri, 19 Jul 2013 22:32:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/sql-developer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sqlloader</title>
+      <link>http://localhost:1313/tags/sqlloader/</link>
+      <pubDate>Thu, 07 Jun 2012 17:04:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/sqlloader/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tim Fox</title>
+      <link>http://localhost:1313/tags/tim-fox/</link>
+      <pubDate>Fri, 10 Mar 2017 00:00:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/tim-fox/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Toplink</title>
+      <link>http://localhost:1313/tags/toplink/</link>
+      <pubDate>Fri, 09 Mar 2012 18:42:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/toplink/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Unix/Linux</title>
+      <link>http://localhost:1313/tags/unix/linux/</link>
+      <pubDate>Wed, 24 Jul 2013 21:42:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/unix/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Utilities</title>
+      <link>http://localhost:1313/tags/utilities/</link>
+      <pubDate>Thu, 04 Feb 2016 22:50:09 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/utilities/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Virtual Machines</title>
+      <link>http://localhost:1313/tags/virtual-machines/</link>
+      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/virtual-machines/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vpn</title>
+      <link>http://localhost:1313/tags/vpn/</link>
+      <pubDate>Thu, 04 Feb 2016 22:50:09 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/vpn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Web Development</title>
+      <link>http://localhost:1313/tags/web-development/</link>
+      <pubDate>Fri, 26 Oct 2012 21:09:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/web-development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Weblogic</title>
+      <link>http://localhost:1313/tags/weblogic/</link>
+      <pubDate>Fri, 09 Mar 2012 18:42:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/weblogic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Windows</title>
+      <link>http://localhost:1313/tags/windows/</link>
+      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/windows/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Xml</title>
+      <link>http://localhost:1313/tags/xml/</link>
+      <pubDate>Wed, 14 Nov 2012 00:00:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/tags/xml/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

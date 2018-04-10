@@ -2,38 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vpn on Tobybase: A Tech Blog</title>
-    <link>http://tobybase.com/tags/vpn/</link>
+    <link>http://localhost:1313/tags/vpn/</link>
     <description>Recent content in Vpn on Tobybase: A Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>2017 ~ Toby Marks</copyright>
+    <managingEditor>toby.marks@infolob.com (Toby Marks)</managingEditor>
+    <webMaster>toby.marks@infolob.com (Toby Marks)</webMaster>
     <lastBuildDate>Thu, 04 Feb 2016 22:50:09 +0000</lastBuildDate>
-    <atom:link href="/tags/vpn/" rel="self" type="application/rss+xml" />
     
-      
-        
-          <item>
-            <title>What to do when the Juniper Network Connect app on OS X does not connect</title>
-            <link>http://tobybase.com/blog/2016/02/04/what-to-do-when-the-juniper-network-connect-app-on-os-x-does-not-connect/</link>
-            <pubDate>Thu, 04 Feb 2016 22:50:09 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2016/02/04/what-to-do-when-the-juniper-network-connect-app-on-os-x-does-not-connect/</guid>
-            <description>&lt;p&gt;If you use Juniper&amp;rsquo;s Network Connect app to connect to your office VPN over HTTPS, you might occasionally experience strange errors like &amp;ldquo;A software error caused the Network Connect tunneling service to terminate.&amp;rdquo; Shortly after that, the application may either crash or prompt you for login credentials again.&lt;/p&gt;
-
-&lt;p&gt;The solution involves removing all of the Network Connect files and allowing your browser to download and install the app all over again, as it did the first time you tried to connect to your office VPN.&lt;/p&gt;
-
-&lt;p&gt;(Note: as a precaution you may want to simply move the Network Connect.app file from /Applications to ~/Desktop, just in case your browser is not able to download it as needed.)&lt;/p&gt;
-
-&lt;p&gt;To remove all files associated with the Network Connect application, execute the following commands in Terminal.app.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#888&#34;&gt;# sudo rm -rf /Applications/Network\ Connect.app`
-&lt;/span&gt;&lt;span style=&#34;color:#888&#34;&gt;# sudo rm -rf /usr/local/juniper`
-&lt;/span&gt;&lt;span style=&#34;color:#888&#34;&gt;# sudo rm -rf ~/Library/Application\ Support/Juniper\ Networks`
-&lt;/span&gt;&lt;span style=&#34;color:#888&#34;&gt;&lt;/span&gt;# sudo rm ~/Library/Preferences/net.juniper.NetworkConnect.plist&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;`&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Now try connecting to your office VPN again and the browser should prompt you to redownload the application. When I tried this I got an error the first time on Firefox saying the installation failed, but I was able to manually verify that the files were in place. My second attempt succeeded. Go figure.&lt;/p&gt;
-</description>
-          </item>
-        
-      
+	<atom:link href="http://localhost:1313/tags/vpn/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>What to do when the Juniper Network Connect app on OS X does not connect</title>
+      <link>http://localhost:1313/blog/2016/02/04/what-to-do-when-the-juniper-network-connect-app-on-os-x-does-not-connect/</link>
+      <pubDate>Thu, 04 Feb 2016 22:50:09 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/blog/2016/02/04/what-to-do-when-the-juniper-network-connect-app-on-os-x-does-not-connect/</guid>
+      <description>If you use Juniper&amp;rsquo;s Network Connect app to connect to your office VPN over HTTPS, you might occasionally experience strange errors like &amp;ldquo;A software error caused the Network Connect tunneling service to terminate.&amp;rdquo; Shortly after that, the application may either crash or prompt you for login credentials again.
+The solution involves removing all of the Network Connect files and allowing your browser to download and install the app all over again, as it did the first time you tried to connect to your office VPN.</description>
+    </item>
     
   </channel>
 </rss>

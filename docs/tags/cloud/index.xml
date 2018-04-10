@@ -2,93 +2,67 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cloud on Tobybase: A Tech Blog</title>
-    <link>http://tobybase.com/tags/cloud/</link>
+    <link>http://localhost:1313/tags/cloud/</link>
     <description>Recent content in Cloud on Tobybase: A Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>2017 ~ Toby Marks</copyright>
-    <lastBuildDate>Fri, 10 Mar 2017 14:56:00 +0000</lastBuildDate>
-    <atom:link href="/tags/cloud/" rel="self" type="application/rss+xml" />
+    <managingEditor>toby.marks@infolob.com (Toby Marks)</managingEditor>
+    <webMaster>toby.marks@infolob.com (Toby Marks)</webMaster>
+    <lastBuildDate>Tue, 10 Apr 2018 00:00:00 +0000</lastBuildDate>
     
-      
-        
-          <item>
-            <title>Move Your VM to Oracle Cloud - Part 4</title>
-            <link>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-4/</link>
-            <pubDate>Fri, 10 Mar 2017 14:56:00 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-4/</guid>
-            <description>&lt;p&gt;In the last of a four-part video series, our Director of Cloud Services Brian Hill creates a new compute instance in Oracle Cloud Compute Services based on his custom Windows virtual machine image.&lt;/p&gt;
-
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//www.youtube.com/embed/c1_2foZ7MQc&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34; title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
- &lt;/div&gt;
-
-</description>
-          </item>
-        
-      
+	<atom:link href="http://localhost:1313/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
     
-      
-        
-          <item>
-            <title>Move Your VM to Oracle Cloud - Part 3</title>
-            <link>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-3/</link>
-            <pubDate>Fri, 10 Mar 2017 14:53:00 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-3/</guid>
-            <description>&lt;p&gt;In part three of a four-part video series, our Director of Cloud Services Brian Hill creates a bootable storage volume in Oracle Cloud Compute Services with his new Windows image.&lt;/p&gt;
-
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//www.youtube.com/embed/mwsMputHP-M&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34; title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
- &lt;/div&gt;
-
-</description>
-          </item>
-        
-      
     
-      
-        
-          <item>
-            <title>Move Your VM to Oracle Cloud - Part 2</title>
-            <link>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-2/</link>
-            <pubDate>Fri, 10 Mar 2017 14:47:00 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-2/</guid>
-            <description>&lt;p&gt;In part two of a four-part video series, our Director of Cloud Services Brian Hill creates an image in Oracle Cloud Compute Services based on a Windows virtual machine.&lt;/p&gt;
+    <item>
+      <title>Access Denied When Adding a Block Volume to a Windows VM on Oracle Cloud Infrastructure</title>
+      <link>http://localhost:1313/blog/2018/04/10/access-denied-when-adding-a-block-volume-to-a-windows-vm-on-oracle-cloud-infrastructure/</link>
+      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/blog/2018/04/10/access-denied-when-adding-a-block-volume-to-a-windows-vm-on-oracle-cloud-infrastructure/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2018-04-10-oci-add-block-volume-on-windows/access-denied.jpg&#34; width=&#34;800px&#34;&gt;&lt;/p&gt;
 
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//www.youtube.com/embed/bA7zyOh-JiY&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34; title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
- &lt;/div&gt;
-
-</description>
-          </item>
-        
-      
+&lt;p&gt;If you are getting the above error when trying to add a block volume to a Windows VM in Oracle Cloud Infrastructure, the solution is quite simple.
+&lt;/p&gt;</description>
+    </item>
     
-      
-        
-          <item>
-            <title>Move Your VM to Oracle Cloud - Part 1</title>
-            <link>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-1/</link>
-            <pubDate>Fri, 10 Mar 2017 14:41:00 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-1/</guid>
-            <description>&lt;p&gt;In part one of a four-part video series, our Director of Cloud Services Brian Hill demonstrates how to prepare your virtual machine for upload to the cloud.&lt;/p&gt;
-
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//www.youtube.com/embed/lwFCj0Z4JSU&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34; title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
- &lt;/div&gt;
-
-</description>
-          </item>
-        
-      
+    <item>
+      <title>Move Your VM to Oracle Cloud - Part 4</title>
+      <link>http://localhost:1313/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-4/</link>
+      <pubDate>Fri, 10 Mar 2017 14:56:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-4/</guid>
+      <description>In the last of a four-part video series, our Director of Cloud Services Brian Hill creates a new compute instance in Oracle Cloud Compute Services based on his custom Windows virtual machine image.
+  </description>
+    </item>
+    
+    <item>
+      <title>Move Your VM to Oracle Cloud - Part 3</title>
+      <link>http://localhost:1313/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-3/</link>
+      <pubDate>Fri, 10 Mar 2017 14:53:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-3/</guid>
+      <description>In part three of a four-part video series, our Director of Cloud Services Brian Hill creates a bootable storage volume in Oracle Cloud Compute Services with his new Windows image.
+  </description>
+    </item>
+    
+    <item>
+      <title>Move Your VM to Oracle Cloud - Part 2</title>
+      <link>http://localhost:1313/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-2/</link>
+      <pubDate>Fri, 10 Mar 2017 14:47:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-2/</guid>
+      <description>In part two of a four-part video series, our Director of Cloud Services Brian Hill creates an image in Oracle Cloud Compute Services based on a Windows virtual machine.
+  </description>
+    </item>
+    
+    <item>
+      <title>Move Your VM to Oracle Cloud - Part 1</title>
+      <link>http://localhost:1313/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-1/</link>
+      <pubDate>Fri, 10 Mar 2017 14:41:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-1/</guid>
+      <description>In part one of a four-part video series, our Director of Cloud Services Brian Hill demonstrates how to prepare your virtual machine for upload to the cloud.
+  </description>
+    </item>
     
   </channel>
 </rss>

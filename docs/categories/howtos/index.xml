@@ -2,662 +2,145 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Howtos on Tobybase: A Tech Blog</title>
-    <link>http://tobybase.com/categories/howtos/</link>
+    <link>http://localhost:1313/categories/howtos/</link>
     <description>Recent content in Howtos on Tobybase: A Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>2017 ~ Toby Marks</copyright>
+    <managingEditor>toby.marks@infolob.com (Toby Marks)</managingEditor>
+    <webMaster>toby.marks@infolob.com (Toby Marks)</webMaster>
     <lastBuildDate>Thu, 04 Feb 2016 22:50:09 +0000</lastBuildDate>
-    <atom:link href="/categories/howtos/" rel="self" type="application/rss+xml" />
     
-      
-        
-          <item>
-            <title>What to do when the Juniper Network Connect app on OS X does not connect</title>
-            <link>http://tobybase.com/blog/2016/02/04/what-to-do-when-the-juniper-network-connect-app-on-os-x-does-not-connect/</link>
-            <pubDate>Thu, 04 Feb 2016 22:50:09 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2016/02/04/what-to-do-when-the-juniper-network-connect-app-on-os-x-does-not-connect/</guid>
-            <description>&lt;p&gt;If you use Juniper&amp;rsquo;s Network Connect app to connect to your office VPN over HTTPS, you might occasionally experience strange errors like &amp;ldquo;A software error caused the Network Connect tunneling service to terminate.&amp;rdquo; Shortly after that, the application may either crash or prompt you for login credentials again.&lt;/p&gt;
-
-&lt;p&gt;The solution involves removing all of the Network Connect files and allowing your browser to download and install the app all over again, as it did the first time you tried to connect to your office VPN.&lt;/p&gt;
-
-&lt;p&gt;(Note: as a precaution you may want to simply move the Network Connect.app file from /Applications to ~/Desktop, just in case your browser is not able to download it as needed.)&lt;/p&gt;
-
-&lt;p&gt;To remove all files associated with the Network Connect application, execute the following commands in Terminal.app.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#888&#34;&gt;# sudo rm -rf /Applications/Network\ Connect.app`
-&lt;/span&gt;&lt;span style=&#34;color:#888&#34;&gt;# sudo rm -rf /usr/local/juniper`
-&lt;/span&gt;&lt;span style=&#34;color:#888&#34;&gt;# sudo rm -rf ~/Library/Application\ Support/Juniper\ Networks`
-&lt;/span&gt;&lt;span style=&#34;color:#888&#34;&gt;&lt;/span&gt;# sudo rm ~/Library/Preferences/net.juniper.NetworkConnect.plist&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;`&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Now try connecting to your office VPN again and the browser should prompt you to redownload the application. When I tried this I got an error the first time on Firefox saying the installation failed, but I was able to manually verify that the files were in place. My second attempt succeeded. Go figure.&lt;/p&gt;
-</description>
-          </item>
-        
-      
+	<atom:link href="http://localhost:1313/categories/howtos/index.xml" rel="self" type="application/rss+xml" />
     
-      
-        
-          <item>
-            <title>How to Use ps to List Top Memory, CPU Eating Processes</title>
-            <link>http://tobybase.com/blog/2013/07/24/how-to-use-ps-to-list-top-memory-cpu-eating-processes/</link>
-            <pubDate>Wed, 24 Jul 2013 21:42:00 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2013/07/24/how-to-use-ps-to-list-top-memory-cpu-eating-processes/</guid>
-            <description>&lt;p&gt;The &lt;code&gt;ps&lt;/code&gt; command is a versatile and configurable way to look at the processes running on your system, though I&amp;rsquo;ve generally gotten by with a lazy &lt;code&gt;ps -ef&lt;/code&gt; to find out whatever I needed to know. Recently, though, a client&amp;rsquo;s server began running out of memory, and as a number of processes were running on the server, the culprit was not immediately clear. I wanted to provide them with a quick, simple diagnostic tool they could use the next time they received an alert.&lt;/p&gt;
-
-&lt;p&gt;If you look at the man page for &lt;code&gt;ps&lt;/code&gt; you&amp;rsquo;ll find a number of options available for sorting the list of processes returned as well as for filtering the columns displayed.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2013-07-24-linux-unix-use-ps-to-list-top-memory-cpu-eating-processes/ac6287b65af17b95d247ea063f0aa1bfc6f106f3b69adf0ae73ed8258d3a6c7b.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Some examples of &lt;code&gt;ps&lt;/code&gt; options, from RHEL 5.6:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;-e&lt;/strong&gt;&lt;br /&gt;
-select all processes&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;-a&lt;/strong&gt;&lt;br /&gt;
-select all &amp;ldquo;child&amp;rdquo; processes&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;-U &amp;lt;user&amp;gt;&lt;/strong&gt;&lt;br /&gt;
-select all processes for a specified user&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;-p &amp;lt;pid&amp;gt;&lt;/strong&gt;&lt;br /&gt;
-select by process id&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;-f&lt;/strong&gt;&lt;br /&gt;
-full-format listing; adds columns and shows process arguments&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;-o&lt;/strong&gt;&lt;br /&gt;
-user-defined format&lt;/p&gt;
-
-&lt;p&gt;Many others are available, of course, but in order to keep it simple for the client I wanted to show the top 10 processes in terms of memory utilization, with the pid, memory usage, and process name displayed. Here is what I came up with:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ ps -eo pid,user,pmem,args O R | tail -n &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;10&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;And here is an explanation:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;ps&lt;/strong&gt;&lt;br /&gt;
-shows running processes&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;-e&lt;/strong&gt;&lt;br /&gt;
-show all processes&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;-o pid,user,poem,args&lt;/strong&gt;&lt;br /&gt;
-show the pid, %mem, and process columns&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;O R&lt;/strong&gt;&lt;br /&gt;
-sort by memory usage (ascending)&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;tail&lt;/strong&gt;&lt;br /&gt;
-shows only the last lines&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;-n 10&lt;/strong&gt;&lt;br /&gt;
-show the last 10 lines&lt;/p&gt;
-
-&lt;p&gt;I liked the concept so much that I decided to adapt it for OS X, where the &lt;code&gt;ps&lt;/code&gt; command takes a slightly different set of arguments. To my .bash_profile file I added the following lines:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#038&#34;&gt;alias&lt;/span&gt; &lt;span style=&#34;color:#369&#34;&gt;psmem&lt;/span&gt;=&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#34;while :; do clear; ps -ecm -o %mem,rss,pid,user,state,args | head -n 10; sleep 5; done&amp;#34;&lt;/span&gt;
-&lt;span style=&#34;color:#038&#34;&gt;alias&lt;/span&gt; &lt;span style=&#34;color:#369&#34;&gt;pscpu&lt;/span&gt;=&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#34;while :; do clear; ps -ecr -o %cpu,pid,user,state,args | head -n 10; sleep 2; done&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;I have one alias for retrieving my top memory-utilizing processes and one for my top CPU-utilizing processes. The &lt;code&gt;while&lt;/code&gt; loop in the alias implements a functionality similar to that of the Linux &lt;code&gt;watch&lt;/code&gt; command, clearing the screen and running the process indefinitely until it is forcibly quit. For my own purposes I wanted to display some additional columns, like username and process state. I also changed the sort ordering to display the largest processes at the top of the list.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2013-07-24-linux-unix-use-ps-to-list-top-memory-cpu-eating-processes/2bcd3b2c40d8bc37893b47399aed325508e95c655492de8866a8365eede7008f.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-</description>
-          </item>
-        
-      
     
-      
-        
-          <item>
-            <title>How to Fix SQL Developer on a Retina Display Mac(book)</title>
-            <link>http://tobybase.com/blog/2013/07/19/how-to-fix-sql-developer-on-a-retina-display-macbook/</link>
-            <pubDate>Fri, 19 Jul 2013 22:32:00 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2013/07/19/how-to-fix-sql-developer-on-a-retina-display-macbook/</guid>
-            <description>&lt;p&gt;I just purchased a new Macbook Pro 13-inch with Retina Display and was horrified to see how fuzzy SQL Developer looked on the high-res screen. Thanks to Thunderforge on the &lt;a href=&#34;http://stackoverflow.com/questions/15181079/apple-retina-display-support-in-java-jdk-1-7-for-awt-swing&#34;&gt;Stack Overflow forums&lt;/a&gt; for this tip:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Java 7u40 Early Access now supports HiDPI (Retina) displays, as
-shown by this &lt;a href=&#34;http://download.java.net/jdk7u40/changes/jdk7u40-b28.html?q=download/jdk7u40/changes/jdk7u40-b28.html&#34;&gt;changelog&lt;/a&gt;. So retina support is now available on Java 6, Java 7u40 or higher, and Java 8.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;I am currently running the &lt;a href=&#34;http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/sqldev-download-v4-1925679.html&#34;&gt;Early Adopter release of SQL Developer 4.0&lt;/a&gt; which requires JDK 1.7. I&amp;rsquo;m not sure what the state of Java 8 is on the Mac, so I opted to upgrade my JDK from 1.7.0_25 to 1.7.0_40. After that I had nice, sharp lines back in SQL Developer and all my other Java apps.&lt;/p&gt;
-
-&lt;p&gt;Thanks to Oracle&amp;rsquo;s Java team for addressing this!&lt;/p&gt;
-</description>
-          </item>
-        
-      
+    <item>
+      <title>What to do when the Juniper Network Connect app on OS X does not connect</title>
+      <link>http://localhost:1313/blog/2016/02/04/what-to-do-when-the-juniper-network-connect-app-on-os-x-does-not-connect/</link>
+      <pubDate>Thu, 04 Feb 2016 22:50:09 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/blog/2016/02/04/what-to-do-when-the-juniper-network-connect-app-on-os-x-does-not-connect/</guid>
+      <description>If you use Juniper&amp;rsquo;s Network Connect app to connect to your office VPN over HTTPS, you might occasionally experience strange errors like &amp;ldquo;A software error caused the Network Connect tunneling service to terminate.&amp;rdquo; Shortly after that, the application may either crash or prompt you for login credentials again.
+The solution involves removing all of the Network Connect files and allowing your browser to download and install the app all over again, as it did the first time you tried to connect to your office VPN.</description>
+    </item>
     
-      
-        
-          <item>
-            <title>How To Reset Page Numbering Between Document Sections in BI Publisher&#39;s Template Builder for Word</title>
-            <link>http://tobybase.com/blog/2013/06/14/how-to-reset-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/</link>
-            <pubDate>Fri, 14 Jun 2013 21:47:00 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2013/06/14/how-to-reset-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/</guid>
-            <description>&lt;p&gt;Under normal circumstances, it is fairly easy in Microsoft Word to &lt;a href=&#34;http://www.youtube.com/watch?v=E1WtKR6FDM4&#34;&gt;reset page numbering&lt;/a&gt; when starting a new section of your document. However, such a simple thing can be non-trivial when dealing with the BI Publisher Template Builder plugin for Microsoft Office (&lt;a href=&#34;http://www.oracle.com/technetwork/middleware/bi-publisher/downloads/index.html&#34;&gt;available from Oracle&lt;/a&gt; — see BI Publisher Desktop).&lt;/p&gt;
-
-&lt;p&gt;In short, doing this the normal way did not work for me, and in researching the issue I ran across a &lt;a href=&#34;http://stackoverflow.com/questions/9603481/rtf-number-of-pages-page-x-of-y&#34;&gt;number&lt;/a&gt; &lt;a href=&#34;https://forums.oracle.com/thread/2493003&#34;&gt;of&lt;/a&gt; &lt;a href=&#34;https://forums.oracle.com/thread/496869&#34;&gt;folks&lt;/a&gt; who were having the same problem. Page numbering was simply not being reset between sections, or worse, did not take into account a fluid document size based upon available data.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2013-06-14-resetting-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/9f704cdbd7a5ec85bff722e3469edae0993faa219b4e42459782b94f692aa53e.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;One &lt;a href=&#34;https://forums.oracle.com/thread/2225641&#34;&gt;suggestion I read&lt;/a&gt; said to wrap the page number cells in a BI Publisher repeating group using for-each@section, like so:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;&amp;lt;?for-each@section:ID?&amp;gt; x/y &amp;lt;?end for-each?&amp;gt;&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;But this also didn&amp;rsquo;t work for me. Finally I had to edit the RTF file directly.&lt;/p&gt;
-
-&lt;p&gt;The &lt;a href=&#34;http://www.biblioscape.com/rtf15_spec.htm&#34;&gt;RTF specification&lt;/a&gt; was of some help to me in doing this, as well as &lt;a href=&#34;http://msdn.microsoft.com/en-us/library/office/aa140283(v=office.10).aspx#rtfspec_secformatprop&#34;&gt;this explanatory page from Microsoft&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;RTF files can be a little confusing, but most of the &amp;ldquo;junk&amp;rdquo; in the files is just special codes for formatting the text. I was able to find my way around easily enough by searching for labels or keywords from the document. By searching for the first few words from the second section of the document (in this case, &amp;ldquo;Sender&amp;rsquo;s Receipt&amp;rdquo;), I was able to spot where the section break should go.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2013-06-14-resetting-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/0d902604df4939682bb7821c4044affb3b03f809274551b8172827bc846d7b2d.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Checking the RTF spec, I could see that the &lt;code&gt;\page&lt;/code&gt; directive shown above was the page break between two sections of my document where I wanted to reset the page numbering. To create the section break, I inserted the following RTF directives at that point:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;\sect \sectd \pgnstarts1\pgnrestart&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2013-06-14-resetting-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/466447c609e7fa65f188357e7531def7cb8f1443944e602f62e3eff984f1388d.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Since the default behavior of the section break is to start on a new page, I found I had to remove the &lt;code&gt;\page&lt;/code&gt; directive to avoid an extra page being inserted between the document sections.&lt;/p&gt;
-
-&lt;p&gt;Interestingly, resetting the page numbering also works when calculating total number of pages, whereby the total is from the section, not the entire document, even though the NumPages field is used instead of SectionPages! Go figure, but it worked for me.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2013-06-14-resetting-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/1efc8813e70f4ee7bda4647b6fd38f4dce646c46b41e20fb482a3443e5bbb17a.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-</description>
-          </item>
-        
-      
+    <item>
+      <title>How to Use ps to List Top Memory, CPU Eating Processes</title>
+      <link>http://localhost:1313/blog/2013/07/24/how-to-use-ps-to-list-top-memory-cpu-eating-processes/</link>
+      <pubDate>Wed, 24 Jul 2013 21:42:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/blog/2013/07/24/how-to-use-ps-to-list-top-memory-cpu-eating-processes/</guid>
+      <description>The ps command is a versatile and configurable way to look at the processes running on your system, though I&amp;rsquo;ve generally gotten by with a lazy ps -ef to find out whatever I needed to know. Recently, though, a client&amp;rsquo;s server began running out of memory, and as a number of processes were running on the server, the culprit was not immediately clear. I wanted to provide them with a quick, simple diagnostic tool they could use the next time they received an alert.</description>
+    </item>
     
-      
-        
-          <item>
-            <title>Generate PDF Reports for Free in Oracle Apex Using PL-JRXML2PDF and iReport Designer</title>
-            <link>http://tobybase.com/blog/2012/12/18/generate-pdf-reports-for-free-in-oracle-apex-using-pl-jrxml2pdf-and-ireport-designer/</link>
-            <pubDate>Tue, 18 Dec 2012 00:00:00 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2012/12/18/generate-pdf-reports-for-free-in-oracle-apex-using-pl-jrxml2pdf-and-ireport-designer/</guid>
-            <description>
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//player.vimeo.com/video/55818132&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
- &lt;/div&gt;
-
-
-&lt;p&gt;Using Jaspersoft&amp;rsquo;s free iReport Designer tool and the open source PL-JRXML2PDF project, you can generate PDF reports from Oracle Apex for free, without having to install the JasperReports and JasperReports Server components. Watch my video tutorial to find out how.&lt;/p&gt;
-</description>
-          </item>
-        
-      
+    <item>
+      <title>How to Fix SQL Developer on a Retina Display Mac(book)</title>
+      <link>http://localhost:1313/blog/2013/07/19/how-to-fix-sql-developer-on-a-retina-display-macbook/</link>
+      <pubDate>Fri, 19 Jul 2013 22:32:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/blog/2013/07/19/how-to-fix-sql-developer-on-a-retina-display-macbook/</guid>
+      <description>I just purchased a new Macbook Pro 13-inch with Retina Display and was horrified to see how fuzzy SQL Developer looked on the high-res screen. Thanks to Thunderforge on the Stack Overflow forums for this tip:
+ Java 7u40 Early Access now supports HiDPI (Retina) displays, as shown by this changelog. So retina support is now available on Java 6, Java 7u40 or higher, and Java 8.
+ I am currently running the Early Adopter release of SQL Developer 4.</description>
+    </item>
     
-      
-        
-          <item>
-            <title>How To Use SQL to Query an XML Document Using Oracle External Tables</title>
-            <link>http://tobybase.com/blog/2012/11/14/how-to-use-sql-to-query-an-xml-document-using-oracle-external-tables/</link>
-            <pubDate>Wed, 14 Nov 2012 00:00:00 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2012/11/14/how-to-use-sql-to-query-an-xml-document-using-oracle-external-tables/</guid>
-            <description>&lt;p&gt;Oracle&amp;rsquo;s &lt;a href=&#34;http://docs.oracle.com/cd/B28359_01/server.111/b28319/et_concepts.htm&#34;&gt;external table feature&lt;/a&gt; allows you to treat structured files on the database server as tables for query and DML purposes. To use an example from the linked documentation, a tab-delimited file like this:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;56   november, 15, 1980  baker             mary       alice     09/01/2004
-87   december, 20, 1970  roper             lisa       marie     01/01/1999
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&amp;hellip;could be queried like this:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-SQL&#34; data-lang=&#34;SQL&#34;&gt;&lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;SELECT&lt;/span&gt; employee_number,
-       employee_first_name,
-       substr(employee_middle_name, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1&lt;/span&gt;),
-       employee_last_name,
-       employee_hire_date,
-       to_date(employee_dob,&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;month, dd, yyyy&amp;#39;&lt;/span&gt;)
-  &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FROM&lt;/span&gt; employees;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;After defining the external table like this:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;TABLE&lt;/span&gt; employees
-           (employee_number      &lt;span style=&#34;color:#038&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;5&lt;/span&gt;),
-            employee_dob         &lt;span style=&#34;color:#038&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;20&lt;/span&gt;),
-            employee_last_name   &lt;span style=&#34;color:#038&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;20&lt;/span&gt;),
-            employee_first_name  &lt;span style=&#34;color:#038&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;15&lt;/span&gt;),
-            employee_middle_name &lt;span style=&#34;color:#038&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;15&lt;/span&gt;),
-            employee_hire_date   &lt;span style=&#34;color:#038&#34;&gt;DATE&lt;/span&gt;)
-         ORGANIZATION &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;EXTERNAL&lt;/span&gt;
-           (&lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;TYPE&lt;/span&gt; ORACLE_LOADER
-            &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;DEFAULT&lt;/span&gt; DIRECTORY def_dir1
-            &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;ACCESS&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;PARAMETERS&lt;/span&gt;
-              (RECORDS DELIMITED &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;BY&lt;/span&gt; NEWLINE
-               FIELDS (employee_number      &lt;span style=&#34;color:#038&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2&lt;/span&gt;),
-                       employee_dob         &lt;span style=&#34;color:#038&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;20&lt;/span&gt;),
-                       employee_last_name   &lt;span style=&#34;color:#038&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;18&lt;/span&gt;),
-                       employee_first_name  &lt;span style=&#34;color:#038&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;11&lt;/span&gt;),
-                       employee_middle_name &lt;span style=&#34;color:#038&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;11&lt;/span&gt;),
-                       employee_hire_date   &lt;span style=&#34;color:#038&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;10&lt;/span&gt;) date_format &lt;span style=&#34;color:#038&#34;&gt;DATE&lt;/span&gt; mask &lt;span style=&#34;color:#a60;background-color:#fff0f0&#34;&gt;&amp;#34;mm/dd/yyyy&amp;#34;&lt;/span&gt;
-                      )
-              )
-            &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;LOCATION&lt;/span&gt; (&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;info.dat&amp;#39;&lt;/span&gt;)
-           );&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Assuming of course that the file&amp;rsquo;s name is &lt;code&gt;info.dat&lt;/code&gt;, and its path on the filesystem has already been created as a directory object &lt;code&gt;DEF_DIR1&lt;/code&gt; in the database.&lt;/p&gt;
-
-&lt;p&gt;A similar technique exists for querying simple XML files, taking advantage of &lt;a href=&#34;http://docs.oracle.com/cd/E11882_01/appdev.112/e23094/toc.htm&#34;&gt;Oracle&amp;rsquo;s XML DB&lt;/a&gt; features. _HT to &lt;a href=&#34;https://forums.oracle.com/forums/profile.jspa?userID=695787&#34;&gt;odie_63&lt;/a&gt; on the XML DB forums for introducing me to this method._&lt;/p&gt;
-
-&lt;p&gt;Suppose you have a simple XML file (elements, but no attributes; no complex column types - it could work for the preceding, but I&amp;rsquo;m not sure) like so.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;    &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;Employees&amp;gt;&lt;/span&gt;
-        &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;Employee&amp;gt;&lt;/span&gt;
-            &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;id&amp;gt;&lt;/span&gt;1234&lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/id&amp;gt;&lt;/span&gt;
-            &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;lastname&amp;gt;&lt;/span&gt;Jetson&lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/lastname&amp;gt;&lt;/span&gt;
-            &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;firstname&amp;gt;&lt;/span&gt;George&lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/firstname&amp;gt;&lt;/span&gt;
-            &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;department&amp;gt;&lt;/span&gt;10&lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/department&amp;gt;&lt;/span&gt;
-            &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;salary&amp;gt;&lt;/span&gt;50000.00&lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/salary&amp;gt;&lt;/span&gt;
-        &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/Employee&amp;gt;&lt;/span&gt;
-        &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;Employee&amp;gt;&lt;/span&gt;
-            &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;id&amp;gt;&lt;/span&gt;1235&lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/id&amp;gt;&lt;/span&gt;
-            &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;lastname&amp;gt;&lt;/span&gt;Crackorn&lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/lastname&amp;gt;&lt;/span&gt;
-            &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;firstname&amp;gt;&lt;/span&gt;James&lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/firstname&amp;gt;&lt;/span&gt;
-            &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;department&amp;gt;&lt;/span&gt;10&lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/department&amp;gt;&lt;/span&gt;
-            &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;salary&amp;gt;&lt;/span&gt;40000.00&lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/salary&amp;gt;&lt;/span&gt;
-        &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/Employee&amp;gt;&lt;/span&gt;
-        &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;Employee&amp;gt;&lt;/span&gt;
-            &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;id&amp;gt;&lt;/span&gt;1236&lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/id&amp;gt;&lt;/span&gt;
-            &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;lastname&amp;gt;&lt;/span&gt;Hoffman&lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/lastname&amp;gt;&lt;/span&gt;
-            &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;firstname&amp;gt;&lt;/span&gt;Burl&lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/firstname&amp;gt;&lt;/span&gt;
-            &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;department&amp;gt;&lt;/span&gt;20&lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/department&amp;gt;&lt;/span&gt;
-            &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;salary&amp;gt;&lt;/span&gt;75000.00&lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/salary&amp;gt;&lt;/span&gt;
-        &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/Employee&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/Employees&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Place it on the database server in a readable directory, e.g. &lt;code&gt;/home/oracle&lt;/code&gt;. Name it &lt;code&gt;employees.xml&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Now execute the following in SQL*Plus:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;SQL&lt;/span&gt;&amp;gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;OR&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;REPLACE&lt;/span&gt; DIRECTORY XML_DIR &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;/home/oracle&amp;#39;&lt;/span&gt;;
-
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;SQL&lt;/span&gt;&amp;gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;OR&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;REPLACE&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;VIEW&lt;/span&gt; employees_v &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;AS&lt;/span&gt;
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;SELECT&lt;/span&gt; *
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FROM&lt;/span&gt; XMLTable(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;/Employees/Employee&amp;#39;&lt;/span&gt;
-            passing xmltype(
-                     bfilename(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;XML_DIR&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;employees.xml&amp;#39;&lt;/span&gt;)
-                    , nls_charset_id(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;AL32UTF8&amp;#39;&lt;/span&gt;)
-                    )
-            columns id           &lt;span style=&#34;color:#038&#34;&gt;number&lt;/span&gt; path &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;id&amp;#39;&lt;/span&gt;
-                  , lastname     varchar2(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;30&lt;/span&gt;) path &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;lastname&amp;#39;&lt;/span&gt;
-                  , firstname    varchar2(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;30&lt;/span&gt;) path &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;firstname&amp;#39;&lt;/span&gt;
-                  , department   &lt;span style=&#34;color:#038&#34;&gt;number&lt;/span&gt; path &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;department&amp;#39;&lt;/span&gt;
-                  , salary       &lt;span style=&#34;color:#038&#34;&gt;number&lt;/span&gt; path &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;salary&amp;#39;&lt;/span&gt;
-           );
-
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;SQL&lt;/span&gt;&amp;gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;SELECT&lt;/span&gt; * &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FROM&lt;/span&gt; employees_v;
-    ID   LASTNAME FIRSTNAME DEPARTMENT SALARY
-    &lt;span style=&#34;color:#888&#34;&gt;---- -------- --------- ---------- ------
-&lt;/span&gt;&lt;span style=&#34;color:#888&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1234&lt;/span&gt; Jetson   George    &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;10&lt;/span&gt;         &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;50000&lt;/span&gt;    
-    &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1235&lt;/span&gt; Crackorn James     &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;10&lt;/span&gt;         &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;40000&lt;/span&gt;
-    &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1236&lt;/span&gt; Hoffman  Burl      &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;20&lt;/span&gt;         &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;75000&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;You can modify construction of the view to read from multiple files by using a simple &lt;code&gt;UNION&lt;/code&gt; operator, or you can make the source filename dynamic so you can switch datasets at runtime. Here&amp;rsquo;s how you might do something like that:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;SQL&lt;/span&gt;&amp;gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;OR&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;REPLACE&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;VIEW&lt;/span&gt; employees_v &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;AS&lt;/span&gt;
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;SELECT&lt;/span&gt; *
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FROM&lt;/span&gt; XMLTable(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;/Employees/Employee&amp;#39;&lt;/span&gt;
-            passing xmltype(
-                     bfilename(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;XML_DIR&amp;#39;&lt;/span&gt;, userenv(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;CLIENT_INFO&amp;#39;&lt;/span&gt;))
-                    , nls_charset_id(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;AL32UTF8&amp;#39;&lt;/span&gt;)
-                    )
-            columns id           &lt;span style=&#34;color:#038&#34;&gt;number&lt;/span&gt; path &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;id&amp;#39;&lt;/span&gt;
-                  , lastname     varchar2(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;30&lt;/span&gt;) path &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;lastname&amp;#39;&lt;/span&gt;
-                  , firstname    varchar2(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;30&lt;/span&gt;) path &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;firstname&amp;#39;&lt;/span&gt;
-                  , department   &lt;span style=&#34;color:#038&#34;&gt;number&lt;/span&gt; path &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;department&amp;#39;&lt;/span&gt;
-                  , salary       &lt;span style=&#34;color:#038&#34;&gt;number&lt;/span&gt; path &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;salary&amp;#39;&lt;/span&gt;
-           );&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Then at runtime, specify the file you want to use like this:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-plpgsql&#34; data-lang=&#34;plpgsql&#34;&gt;    SQL&amp;gt; exec dbms_application_info&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;.&lt;/span&gt;set_client_info(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;employees_01.xml&amp;#39;&lt;/span&gt;);
-
-    SQL&amp;gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;SELECT&lt;/span&gt; * &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FROM&lt;/span&gt; employees_v;
-    ID   LASTNAME FIRSTNAME DEPARTMENT SALARY
-    &lt;span style=&#34;color:#888&#34;&gt;---- -------- --------- ---------- ------
-&lt;/span&gt;&lt;span style=&#34;color:#888&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1234&lt;/span&gt; Jetson   George    &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;10&lt;/span&gt;         &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;50000&lt;/span&gt;    
-    &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1235&lt;/span&gt; Crackorn James     &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;10&lt;/span&gt;         &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;40000&lt;/span&gt;
-    &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1236&lt;/span&gt; Hoffman  Burl      &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;20&lt;/span&gt;         &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;75000&lt;/span&gt;
-
-    SQL&amp;gt; exec dbms_application_info&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;.&lt;/span&gt;set_client_info(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;employees_02.xml&amp;#39;&lt;/span&gt;);
-
-    SQL&amp;gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;SELECT&lt;/span&gt; * &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FROM&lt;/span&gt; employees_v;
-    ID   LASTNAME FIRSTNAME DEPARTMENT SALARY
-    &lt;span style=&#34;color:#888&#34;&gt;---- -------- --------- ---------- ------
-&lt;/span&gt;&lt;span style=&#34;color:#888&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1234&lt;/span&gt; Ringwald Malory    &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;30&lt;/span&gt;         &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;63000&lt;/span&gt;    
-    &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1235&lt;/span&gt; Dulles   Bob       &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;10&lt;/span&gt;         &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;100000&lt;/span&gt;
-    &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1236&lt;/span&gt; Stein    Frank     &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;50&lt;/span&gt;         &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;55000&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Why might this be useful? Suppose you have an arbitrary number of identically structured XML files in a directory that you want to import into a relational database table. Using a shell script you can, for each file in the directory,&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;log in to SQL*Plus&lt;/li&gt;
-&lt;li&gt;set the &lt;code&gt;CLIENT_INFO&lt;/code&gt; variable to the name of the current file&lt;/li&gt;
-&lt;li&gt;perform a simple insert into your table reading all records from the view&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;You might even create a cron job to monitor a particular directory for new XML files, processing them into tables and then deleting or archiving the files when done.&lt;/p&gt;
-</description>
-          </item>
-        
-      
+    <item>
+      <title>How To Reset Page Numbering Between Document Sections in BI Publisher&#39;s Template Builder for Word</title>
+      <link>http://localhost:1313/blog/2013/06/14/how-to-reset-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/</link>
+      <pubDate>Fri, 14 Jun 2013 21:47:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/blog/2013/06/14/how-to-reset-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/</guid>
+      <description>Under normal circumstances, it is fairly easy in Microsoft Word to reset page numbering when starting a new section of your document. However, such a simple thing can be non-trivial when dealing with the BI Publisher Template Builder plugin for Microsoft Office (available from Oracle — see BI Publisher Desktop).
+In short, doing this the normal way did not work for me, and in researching the issue I ran across a number of folks who were having the same problem.</description>
+    </item>
     
-      
-        
-          <item>
-            <title>How To Restrict Access to BI Publisher Reports</title>
-            <link>http://tobybase.com/blog/2012/11/12/how-to-restrict-access-to-bi-publisher-reports/</link>
-            <pubDate>Mon, 12 Nov 2012 18:12:00 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2012/11/12/how-to-restrict-access-to-bi-publisher-reports/</guid>
-            <description>&lt;p&gt;In &lt;a href=&#34;http://tobybase.com/blog/2012/11/12/how-to-configure-oracle-bi-publisher-to-authenticate-with-active-directory/&#34;&gt;my last post&lt;/a&gt;  I described how to configure BI Publisher to authenticate against an LDAP server, typically a corporate Active Directory server. Aside from authentication, you can also use LDAP group membership to determine who has access to a given report. Here&amp;rsquo;s how you do it.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Create a group in your LDAP/AD directory and assign your target users to that group.&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Revisit your LDAP authentication settings. These are located on the Admin Tab, on the Security Configuration page. In particular, look at the value for Group Search Filter.&lt;/p&gt;
-
-&lt;p&gt;e.g.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;(&amp;amp;(objectClass=group)(|(CN=XMLP\*)(CN=DEPT_GROUP_\*)))
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;In case you don&amp;rsquo;t recognize it, this is an LDAP query string. This query string determines which groups BI Publisher &amp;ldquo;sees&amp;rdquo;, or recognizes, when setting up report access. The groups returned by this query will determine the set from which you can choose when configuring which groups see which reports.&lt;/p&gt;
-
-&lt;p&gt;Here is a deconstruction of the query string:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;(&amp;amp;&lt;/strong&gt; &lt;em&gt;Logical AND over the following conditions&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;(objectClass=group)&lt;/strong&gt; &lt;em&gt;Return LDAP groups, as opposed to users or computers, etc.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;(|&lt;/strong&gt; &lt;em&gt;Logical OR over the following conditions&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;(CN=XMLP*)&lt;/strong&gt; &lt;em&gt;Return groups whose name starts with &amp;ldquo;XMLP&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;(CN=DEPT_GROUP_*)&lt;/strong&gt; &lt;em&gt;Return groups whose name starts with &amp;ldquo;DEPT_GROUP_&amp;ldquo;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;A quick primer on LDAP query syntax &lt;a href=&#34;http://wiki.pentaho.com/display/ServerDoc2x/LDAP+Search+Filter+Syntax&#34;&gt;can be found here.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Modify this query string to include the group you just created.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Bounce BI Publisher.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Log in to BI Publisher as an administrator. Go to the Admin tab, and then to the Roles and Permissions page.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Click on the role/group you just created, and using the shuttle control on the next page, select which reports your new group should have access to. If necessary, you may need to revoke permissions on your report from other groups, or move your report to the top level of the report folder hierarchy in order to segregate access appropriately.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-          </item>
-        
-      
+    <item>
+      <title>Generate PDF Reports for Free in Oracle Apex Using PL-JRXML2PDF and iReport Designer</title>
+      <link>http://localhost:1313/blog/2012/12/18/generate-pdf-reports-for-free-in-oracle-apex-using-pl-jrxml2pdf-and-ireport-designer/</link>
+      <pubDate>Tue, 18 Dec 2012 00:00:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/blog/2012/12/18/generate-pdf-reports-for-free-in-oracle-apex-using-pl-jrxml2pdf-and-ireport-designer/</guid>
+      <description>Using Jaspersoft&amp;rsquo;s free iReport Designer tool and the open source PL-JRXML2PDF project, you can generate PDF reports from Oracle Apex for free, without having to install the JasperReports and JasperReports Server components. Watch my video tutorial to find out how.</description>
+    </item>
     
-      
-        
-          <item>
-            <title>How To Configure Oracle BI Publisher to Authenticate With Active Directory</title>
-            <link>http://tobybase.com/blog/2012/11/12/how-to-configure-oracle-bi-publisher-to-authenticate-with-active-directory/</link>
-            <pubDate>Mon, 12 Nov 2012 17:32:00 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2012/11/12/how-to-configure-oracle-bi-publisher-to-authenticate-with-active-directory/</guid>
-            <description>&lt;ul&gt;
-&lt;li&gt;Log in to BI Publisher as an administrator.&lt;/li&gt;
-&lt;li&gt;Click on the Admin tab.&lt;/li&gt;
-&lt;li&gt;Click on Security Configuration.&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;For Security Model, choose LDAP and enter the following parameters:&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Setting&lt;/th&gt;
-&lt;th&gt;Example Value&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;URL&lt;/td&gt;
-&lt;td&gt;ldap://ad.mycompany.com:389  &lt;cite style=&#34;color:red; font-size:smaller&#34;&gt;Your company&amp;rsquo;s LDAP server and port.&lt;/cite&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Administrator Username&lt;/td&gt;
-&lt;td&gt;CN=ADMIN,OU=Users,OU=Shared Services,DC=mycompany,DC=com  &lt;cite style=&#34;color:red; font-size:smaller&#34;&gt;The fully qualified DN of the account you use to sign in to LDAP.&lt;/cite&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Administrator Password&lt;/td&gt;
-&lt;td&gt;myxlplyx  &lt;cite style=&#34;color:red; font-size:smaller&#34;&gt;The password for the above account.&lt;/cite&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Distinguished Name for Users&lt;/td&gt;
-&lt;td&gt;DC=mycompany,DC=com  &lt;cite style=&#34;color:red; font-size:smaller&#34;&gt;The &amp;ldquo;root&amp;rdquo; level at which to search for users.&lt;/cite&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Distinguished Name for Groups&lt;/td&gt;
-&lt;td&gt;OU=Global Groups,DC=mycompany,DC=com  &lt;cite style=&#34;color:red; font-size:smaller&#34;&gt;The &amp;ldquo;root&amp;rdquo; level at which to search from groups.&lt;/cite&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Group Search Filter&lt;/td&gt;
-&lt;td&gt;(&amp;amp;(objectClass=group)(&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Group Attribute Name&lt;/td&gt;
-&lt;td&gt;cn&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Group Member Attribute Name&lt;/td&gt;
-&lt;td&gt;member&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Member Of Group Attribute Name&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Group Description Attribute Name&lt;/td&gt;
-&lt;td&gt;description&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;JNDI Context Factory Class&lt;/td&gt;
-&lt;td&gt;com.sun.jndi.ldap.LdapCtxFactory&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Group Retrieval Page Size&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;attribute used for RDN&lt;/td&gt;
-&lt;td&gt;sAMAccountName  &lt;cite style=&#34;color:red; font-size:smaller&#34;&gt;Allows users to log in to BI Publisher using their corporate AD account name.&lt;/cite&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Automatically clear LDAP cache&lt;/td&gt;
-&lt;td&gt;Checked&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Ldap Cache Interval&lt;/td&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Ldap Cache Interval Unit&lt;/td&gt;
-&lt;td&gt;Hour&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Default User Group Name&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Attribute Names for Data Query Bind Variables&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Bounce BI Publisher.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Try logging in with your corporate AD credentials. Remember, you need to be assigned to one of the following special groups in Active Directory if you want developer or admin privileges in BI Publisher:&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;XMLP_ADMIN&lt;br /&gt;
-XMLP_DEVELOPER&lt;br /&gt;
-XMLP_SCHEDULER&lt;br /&gt;
-XMLP_ANALYZER_EXCEL&lt;br /&gt;
-XMLP_ANALYZER_ONLINE&lt;br /&gt;
-XMLP_TEMPLATE_DESIGNER&lt;/p&gt;
-
-&lt;p&gt;You can read more about those roles and what they do &lt;a href=&#34;http://docs.oracle.com/cd/E10383_01/doc/bip.1013/b40017/T421739T475591.htm&#34;&gt;in the Oracle Documentation&lt;/a&gt;.&lt;/p&gt;
-</description>
-          </item>
-        
-      
+    <item>
+      <title>How To Use SQL to Query an XML Document Using Oracle External Tables</title>
+      <link>http://localhost:1313/blog/2012/11/14/how-to-use-sql-to-query-an-xml-document-using-oracle-external-tables/</link>
+      <pubDate>Wed, 14 Nov 2012 00:00:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/blog/2012/11/14/how-to-use-sql-to-query-an-xml-document-using-oracle-external-tables/</guid>
+      <description>Oracle&amp;rsquo;s external table feature allows you to treat structured files on the database server as tables for query and DML purposes. To use an example from the linked documentation, a tab-delimited file like this:
+56 november, 15, 1980 baker mary alice 09/01/2004 87 december, 20, 1970 roper lisa marie 01/01/1999  &amp;hellip;could be queried like this:
+SELECT employee_number, employee_first_name, substr(employee_middle_name, 1, 1), employee_last_name, employee_hire_date, to_date(employee_dob,&amp;#39;month, dd, yyyy&amp;#39;) FROM employees; After defining the external table like this:</description>
+    </item>
     
-      
-        
-          <item>
-            <title>How to Avoid the &#34;Job scheduling failed because the user has no permission to access this report&#34; Error in BI Publisher</title>
-            <link>http://tobybase.com/blog/2012/08/27/how-to-avoid-the-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report-error-in-bi-publisher/</link>
-            <pubDate>Mon, 27 Aug 2012 20:48:08 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2012/08/27/how-to-avoid-the-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report-error-in-bi-publisher/</guid>
-            <description>&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2012-08-27-bi-publisher-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report/864dbb90dbf623eb4f36b26a3ecf315cfec7121cf33e16730b6060c6572dfb35.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;You can get this error if you are trying to schedule a report and your BI Publisher installation uses LDAP authentication.&lt;/p&gt;
-
-&lt;p&gt;To avoid it, make sure that the &amp;ldquo;Administrator&amp;rdquo; account you use to connect to your LDAP server is in the XMLP_ADMIN group. The LDAP settings are located on the Admin tab, under Security Settings / Security Configuration.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2012-08-27-bi-publisher-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report/c44997adb44d6687468d544341fcd25b818ebdd46087d1849c38e855ee874488.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-</description>
-          </item>
-        
-      
+    <item>
+      <title>How To Restrict Access to BI Publisher Reports</title>
+      <link>http://localhost:1313/blog/2012/11/12/how-to-restrict-access-to-bi-publisher-reports/</link>
+      <pubDate>Mon, 12 Nov 2012 18:12:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/blog/2012/11/12/how-to-restrict-access-to-bi-publisher-reports/</guid>
+      <description>In my last post I described how to configure BI Publisher to authenticate against an LDAP server, typically a corporate Active Directory server. Aside from authentication, you can also use LDAP group membership to determine who has access to a given report. Here&amp;rsquo;s how you do it.
+ Create a group in your LDAP/AD directory and assign your target users to that group. Revisit your LDAP authentication settings. These are located on the Admin Tab, on the Security Configuration page.</description>
+    </item>
     
-      
-        
-          <item>
-            <title>How To Fix High CPU Usage by SQL Developer on OS X</title>
-            <link>http://tobybase.com/blog/2012/07/20/how-to-fix-high-cpu-usage-by-sql-developer-on-os-x/</link>
-            <pubDate>Fri, 20 Jul 2012 16:32:00 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2012/07/20/how-to-fix-high-cpu-usage-by-sql-developer-on-os-x/</guid>
-            <description>&lt;p&gt;I&amp;rsquo;ve been fighting for a couple of years now with an annoying performance bug in SQL Developer for OS X. After using the application for a while CPU usage would spike to around 100%, even when idle. This is a known issue associated with the &amp;ldquo;Look and Feel&amp;rdquo; preference.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2012-07-20-easy-fix-for-high-cpu-usage-in-sql-developer-on-os-x/b5b8f447d6dc433b4253c4814df5746e70e6e1e85235b391c9fef8b19e9f84d8.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Basically, don&amp;rsquo;t use the &amp;ldquo;Mac OS X&amp;rdquo; setting. Instead, use the &amp;ldquo;Oracle&amp;rdquo; setting. The theme doesn&amp;rsquo;t matter.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2012-07-20-easy-fix-for-high-cpu-usage-in-sql-developer-on-os-x/aa9173adfc0090dc8b5b7fb471547c26a5243ca8f21c670580cd41df9cbd263f.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;That fixes the CPU issue, but somewhat annoyingly moves the menu out of the menu bar at the top of the screen and into the application window, a la Windows, making the interface inconsistent with pretty much every other app I use on my Mac. &lt;a href=&#34;https://forums.oracle.com/forums/thread.jspa?threadID=1980688&amp;amp;start=15&amp;amp;tstart=30&#34;&gt;Until recently&lt;/a&gt;, that is. The big news is that &lt;em&gt;as of SQL Developer 3.1, the menu is restored to the top of the screen&lt;/em&gt; when using the Oracle Look and Feel. So for those who had been holding out (like myself) with the more native LaF, you can make the switch now and avoid the most annoying part of the performance/usability compromise.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2012-07-20-easy-fix-for-high-cpu-usage-in-sql-developer-on-os-x/cfa32760a6b880df4f2b44e0c1db8a5155ee4c59233b761517416ef7f5c602f7.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-</description>
-          </item>
-        
-      
+    <item>
+      <title>How To Configure Oracle BI Publisher to Authenticate With Active Directory</title>
+      <link>http://localhost:1313/blog/2012/11/12/how-to-configure-oracle-bi-publisher-to-authenticate-with-active-directory/</link>
+      <pubDate>Mon, 12 Nov 2012 17:32:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/blog/2012/11/12/how-to-configure-oracle-bi-publisher-to-authenticate-with-active-directory/</guid>
+      <description>Log in to BI Publisher as an administrator. Click on the Admin tab. Click on Security Configuration. For Security Model, choose LDAP and enter the following parameters:
+   Setting Example Value     URL ldap://ad.mycompany.com:389 Your company&amp;rsquo;s LDAP server and port.   Administrator Username CN=ADMIN,OU=Users,OU=Shared Services,DC=mycompany,DC=com The fully qualified DN of the account you use to sign in to LDAP.   Administrator Password myxlplyx The password for the above account.</description>
+    </item>
     
-      
-        
-          <item>
-            <title>How To Run Oracle Forms 11g Applications on OS X Lion</title>
-            <link>http://tobybase.com/blog/2012/07/12/how-to-run-oracle-forms-11g-applications-on-os-x-lion/</link>
-            <pubDate>Thu, 12 Jul 2012 22:28:24 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2012/07/12/how-to-run-oracle-forms-11g-applications-on-os-x-lion/</guid>
-            <description>&lt;p&gt;Need to run your company&amp;rsquo;s Oracle Forms application from your Mac, and can&amp;rsquo;t? Annoyed with having to crank up a virtual machine for just that one task? Even with the latest published Java version for OS X (1.6.0_33, as of today), you may find that some of the newer Forms applications just won&amp;rsquo;t run. Well, fret no longer. A solution may already be here, at least for Safari and Firefox.&lt;/p&gt;
-
-&lt;p&gt;Although it&amp;rsquo;s not a strictly certified configuration, you may have better luck by running the JRE 1.7 Java plug-in, which was recently made available as a pre-release download. This works for OS X Lion 10.7.3 and above. Download the plug-in &lt;a href=&#34;http://jdk7.java.net/macportpreview/&#34;&gt;from here&lt;/a&gt; and follow the simple instructions on the page to install it. Now give your application another try, and hopefully you&amp;rsquo;ll get the results I did!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2012-07-12-run-oracle-forms-11g-applications-on-os-x-lion/8267cef641541001f78e2a3845a1349c5cc5c74dc6bf17b8a32fe537d9beaadd.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-</description>
-          </item>
-        
-      
+    <item>
+      <title>How to Avoid the &#34;Job scheduling failed because the user has no permission to access this report&#34; Error in BI Publisher</title>
+      <link>http://localhost:1313/blog/2012/08/27/how-to-avoid-the-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report-error-in-bi-publisher/</link>
+      <pubDate>Mon, 27 Aug 2012 20:48:08 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/blog/2012/08/27/how-to-avoid-the-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report-error-in-bi-publisher/</guid>
+      <description>You can get this error if you are trying to schedule a report and your BI Publisher installation uses LDAP authentication.
+To avoid it, make sure that the &amp;ldquo;Administrator&amp;rdquo; account you use to connect to your LDAP server is in the XMLP_ADMIN group. The LDAP settings are located on the Admin tab, under Security Settings / Security Configuration.</description>
+    </item>
     
-      
-        
-          <item>
-            <title>How To Use a Perl CGI Script to Show Real Web Server Host Name</title>
-            <link>http://tobybase.com/blog/2012/07/02/how-to-use-a-perl-cgi-script-to-show-real-web-server-host-name/</link>
-            <pubDate>Mon, 02 Jul 2012 22:40:00 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2012/07/02/how-to-use-a-perl-cgi-script-to-show-real-web-server-host-name/</guid>
-            <description>&lt;p&gt;Here is a short and simple Perl CGI script that you can use to expose the hostname of your web server, as opposed to just the server/domain portion of the URL string:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-perl&#34; data-lang=&#34;perl&#34;&gt;    &lt;span style=&#34;color:#888&#34;&gt;#!/usr/bin/perl&lt;/span&gt;
+    <item>
+      <title>How To Fix High CPU Usage by SQL Developer on OS X</title>
+      <link>http://localhost:1313/blog/2012/07/20/how-to-fix-high-cpu-usage-by-sql-developer-on-os-x/</link>
+      <pubDate>Fri, 20 Jul 2012 16:32:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/blog/2012/07/20/how-to-fix-high-cpu-usage-by-sql-developer-on-os-x/</guid>
+      <description>I&amp;rsquo;ve been fighting for a couple of years now with an annoying performance bug in SQL Developer for OS X. After using the application for a while CPU usage would spike to around 100%, even when idle. This is a known issue associated with the &amp;ldquo;Look and Feel&amp;rdquo; preference.
+Basically, don&amp;rsquo;t use the &amp;ldquo;Mac OS X&amp;rdquo; setting. Instead, use the &amp;ldquo;Oracle&amp;rdquo; setting. The theme doesn&amp;rsquo;t matter.
+That fixes the CPU issue, but somewhat annoyingly moves the menu out of the menu bar at the top of the screen and into the application window, a la Windows, making the interface inconsistent with pretty much every other app I use on my Mac.</description>
+    </item>
     
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#34;Content-type: text/html\n\n&amp;#34;&lt;/span&gt;;
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;`hostname`&lt;/span&gt;;
+    <item>
+      <title>How To Run Oracle Forms 11g Applications on OS X Lion</title>
+      <link>http://localhost:1313/blog/2012/07/12/how-to-run-oracle-forms-11g-applications-on-os-x-lion/</link>
+      <pubDate>Thu, 12 Jul 2012 22:28:24 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/blog/2012/07/12/how-to-run-oracle-forms-11g-applications-on-os-x-lion/</guid>
+      <description>Need to run your company&amp;rsquo;s Oracle Forms application from your Mac, and can&amp;rsquo;t? Annoyed with having to crank up a virtual machine for just that one task? Even with the latest published Java version for OS X (1.6.0_33, as of today), you may find that some of the newer Forms applications just won&amp;rsquo;t run. Well, fret no longer. A solution may already be here, at least for Safari and Firefox.</description>
+    </item>
     
-    &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1&lt;/span&gt;;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Name the file something like &lt;code&gt;hostname.cgi&lt;/code&gt; and place it in your web server&amp;rsquo;s &lt;code&gt;/cgi-bin/&lt;/code&gt; directory, or if your web server is configured appropriately, just name it &lt;code&gt;hostname.pl&lt;/code&gt; and drop it wherever you like.&lt;/p&gt;
-
-&lt;p&gt;The following script can be used to dump all the CGI environment variables.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-perl&#34; data-lang=&#34;perl&#34;&gt;    &lt;span style=&#34;color:#888&#34;&gt;#!/usr/bin/perl&lt;/span&gt;
+    <item>
+      <title>How To Use a Perl CGI Script to Show Real Web Server Host Name</title>
+      <link>http://localhost:1313/blog/2012/07/02/how-to-use-a-perl-cgi-script-to-show-real-web-server-host-name/</link>
+      <pubDate>Mon, 02 Jul 2012 22:40:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/blog/2012/07/02/how-to-use-a-perl-cgi-script-to-show-real-web-server-host-name/</guid>
+      <description>Here is a short and simple Perl CGI script that you can use to expose the hostname of your web server, as opposed to just the server/domain portion of the URL string:
+#!/usr/bin/perl print &amp;#34;Content-type: text/html\n\n&amp;#34;; print `hostname`; 1; Name the file something like hostname.cgi and place it in your web server&amp;rsquo;s /cgi-bin/ directory, or if your web server is configured appropriately, just name it hostname.pl and drop it wherever you like.</description>
+    </item>
     
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#34;Content-type: text/html\n\n&amp;#34;&lt;/span&gt;;
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#34;&amp;lt;font size=+1&amp;gt;Environment&amp;lt;/font&amp;gt;\n&amp;#34;&lt;/span&gt;;
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;foreach&lt;/span&gt; (&lt;span style=&#34;color:#038&#34;&gt;sort&lt;/span&gt; &lt;span style=&#34;color:#038&#34;&gt;keys&lt;/span&gt; &lt;span style=&#34;color:#369&#34;&gt;%ENV&lt;/span&gt;)
-    {
-      &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#34;&amp;lt;b&amp;gt;$_&amp;lt;/b&amp;gt;: $ENV{$_}&amp;lt;br&amp;gt;\n&amp;#34;&lt;/span&gt;;
-    }
-    
-    &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1&lt;/span&gt;;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Note that this includes &lt;code&gt;SERVER_NAME&lt;/code&gt;, but what that really gives you is the &amp;ldquo;server&amp;rdquo; portion of the URL string. In other words, if your URL is http:&amp;#47;&amp;#47;www.google.com&amp;#47;, then the &lt;code&gt;SERVER_NAME&lt;/code&gt; CGI environment variable would be &amp;ldquo;www.google.com&amp;rdquo;. Fine, but the first script can be used to identify the actual server being called, for example, when your page is hosted on multiple servers load-balanced under a virtual domain name.&lt;/p&gt;
-
-&lt;p&gt;Of course, you could combine the two scripts to give you everything:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-perl&#34; data-lang=&#34;perl&#34;&gt;    &lt;span style=&#34;color:#888&#34;&gt;#!/usr/bin/perl&lt;/span&gt;
-    
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#34;Content-type: text/html\n\n&amp;#34;&lt;/span&gt;;
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#34;&amp;lt;font size=+1&amp;gt;Environment&amp;lt;/font&amp;gt;\n&amp;#34;&lt;/span&gt;;
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;foreach&lt;/span&gt; (&lt;span style=&#34;color:#038&#34;&gt;sort&lt;/span&gt; &lt;span style=&#34;color:#038&#34;&gt;keys&lt;/span&gt; &lt;span style=&#34;color:#369&#34;&gt;%ENV&lt;/span&gt;)
-    {
-      &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#34;&amp;lt;b&amp;gt;$_&amp;lt;/b&amp;gt;: $ENV{$_}&amp;lt;br&amp;gt;\n&amp;#34;&lt;/span&gt;;
-    }
-    
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#34;&amp;lt;b&amp;gt;REAL SERVER HOSTNAME:&amp;lt;/b&amp;gt; &amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;`hostname`&lt;/span&gt;;
-    
-    &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1&lt;/span&gt;;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-          </item>
-        
-      
-    
-      
-        
-          <item>
-            <title>How To Make Bash Scripts crontab-Compatible</title>
-            <link>http://tobybase.com/blog/2012/04/05/how-to-make-bash-scripts-crontab-compatible/</link>
-            <pubDate>Thu, 05 Apr 2012 21:19:05 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2012/04/05/how-to-make-bash-scripts-crontab-compatible/</guid>
-            <description>&lt;p&gt;When writing shell scripts in bash, consider whether your script can be automated in a batch scheduler like cron. If you reference any external resources in your script relative to the directory in which it resides, those references may break when running your script through cron.&lt;/p&gt;
-
-&lt;p&gt;By default, crontab runs scripts in the user&amp;rsquo;s home directory, as specified in &lt;code&gt;/etc/passwd&lt;/code&gt;. For user &amp;ldquo;Tim&amp;rdquo; with home directory &lt;code&gt;/home/tim&lt;/code&gt;, a sample crontab might look something like the following:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;0&lt;/span&gt; * * * runme.sh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Every night at midnight, cron will try to run the file &lt;code&gt;/home/tim/runme.sh&lt;/code&gt;. However, if &lt;code&gt;runme.sh&lt;/code&gt; is actually in a sub-directory under &lt;code&gt;~tim&lt;/code&gt;, you will need to tell cron how to reach the file. One option would be to qualify the path in crontab, like so:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;0&lt;/span&gt; * * * ~/bin/runme.sh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Now cron can find the file. However, if the script makes references to other files inside of &lt;code&gt;/bin&lt;/code&gt; in a path-relative way, those references will be broken.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#c00;font-weight:bold&#34;&gt;#!/bin/bash
-&lt;/span&gt;&lt;span style=&#34;color:#c00;font-weight:bold&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#888&#34;&gt;#runme.sh
-&lt;/span&gt;&lt;span style=&#34;color:#888&#34;&gt;&lt;/span&gt;./runthis.sh      &lt;span style=&#34;color:#888&#34;&gt;# can&amp;#39;t find this file when running under cron
-&lt;/span&gt;&lt;span style=&#34;color:#888&#34;&gt;&lt;/span&gt;./runthat.sh      # can&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;&amp;#39;&lt;/span&gt;t find this file when running under cron&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;That&amp;rsquo;s because to cron &lt;code&gt;./&lt;/code&gt; is not the directory in which the script is running, but rather whatever is defined as the base directory; in the default case, the user&amp;rsquo;s home directory.&lt;/p&gt;
-
-&lt;p&gt;It is possible to specify the base directory in the crontab file itself by defining the special variable &lt;code&gt;HOME&lt;/code&gt;.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#369&#34;&gt;HOME&lt;/span&gt;=/home/tim/bin
-&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;0&lt;/span&gt; * * * runme.sh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;However, you may not always have control over how your crontab is configured. Perhaps a system administrator is in charge of all the schedules on your server. Or you may organize your scripts in several different directories.&lt;/p&gt;
-
-&lt;p&gt;An easy solution is to start your bash scripts with the following command:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#038&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;$(&lt;/span&gt;dirname &lt;span style=&#34;color:#369&#34;&gt;$0&lt;/span&gt;&lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;The program &lt;code&gt;dirname&lt;/code&gt; returns the directory portion of the fully qualified path name sent to it. The &lt;code&gt;$0&lt;/code&gt; argument in this context is name of the running script. Basically, this code ensures that the current working directory is the same as the directory in which your script is running. That way all your path-relative references are correct whether running manually or through a scheduler.&lt;/p&gt;
-</description>
-          </item>
-        
-      
+    <item>
+      <title>How To Make Bash Scripts crontab-Compatible</title>
+      <link>http://localhost:1313/blog/2012/04/05/how-to-make-bash-scripts-crontab-compatible/</link>
+      <pubDate>Thu, 05 Apr 2012 21:19:05 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/blog/2012/04/05/how-to-make-bash-scripts-crontab-compatible/</guid>
+      <description>When writing shell scripts in bash, consider whether your script can be automated in a batch scheduler like cron. If you reference any external resources in your script relative to the directory in which it resides, those references may break when running your script through cron.
+By default, crontab runs scripts in the user&amp;rsquo;s home directory, as specified in /etc/passwd. For user &amp;ldquo;Tim&amp;rdquo; with home directory /home/tim, a sample crontab might look something like the following:</description>
+    </item>
     
   </channel>
 </rss>

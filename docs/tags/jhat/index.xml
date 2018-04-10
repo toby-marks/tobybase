@@ -2,120 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jhat on Tobybase: A Tech Blog</title>
-    <link>http://tobybase.com/tags/jhat/</link>
+    <link>http://localhost:1313/tags/jhat/</link>
     <description>Recent content in Jhat on Tobybase: A Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>2017 ~ Toby Marks</copyright>
+    <managingEditor>toby.marks@infolob.com (Toby Marks)</managingEditor>
+    <webMaster>toby.marks@infolob.com (Toby Marks)</webMaster>
     <lastBuildDate>Wed, 02 May 2012 21:41:00 +0000</lastBuildDate>
-    <atom:link href="/tags/jhat/" rel="self" type="application/rss+xml" />
     
-      
-        
-          <item>
-            <title>Discovering Command-line Java Profiling Tools</title>
-            <link>http://tobybase.com/blog/2012/05/02/discovering-command-line-java-profiling-tools/</link>
-            <pubDate>Wed, 02 May 2012 21:41:00 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2012/05/02/discovering-command-line-java-profiling-tools/</guid>
-            <description>&lt;p&gt;At my current client I am responsible for administering a third-party Java appplication that unfortunately generates a lot of performance complaints. It&amp;rsquo;s a multi-tiered system with the middle-tier running on Oracle Appication Server 10.1.3. I am already familiar with GUI profiling tools like &lt;code&gt;jconsole&lt;/code&gt; and &lt;code&gt;jvisualvm&lt;/code&gt;, both of which are included with Oracle&amp;rsquo;s JDK, and I have played around with the profiling capabilities in NetBeans. All of these profiling tools are fairly similar to one another in look and functionality.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941369/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/687cc5e71ab082d921ea083c2a3389f33608bdb578a2505ba98647dca59edd1c.jpg&#34; alt=&#34;Profiling the JVM with jconsole&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/6990855922/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/062326cdf1e49a33f125692cdc43927df553db0aa59ae2e13a028e5e9119ddbd.jpg&#34; alt=&#34;Profiling the JVM with jvisualvm&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/6990855902/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/70254026909062fd761740bc71f569e1dfeffd3aeaa574ba1cfb794e3029ea62.jpg&#34; alt=&#34;Profiling the JVM with NetBeans&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Using any one of these tools, I can view the size and utilization of the heap, see the status of running threads, monitor CPU loads, pull garbage collection statistics, and generate a memory dump. All of these are adequate for monitoring application performance in real-time, but while working with the application vendor to diagnose problems I found it necessary to be able to report on application performance over longer spans of time, say days or even weeks. We were trying to show patterns of eroding performance, or possibly spot instances of very slow memory leaks in parts of the application that got used less frequently. In any event, it required a way to monitor all of these details without having to have my eyes on the screen the whole time.&lt;/p&gt;
-
-&lt;p&gt;My goal was to get all that data exposed by the aforementioned GUI tools into a database that I could report off of. A little research on the &lt;a href=&#34;http://www.ibm.com/developerworks/java/library/j-5things8/index.html&#34;&gt;internet&lt;/a&gt; (HT to Ted Neward) and some &lt;a href=&#34;http://docs.oracle.com/javase/6/docs/technotes/tools/share/jps.html&#34;&gt;digging&lt;/a&gt; &lt;a href=&#34;http://docs.oracle.com/javase/6/docs/technotes/tools/share/jmap.html&#34;&gt;around&lt;/a&gt; &lt;a href=&#34;http://docs.oracle.com/javase/6/docs/technotes/tools/share/jhat.html&#34;&gt;in&lt;/a&gt; &lt;a href=&#34;http://docs.oracle.com/javase/6/docs/technotes/tools/share/jstack.html&#34;&gt;man&lt;/a&gt; &lt;a href=&#34;http://docs.oracle.com/javase/6/docs/technotes/tools/share/jstat.html&#34;&gt;pages&lt;/a&gt; provided the solution.&lt;/p&gt;
-
-&lt;p&gt;Recent versions of the JDK come packaged with some nifty command line tools to assist with profiling your Java applications. They can all be found in the &lt;code&gt;/bin&lt;/code&gt; directory under the JDK base directory.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941341/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/9ca305047f95051bbdc678ea66f9e4923a830b21f3264ebc3b87e9bd385f5765.jpg&#34; alt=&#34;Commands bundled with the JDK&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;##jps&lt;/p&gt;
-
-&lt;p&gt;The &lt;code&gt;jps&lt;/code&gt; command is a lot like the &lt;code&gt;ps&lt;/code&gt; command in Unix/Linux, in that it lists running processes. &lt;code&gt;Jps&lt;/code&gt;, however, will only list discoverable Java processes. If a running Java process is not included in the list returned by &lt;code&gt;jps&lt;/code&gt;, you may still be able to profile it; it just doesn&amp;rsquo;t advertise itself as attachable.&lt;/p&gt;
-
-&lt;p&gt;Each Java process is identified by the &amp;ldquo;VMID&amp;rdquo; returned by &lt;code&gt;jps&lt;/code&gt;, usually corresponding to the process ID on the host system. It is this VMID which is required as an argument to all of the other tools we will discuss, so be sure to always use &lt;code&gt;jps&lt;/code&gt; to correctly identify your processes to the other tools.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941355/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/c3b76d4b16d988867798b352027c036e5bb4f1ebb07abfaf453bbb7094470ab4.jpg&#34; alt=&#34;Running jps&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;##jstack&lt;/p&gt;
-
-&lt;p&gt;Use &lt;code&gt;jstack&lt;/code&gt; to generate a thread dump for a running Java process. It gives you a nice snapshot of thread activity comparable to what you might get in one of the GUI tools mentioned above. You get the name of the thread, the current state, a stack trace, and with the &lt;code&gt;-l&lt;/code&gt; option you get additional information about locking conditions. If an actual deadlock is detected you get a detailed breakdown of which threads are holding the locks! For comprehending the overall state of threads in an application it can actually prove superior to some of its GUI counterparts, as it&amp;rsquo;s faster to scan the results; i.e. no need to click from thread to thread or drill down to view the details.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;Jstack&lt;/code&gt; can be used in conjunction with &lt;code&gt;jmap&lt;/code&gt; and &lt;code&gt;jhat&lt;/code&gt; to get a more comprehensive picture of application state at a critical point in time.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; If you have a 64-bit JDK, you&amp;rsquo;ll want to use the &lt;code&gt;-J-d64&lt;/code&gt; flag when running the command.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941351/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/23352a26f3e67df6c159d8ff4c130b2d47be1bc8e37d78bc8178e0aa65e04182.jpg&#34; alt=&#34;Running jstack&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;##jmap &amp;amp; jhat&lt;/p&gt;
-
-&lt;p&gt;These two tools work together to help you analyze the contents of the heap. Use &lt;code&gt;jmap&lt;/code&gt; to generate a heap dump, and &lt;code&gt;jhat&lt;/code&gt; to help analyze the dump file.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941291/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/ad70746c91dd43d7a093fa3e7c180ce863a605f0ccd511774c8c62b4203731b1.jpg&#34; alt=&#34;Running jmap and jhat&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;Jhat&lt;/code&gt; works by spawning an HTTP server that presents the contents of the heap as a web page, allowing you to drill down on a specific object to view its members and references. In order to get the most out of &lt;code&gt;jhat&lt;/code&gt;, however, it would be worth investigating OQL, the &lt;strong&gt;O&lt;/strong&gt;bject &lt;strong&gt;Q&lt;/strong&gt;uery &lt;strong&gt;L&lt;/strong&gt;anguage, as the web page generated by &lt;code&gt;jhat&lt;/code&gt; allows you to run OQL queries against the heap. If you know a little about your application class structure, this makes your heap analysis far more efficient. Thankfully, the &lt;code&gt;jhat&lt;/code&gt; web page provides you with a short primer.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/6990855834/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/036aef8b8bc95e25c21a1bfb219fcc19e8e084e6ee60643a57a3ff72f83b69ec.jpg&#34; alt=&#34;OQL help page&#34; /&gt;&lt;/a&gt;
-&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941267/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/c59f79354e9bb6223492707dd27ebffb018449445204453ba610396b89d74fdc.jpg&#34; alt=&#34;OQL primer&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;Jmap&lt;/code&gt; is good for more than just generating heap dumps, however. When used with the &lt;code&gt;-heap&lt;/code&gt; option it gives you a nicely formatted heap usage summary.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941255/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/d6c27680e007dae747ef2cac7218faf0f918d2cf68cb1023d7e0ece182369233.jpg&#34; alt=&#34;jmap with the -heap option&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Now I was getting closer to my goal. In fact, this was originally the output I parsed during my first attempt at statistics gathering. Unfortunately, what I found while running on an RHEL 4.7 box with JDK 1.6.0_30 was that &lt;code&gt;jmap&lt;/code&gt; would from time to time inexplicably refuse to attach to my Java process, leaving gaping holes in my report. I noticed &lt;a href=&#34;http://ubuntuforums.org/showthread.php?t=1886859&#34;&gt;similar&lt;/a&gt; &lt;a href=&#34;https://forums.oracle.com/forums/thread.jspa?threadID=1693766&#34;&gt;complaints&lt;/a&gt; &lt;a href=&#34;http://blog.thecodingmachine.com/fr/comment/reply/91&#34;&gt;online&lt;/a&gt;, so I figured there may be problems with it.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;# jmap -J-d64 -heap 11028
-Attaching to process ID 11028, please wait...
-Error attaching to process: sun.jvm.hotspot.debugger.DebuggerException: Can&#39;t attach to the process
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Once again, be sure to use the &lt;code&gt;-J-d64&lt;/code&gt; flag with &lt;code&gt;jmap&lt;/code&gt; if you&amp;rsquo;re running a 64-bit JVM.&lt;/p&gt;
-
-&lt;p&gt;##jstat&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;Jstat&lt;/code&gt; was what saved the day for me. &lt;code&gt;Jstat&lt;/code&gt; displays detailed heap usage, class loader, and garbage collection statistics for the JVM; basically everything I wanted to report on. &lt;code&gt;Jstat&lt;/code&gt; has numerous options that allow you to focus in on usage statistics for different parts of the JVM.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;-class&lt;/strong&gt;&lt;br /&gt;
-Statistics on the behavior of the class loader.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;-compiler&lt;/strong&gt;&lt;br /&gt;
-Statistics of the behavior of the HotSpot Just-in-Time compiler.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;-gc&lt;/strong&gt;&lt;br /&gt;
-Statistics of the behavior of the garbage collected heap.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;-gccapacity&lt;/strong&gt;&lt;br /&gt;
-Statistics of the capacities of the generations and their corresponding spaces.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;-gccause&lt;/strong&gt;&lt;br /&gt;
-Summary of garbage collection statistics (same as -gcutil), with the cause of the last and current (if applicable) garbage collection events.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;-gcnew&lt;/strong&gt;&lt;br /&gt;
-Statistics of the behavior of the new generation.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;-gcnewcapacity&lt;/strong&gt;&lt;br /&gt;
-Statistics of the sizes of the new generations and its corresponding spaces.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;-gcold&lt;/strong&gt;&lt;br /&gt;
-Statistics of the behavior of the old and permanent generations.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;-gcoldcapacity&lt;/strong&gt;&lt;br /&gt;
-Statistics of the sizes of the old generation.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;-gcpermcapacity&lt;/strong&gt;&lt;br /&gt;
-Statistics of the sizes of the permanent generation.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;-gcutil&lt;/strong&gt;&lt;br /&gt;
-Summary of garbage collection statistics.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;-printcompilation&lt;/strong&gt;&lt;br /&gt;
-HotSpot compilation method statistics.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Like the heap profiling features of the GUI tools mentioned earlier, the results of &lt;code&gt;jstat&lt;/code&gt; can be used to check for memory leaks or to better tune your JVM startup parameters. Like the &lt;code&gt;vmstat&lt;/code&gt; command, &lt;code&gt;jstat&lt;/code&gt; can be set to repeat at a specified interval, for an infinite or specific number of iterations. Since &lt;code&gt;jstat&lt;/code&gt; has so many options and output formats, I will examine it in more detail in a later blog post when I discuss how I used it to populate my application instrumentation table.&lt;/p&gt;
-
-&lt;p&gt;One thing that should be noted is that all of these tools are documented as being &amp;ldquo;unsupported&amp;rdquo; and experimental. Oracle make no guarantees that they will be included in future versions of the JDK or that their output or arguments will not change. Still, though, they&amp;rsquo;ve been around for a while and since they&amp;rsquo;re there, why not make use of them? Just don&amp;rsquo;t build any critical production processes off of them if you want total flexibility in taking future JDK upgrades.&lt;/p&gt;
-
-&lt;p&gt;In my next post I&amp;rsquo;ll examine how I used these tools to automate the process of instrumenting my third-party Java app. I&amp;rsquo;ll also provide you with a script I wrote that formats the output of &lt;code&gt;jstat&lt;/code&gt; to look something like the &lt;code&gt;-heap&lt;/code&gt; option of &lt;code&gt;jmap&lt;/code&gt;, providing an equivalent, but more reliable, solution.&lt;/p&gt;
-</description>
-          </item>
-        
-      
+	<atom:link href="http://localhost:1313/tags/jhat/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Discovering Command-line Java Profiling Tools</title>
+      <link>http://localhost:1313/blog/2012/05/02/discovering-command-line-java-profiling-tools/</link>
+      <pubDate>Wed, 02 May 2012 21:41:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/blog/2012/05/02/discovering-command-line-java-profiling-tools/</guid>
+      <description>At my current client I am responsible for administering a third-party Java appplication that unfortunately generates a lot of performance complaints. It&amp;rsquo;s a multi-tiered system with the middle-tier running on Oracle Appication Server 10.1.3. I am already familiar with GUI profiling tools like jconsole and jvisualvm, both of which are included with Oracle&amp;rsquo;s JDK, and I have played around with the profiling capabilities in NetBeans. All of these profiling tools are fairly similar to one another in look and functionality.</description>
+    </item>
     
   </channel>
 </rss>

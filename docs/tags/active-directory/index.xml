@@ -2,149 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Active Directory on Tobybase: A Tech Blog</title>
-    <link>http://tobybase.com/tags/active-directory/</link>
+    <link>http://localhost:1313/tags/active-directory/</link>
     <description>Recent content in Active Directory on Tobybase: A Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>2017 ~ Toby Marks</copyright>
+    <managingEditor>toby.marks@infolob.com (Toby Marks)</managingEditor>
+    <webMaster>toby.marks@infolob.com (Toby Marks)</webMaster>
     <lastBuildDate>Mon, 12 Nov 2012 17:32:00 +0000</lastBuildDate>
-    <atom:link href="/tags/active-directory/" rel="self" type="application/rss+xml" />
     
-      
-        
-          <item>
-            <title>How To Configure Oracle BI Publisher to Authenticate With Active Directory</title>
-            <link>http://tobybase.com/blog/2012/11/12/how-to-configure-oracle-bi-publisher-to-authenticate-with-active-directory/</link>
-            <pubDate>Mon, 12 Nov 2012 17:32:00 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2012/11/12/how-to-configure-oracle-bi-publisher-to-authenticate-with-active-directory/</guid>
-            <description>&lt;ul&gt;
-&lt;li&gt;Log in to BI Publisher as an administrator.&lt;/li&gt;
-&lt;li&gt;Click on the Admin tab.&lt;/li&gt;
-&lt;li&gt;Click on Security Configuration.&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;For Security Model, choose LDAP and enter the following parameters:&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Setting&lt;/th&gt;
-&lt;th&gt;Example Value&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;URL&lt;/td&gt;
-&lt;td&gt;ldap://ad.mycompany.com:389  &lt;cite style=&#34;color:red; font-size:smaller&#34;&gt;Your company&amp;rsquo;s LDAP server and port.&lt;/cite&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Administrator Username&lt;/td&gt;
-&lt;td&gt;CN=ADMIN,OU=Users,OU=Shared Services,DC=mycompany,DC=com  &lt;cite style=&#34;color:red; font-size:smaller&#34;&gt;The fully qualified DN of the account you use to sign in to LDAP.&lt;/cite&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Administrator Password&lt;/td&gt;
-&lt;td&gt;myxlplyx  &lt;cite style=&#34;color:red; font-size:smaller&#34;&gt;The password for the above account.&lt;/cite&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Distinguished Name for Users&lt;/td&gt;
-&lt;td&gt;DC=mycompany,DC=com  &lt;cite style=&#34;color:red; font-size:smaller&#34;&gt;The &amp;ldquo;root&amp;rdquo; level at which to search for users.&lt;/cite&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Distinguished Name for Groups&lt;/td&gt;
-&lt;td&gt;OU=Global Groups,DC=mycompany,DC=com  &lt;cite style=&#34;color:red; font-size:smaller&#34;&gt;The &amp;ldquo;root&amp;rdquo; level at which to search from groups.&lt;/cite&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Group Search Filter&lt;/td&gt;
-&lt;td&gt;(&amp;amp;(objectClass=group)(&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Group Attribute Name&lt;/td&gt;
-&lt;td&gt;cn&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Group Member Attribute Name&lt;/td&gt;
-&lt;td&gt;member&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Member Of Group Attribute Name&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Group Description Attribute Name&lt;/td&gt;
-&lt;td&gt;description&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;JNDI Context Factory Class&lt;/td&gt;
-&lt;td&gt;com.sun.jndi.ldap.LdapCtxFactory&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Group Retrieval Page Size&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;attribute used for RDN&lt;/td&gt;
-&lt;td&gt;sAMAccountName  &lt;cite style=&#34;color:red; font-size:smaller&#34;&gt;Allows users to log in to BI Publisher using their corporate AD account name.&lt;/cite&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Automatically clear LDAP cache&lt;/td&gt;
-&lt;td&gt;Checked&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Ldap Cache Interval&lt;/td&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Ldap Cache Interval Unit&lt;/td&gt;
-&lt;td&gt;Hour&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Default User Group Name&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Attribute Names for Data Query Bind Variables&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Bounce BI Publisher.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Try logging in with your corporate AD credentials. Remember, you need to be assigned to one of the following special groups in Active Directory if you want developer or admin privileges in BI Publisher:&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;XMLP_ADMIN&lt;br /&gt;
-XMLP_DEVELOPER&lt;br /&gt;
-XMLP_SCHEDULER&lt;br /&gt;
-XMLP_ANALYZER_EXCEL&lt;br /&gt;
-XMLP_ANALYZER_ONLINE&lt;br /&gt;
-XMLP_TEMPLATE_DESIGNER&lt;/p&gt;
-
-&lt;p&gt;You can read more about those roles and what they do &lt;a href=&#34;http://docs.oracle.com/cd/E10383_01/doc/bip.1013/b40017/T421739T475591.htm&#34;&gt;in the Oracle Documentation&lt;/a&gt;.&lt;/p&gt;
-</description>
-          </item>
-        
-      
+	<atom:link href="http://localhost:1313/tags/active-directory/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How To Configure Oracle BI Publisher to Authenticate With Active Directory</title>
+      <link>http://localhost:1313/blog/2012/11/12/how-to-configure-oracle-bi-publisher-to-authenticate-with-active-directory/</link>
+      <pubDate>Mon, 12 Nov 2012 17:32:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/blog/2012/11/12/how-to-configure-oracle-bi-publisher-to-authenticate-with-active-directory/</guid>
+      <description>Log in to BI Publisher as an administrator. Click on the Admin tab. Click on Security Configuration. For Security Model, choose LDAP and enter the following parameters:
+   Setting Example Value     URL ldap://ad.mycompany.com:389 Your company&amp;rsquo;s LDAP server and port.   Administrator Username CN=ADMIN,OU=Users,OU=Shared Services,DC=mycompany,DC=com The fully qualified DN of the account you use to sign in to LDAP.   Administrator Password myxlplyx The password for the above account.</description>
+    </item>
     
   </channel>
 </rss>

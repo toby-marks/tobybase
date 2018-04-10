@@ -2,1211 +2,196 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Oracle on Tobybase: A Tech Blog</title>
-    <link>http://tobybase.com/tags/oracle/</link>
+    <link>http://localhost:1313/tags/oracle/</link>
     <description>Recent content in Oracle on Tobybase: A Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>2017 ~ Toby Marks</copyright>
-    <lastBuildDate>Tue, 17 Jan 2017 22:58:59 -0600</lastBuildDate>
-    <atom:link href="/tags/oracle/" rel="self" type="application/rss+xml" />
+    <managingEditor>toby.marks@infolob.com (Toby Marks)</managingEditor>
+    <webMaster>toby.marks@infolob.com (Toby Marks)</webMaster>
+    <lastBuildDate>Tue, 10 Apr 2018 00:00:00 +0000</lastBuildDate>
     
-      
-        
-          <item>
-            <title>Announcing… tobybase.com</title>
-            <link>http://tobybase.com/blog/2017/01/17/announcing-tobybase.com/</link>
-            <pubDate>Tue, 17 Jan 2017 22:58:59 -0600</pubDate>
-            
-            <guid>http://tobybase.com/blog/2017/01/17/announcing-tobybase.com/</guid>
-            <description>&lt;p&gt;Welcome one and all to my new professional blog, &lt;a href=&#34;http://tobybase.com/&#34; title=&#34;Redirects to the website you are now on&#34;&gt;tobybase.com&lt;/a&gt;. My name is Toby Marks and I work as a &lt;a href=&#34;http://oracle.com&#34; title=&#34;Oracle&#39;s website&#34;&gt;Oracle&lt;/a&gt; Consultant at &lt;a href=&#34;http://infolob.com/&#34; title=&#34;My company&#39;s website&#34;&gt;Infolob Solutions&lt;/a&gt; in &lt;a href=&#34;https://en.wikipedia.org/wiki/Las_Colinas&#34; title=&#34;Some info about sunny Las Colinas&#34;&gt;Irving, Texas&lt;/a&gt;. My &lt;a href=&#34;http://tjmoracle.tumblr.com/&#34; title=&#34;My old blog&#34;&gt;old blog&lt;/a&gt; is still up on &lt;a href=&#34;http://tumblr.com/&#34; title=&#34;Go to Tumblr&#34;&gt;Tumblr&lt;/a&gt;, and there are a &lt;a href=&#34;https://tmblr.co/Z9fAmvZapPzC&#34; title=&#34;Create PDF Reports in Oracle Apex&#34;&gt;few&lt;/a&gt; &lt;a href=&#34;https://tmblr.co/Z9fAmvXEB6iL&#34; title=&#34;Query an XML File Like an External Table&#34;&gt;items&lt;/a&gt; &lt;a href=&#34;https://tmblr.co/Z9fAmvOFEN-N&#34; title=&#34;OS X Software for Oracle Developers&#34;&gt;there&lt;/a&gt; that folks still find useful. Most of the content is a bit dated, though, as I&amp;rsquo;ve been out of the blogging game for a while.&lt;/p&gt;
-
-&lt;p&gt;This is my attempt to turn that around.&lt;/p&gt;
-
-&lt;p&gt;What I needed was a breath of technological fresh air. Something to excite me about blogging again. So as a personal challenge, and in the spirit of adopting the latest and greatest platforms, I have decided to use &lt;a href=&#34;https://gohugo.io&#34; title=&#34;Hugo makes blogging fun again&#34;&gt;Hugo&lt;/a&gt; for static web page generation. I wanted to provide a site with the fastest possible page load times by maintaining maximum control over coding and site customization. I also love the immediate feedback Hugo gives you while you&amp;rsquo;re coding a page. No more precious seconds lost on Wordpress or Blogger! The site will be hosted on my &lt;a href=&#34;https://github.com/toby-marks&#34; title=&#34;My Github repository&#34;&gt;Github&lt;/a&gt;, which will provide me with version control and an easy method for synchronization with the web server.&lt;/p&gt;
-
-&lt;p&gt;I hope you enjoy the new site. I look forward to adding some interesting content over the coming weeks.&lt;/p&gt;
-</description>
-          </item>
-        
-      
+	<atom:link href="http://localhost:1313/tags/oracle/index.xml" rel="self" type="application/rss+xml" />
     
-      
-        
-          <item>
-            <title>How to Fix SQL Developer on a Retina Display Mac(book)</title>
-            <link>http://tobybase.com/blog/2013/07/19/how-to-fix-sql-developer-on-a-retina-display-macbook/</link>
-            <pubDate>Fri, 19 Jul 2013 22:32:00 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2013/07/19/how-to-fix-sql-developer-on-a-retina-display-macbook/</guid>
-            <description>&lt;p&gt;I just purchased a new Macbook Pro 13-inch with Retina Display and was horrified to see how fuzzy SQL Developer looked on the high-res screen. Thanks to Thunderforge on the &lt;a href=&#34;http://stackoverflow.com/questions/15181079/apple-retina-display-support-in-java-jdk-1-7-for-awt-swing&#34;&gt;Stack Overflow forums&lt;/a&gt; for this tip:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Java 7u40 Early Access now supports HiDPI (Retina) displays, as
-shown by this &lt;a href=&#34;http://download.java.net/jdk7u40/changes/jdk7u40-b28.html?q=download/jdk7u40/changes/jdk7u40-b28.html&#34;&gt;changelog&lt;/a&gt;. So retina support is now available on Java 6, Java 7u40 or higher, and Java 8.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;I am currently running the &lt;a href=&#34;http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/sqldev-download-v4-1925679.html&#34;&gt;Early Adopter release of SQL Developer 4.0&lt;/a&gt; which requires JDK 1.7. I&amp;rsquo;m not sure what the state of Java 8 is on the Mac, so I opted to upgrade my JDK from 1.7.0_25 to 1.7.0_40. After that I had nice, sharp lines back in SQL Developer and all my other Java apps.&lt;/p&gt;
-
-&lt;p&gt;Thanks to Oracle&amp;rsquo;s Java team for addressing this!&lt;/p&gt;
-</description>
-          </item>
-        
-      
     
-      
-        
-          <item>
-            <title>How To Reset Page Numbering Between Document Sections in BI Publisher&#39;s Template Builder for Word</title>
-            <link>http://tobybase.com/blog/2013/06/14/how-to-reset-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/</link>
-            <pubDate>Fri, 14 Jun 2013 21:47:00 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2013/06/14/how-to-reset-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/</guid>
-            <description>&lt;p&gt;Under normal circumstances, it is fairly easy in Microsoft Word to &lt;a href=&#34;http://www.youtube.com/watch?v=E1WtKR6FDM4&#34;&gt;reset page numbering&lt;/a&gt; when starting a new section of your document. However, such a simple thing can be non-trivial when dealing with the BI Publisher Template Builder plugin for Microsoft Office (&lt;a href=&#34;http://www.oracle.com/technetwork/middleware/bi-publisher/downloads/index.html&#34;&gt;available from Oracle&lt;/a&gt; — see BI Publisher Desktop).&lt;/p&gt;
+    <item>
+      <title>Access Denied When Adding a Block Volume to a Windows VM on Oracle Cloud Infrastructure</title>
+      <link>http://localhost:1313/blog/2018/04/10/access-denied-when-adding-a-block-volume-to-a-windows-vm-on-oracle-cloud-infrastructure/</link>
+      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/blog/2018/04/10/access-denied-when-adding-a-block-volume-to-a-windows-vm-on-oracle-cloud-infrastructure/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2018-04-10-oci-add-block-volume-on-windows/access-denied.jpg&#34; width=&#34;800px&#34;&gt;&lt;/p&gt;
 
-&lt;p&gt;In short, doing this the normal way did not work for me, and in researching the issue I ran across a &lt;a href=&#34;http://stackoverflow.com/questions/9603481/rtf-number-of-pages-page-x-of-y&#34;&gt;number&lt;/a&gt; &lt;a href=&#34;https://forums.oracle.com/thread/2493003&#34;&gt;of&lt;/a&gt; &lt;a href=&#34;https://forums.oracle.com/thread/496869&#34;&gt;folks&lt;/a&gt; who were having the same problem. Page numbering was simply not being reset between sections, or worse, did not take into account a fluid document size based upon available data.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2013-06-14-resetting-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/9f704cdbd7a5ec85bff722e3469edae0993faa219b4e42459782b94f692aa53e.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;One &lt;a href=&#34;https://forums.oracle.com/thread/2225641&#34;&gt;suggestion I read&lt;/a&gt; said to wrap the page number cells in a BI Publisher repeating group using for-each@section, like so:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;&amp;lt;?for-each@section:ID?&amp;gt; x/y &amp;lt;?end for-each?&amp;gt;&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;But this also didn&amp;rsquo;t work for me. Finally I had to edit the RTF file directly.&lt;/p&gt;
-
-&lt;p&gt;The &lt;a href=&#34;http://www.biblioscape.com/rtf15_spec.htm&#34;&gt;RTF specification&lt;/a&gt; was of some help to me in doing this, as well as &lt;a href=&#34;http://msdn.microsoft.com/en-us/library/office/aa140283(v=office.10).aspx#rtfspec_secformatprop&#34;&gt;this explanatory page from Microsoft&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;RTF files can be a little confusing, but most of the &amp;ldquo;junk&amp;rdquo; in the files is just special codes for formatting the text. I was able to find my way around easily enough by searching for labels or keywords from the document. By searching for the first few words from the second section of the document (in this case, &amp;ldquo;Sender&amp;rsquo;s Receipt&amp;rdquo;), I was able to spot where the section break should go.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2013-06-14-resetting-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/0d902604df4939682bb7821c4044affb3b03f809274551b8172827bc846d7b2d.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Checking the RTF spec, I could see that the &lt;code&gt;\page&lt;/code&gt; directive shown above was the page break between two sections of my document where I wanted to reset the page numbering. To create the section break, I inserted the following RTF directives at that point:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;\sect \sectd \pgnstarts1\pgnrestart&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2013-06-14-resetting-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/466447c609e7fa65f188357e7531def7cb8f1443944e602f62e3eff984f1388d.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Since the default behavior of the section break is to start on a new page, I found I had to remove the &lt;code&gt;\page&lt;/code&gt; directive to avoid an extra page being inserted between the document sections.&lt;/p&gt;
-
-&lt;p&gt;Interestingly, resetting the page numbering also works when calculating total number of pages, whereby the total is from the section, not the entire document, even though the NumPages field is used instead of SectionPages! Go figure, but it worked for me.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2013-06-14-resetting-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/1efc8813e70f4ee7bda4647b6fd38f4dce646c46b41e20fb482a3443e5bbb17a.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-</description>
-          </item>
-        
-      
+&lt;p&gt;If you are getting the above error when trying to add a block volume to a Windows VM in Oracle Cloud Infrastructure, the solution is quite simple.
+&lt;/p&gt;</description>
+    </item>
     
-      
-        
-          <item>
-            <title>Button Hotkeys in SQL Developer on OS X</title>
-            <link>http://tobybase.com/blog/2013/01/09/button-hotkeys-in-sql-developer-on-os-x/</link>
-            <pubDate>Wed, 09 Jan 2013 19:09:45 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2013/01/09/button-hotkeys-in-sql-developer-on-os-x/</guid>
-            <description>&lt;p&gt;In Windows, most applications provide menu and button accelerator keys that allow you to control the application without having to use a mouse. Java Swing apps like SQL Developer allow you to do the same, ostensibly in a cross-platform compatible manner.&lt;/p&gt;
-
-&lt;p&gt;One place I use this frequently is the Enter Binds dialog window that pops up when running a query using bind variables.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2013-01-09-button-hotkeys-in-sql-developer-on-os-x/f953827dc3e74e57df43fd0e48ff22b40ce119efaa74ce3712fd989522b02a6f.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;In Java 6 on OS X, the hotkey for pressing the Help and Apply buttons was OPTION-H and OPTION-A, respectively.&lt;/p&gt;
-
-&lt;p&gt;I initially thought this capability had been broken in Java 7 on OS X, but I discovered today that it has been merely changed to CONTROL-OPTION-H and CONTROL-OPTION-A.&lt;/p&gt;
-
-&lt;p&gt;Does anyone know if this is a configurable property of the application or Java virtual machine? If possible, I&amp;rsquo;d like to set it back to the simpler 1.6 way.&lt;/p&gt;
-</description>
-          </item>
-        
-      
+    <item>
+      <title>Announcing… tobybase.com</title>
+      <link>http://localhost:1313/blog/2017/01/17/announcing-tobybase.com/</link>
+      <pubDate>Tue, 17 Jan 2017 22:58:59 -0600</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/blog/2017/01/17/announcing-tobybase.com/</guid>
+      <description>Welcome one and all to my new professional blog, tobybase.com. My name is Toby Marks and I work as a Oracle Consultant at Infolob Solutions in Irving, Texas. My old blog is still up on Tumblr, and there are a few items there that folks still find useful. Most of the content is a bit dated, though, as I&amp;rsquo;ve been out of the blogging game for a while.
+This is my attempt to turn that around.</description>
+    </item>
     
-      
-        
-          <item>
-            <title>Generate PDF Reports for Free in Oracle Apex Using PL-JRXML2PDF and iReport Designer</title>
-            <link>http://tobybase.com/blog/2012/12/18/generate-pdf-reports-for-free-in-oracle-apex-using-pl-jrxml2pdf-and-ireport-designer/</link>
-            <pubDate>Tue, 18 Dec 2012 00:00:00 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2012/12/18/generate-pdf-reports-for-free-in-oracle-apex-using-pl-jrxml2pdf-and-ireport-designer/</guid>
-            <description>
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//player.vimeo.com/video/55818132&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
- &lt;/div&gt;
-
-
-&lt;p&gt;Using Jaspersoft&amp;rsquo;s free iReport Designer tool and the open source PL-JRXML2PDF project, you can generate PDF reports from Oracle Apex for free, without having to install the JasperReports and JasperReports Server components. Watch my video tutorial to find out how.&lt;/p&gt;
-</description>
-          </item>
-        
-      
+    <item>
+      <title>How to Fix SQL Developer on a Retina Display Mac(book)</title>
+      <link>http://localhost:1313/blog/2013/07/19/how-to-fix-sql-developer-on-a-retina-display-macbook/</link>
+      <pubDate>Fri, 19 Jul 2013 22:32:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/blog/2013/07/19/how-to-fix-sql-developer-on-a-retina-display-macbook/</guid>
+      <description>I just purchased a new Macbook Pro 13-inch with Retina Display and was horrified to see how fuzzy SQL Developer looked on the high-res screen. Thanks to Thunderforge on the Stack Overflow forums for this tip:
+ Java 7u40 Early Access now supports HiDPI (Retina) displays, as shown by this changelog. So retina support is now available on Java 6, Java 7u40 or higher, and Java 8.
+ I am currently running the Early Adopter release of SQL Developer 4.</description>
+    </item>
     
-      
-        
-          <item>
-            <title>How To Use SQL to Query an XML Document Using Oracle External Tables</title>
-            <link>http://tobybase.com/blog/2012/11/14/how-to-use-sql-to-query-an-xml-document-using-oracle-external-tables/</link>
-            <pubDate>Wed, 14 Nov 2012 00:00:00 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2012/11/14/how-to-use-sql-to-query-an-xml-document-using-oracle-external-tables/</guid>
-            <description>&lt;p&gt;Oracle&amp;rsquo;s &lt;a href=&#34;http://docs.oracle.com/cd/B28359_01/server.111/b28319/et_concepts.htm&#34;&gt;external table feature&lt;/a&gt; allows you to treat structured files on the database server as tables for query and DML purposes. To use an example from the linked documentation, a tab-delimited file like this:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;56   november, 15, 1980  baker             mary       alice     09/01/2004
-87   december, 20, 1970  roper             lisa       marie     01/01/1999
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&amp;hellip;could be queried like this:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-SQL&#34; data-lang=&#34;SQL&#34;&gt;&lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;SELECT&lt;/span&gt; employee_number,
-       employee_first_name,
-       substr(employee_middle_name, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1&lt;/span&gt;),
-       employee_last_name,
-       employee_hire_date,
-       to_date(employee_dob,&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;month, dd, yyyy&amp;#39;&lt;/span&gt;)
-  &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FROM&lt;/span&gt; employees;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;After defining the external table like this:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;TABLE&lt;/span&gt; employees
-           (employee_number      &lt;span style=&#34;color:#038&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;5&lt;/span&gt;),
-            employee_dob         &lt;span style=&#34;color:#038&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;20&lt;/span&gt;),
-            employee_last_name   &lt;span style=&#34;color:#038&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;20&lt;/span&gt;),
-            employee_first_name  &lt;span style=&#34;color:#038&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;15&lt;/span&gt;),
-            employee_middle_name &lt;span style=&#34;color:#038&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;15&lt;/span&gt;),
-            employee_hire_date   &lt;span style=&#34;color:#038&#34;&gt;DATE&lt;/span&gt;)
-         ORGANIZATION &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;EXTERNAL&lt;/span&gt;
-           (&lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;TYPE&lt;/span&gt; ORACLE_LOADER
-            &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;DEFAULT&lt;/span&gt; DIRECTORY def_dir1
-            &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;ACCESS&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;PARAMETERS&lt;/span&gt;
-              (RECORDS DELIMITED &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;BY&lt;/span&gt; NEWLINE
-               FIELDS (employee_number      &lt;span style=&#34;color:#038&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2&lt;/span&gt;),
-                       employee_dob         &lt;span style=&#34;color:#038&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;20&lt;/span&gt;),
-                       employee_last_name   &lt;span style=&#34;color:#038&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;18&lt;/span&gt;),
-                       employee_first_name  &lt;span style=&#34;color:#038&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;11&lt;/span&gt;),
-                       employee_middle_name &lt;span style=&#34;color:#038&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;11&lt;/span&gt;),
-                       employee_hire_date   &lt;span style=&#34;color:#038&#34;&gt;CHAR&lt;/span&gt;(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;10&lt;/span&gt;) date_format &lt;span style=&#34;color:#038&#34;&gt;DATE&lt;/span&gt; mask &lt;span style=&#34;color:#a60;background-color:#fff0f0&#34;&gt;&amp;#34;mm/dd/yyyy&amp;#34;&lt;/span&gt;
-                      )
-              )
-            &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;LOCATION&lt;/span&gt; (&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;info.dat&amp;#39;&lt;/span&gt;)
-           );&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Assuming of course that the file&amp;rsquo;s name is &lt;code&gt;info.dat&lt;/code&gt;, and its path on the filesystem has already been created as a directory object &lt;code&gt;DEF_DIR1&lt;/code&gt; in the database.&lt;/p&gt;
-
-&lt;p&gt;A similar technique exists for querying simple XML files, taking advantage of &lt;a href=&#34;http://docs.oracle.com/cd/E11882_01/appdev.112/e23094/toc.htm&#34;&gt;Oracle&amp;rsquo;s XML DB&lt;/a&gt; features. _HT to &lt;a href=&#34;https://forums.oracle.com/forums/profile.jspa?userID=695787&#34;&gt;odie_63&lt;/a&gt; on the XML DB forums for introducing me to this method._&lt;/p&gt;
-
-&lt;p&gt;Suppose you have a simple XML file (elements, but no attributes; no complex column types - it could work for the preceding, but I&amp;rsquo;m not sure) like so.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;    &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;Employees&amp;gt;&lt;/span&gt;
-        &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;Employee&amp;gt;&lt;/span&gt;
-            &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;id&amp;gt;&lt;/span&gt;1234&lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/id&amp;gt;&lt;/span&gt;
-            &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;lastname&amp;gt;&lt;/span&gt;Jetson&lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/lastname&amp;gt;&lt;/span&gt;
-            &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;firstname&amp;gt;&lt;/span&gt;George&lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/firstname&amp;gt;&lt;/span&gt;
-            &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;department&amp;gt;&lt;/span&gt;10&lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/department&amp;gt;&lt;/span&gt;
-            &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;salary&amp;gt;&lt;/span&gt;50000.00&lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/salary&amp;gt;&lt;/span&gt;
-        &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/Employee&amp;gt;&lt;/span&gt;
-        &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;Employee&amp;gt;&lt;/span&gt;
-            &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;id&amp;gt;&lt;/span&gt;1235&lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/id&amp;gt;&lt;/span&gt;
-            &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;lastname&amp;gt;&lt;/span&gt;Crackorn&lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/lastname&amp;gt;&lt;/span&gt;
-            &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;firstname&amp;gt;&lt;/span&gt;James&lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/firstname&amp;gt;&lt;/span&gt;
-            &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;department&amp;gt;&lt;/span&gt;10&lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/department&amp;gt;&lt;/span&gt;
-            &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;salary&amp;gt;&lt;/span&gt;40000.00&lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/salary&amp;gt;&lt;/span&gt;
-        &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/Employee&amp;gt;&lt;/span&gt;
-        &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;Employee&amp;gt;&lt;/span&gt;
-            &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;id&amp;gt;&lt;/span&gt;1236&lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/id&amp;gt;&lt;/span&gt;
-            &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;lastname&amp;gt;&lt;/span&gt;Hoffman&lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/lastname&amp;gt;&lt;/span&gt;
-            &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;firstname&amp;gt;&lt;/span&gt;Burl&lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/firstname&amp;gt;&lt;/span&gt;
-            &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;department&amp;gt;&lt;/span&gt;20&lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/department&amp;gt;&lt;/span&gt;
-            &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;salary&amp;gt;&lt;/span&gt;75000.00&lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/salary&amp;gt;&lt;/span&gt;
-        &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/Employee&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#b06;font-weight:bold&#34;&gt;&amp;lt;/Employees&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Place it on the database server in a readable directory, e.g. &lt;code&gt;/home/oracle&lt;/code&gt;. Name it &lt;code&gt;employees.xml&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Now execute the following in SQL*Plus:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;SQL&lt;/span&gt;&amp;gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;OR&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;REPLACE&lt;/span&gt; DIRECTORY XML_DIR &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;AS&lt;/span&gt; &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;/home/oracle&amp;#39;&lt;/span&gt;;
-
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;SQL&lt;/span&gt;&amp;gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;OR&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;REPLACE&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;VIEW&lt;/span&gt; employees_v &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;AS&lt;/span&gt;
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;SELECT&lt;/span&gt; *
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FROM&lt;/span&gt; XMLTable(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;/Employees/Employee&amp;#39;&lt;/span&gt;
-            passing xmltype(
-                     bfilename(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;XML_DIR&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;employees.xml&amp;#39;&lt;/span&gt;)
-                    , nls_charset_id(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;AL32UTF8&amp;#39;&lt;/span&gt;)
-                    )
-            columns id           &lt;span style=&#34;color:#038&#34;&gt;number&lt;/span&gt; path &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;id&amp;#39;&lt;/span&gt;
-                  , lastname     varchar2(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;30&lt;/span&gt;) path &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;lastname&amp;#39;&lt;/span&gt;
-                  , firstname    varchar2(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;30&lt;/span&gt;) path &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;firstname&amp;#39;&lt;/span&gt;
-                  , department   &lt;span style=&#34;color:#038&#34;&gt;number&lt;/span&gt; path &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;department&amp;#39;&lt;/span&gt;
-                  , salary       &lt;span style=&#34;color:#038&#34;&gt;number&lt;/span&gt; path &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;salary&amp;#39;&lt;/span&gt;
-           );
-
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;SQL&lt;/span&gt;&amp;gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;SELECT&lt;/span&gt; * &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FROM&lt;/span&gt; employees_v;
-    ID   LASTNAME FIRSTNAME DEPARTMENT SALARY
-    &lt;span style=&#34;color:#888&#34;&gt;---- -------- --------- ---------- ------
-&lt;/span&gt;&lt;span style=&#34;color:#888&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1234&lt;/span&gt; Jetson   George    &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;10&lt;/span&gt;         &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;50000&lt;/span&gt;    
-    &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1235&lt;/span&gt; Crackorn James     &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;10&lt;/span&gt;         &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;40000&lt;/span&gt;
-    &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1236&lt;/span&gt; Hoffman  Burl      &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;20&lt;/span&gt;         &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;75000&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;You can modify construction of the view to read from multiple files by using a simple &lt;code&gt;UNION&lt;/code&gt; operator, or you can make the source filename dynamic so you can switch datasets at runtime. Here&amp;rsquo;s how you might do something like that:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;SQL&lt;/span&gt;&amp;gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;OR&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;REPLACE&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;VIEW&lt;/span&gt; employees_v &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;AS&lt;/span&gt;
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;SELECT&lt;/span&gt; *
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FROM&lt;/span&gt; XMLTable(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;/Employees/Employee&amp;#39;&lt;/span&gt;
-            passing xmltype(
-                     bfilename(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;XML_DIR&amp;#39;&lt;/span&gt;, userenv(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;CLIENT_INFO&amp;#39;&lt;/span&gt;))
-                    , nls_charset_id(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;AL32UTF8&amp;#39;&lt;/span&gt;)
-                    )
-            columns id           &lt;span style=&#34;color:#038&#34;&gt;number&lt;/span&gt; path &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;id&amp;#39;&lt;/span&gt;
-                  , lastname     varchar2(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;30&lt;/span&gt;) path &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;lastname&amp;#39;&lt;/span&gt;
-                  , firstname    varchar2(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;30&lt;/span&gt;) path &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;firstname&amp;#39;&lt;/span&gt;
-                  , department   &lt;span style=&#34;color:#038&#34;&gt;number&lt;/span&gt; path &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;department&amp;#39;&lt;/span&gt;
-                  , salary       &lt;span style=&#34;color:#038&#34;&gt;number&lt;/span&gt; path &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;salary&amp;#39;&lt;/span&gt;
-           );&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Then at runtime, specify the file you want to use like this:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-plpgsql&#34; data-lang=&#34;plpgsql&#34;&gt;    SQL&amp;gt; exec dbms_application_info&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;.&lt;/span&gt;set_client_info(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;employees_01.xml&amp;#39;&lt;/span&gt;);
-
-    SQL&amp;gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;SELECT&lt;/span&gt; * &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FROM&lt;/span&gt; employees_v;
-    ID   LASTNAME FIRSTNAME DEPARTMENT SALARY
-    &lt;span style=&#34;color:#888&#34;&gt;---- -------- --------- ---------- ------
-&lt;/span&gt;&lt;span style=&#34;color:#888&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1234&lt;/span&gt; Jetson   George    &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;10&lt;/span&gt;         &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;50000&lt;/span&gt;    
-    &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1235&lt;/span&gt; Crackorn James     &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;10&lt;/span&gt;         &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;40000&lt;/span&gt;
-    &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1236&lt;/span&gt; Hoffman  Burl      &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;20&lt;/span&gt;         &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;75000&lt;/span&gt;
-
-    SQL&amp;gt; exec dbms_application_info&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;.&lt;/span&gt;set_client_info(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;employees_02.xml&amp;#39;&lt;/span&gt;);
-
-    SQL&amp;gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;SELECT&lt;/span&gt; * &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FROM&lt;/span&gt; employees_v;
-    ID   LASTNAME FIRSTNAME DEPARTMENT SALARY
-    &lt;span style=&#34;color:#888&#34;&gt;---- -------- --------- ---------- ------
-&lt;/span&gt;&lt;span style=&#34;color:#888&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1234&lt;/span&gt; Ringwald Malory    &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;30&lt;/span&gt;         &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;63000&lt;/span&gt;    
-    &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1235&lt;/span&gt; Dulles   Bob       &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;10&lt;/span&gt;         &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;100000&lt;/span&gt;
-    &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1236&lt;/span&gt; Stein    Frank     &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;50&lt;/span&gt;         &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;55000&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Why might this be useful? Suppose you have an arbitrary number of identically structured XML files in a directory that you want to import into a relational database table. Using a shell script you can, for each file in the directory,&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;log in to SQL*Plus&lt;/li&gt;
-&lt;li&gt;set the &lt;code&gt;CLIENT_INFO&lt;/code&gt; variable to the name of the current file&lt;/li&gt;
-&lt;li&gt;perform a simple insert into your table reading all records from the view&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;You might even create a cron job to monitor a particular directory for new XML files, processing them into tables and then deleting or archiving the files when done.&lt;/p&gt;
-</description>
-          </item>
-        
-      
+    <item>
+      <title>How To Reset Page Numbering Between Document Sections in BI Publisher&#39;s Template Builder for Word</title>
+      <link>http://localhost:1313/blog/2013/06/14/how-to-reset-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/</link>
+      <pubDate>Fri, 14 Jun 2013 21:47:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/blog/2013/06/14/how-to-reset-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/</guid>
+      <description>Under normal circumstances, it is fairly easy in Microsoft Word to reset page numbering when starting a new section of your document. However, such a simple thing can be non-trivial when dealing with the BI Publisher Template Builder plugin for Microsoft Office (available from Oracle — see BI Publisher Desktop).
+In short, doing this the normal way did not work for me, and in researching the issue I ran across a number of folks who were having the same problem.</description>
+    </item>
     
-      
-        
-          <item>
-            <title>How To Restrict Access to BI Publisher Reports</title>
-            <link>http://tobybase.com/blog/2012/11/12/how-to-restrict-access-to-bi-publisher-reports/</link>
-            <pubDate>Mon, 12 Nov 2012 18:12:00 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2012/11/12/how-to-restrict-access-to-bi-publisher-reports/</guid>
-            <description>&lt;p&gt;In &lt;a href=&#34;http://tobybase.com/blog/2012/11/12/how-to-configure-oracle-bi-publisher-to-authenticate-with-active-directory/&#34;&gt;my last post&lt;/a&gt;  I described how to configure BI Publisher to authenticate against an LDAP server, typically a corporate Active Directory server. Aside from authentication, you can also use LDAP group membership to determine who has access to a given report. Here&amp;rsquo;s how you do it.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Create a group in your LDAP/AD directory and assign your target users to that group.&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Revisit your LDAP authentication settings. These are located on the Admin Tab, on the Security Configuration page. In particular, look at the value for Group Search Filter.&lt;/p&gt;
-
-&lt;p&gt;e.g.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;(&amp;amp;(objectClass=group)(|(CN=XMLP\*)(CN=DEPT_GROUP_\*)))
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;In case you don&amp;rsquo;t recognize it, this is an LDAP query string. This query string determines which groups BI Publisher &amp;ldquo;sees&amp;rdquo;, or recognizes, when setting up report access. The groups returned by this query will determine the set from which you can choose when configuring which groups see which reports.&lt;/p&gt;
-
-&lt;p&gt;Here is a deconstruction of the query string:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;(&amp;amp;&lt;/strong&gt; &lt;em&gt;Logical AND over the following conditions&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;(objectClass=group)&lt;/strong&gt; &lt;em&gt;Return LDAP groups, as opposed to users or computers, etc.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;(|&lt;/strong&gt; &lt;em&gt;Logical OR over the following conditions&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;(CN=XMLP*)&lt;/strong&gt; &lt;em&gt;Return groups whose name starts with &amp;ldquo;XMLP&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;(CN=DEPT_GROUP_*)&lt;/strong&gt; &lt;em&gt;Return groups whose name starts with &amp;ldquo;DEPT_GROUP_&amp;ldquo;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;A quick primer on LDAP query syntax &lt;a href=&#34;http://wiki.pentaho.com/display/ServerDoc2x/LDAP+Search+Filter+Syntax&#34;&gt;can be found here.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Modify this query string to include the group you just created.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Bounce BI Publisher.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Log in to BI Publisher as an administrator. Go to the Admin tab, and then to the Roles and Permissions page.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Click on the role/group you just created, and using the shuttle control on the next page, select which reports your new group should have access to. If necessary, you may need to revoke permissions on your report from other groups, or move your report to the top level of the report folder hierarchy in order to segregate access appropriately.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-          </item>
-        
-      
+    <item>
+      <title>Button Hotkeys in SQL Developer on OS X</title>
+      <link>http://localhost:1313/blog/2013/01/09/button-hotkeys-in-sql-developer-on-os-x/</link>
+      <pubDate>Wed, 09 Jan 2013 19:09:45 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/blog/2013/01/09/button-hotkeys-in-sql-developer-on-os-x/</guid>
+      <description>In Windows, most applications provide menu and button accelerator keys that allow you to control the application without having to use a mouse. Java Swing apps like SQL Developer allow you to do the same, ostensibly in a cross-platform compatible manner.
+One place I use this frequently is the Enter Binds dialog window that pops up when running a query using bind variables.
+In Java 6 on OS X, the hotkey for pressing the Help and Apply buttons was OPTION-H and OPTION-A, respectively.</description>
+    </item>
     
-      
-        
-          <item>
-            <title>How To Configure Oracle BI Publisher to Authenticate With Active Directory</title>
-            <link>http://tobybase.com/blog/2012/11/12/how-to-configure-oracle-bi-publisher-to-authenticate-with-active-directory/</link>
-            <pubDate>Mon, 12 Nov 2012 17:32:00 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2012/11/12/how-to-configure-oracle-bi-publisher-to-authenticate-with-active-directory/</guid>
-            <description>&lt;ul&gt;
-&lt;li&gt;Log in to BI Publisher as an administrator.&lt;/li&gt;
-&lt;li&gt;Click on the Admin tab.&lt;/li&gt;
-&lt;li&gt;Click on Security Configuration.&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;For Security Model, choose LDAP and enter the following parameters:&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Setting&lt;/th&gt;
-&lt;th&gt;Example Value&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;URL&lt;/td&gt;
-&lt;td&gt;ldap://ad.mycompany.com:389  &lt;cite style=&#34;color:red; font-size:smaller&#34;&gt;Your company&amp;rsquo;s LDAP server and port.&lt;/cite&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Administrator Username&lt;/td&gt;
-&lt;td&gt;CN=ADMIN,OU=Users,OU=Shared Services,DC=mycompany,DC=com  &lt;cite style=&#34;color:red; font-size:smaller&#34;&gt;The fully qualified DN of the account you use to sign in to LDAP.&lt;/cite&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Administrator Password&lt;/td&gt;
-&lt;td&gt;myxlplyx  &lt;cite style=&#34;color:red; font-size:smaller&#34;&gt;The password for the above account.&lt;/cite&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Distinguished Name for Users&lt;/td&gt;
-&lt;td&gt;DC=mycompany,DC=com  &lt;cite style=&#34;color:red; font-size:smaller&#34;&gt;The &amp;ldquo;root&amp;rdquo; level at which to search for users.&lt;/cite&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Distinguished Name for Groups&lt;/td&gt;
-&lt;td&gt;OU=Global Groups,DC=mycompany,DC=com  &lt;cite style=&#34;color:red; font-size:smaller&#34;&gt;The &amp;ldquo;root&amp;rdquo; level at which to search from groups.&lt;/cite&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Group Search Filter&lt;/td&gt;
-&lt;td&gt;(&amp;amp;(objectClass=group)(&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Group Attribute Name&lt;/td&gt;
-&lt;td&gt;cn&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Group Member Attribute Name&lt;/td&gt;
-&lt;td&gt;member&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Member Of Group Attribute Name&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Group Description Attribute Name&lt;/td&gt;
-&lt;td&gt;description&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;JNDI Context Factory Class&lt;/td&gt;
-&lt;td&gt;com.sun.jndi.ldap.LdapCtxFactory&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Group Retrieval Page Size&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;attribute used for RDN&lt;/td&gt;
-&lt;td&gt;sAMAccountName  &lt;cite style=&#34;color:red; font-size:smaller&#34;&gt;Allows users to log in to BI Publisher using their corporate AD account name.&lt;/cite&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Automatically clear LDAP cache&lt;/td&gt;
-&lt;td&gt;Checked&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Ldap Cache Interval&lt;/td&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Ldap Cache Interval Unit&lt;/td&gt;
-&lt;td&gt;Hour&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Default User Group Name&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Attribute Names for Data Query Bind Variables&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Bounce BI Publisher.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Try logging in with your corporate AD credentials. Remember, you need to be assigned to one of the following special groups in Active Directory if you want developer or admin privileges in BI Publisher:&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;XMLP_ADMIN&lt;br /&gt;
-XMLP_DEVELOPER&lt;br /&gt;
-XMLP_SCHEDULER&lt;br /&gt;
-XMLP_ANALYZER_EXCEL&lt;br /&gt;
-XMLP_ANALYZER_ONLINE&lt;br /&gt;
-XMLP_TEMPLATE_DESIGNER&lt;/p&gt;
-
-&lt;p&gt;You can read more about those roles and what they do &lt;a href=&#34;http://docs.oracle.com/cd/E10383_01/doc/bip.1013/b40017/T421739T475591.htm&#34;&gt;in the Oracle Documentation&lt;/a&gt;.&lt;/p&gt;
-</description>
-          </item>
-        
-      
+    <item>
+      <title>Generate PDF Reports for Free in Oracle Apex Using PL-JRXML2PDF and iReport Designer</title>
+      <link>http://localhost:1313/blog/2012/12/18/generate-pdf-reports-for-free-in-oracle-apex-using-pl-jrxml2pdf-and-ireport-designer/</link>
+      <pubDate>Tue, 18 Dec 2012 00:00:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/blog/2012/12/18/generate-pdf-reports-for-free-in-oracle-apex-using-pl-jrxml2pdf-and-ireport-designer/</guid>
+      <description>Using Jaspersoft&amp;rsquo;s free iReport Designer tool and the open source PL-JRXML2PDF project, you can generate PDF reports from Oracle Apex for free, without having to install the JasperReports and JasperReports Server components. Watch my video tutorial to find out how.</description>
+    </item>
     
-      
-        
-          <item>
-            <title>How to Avoid the &#34;Job scheduling failed because the user has no permission to access this report&#34; Error in BI Publisher</title>
-            <link>http://tobybase.com/blog/2012/08/27/how-to-avoid-the-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report-error-in-bi-publisher/</link>
-            <pubDate>Mon, 27 Aug 2012 20:48:08 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2012/08/27/how-to-avoid-the-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report-error-in-bi-publisher/</guid>
-            <description>&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2012-08-27-bi-publisher-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report/864dbb90dbf623eb4f36b26a3ecf315cfec7121cf33e16730b6060c6572dfb35.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;You can get this error if you are trying to schedule a report and your BI Publisher installation uses LDAP authentication.&lt;/p&gt;
-
-&lt;p&gt;To avoid it, make sure that the &amp;ldquo;Administrator&amp;rdquo; account you use to connect to your LDAP server is in the XMLP_ADMIN group. The LDAP settings are located on the Admin tab, under Security Settings / Security Configuration.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2012-08-27-bi-publisher-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report/c44997adb44d6687468d544341fcd25b818ebdd46087d1849c38e855ee874488.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-</description>
-          </item>
-        
-      
+    <item>
+      <title>How To Use SQL to Query an XML Document Using Oracle External Tables</title>
+      <link>http://localhost:1313/blog/2012/11/14/how-to-use-sql-to-query-an-xml-document-using-oracle-external-tables/</link>
+      <pubDate>Wed, 14 Nov 2012 00:00:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/blog/2012/11/14/how-to-use-sql-to-query-an-xml-document-using-oracle-external-tables/</guid>
+      <description>Oracle&amp;rsquo;s external table feature allows you to treat structured files on the database server as tables for query and DML purposes. To use an example from the linked documentation, a tab-delimited file like this:
+56 november, 15, 1980 baker mary alice 09/01/2004 87 december, 20, 1970 roper lisa marie 01/01/1999  &amp;hellip;could be queried like this:
+SELECT employee_number, employee_first_name, substr(employee_middle_name, 1, 1), employee_last_name, employee_hire_date, to_date(employee_dob,&amp;#39;month, dd, yyyy&amp;#39;) FROM employees; After defining the external table like this:</description>
+    </item>
     
-      
-        
-          <item>
-            <title>How To Fix High CPU Usage by SQL Developer on OS X</title>
-            <link>http://tobybase.com/blog/2012/07/20/how-to-fix-high-cpu-usage-by-sql-developer-on-os-x/</link>
-            <pubDate>Fri, 20 Jul 2012 16:32:00 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2012/07/20/how-to-fix-high-cpu-usage-by-sql-developer-on-os-x/</guid>
-            <description>&lt;p&gt;I&amp;rsquo;ve been fighting for a couple of years now with an annoying performance bug in SQL Developer for OS X. After using the application for a while CPU usage would spike to around 100%, even when idle. This is a known issue associated with the &amp;ldquo;Look and Feel&amp;rdquo; preference.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2012-07-20-easy-fix-for-high-cpu-usage-in-sql-developer-on-os-x/b5b8f447d6dc433b4253c4814df5746e70e6e1e85235b391c9fef8b19e9f84d8.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Basically, don&amp;rsquo;t use the &amp;ldquo;Mac OS X&amp;rdquo; setting. Instead, use the &amp;ldquo;Oracle&amp;rdquo; setting. The theme doesn&amp;rsquo;t matter.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2012-07-20-easy-fix-for-high-cpu-usage-in-sql-developer-on-os-x/aa9173adfc0090dc8b5b7fb471547c26a5243ca8f21c670580cd41df9cbd263f.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;That fixes the CPU issue, but somewhat annoyingly moves the menu out of the menu bar at the top of the screen and into the application window, a la Windows, making the interface inconsistent with pretty much every other app I use on my Mac. &lt;a href=&#34;https://forums.oracle.com/forums/thread.jspa?threadID=1980688&amp;amp;start=15&amp;amp;tstart=30&#34;&gt;Until recently&lt;/a&gt;, that is. The big news is that &lt;em&gt;as of SQL Developer 3.1, the menu is restored to the top of the screen&lt;/em&gt; when using the Oracle Look and Feel. So for those who had been holding out (like myself) with the more native LaF, you can make the switch now and avoid the most annoying part of the performance/usability compromise.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2012-07-20-easy-fix-for-high-cpu-usage-in-sql-developer-on-os-x/cfa32760a6b880df4f2b44e0c1db8a5155ee4c59233b761517416ef7f5c602f7.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-</description>
-          </item>
-        
-      
+    <item>
+      <title>How To Restrict Access to BI Publisher Reports</title>
+      <link>http://localhost:1313/blog/2012/11/12/how-to-restrict-access-to-bi-publisher-reports/</link>
+      <pubDate>Mon, 12 Nov 2012 18:12:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/blog/2012/11/12/how-to-restrict-access-to-bi-publisher-reports/</guid>
+      <description>In my last post I described how to configure BI Publisher to authenticate against an LDAP server, typically a corporate Active Directory server. Aside from authentication, you can also use LDAP group membership to determine who has access to a given report. Here&amp;rsquo;s how you do it.
+ Create a group in your LDAP/AD directory and assign your target users to that group. Revisit your LDAP authentication settings. These are located on the Admin Tab, on the Security Configuration page.</description>
+    </item>
     
-      
-        
-          <item>
-            <title>How To Run Oracle Forms 11g Applications on OS X Lion</title>
-            <link>http://tobybase.com/blog/2012/07/12/how-to-run-oracle-forms-11g-applications-on-os-x-lion/</link>
-            <pubDate>Thu, 12 Jul 2012 22:28:24 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2012/07/12/how-to-run-oracle-forms-11g-applications-on-os-x-lion/</guid>
-            <description>&lt;p&gt;Need to run your company&amp;rsquo;s Oracle Forms application from your Mac, and can&amp;rsquo;t? Annoyed with having to crank up a virtual machine for just that one task? Even with the latest published Java version for OS X (1.6.0_33, as of today), you may find that some of the newer Forms applications just won&amp;rsquo;t run. Well, fret no longer. A solution may already be here, at least for Safari and Firefox.&lt;/p&gt;
-
-&lt;p&gt;Although it&amp;rsquo;s not a strictly certified configuration, you may have better luck by running the JRE 1.7 Java plug-in, which was recently made available as a pre-release download. This works for OS X Lion 10.7.3 and above. Download the plug-in &lt;a href=&#34;http://jdk7.java.net/macportpreview/&#34;&gt;from here&lt;/a&gt; and follow the simple instructions on the page to install it. Now give your application another try, and hopefully you&amp;rsquo;ll get the results I did!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2012-07-12-run-oracle-forms-11g-applications-on-os-x-lion/8267cef641541001f78e2a3845a1349c5cc5c74dc6bf17b8a32fe537d9beaadd.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-</description>
-          </item>
-        
-      
+    <item>
+      <title>How To Configure Oracle BI Publisher to Authenticate With Active Directory</title>
+      <link>http://localhost:1313/blog/2012/11/12/how-to-configure-oracle-bi-publisher-to-authenticate-with-active-directory/</link>
+      <pubDate>Mon, 12 Nov 2012 17:32:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/blog/2012/11/12/how-to-configure-oracle-bi-publisher-to-authenticate-with-active-directory/</guid>
+      <description>Log in to BI Publisher as an administrator. Click on the Admin tab. Click on Security Configuration. For Security Model, choose LDAP and enter the following parameters:
+   Setting Example Value     URL ldap://ad.mycompany.com:389 Your company&amp;rsquo;s LDAP server and port.   Administrator Username CN=ADMIN,OU=Users,OU=Shared Services,DC=mycompany,DC=com The fully qualified DN of the account you use to sign in to LDAP.   Administrator Password myxlplyx The password for the above account.</description>
+    </item>
     
-      
-        
-          <item>
-            <title>OS X Software for Oracle Developers</title>
-            <link>http://tobybase.com/blog/2012/06/27/os-x-software-for-oracle-developers/</link>
-            <pubDate>Wed, 27 Jun 2012 21:39:00 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2012/06/27/os-x-software-for-oracle-developers/</guid>
-            <description>
-
-&lt;p&gt;One of the great things about working for &lt;a href=&#34;http://www.enkitec.com/&#34;&gt;Enkitec&lt;/a&gt; is that it&amp;rsquo;s a very Mac-friendly shop. When I arrived there in 2007 there were a handful of us running Macs and the attitude at the top seemed to be respectful, but skeptical. They allowed me to use my own laptop, which at the time was a 15-inch Intel Core2 Duo Macbook Pro, with the understanding that I could request a standard-issue Dell laptop at any time should the need arise. It never did. Since that time a large number of my coworkers have made the switch, abandoning their bulky, slow Dell Latitude laptops for 13-inch Macbook Pros, as have both owners of the company.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;ve been a Mac user since 1998, since the advent of the original &lt;a href=&#34;http://en.wikipedia.org/wiki/IMac_G3&#34;&gt;bondi blue iMac&lt;/a&gt;, a machine that I greatly loved, as far as you can love a machine (and no farther!). I&amp;rsquo;ve used a Mac at work since about the year 2000, a good while before &lt;a href=&#34;http://en.wikipedia.org/wiki/OS_X&#34;&gt;OS X&lt;/a&gt; really hit the mainstream. Back in those days about the only thing I could hope to accomplish on it at the office was email, iTunes, looking up something on the internet, and running an &lt;code&gt;SSH&lt;/code&gt; session or two. Still, I faithfully carried my little &lt;a href=&#34;http://www.everymac.com/systems/apple/ibook/specs/ibook_900_14.html&#34;&gt;white plastic iBook G3&lt;/a&gt; to work every day just because I enjoyed using the damn thing so much. I looked for any opportunity at all to integrate it into whatever I was doing at work. Over the years that came to include more and more stuff. I still remember how excited I was the day Oracle Applications earned &lt;a href=&#34;http://support.apple.com/kb/DL1184?viewlocale=en_US&amp;amp;locale=en_US&#34;&gt;Gold Certification on OS 9&lt;/a&gt;! Woohoo! I desperately needed a life.&lt;/p&gt;
-
-&lt;p&gt;The advent and acceptance of OS X changed everything. The Unix underpinnings gave legitimacy to the Mac as a serious &amp;ldquo;office&amp;rdquo; platform. I went from using my laptop as a toy to using it as a companion system, then a few years later as my primary system, then finally as my only system. Likewise, the number of Windows applications I needed to run on a daily basis, even in VMWare, was reduced from several to none. Hallelujah. In the same timeframe I also went from being the &amp;ldquo;office mac weirdo&amp;rdquo; to one of several &amp;ldquo;elite mac-using jackasses&amp;rdquo;, to just another one of the guys. Or so they tell me to my face.&lt;/p&gt;
-
-&lt;p&gt;One of the questions I&amp;rsquo;m asked most often by coworkers &lt;a href=&#34;http://www.youtube.com/watch?v=l2-UuIEOcss&#34;&gt;switching to the Mac&lt;/a&gt; is what software they should download first. This is my list.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;[Note: I provide links to the developer&amp;rsquo;s sites, but many of these apps are available in the App Store.]&lt;/em&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;crucial-stuff&#34;&gt;Crucial Stuff&lt;/h2&gt;
-
-&lt;p&gt;These are the tools any Mac user, but particularly those working in IT, should have in their arsenal.&lt;/p&gt;
-
-&lt;p&gt;&lt;span style=&#34;text-decoration:line-through&#34;&gt;* &lt;a href=&#34;http://manytricks.com/butler/&#34;&gt;Butler&lt;/a&gt;&lt;/span&gt;&lt;br /&gt;
-&lt;span style=&#34;text-decoration:line-through&#34;&gt; The one and only truly critical app in this list, Butler is an application launcher, search tool, universal bookmark manager, iTunes remote controller, Applescript launcher, keyboard macro tool, pasteboard manager and more. It puts the contents of your Mac at your fingertips and I couldn&amp;rsquo;t imagine using a computer without it. Indispensable.&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Update:&lt;/em&gt; Since I wrote this article I&amp;rsquo;ve made the switch to &lt;a href=&#34;http://www.alfredapp.com&#34;&gt;Alfred&lt;/a&gt; for accomplishing essentially the same tasks. I was a longtime Butler user and supporter, even while more popular apps like &lt;a href=&#34;http://qsapp.com&#34;&gt;Quicksilver&lt;/a&gt; came and went(?), but it has become evident that Butler is no longer being actively developed, while Alfred continues to add significant new functionality, like the enhanced scripting capabilities in version 2.0. There is currently a sizable community of people &lt;a href=&#34;http://www.alfredforum.com/forum/3-share-your-workflows/&#34;&gt;developing sophisticated workflows&lt;/a&gt; for Alfred, but the most compelling feature is the integration with 1Password (see below) that allows you to open and log in to your password protected web sites using a keyboard shortcut. My only complaint is that I preferred the iTunes automation in Butler (also found in Alfred, but works differently), but I imagine Butler&amp;rsquo;s conceits could be mimicked by using a custom workflow in Alfred.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://agilebits.com/onepassword/mac&#34;&gt;1Password&lt;/a&gt;&lt;br /&gt;
-Universal password manager, syncs with iPad and iPhone version. Use it to store the hundreds of passwords you accumulate both personally and on the job. A plugin for Safari, Chrome, and Firefox handles automatic entry of password credentials on websites you visit.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.microsoft.com/mac&#34;&gt;MS Office&lt;/a&gt;&lt;br /&gt;
-Or at least just Word and Excel. &lt;em&gt;Never&lt;/em&gt; use Powerpoint. See below. It&amp;rsquo;s true that there are plenty of alternatives these days like OpenOffice, LibreOffice, Google Docs, etc., but unless everybody in your workplace has standardized on those tools, you&amp;rsquo;re bound to run across conversion issues that can sometimes be a serious nuisance.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.apple.com/iwork/&#34;&gt;iWork&lt;/a&gt;&lt;br /&gt;
-Yes, I recommend both office suites, as Pages is vastly superior to Word as a composition tool and Keynote simply demolishes Powerpoint for presentations. Faster, lighter, easier to use — the whole iWork suite is worth it just for Keynote. Companion apps for iPad and iPhone are cheap and automatically sync your documents. Personally I use always use Keynote for creating presentations and working with Powerpoint slideshows, I use Pages whenever I can, and I use Numbers when I want to create a visually sharp chart/spreadsheet combo for presentations that I won&amp;rsquo;t be handing off to other people to modify.&lt;/p&gt;
-
-&lt;p&gt;&lt;span style=&#34;text-decoration:line-through&#34;&gt;&lt;a href=&#34;http://growl.info/&#34;&gt;Growl&lt;/a&gt;&lt;/span&gt;
-&lt;span style=&#34;text-decoration:line-through&#34;&gt;Perhaps soon to be obsoleted by the new &lt;a href=&#34;http://www.apple.com/osx/whats-new/features.html#notification&#34;&gt;Notification Center&lt;/a&gt; feature of &lt;a href=&#34;http://www.apple.com/osx/&#34;&gt;OS X Mountain Lion&lt;/a&gt;, Growl provides a heads-up display for various things happening on the Mac. I use it mostly for email notifications, but the feedback it provides when attaching an external device or connecting to a network is often helpful.&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Update:&lt;/em&gt; Dead in the water. Absorbed into notifications in Mountain Lion.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.barebones.com/products/bbedit/&#34;&gt;BBEdit&lt;/a&gt;/&lt;a href=&#34;http://www.barebones.com/products/textwrangler/&#34;&gt;TextWrangler&lt;/a&gt;&lt;br /&gt;
-A good text editor goes a very long way, as any coder can tell you. Some people &lt;a href=&#34;http://www.43folders.com/2005/12/12/text-setup&#34;&gt;organize their whole lives&lt;/a&gt; with text files, though. Emacs is also available, but it doesn&amp;rsquo;t have the Mac sensibilities of this storied old tool. If you&amp;rsquo;d rather not spend the money, TextWrangler is the free, stripped-down counterpart.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://evernote.com/evernote/&#34;&gt;Evernote&lt;/a&gt;&lt;br /&gt;
-Solves the problem of how to catalog, archive, and make available the vast library of information you accumulate over the years. Companion apps for iPad and iPhone put all your information at your fingertips. Can also be used as a collaborative tool for teams.&lt;/p&gt;
-
-&lt;h2 id=&#34;software-for-the-oracle-developer&#34;&gt;Software for the Oracle Developer&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.oracle.com/technetwork/developer-tools/sql-developer/overview/index.html&#34;&gt;SQL Developer&lt;/a&gt;&lt;br /&gt;
-Oracle&amp;rsquo;s free tool for SQL and PL/SQL development.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://netbeans.org/&#34;&gt;NetBeans&lt;/a&gt; and/or &lt;a href=&#34;http://www.oracle.com/technetwork/developer-tools/jdev/overview/index.html&#34;&gt;JDeveloper&lt;/a&gt;&lt;br /&gt;
-For J2EE development. Netbeans is the better tool, IMO, unless you need to work with &lt;a href=&#34;http://www.oracle.com/technetwork/developer-tools/adf/overview/index.html&#34;&gt;Oracle ADF&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.virtualbox.org/&#34;&gt;VirtualBox&lt;/a&gt;&lt;br /&gt;
-I&amp;rsquo;ve used VMWare Fusion for years and recently tried VirtualBox to take advantage of &lt;a href=&#34;http://www.oracle.com/technetwork/community/developer-vm/index.html&#34;&gt;Oracle&amp;rsquo;s developer VMs&lt;/a&gt;, and have been impressed with the performance and configurability. Beat&amp;rsquo;s VMWare&amp;rsquo;s price, as well.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.oracle.com/technetwork/topics/intel-macsoft-096467.html&#34;&gt;Oracle 10g Instant Client&lt;/a&gt;&lt;br /&gt;
-Can&amp;rsquo;t beat the convenience of being able to connect to a database without having to boot a VM.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://cord.sourceforge.net/&#34;&gt;CoRD&lt;/a&gt;&lt;br /&gt;
-For remote desktop (RDP) connections. Traditionally, it&amp;rsquo;s been a better, more reliable option than &lt;a href=&#34;http://www.microsoft.com/mac/remote-desktop-client&#34;&gt;Microsoft&amp;rsquo;s Remote Desktop app&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.citrix.com/English/ss/downloads/details.asp?downloadId=2323407&amp;amp;productId=1689163&#34;&gt;Citrix Receiver&lt;/a&gt;&lt;br /&gt;
-Needed If your company publishes corporate apps with Citrix Webapps, and many do.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://visualvm.java.net/&#34;&gt;VisualVM&lt;/a&gt;&lt;br /&gt;
-Performance analysis/debugging tool for Java apps.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://directory.apache.org/studio/&#34;&gt;Apache Directory Studio&lt;/a&gt;&lt;br /&gt;
-A useful and fully-featured LDAP tool.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.wireshark.org/&#34;&gt;Wireshark&lt;/a&gt;&lt;br /&gt;
-Packet sniffer.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.syntevo.com/smartcvs/index.html&#34;&gt;SmartCVS&lt;/a&gt;/&lt;a href=&#34;http://www.syntevo.com/smartsvn/index.html&#34;&gt;SmartSVN&lt;/a&gt;&lt;br /&gt;
- My tools of choice for easy source code manaagement.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.macports.org/&#34;&gt;MacPorts&lt;/a&gt;&lt;br /&gt;
-Download and compile Unix software.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.amazon.com/gp/feature.html/ref=kcp_mac_mkt_lnd?docId=1000464931&#34;&gt;Kindle&lt;/a&gt; /&lt;a href=&#34;http://www.amazon.com/gp/feature.html/?docId=1000778781&#34;&gt;Send to Kindle&lt;/a&gt;&lt;br /&gt;
-Take advantage of Kindle&amp;rsquo;s massive collection of technical ebooks. The &amp;lsquo;Send to Kindle&amp;rsquo; tool allows you to upload your own PDFs for reading in the Kindle app.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.bruji.com/bwana/&#34;&gt;Bwana&lt;/a&gt;&lt;br /&gt;
-Read &lt;code&gt;man&lt;/code&gt; pages in a browser window.&lt;/p&gt;
-
-&lt;h2 id=&#34;productivity-apps&#34;&gt;Productivity Apps&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.omnigroup.com/products/omnifocus/&#34;&gt;OmniFocus&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://www.davidco.com/about-gtd&#34;&gt;GTD&lt;/a&gt; task/life management tool. Companion apps for iPhone, iPad keep everything in sync and support location-based notes.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://flyingmeat.com/acorn/&#34;&gt;Acorn&lt;/a&gt;&lt;br /&gt;
-Also might have chosen &lt;a href=&#34;http://www.pixelmator.com/&#34;&gt;Pixelmator&lt;/a&gt;, but this is the one I own. Almost everybody could use a good image editor at some time or other. Pixelmator is supposed to be closer to Photoshop.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://skitch.com/&#34;&gt;Skitch&lt;/a&gt;&lt;br /&gt;
-Screenshot markup tool. Integrates with &lt;a href=&#34;http://www.evernote.com/evernote/&#34;&gt;Evernote&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;for-sharing-and-collaboration&#34;&gt;For Sharing and Collaboration&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.dropbox.com/downloading?os=mac&#34;&gt;Dropbox&lt;/a&gt;&lt;br /&gt;
-Disk space in the cloud with sharing and privacy features. Integrates with many applications on Mac, iPhone, iPad.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://spideroak.com/&#34;&gt;SpiderOak&lt;/a&gt;&lt;br /&gt;
-More secure alternative to Dropbox for sensitive files.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.wuala.com/&#34;&gt;Wuala&lt;/a&gt;&lt;br /&gt;
-Another secure cloud-based storage option.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.wellredapps.com/products/dropkey/&#34;&gt;DropKey&lt;/a&gt;&lt;br /&gt;
-A brain dead easy way to send secure, encrypted email attachments!&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.skype.com/intl/en-us/get-skype/on-your-computer/macosx/&#34;&gt;Skype&lt;/a&gt;&lt;br /&gt;
-Video phone for talking to your PC-using buddies. For your Mac brothers you should use &lt;a href=&#34;http://www.apple.com/mac/facetime/&#34;&gt;Facetime&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.google.com/+/learnmore/hangouts/&#34;&gt;Google Hangouts&lt;/a&gt;&lt;br /&gt;
-I have some anecdotal evidence that this may be a more stable video conferencing solution than Skype. I&amp;rsquo;ll update as I gain more experience using the two.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.teamviewer.com/en/download/index.aspx&#34;&gt;TeamViewer&lt;/a&gt;&lt;br /&gt;
-Free screen sharing software, if you don&amp;rsquo;t have access to &lt;a href=&#34;http://www.gotomeeting.com/&#34;&gt;GoToMeeting&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;system-tools&#34;&gt;System Tools&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.ragingmenace.com/software/menumeters/&#34;&gt;MenuMeters&lt;/a&gt;&lt;br /&gt;
-Lightweight system monitor that sits in the menu bar. Measures CPU, memory, network, and disk usage.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.shirt-pocket.com/SuperDuper/SuperDuperDescription.html&#34;&gt;SuperDuper!&lt;/a&gt;&lt;br /&gt;
-Creates bootable, up-to-date copies of your entire hard drive! Great, possibly indispensable, for recovering from a hard disk failure. Can also be used just to sync disk contents. Only copies changed data during file sync. Very efficient.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.coriolis-systems.com/iDefrag.php/&#34;&gt;iDefrag&lt;/a&gt;&lt;br /&gt;
-Defrag utility. You shouldn&amp;rsquo;t need to do it ever in OS X, but I&amp;rsquo;m hoping it prolongs the life of my hard drive. Anybody got any real statistics on that? By the way don&amp;rsquo;t try this on an SSD drive! It&amp;rsquo;ll decrease the life of the drive.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.coriolis-systems.com/iPartition.php&#34;&gt;iPartition&lt;/a&gt;&lt;br /&gt;
-Disk Utility does pretty much everything this app does, except for allowing you to partition a disk without data loss. Unfortunately, this will not work if the disk is too full or badly fragmented. That&amp;rsquo;s when iDefrag really comes in handy.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://rixstep.com/4/0/clix/&#34;&gt;CLIX&lt;/a&gt;&lt;br /&gt;
-GUI tool for executing Unix commands. Comes with a large library of useful commands, including many Mac-specific ones. Can be used as a learning tool and you can add your own scripts.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.omnigroup.com/products/omnidisksweeper/&#34;&gt;OmniDiskSweeper&lt;/a&gt; and/or &lt;a href=&#34;http://grandperspectiv.sourceforge.net/&#34;&gt;GrandPerspective&lt;/a&gt;&lt;br /&gt;
-Analyze the contents and sizes of the stuff on your hard drive. GrandPerspective provides a better visualization, but you don&amp;rsquo;t always need the &amp;ldquo;fluff&amp;rdquo;.&lt;/p&gt;
-
-&lt;h2 id=&#34;internet-tools&#34;&gt;Internet Tools&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://nolobe.com/interarchy/&#34;&gt;Interarchy&lt;/a&gt;&lt;br /&gt;
-FTP/SFTP tool with numerous useful features. Download an entire website or keep remote sites in sync with local folders. &lt;a href=&#34;http://panic.com/transmit/&#34;&gt;Transmit&lt;/a&gt; is also popular.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.google.com/mac/&#34;&gt;Chrome&lt;/a&gt;&lt;br /&gt;
-The web browser. (I use Webkit.)&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.mozilla.org/en-US/firefox/new/&#34;&gt;Firefox&lt;/a&gt;&lt;br /&gt;
-The web browser. (See above.)&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://nightly.webkit.org/&#34;&gt;Webkit&lt;/a&gt;&lt;br /&gt;
-See what&amp;rsquo;s coming down the pipe in Safari.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.transmissionbt.com/&#34;&gt;Transmission&lt;/a&gt;&lt;br /&gt;
-BitTorrent client.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.videolan.org/vlc/download-macosx.html&#34;&gt;VLC&lt;/a&gt;&lt;br /&gt;
-Open source media player. Plays a wide variety of formats.&lt;/p&gt;
-
-&lt;h2 id=&#34;if-you-have-the-money&#34;&gt;If You Have The Money&amp;hellip;&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.smilesoftware.com/PDFpenPro/&#34;&gt;PDFPenPro&lt;/a&gt;&lt;br /&gt;
-Create, edit, sign, mark up, footnote, redact, and otherwise manipulate PDFs. Also does OCR and tables of contents. Very nice tool. Companion app for iPad.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.omnigroup.com/products/omnigraffle/&#34;&gt;OmniGraffle&lt;/a&gt;&lt;br /&gt;
-Like Visio, only a thousand times better. The Omni Group&amp;rsquo;s flagship product. Wish very much I owned this one.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.omnigroup.com/products/omniplan/&#34;&gt;OmniPlan&lt;/a&gt;&lt;br /&gt;
-Does to MS Project what Keynote does to Powerpoint. Bought my copy a few versions back when it was far less expensive, and it still has all the project tracking features I need.&lt;/p&gt;
-
-&lt;h2 id=&#34;obscure-use-cases&#34;&gt;Obscure Use Cases&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://cutedgesystems.com/software/MailServeForLion/&#34;&gt;MailServe for Lion&lt;/a&gt;&lt;br /&gt;
-Automates configuration of OS X&amp;rsquo;s built in Postfix mail server. I&amp;rsquo;ve had to use this in the past when I was unable to connect to the corporate email server and didn&amp;rsquo;t want to send files through Gmail. (Did I mention I despise most web mail clients?)&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.joshjacob.com/mac-development/tnef.php&#34;&gt;TNEF&amp;rsquo;s Enough&lt;/a&gt;&lt;br /&gt;
-Used it once to extract the Word document embedded in a &lt;code&gt;winmail.dat&lt;/code&gt; attachment from MS Outlook.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.arrowbit.com/info/pstbridgepro&#34;&gt;PST Bridge&lt;/a&gt;&lt;br /&gt;
-Used convert or read PST files (basically mail archives) generated by MS Outlook.&lt;/p&gt;
-
-&lt;h2 id=&#34;just-for-fun&#34;&gt;Just for Fun&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.blacktree.com/&#34;&gt;Nocturne&lt;/a&gt;&lt;br /&gt;
-Invert your screen colors to reduce strain on the eyes at night, or to conserve battery power. Neat effect.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.bannister.org/software/ao.htm&#34;&gt;Audio Overload&lt;/a&gt;&lt;br /&gt;
-Pass the time by listening to music from the console video games of long ago. Video game music files found separately, somewhere out there on the &lt;a href=&#34;http://www.google.com/&#34;&gt;internet&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;That&amp;rsquo;s it for now. Hope you find something useful.&lt;/p&gt;
-</description>
-          </item>
-        
-      
+    <item>
+      <title>How to Avoid the &#34;Job scheduling failed because the user has no permission to access this report&#34; Error in BI Publisher</title>
+      <link>http://localhost:1313/blog/2012/08/27/how-to-avoid-the-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report-error-in-bi-publisher/</link>
+      <pubDate>Mon, 27 Aug 2012 20:48:08 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/blog/2012/08/27/how-to-avoid-the-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report-error-in-bi-publisher/</guid>
+      <description>You can get this error if you are trying to schedule a report and your BI Publisher installation uses LDAP authentication.
+To avoid it, make sure that the &amp;ldquo;Administrator&amp;rdquo; account you use to connect to your LDAP server is in the XMLP_ADMIN group. The LDAP settings are located on the Admin tab, under Security Settings / Security Configuration.</description>
+    </item>
     
-      
-        
-          <item>
-            <title>Use DML Error Logging</title>
-            <link>http://tobybase.com/blog/2012/06/07/use-dml-error-logging/</link>
-            <pubDate>Thu, 07 Jun 2012 17:04:00 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2012/06/07/use-dml-error-logging/</guid>
-            <description>&lt;p&gt;Introduced with Oracle 10gR2, DML Error Logging allows you to make standard SQL &lt;code&gt;INSERT&lt;/code&gt;, &lt;code&gt;UPDATE&lt;/code&gt;, and &lt;code&gt;MERGE&lt;/code&gt; statements behave more like the SQL*Loader utility, logging errors to a table rather than failing and rolling back the first time an error condition is encountered.&lt;/p&gt;
-
-&lt;p&gt;The syntax is the same for all DML statements. Just add the following clause to the end of your DML:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    LOG ERRORS &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;The database will automatically create an error log table for you. Per the documentation (&lt;a href=&#34;http://docs.oracle.com/cd/B28359%5F01/server.111/b28286/statements%5F9014.htm&#34;&gt;11g&lt;/a&gt;, &lt;a href=&#34;http://docs.oracle.com/cd/E11882_01/server.112/e25494/tables004.htm#InsertDMLErrorLogging&#34;&gt;11gR2&lt;/a&gt;):
-&amp;gt; … the database assigns the default name generated by the DBMS&lt;em&gt;ERRLOG package. The default error log table name is ERR$&lt;/em&gt; followed by the first 25 characters of the name of the table upon which the DML operation is being executed.&lt;/p&gt;
-
-&lt;p&gt;In most cases you&amp;rsquo;ll probably want to specify your own log table, like this:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    LOG ERRORS &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; error_table&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;If you do, you&amp;rsquo;ll need to create the table beforehand with &lt;code&gt;DBMS_ERRLOG&lt;/code&gt;.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;EXEC&lt;/span&gt; DBMS_ERRLOG.CREATE_ERROR_LOG(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;table&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;error_table&amp;#39;&lt;/span&gt;);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Like SQL*Loader, you can specify a maximum number of errors to tolerate before failing and rolling back the transaction. You can also just say &lt;code&gt;UNLIMITED&lt;/code&gt; if you don&amp;rsquo;t ever want to fail the transaction.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    LOG ERRORS &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; error_table REJECT &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;LIMIT&lt;/span&gt; &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;99&lt;/span&gt;
-    LOG ERRORS &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; error_table REJECT &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;LIMIT&lt;/span&gt; UNLIMITED&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Since the default limit is zero, it makes sense to always include this clause.&lt;/p&gt;
-
-&lt;p&gt;The last option is to specify a string that identifies that particular DML operation, so that you can group sets of errors in the log table. Here is an example that incorporates &lt;code&gt;SYSDATE&lt;/code&gt; to tag all errors belonging to this DML operation.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    LOG ERRORS &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; error_table (&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Import from external datasource &amp;#39;&lt;/span&gt;||TO_CHAR(SYSDATE)) REJECT &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;LIMIT&lt;/span&gt; UNLIMITED&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Putting it all together, here is a short example demonstrating the use of DML Error Logging for merging data between two similar, but non-identically structured tables. An alternate strategy might have involved creating a custom interface table with a block of PL/SQL to perform inserts and mark the failed rows. Here, we take advantage of the native capabilities of the database to simplify and accelerate the process.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;create&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;table&lt;/span&gt; users_loc (id &lt;span style=&#34;color:#038&#34;&gt;number&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;primary&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;key&lt;/span&gt;, name varchar2(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;75&lt;/span&gt;));
+    <item>
+      <title>How To Fix High CPU Usage by SQL Developer on OS X</title>
+      <link>http://localhost:1313/blog/2012/07/20/how-to-fix-high-cpu-usage-by-sql-developer-on-os-x/</link>
+      <pubDate>Fri, 20 Jul 2012 16:32:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/blog/2012/07/20/how-to-fix-high-cpu-usage-by-sql-developer-on-os-x/</guid>
+      <description>I&amp;rsquo;ve been fighting for a couple of years now with an annoying performance bug in SQL Developer for OS X. After using the application for a while CPU usage would spike to around 100%, even when idle. This is a known issue associated with the &amp;ldquo;Look and Feel&amp;rdquo; preference.
+Basically, don&amp;rsquo;t use the &amp;ldquo;Mac OS X&amp;rdquo; setting. Instead, use the &amp;ldquo;Oracle&amp;rdquo; setting. The theme doesn&amp;rsquo;t matter.
+That fixes the CPU issue, but somewhat annoyingly moves the menu out of the menu bar at the top of the screen and into the application window, a la Windows, making the interface inconsistent with pretty much every other app I use on my Mac.</description>
+    </item>
     
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;create&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;table&lt;/span&gt; users_ext (uuid varchar2(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;10&lt;/span&gt;), fname varchar2(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;15&lt;/span&gt;), lname varchar2(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;20&lt;/span&gt;));
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;1000&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Scotty&amp;#39;&lt;/span&gt;,  &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;P&amp;#39;&lt;/span&gt;);
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;2000&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Melinda&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Manning&amp;#39;&lt;/span&gt;);
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;200J&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Jamie&amp;#39;&lt;/span&gt;,   &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Brooks&amp;#39;&lt;/span&gt;);
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;1000&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Jason&amp;#39;&lt;/span&gt;,   &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Jennings&amp;#39;&lt;/span&gt;);
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;4000&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Marcus&amp;#39;&lt;/span&gt;,  &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Nevada&amp;#39;&lt;/span&gt;);
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;AAAA&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Alfred&amp;#39;&lt;/span&gt;,  &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Butler&amp;#39;&lt;/span&gt;);
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;ABAB&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Simon&amp;#39;&lt;/span&gt;,   &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Jones&amp;#39;&lt;/span&gt;);
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;6000&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Joon&amp;#39;&lt;/span&gt;,    &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Patel&amp;#39;&lt;/span&gt;);
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;7000&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Wanda&amp;#39;&lt;/span&gt;,   &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Lutz&amp;#39;&lt;/span&gt;);
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;into&lt;/span&gt; users_ext &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;8000&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Joseph&amp;#39;&lt;/span&gt;,  &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;McBride&amp;#39;&lt;/span&gt;);
+    <item>
+      <title>How To Run Oracle Forms 11g Applications on OS X Lion</title>
+      <link>http://localhost:1313/blog/2012/07/12/how-to-run-oracle-forms-11g-applications-on-os-x-lion/</link>
+      <pubDate>Thu, 12 Jul 2012 22:28:24 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/blog/2012/07/12/how-to-run-oracle-forms-11g-applications-on-os-x-lion/</guid>
+      <description>Need to run your company&amp;rsquo;s Oracle Forms application from your Mac, and can&amp;rsquo;t? Annoyed with having to crank up a virtual machine for just that one task? Even with the latest published Java version for OS X (1.6.0_33, as of today), you may find that some of the newer Forms applications just won&amp;rsquo;t run. Well, fret no longer. A solution may already be here, at least for Safari and Firefox.</description>
+    </item>
     
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;exec&lt;/span&gt; dbms_errlog.create_error_log(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;users_loc&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;users_errs&amp;#39;&lt;/span&gt;);
+    <item>
+      <title>OS X Software for Oracle Developers</title>
+      <link>http://localhost:1313/blog/2012/06/27/os-x-software-for-oracle-developers/</link>
+      <pubDate>Wed, 27 Jun 2012 21:39:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/blog/2012/06/27/os-x-software-for-oracle-developers/</guid>
+      <description>One of the great things about working for Enkitec is that it&amp;rsquo;s a very Mac-friendly shop. When I arrived there in 2007 there were a handful of us running Macs and the attitude at the top seemed to be respectful, but skeptical. They allowed me to use my own laptop, which at the time was a 15-inch Intel Core2 Duo Macbook Pro, with the understanding that I could request a standard-issue Dell laptop at any time should the need arise.</description>
+    </item>
     
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;into&lt;/span&gt; users_loc (id, name) 
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;select&lt;/span&gt; uuid, 
-           fname||&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39; &amp;#39;&lt;/span&gt;||lname 
-      &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;from&lt;/span&gt; users_ext 
-    log errors &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;into&lt;/span&gt; users_errs (&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;import from users_ext: &amp;#39;&lt;/span&gt;||to_char(sysdate)) 
-    reject &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;limit&lt;/span&gt; unlimited;
+    <item>
+      <title>Use DML Error Logging</title>
+      <link>http://localhost:1313/blog/2012/06/07/use-dml-error-logging/</link>
+      <pubDate>Thu, 07 Jun 2012 17:04:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/blog/2012/06/07/use-dml-error-logging/</guid>
+      <description>Introduced with Oracle 10gR2, DML Error Logging allows you to make standard SQL INSERT, UPDATE, and MERGE statements behave more like the SQL*Loader utility, logging errors to a table rather than failing and rolling back the first time an error condition is encountered.
+The syntax is the same for all DML statements. Just add the following clause to the end of your DML:
+LOG ERRORS  The database will automatically create an error log table for you.</description>
+    </item>
     
-    col ora_err_mesg$ format a40
-    col ora_err_rowid$ format a15
-    col ora_err_tag$ format a50
-    col id format a10
-    col name format a30
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;select&lt;/span&gt; * &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;from&lt;/span&gt; users_errs;
+    <item>
+      <title>ODBC Connection Fails for MS Access App on Citrix </title>
+      <link>http://localhost:1313/blog/2012/05/11/odbc-connection-fails-for-ms-access-app-on-citrix/</link>
+      <pubDate>Fri, 11 May 2012 20:54:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/blog/2012/05/11/odbc-connection-fails-for-ms-access-app-on-citrix/</guid>
+      <description>I ran into an interesting problem recently when attempting to publish an MS Access application with Citrix XenApp. The application pulled data from an Oracle database, so an ODBC connection was created on the Citrix server. What we found was that when a non-privileged user tried to run the application, the connection failed. When the Citrix server admin ran it, however, it worked. Furthermore, as long as the admin was logged in, anybody else could run the application successfully; when he logged out, the users&amp;rsquo; connections broke again.</description>
+    </item>
     
-    ORA_ERR_NUMBER$ ORA_ERR_MESG$                            ORA_ERR_ROWID$  ORA_ERR_OPTYP$ ORA_ERR_TAG$                                       ID         NAME                         
-    &lt;span style=&#34;color:#888&#34;&gt;--------------- ---------------------------------------- --------------- -------------- -------------------------------------------------- ---------- ------------------------------
-&lt;/span&gt;&lt;span style=&#34;color:#888&#34;&gt;&lt;/span&gt;               &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1722&lt;/span&gt; ORA-&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;01722&lt;/span&gt;: invalid &lt;span style=&#34;color:#038&#34;&gt;number&lt;/span&gt;                                I              import &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;from&lt;/span&gt; users_ext: &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;07&lt;/span&gt;-JUN-&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2012&lt;/span&gt; &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;12&lt;/span&gt;:&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;00&lt;/span&gt;:&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;09&lt;/span&gt;        &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;200&lt;/span&gt;J       Jamie Brooks                   
-                                                                                                                                                                                         
+    <item>
+      <title>Table Functions: 9i Feature Worth Revisiting (Part 2)</title>
+      <link>http://localhost:1313/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-2/</link>
+      <pubDate>Fri, 27 Apr 2012 22:35:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-2/</guid>
+      <description>In part one of this series I showed a simple example of how table functions can be used to treat PL/SQL collection types as tables in a SQL query. We used a nested table collection type to which we manually added a few entries. In this example, I intend to show a more practical use of table functions using all three PL/SQL collection types: associative arrays, nested tables, and VARRAYs.</description>
+    </item>
     
-                  &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1&lt;/span&gt; ORA-&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;00001&lt;/span&gt;: &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;unique&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;constraint&lt;/span&gt; (NUCDBA.SYS                 I              import &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;from&lt;/span&gt; users_ext: &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;07&lt;/span&gt;-JUN-&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2012&lt;/span&gt; &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;12&lt;/span&gt;:&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;00&lt;/span&gt;:&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;09&lt;/span&gt;        &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1000&lt;/span&gt;       Jason Jennings                 
-                    _C00128181) violated                                                                                                                                                 
-                                                                                                                                                                                         
+    <item>
+      <title>Table Functions: 9i Feature Worth Revisiting (Part 1)</title>
+      <link>http://localhost:1313/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-1/</link>
+      <pubDate>Fri, 27 Apr 2012 22:27:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-1/</guid>
+      <description>Yes, they&amp;rsquo;ve been around for a while, but if you haven&amp;rsquo;t made use of table functions lately you might want to reacquaint yourself with this old gem. Table functions allow you to query the contents of PL/SQL collection types using SQL&amp;rsquo;s TABLE operator. Here is a simple example.
+CREATE OR REPLACE PACKAGE example AS TYPE nested_table_typ IS TABLE OF VARCHAR2(100); FUNCTION get_nested_table_data RETURN nested_table_typ PIPELINED; END example; / CREATE OR REPLACE PACKAGE BODY example AS FUNCTION get_nested_table_data RETURN nested_table_typ PIPELINED IS BEGIN PIPE ROW (&amp;#39;one&amp;#39;); PIPE ROW (&amp;#39;two&amp;#39;); PIPE ROW (&amp;#39;three&amp;#39;); RETURN; END get_nested_table_data; END example; / The package function example.</description>
+    </item>
     
-               &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1722&lt;/span&gt; ORA-&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;01722&lt;/span&gt;: invalid &lt;span style=&#34;color:#038&#34;&gt;number&lt;/span&gt;                                I              import &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;from&lt;/span&gt; users_ext: &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;07&lt;/span&gt;-JUN-&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2012&lt;/span&gt; &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;12&lt;/span&gt;:&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;00&lt;/span&gt;:&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;09&lt;/span&gt;        AAAA       Alfred Butler                  
-                                                                                                                                                                                         
-    
-               &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1722&lt;/span&gt; ORA-&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;01722&lt;/span&gt;: invalid &lt;span style=&#34;color:#038&#34;&gt;number&lt;/span&gt;                                I              import &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;from&lt;/span&gt; users_ext: &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;07&lt;/span&gt;-JUN-&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2012&lt;/span&gt; &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;12&lt;/span&gt;:&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;00&lt;/span&gt;:&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;09&lt;/span&gt;        ABAB       Simon Jones                    &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-          </item>
-        
-      
-    
-      
-        
-          <item>
-            <title>ODBC Connection Fails for MS Access App on Citrix </title>
-            <link>http://tobybase.com/blog/2012/05/11/odbc-connection-fails-for-ms-access-app-on-citrix/</link>
-            <pubDate>Fri, 11 May 2012 20:54:00 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2012/05/11/odbc-connection-fails-for-ms-access-app-on-citrix/</guid>
-            <description>&lt;p&gt;I ran into an interesting problem recently when attempting to publish an MS Access application with &lt;a href=&#34;http://www.citrix.com/English/ps2/products/product.asp?contentID=186&amp;amp;ntref=footer&#34;&gt;Citrix XenApp&lt;/a&gt;. The application pulled data from an Oracle database, so an ODBC connection was created on the Citrix server. What we found was that when a non-privileged user tried to run the application, the connection failed. When the Citrix server admin ran it, however, it worked. Furthermore, as long as the admin was logged in, anybody else could run the application successfully; when he logged out, the users&amp;rsquo; connections broke again.&lt;/p&gt;
-
-&lt;p&gt;Since Access is not my area of expertise, we finally contacted Microsoft tech support after trying a few suggestions we dug up in our own research. The support analyst clued us in to the following solution, which I pulled from an Oracle Primavera &lt;a href=&#34;http://docs.oracle.com/cd/E16688_01/Technical_Documentation/Terminal_Services_and_Citrix/Terminal%20Services%20and%20Citrix.pdf&#34;&gt;setup document&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;From what I&amp;rsquo;ve seen on different support forums, this seems to be a pretty standard setup task when running Oracle on Windows over Citrix.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;If using an Oracle database platform, confirm [that] the Create Global Objects Windows Security Policy is set up on the Terminal Servers and add the domain Users or Groups of the end-users who will be accessing the published application. If the local security policy is not setup, the following steps can be used to add the policy:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Click Start, Programs, Administrative Tools, and then click Local Security Policy.&lt;/li&gt;
-&lt;li&gt;Expand Local Policies, and then click User Rights Assignments.&lt;/li&gt;
-&lt;li&gt;In the right pane, double-click Create Global Objects.&lt;/li&gt;
-&lt;li&gt;In the Local Security Policy Setting dialogbox, click Add.&lt;/li&gt;
-&lt;li&gt;In the Select Users or Group dialog box, select the user group that these end users are a part of, click Add, and then click OK.&lt;/li&gt;
-&lt;li&gt;Click OK.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;If using an Oracle database platform, the Oracle client software also requires that you give the Authenticated User Group, Read and Execute privilege to the Oracle Home Directory and ALL its sub directories and files on the Terminal Servers.&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
-          </item>
-        
-      
-    
-      
-        
-          <item>
-            <title>Table Functions: 9i Feature Worth Revisiting (Part 2)</title>
-            <link>http://tobybase.com/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-2/</link>
-            <pubDate>Fri, 27 Apr 2012 22:35:00 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-2/</guid>
-            <description>&lt;p&gt;In &lt;a href=&#34;http://tobybase.com/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-1/-1&#34;&gt;part one of this series&lt;/a&gt; I showed a simple example of how table functions can be used to treat PL/SQL collection types as tables in a SQL query. We used a nested table collection type to which we manually added a few entries. In this example, I intend to show a more practical use of table functions using all three PL/SQL collection types: associative arrays, nested tables, and VARRAYs.&lt;/p&gt;
-
-&lt;p&gt;Let&amp;rsquo;s revisit a use case I alluded to in my earlier blog entry: incorporating LDAP data into a query. Suppose your task is to code a custom authorization scheme for an enterprise application reporting system. You want row access to be determined by a user&amp;rsquo;s group memberships in the company&amp;rsquo;s Active Directory server. If a user is assigned to &amp;ldquo;the Company A group&amp;rdquo; in Active Directory, he gets to see Company A&amp;rsquo;s data. You can configure that kind of restriction at a database level using &lt;a href=&#34;http://www.oracle.com/technetwork/database/security/index-088277.html&#34;&gt;Oracle&amp;rsquo;s Virtual Private Database&lt;/a&gt; feature. Configuring VPD is beyond the scope of this blog entry, but ultimately you will be associating a table to a portion of a SQL WHERE clause that gets appended to every query written against that table. You can find more documentation on VPD &lt;a href=&#34;http://download.oracle.com/docs/cd/B28359_01/network.111/b28531/vpd.htm&#34;&gt;on the OTN site&lt;/a&gt;. In this case, let&amp;rsquo;s assume you know that another team has written a PL/SQL database package to query data from Active Directory, and you want to make use of that code. The only problem is that all the functions in that package return collections of various types, and you need to be able to access that information from the WHERE clause you are building with VPD. This is where table functions come in handy.&lt;/p&gt;
-
-&lt;p&gt;Let&amp;rsquo;s begin by setting up our example schema. We&amp;rsquo;ll be looking at client sales data. First, let&amp;rsquo;s set up our clients.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;TABLE&lt;/span&gt; clients (
-      client_id &lt;span style=&#34;color:#038&#34;&gt;NUMBER&lt;/span&gt;,
-      client_name VARCHAR2(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;50&lt;/span&gt;));
-
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; clients &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;100&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Timco Industries&amp;#39;&lt;/span&gt;);
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; clients &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;200&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Moneybros&amp;#39;&lt;/span&gt;);
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; clients &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;300&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;The Monacle Corporation&amp;#39;&lt;/span&gt;);
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; clients &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;400&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Schmapple&amp;#39;&lt;/span&gt;);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;We also need application users who will be logging in to view the report data. We&amp;rsquo;ll assume each application user is uniquely linked to a user in Active Directory via the external_id column.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;TABLE&lt;/span&gt; users (
-      sequence_number &lt;span style=&#34;color:#038&#34;&gt;NUMBER&lt;/span&gt;,
-      user_name VARCHAR2(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;20&lt;/span&gt;),
-      external_id VARCHAR2(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;20&lt;/span&gt;),
-      first_name VARCHAR2(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;30&lt;/span&gt;),
-      last_name VARCHAR2(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;30&lt;/span&gt;));
-
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; users &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;JACKA&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;jaugusti&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Jack&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Augustine&amp;#39;&lt;/span&gt;);
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; users &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;KENKI&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;kkidd&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Ken&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Kidd&amp;#39;&lt;/span&gt;);
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; users &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;3&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;BRIAH&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;bhill&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Brian&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Hill&amp;#39;&lt;/span&gt;);
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; users &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;4&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;KEOVO&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;kvongkas&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Keo&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;Vongkaseum&amp;#39;&lt;/span&gt;);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Finally, we need a data table on which to report.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;TABLE&lt;/span&gt; quarterly_sales_data (
-      sequence_number &lt;span style=&#34;color:#038&#34;&gt;NUMBER&lt;/span&gt;,
-      client_id &lt;span style=&#34;color:#038&#34;&gt;NUMBER&lt;/span&gt;,
-      sales_year &lt;span style=&#34;color:#038&#34;&gt;NUMBER&lt;/span&gt;,
-      sales_quarter &lt;span style=&#34;color:#038&#34;&gt;NUMBER&lt;/span&gt;,
-      sales_amount &lt;span style=&#34;color:#038&#34;&gt;NUMBER&lt;/span&gt;);
-
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; quarterly_sales_data &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;100&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2011&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;20000&lt;/span&gt;);
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; quarterly_sales_data &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;100&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2011&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;17500&lt;/span&gt;);
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; quarterly_sales_data &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;3&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;100&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2011&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;3&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;33000&lt;/span&gt;);
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; quarterly_sales_data &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;4&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;200&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2011&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;4500&lt;/span&gt;);
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; quarterly_sales_data &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;5&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;200&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2011&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;7000&lt;/span&gt;);
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; quarterly_sales_data &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;6&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;200&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2011&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;3&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;6300&lt;/span&gt;);
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; quarterly_sales_data &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;7&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;300&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2011&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;11100&lt;/span&gt;);
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; quarterly_sales_data &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;8&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;300&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2011&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;12800&lt;/span&gt;);
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; quarterly_sales_data &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;9&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;300&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2011&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;3&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;14000&lt;/span&gt;);
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; quarterly_sales_data &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;10&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;400&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2011&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;55600&lt;/span&gt;);
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; quarterly_sales_data &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;11&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;400&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2011&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;80000&lt;/span&gt;);
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;INTO&lt;/span&gt; quarterly_sales_data &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;12&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;400&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;2011&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;3&lt;/span&gt;, &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;78500&lt;/span&gt;);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Our basic report query will look something like this:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;SELECT&lt;/span&gt; client_name, sales_year, sales_quarter, sales_amount
-      &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FROM&lt;/span&gt; quarterly_sales_data &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;NATURAL&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;JOIN&lt;/span&gt; clients;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Our Active Directory groups will be TIMCO_GRP, MONEYBROS_GRP, MONACLE_GRP, and SCHMAPPLE_GRP. If a user belongs to one or more of these groups, he has permission to view the respective client&amp;rsquo;s data.&lt;/p&gt;
-
-&lt;p&gt;Now we need a function that returns data from Active Directory. Just to keep it simple we will create a package that hardcodes the group memberships and returns them as collections of various types. We will then look at how table functions can be used to transform each one of those collections into an aggregate result set. (NOTE: querying LDAP directories from PL/SQL is not too difficult, and might serve as the basis for a future blog entry.)&lt;/p&gt;
-
-&lt;p&gt;Here&amp;rsquo;s our function. We&amp;rsquo;ve placed it in a package called LDAP_UTIL.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xxxx&#34; data-lang=&#34;xxxx&#34;&gt;    CREATE OR REPLACE PACKAGE ldap_util AS
-
-      TYPE ldap_entry_typ IS RECORD (
-        cn VARCHAR2(30),
-        description VARCHAR2(1000),
-        distinguished_name VARCHAR2(200),
-        name VARCHAR2(30),
-        samaccountname VARCHAR2(30));
-
-      TYPE ldap_groups_nt IS TABLE OF ldap_entry_typ;
-      TYPE ldap_groups_aa IS TABLE OF ldap_entry_typ INDEX BY PLS_INTEGER;
-      TYPE ldap_groups_va IS VARRAY(100) of ldap_entry_typ;
-
-      FUNCTION get_user_groups_nt (p_user VARCHAR2) RETURN ldap_groups_nt;
-      FUNCTION get_user_groups_aa (p_user VARCHAR2) RETURN ldap_groups_aa;
-      FUNCTION get_user_groups_va (p_user VARCHAR2) RETURN ldap_groups_va;
-
-    END ldap_util;
-    /
-    SHOW ERRORS
-
-    CREATE OR REPLACE PACKAGE BODY ldap_util AS
-
-      FUNCTION get_user_groups_nt (p_user VARCHAR2) RETURN ldap_groups_nt IS
-        l_groups ldap_groups_nt := ldap_groups_nt();
-      BEGIN
-        CASE p_user
-          WHEN &amp;#39;jaugusti&amp;#39; THEN
-
-            l_groups.extend;
-            l_groups(1).cn := &amp;#39;TIMCO_GRP&amp;#39;;
-            l_groups(1).description := &amp;#39;Employees working on the Timco Industries account.&amp;#39;;
-            l_groups(1).distinguished_name := &amp;#39;CN=TIMCO_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;;
-            l_groups(1).name := &amp;#39;TIMCO_GRP&amp;#39;;
-            l_groups(1).samaccountname := &amp;#39;TIMCO_GRP&amp;#39;;
-
-          WHEN &amp;#39;kkidd&amp;#39; THEN
-
-            l_groups.extend;
-            l_groups(1).cn := &amp;#39;MONEYBROS_GRP&amp;#39;;
-            l_groups(1).description := &amp;#39;Employees working on the Moneybros account.&amp;#39;;
-            l_groups(1).distinguished_name := &amp;#39;CN=MONEYBROS_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;;
-            l_groups(1).name := &amp;#39;MONEYBROS_GRP&amp;#39;;
-            l_groups(1).samaccountname := &amp;#39;MONEYBROS_GRP&amp;#39;;
-
-          WHEN &amp;#39;bhill&amp;#39; THEN
-
-            l_groups.extend;
-            l_groups(1).cn := &amp;#39;TIMCO_GRP&amp;#39;;
-            l_groups(1).description := &amp;#39;Employees working on the Timco Industries account.&amp;#39;;
-            l_groups(1).distinguished_name := &amp;#39;CN=TIMCO_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;;
-            l_groups(1).name := &amp;#39;TIMCO_GRP&amp;#39;;
-            l_groups(1).samaccountname := &amp;#39;TIMCO_GRP&amp;#39;;
-
-            l_groups.extend;
-            l_groups(2).cn := &amp;#39;MONACLE_GRP&amp;#39;;
-            l_groups(2).description := &amp;#39;Employees working on the Monacle Corporation account.&amp;#39;;
-            l_groups(2).distinguished_name := &amp;#39;CN=MONACLE_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;;
-            l_groups(2).name := &amp;#39;MONACLE_GRP&amp;#39;;
-            l_groups(2).samaccountname := &amp;#39;MONACLE_GRP&amp;#39;;
-
-          WHEN &amp;#39;kvongkas&amp;#39; THEN
-
-            l_groups.extend;
-            l_groups(1).cn := &amp;#39;MONEYBROS_GRP&amp;#39;;
-            l_groups(1).description := &amp;#39;Employees working on the Moneybros account.&amp;#39;;
-            l_groups(1).distinguished_name := &amp;#39;CN=MONEYBROS_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;;
-            l_groups(1).name := &amp;#39;MONEYBROS_GRP&amp;#39;;
-            l_groups(1).samaccountname := &amp;#39;MONEYBROS_GRP&amp;#39;;
-
-            l_groups.extend;
-            l_groups(2).cn := &amp;#39;MONACLE_GRP&amp;#39;;
-            l_groups(2).description := &amp;#39;Employees working on the Monacle Corporation account.&amp;#39;;
-            l_groups(2).distinguished_name := &amp;#39;CN=MONACLE_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;;
-            l_groups(2).name := &amp;#39;MONACLE_GRP&amp;#39;;
-            l_groups(2).samaccountname := &amp;#39;MONACLE_GRP&amp;#39;;
-
-            l_groups.extend;
-            l_groups(3).cn := &amp;#39;SCHMAPPLE_GRP&amp;#39;;
-            l_groups(3).description := &amp;#39;Employees working on the Schmapple account.&amp;#39;;
-            l_groups(3).distinguished_name := &amp;#39;CN=SCHMAPPLE_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;;
-            l_groups(3).name := &amp;#39;SCHMAPPLE_GRP&amp;#39;;
-            l_groups(3).samaccountname := &amp;#39;SCHMAPPLE_GRP&amp;#39;;
-
-        END CASE;
-        RETURN l_groups;
-      END get_user_groups_nt;
-
-      FUNCTION get_user_groups_aa (p_user VARCHAR2) RETURN ldap_groups_aa IS
-        l_groups ldap_groups_aa;
-      BEGIN
-        CASE p_user
-          WHEN &amp;#39;jaugusti&amp;#39; THEN
-
-            l_groups(1).cn := &amp;#39;TIMCO_GRP&amp;#39;;
-            l_groups(1).description := &amp;#39;Employees working on the Timco Industries account.&amp;#39;;
-            l_groups(1).distinguished_name := &amp;#39;CN=TIMCO_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;;
-            l_groups(1).name := &amp;#39;TIMCO_GRP&amp;#39;;
-            l_groups(1).samaccountname := &amp;#39;TIMCO_GRP&amp;#39;;
-
-          WHEN &amp;#39;kkidd&amp;#39; THEN
-
-            l_groups(1).cn := &amp;#39;MONEYBROS_GRP&amp;#39;;
-            l_groups(1).description := &amp;#39;Employees working on the Moneybros account.&amp;#39;;
-            l_groups(1).distinguished_name := &amp;#39;CN=MONEYBROS_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;;
-            l_groups(1).name := &amp;#39;MONEYBROS_GRP&amp;#39;;
-            l_groups(1).samaccountname := &amp;#39;MONEYBROS_GRP&amp;#39;;
-
-          WHEN &amp;#39;bhill&amp;#39; THEN
-
-            l_groups(1).cn := &amp;#39;TIMCO_GRP&amp;#39;;
-            l_groups(1).description := &amp;#39;Employees working on the Timco Industries account.&amp;#39;;
-            l_groups(1).distinguished_name := &amp;#39;CN=TIMCO_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;;
-            l_groups(1).name := &amp;#39;TIMCO_GRP&amp;#39;;
-            l_groups(1).samaccountname := &amp;#39;TIMCO_GRP&amp;#39;;
-
-            l_groups(2).cn := &amp;#39;MONACLE_GRP&amp;#39;;
-            l_groups(2).description := &amp;#39;Employees working on the Monacle Corporation account.&amp;#39;;
-            l_groups(2).distinguished_name := &amp;#39;CN=MONACLE_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;;
-            l_groups(2).name := &amp;#39;MONACLE_GRP&amp;#39;;
-            l_groups(2).samaccountname := &amp;#39;MONACLE_GRP&amp;#39;;
-
-          WHEN &amp;#39;kvongkas&amp;#39; THEN
-
-            l_groups(1).cn := &amp;#39;MONEYBROS_GRP&amp;#39;;
-            l_groups(1).description := &amp;#39;Employees working on the Moneybros account.&amp;#39;;
-            l_groups(1).distinguished_name := &amp;#39;CN=MONEYBROS_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;;
-            l_groups(1).name := &amp;#39;MONEYBROS_GRP&amp;#39;;
-            l_groups(1).samaccountname := &amp;#39;MONEYBROS_GRP&amp;#39;;
-
-            l_groups(2).cn := &amp;#39;MONACLE_GRP&amp;#39;;
-            l_groups(2).description := &amp;#39;Employees working on the Monacle Corporation account.&amp;#39;;
-            l_groups(2).distinguished_name := &amp;#39;CN=MONACLE_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;;
-            l_groups(2).name := &amp;#39;MONACLE_GRP&amp;#39;;
-            l_groups(2).samaccountname := &amp;#39;MONACLE_GRP&amp;#39;;
-
-            l_groups(3).cn := &amp;#39;SCHMAPPLE_GRP&amp;#39;;
-            l_groups(3).description := &amp;#39;Employees working on the Schmapple account.&amp;#39;;
-            l_groups(3).distinguished_name := &amp;#39;CN=SCHMAPPLE_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;;
-            l_groups(3).name := &amp;#39;SCHMAPPLE_GRP&amp;#39;;
-            l_groups(3).samaccountname := &amp;#39;SCHMAPPLE_GRP&amp;#39;;
-
-        END CASE;
-        RETURN l_groups;
-      END get_user_groups_aa;
-
-      FUNCTION get_user_groups_va (p_user VARCHAR2) RETURN ldap_groups_va IS
-        l_groups ldap_groups_va := ldap_groups_va();
-      BEGIN
-        CASE p_user
-          WHEN &amp;#39;jaugusti&amp;#39; THEN
-
-            l_groups.extend;
-            l_groups(1).cn := &amp;#39;TIMCO_GRP&amp;#39;;
-            l_groups(1).description := &amp;#39;Employees working on the Timco Industries account.&amp;#39;;
-            l_groups(1).distinguished_name := &amp;#39;CN=TIMCO_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;;
-            l_groups(1).name := &amp;#39;TIMCO_GRP&amp;#39;;
-            l_groups(1).samaccountname := &amp;#39;TIMCO_GRP&amp;#39;;
-
-          WHEN &amp;#39;kkidd&amp;#39; THEN
-
-            l_groups.extend;
-            l_groups(1).cn := &amp;#39;MONEYBROS_GRP&amp;#39;;
-            l_groups(1).description := &amp;#39;Employees working on the Moneybros account.&amp;#39;;
-            l_groups(1).distinguished_name := &amp;#39;CN=MONEYBROS_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;;
-            l_groups(1).name := &amp;#39;MONEYBROS_GRP&amp;#39;;
-            l_groups(1).samaccountname := &amp;#39;MONEYBROS_GRP&amp;#39;;
-
-          WHEN &amp;#39;bhill&amp;#39; THEN
-
-            l_groups.extend;
-            l_groups(1).cn := &amp;#39;TIMCO_GRP&amp;#39;;
-            l_groups(1).description := &amp;#39;Employees working on the Timco Industries account.&amp;#39;;
-            l_groups(1).distinguished_name := &amp;#39;CN=TIMCO_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;;
-            l_groups(1).name := &amp;#39;TIMCO_GRP&amp;#39;;
-            l_groups(1).samaccountname := &amp;#39;TIMCO_GRP&amp;#39;;
-
-            l_groups.extend;
-            l_groups(2).cn := &amp;#39;MONACLE_GRP&amp;#39;;
-            l_groups(2).description := &amp;#39;Employees working on the Monacle Corporation account.&amp;#39;;
-            l_groups(2).distinguished_name := &amp;#39;CN=MONACLE_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;;
-            l_groups(2).name := &amp;#39;MONACLE_GRP&amp;#39;;
-            l_groups(2).samaccountname := &amp;#39;MONACLE_GRP&amp;#39;;
-
-          WHEN &amp;#39;kvongkas&amp;#39; THEN
-
-            l_groups.extend;
-            l_groups(1).cn := &amp;#39;MONEYBROS_GRP&amp;#39;;
-            l_groups(1).description := &amp;#39;Employees working on the Moneybros account.&amp;#39;;
-            l_groups(1).distinguished_name := &amp;#39;CN=MONEYBROS_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;;
-            l_groups(1).name := &amp;#39;MONEYBROS_GRP&amp;#39;;
-            l_groups(1).samaccountname := &amp;#39;MONEYBROS_GRP&amp;#39;;
-
-            l_groups.extend;
-            l_groups(2).cn := &amp;#39;MONACLE_GRP&amp;#39;;
-            l_groups(2).description := &amp;#39;Employees working on the Monacle Corporation account.&amp;#39;;
-            l_groups(2).distinguished_name := &amp;#39;CN=MONACLE_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;;
-            l_groups(2).name := &amp;#39;MONACLE_GRP&amp;#39;;
-            l_groups(2).samaccountname := &amp;#39;MONACLE_GRP&amp;#39;;
-
-            l_groups.extend;
-            l_groups(3).cn := &amp;#39;SCHMAPPLE_GRP&amp;#39;;
-            l_groups(3).description := &amp;#39;Employees working on the Schmapple account.&amp;#39;;
-            l_groups(3).distinguished_name := &amp;#39;CN=SCHMAPPLE_GRP,OU=Global Groups,DC=acme,DC=com&amp;#39;;
-            l_groups(3).name := &amp;#39;SCHMAPPLE_GRP&amp;#39;;
-            l_groups(3).samaccountname := &amp;#39;SCHMAPPLE_GRP&amp;#39;;
-
-        END CASE;
-        RETURN l_groups;
-      END get_user_groups_va;
-
-    END ldap_util;
-    /
-    SHOW ERRORS&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;As you can see, LDAP_UTIL has three functions that return the three kinds of collections in PL/SQL: nested tables, associative arrays, and varrays.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FUNCTION&lt;/span&gt; get_user_groups_nt (p_user VARCHAR2) &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;RETURN&lt;/span&gt; ldap_groups_nt;
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FUNCTION&lt;/span&gt; get_user_groups_aa (p_user VARCHAR2) &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;RETURN&lt;/span&gt; ldap_groups_aa;
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FUNCTION&lt;/span&gt; get_user_groups_va (p_user VARCHAR2) &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;RETURN&lt;/span&gt; ldap_groups_va;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;The collections consist of a group of records representing &amp;ldquo;group&amp;rdquo; data from Active Directory.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;TYPE&lt;/span&gt; ldap_entry_typ &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;IS&lt;/span&gt; RECORD (
-        cn VARCHAR2(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;30&lt;/span&gt;),
-        description VARCHAR2(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1000&lt;/span&gt;),
-        distinguished_name VARCHAR2(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;200&lt;/span&gt;),
-        name VARCHAR2(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;30&lt;/span&gt;),
-        samaccountname VARCHAR2(&lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;30&lt;/span&gt;));&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;The p_user parameter would be the user&amp;rsquo;s network id, corresponding to the sAMAccountName attribute in Active Directory; since we&amp;rsquo;re hardcoding group data this is not important to us at the moment. The point is you pass in a username and you get a collection of groups.&lt;/p&gt;
-
-&lt;p&gt;Using the same technique we demonstrated in part one, we now create a wrapper package of pipelined functions to transform the collection data into something we can query - an aggregate result set.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;OR&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;REPLACE&lt;/span&gt; PACKAGE ldap_util_pipelined &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;AS&lt;/span&gt;
-
-      &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FUNCTION&lt;/span&gt; get_user_groups_nt (p_user VARCHAR2) &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;RETURN&lt;/span&gt; ldap_util.ldap_groups_nt PIPELINED;
-      &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FUNCTION&lt;/span&gt; get_user_groups_aa (p_user VARCHAR2) &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;RETURN&lt;/span&gt; ldap_util.ldap_groups_nt PIPELINED;
-      &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FUNCTION&lt;/span&gt; get_user_groups_va (p_user VARCHAR2) &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;RETURN&lt;/span&gt; ldap_util.ldap_groups_va PIPELINED;
-
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;END&lt;/span&gt; ldap_util_pipelined;
-    /
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;SHOW&lt;/span&gt; ERRORS
-
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;OR&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;REPLACE&lt;/span&gt; PACKAGE BODY ldap_util_pipelined &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;AS&lt;/span&gt;
-
-      &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FUNCTION&lt;/span&gt; get_user_groups_nt (p_user VARCHAR2)
-      &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;RETURN&lt;/span&gt; ldap_util.ldap_groups_nt PIPELINED &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;IS&lt;/span&gt;
-        l_groups ldap_util.ldap_groups_nt;
-      &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;BEGIN&lt;/span&gt;
-        l_groups := ldap_util.get_user_groups_nt(p_user);
-        &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FOR&lt;/span&gt; i &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;IN&lt;/span&gt; &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1&lt;/span&gt; .. l_groups.&lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;count&lt;/span&gt; LOOP
-          PIPE &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;ROW&lt;/span&gt; (l_groups(i));
-        &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;END&lt;/span&gt; LOOP;
-        &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;RETURN&lt;/span&gt;;
-      &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;END&lt;/span&gt; get_user_groups_nt;
-
-      &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FUNCTION&lt;/span&gt; get_user_groups_aa (p_user VARCHAR2)
-      &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;RETURN&lt;/span&gt; ldap_util.ldap_groups_nt PIPELINED &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;IS&lt;/span&gt;
-        l_groups ldap_util.ldap_groups_aa;
-      &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;BEGIN&lt;/span&gt;
-        l_groups := ldap_util.get_user_groups_aa(p_user);
-        &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FOR&lt;/span&gt; i &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;IN&lt;/span&gt; &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1&lt;/span&gt; .. l_groups.&lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;count&lt;/span&gt; LOOP
-          PIPE &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;ROW&lt;/span&gt; (l_groups(i));
-        &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;END&lt;/span&gt; LOOP;
-        &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;RETURN&lt;/span&gt;;
-      &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;END&lt;/span&gt; get_user_groups_aa;
-
-      &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FUNCTION&lt;/span&gt; get_user_groups_va (p_user VARCHAR2)
-      &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;RETURN&lt;/span&gt; ldap_util.ldap_groups_va PIPELINED &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;IS&lt;/span&gt;
-        l_groups ldap_util.ldap_groups_va;
-      &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;BEGIN&lt;/span&gt;
-        l_groups := ldap_util.get_user_groups_va(p_user);
-        &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FOR&lt;/span&gt; i &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;IN&lt;/span&gt; &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;1&lt;/span&gt; .. l_groups.&lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;count&lt;/span&gt; LOOP
-          PIPE &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;ROW&lt;/span&gt; (l_groups(i));
-        &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;END&lt;/span&gt; LOOP;
-        &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;RETURN&lt;/span&gt;;
-      &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;END&lt;/span&gt; get_user_groups_va;
-
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;END&lt;/span&gt; ldap_util_pipelined;
-    /
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;SHOW&lt;/span&gt; ERRORS&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Note the return types of the three functions in ldap_util_pipelined.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FUNCTION&lt;/span&gt; get_user_groups_nt (p_user VARCHAR2) &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;RETURN&lt;/span&gt; ldap_util.ldap_groups_nt PIPELINED;
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FUNCTION&lt;/span&gt; get_user_groups_aa (p_user VARCHAR2) &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;RETURN&lt;/span&gt; ldap_util.ldap_groups_nt PIPELINED;
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FUNCTION&lt;/span&gt; get_user_groups_va (p_user VARCHAR2) &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;RETURN&lt;/span&gt; ldap_util.ldap_groups_va PIPELINED;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;The first two return a nested table collection, while the third returns a VARRAY. These two collections can be pipelined because they correspond to native SQL datatypes in Oracle; not so for associative arrays. In order to pipeline the associative array returned from ldap_util.get_user_groups_aa, we need to map that collection to one of the other types. Here, we map it to a nested table. The iterative logic is the same, though, as the other two functions.&lt;/p&gt;
-
-&lt;p&gt;Now we can verify that our approach worked by issuing some simple queries, supported by the SQL &amp;ldquo;TABLE&amp;rdquo; construct.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;SQL&lt;/span&gt;&amp;gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;select&lt;/span&gt; * &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;table&lt;/span&gt;(ldap_util_pipelined.get_user_groups_nt(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;jaugusti&amp;#39;&lt;/span&gt;));
-
-    CN        DESCRIPTION                                        DISTINGUISHED_NAME                            NAME      SAMACCOUN
-    &lt;span style=&#34;color:#888&#34;&gt;--------- -------------------------------------------------- --------------------------------------------- --------- ---------
-&lt;/span&gt;&lt;span style=&#34;color:#888&#34;&gt;&lt;/span&gt;    TIMCO_GRP Employees working &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;on&lt;/span&gt; the Timco Industries account. CN=TIMCO_GRP,OU=&lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;Global&lt;/span&gt; Groups,DC=acme,DC=com  TIMCO_GRP TIMCO_GRP&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;As you can see, the individual attributes of the record structure form the columns of our new table, and we can reference those columns directly, if we wish.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;SQL&lt;/span&gt;&amp;gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;select&lt;/span&gt; cn &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;table&lt;/span&gt;(ldap_util_pipelined.get_user_groups_nt(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;kvongkas&amp;#39;&lt;/span&gt;));
-
-    CN
-    &lt;span style=&#34;color:#888&#34;&gt;---------------
-&lt;/span&gt;&lt;span style=&#34;color:#888&#34;&gt;&lt;/span&gt;    MONEYBROS_GRP
-    MONACLE_GRP
-    SCHMAPPLE_GRP&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;All that&amp;rsquo;s left for us at this point is to construct a WHERE clause condition to use with Oracle&amp;rsquo;s Virtual Private Database feature to limit data returned from queries against the table QUARTERLY_SALES_DATA. That condition could look something like this, assuming that our application connects to the database as the logged in user.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    client_id &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;IN&lt;/span&gt; (&lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;SELECT&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;CASE&lt;/span&gt; cn
-                           &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;WHEN&lt;/span&gt; &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;TIMCO_GRP&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;THEN&lt;/span&gt; &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;100&lt;/span&gt;
-                           &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;WHEN&lt;/span&gt; &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;MONEYBROS_GRP&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;THEN&lt;/span&gt; &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;200&lt;/span&gt;
-                           &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;WHEN&lt;/span&gt; &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;MONACLE_GRP&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;THEN&lt;/span&gt; &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;300&lt;/span&gt;
-                           &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;WHEN&lt;/span&gt; &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;SCHMAPPLE_GRP&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;THEN&lt;/span&gt; &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;400&lt;/span&gt;
-                         &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;END&lt;/span&gt;
-                    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;TABLE&lt;/span&gt;(ldap_util_pipelined.get_user_groups_nt(&lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;USER&lt;/span&gt;)))&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Here the mapping between AD group name and client ID is hardcoded in the CASE expression. A more flexible way would be to create a mapping table. Also, this is probably not a case study in writing a well performing VPD clause, but the real point here is that using SQL table functions and PL/SQL pipelined functions, we can translate data retrieved from an API, LDAP directory, or web service into table-like structures that we can query, join, and otherwise manipulate just like real tables.&lt;/p&gt;
-</description>
-          </item>
-        
-      
+    <item>
+      <title>Invalidating Toplink Session Cache To Avoid Stale Data</title>
+      <link>http://localhost:1313/blog/2012/03/09/invalidating-toplink-session-cache-to-avoid-stale-data/</link>
+      <pubDate>Fri, 09 Mar 2012 18:42:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/blog/2012/03/09/invalidating-toplink-session-cache-to-avoid-stale-data/</guid>
+      <description>Toplink is a Java framework that maps objects to database tables. It is the reference implementation for the Java Persistence Architecture, or JPA. Developers use Toplink to manage data persistence (storage), queries, and transactions in an Oracle database. By default, Toplink makes use of a special cache called a Session Cache, maintained on the server, which is meant to speed up performance. Queried data is stored in the Session Cache and used in subsequent queries to reduce or eliminate calls to the database.</description>
+    </item>
     
   </channel>
 </rss>

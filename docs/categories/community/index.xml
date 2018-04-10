@@ -2,213 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Community on Tobybase: A Tech Blog</title>
-    <link>http://tobybase.com/categories/community/</link>
+    <link>http://localhost:1313/categories/community/</link>
     <description>Recent content in Community on Tobybase: A Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>2017 ~ Toby Marks</copyright>
+    <managingEditor>toby.marks@infolob.com (Toby Marks)</managingEditor>
+    <webMaster>toby.marks@infolob.com (Toby Marks)</webMaster>
     <lastBuildDate>Wed, 27 Jun 2012 21:39:00 +0000</lastBuildDate>
-    <atom:link href="/categories/community/" rel="self" type="application/rss+xml" />
     
-      
-        
-          <item>
-            <title>OS X Software for Oracle Developers</title>
-            <link>http://tobybase.com/blog/2012/06/27/os-x-software-for-oracle-developers/</link>
-            <pubDate>Wed, 27 Jun 2012 21:39:00 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2012/06/27/os-x-software-for-oracle-developers/</guid>
-            <description>
-
-&lt;p&gt;One of the great things about working for &lt;a href=&#34;http://www.enkitec.com/&#34;&gt;Enkitec&lt;/a&gt; is that it&amp;rsquo;s a very Mac-friendly shop. When I arrived there in 2007 there were a handful of us running Macs and the attitude at the top seemed to be respectful, but skeptical. They allowed me to use my own laptop, which at the time was a 15-inch Intel Core2 Duo Macbook Pro, with the understanding that I could request a standard-issue Dell laptop at any time should the need arise. It never did. Since that time a large number of my coworkers have made the switch, abandoning their bulky, slow Dell Latitude laptops for 13-inch Macbook Pros, as have both owners of the company.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;ve been a Mac user since 1998, since the advent of the original &lt;a href=&#34;http://en.wikipedia.org/wiki/IMac_G3&#34;&gt;bondi blue iMac&lt;/a&gt;, a machine that I greatly loved, as far as you can love a machine (and no farther!). I&amp;rsquo;ve used a Mac at work since about the year 2000, a good while before &lt;a href=&#34;http://en.wikipedia.org/wiki/OS_X&#34;&gt;OS X&lt;/a&gt; really hit the mainstream. Back in those days about the only thing I could hope to accomplish on it at the office was email, iTunes, looking up something on the internet, and running an &lt;code&gt;SSH&lt;/code&gt; session or two. Still, I faithfully carried my little &lt;a href=&#34;http://www.everymac.com/systems/apple/ibook/specs/ibook_900_14.html&#34;&gt;white plastic iBook G3&lt;/a&gt; to work every day just because I enjoyed using the damn thing so much. I looked for any opportunity at all to integrate it into whatever I was doing at work. Over the years that came to include more and more stuff. I still remember how excited I was the day Oracle Applications earned &lt;a href=&#34;http://support.apple.com/kb/DL1184?viewlocale=en_US&amp;amp;locale=en_US&#34;&gt;Gold Certification on OS 9&lt;/a&gt;! Woohoo! I desperately needed a life.&lt;/p&gt;
-
-&lt;p&gt;The advent and acceptance of OS X changed everything. The Unix underpinnings gave legitimacy to the Mac as a serious &amp;ldquo;office&amp;rdquo; platform. I went from using my laptop as a toy to using it as a companion system, then a few years later as my primary system, then finally as my only system. Likewise, the number of Windows applications I needed to run on a daily basis, even in VMWare, was reduced from several to none. Hallelujah. In the same timeframe I also went from being the &amp;ldquo;office mac weirdo&amp;rdquo; to one of several &amp;ldquo;elite mac-using jackasses&amp;rdquo;, to just another one of the guys. Or so they tell me to my face.&lt;/p&gt;
-
-&lt;p&gt;One of the questions I&amp;rsquo;m asked most often by coworkers &lt;a href=&#34;http://www.youtube.com/watch?v=l2-UuIEOcss&#34;&gt;switching to the Mac&lt;/a&gt; is what software they should download first. This is my list.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;[Note: I provide links to the developer&amp;rsquo;s sites, but many of these apps are available in the App Store.]&lt;/em&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;crucial-stuff&#34;&gt;Crucial Stuff&lt;/h2&gt;
-
-&lt;p&gt;These are the tools any Mac user, but particularly those working in IT, should have in their arsenal.&lt;/p&gt;
-
-&lt;p&gt;&lt;span style=&#34;text-decoration:line-through&#34;&gt;* &lt;a href=&#34;http://manytricks.com/butler/&#34;&gt;Butler&lt;/a&gt;&lt;/span&gt;&lt;br /&gt;
-&lt;span style=&#34;text-decoration:line-through&#34;&gt; The one and only truly critical app in this list, Butler is an application launcher, search tool, universal bookmark manager, iTunes remote controller, Applescript launcher, keyboard macro tool, pasteboard manager and more. It puts the contents of your Mac at your fingertips and I couldn&amp;rsquo;t imagine using a computer without it. Indispensable.&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Update:&lt;/em&gt; Since I wrote this article I&amp;rsquo;ve made the switch to &lt;a href=&#34;http://www.alfredapp.com&#34;&gt;Alfred&lt;/a&gt; for accomplishing essentially the same tasks. I was a longtime Butler user and supporter, even while more popular apps like &lt;a href=&#34;http://qsapp.com&#34;&gt;Quicksilver&lt;/a&gt; came and went(?), but it has become evident that Butler is no longer being actively developed, while Alfred continues to add significant new functionality, like the enhanced scripting capabilities in version 2.0. There is currently a sizable community of people &lt;a href=&#34;http://www.alfredforum.com/forum/3-share-your-workflows/&#34;&gt;developing sophisticated workflows&lt;/a&gt; for Alfred, but the most compelling feature is the integration with 1Password (see below) that allows you to open and log in to your password protected web sites using a keyboard shortcut. My only complaint is that I preferred the iTunes automation in Butler (also found in Alfred, but works differently), but I imagine Butler&amp;rsquo;s conceits could be mimicked by using a custom workflow in Alfred.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://agilebits.com/onepassword/mac&#34;&gt;1Password&lt;/a&gt;&lt;br /&gt;
-Universal password manager, syncs with iPad and iPhone version. Use it to store the hundreds of passwords you accumulate both personally and on the job. A plugin for Safari, Chrome, and Firefox handles automatic entry of password credentials on websites you visit.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.microsoft.com/mac&#34;&gt;MS Office&lt;/a&gt;&lt;br /&gt;
-Or at least just Word and Excel. &lt;em&gt;Never&lt;/em&gt; use Powerpoint. See below. It&amp;rsquo;s true that there are plenty of alternatives these days like OpenOffice, LibreOffice, Google Docs, etc., but unless everybody in your workplace has standardized on those tools, you&amp;rsquo;re bound to run across conversion issues that can sometimes be a serious nuisance.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.apple.com/iwork/&#34;&gt;iWork&lt;/a&gt;&lt;br /&gt;
-Yes, I recommend both office suites, as Pages is vastly superior to Word as a composition tool and Keynote simply demolishes Powerpoint for presentations. Faster, lighter, easier to use — the whole iWork suite is worth it just for Keynote. Companion apps for iPad and iPhone are cheap and automatically sync your documents. Personally I use always use Keynote for creating presentations and working with Powerpoint slideshows, I use Pages whenever I can, and I use Numbers when I want to create a visually sharp chart/spreadsheet combo for presentations that I won&amp;rsquo;t be handing off to other people to modify.&lt;/p&gt;
-
-&lt;p&gt;&lt;span style=&#34;text-decoration:line-through&#34;&gt;&lt;a href=&#34;http://growl.info/&#34;&gt;Growl&lt;/a&gt;&lt;/span&gt;
-&lt;span style=&#34;text-decoration:line-through&#34;&gt;Perhaps soon to be obsoleted by the new &lt;a href=&#34;http://www.apple.com/osx/whats-new/features.html#notification&#34;&gt;Notification Center&lt;/a&gt; feature of &lt;a href=&#34;http://www.apple.com/osx/&#34;&gt;OS X Mountain Lion&lt;/a&gt;, Growl provides a heads-up display for various things happening on the Mac. I use it mostly for email notifications, but the feedback it provides when attaching an external device or connecting to a network is often helpful.&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Update:&lt;/em&gt; Dead in the water. Absorbed into notifications in Mountain Lion.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.barebones.com/products/bbedit/&#34;&gt;BBEdit&lt;/a&gt;/&lt;a href=&#34;http://www.barebones.com/products/textwrangler/&#34;&gt;TextWrangler&lt;/a&gt;&lt;br /&gt;
-A good text editor goes a very long way, as any coder can tell you. Some people &lt;a href=&#34;http://www.43folders.com/2005/12/12/text-setup&#34;&gt;organize their whole lives&lt;/a&gt; with text files, though. Emacs is also available, but it doesn&amp;rsquo;t have the Mac sensibilities of this storied old tool. If you&amp;rsquo;d rather not spend the money, TextWrangler is the free, stripped-down counterpart.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://evernote.com/evernote/&#34;&gt;Evernote&lt;/a&gt;&lt;br /&gt;
-Solves the problem of how to catalog, archive, and make available the vast library of information you accumulate over the years. Companion apps for iPad and iPhone put all your information at your fingertips. Can also be used as a collaborative tool for teams.&lt;/p&gt;
-
-&lt;h2 id=&#34;software-for-the-oracle-developer&#34;&gt;Software for the Oracle Developer&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.oracle.com/technetwork/developer-tools/sql-developer/overview/index.html&#34;&gt;SQL Developer&lt;/a&gt;&lt;br /&gt;
-Oracle&amp;rsquo;s free tool for SQL and PL/SQL development.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://netbeans.org/&#34;&gt;NetBeans&lt;/a&gt; and/or &lt;a href=&#34;http://www.oracle.com/technetwork/developer-tools/jdev/overview/index.html&#34;&gt;JDeveloper&lt;/a&gt;&lt;br /&gt;
-For J2EE development. Netbeans is the better tool, IMO, unless you need to work with &lt;a href=&#34;http://www.oracle.com/technetwork/developer-tools/adf/overview/index.html&#34;&gt;Oracle ADF&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.virtualbox.org/&#34;&gt;VirtualBox&lt;/a&gt;&lt;br /&gt;
-I&amp;rsquo;ve used VMWare Fusion for years and recently tried VirtualBox to take advantage of &lt;a href=&#34;http://www.oracle.com/technetwork/community/developer-vm/index.html&#34;&gt;Oracle&amp;rsquo;s developer VMs&lt;/a&gt;, and have been impressed with the performance and configurability. Beat&amp;rsquo;s VMWare&amp;rsquo;s price, as well.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.oracle.com/technetwork/topics/intel-macsoft-096467.html&#34;&gt;Oracle 10g Instant Client&lt;/a&gt;&lt;br /&gt;
-Can&amp;rsquo;t beat the convenience of being able to connect to a database without having to boot a VM.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://cord.sourceforge.net/&#34;&gt;CoRD&lt;/a&gt;&lt;br /&gt;
-For remote desktop (RDP) connections. Traditionally, it&amp;rsquo;s been a better, more reliable option than &lt;a href=&#34;http://www.microsoft.com/mac/remote-desktop-client&#34;&gt;Microsoft&amp;rsquo;s Remote Desktop app&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.citrix.com/English/ss/downloads/details.asp?downloadId=2323407&amp;amp;productId=1689163&#34;&gt;Citrix Receiver&lt;/a&gt;&lt;br /&gt;
-Needed If your company publishes corporate apps with Citrix Webapps, and many do.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://visualvm.java.net/&#34;&gt;VisualVM&lt;/a&gt;&lt;br /&gt;
-Performance analysis/debugging tool for Java apps.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://directory.apache.org/studio/&#34;&gt;Apache Directory Studio&lt;/a&gt;&lt;br /&gt;
-A useful and fully-featured LDAP tool.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.wireshark.org/&#34;&gt;Wireshark&lt;/a&gt;&lt;br /&gt;
-Packet sniffer.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.syntevo.com/smartcvs/index.html&#34;&gt;SmartCVS&lt;/a&gt;/&lt;a href=&#34;http://www.syntevo.com/smartsvn/index.html&#34;&gt;SmartSVN&lt;/a&gt;&lt;br /&gt;
- My tools of choice for easy source code manaagement.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.macports.org/&#34;&gt;MacPorts&lt;/a&gt;&lt;br /&gt;
-Download and compile Unix software.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.amazon.com/gp/feature.html/ref=kcp_mac_mkt_lnd?docId=1000464931&#34;&gt;Kindle&lt;/a&gt; /&lt;a href=&#34;http://www.amazon.com/gp/feature.html/?docId=1000778781&#34;&gt;Send to Kindle&lt;/a&gt;&lt;br /&gt;
-Take advantage of Kindle&amp;rsquo;s massive collection of technical ebooks. The &amp;lsquo;Send to Kindle&amp;rsquo; tool allows you to upload your own PDFs for reading in the Kindle app.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.bruji.com/bwana/&#34;&gt;Bwana&lt;/a&gt;&lt;br /&gt;
-Read &lt;code&gt;man&lt;/code&gt; pages in a browser window.&lt;/p&gt;
-
-&lt;h2 id=&#34;productivity-apps&#34;&gt;Productivity Apps&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.omnigroup.com/products/omnifocus/&#34;&gt;OmniFocus&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://www.davidco.com/about-gtd&#34;&gt;GTD&lt;/a&gt; task/life management tool. Companion apps for iPhone, iPad keep everything in sync and support location-based notes.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://flyingmeat.com/acorn/&#34;&gt;Acorn&lt;/a&gt;&lt;br /&gt;
-Also might have chosen &lt;a href=&#34;http://www.pixelmator.com/&#34;&gt;Pixelmator&lt;/a&gt;, but this is the one I own. Almost everybody could use a good image editor at some time or other. Pixelmator is supposed to be closer to Photoshop.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://skitch.com/&#34;&gt;Skitch&lt;/a&gt;&lt;br /&gt;
-Screenshot markup tool. Integrates with &lt;a href=&#34;http://www.evernote.com/evernote/&#34;&gt;Evernote&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;for-sharing-and-collaboration&#34;&gt;For Sharing and Collaboration&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.dropbox.com/downloading?os=mac&#34;&gt;Dropbox&lt;/a&gt;&lt;br /&gt;
-Disk space in the cloud with sharing and privacy features. Integrates with many applications on Mac, iPhone, iPad.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://spideroak.com/&#34;&gt;SpiderOak&lt;/a&gt;&lt;br /&gt;
-More secure alternative to Dropbox for sensitive files.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.wuala.com/&#34;&gt;Wuala&lt;/a&gt;&lt;br /&gt;
-Another secure cloud-based storage option.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.wellredapps.com/products/dropkey/&#34;&gt;DropKey&lt;/a&gt;&lt;br /&gt;
-A brain dead easy way to send secure, encrypted email attachments!&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.skype.com/intl/en-us/get-skype/on-your-computer/macosx/&#34;&gt;Skype&lt;/a&gt;&lt;br /&gt;
-Video phone for talking to your PC-using buddies. For your Mac brothers you should use &lt;a href=&#34;http://www.apple.com/mac/facetime/&#34;&gt;Facetime&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.google.com/+/learnmore/hangouts/&#34;&gt;Google Hangouts&lt;/a&gt;&lt;br /&gt;
-I have some anecdotal evidence that this may be a more stable video conferencing solution than Skype. I&amp;rsquo;ll update as I gain more experience using the two.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.teamviewer.com/en/download/index.aspx&#34;&gt;TeamViewer&lt;/a&gt;&lt;br /&gt;
-Free screen sharing software, if you don&amp;rsquo;t have access to &lt;a href=&#34;http://www.gotomeeting.com/&#34;&gt;GoToMeeting&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;system-tools&#34;&gt;System Tools&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.ragingmenace.com/software/menumeters/&#34;&gt;MenuMeters&lt;/a&gt;&lt;br /&gt;
-Lightweight system monitor that sits in the menu bar. Measures CPU, memory, network, and disk usage.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.shirt-pocket.com/SuperDuper/SuperDuperDescription.html&#34;&gt;SuperDuper!&lt;/a&gt;&lt;br /&gt;
-Creates bootable, up-to-date copies of your entire hard drive! Great, possibly indispensable, for recovering from a hard disk failure. Can also be used just to sync disk contents. Only copies changed data during file sync. Very efficient.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.coriolis-systems.com/iDefrag.php/&#34;&gt;iDefrag&lt;/a&gt;&lt;br /&gt;
-Defrag utility. You shouldn&amp;rsquo;t need to do it ever in OS X, but I&amp;rsquo;m hoping it prolongs the life of my hard drive. Anybody got any real statistics on that? By the way don&amp;rsquo;t try this on an SSD drive! It&amp;rsquo;ll decrease the life of the drive.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.coriolis-systems.com/iPartition.php&#34;&gt;iPartition&lt;/a&gt;&lt;br /&gt;
-Disk Utility does pretty much everything this app does, except for allowing you to partition a disk without data loss. Unfortunately, this will not work if the disk is too full or badly fragmented. That&amp;rsquo;s when iDefrag really comes in handy.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://rixstep.com/4/0/clix/&#34;&gt;CLIX&lt;/a&gt;&lt;br /&gt;
-GUI tool for executing Unix commands. Comes with a large library of useful commands, including many Mac-specific ones. Can be used as a learning tool and you can add your own scripts.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.omnigroup.com/products/omnidisksweeper/&#34;&gt;OmniDiskSweeper&lt;/a&gt; and/or &lt;a href=&#34;http://grandperspectiv.sourceforge.net/&#34;&gt;GrandPerspective&lt;/a&gt;&lt;br /&gt;
-Analyze the contents and sizes of the stuff on your hard drive. GrandPerspective provides a better visualization, but you don&amp;rsquo;t always need the &amp;ldquo;fluff&amp;rdquo;.&lt;/p&gt;
-
-&lt;h2 id=&#34;internet-tools&#34;&gt;Internet Tools&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://nolobe.com/interarchy/&#34;&gt;Interarchy&lt;/a&gt;&lt;br /&gt;
-FTP/SFTP tool with numerous useful features. Download an entire website or keep remote sites in sync with local folders. &lt;a href=&#34;http://panic.com/transmit/&#34;&gt;Transmit&lt;/a&gt; is also popular.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.google.com/mac/&#34;&gt;Chrome&lt;/a&gt;&lt;br /&gt;
-The web browser. (I use Webkit.)&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.mozilla.org/en-US/firefox/new/&#34;&gt;Firefox&lt;/a&gt;&lt;br /&gt;
-The web browser. (See above.)&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://nightly.webkit.org/&#34;&gt;Webkit&lt;/a&gt;&lt;br /&gt;
-See what&amp;rsquo;s coming down the pipe in Safari.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.transmissionbt.com/&#34;&gt;Transmission&lt;/a&gt;&lt;br /&gt;
-BitTorrent client.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.videolan.org/vlc/download-macosx.html&#34;&gt;VLC&lt;/a&gt;&lt;br /&gt;
-Open source media player. Plays a wide variety of formats.&lt;/p&gt;
-
-&lt;h2 id=&#34;if-you-have-the-money&#34;&gt;If You Have The Money&amp;hellip;&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.smilesoftware.com/PDFpenPro/&#34;&gt;PDFPenPro&lt;/a&gt;&lt;br /&gt;
-Create, edit, sign, mark up, footnote, redact, and otherwise manipulate PDFs. Also does OCR and tables of contents. Very nice tool. Companion app for iPad.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.omnigroup.com/products/omnigraffle/&#34;&gt;OmniGraffle&lt;/a&gt;&lt;br /&gt;
-Like Visio, only a thousand times better. The Omni Group&amp;rsquo;s flagship product. Wish very much I owned this one.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.omnigroup.com/products/omniplan/&#34;&gt;OmniPlan&lt;/a&gt;&lt;br /&gt;
-Does to MS Project what Keynote does to Powerpoint. Bought my copy a few versions back when it was far less expensive, and it still has all the project tracking features I need.&lt;/p&gt;
-
-&lt;h2 id=&#34;obscure-use-cases&#34;&gt;Obscure Use Cases&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://cutedgesystems.com/software/MailServeForLion/&#34;&gt;MailServe for Lion&lt;/a&gt;&lt;br /&gt;
-Automates configuration of OS X&amp;rsquo;s built in Postfix mail server. I&amp;rsquo;ve had to use this in the past when I was unable to connect to the corporate email server and didn&amp;rsquo;t want to send files through Gmail. (Did I mention I despise most web mail clients?)&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.joshjacob.com/mac-development/tnef.php&#34;&gt;TNEF&amp;rsquo;s Enough&lt;/a&gt;&lt;br /&gt;
-Used it once to extract the Word document embedded in a &lt;code&gt;winmail.dat&lt;/code&gt; attachment from MS Outlook.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.arrowbit.com/info/pstbridgepro&#34;&gt;PST Bridge&lt;/a&gt;&lt;br /&gt;
-Used convert or read PST files (basically mail archives) generated by MS Outlook.&lt;/p&gt;
-
-&lt;h2 id=&#34;just-for-fun&#34;&gt;Just for Fun&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.blacktree.com/&#34;&gt;Nocturne&lt;/a&gt;&lt;br /&gt;
-Invert your screen colors to reduce strain on the eyes at night, or to conserve battery power. Neat effect.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.bannister.org/software/ao.htm&#34;&gt;Audio Overload&lt;/a&gt;&lt;br /&gt;
-Pass the time by listening to music from the console video games of long ago. Video game music files found separately, somewhere out there on the &lt;a href=&#34;http://www.google.com/&#34;&gt;internet&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;That&amp;rsquo;s it for now. Hope you find something useful.&lt;/p&gt;
-</description>
-          </item>
-        
-      
+	<atom:link href="http://localhost:1313/categories/community/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>OS X Software for Oracle Developers</title>
+      <link>http://localhost:1313/blog/2012/06/27/os-x-software-for-oracle-developers/</link>
+      <pubDate>Wed, 27 Jun 2012 21:39:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/blog/2012/06/27/os-x-software-for-oracle-developers/</guid>
+      <description>One of the great things about working for Enkitec is that it&amp;rsquo;s a very Mac-friendly shop. When I arrived there in 2007 there were a handful of us running Macs and the attitude at the top seemed to be respectful, but skeptical. They allowed me to use my own laptop, which at the time was a 15-inch Intel Core2 Duo Macbook Pro, with the understanding that I could request a standard-issue Dell laptop at any time should the need arise.</description>
+    </item>
     
   </channel>
 </rss>

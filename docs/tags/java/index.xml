@@ -2,243 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Java on Tobybase: A Tech Blog</title>
-    <link>http://tobybase.com/tags/java/</link>
+    <link>http://localhost:1313/tags/java/</link>
     <description>Recent content in Java on Tobybase: A Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>2017 ~ Toby Marks</copyright>
+    <managingEditor>toby.marks@infolob.com (Toby Marks)</managingEditor>
+    <webMaster>toby.marks@infolob.com (Toby Marks)</webMaster>
     <lastBuildDate>Fri, 19 Jul 2013 22:32:00 +0000</lastBuildDate>
-    <atom:link href="/tags/java/" rel="self" type="application/rss+xml" />
     
-      
-        
-          <item>
-            <title>How to Fix SQL Developer on a Retina Display Mac(book)</title>
-            <link>http://tobybase.com/blog/2013/07/19/how-to-fix-sql-developer-on-a-retina-display-macbook/</link>
-            <pubDate>Fri, 19 Jul 2013 22:32:00 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2013/07/19/how-to-fix-sql-developer-on-a-retina-display-macbook/</guid>
-            <description>&lt;p&gt;I just purchased a new Macbook Pro 13-inch with Retina Display and was horrified to see how fuzzy SQL Developer looked on the high-res screen. Thanks to Thunderforge on the &lt;a href=&#34;http://stackoverflow.com/questions/15181079/apple-retina-display-support-in-java-jdk-1-7-for-awt-swing&#34;&gt;Stack Overflow forums&lt;/a&gt; for this tip:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Java 7u40 Early Access now supports HiDPI (Retina) displays, as
-shown by this &lt;a href=&#34;http://download.java.net/jdk7u40/changes/jdk7u40-b28.html?q=download/jdk7u40/changes/jdk7u40-b28.html&#34;&gt;changelog&lt;/a&gt;. So retina support is now available on Java 6, Java 7u40 or higher, and Java 8.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;I am currently running the &lt;a href=&#34;http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/sqldev-download-v4-1925679.html&#34;&gt;Early Adopter release of SQL Developer 4.0&lt;/a&gt; which requires JDK 1.7. I&amp;rsquo;m not sure what the state of Java 8 is on the Mac, so I opted to upgrade my JDK from 1.7.0_25 to 1.7.0_40. After that I had nice, sharp lines back in SQL Developer and all my other Java apps.&lt;/p&gt;
-
-&lt;p&gt;Thanks to Oracle&amp;rsquo;s Java team for addressing this!&lt;/p&gt;
-</description>
-          </item>
-        
-      
+	<atom:link href="http://localhost:1313/tags/java/index.xml" rel="self" type="application/rss+xml" />
     
-      
-        
-          <item>
-            <title>How To Run Oracle Forms 11g Applications on OS X Lion</title>
-            <link>http://tobybase.com/blog/2012/07/12/how-to-run-oracle-forms-11g-applications-on-os-x-lion/</link>
-            <pubDate>Thu, 12 Jul 2012 22:28:24 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2012/07/12/how-to-run-oracle-forms-11g-applications-on-os-x-lion/</guid>
-            <description>&lt;p&gt;Need to run your company&amp;rsquo;s Oracle Forms application from your Mac, and can&amp;rsquo;t? Annoyed with having to crank up a virtual machine for just that one task? Even with the latest published Java version for OS X (1.6.0_33, as of today), you may find that some of the newer Forms applications just won&amp;rsquo;t run. Well, fret no longer. A solution may already be here, at least for Safari and Firefox.&lt;/p&gt;
-
-&lt;p&gt;Although it&amp;rsquo;s not a strictly certified configuration, you may have better luck by running the JRE 1.7 Java plug-in, which was recently made available as a pre-release download. This works for OS X Lion 10.7.3 and above. Download the plug-in &lt;a href=&#34;http://jdk7.java.net/macportpreview/&#34;&gt;from here&lt;/a&gt; and follow the simple instructions on the page to install it. Now give your application another try, and hopefully you&amp;rsquo;ll get the results I did!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2012-07-12-run-oracle-forms-11g-applications-on-os-x-lion/8267cef641541001f78e2a3845a1349c5cc5c74dc6bf17b8a32fe537d9beaadd.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-</description>
-          </item>
-        
-      
     
-      
-        
-          <item>
-            <title>Discovering Command-line Java Profiling Tools</title>
-            <link>http://tobybase.com/blog/2012/05/02/discovering-command-line-java-profiling-tools/</link>
-            <pubDate>Wed, 02 May 2012 21:41:00 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2012/05/02/discovering-command-line-java-profiling-tools/</guid>
-            <description>&lt;p&gt;At my current client I am responsible for administering a third-party Java appplication that unfortunately generates a lot of performance complaints. It&amp;rsquo;s a multi-tiered system with the middle-tier running on Oracle Appication Server 10.1.3. I am already familiar with GUI profiling tools like &lt;code&gt;jconsole&lt;/code&gt; and &lt;code&gt;jvisualvm&lt;/code&gt;, both of which are included with Oracle&amp;rsquo;s JDK, and I have played around with the profiling capabilities in NetBeans. All of these profiling tools are fairly similar to one another in look and functionality.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941369/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/687cc5e71ab082d921ea083c2a3389f33608bdb578a2505ba98647dca59edd1c.jpg&#34; alt=&#34;Profiling the JVM with jconsole&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/6990855922/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/062326cdf1e49a33f125692cdc43927df553db0aa59ae2e13a028e5e9119ddbd.jpg&#34; alt=&#34;Profiling the JVM with jvisualvm&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/6990855902/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/70254026909062fd761740bc71f569e1dfeffd3aeaa574ba1cfb794e3029ea62.jpg&#34; alt=&#34;Profiling the JVM with NetBeans&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Using any one of these tools, I can view the size and utilization of the heap, see the status of running threads, monitor CPU loads, pull garbage collection statistics, and generate a memory dump. All of these are adequate for monitoring application performance in real-time, but while working with the application vendor to diagnose problems I found it necessary to be able to report on application performance over longer spans of time, say days or even weeks. We were trying to show patterns of eroding performance, or possibly spot instances of very slow memory leaks in parts of the application that got used less frequently. In any event, it required a way to monitor all of these details without having to have my eyes on the screen the whole time.&lt;/p&gt;
-
-&lt;p&gt;My goal was to get all that data exposed by the aforementioned GUI tools into a database that I could report off of. A little research on the &lt;a href=&#34;http://www.ibm.com/developerworks/java/library/j-5things8/index.html&#34;&gt;internet&lt;/a&gt; (HT to Ted Neward) and some &lt;a href=&#34;http://docs.oracle.com/javase/6/docs/technotes/tools/share/jps.html&#34;&gt;digging&lt;/a&gt; &lt;a href=&#34;http://docs.oracle.com/javase/6/docs/technotes/tools/share/jmap.html&#34;&gt;around&lt;/a&gt; &lt;a href=&#34;http://docs.oracle.com/javase/6/docs/technotes/tools/share/jhat.html&#34;&gt;in&lt;/a&gt; &lt;a href=&#34;http://docs.oracle.com/javase/6/docs/technotes/tools/share/jstack.html&#34;&gt;man&lt;/a&gt; &lt;a href=&#34;http://docs.oracle.com/javase/6/docs/technotes/tools/share/jstat.html&#34;&gt;pages&lt;/a&gt; provided the solution.&lt;/p&gt;
-
-&lt;p&gt;Recent versions of the JDK come packaged with some nifty command line tools to assist with profiling your Java applications. They can all be found in the &lt;code&gt;/bin&lt;/code&gt; directory under the JDK base directory.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941341/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/9ca305047f95051bbdc678ea66f9e4923a830b21f3264ebc3b87e9bd385f5765.jpg&#34; alt=&#34;Commands bundled with the JDK&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;##jps&lt;/p&gt;
-
-&lt;p&gt;The &lt;code&gt;jps&lt;/code&gt; command is a lot like the &lt;code&gt;ps&lt;/code&gt; command in Unix/Linux, in that it lists running processes. &lt;code&gt;Jps&lt;/code&gt;, however, will only list discoverable Java processes. If a running Java process is not included in the list returned by &lt;code&gt;jps&lt;/code&gt;, you may still be able to profile it; it just doesn&amp;rsquo;t advertise itself as attachable.&lt;/p&gt;
-
-&lt;p&gt;Each Java process is identified by the &amp;ldquo;VMID&amp;rdquo; returned by &lt;code&gt;jps&lt;/code&gt;, usually corresponding to the process ID on the host system. It is this VMID which is required as an argument to all of the other tools we will discuss, so be sure to always use &lt;code&gt;jps&lt;/code&gt; to correctly identify your processes to the other tools.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941355/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/c3b76d4b16d988867798b352027c036e5bb4f1ebb07abfaf453bbb7094470ab4.jpg&#34; alt=&#34;Running jps&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;##jstack&lt;/p&gt;
-
-&lt;p&gt;Use &lt;code&gt;jstack&lt;/code&gt; to generate a thread dump for a running Java process. It gives you a nice snapshot of thread activity comparable to what you might get in one of the GUI tools mentioned above. You get the name of the thread, the current state, a stack trace, and with the &lt;code&gt;-l&lt;/code&gt; option you get additional information about locking conditions. If an actual deadlock is detected you get a detailed breakdown of which threads are holding the locks! For comprehending the overall state of threads in an application it can actually prove superior to some of its GUI counterparts, as it&amp;rsquo;s faster to scan the results; i.e. no need to click from thread to thread or drill down to view the details.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;Jstack&lt;/code&gt; can be used in conjunction with &lt;code&gt;jmap&lt;/code&gt; and &lt;code&gt;jhat&lt;/code&gt; to get a more comprehensive picture of application state at a critical point in time.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; If you have a 64-bit JDK, you&amp;rsquo;ll want to use the &lt;code&gt;-J-d64&lt;/code&gt; flag when running the command.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941351/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/23352a26f3e67df6c159d8ff4c130b2d47be1bc8e37d78bc8178e0aa65e04182.jpg&#34; alt=&#34;Running jstack&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;##jmap &amp;amp; jhat&lt;/p&gt;
-
-&lt;p&gt;These two tools work together to help you analyze the contents of the heap. Use &lt;code&gt;jmap&lt;/code&gt; to generate a heap dump, and &lt;code&gt;jhat&lt;/code&gt; to help analyze the dump file.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941291/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/ad70746c91dd43d7a093fa3e7c180ce863a605f0ccd511774c8c62b4203731b1.jpg&#34; alt=&#34;Running jmap and jhat&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;Jhat&lt;/code&gt; works by spawning an HTTP server that presents the contents of the heap as a web page, allowing you to drill down on a specific object to view its members and references. In order to get the most out of &lt;code&gt;jhat&lt;/code&gt;, however, it would be worth investigating OQL, the &lt;strong&gt;O&lt;/strong&gt;bject &lt;strong&gt;Q&lt;/strong&gt;uery &lt;strong&gt;L&lt;/strong&gt;anguage, as the web page generated by &lt;code&gt;jhat&lt;/code&gt; allows you to run OQL queries against the heap. If you know a little about your application class structure, this makes your heap analysis far more efficient. Thankfully, the &lt;code&gt;jhat&lt;/code&gt; web page provides you with a short primer.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/6990855834/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/036aef8b8bc95e25c21a1bfb219fcc19e8e084e6ee60643a57a3ff72f83b69ec.jpg&#34; alt=&#34;OQL help page&#34; /&gt;&lt;/a&gt;
-&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941267/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/c59f79354e9bb6223492707dd27ebffb018449445204453ba610396b89d74fdc.jpg&#34; alt=&#34;OQL primer&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;Jmap&lt;/code&gt; is good for more than just generating heap dumps, however. When used with the &lt;code&gt;-heap&lt;/code&gt; option it gives you a nicely formatted heap usage summary.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/tobyjmarks/7136941255/in/photostream/lightbox/&#34;&gt;&lt;img src=&#34;http://tobybase.com/img/2012-05-02-discovering-command-line-java-profiling-tools/d6c27680e007dae747ef2cac7218faf0f918d2cf68cb1023d7e0ece182369233.jpg&#34; alt=&#34;jmap with the -heap option&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Now I was getting closer to my goal. In fact, this was originally the output I parsed during my first attempt at statistics gathering. Unfortunately, what I found while running on an RHEL 4.7 box with JDK 1.6.0_30 was that &lt;code&gt;jmap&lt;/code&gt; would from time to time inexplicably refuse to attach to my Java process, leaving gaping holes in my report. I noticed &lt;a href=&#34;http://ubuntuforums.org/showthread.php?t=1886859&#34;&gt;similar&lt;/a&gt; &lt;a href=&#34;https://forums.oracle.com/forums/thread.jspa?threadID=1693766&#34;&gt;complaints&lt;/a&gt; &lt;a href=&#34;http://blog.thecodingmachine.com/fr/comment/reply/91&#34;&gt;online&lt;/a&gt;, so I figured there may be problems with it.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;# jmap -J-d64 -heap 11028
-Attaching to process ID 11028, please wait...
-Error attaching to process: sun.jvm.hotspot.debugger.DebuggerException: Can&#39;t attach to the process
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Once again, be sure to use the &lt;code&gt;-J-d64&lt;/code&gt; flag with &lt;code&gt;jmap&lt;/code&gt; if you&amp;rsquo;re running a 64-bit JVM.&lt;/p&gt;
-
-&lt;p&gt;##jstat&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;Jstat&lt;/code&gt; was what saved the day for me. &lt;code&gt;Jstat&lt;/code&gt; displays detailed heap usage, class loader, and garbage collection statistics for the JVM; basically everything I wanted to report on. &lt;code&gt;Jstat&lt;/code&gt; has numerous options that allow you to focus in on usage statistics for different parts of the JVM.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;-class&lt;/strong&gt;&lt;br /&gt;
-Statistics on the behavior of the class loader.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;-compiler&lt;/strong&gt;&lt;br /&gt;
-Statistics of the behavior of the HotSpot Just-in-Time compiler.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;-gc&lt;/strong&gt;&lt;br /&gt;
-Statistics of the behavior of the garbage collected heap.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;-gccapacity&lt;/strong&gt;&lt;br /&gt;
-Statistics of the capacities of the generations and their corresponding spaces.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;-gccause&lt;/strong&gt;&lt;br /&gt;
-Summary of garbage collection statistics (same as -gcutil), with the cause of the last and current (if applicable) garbage collection events.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;-gcnew&lt;/strong&gt;&lt;br /&gt;
-Statistics of the behavior of the new generation.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;-gcnewcapacity&lt;/strong&gt;&lt;br /&gt;
-Statistics of the sizes of the new generations and its corresponding spaces.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;-gcold&lt;/strong&gt;&lt;br /&gt;
-Statistics of the behavior of the old and permanent generations.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;-gcoldcapacity&lt;/strong&gt;&lt;br /&gt;
-Statistics of the sizes of the old generation.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;-gcpermcapacity&lt;/strong&gt;&lt;br /&gt;
-Statistics of the sizes of the permanent generation.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;-gcutil&lt;/strong&gt;&lt;br /&gt;
-Summary of garbage collection statistics.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;-printcompilation&lt;/strong&gt;&lt;br /&gt;
-HotSpot compilation method statistics.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Like the heap profiling features of the GUI tools mentioned earlier, the results of &lt;code&gt;jstat&lt;/code&gt; can be used to check for memory leaks or to better tune your JVM startup parameters. Like the &lt;code&gt;vmstat&lt;/code&gt; command, &lt;code&gt;jstat&lt;/code&gt; can be set to repeat at a specified interval, for an infinite or specific number of iterations. Since &lt;code&gt;jstat&lt;/code&gt; has so many options and output formats, I will examine it in more detail in a later blog post when I discuss how I used it to populate my application instrumentation table.&lt;/p&gt;
-
-&lt;p&gt;One thing that should be noted is that all of these tools are documented as being &amp;ldquo;unsupported&amp;rdquo; and experimental. Oracle make no guarantees that they will be included in future versions of the JDK or that their output or arguments will not change. Still, though, they&amp;rsquo;ve been around for a while and since they&amp;rsquo;re there, why not make use of them? Just don&amp;rsquo;t build any critical production processes off of them if you want total flexibility in taking future JDK upgrades.&lt;/p&gt;
-
-&lt;p&gt;In my next post I&amp;rsquo;ll examine how I used these tools to automate the process of instrumenting my third-party Java app. I&amp;rsquo;ll also provide you with a script I wrote that formats the output of &lt;code&gt;jstat&lt;/code&gt; to look something like the &lt;code&gt;-heap&lt;/code&gt; option of &lt;code&gt;jmap&lt;/code&gt;, providing an equivalent, but more reliable, solution.&lt;/p&gt;
-</description>
-          </item>
-        
-      
+    <item>
+      <title>How to Fix SQL Developer on a Retina Display Mac(book)</title>
+      <link>http://localhost:1313/blog/2013/07/19/how-to-fix-sql-developer-on-a-retina-display-macbook/</link>
+      <pubDate>Fri, 19 Jul 2013 22:32:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/blog/2013/07/19/how-to-fix-sql-developer-on-a-retina-display-macbook/</guid>
+      <description>I just purchased a new Macbook Pro 13-inch with Retina Display and was horrified to see how fuzzy SQL Developer looked on the high-res screen. Thanks to Thunderforge on the Stack Overflow forums for this tip:
+ Java 7u40 Early Access now supports HiDPI (Retina) displays, as shown by this changelog. So retina support is now available on Java 6, Java 7u40 or higher, and Java 8.
+ I am currently running the Early Adopter release of SQL Developer 4.</description>
+    </item>
     
-      
-        
-          <item>
-            <title>Invalidating Toplink Session Cache To Avoid Stale Data</title>
-            <link>http://tobybase.com/blog/2012/03/09/invalidating-toplink-session-cache-to-avoid-stale-data/</link>
-            <pubDate>Fri, 09 Mar 2012 18:42:00 +0000</pubDate>
-            
-            <guid>http://tobybase.com/blog/2012/03/09/invalidating-toplink-session-cache-to-avoid-stale-data/</guid>
-            <description>&lt;p&gt;Toplink is a Java framework that maps objects to database tables. It is the reference implementation for the Java Persistence Architecture, or JPA. Developers use Toplink to manage data persistence (storage), queries, and transactions in an Oracle database. By default, Toplink makes use of a special cache called a Session Cache, maintained on the server, which is meant to speed up performance. Queried data is stored in the Session Cache and used in subsequent queries to reduce or eliminate calls to the database.&lt;/p&gt;
-
-&lt;p&gt;One problem with this approach is how to deal with &amp;ldquo;stale data&amp;rdquo;. In other words, what happens when data is changing in the database? How does the developer ensure that the cached data is current?&lt;/p&gt;
-
-&lt;p&gt;I ran into this issue recently when consulting with one of our clients on a third-party J2EE application that used Toplink for its persistence layer. What we noticed was that at a certain point in the business process the application was clearly displaying stale data. The &amp;ldquo;status&amp;rdquo; column on a certain record was being changed in the database (as could be verified by a SQL query), but the application still displayed the prior status. Refreshing the screen and requerying the data had no effect. The problem was that the status was being changed through a custom stored procedure which performed direct updates on the screen&amp;rsquo;s underlying table. This approach was technically against the directives of the third-party application vendor, who insisted that all such changes to the database be made via calls to its own web services. That was for good reason. The web services they provided as an API for custom development were the same ones used by the screens to query data. They used the same Toplink Session Cache. Changes made through the web services, therefore, would have updated the cache, thereby avoiding the problem. As it was, the client had unintentionally created out-of-sync scenario between the cache and the database, and the status information displayed on the screen was invalid.&lt;/p&gt;
-
-&lt;p&gt;The most obvious solution would have been to modify the custom procedure to make use of the provided APIs. However, we didn&amp;rsquo;t have an API in this instance that provided exactly the required functionality. Having the software vendor modify or extend the API for our purposes would have been prohibitively expensive, in both time and money.&lt;/p&gt;
-
-&lt;p&gt;Another possibility we considered was to have the vendor make a smaller modification to bypass the Toplink cache for queries on that screen. It is possible to disable caching per table, through the global configuration file persistence.xml, or as a property of an individual query. However, the vendor was not predisposed to introduce what they viewed as a &amp;ldquo;hack&amp;rdquo; to accommodate our custom functionality.&lt;/p&gt;
-
-&lt;p&gt;Ultimately we decided to implement a tacked-on solution that would arrive at the same goal and eliminate the need for an additional iteration through the vendor&amp;rsquo;s dev/test cycle. We created a custom servlet, installed in the third-party application itself, that invalidated the Toplink Session Cache for a specified table or, as an additional method, for all tables. Invalidating the cache means that the next time a query is executed against that table, the  cache is bypassed and data is retrieved directly from the database. To make it easier for the non-Java in-house developers to use, we created a custom wrapper package to mask the call to the servlet. A call to this package was added to the client&amp;rsquo;s custom code just after the record in question was updated and commited.&lt;/p&gt;
-
-&lt;p&gt;The solution consisted of two Java classes, JAR&amp;rsquo;ed and deployed as a library in the third-party application&amp;rsquo;s WEB-INF/lib directory.&lt;/p&gt;
-
-&lt;p&gt;CacheInvalidator.java&lt;br /&gt;
-CacheInvalidatorServlet.java&lt;/p&gt;
-
-&lt;p&gt;The web application configuration file web.xml was also modified to add a reference to the new &amp;ldquo;cacheinvalidator&amp;rdquo; servlet.&lt;/p&gt;
-
-&lt;p&gt;The code was adapted from the following documentation, available on Oracle Tech Net:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.oracle.com/technetwork/middleware/ias/index-097190.html&#34;&gt;Database Change Notification and TopLink Cache Invalidation&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://www.oracle.com/technetwork/middleware/ias/index-100679.html&#34;&gt;Oracle TopLink Cache Invalidation&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;The two methods of CacheInvalidator that do the actual work are shown here. The first takes tablename as an argument, so that the invalidation can be targeted. The second invalidates, or effectively wipes, the entire cache.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#888;font-weight:bold&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#06b;font-weight:bold&#34;&gt;invalidateClass&lt;/span&gt;(Session session, String tableName) &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;throws&lt;/span&gt; Exception { 
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;if&lt;/span&gt;(tableName == &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;null&lt;/span&gt; || tableName.&lt;span style=&#34;color:#369&#34;&gt;trim&lt;/span&gt;().&lt;span style=&#34;color:#369&#34;&gt;equals&lt;/span&gt;(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;)) { 
-        &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;throw&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;new&lt;/span&gt; Exception(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#34;tableName cannot be null&amp;#34;&lt;/span&gt;); 
-    } 
-    Class baseClass = (Class)tableNameToClass.&lt;span style=&#34;color:#369&#34;&gt;get&lt;/span&gt;(tableName); 
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;if&lt;/span&gt;(baseClass == &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;null&lt;/span&gt;) { 
-        &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;throw&lt;/span&gt; &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;new&lt;/span&gt; Exception(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#34;table \&amp;#34;&amp;#34;&lt;/span&gt; + tableName + &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#34;\&amp;#34; not found in cache&amp;#34;&lt;/span&gt;); 
-    } 
- 
-    &lt;span style=&#34;color:#888&#34;&gt;// invalidate in TopLink cache the object corresponding to the baseClass 
-&lt;/span&gt;&lt;span style=&#34;color:#888&#34;&gt;&lt;/span&gt;    session.&lt;span style=&#34;color:#369&#34;&gt;getIdentityMapAccessor&lt;/span&gt;().&lt;span style=&#34;color:#369&#34;&gt;invalidateClass&lt;/span&gt;(baseClass); 
-} 
- 
-&lt;span style=&#34;color:#888&#34;&gt;// invalidate all objects in the cache 
-&lt;/span&gt;&lt;span style=&#34;color:#888&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#888;font-weight:bold&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#06b;font-weight:bold&#34;&gt;invalidateAllClasses&lt;/span&gt;(Session session) { 
-    &lt;span style=&#34;color:#888&#34;&gt;// invalidate in TopLink cache the object corresponding to the baseClass 
-&lt;/span&gt;&lt;span style=&#34;color:#888&#34;&gt;&lt;/span&gt;    session.&lt;span style=&#34;color:#369&#34;&gt;getIdentityMapAccessor&lt;/span&gt;().&lt;span style=&#34;color:#369&#34;&gt;invalidateAll&lt;/span&gt;(); 
-} &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;The CacheInvalidatorServlet takes a table name or the special keyword &amp;ldquo;ALL&amp;rdquo; as a parameter and calls the corresponding method in CacheInvalidator.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;String oName = request.&lt;span style=&#34;color:#369&#34;&gt;getParameter&lt;/span&gt;(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#34;objectName&amp;#34;&lt;/span&gt;); 
-String responseString = &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;; 
-
-&lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;try&lt;/span&gt; { 
-    SessionManager manager = SessionManager.&lt;span style=&#34;color:#369&#34;&gt;getManager&lt;/span&gt;(); 
-    &lt;span style=&#34;color:#888&#34;&gt;//SESSIONNAME defined in sessions.xml 
-&lt;/span&gt;&lt;span style=&#34;color:#888&#34;&gt;&lt;/span&gt;    Server server = (Server)manager.&lt;span style=&#34;color:#369&#34;&gt;getSession&lt;/span&gt;(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#34;SESSIONNAME&amp;#34;&lt;/span&gt;); 
-    Session session = server.&lt;span style=&#34;color:#369&#34;&gt;getActiveSession&lt;/span&gt;(); 
-
-    CacheInvalidator invalidator = &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;new&lt;/span&gt; CacheInvalidator(session); 
-    &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;if&lt;/span&gt; (oName.&lt;span style=&#34;color:#369&#34;&gt;equals&lt;/span&gt;(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#34;ALL&amp;#34;&lt;/span&gt;)) { 
-        invalidator.&lt;span style=&#34;color:#369&#34;&gt;invalidateAllClasses&lt;/span&gt;(session); 
-        responseString = &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#34;successfully invalidated toplink cache for all tables.&amp;#34;&lt;/span&gt;; 
-    } &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;else&lt;/span&gt; { 
-        invalidator.&lt;span style=&#34;color:#369&#34;&gt;invalidateClass&lt;/span&gt;(session, oName); 
-        responseString = &lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#34;successfully invalidated toplink cache for table: &amp;#34;&lt;/span&gt;+oName; 
-    } 
-} &lt;span style=&#34;color:#080;font-weight:bold&#34;&gt;catch&lt;/span&gt; (Exception e) { 
-    responseString = e.&lt;span style=&#34;color:#369&#34;&gt;getMessage&lt;/span&gt;(); 
-} &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Calling a servlet from PL/SQL is not particularly complicated, but in our case involved the lookup of server information stored in the database. The wrapper package allowed us to provide the developers with a simple, one-line invocation.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;p_servlet_response := utl_http.request(&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;http://&amp;#39;&lt;/span&gt;||l_app_server_host||&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;:&amp;#39;&lt;/span&gt;
-          ||l_app_server_port||&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#39;/jedi/cacheinvalidatorservlet?objectName=&amp;#39;&lt;/span&gt;
-          ||p_obj_to_invalidate);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;After making a call to our cacheinvalidator package subsequent to updating the status record, the stale data problem was eliminated in the application.&lt;/p&gt;
-</description>
-          </item>
-        
-      
+    <item>
+      <title>How To Run Oracle Forms 11g Applications on OS X Lion</title>
+      <link>http://localhost:1313/blog/2012/07/12/how-to-run-oracle-forms-11g-applications-on-os-x-lion/</link>
+      <pubDate>Thu, 12 Jul 2012 22:28:24 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/blog/2012/07/12/how-to-run-oracle-forms-11g-applications-on-os-x-lion/</guid>
+      <description>Need to run your company&amp;rsquo;s Oracle Forms application from your Mac, and can&amp;rsquo;t? Annoyed with having to crank up a virtual machine for just that one task? Even with the latest published Java version for OS X (1.6.0_33, as of today), you may find that some of the newer Forms applications just won&amp;rsquo;t run. Well, fret no longer. A solution may already be here, at least for Safari and Firefox.</description>
+    </item>
+    
+    <item>
+      <title>Discovering Command-line Java Profiling Tools</title>
+      <link>http://localhost:1313/blog/2012/05/02/discovering-command-line-java-profiling-tools/</link>
+      <pubDate>Wed, 02 May 2012 21:41:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/blog/2012/05/02/discovering-command-line-java-profiling-tools/</guid>
+      <description>At my current client I am responsible for administering a third-party Java appplication that unfortunately generates a lot of performance complaints. It&amp;rsquo;s a multi-tiered system with the middle-tier running on Oracle Appication Server 10.1.3. I am already familiar with GUI profiling tools like jconsole and jvisualvm, both of which are included with Oracle&amp;rsquo;s JDK, and I have played around with the profiling capabilities in NetBeans. All of these profiling tools are fairly similar to one another in look and functionality.</description>
+    </item>
+    
+    <item>
+      <title>Invalidating Toplink Session Cache To Avoid Stale Data</title>
+      <link>http://localhost:1313/blog/2012/03/09/invalidating-toplink-session-cache-to-avoid-stale-data/</link>
+      <pubDate>Fri, 09 Mar 2012 18:42:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://localhost:1313/blog/2012/03/09/invalidating-toplink-session-cache-to-avoid-stale-data/</guid>
+      <description>Toplink is a Java framework that maps objects to database tables. It is the reference implementation for the Java Persistence Architecture, or JPA. Developers use Toplink to manage data persistence (storage), queries, and transactions in an Oracle database. By default, Toplink makes use of a special cache called a Session Cache, maintained on the server, which is meant to speed up performance. Queried data is stored in the Session Cache and used in subsequent queries to reduce or eliminate calls to the database.</description>
+    </item>
     
   </channel>
 </rss>

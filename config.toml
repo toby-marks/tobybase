@@ -1,4 +1,4 @@
-baseurl             = "http://tobybase.com"  # the baseurl for your website
+baseurl             = "http://localhost:1313"  # the baseurl for your website
 title               = "Tobybase: A Tech Blog"             # blog title
 paginate            = 10                     # the number of posts on a page
 publishDir          = "docs"
@@ -58,7 +58,7 @@ pygmentsCodefences = true
 
 [params.theme]
     inverse = false     # indicating if the theme should use inversed colors
-    name = "united"   # name of the theme to use
+    name = "lumen"   # name of the theme to use
 
     # list of possible theme names that can be used
     # name = "cerulean"
