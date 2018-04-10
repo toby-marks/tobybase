@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Active Directory on Tobybase: A Tech Blog</title>
-    <link>http://localhost:1313/tags/active-directory/</link>
+    <link>http://tobybase.com/tags/active-directory/</link>
     <description>Recent content in Active Directory on Tobybase: A Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>toby.marks@infolob.com (Toby Marks)</managingEditor>
     <webMaster>toby.marks@infolob.com (Toby Marks)</webMaster>
     <lastBuildDate>Mon, 12 Nov 2012 17:32:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/active-directory/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://tobybase.com/tags/active-directory/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>How To Configure Oracle BI Publisher to Authenticate With Active Directory</title>
-      <link>http://localhost:1313/blog/2012/11/12/how-to-configure-oracle-bi-publisher-to-authenticate-with-active-directory/</link>
+      <link>http://tobybase.com/blog/2012/11/12/how-to-configure-oracle-bi-publisher-to-authenticate-with-active-directory/</link>
       <pubDate>Mon, 12 Nov 2012 17:32:00 +0000</pubDate>
       <author>toby.marks@infolob.com (Toby Marks)</author>
-      <guid>http://localhost:1313/blog/2012/11/12/how-to-configure-oracle-bi-publisher-to-authenticate-with-active-directory/</guid>
+      <guid>http://tobybase.com/blog/2012/11/12/how-to-configure-oracle-bi-publisher-to-authenticate-with-active-directory/</guid>
       <description>Log in to BI Publisher as an administrator. Click on the Admin tab. Click on Security Configuration. For Security Model, choose LDAP and enter the following parameters:
    Setting Example Value     URL ldap://ad.mycompany.com:389 Your company&amp;rsquo;s LDAP server and port.   Administrator Username CN=ADMIN,OU=Users,OU=Shared Services,DC=mycompany,DC=com The fully qualified DN of the account you use to sign in to LDAP.   Administrator Password myxlplyx The password for the above account.</description>
     </item>

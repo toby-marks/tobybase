@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Virtual Machines on Tobybase: A Tech Blog</title>
-    <link>http://localhost:1313/tags/virtual-machines/</link>
+    <link>http://tobybase.com/tags/virtual-machines/</link>
     <description>Recent content in Virtual Machines on Tobybase: A Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>toby.marks@infolob.com (Toby Marks)</managingEditor>
     <webMaster>toby.marks@infolob.com (Toby Marks)</webMaster>
     <lastBuildDate>Tue, 10 Apr 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/virtual-machines/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://tobybase.com/tags/virtual-machines/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Access Denied When Adding a Block Volume to a Windows VM on Oracle Cloud Infrastructure</title>
-      <link>http://localhost:1313/blog/2018/04/10/access-denied-when-adding-a-block-volume-to-a-windows-vm-on-oracle-cloud-infrastructure/</link>
+      <link>http://tobybase.com/blog/2018/04/10/access-denied-when-adding-a-block-volume-to-a-windows-vm-on-oracle-cloud-infrastructure/</link>
       <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
       <author>toby.marks@infolob.com (Toby Marks)</author>
-      <guid>http://localhost:1313/blog/2018/04/10/access-denied-when-adding-a-block-volume-to-a-windows-vm-on-oracle-cloud-infrastructure/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2018-04-10-oci-add-block-volume-on-windows/access-denied.jpg&#34; width=&#34;800px&#34;&gt;&lt;/p&gt;
+      <guid>http://tobybase.com/blog/2018/04/10/access-denied-when-adding-a-block-volume-to-a-windows-vm-on-oracle-cloud-infrastructure/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2018-04-10-oci-add-block-volume-on-windows/access-denied.jpg&#34; width=&#34;800px&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;If you are getting the above error when trying to add a block volume to a Windows VM in Oracle Cloud Infrastructure, the solution is quite simple.
 &lt;/p&gt;</description>
@@ -26,40 +26,40 @@
     
     <item>
       <title>Move Your VM to Oracle Cloud - Part 4</title>
-      <link>http://localhost:1313/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-4/</link>
+      <link>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-4/</link>
       <pubDate>Fri, 10 Mar 2017 14:56:00 +0000</pubDate>
       <author>toby.marks@infolob.com (Toby Marks)</author>
-      <guid>http://localhost:1313/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-4/</guid>
+      <guid>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-4/</guid>
       <description>In the last of a four-part video series, our Director of Cloud Services Brian Hill creates a new compute instance in Oracle Cloud Compute Services based on his custom Windows virtual machine image.
   </description>
     </item>
     
     <item>
       <title>Move Your VM to Oracle Cloud - Part 3</title>
-      <link>http://localhost:1313/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-3/</link>
+      <link>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-3/</link>
       <pubDate>Fri, 10 Mar 2017 14:53:00 +0000</pubDate>
       <author>toby.marks@infolob.com (Toby Marks)</author>
-      <guid>http://localhost:1313/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-3/</guid>
+      <guid>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-3/</guid>
       <description>In part three of a four-part video series, our Director of Cloud Services Brian Hill creates a bootable storage volume in Oracle Cloud Compute Services with his new Windows image.
   </description>
     </item>
     
     <item>
       <title>Move Your VM to Oracle Cloud - Part 2</title>
-      <link>http://localhost:1313/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-2/</link>
+      <link>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-2/</link>
       <pubDate>Fri, 10 Mar 2017 14:47:00 +0000</pubDate>
       <author>toby.marks@infolob.com (Toby Marks)</author>
-      <guid>http://localhost:1313/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-2/</guid>
+      <guid>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-2/</guid>
       <description>In part two of a four-part video series, our Director of Cloud Services Brian Hill creates an image in Oracle Cloud Compute Services based on a Windows virtual machine.
   </description>
     </item>
     
     <item>
       <title>Move Your VM to Oracle Cloud - Part 1</title>
-      <link>http://localhost:1313/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-1/</link>
+      <link>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-1/</link>
       <pubDate>Fri, 10 Mar 2017 14:41:00 +0000</pubDate>
       <author>toby.marks@infolob.com (Toby Marks)</author>
-      <guid>http://localhost:1313/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-1/</guid>
+      <guid>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-1/</guid>
       <description>In part one of a four-part video series, our Director of Cloud Services Brian Hill demonstrates how to prepare your virtual machine for upload to the cloud.
   </description>
     </item>

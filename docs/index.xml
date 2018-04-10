@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tobybase: A Tech Blog on Tobybase: A Tech Blog</title>
-    <link>http://localhost:1313/</link>
+    <link>http://tobybase.com/</link>
     <description>Recent content in Tobybase: A Tech Blog on Tobybase: A Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>toby.marks@infolob.com (Toby Marks)</managingEditor>
@@ -13,10 +13,10 @@
       
         <item>
           <title>Linklog: Oracle Sees Autonomous Database Changing DBA Roles for the Good</title>
-          <link>http://localhost:1313/link/2018-04-10-oracle-sees-automation/</link>
+          <link>http://tobybase.com/link/2018-04-10-oracle-sees-automation/</link>
           <pubDate>Tue, 10 Apr 2018 12:47:23 -0500</pubDate>
           <author>Lindsay Moore</author>
-          <guid>http://localhost:1313/link/2018-04-10-oracle-sees-automation/</guid>
+          <guid>http://tobybase.com/link/2018-04-10-oracle-sees-automation/</guid>
           <description>&lt;blockquote&gt;
 &lt;p&gt;If the tactical tasks are reduced &amp;ndash; or even eliminated &amp;ndash; DBAs will have more time to spend on higher level tasks, like data security, data lifecycle management, data architecture and data modeling, Colgan said.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -30,26 +30,26 @@
         
           <item>
             <title>Access Denied When Adding a Block Volume to a Windows VM on Oracle Cloud Infrastructure</title>
-            <link>http://localhost:1313/blog/2018/04/10/access-denied-when-adding-a-block-volume-to-a-windows-vm-on-oracle-cloud-infrastructure/</link>
+            <link>http://tobybase.com/blog/2018/04/10/access-denied-when-adding-a-block-volume-to-a-windows-vm-on-oracle-cloud-infrastructure/</link>
             <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
             <author>toby.marks@infolob.com (Toby Marks)</author>
-            <guid>http://localhost:1313/blog/2018/04/10/access-denied-when-adding-a-block-volume-to-a-windows-vm-on-oracle-cloud-infrastructure/</guid>
-            <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2018-04-10-oci-add-block-volume-on-windows/access-denied.jpg&#34; width=&#34;800px&#34;&gt;&lt;/p&gt;
+            <guid>http://tobybase.com/blog/2018/04/10/access-denied-when-adding-a-block-volume-to-a-windows-vm-on-oracle-cloud-infrastructure/</guid>
+            <description>&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2018-04-10-oci-add-block-volume-on-windows/access-denied.jpg&#34; width=&#34;800px&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;If you are getting the above error when trying to add a block volume to a Windows VM in Oracle Cloud Infrastructure, the solution is quite simple.
 &lt;/p&gt;
 
 &lt;p&gt;I ran across this problem recently when configuring a Windows virtual machine on Oracle Cloud for the first time. I needed some additional storage, so I added a SCSI block volume that gave me what I required.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2018-04-10-oci-add-block-volume-on-windows/attached-block-volumes.jpg&#34; width=&#34;800px&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2018-04-10-oci-add-block-volume-on-windows/attached-block-volumes.jpg&#34; width=&#34;800px&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;After attaching the block volume to the compute instance, I clicked on the elipsis to the right of the volume overview panel, and selected &lt;em&gt;iSCSI Commands &amp;amp; Information&lt;/em&gt; as shown.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2018-04-10-oci-add-block-volume-on-windows/iscsi-commands.jpg&#34; width=&#34;586px&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2018-04-10-oci-add-block-volume-on-windows/iscsi-commands.jpg&#34; width=&#34;586px&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;In order to make use of your attached volume, the commands shown in the &lt;em&gt;Attach Commands&lt;/em&gt; pane must be run from a Powershell or Command terminal, after which you can format and mount the volume according to the &lt;a href=&#34;https://docs.us-phoenix-1.oraclecloud.com/Content/Block/Tasks/connectingtoavolume.htm&#34;&gt;online instructions provided by Oracle&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2018-04-10-oci-add-block-volume-on-windows/powershell-button.jpg&#34; width=&#34;369px&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2018-04-10-oci-add-block-volume-on-windows/powershell-button.jpg&#34; width=&#34;369px&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;However, when I clicked on the Powershell terminal icon in the Windows Taskbar and attempted to run the iSCSI commands, I got the following error:&lt;/p&gt;
 
@@ -58,7 +58,7 @@
 
 &lt;p&gt;The problem is that the iSCSI commands Oracle provides need to be run from a privileged terminal, or &amp;ldquo;elevated shell&amp;rdquo;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2018-04-10-oci-add-block-volume-on-windows/run-as-admin.jpg&#34; width=&#34;800px&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2018-04-10-oci-add-block-volume-on-windows/run-as-admin.jpg&#34; width=&#34;800px&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;Search for Powershell. Right-click on the icon, and choose &lt;em&gt;Run as administrator&lt;/em&gt;. You will now be able to successfully run the iSCSI commands and connect to your block volume. If you don&amp;rsquo;t care for that method, &lt;a href=&#34;https://www.top-password.com/blog/5-ways-to-run-powershell-as-administrator-in-windows-10/&#34;&gt;there are a number of other ways&lt;/a&gt; to launch an elevated shell in Windows.&lt;/p&gt;
 
@@ -70,10 +70,10 @@
       
         <item>
           <title>Linklog: 2107 Was Bad for Facebook. 2018 Will Be Worse.</title>
-          <link>http://localhost:1313/link/2017-12-15-2018-bad-year-for-facebook/</link>
+          <link>http://tobybase.com/link/2017-12-15-2018-bad-year-for-facebook/</link>
           <pubDate>Fri, 15 Dec 2017 00:00:00 +0000</pubDate>
           <author>Bloomberg</author>
-          <guid>http://localhost:1313/link/2017-12-15-2018-bad-year-for-facebook/</guid>
+          <guid>http://tobybase.com/link/2017-12-15-2018-bad-year-for-facebook/</guid>
           <description>&lt;blockquote&gt;
 &lt;p&gt;While Facebook remains the biggest platform, Google and Twitter are facing similar pressure from governments in the U.S. and in Europe. Germany enacted a law requiring the social networks to remove hate speech promptly or face fines. In the U.S., the activities of a Russian troll farm during the 2016 election campaign prompted scrutiny of Facebook&amp;rsquo;s ad selling practices and a (rather ham-handed) legislative attempt to force some transparency.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -86,10 +86,10 @@
       
         <item>
           <title>Linklog: on YouTube</title>
-          <link>http://localhost:1313/link/2017-12-14-infolob-youtube/</link>
+          <link>http://tobybase.com/link/2017-12-14-infolob-youtube/</link>
           <pubDate>Thu, 14 Dec 2017 00:00:00 +0000</pubDate>
           <author>Infolob</author>
-          <guid>http://localhost:1313/link/2017-12-14-infolob-youtube/</guid>
+          <guid>http://tobybase.com/link/2017-12-14-infolob-youtube/</guid>
           <description>&lt;p&gt;If you find this content helpful, do the like and subscribe thing to stay informed.&lt;/p&gt;
 </description>
         </item>
@@ -99,10 +99,10 @@
         
           <item>
             <title>Move Your VM to Oracle Cloud - Part 4</title>
-            <link>http://localhost:1313/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-4/</link>
+            <link>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-4/</link>
             <pubDate>Fri, 10 Mar 2017 14:56:00 +0000</pubDate>
             <author>toby.marks@infolob.com (Toby Marks)</author>
-            <guid>http://localhost:1313/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-4/</guid>
+            <guid>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-4/</guid>
             <description>&lt;p&gt;In the last of a four-part video series, our Director of Cloud Services Brian Hill creates a new compute instance in Oracle Cloud Compute Services based on his custom Windows virtual machine image.&lt;/p&gt;
 
 
@@ -119,10 +119,10 @@
         
           <item>
             <title>Move Your VM to Oracle Cloud - Part 3</title>
-            <link>http://localhost:1313/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-3/</link>
+            <link>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-3/</link>
             <pubDate>Fri, 10 Mar 2017 14:53:00 +0000</pubDate>
             <author>toby.marks@infolob.com (Toby Marks)</author>
-            <guid>http://localhost:1313/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-3/</guid>
+            <guid>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-3/</guid>
             <description>&lt;p&gt;In part three of a four-part video series, our Director of Cloud Services Brian Hill creates a bootable storage volume in Oracle Cloud Compute Services with his new Windows image.&lt;/p&gt;
 
 
@@ -139,10 +139,10 @@
         
           <item>
             <title>Move Your VM to Oracle Cloud - Part 2</title>
-            <link>http://localhost:1313/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-2/</link>
+            <link>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-2/</link>
             <pubDate>Fri, 10 Mar 2017 14:47:00 +0000</pubDate>
             <author>toby.marks@infolob.com (Toby Marks)</author>
-            <guid>http://localhost:1313/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-2/</guid>
+            <guid>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-2/</guid>
             <description>&lt;p&gt;In part two of a four-part video series, our Director of Cloud Services Brian Hill creates an image in Oracle Cloud Compute Services based on a Windows virtual machine.&lt;/p&gt;
 
 
@@ -159,10 +159,10 @@
         
           <item>
             <title>Move Your VM to Oracle Cloud - Part 1</title>
-            <link>http://localhost:1313/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-1/</link>
+            <link>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-1/</link>
             <pubDate>Fri, 10 Mar 2017 14:41:00 +0000</pubDate>
             <author>toby.marks@infolob.com (Toby Marks)</author>
-            <guid>http://localhost:1313/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-1/</guid>
+            <guid>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud---part-1/</guid>
             <description>&lt;p&gt;In part one of a four-part video series, our Director of Cloud Services Brian Hill demonstrates how to prepare your virtual machine for upload to the cloud.&lt;/p&gt;
 
 
@@ -179,10 +179,10 @@
         
           <item>
             <title>Announcing the Infolob YouTube Channel</title>
-            <link>http://localhost:1313/blog/2017/03/10/announcing-the-infolob-youtube-channel/</link>
+            <link>http://tobybase.com/blog/2017/03/10/announcing-the-infolob-youtube-channel/</link>
             <pubDate>Fri, 10 Mar 2017 00:00:00 +0000</pubDate>
             <author>toby.marks@infolob.com (Toby Marks)</author>
-            <guid>http://localhost:1313/blog/2017/03/10/announcing-the-infolob-youtube-channel/</guid>
+            <guid>http://tobybase.com/blog/2017/03/10/announcing-the-infolob-youtube-channel/</guid>
             <description>&lt;p&gt;I am honored to work with some wonderful and truly &lt;em&gt;smart&lt;/em&gt; folks over at &lt;a href=&#34;http://www.infolob.com/&#34;&gt;Infolob&lt;/a&gt; in Irving, Texas. The company recently started a &lt;a href=&#34;https://www.youtube.com/channel/UCLfDjdjW6RRvKYrz_aS0Jmw&#34;&gt;YouTube channel&lt;/a&gt; and we are looking to add lots of great videos soon for your enjoyment and education.&lt;/p&gt;
 
 &lt;p&gt;Check us out!&lt;/p&gt;
@@ -205,10 +205,10 @@
         
           <item>
             <title>Announcing… tobybase.com</title>
-            <link>http://localhost:1313/blog/2017/01/17/announcing-tobybase.com/</link>
+            <link>http://tobybase.com/blog/2017/01/17/announcing-tobybase.com/</link>
             <pubDate>Tue, 17 Jan 2017 22:58:59 -0600</pubDate>
             <author>toby.marks@infolob.com (Toby Marks)</author>
-            <guid>http://localhost:1313/blog/2017/01/17/announcing-tobybase.com/</guid>
+            <guid>http://tobybase.com/blog/2017/01/17/announcing-tobybase.com/</guid>
             <description>&lt;p&gt;Welcome one and all to my new professional blog, &lt;a href=&#34;http://tobybase.com/&#34; title=&#34;Redirects to the website you are now on&#34;&gt;tobybase.com&lt;/a&gt;. My name is Toby Marks and I work as a &lt;a href=&#34;http://oracle.com&#34; title=&#34;Oracle&#39;s website&#34;&gt;Oracle&lt;/a&gt; Consultant at &lt;a href=&#34;http://infolob.com/&#34; title=&#34;My company&#39;s website&#34;&gt;Infolob Solutions&lt;/a&gt; in &lt;a href=&#34;https://en.wikipedia.org/wiki/Las_Colinas&#34; title=&#34;Some info about sunny Las Colinas&#34;&gt;Irving, Texas&lt;/a&gt;. My &lt;a href=&#34;http://tjmoracle.tumblr.com/&#34; title=&#34;My old blog&#34;&gt;old blog&lt;/a&gt; is still up on &lt;a href=&#34;http://tumblr.com/&#34; title=&#34;Go to Tumblr&#34;&gt;Tumblr&lt;/a&gt;, and there are a &lt;a href=&#34;https://tmblr.co/Z9fAmvZapPzC&#34; title=&#34;Create PDF Reports in Oracle Apex&#34;&gt;few&lt;/a&gt; &lt;a href=&#34;https://tmblr.co/Z9fAmvXEB6iL&#34; title=&#34;Query an XML File Like an External Table&#34;&gt;items&lt;/a&gt; &lt;a href=&#34;https://tmblr.co/Z9fAmvOFEN-N&#34; title=&#34;OS X Software for Oracle Developers&#34;&gt;there&lt;/a&gt; that folks still find useful. Most of the content is a bit dated, though, as I&amp;rsquo;ve been out of the blogging game for a while.&lt;/p&gt;
 
 &lt;p&gt;This is my attempt to turn that around.&lt;/p&gt;
@@ -225,10 +225,10 @@
         
           <item>
             <title>What to do when the Juniper Network Connect app on OS X does not connect</title>
-            <link>http://localhost:1313/blog/2016/02/04/what-to-do-when-the-juniper-network-connect-app-on-os-x-does-not-connect/</link>
+            <link>http://tobybase.com/blog/2016/02/04/what-to-do-when-the-juniper-network-connect-app-on-os-x-does-not-connect/</link>
             <pubDate>Thu, 04 Feb 2016 22:50:09 +0000</pubDate>
             <author>toby.marks@infolob.com (Toby Marks)</author>
-            <guid>http://localhost:1313/blog/2016/02/04/what-to-do-when-the-juniper-network-connect-app-on-os-x-does-not-connect/</guid>
+            <guid>http://tobybase.com/blog/2016/02/04/what-to-do-when-the-juniper-network-connect-app-on-os-x-does-not-connect/</guid>
             <description>&lt;p&gt;If you use Juniper&amp;rsquo;s Network Connect app to connect to your office VPN over HTTPS, you might occasionally experience strange errors like &amp;ldquo;A software error caused the Network Connect tunneling service to terminate.&amp;rdquo; Shortly after that, the application may either crash or prompt you for login credentials again.&lt;/p&gt;
 
 &lt;p&gt;The solution involves removing all of the Network Connect files and allowing your browser to download and install the app all over again, as it did the first time you tried to connect to your office VPN.&lt;/p&gt;
@@ -250,15 +250,15 @@
         
           <item>
             <title>How to Use ps to List Top Memory, CPU Eating Processes</title>
-            <link>http://localhost:1313/blog/2013/07/24/how-to-use-ps-to-list-top-memory-cpu-eating-processes/</link>
+            <link>http://tobybase.com/blog/2013/07/24/how-to-use-ps-to-list-top-memory-cpu-eating-processes/</link>
             <pubDate>Wed, 24 Jul 2013 21:42:00 +0000</pubDate>
             <author>toby.marks@infolob.com (Toby Marks)</author>
-            <guid>http://localhost:1313/blog/2013/07/24/how-to-use-ps-to-list-top-memory-cpu-eating-processes/</guid>
+            <guid>http://tobybase.com/blog/2013/07/24/how-to-use-ps-to-list-top-memory-cpu-eating-processes/</guid>
             <description>&lt;p&gt;The &lt;code&gt;ps&lt;/code&gt; command is a versatile and configurable way to look at the processes running on your system, though I&amp;rsquo;ve generally gotten by with a lazy &lt;code&gt;ps -ef&lt;/code&gt; to find out whatever I needed to know. Recently, though, a client&amp;rsquo;s server began running out of memory, and as a number of processes were running on the server, the culprit was not immediately clear. I wanted to provide them with a quick, simple diagnostic tool they could use the next time they received an alert.&lt;/p&gt;
 
 &lt;p&gt;If you look at the man page for &lt;code&gt;ps&lt;/code&gt; you&amp;rsquo;ll find a number of options available for sorting the list of processes returned as well as for filtering the columns displayed.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2013-07-24-linux-unix-use-ps-to-list-top-memory-cpu-eating-processes/ac6287b65af17b95d247ea063f0aa1bfc6f106f3b69adf0ae73ed8258d3a6c7b.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2013-07-24-linux-unix-use-ps-to-list-top-memory-cpu-eating-processes/ac6287b65af17b95d247ea063f0aa1bfc6f106f3b69adf0ae73ed8258d3a6c7b.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Some examples of &lt;code&gt;ps&lt;/code&gt; options, from RHEL 5.6:&lt;/p&gt;
 
@@ -307,7 +307,7 @@ show the last 10 lines&lt;/p&gt;
 &lt;span style=&#34;color:#038&#34;&gt;alias&lt;/span&gt; &lt;span style=&#34;color:#369&#34;&gt;pscpu&lt;/span&gt;=&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#34;while :; do clear; ps -ecr -o %cpu,pid,user,state,args | head -n 10; sleep 2; done&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;I have one alias for retrieving my top memory-utilizing processes and one for my top CPU-utilizing processes. The &lt;code&gt;while&lt;/code&gt; loop in the alias implements a functionality similar to that of the Linux &lt;code&gt;watch&lt;/code&gt; command, clearing the screen and running the process indefinitely until it is forcibly quit. For my own purposes I wanted to display some additional columns, like username and process state. I also changed the sort ordering to display the largest processes at the top of the list.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/2013-07-24-linux-unix-use-ps-to-list-top-memory-cpu-eating-processes/2bcd3b2c40d8bc37893b47399aed325508e95c655492de8866a8365eede7008f.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2013-07-24-linux-unix-use-ps-to-list-top-memory-cpu-eating-processes/2bcd3b2c40d8bc37893b47399aed325508e95c655492de8866a8365eede7008f.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </description>
           </item>
         
@@ -316,10 +316,10 @@ show the last 10 lines&lt;/p&gt;
       
         <item>
           <title>Linklog: Use Preview to view formatted man pages</title>
-          <link>http://localhost:1313/link/2013-07-24-view-man-pages/</link>
+          <link>http://tobybase.com/link/2013-07-24-view-man-pages/</link>
           <pubDate>Wed, 24 Jul 2013 00:00:00 +0000</pubDate>
           <author>Anonymous</author>
-          <guid>http://localhost:1313/link/2013-07-24-view-man-pages/</guid>
+          <guid>http://tobybase.com/link/2013-07-24-view-man-pages/</guid>
           <description>&lt;p&gt;This is an elegant solution for viewing, searching, and archiving man pages that eliminates the necessity for third party apps.&lt;br /&gt;
 &lt;em&gt;Update:&lt;/em&gt; still works in macOS Sierra.&lt;/p&gt;
 </description>
@@ -330,10 +330,10 @@ show the last 10 lines&lt;/p&gt;
         
           <item>
             <title>How to Fix SQL Developer on a Retina Display Mac(book)</title>
-            <link>http://localhost:1313/blog/2013/07/19/how-to-fix-sql-developer-on-a-retina-display-macbook/</link>
+            <link>http://tobybase.com/blog/2013/07/19/how-to-fix-sql-developer-on-a-retina-display-macbook/</link>
             <pubDate>Fri, 19 Jul 2013 22:32:00 +0000</pubDate>
             <author>toby.marks@infolob.com (Toby Marks)</author>
-            <guid>http://localhost:1313/blog/2013/07/19/how-to-fix-sql-developer-on-a-retina-display-macbook/</guid>
+            <guid>http://tobybase.com/blog/2013/07/19/how-to-fix-sql-developer-on-a-retina-display-macbook/</guid>
             <description>&lt;p&gt;I just purchased a new Macbook Pro 13-inch with Retina Display and was horrified to see how fuzzy SQL Developer looked on the high-res screen. Thanks to Thunderforge on the &lt;a href=&#34;http://stackoverflow.com/questions/15181079/apple-retina-display-support-in-java-jdk-1-7-for-awt-swing&#34;&gt;Stack Overflow forums&lt;/a&gt; for this tip:&lt;/p&gt;
 
 &lt;blockquote&gt;
