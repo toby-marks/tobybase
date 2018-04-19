@@ -7,8 +7,32 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>toby.marks@infolob.com (Toby Marks)</managingEditor>
     <webMaster>toby.marks@infolob.com (Toby Marks)</webMaster>
-    <lastBuildDate>Tue, 10 Apr 2018 12:47:23 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 19 Apr 2018 15:18:45 -0500</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+      
+        <item>
+          <title>Linklog: Finland is killing its world-famous basic income experiment	</title>
+          <link>http://tobybase.com/link/2018-04-19-finland-dumps-basic-income/</link>
+          <pubDate>Thu, 19 Apr 2018 15:18:45 -0500</pubDate>
+          <author>Karin Olli-Nilsson @businessinsider.com</author>
+          <guid>http://tobybase.com/link/2018-04-19-finland-dumps-basic-income/</guid>
+          <description>&lt;blockquote&gt;
+&lt;p&gt;In recent years, a growing number of tech entrepreneurs have endorsed universal basic income (UBI), a system system in which every individual receives a standard amount of money, simply for being alive.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;And…&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;These tech moguls recognize that UBI, as well as combatting poverty, could also help solve the problem of increased robotization in the workforce, a problem they are very much part of creating.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This will be interesting. Official results of the experiment are to be published in 2019.&lt;/p&gt;
+
+&lt;p&gt;The push for a universal basic income comes from economically skeptical left-leaning millennials, and industrialists who see in workforce automation their answer to the problems of human labor — the need to provision, maintain, scale, and accommodate large numbers of comparatively inefficient workers, with all of their troubles and demands. Widespread automation would allow for an even greater profit efficiency than &lt;em&gt;slavery&lt;/em&gt;, without any of the associated ethical considerations — provided, of course, that the masses of dispossessed workers are maintained in a kind of minimally acceptable lifestyle.&lt;/p&gt;
+</description>
+        </item>
+      
     
       
         <item>
@@ -324,29 +348,6 @@ show the last 10 lines&lt;/p&gt;
 &lt;em&gt;Update:&lt;/em&gt; still works in macOS Sierra.&lt;/p&gt;
 </description>
         </item>
-      
-    
-      
-        
-          <item>
-            <title>How to Fix SQL Developer on a Retina Display Mac(book)</title>
-            <link>http://tobybase.com/blog/2013/07/19/how-to-fix-sql-developer-on-a-retina-display-macbook/</link>
-            <pubDate>Fri, 19 Jul 2013 22:32:00 +0000</pubDate>
-            <author>toby.marks@infolob.com (Toby Marks)</author>
-            <guid>http://tobybase.com/blog/2013/07/19/how-to-fix-sql-developer-on-a-retina-display-macbook/</guid>
-            <description>&lt;p&gt;I just purchased a new Macbook Pro 13-inch with Retina Display and was horrified to see how fuzzy SQL Developer looked on the high-res screen. Thanks to Thunderforge on the &lt;a href=&#34;http://stackoverflow.com/questions/15181079/apple-retina-display-support-in-java-jdk-1-7-for-awt-swing&#34;&gt;Stack Overflow forums&lt;/a&gt; for this tip:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Java 7u40 Early Access now supports HiDPI (Retina) displays, as
-shown by this &lt;a href=&#34;http://download.java.net/jdk7u40/changes/jdk7u40-b28.html?q=download/jdk7u40/changes/jdk7u40-b28.html&#34;&gt;changelog&lt;/a&gt;. So retina support is now available on Java 6, Java 7u40 or higher, and Java 8.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;I am currently running the &lt;a href=&#34;http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/sqldev-download-v4-1925679.html&#34;&gt;Early Adopter release of SQL Developer 4.0&lt;/a&gt; which requires JDK 1.7. I&amp;rsquo;m not sure what the state of Java 8 is on the Mac, so I opted to upgrade my JDK from 1.7.0_25 to 1.7.0_40. After that I had nice, sharp lines back in SQL Developer and all my other Java apps.&lt;/p&gt;
-
-&lt;p&gt;Thanks to Oracle&amp;rsquo;s Java team for addressing this!&lt;/p&gt;
-</description>
-          </item>
-        
       
     
   </channel>
