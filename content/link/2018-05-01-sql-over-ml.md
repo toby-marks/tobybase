@@ -1,5 +1,5 @@
 +++
-draft   = true
+draft   = false
 date    = "2018-05-01T09:05:54-05:00"
 title   = "They Don't Need ML"
 author  = "Celestine Omin"

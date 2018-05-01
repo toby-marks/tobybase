@@ -7,8 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>toby.marks@infolob.com (Toby Marks)</managingEditor>
     <webMaster>toby.marks@infolob.com (Toby Marks)</webMaster>
-    <lastBuildDate>Thu, 19 Apr 2018 15:18:45 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 01 May 2018 09:05:54 -0500</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+      
+        <item>
+          <title>Linklog: They Don&#39;t Need ML</title>
+          <link>http://tobybase.com/link/2018-05-01-sql-over-ml/</link>
+          <pubDate>Tue, 01 May 2018 09:05:54 -0500</pubDate>
+          <author>Celestine Omin</author>
+          <guid>http://tobybase.com/link/2018-05-01-sql-over-ml/</guid>
+          <description>&lt;blockquote&gt;
+&lt;p&gt;I will write a query like select from order table where last shop date is 3 or greater months. When we get this information, we will send a nice &amp;ldquo;we miss you, come back and here&amp;rsquo;s X Naira voucher&amp;rdquo; email. The conversation rate for this one was always greater than 50%.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So-called artificial intelligence and machine learning tools are in fashion these days, and the impetus is to apply them to all problem sets. It would be a mistake to think that they &lt;em&gt;should&lt;/em&gt;, or even &lt;em&gt;could&lt;/em&gt;, substitute for rational thought and human insight. Most problems are simple, and do not require complex systems to solve. (I&amp;rsquo;ve been surprised upon learning how commonsensical are the actual rules that inform predictive analyses, recommendation engines, and relationship graphs.) Good business analysis yields teachable results, not &amp;ldquo;magic&amp;rdquo; numbers or inscrutable algorithms. Human intelligence should not be set aside when pursuing the benefits of machine intelligence.&lt;/p&gt;
+</description>
+        </item>
+      
     
       
         <item>
@@ -335,19 +351,6 @@ show the last 10 lines&lt;/p&gt;
 </description>
           </item>
         
-      
-    
-      
-        <item>
-          <title>Linklog: Use Preview to view formatted man pages</title>
-          <link>http://tobybase.com/link/2013-07-24-view-man-pages/</link>
-          <pubDate>Wed, 24 Jul 2013 00:00:00 +0000</pubDate>
-          <author>Anonymous</author>
-          <guid>http://tobybase.com/link/2013-07-24-view-man-pages/</guid>
-          <description>&lt;p&gt;This is an elegant solution for viewing, searching, and archiving man pages that eliminates the necessity for third party apps.&lt;br /&gt;
-&lt;em&gt;Update:&lt;/em&gt; still works in macOS Sierra.&lt;/p&gt;
-</description>
-        </item>
       
     
   </channel>

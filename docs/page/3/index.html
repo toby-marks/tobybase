@@ -60,6 +60,62 @@
 			<div class="row">
 				
 				<div class="col-md-offset-1 col-md-10">
+					<h3><a href="http://tobybase.com/blog/2012/11/14/how-to-use-sql-to-query-an-xml-document-using-oracle-external-tables/">How To Use SQL to Query an XML Document Using Oracle External Tables</a></h3>
+						<small><span class="label label-primary">
+							
+								11/14/2012
+							</span>&nbsp;in
+							
+								
+								<a href="/categories/howtos">HowTos</a>
+							 using tags
+							
+								
+							<a href="/tags/oracle">oracle</a>
+						
+								 , 
+							<a href="/tags/xml">xml</a>
+						
+								 , 
+							<a href="/tags/sql">sql</a>
+						
+								 , 
+							<a href="/tags/external-tables">external tables</a>
+						
+					</small>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-offset-1 col-md-10">
+					<br>
+					
+	  					
+	  		  				Oracle&rsquo;s external table feature allows you to treat structured files on the database server as tables for query and DML purposes. To use an example from the linked documentation, a tab-delimited file like this:
+56 november, 15, 1980 baker mary alice 09/01/2004 87 december, 20, 1970 roper lisa marie 01/01/1999  &hellip;could be queried like this:
+SELECT employee_number, employee_first_name, substr(employee_middle_name, 1, 1), employee_last_name, employee_hire_date, to_date(employee_dob,&#39;month, dd, yyyy&#39;) FROM employees; After defining the external table like this:
+					  		<br>
+						  	<a href="http://tobybase.com/blog/2012/11/14/how-to-use-sql-to-query-an-xml-document-using-oracle-external-tables/">
+						  	
+						  		Read more
+						  	</a>
+					  	
+					
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<hr>
+				</div>
+			</div>
+		
+	
+
+        
+            	
+		
+			<div class="row">
+				
+				<div class="col-md-offset-1 col-md-10">
 					<h3><a href="http://tobybase.com/blog/2012/11/12/how-to-restrict-access-to-bi-publisher-reports/">How To Restrict Access to BI Publisher Reports</a></h3>
 						<small><span class="label label-primary">
 							
@@ -506,59 +562,6 @@ That fixes the CPU issue, but somewhat annoyingly moves the menu out of the menu
 	  		  				One of the great things about working for Enkitec is that it&rsquo;s a very Mac-friendly shop. When I arrived there in 2007 there were a handful of us running Macs and the attitude at the top seemed to be respectful, but skeptical. They allowed me to use my own laptop, which at the time was a 15-inch Intel Core2 Duo Macbook Pro, with the understanding that I could request a standard-issue Dell laptop at any time should the need arise.
 					  		<br>
 						  	<a href="http://tobybase.com/blog/2012/06/27/os-x-software-for-oracle-developers/">
-						  	
-						  		Read more
-						  	</a>
-					  	
-					
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12">
-					<hr>
-				</div>
-			</div>
-		
-	
-
-        
-            	
-		
-			<div class="row">
-				
-				<div class="col-md-offset-1 col-md-10">
-					<h3><a href="http://tobybase.com/blog/2012/06/07/use-dml-error-logging/">Use DML Error Logging</a></h3>
-						<small><span class="label label-primary">
-							
-								06/07/2012
-							</span>&nbsp;in
-							
-								
-								<a href="/categories/splaining">Splaining</a>
-							 using tags
-							
-								
-							<a href="/tags/oracle">oracle</a>
-						
-								 , 
-							<a href="/tags/sql">sql</a>
-						
-								 , 
-							<a href="/tags/sqlloader">sqlloader</a>
-						
-					</small>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-offset-1 col-md-10">
-					<br>
-					
-	  					
-	  		  				Introduced with Oracle 10gR2, DML Error Logging allows you to make standard SQL INSERT, UPDATE, and MERGE statements behave more like the SQL*Loader utility, logging errors to a table rather than failing and rolling back the first time an error condition is encountered.
-The syntax is the same for all DML statements. Just add the following clause to the end of your DML:
-LOG ERRORS  The database will automatically create an error log table for you.
-					  		<br>
-						  	<a href="http://tobybase.com/blog/2012/06/07/use-dml-error-logging/">
 						  	
 						  		Read more
 						  	</a>
