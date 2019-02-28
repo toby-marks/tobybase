@@ -17,5 +17,4 @@ fields:
   config:
     required: false
 pages:
-- content/post/2019-02-28-test-forestry.md
 - content/post/2018-04-10-oci-add-block-volume-on-windows.md
