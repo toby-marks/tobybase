@@ -7,8 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>toby.marks@infolob.com (Toby Marks)</managingEditor>
     <webMaster>toby.marks@infolob.com (Toby Marks)</webMaster>
-    <lastBuildDate>Tue, 01 May 2018 09:05:54 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 28 Feb 2019 00:00:00 +0000</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+      
+        
+          <item>
+            <title>Testing Update From Laptop</title>
+            <link>http://tobybase.com/blog/2019/02/28/testing-update-from-laptop/</link>
+            <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
+            <author>toby.marks@infolob.com (Toby Marks)</author>
+            <guid>http://tobybase.com/blog/2019/02/28/testing-update-from-laptop/</guid>
+            <description>&lt;p&gt;Updating from my laptop.&lt;/p&gt;
+</description>
+          </item>
+        
+      
     
       
         <item>
@@ -280,73 +294,6 @@
 &lt;span style=&#34;color:#888&#34;&gt;# sudo rm -rf ~/Library/Application\ Support/Juniper\ Networks`&lt;/span&gt;
 &lt;span style=&#34;color:#888&#34;&gt;# sudo rm ~/Library/Preferences/net.juniper.NetworkConnect.plist`&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Now try connecting to your office VPN again and the browser should prompt you to redownload the application. When I tried this I got an error the first time on Firefox saying the installation failed, but I was able to manually verify that the files were in place. My second attempt succeeded. Go figure.&lt;/p&gt;
-</description>
-          </item>
-        
-      
-    
-      
-        
-          <item>
-            <title>How to Use ps to List Top Memory, CPU Eating Processes</title>
-            <link>http://tobybase.com/blog/2013/07/24/how-to-use-ps-to-list-top-memory-cpu-eating-processes/</link>
-            <pubDate>Wed, 24 Jul 2013 21:42:00 +0000</pubDate>
-            <author>toby.marks@infolob.com (Toby Marks)</author>
-            <guid>http://tobybase.com/blog/2013/07/24/how-to-use-ps-to-list-top-memory-cpu-eating-processes/</guid>
-            <description>&lt;p&gt;The &lt;code&gt;ps&lt;/code&gt; command is a versatile and configurable way to look at the processes running on your system, though I&amp;rsquo;ve generally gotten by with a lazy &lt;code&gt;ps -ef&lt;/code&gt; to find out whatever I needed to know. Recently, though, a client&amp;rsquo;s server began running out of memory, and as a number of processes were running on the server, the culprit was not immediately clear. I wanted to provide them with a quick, simple diagnostic tool they could use the next time they received an alert.&lt;/p&gt;
-
-&lt;p&gt;If you look at the man page for &lt;code&gt;ps&lt;/code&gt; you&amp;rsquo;ll find a number of options available for sorting the list of processes returned as well as for filtering the columns displayed.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2013-07-24-linux-unix-use-ps-to-list-top-memory-cpu-eating-processes/ac6287b65af17b95d247ea063f0aa1bfc6f106f3b69adf0ae73ed8258d3a6c7b.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Some examples of &lt;code&gt;ps&lt;/code&gt; options, from RHEL 5.6:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;-e&lt;/strong&gt;&lt;br /&gt;
-select all processes&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;-a&lt;/strong&gt;&lt;br /&gt;
-select all &amp;ldquo;child&amp;rdquo; processes&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;-U &amp;lt;user&amp;gt;&lt;/strong&gt;&lt;br /&gt;
-select all processes for a specified user&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;-p &amp;lt;pid&amp;gt;&lt;/strong&gt;&lt;br /&gt;
-select by process id&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;-f&lt;/strong&gt;&lt;br /&gt;
-full-format listing; adds columns and shows process arguments&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;-o&lt;/strong&gt;&lt;br /&gt;
-user-defined format&lt;/p&gt;
-
-&lt;p&gt;Many others are available, of course, but in order to keep it simple for the client I wanted to show the top 10 processes in terms of memory utilization, with the pid, memory usage, and process name displayed. Here is what I came up with:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ ps -eo pid,user,pmem,args O R | tail -n &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;10&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;And here is an explanation:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;ps&lt;/strong&gt;&lt;br /&gt;
-shows running processes&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;-e&lt;/strong&gt;&lt;br /&gt;
-show all processes&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;-o pid,user,poem,args&lt;/strong&gt;&lt;br /&gt;
-show the pid, %mem, and process columns&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;O R&lt;/strong&gt;&lt;br /&gt;
-sort by memory usage (ascending)&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;tail&lt;/strong&gt;&lt;br /&gt;
-shows only the last lines&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;-n 10&lt;/strong&gt;&lt;br /&gt;
-show the last 10 lines&lt;/p&gt;
-
-&lt;p&gt;I liked the concept so much that I decided to adapt it for OS X, where the &lt;code&gt;ps&lt;/code&gt; command takes a slightly different set of arguments. To my .bash_profile file I added the following lines:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#038&#34;&gt;alias&lt;/span&gt; &lt;span style=&#34;color:#369&#34;&gt;psmem&lt;/span&gt;=&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#34;while :; do clear; ps -ecm -o %mem,rss,pid,user,state,args | head -n 10; sleep 5; done&amp;#34;&lt;/span&gt;
-&lt;span style=&#34;color:#038&#34;&gt;alias&lt;/span&gt; &lt;span style=&#34;color:#369&#34;&gt;pscpu&lt;/span&gt;=&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#34;while :; do clear; ps -ecr -o %cpu,pid,user,state,args | head -n 10; sleep 2; done&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;I have one alias for retrieving my top memory-utilizing processes and one for my top CPU-utilizing processes. The &lt;code&gt;while&lt;/code&gt; loop in the alias implements a functionality similar to that of the Linux &lt;code&gt;watch&lt;/code&gt; command, clearing the screen and running the process indefinitely until it is forcibly quit. For my own purposes I wanted to display some additional columns, like username and process state. I also changed the sort ordering to display the largest processes at the top of the list.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2013-07-24-linux-unix-use-ps-to-list-top-memory-cpu-eating-processes/2bcd3b2c40d8bc37893b47399aed325508e95c655492de8866a8365eede7008f.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </description>
           </item>
         

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Category2 on Tobybase: A Tech Blog</title>
+    <link>http://tobybase.com/categories/category2/</link>
+    <description>Recent content in Category2 on Tobybase: A Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>toby.marks@infolob.com (Toby Marks)</managingEditor>
+    <webMaster>toby.marks@infolob.com (Toby Marks)</webMaster>
+    <lastBuildDate>Thu, 28 Feb 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://tobybase.com/categories/category2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Testing Update From Laptop</title>
+      <link>http://tobybase.com/blog/2019/02/28/testing-update-from-laptop/</link>
+      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://tobybase.com/blog/2019/02/28/testing-update-from-laptop/</guid>
+      <description>Updating from my laptop.</description>
+    </item>
+    
+  </channel>
+</rss>

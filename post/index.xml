@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>toby.marks@infolob.com (Toby Marks)</managingEditor>
     <webMaster>toby.marks@infolob.com (Toby Marks)</webMaster>
-    <lastBuildDate>Tue, 10 Apr 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 28 Feb 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://tobybase.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Testing Update From Laptop</title>
+      <link>http://tobybase.com/blog/2019/02/28/testing-update-from-laptop/</link>
+      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://tobybase.com/blog/2019/02/28/testing-update-from-laptop/</guid>
+      <description>Updating from my laptop.</description>
+    </item>
     
     <item>
       <title></title>
