@@ -4,7 +4,6 @@ description = ""
 title = "Post with an image, from my phone"
 
 +++
-![](/uploads/2332E498-9912-4D24-B854-554CF68DE5C7.jpeg | height=150)
+![](/uploads/3733E349-20DF-4B4C-BEF1-220AFF570BE1.jpeg)
 
-Test post with image from my phon
-<!--more-->
+Test post with image from my phone. <!--more-->
