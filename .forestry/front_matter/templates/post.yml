@@ -5,14 +5,14 @@ is_partial: false
 fields:
 - type: text
   label: Title
-  name: Title
+  name: title
 - type: datetime
   label: Date
   name: date
   config:
     required: true
 - type: text
-  name: description_
+  name: description
   label: 'Description '
   config:
     required: false
