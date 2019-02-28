@@ -12,24 +12,6 @@
     
     
     <item>
-      <title>Category1</title>
-      <link>http://tobybase.com/categories/category1/</link>
-      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
-      <author>toby.marks@infolob.com (Toby Marks)</author>
-      <guid>http://tobybase.com/categories/category1/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Category2</title>
-      <link>http://tobybase.com/categories/category2/</link>
-      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
-      <author>toby.marks@infolob.com (Toby Marks)</author>
-      <guid>http://tobybase.com/categories/category2/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Community</title>
       <link>http://tobybase.com/categories/community/</link>
       <pubDate>Wed, 27 Jun 2012 21:39:00 +0000</pubDate>

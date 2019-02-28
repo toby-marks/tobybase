@@ -3,36 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://tobybase.com/blog/2019/02/28/post-with-an-image-from-my-phone/</loc>
-    <lastmod>2019-02-28T00:00:00-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/blog/2019/02/28/update-from-forestry.io-website/</loc>
-    <lastmod>2019-02-28T00:00:00-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/blog/2019/02/28/my-title/</loc>
-    <lastmod>2019-02-28T00:00:00-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/blog/2019/02/28/a-third-post-from-my-laptop-should-not-overwrite-the-other-two-from-forestry.io/</loc>
-    <lastmod>2019-02-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/blog/2019/02/28/another-update-from-my-laptop/</loc>
-    <lastmod>2019-02-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/blog/2019/02/28/testing-update-from-laptop/</loc>
-    <lastmod>2019-02-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://tobybase.com/link/2018-05-01-sql-over-ml/</loc>
     <lastmod>2018-05-01T09:05:54-05:00</lastmod>
   </url>
@@ -271,18 +241,6 @@
   
   <url>
     <loc>http://tobybase.com/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/categories/category1/</loc>
-    <lastmod>2019-02-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/categories/category2/</loc>
-    <lastmod>2019-02-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -534,7 +492,7 @@
   
   <url>
     <loc>http://tobybase.com/post/</loc>
-    <lastmod>2019-02-28T00:00:00-06:00</lastmod>
+    <lastmod>2018-04-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -581,18 +539,6 @@
   </url>
   
   <url>
-    <loc>http://tobybase.com/tags/tag1/</loc>
-    <lastmod>2019-02-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/tag2/</loc>
-    <lastmod>2019-02-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://tobybase.com/tags/</loc>
     <lastmod>2017-02-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -606,7 +552,7 @@
   
   <url>
     <loc>http://tobybase.com/</loc>
-    <lastmod>2019-02-28T00:00:00-06:00</lastmod>
+    <lastmod>2018-05-01T09:05:54-05:00</lastmod>
     <priority>0</priority>
   </url>
   
