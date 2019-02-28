@@ -13,6 +13,15 @@
     
     
     <item>
+      <title>Post with an image, from my phone</title>
+      <link>http://tobybase.com/blog/2019/02/28/post-with-an-image-from-my-phone/</link>
+      <pubDate>Thu, 28 Feb 2019 00:00:00 -0600</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://tobybase.com/blog/2019/02/28/post-with-an-image-from-my-phone/</guid>
+      <description>Test post with image from my phone.</description>
+    </item>
+    
+    <item>
       <title>Update From Forestry.io Website</title>
       <link>http://tobybase.com/blog/2019/02/28/update-from-forestry.io-website/</link>
       <pubDate>Thu, 28 Feb 2019 00:00:00 -0600</pubDate>
