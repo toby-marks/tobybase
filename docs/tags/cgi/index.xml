@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cgi on Tobybase: A Tech Blog</title>
+    <link>http://tobybase.com/tags/cgi/</link>
+    <description>Recent content in Cgi on Tobybase: A Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>toby.marks@infolob.com (Toby Marks)</managingEditor>
+    <webMaster>toby.marks@infolob.com (Toby Marks)</webMaster>
+    <lastBuildDate>Mon, 02 Jul 2012 22:40:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://tobybase.com/tags/cgi/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How To Use a Perl CGI Script to Show Real Web Server Host Name</title>
+      <link>http://tobybase.com/blog/2012/07/02/how-to-use-a-perl-cgi-script-to-show-real-web-server-host-name/</link>
+      <pubDate>Mon, 02 Jul 2012 22:40:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://tobybase.com/blog/2012/07/02/how-to-use-a-perl-cgi-script-to-show-real-web-server-host-name/</guid>
+      <description>Here is a short and simple Perl CGI script that you can use to expose the hostname of your web server, as opposed to just the server/domain portion of the URL string:
+#!/usr/bin/perl print &amp;#34;Content-type: text/html\n\n&amp;#34;; print `hostname`; 1; Name the file something like hostname.cgi and place it in your web server&amp;rsquo;s /cgi-bin/ directory, or if your web server is configured appropriately, just name it hostname.pl and drop it wherever you like.</description>
+    </item>
+    
+  </channel>
+</rss>

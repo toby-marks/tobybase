@@ -1,4 +1,4 @@
-baseurl             = "http://tobybase.com"  # the baseurl for your website
+baseURL             = "http://tobybase.com"  # the baseurl for your website
 title               = "Tobybase: A Tech Blog"             # blog title
 paginate            = 10                     # the number of posts on a page
 publishDir          = "docs"
