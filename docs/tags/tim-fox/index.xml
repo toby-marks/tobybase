@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tim Fox on Tobybase: A Tech Blog</title>
+    <link>http://tobybase.com/tags/tim-fox/</link>
+    <description>Recent content in Tim Fox on Tobybase: A Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>toby.marks@infolob.com (Toby Marks)</managingEditor>
+    <webMaster>toby.marks@infolob.com (Toby Marks)</webMaster>
+    <lastBuildDate>Fri, 10 Mar 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://tobybase.com/tags/tim-fox/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Announcing the Infolob YouTube Channel</title>
+      <link>http://tobybase.com/blog/2017/03/10/announcing-the-infolob-youtube-channel/</link>
+      <pubDate>Fri, 10 Mar 2017 00:00:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://tobybase.com/blog/2017/03/10/announcing-the-infolob-youtube-channel/</guid>
+      <description>I am honored to work with some wonderful and truly smart folks over at Infolob in Irving, Texas. The company recently started a YouTube channel and we are looking to add lots of great videos soon for your enjoyment and education.
+Check us out!
+In this short Oracle Platinum Partner Spotlight video, our Chief Technologist Tim Fox explains what we do as a company and the kinds of services we provide.</description>
+    </item>
+    
+  </channel>
+</rss>
