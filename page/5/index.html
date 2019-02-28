@@ -60,6 +60,58 @@
 			<div class="row">
 				
 				<div class="col-md-offset-1 col-md-10">
+					<h3><a href="http://tobybase.com/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-1/">Table Functions: 9i Feature Worth Revisiting (Part 1)</a></h3>
+						<small><span class="label label-primary">
+							
+								04/27/2012
+							</span>&nbsp;in
+							
+								
+								<a href="/categories/splaining">Splaining</a>
+							
+							
+								
+							<a href="/tags/oracle">oracle</a>
+						
+								 , 
+							<a href="/tags/plsql">plsql</a>
+						
+								 , 
+							<a href="/tags/pipelined-table-functions">pipelined table functions</a>
+						
+					</small>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-offset-1 col-md-10">
+					<br>
+					
+	  					
+	  		  				Yes, they&rsquo;ve been around for a while, but if you haven&rsquo;t made use of table functions lately you might want to reacquaint yourself with this old gem. Table functions allow you to query the contents of PL/SQL collection types using SQL&rsquo;s TABLE operator. Here is a simple example.
+CREATE OR REPLACE PACKAGE example AS TYPE nested_table_typ IS TABLE OF VARCHAR2(100); FUNCTION get_nested_table_data RETURN nested_table_typ PIPELINED; END example; / CREATE OR REPLACE PACKAGE BODY example AS FUNCTION get_nested_table_data RETURN nested_table_typ PIPELINED IS BEGIN PIPE ROW (&#39;one&#39;); PIPE ROW (&#39;two&#39;); PIPE ROW (&#39;three&#39;); RETURN; END get_nested_table_data; END example; / The package function example.
+					  		<br>
+						  	<a href="http://tobybase.com/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-1/">
+						  	
+						  		Read more
+						  	</a>
+					  	
+					
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<hr>
+				</div>
+			</div>
+		
+	
+
+        
+            	
+		
+			<div class="row">
+				
+				<div class="col-md-offset-1 col-md-10">
 					<h3><a href="http://tobybase.com/blog/2012/04/05/how-to-make-bash-scripts-crontab-compatible/">How To Make Bash Scripts crontab-Compatible</a></h3>
 						<small><span class="label label-primary">
 							
