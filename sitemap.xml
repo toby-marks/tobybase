@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://tobybase.com/blog/2019/02/28/update-from-forestry.io-website/</loc>
+    <lastmod>2019-02-28T00:00:00-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://tobybase.com/blog/2019/02/28/another-update-from-my-laptop/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
   </url>
@@ -514,7 +519,7 @@
   
   <url>
     <loc>http://tobybase.com/post/</loc>
-    <lastmod>2019-02-28T00:00:00+00:00</lastmod>
+    <lastmod>2019-02-28T00:00:00-06:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -586,7 +591,7 @@
   
   <url>
     <loc>http://tobybase.com/</loc>
-    <lastmod>2019-02-28T00:00:00+00:00</lastmod>
+    <lastmod>2019-02-28T00:00:00-06:00</lastmod>
     <priority>0</priority>
   </url>
   

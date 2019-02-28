@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>toby.marks@infolob.com (Toby Marks)</managingEditor>
     <webMaster>toby.marks@infolob.com (Toby Marks)</webMaster>
-    <lastBuildDate>Thu, 28 Feb 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 28 Feb 2019 00:00:00 -0600</lastBuildDate>
     
 	<atom:link href="http://tobybase.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Update From Forestry.io Website</title>
+      <link>http://tobybase.com/blog/2019/02/28/update-from-forestry.io-website/</link>
+      <pubDate>Thu, 28 Feb 2019 00:00:00 -0600</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://tobybase.com/blog/2019/02/28/update-from-forestry.io-website/</guid>
+      <description>Updating from the Forestry.io website</description>
+    </item>
     
     <item>
       <title>Another update from my laptop</title>
