@@ -1,7 +1,9 @@
 +++
+Title = ""
 categories = ["OCI"]
 date = "2018-04-10"
 description = "What to do when you get an access denied permissions error when attempting to attach a block volume to a Windows virtual machine in Oracle Cloud"
+description_ = ""
 tags = ["Oracle", "cloud", "IaaS", "Windows", "virtual machines"]
 title = "Access Denied When Adding a Block Volume to a Windows VM on Oracle Cloud Infrastructure"
 
@@ -33,4 +35,4 @@ The problem is that the iSCSI commands Oracle provides need to be run from a pri
 
 Search for Powershell. Right-click on the icon, and choose *Run as administrator*. You will now be able to successfully run the iSCSI commands and connect to your block volume. If you don't care for that method, [there are a number of other ways](https://www.top-password.com/blog/5-ways-to-run-powershell-as-administrator-in-windows-10/) to launch an elevated shell in Windows. 
 
-Have fun experimenting with OCI. There is no better cost/performance value for cloud infrastructure.
+Have fun experimenting with OCI. There is no better cost/performance value for cloud infrastructure. 
