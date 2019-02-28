@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Splaining on Tobybase: A Tech Blog</title>
+    <link>http://tobybase.com/categories/splaining/</link>
+    <description>Recent content in Splaining on Tobybase: A Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>toby.marks@infolob.com (Toby Marks)</managingEditor>
+    <webMaster>toby.marks@infolob.com (Toby Marks)</webMaster>
+    <lastBuildDate>Wed, 09 Jan 2013 19:09:45 +0000</lastBuildDate>
+    
+	<atom:link href="http://tobybase.com/categories/splaining/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Button Hotkeys in SQL Developer on OS X</title>
+      <link>http://tobybase.com/blog/2013/01/09/button-hotkeys-in-sql-developer-on-os-x/</link>
+      <pubDate>Wed, 09 Jan 2013 19:09:45 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://tobybase.com/blog/2013/01/09/button-hotkeys-in-sql-developer-on-os-x/</guid>
+      <description>In Windows, most applications provide menu and button accelerator keys that allow you to control the application without having to use a mouse. Java Swing apps like SQL Developer allow you to do the same, ostensibly in a cross-platform compatible manner.
+One place I use this frequently is the Enter Binds dialog window that pops up when running a query using bind variables.
+In Java 6 on OS X, the hotkey for pressing the Help and Apply buttons was OPTION-H and OPTION-A, respectively.</description>
+    </item>
+    
+    <item>
+      <title>Use Firebug&#39;s console.debug Command to Analyze Javascript, DOM Objects</title>
+      <link>http://tobybase.com/blog/2012/10/26/use-firebugs-console.debug-command-to-analyze-javascript-dom-objects/</link>
+      <pubDate>Fri, 26 Oct 2012 21:09:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://tobybase.com/blog/2012/10/26/use-firebugs-console.debug-command-to-analyze-javascript-dom-objects/</guid>
+      <description>Occasionally when debugging my Javascript code I need to be able to analyze the properties of an unknown object; for instance, an unexpected DOM object passed to an event handler. How do you analyze the properties of an object when you don&amp;rsquo;t know what the object is? I was looking for a way to list all the properties of a generic Javascript or DOM object when I stumbled across this blog post by Andrew Peters.</description>
+    </item>
+    
+    <item>
+      <title>Use DML Error Logging</title>
+      <link>http://tobybase.com/blog/2012/06/07/use-dml-error-logging/</link>
+      <pubDate>Thu, 07 Jun 2012 17:04:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://tobybase.com/blog/2012/06/07/use-dml-error-logging/</guid>
+      <description>Introduced with Oracle 10gR2, DML Error Logging allows you to make standard SQL INSERT, UPDATE, and MERGE statements behave more like the SQL*Loader utility, logging errors to a table rather than failing and rolling back the first time an error condition is encountered.
+The syntax is the same for all DML statements. Just add the following clause to the end of your DML:
+LOG ERRORS  The database will automatically create an error log table for you.</description>
+    </item>
+    
+    <item>
+      <title>Discovering Command-line Java Profiling Tools</title>
+      <link>http://tobybase.com/blog/2012/05/02/discovering-command-line-java-profiling-tools/</link>
+      <pubDate>Wed, 02 May 2012 21:41:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://tobybase.com/blog/2012/05/02/discovering-command-line-java-profiling-tools/</guid>
+      <description>At my current client I am responsible for administering a third-party Java appplication that unfortunately generates a lot of performance complaints. It&amp;rsquo;s a multi-tiered system with the middle-tier running on Oracle Appication Server 10.1.3. I am already familiar with GUI profiling tools like jconsole and jvisualvm, both of which are included with Oracle&amp;rsquo;s JDK, and I have played around with the profiling capabilities in NetBeans. All of these profiling tools are fairly similar to one another in look and functionality.</description>
+    </item>
+    
+    <item>
+      <title>Table Functions: 9i Feature Worth Revisiting (Part 2)</title>
+      <link>http://tobybase.com/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-2/</link>
+      <pubDate>Fri, 27 Apr 2012 22:35:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://tobybase.com/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-2/</guid>
+      <description>In part one of this series I showed a simple example of how table functions can be used to treat PL/SQL collection types as tables in a SQL query. We used a nested table collection type to which we manually added a few entries. In this example, I intend to show a more practical use of table functions using all three PL/SQL collection types: associative arrays, nested tables, and VARRAYs.</description>
+    </item>
+    
+    <item>
+      <title>Table Functions: 9i Feature Worth Revisiting (Part 1)</title>
+      <link>http://tobybase.com/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-1/</link>
+      <pubDate>Fri, 27 Apr 2012 22:27:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://tobybase.com/blog/2012/04/27/table-functions-9i-feature-worth-revisiting-part-1/</guid>
+      <description>Yes, they&amp;rsquo;ve been around for a while, but if you haven&amp;rsquo;t made use of table functions lately you might want to reacquaint yourself with this old gem. Table functions allow you to query the contents of PL/SQL collection types using SQL&amp;rsquo;s TABLE operator. Here is a simple example.
+CREATE OR REPLACE PACKAGE example AS TYPE nested_table_typ IS TABLE OF VARCHAR2(100); FUNCTION get_nested_table_data RETURN nested_table_typ PIPELINED; END example; / CREATE OR REPLACE PACKAGE BODY example AS FUNCTION get_nested_table_data RETURN nested_table_typ PIPELINED IS BEGIN PIPE ROW (&amp;#39;one&amp;#39;); PIPE ROW (&amp;#39;two&amp;#39;); PIPE ROW (&amp;#39;three&amp;#39;); RETURN; END get_nested_table_data; END example; / The package function example.</description>
+    </item>
+    
+  </channel>
+</rss>
