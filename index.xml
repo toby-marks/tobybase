@@ -13,6 +13,20 @@
       
         
           <item>
+            <title>Another update from my laptop</title>
+            <link>http://tobybase.com/blog/2019/02/28/another-update-from-my-laptop/</link>
+            <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
+            <author>toby.marks@infolob.com (Toby Marks)</author>
+            <guid>http://tobybase.com/blog/2019/02/28/another-update-from-my-laptop/</guid>
+            <description>&lt;p&gt;Content of the file goes here&lt;/p&gt;
+</description>
+          </item>
+        
+      
+    
+      
+        
+          <item>
             <title>Testing Update From Laptop</title>
             <link>http://tobybase.com/blog/2019/02/28/testing-update-from-laptop/</link>
             <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
@@ -269,31 +283,6 @@
 &lt;p&gt;What I needed was a breath of technological fresh air. Something to excite me about blogging again. So as a personal challenge, and in the spirit of adopting the latest and greatest platforms, I have decided to use &lt;a href=&#34;https://gohugo.io&#34; title=&#34;Hugo makes blogging fun again&#34;&gt;Hugo&lt;/a&gt; for static web page generation. I wanted to provide a site with the fastest possible page load times by maintaining maximum control over coding and site customization. I also love the immediate feedback Hugo gives you while you&amp;rsquo;re coding a page. No more precious seconds lost on Wordpress or Blogger! The site will be hosted on my &lt;a href=&#34;https://github.com/toby-marks&#34; title=&#34;My Github repository&#34;&gt;Github&lt;/a&gt;, which will provide me with version control and an easy method for synchronization with the web server.&lt;/p&gt;
 
 &lt;p&gt;I hope you enjoy the new site. I look forward to adding some interesting content over the coming weeks.&lt;/p&gt;
-</description>
-          </item>
-        
-      
-    
-      
-        
-          <item>
-            <title>What to do when the Juniper Network Connect app on OS X does not connect</title>
-            <link>http://tobybase.com/blog/2016/02/04/what-to-do-when-the-juniper-network-connect-app-on-os-x-does-not-connect/</link>
-            <pubDate>Thu, 04 Feb 2016 22:50:09 +0000</pubDate>
-            <author>toby.marks@infolob.com (Toby Marks)</author>
-            <guid>http://tobybase.com/blog/2016/02/04/what-to-do-when-the-juniper-network-connect-app-on-os-x-does-not-connect/</guid>
-            <description>&lt;p&gt;If you use Juniper&amp;rsquo;s Network Connect app to connect to your office VPN over HTTPS, you might occasionally experience strange errors like &amp;ldquo;A software error caused the Network Connect tunneling service to terminate.&amp;rdquo; Shortly after that, the application may either crash or prompt you for login credentials again.&lt;/p&gt;
-
-&lt;p&gt;The solution involves removing all of the Network Connect files and allowing your browser to download and install the app all over again, as it did the first time you tried to connect to your office VPN.&lt;/p&gt;
-
-&lt;p&gt;(Note: as a precaution you may want to simply move the Network Connect.app file from /Applications to ~/Desktop, just in case your browser is not able to download it as needed.)&lt;/p&gt;
-
-&lt;p&gt;To remove all files associated with the Network Connect application, execute the following commands in Terminal.app.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#888&#34;&gt;# sudo rm -rf /Applications/Network\ Connect.app`&lt;/span&gt;
-&lt;span style=&#34;color:#888&#34;&gt;# sudo rm -rf /usr/local/juniper`&lt;/span&gt;
-&lt;span style=&#34;color:#888&#34;&gt;# sudo rm -rf ~/Library/Application\ Support/Juniper\ Networks`&lt;/span&gt;
-&lt;span style=&#34;color:#888&#34;&gt;# sudo rm ~/Library/Preferences/net.juniper.NetworkConnect.plist`&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Now try connecting to your office VPN again and the browser should prompt you to redownload the application. When I tried this I got an error the first time on Firefox saying the installation failed, but I was able to manually verify that the files were in place. My second attempt succeeded. Go figure.&lt;/p&gt;
 </description>
           </item>
         

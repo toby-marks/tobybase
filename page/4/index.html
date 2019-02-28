@@ -60,6 +60,58 @@
 			<div class="row">
 				
 				<div class="col-md-offset-1 col-md-10">
+					<h3><a href="http://tobybase.com/blog/2012/07/02/how-to-use-a-perl-cgi-script-to-show-real-web-server-host-name/">How To Use a Perl CGI Script to Show Real Web Server Host Name</a></h3>
+						<small><span class="label label-primary">
+							
+								07/02/2012
+							</span>&nbsp;in
+							
+								
+								<a href="/categories/howtos">HowTos</a>
+							
+							
+								
+							<a href="/tags/perl">perl</a>
+						
+								 , 
+							<a href="/tags/cgi">cgi</a>
+						
+								 , 
+							<a href="/tags/scripting">scripting</a>
+						
+					</small>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-offset-1 col-md-10">
+					<br>
+					
+	  					
+	  		  				Here is a short and simple Perl CGI script that you can use to expose the hostname of your web server, as opposed to just the server/domain portion of the URL string:
+#!/usr/bin/perl print &#34;Content-type: text/html\n\n&#34;; print `hostname`; 1; Name the file something like hostname.cgi and place it in your web server&rsquo;s /cgi-bin/ directory, or if your web server is configured appropriately, just name it hostname.pl and drop it wherever you like.
+					  		<br>
+						  	<a href="http://tobybase.com/blog/2012/07/02/how-to-use-a-perl-cgi-script-to-show-real-web-server-host-name/">
+						  	
+						  		Read more
+						  	</a>
+					  	
+					
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<hr>
+				</div>
+			</div>
+		
+	
+
+        
+            	
+		
+			<div class="row">
+				
+				<div class="col-md-offset-1 col-md-10">
 					<h3><a href="http://tobybase.com/blog/2012/06/27/os-x-software-for-oracle-developers/">OS X Software for Oracle Developers</a></h3>
 						<small><span class="label label-primary">
 							
@@ -501,63 +553,6 @@ By default, crontab runs scripts in the user&rsquo;s home directory, as specifie
 	
 
         
-            	
-		
-			<div class="row">
-				
-				<div class="col-md-offset-1 col-md-10">
-					<h3><a href="http://tobybase.com/blog/2012/03/09/invalidating-toplink-session-cache-to-avoid-stale-data/">Invalidating Toplink Session Cache To Avoid Stale Data</a></h3>
-						<small><span class="label label-primary">
-							
-								03/09/2012
-							</span>&nbsp;in
-							
-								
-								<a href="/categories/war-stories">War Stories</a>
-							
-							
-								
-							<a href="/tags/oracle">oracle</a>
-						
-								 , 
-							<a href="/tags/java">java</a>
-						
-								 , 
-							<a href="/tags/toplink">toplink</a>
-						
-								 , 
-							<a href="/tags/oracle-application-server">oracle application server</a>
-						
-								 , 
-							<a href="/tags/weblogic">weblogic</a>
-						
-					</small>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-offset-1 col-md-10">
-					<br>
-					
-	  					
-	  		  				Toplink is a Java framework that maps objects to database tables. It is the reference implementation for the Java Persistence Architecture, or JPA. Developers use Toplink to manage data persistence (storage), queries, and transactions in an Oracle database. By default, Toplink makes use of a special cache called a Session Cache, maintained on the server, which is meant to speed up performance. Queried data is stored in the Session Cache and used in subsequent queries to reduce or eliminate calls to the database.
-					  		<br>
-						  	<a href="http://tobybase.com/blog/2012/03/09/invalidating-toplink-session-cache-to-avoid-stale-data/">
-						  	
-						  		Read more
-						  	</a>
-					  	
-					
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12">
-					<hr>
-				</div>
-			</div>
-		
-	
-
-        
 	</div>
     <div class="container">
         <div class="row">
@@ -620,12 +615,23 @@ By default, crontab runs scripts in the user&rsquo;s home directory, as specifie
     <li class="page-item active"><a class="page-link" href="/page/4/">4</a></li>
     
     
-    <li class="page-item disabled">
-    <a href="" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/page/5/">5</a></li>
+    
+    
+    <li class="page-item">
+    <a href="/page/5/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
     </li>
     
     <li class="page-item">
-        <a href="/page/4/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        <a href="/page/5/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
     </li>
     
 </ul>
