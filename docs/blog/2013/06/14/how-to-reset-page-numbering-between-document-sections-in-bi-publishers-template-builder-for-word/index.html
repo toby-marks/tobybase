@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="How To Reset Page Numbering Between Document Sections in BI Publisher&#39;s Template Builder for Word">
+    <meta name="author" content="Toby Marks">
+
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <title>How To Reset Page Numbering Between Document Sections in BI Publisher&#39;s Template Builder for Word &middot; Tobybase: A Tech Blog</title>
+
+   	
+    
+        <link rel="stylesheet" href="http://tobybase.com/css/theme/lumen.css">
+    
+
+    <link rel="stylesheet" href="http://tobybase.com/css/font-awesome.min.css">
+
+   	
+   	<link rel="stylesheet" href="http://tobybase.com/css/style.css">
+
+
+    
+    <script src="http://tobybase.com/js/jquery.min-2.1.4.js"></script>
+    <script src="http://tobybase.com/js/bootstrap.min-3.3.5.js"></script>
+
+    
+    <link href="" rel="alternate" type="application/rss+xml" title="Tobybase: A Tech Blog" />
+</head>
+<body lang="en-US">
+    
+    <div class="container">
+    <div class="row">
+        <div class="navbar navbar-default " role="navigation">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="http://tobybase.com"><img src="http://tobybase.com/img/logo.png" height="75" id="logographic"></a>
+            </div>
+            <div class="navbar-collapse collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="http://tobybase.com">Home</a></li>
+                    <li><a href="http://tobybase.com/post/">Articles</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-offset-1 col-md-10">
+			<h3>How To Reset Page Numbering Between Document Sections in BI Publisher&#39;s Template Builder for Word</h3>
+				<span class="label label-primary">06/14/2013</span> in 
+				
+					
+					<a href="/categories/howtos">HowTos</a>
+				 using tags
+				
+					
+					<a href="/tags/oracle">oracle</a>
+				
+					 , 
+					<a href="/tags/bi-publisher">bi publisher</a>
+				
+					 , 
+					<a href="/tags/bi">bi</a>
+				
+					 , 
+					<a href="/tags/reporting">reporting</a>
+				
+			</small>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-offset-1 col-md-10">
+			<br>
+			<p>Under normal circumstances, it is fairly easy in Microsoft Word to <a href="http://www.youtube.com/watch?v=E1WtKR6FDM4">reset page numbering</a> when starting a new section of your document. However, such a simple thing can be non-trivial when dealing with the BI Publisher Template Builder plugin for Microsoft Office (<a href="http://www.oracle.com/technetwork/middleware/bi-publisher/downloads/index.html">available from Oracle</a> — see BI Publisher Desktop).</p>
+
+<p>In short, doing this the normal way did not work for me, and in researching the issue I ran across a <a href="http://stackoverflow.com/questions/9603481/rtf-number-of-pages-page-x-of-y">number</a> <a href="https://forums.oracle.com/thread/2493003">of</a> <a href="https://forums.oracle.com/thread/496869">folks</a> who were having the same problem. Page numbering was simply not being reset between sections, or worse, did not take into account a fluid document size based upon available data.</p>
+
+<p><img src="/img/2013-06-14-resetting-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/9f704cdbd7a5ec85bff722e3469edae0993faa219b4e42459782b94f692aa53e.png" alt="" /></p>
+
+<p>One <a href="https://forums.oracle.com/thread/2225641">suggestion I read</a> said to wrap the page number cells in a BI Publisher repeating group using for-each@section, like so:</p>
+
+<p><code>&lt;?for-each@section:ID?&gt; x/y &lt;?end for-each?&gt;</code></p>
+
+<p>But this also didn&rsquo;t work for me. Finally I had to edit the RTF file directly.</p>
+
+<p>The <a href="http://www.biblioscape.com/rtf15_spec.htm">RTF specification</a> was of some help to me in doing this, as well as <a href="http://msdn.microsoft.com/en-us/library/office/aa140283(v=office.10).aspx#rtfspec_secformatprop">this explanatory page from Microsoft</a>.</p>
+
+<p>RTF files can be a little confusing, but most of the &ldquo;junk&rdquo; in the files is just special codes for formatting the text. I was able to find my way around easily enough by searching for labels or keywords from the document. By searching for the first few words from the second section of the document (in this case, &ldquo;Sender&rsquo;s Receipt&rdquo;), I was able to spot where the section break should go.</p>
+
+<p><img src="/img/2013-06-14-resetting-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/0d902604df4939682bb7821c4044affb3b03f809274551b8172827bc846d7b2d.png" alt="" /></p>
+
+<p>Checking the RTF spec, I could see that the <code>\page</code> directive shown above was the page break between two sections of my document where I wanted to reset the page numbering. To create the section break, I inserted the following RTF directives at that point:</p>
+
+<p><code>\sect \sectd \pgnstarts1\pgnrestart</code></p>
+
+<p><img src="/img/2013-06-14-resetting-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/466447c609e7fa65f188357e7531def7cb8f1443944e602f62e3eff984f1388d.png" alt="" /></p>
+
+<p>Since the default behavior of the section break is to start on a new page, I found I had to remove the <code>\page</code> directive to avoid an extra page being inserted between the document sections.</p>
+
+<p>Interestingly, resetting the page numbering also works when calculating total number of pages, whereby the total is from the section, not the entire document, even though the NumPages field is used instead of SectionPages! Go figure, but it worked for me.</p>
+
+<p><img src="/img/2013-06-14-resetting-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/1efc8813e70f4ee7bda4647b6fd38f4dce646c46b41e20fb482a3443e5bbb17a.png" alt="" /></p>
+
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<hr>
+		</div>
+	</div>
+
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tobybase-com" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+	<div class="row">
+		<div class="col-md-12">
+			<hr>
+		</div>
+	</div>
+</div>
+
+    <div class="container">
+        <div class="row col-md-12">
+            <footer>
+                <div class="pull-left">
+                    <p>
+                        &copy; 2017 ~ Toby Marks ~ Powered By <a href="http://hugo.spf13.com">Hugo</a> - version: 0.54.0 ~ <a href="http://tobybase.com/license">License</a>
+                    </p>
+                </div>
+
+                
+                <div class="pull-right">
+                    
+                        <a href="https://www.linkedin.com/in/tobymarks" target="_blank">
+                        <span class="sr-only">LinkedIn profile</span>
+                        <i class="fab fa-linkedin fa-2x"></i></a>
+                    
+                    
+                    
+                        <a href="https://twitter.com/toby_marks" target="_blank">
+                        <span class="sr-only">twitter profile</span>
+                        <i class="fab fa-twitter-square fa-2x"></i></a>
+                    
+                    
+                        <a href="https://github.com/toby-marks" target="_blank">
+                        <span class="sr-only">GitHub profile</span>
+                        <i class="fab fa-github-square fa-2x"></i></a>
+                    
+                    
+                    
+                    
+                    
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    
+    </body>
+</html>
+

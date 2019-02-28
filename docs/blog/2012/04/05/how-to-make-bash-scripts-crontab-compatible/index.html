@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="How To Make Bash Scripts crontab-Compatible">
+    <meta name="author" content="Toby Marks">
+
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <title>How To Make Bash Scripts crontab-Compatible &middot; Tobybase: A Tech Blog</title>
+
+   	
+    
+        <link rel="stylesheet" href="http://tobybase.com/css/theme/lumen.css">
+    
+
+    <link rel="stylesheet" href="http://tobybase.com/css/font-awesome.min.css">
+
+   	
+   	<link rel="stylesheet" href="http://tobybase.com/css/style.css">
+
+
+    
+    <script src="http://tobybase.com/js/jquery.min-2.1.4.js"></script>
+    <script src="http://tobybase.com/js/bootstrap.min-3.3.5.js"></script>
+
+    
+    <link href="" rel="alternate" type="application/rss+xml" title="Tobybase: A Tech Blog" />
+</head>
+<body lang="en-US">
+    
+    <div class="container">
+    <div class="row">
+        <div class="navbar navbar-default " role="navigation">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="http://tobybase.com"><img src="http://tobybase.com/img/logo.png" height="75" id="logographic"></a>
+            </div>
+            <div class="navbar-collapse collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="http://tobybase.com">Home</a></li>
+                    <li><a href="http://tobybase.com/post/">Articles</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-offset-1 col-md-10">
+			<h3>How To Make Bash Scripts crontab-Compatible</h3>
+				<span class="label label-primary">04/05/2012</span> in 
+				
+					
+					<a href="/categories/howtos">HowTos</a>
+				 using tags
+				
+					
+					<a href="/tags/bash">bash</a>
+				
+					 , 
+					<a href="/tags/cron">cron</a>
+				
+					 , 
+					<a href="/tags/scripting">scripting</a>
+				
+					 , 
+					<a href="/tags/unix/linux">unix/linux</a>
+				
+			</small>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-offset-1 col-md-10">
+			<br>
+			<p>When writing shell scripts in bash, consider whether your script can be automated in a batch scheduler like cron. If you reference any external resources in your script relative to the directory in which it resides, those references may break when running your script through cron.</p>
+
+<p>By default, crontab runs scripts in the user&rsquo;s home directory, as specified in <code>/etc/passwd</code>. For user &ldquo;Tim&rdquo; with home directory <code>/home/tim</code>, a sample crontab might look something like the following:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#00d;font-weight:bold">0</span> <span style="color:#00d;font-weight:bold">0</span> * * * runme.sh</code></pre></div>
+<p>Every night at midnight, cron will try to run the file <code>/home/tim/runme.sh</code>. However, if <code>runme.sh</code> is actually in a sub-directory under <code>~tim</code>, you will need to tell cron how to reach the file. One option would be to qualify the path in crontab, like so:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#00d;font-weight:bold">0</span> <span style="color:#00d;font-weight:bold">0</span> * * * ~/bin/runme.sh</code></pre></div>
+<p>Now cron can find the file. However, if the script makes references to other files inside of <code>/bin</code> in a path-relative way, those references will be broken.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#c00;font-weight:bold">#!/bin/bash
+</span><span style="color:#c00;font-weight:bold"></span><span style="color:#888">#runme.sh</span>
+./runthis.sh      <span style="color:#888"># can&#39;t find this file when running under cron</span>
+./runthat.sh      <span style="color:#888"># can&#39;t find this file when running under cron</span></code></pre></div>
+<p>That&rsquo;s because to cron <code>./</code> is not the directory in which the script is running, but rather whatever is defined as the base directory; in the default case, the user&rsquo;s home directory.</p>
+
+<p>It is possible to specify the base directory in the crontab file itself by defining the special variable <code>HOME</code>.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#369">HOME</span>=/home/tim/bin
+<span style="color:#00d;font-weight:bold">0</span> <span style="color:#00d;font-weight:bold">0</span> * * * runme.sh</code></pre></div>
+<p>However, you may not always have control over how your crontab is configured. Perhaps a system administrator is in charge of all the schedules on your server. Or you may organize your scripts in several different directories.</p>
+
+<p>An easy solution is to start your bash scripts with the following command:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#038">cd</span> <span style="color:#080;font-weight:bold">$(</span>dirname <span style="color:#369">$0</span><span style="color:#080;font-weight:bold">)</span></code></pre></div>
+<p>The program <code>dirname</code> returns the directory portion of the fully qualified path name sent to it. The <code>$0</code> argument in this context is name of the running script. Basically, this code ensures that the current working directory is the same as the directory in which your script is running. That way all your path-relative references are correct whether running manually or through a scheduler.</p>
+
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<hr>
+		</div>
+	</div>
+
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tobybase-com" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+	<div class="row">
+		<div class="col-md-12">
+			<hr>
+		</div>
+	</div>
+</div>
+
+    <div class="container">
+        <div class="row col-md-12">
+            <footer>
+                <div class="pull-left">
+                    <p>
+                        &copy; 2017 ~ Toby Marks ~ Powered By <a href="http://hugo.spf13.com">Hugo</a> - version: 0.54.0 ~ <a href="http://tobybase.com/license">License</a>
+                    </p>
+                </div>
+
+                
+                <div class="pull-right">
+                    
+                        <a href="https://www.linkedin.com/in/tobymarks" target="_blank">
+                        <span class="sr-only">LinkedIn profile</span>
+                        <i class="fab fa-linkedin fa-2x"></i></a>
+                    
+                    
+                    
+                        <a href="https://twitter.com/toby_marks" target="_blank">
+                        <span class="sr-only">twitter profile</span>
+                        <i class="fab fa-twitter-square fa-2x"></i></a>
+                    
+                    
+                        <a href="https://github.com/toby-marks" target="_blank">
+                        <span class="sr-only">GitHub profile</span>
+                        <i class="fab fa-github-square fa-2x"></i></a>
+                    
+                    
+                    
+                    
+                    
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    
+    </body>
+</html>
+

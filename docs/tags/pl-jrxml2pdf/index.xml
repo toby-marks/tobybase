@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pl Jrxml2pdf on Tobybase: A Tech Blog</title>
+    <link>http://tobybase.com/tags/pl-jrxml2pdf/</link>
+    <description>Recent content in Pl Jrxml2pdf on Tobybase: A Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>toby.marks@infolob.com (Toby Marks)</managingEditor>
+    <webMaster>toby.marks@infolob.com (Toby Marks)</webMaster>
+    <lastBuildDate>Tue, 18 Dec 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://tobybase.com/tags/pl-jrxml2pdf/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Generate PDF Reports for Free in Oracle Apex Using PL-JRXML2PDF and iReport Designer</title>
+      <link>http://tobybase.com/blog/2012/12/18/generate-pdf-reports-for-free-in-oracle-apex-using-pl-jrxml2pdf-and-ireport-designer/</link>
+      <pubDate>Tue, 18 Dec 2012 00:00:00 +0000</pubDate>
+      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <guid>http://tobybase.com/blog/2012/12/18/generate-pdf-reports-for-free-in-oracle-apex-using-pl-jrxml2pdf-and-ireport-designer/</guid>
+      <description>Using Jaspersoft&amp;rsquo;s free iReport Designer tool and the open source PL-JRXML2PDF project, you can generate PDF reports from Oracle Apex for free, without having to install the JasperReports and JasperReports Server components. Watch my video tutorial to find out how.</description>
+    </item>
+    
+  </channel>
+</rss>
