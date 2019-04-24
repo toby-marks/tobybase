@@ -1,0 +1,14 @@
+{{ define "title" }}
+  {{ .Title }} · {{ .Site.Title }}
+{{ end }}
+{{ define "content" }}
+	<section class="container link">
+	  <article>
+		<header>
+		  <a href="{{ .Params.ExternalLink }}"><h1>∞ | {{ .Title }}</h1></a>
+		</header>
+
+		{{ .Content }}
+	  </article>
+	</section>
+{{ end }}

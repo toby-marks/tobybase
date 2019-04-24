@@ -1,79 +1,76 @@
-baseURL             = "http://tobybase.com"  # the baseurl for your website
-title               = "Tobybase: A Tech Blog"             # blog title
-paginate            = 10                     # the number of posts on a page
-#publishDir          = "docs"
-theme               = "hugo-multi-bootswatch"
-disqusShortname     = "tobybase-com"
+baseurl = "http://tobybase.com"
+title = "👨🏻‍💻 Tobybase"
+theme = "hugo-coder"
+languagecode = "en"
+defaultcontentlanguage = "en"
 
-# insert color codes directly into page. used for server-side syntax highlighting with pygments.
-# pygmentsUseClassic = true
-pygmentsuseclasses = false
-pygmentsstyle = "pastie"
-pygmentsCodefences = true
+paginate = 20
+canonifyurls = true
 
-[permalinks]
-    # Optional. Change the permalink format for the 'post' content type.
-    # The format shown here is the same one Jekyll/Octopress uses by default.
-    post = "/blog/:year/:month/:day/:title/"
+pygmentsstyle = "bw"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
 
-[author]
-    # Optional. Used in RSS feed meta information.
-    name = "Toby Marks"
-    email = "toby.marks@infolob.com"
+disqusShortname = "tobybase-com"
+
+enableEmoji = true
 
 [params]
-    # language code for your website
-    languagecode = "en-US"
-
-    # name of the site author; used in header meta information
     author = "Toby Marks"
+    info = "Principal Consultant at Infolob"
+    description = "My tech blog"
+    keywords = "oracle,infolob,blog,consultant,developer,tuning,exadata,personal"
+    avatarurl = "/img/toby.png"
 
-    # copyright text; used in footer
-    copyright = "2017 ~ Toby Marks"
+    favicon_32 = "/img/favicon-32x32.png"
+    favicon_16 = "/img/favicon-16x16.png"
 
-    # social links, used in footer, these must be full URLs.
-    twitter     = "https://twitter.com/toby_marks"
-    github      = "https://github.com/toby-marks"
-#    facebook    = "https://www.facebook.com/<username>"
-#    delicious   = "https://delicious.com/<username>"
-    linkedin    = "https://www.linkedin.com/in/tobymarks"
-#    flickr      = "https://www.flickr.com/photos/<username>"
+    footercontent = "Oracle Database Developer and Performance Tuner, specialized on the Exadata platform. Working for Infolob from Irving, Texas. Life is beautiful. 🌼🐝"
+    hidecredits = true
+    hidecopyright = false
 
-    # show default summaries on the frontpage or not
-    use_summaries = true
+    rtl = false
 
-# naming of the elements in your blog/site
-[params.strings]
-    # name of the link to the homepage
-    home_navbar_link = "Home"
+    math = false
+    custom_css = ["css/custom.css"]
 
-    # name of the link to the blog page
-    blog_navbar_link = "Articles"
+# Social links
+[[params.social]]
+    name = "Github"
+    icon = "fab fa-github fa-2x"
+    weight = 1
+    url = "https://github.com/toby-marks/"
+# [[params.social]]
+#     name = "Gitlab"
+#     icon = "fab fa-gitlab fa-2x"
+#     weight = 2
+#     url = "https://gitlab.com/johndoe/"
+[[params.social]]
+    name = "LinkedIn"
+    icon = "fab fa-linkedin"
+    weight = 2
+    url = "https://www.linkedin.com/in/tobymarks/"
+[[params.social]]
+    name = "Twitter"
+    icon = "fab fa-twitter fa-2x"
+    weight = 3
+    url = "https://twitter.com/toby_marks/"
+# [[params.social]]
+#     name = "Facebook"
+#     icon = "fab fa-facebook fa-2x"
+#     weight = 4
+#     url = "https://facebook.com/tobyjmarks/"
 
-    # name of the header used in the post list page
-    posts_list_header = "Posts"
-
-    # used date format
-    date_format = '01/02/2006'
-
-[params.theme]
-    inverse = false     # indicating if the theme should use inversed colors
-    name = "lumen"   # name of the theme to use
-
-    # list of possible theme names that can be used
-    # name = "cerulean"
-    # name = "cosmo"
-    # name = "cyborg"
-    # name = "default"
-    # name = "flatly"
-    # name = "journal"
-    # name = "lumen"
-    # name = "paper"
-    # name = "readable"
-    # name = "sandstone"
-    # name = "simplex"
-    # name = "slate"
-    # name = "spacelabs"
-    # name = "superhero"
-    # name = "united"
-    # name = "yeti"
+# Menu links
+[[menu.main]]
+    name = "Blog"
+    weight = 1
+    url  = "/posts/"
+[[menu.main]]
+    name = "Links"
+    weight = 2
+    url  = "/links/"
+[[menu.main]]
+    name = "About"
+    weight = 3
+    url = "/about/"

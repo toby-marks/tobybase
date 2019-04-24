@@ -449,3 +449,6 @@
 	path = hugo-theme-minos
 	url = https://github.com/carsonip/hugo-theme-minos
 
+[submodule "themes/hugo-coder"]
+	path = themes/hugo-coder
+	url = https://github.com/luizdepra/hugo-coder.git
