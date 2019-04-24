@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Toby Marks">
+    <meta name="description" content="My tech blog">
+    <meta name="keywords" content="oracle,infolob,blog,consultant,developer,tuning,exadata,personal">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Access Denied Attaching Block Volume to Windows VM in OCI"/>
+<meta name="twitter:description" content="What to do when you get an access denied permissions error when attempting to attach a block volume to a Windows virtual machine in Oracle Cloud"/>
+
+    <meta property="og:title" content="Access Denied Attaching Block Volume to Windows VM in OCI" />
+<meta property="og:description" content="What to do when you get an access denied permissions error when attempting to attach a block volume to a Windows virtual machine in Oracle Cloud" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tobybase.com/posts/2018-04-10-oci-add-block-volume-on-windows/" />
+<meta property="article:published_time" content="2018-04-10T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2018-04-10T00:00:00&#43;00:00"/>
+
+
+    
+      <base href="http://tobybase.com/posts/2018-04-10-oci-add-block-volume-on-windows/">
+    
+    <title>
+  Access Denied Attaching Block Volume to Windows VM in OCI · 👨🏻‍💻 Tobybase
+</title>
+
+    
+      <link rel="canonical" href="http://tobybase.com/posts/2018-04-10-oci-add-block-volume-on-windows/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" integrity="sha256-oSrCnRYXvHG31SBifqP2PM1uje7SJUyX0nTwO2RJV54=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="http://tobybase.com/css/coder.min.28d751104f30c16da1aa1bb04015cbe662cacfe0d1b01af4f2240ad58580069c.css" integrity="sha256-KNdREE8wwW2hqhuwQBXL5mLKz&#43;DRsBr08iQK1YWABpw=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+      <link rel="stylesheet" href="http://tobybase.com/css/custom.css">
+    
+
+    <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.55.3" />
+  </head>
+
+  <body class=" ">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="http://tobybase.com">
+      👨🏻‍💻 Tobybase
+    </a>
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://tobybase.com/posts/">Blog</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://tobybase.com/links/">Links</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://tobybase.com/about/">About</a>
+          </li>
+        
+      
+      
+    </ul>
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">Access Denied Attaching Block Volume to Windows VM in OCI</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fas fa-calendar"></i>
+              <time datetime='2018-04-10T00:00:00Z'>
+                April 10, 2018
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              2 minutes read
+            </span>
+          </div>
+          <div class="categories">
+  <i class="fas fa-folder"></i>
+    <a href="http://tobybase.com/categories/oracle-database/">Oracle Database</a>
+      <span class="separator">•</span>
+    <a href="http://tobybase.com/categories/cloud/">Cloud</a></div>
+
+          <div class="tags">
+  <i class="fas fa-tag"></i>
+    <a href="http://tobybase.com/tags/oracle/">Oracle</a>
+      <span class="separator">•</span>
+    <a href="http://tobybase.com/tags/cloud/">cloud</a>
+      <span class="separator">•</span>
+    <a href="http://tobybase.com/tags/iaas/">IaaS</a>
+      <span class="separator">•</span>
+    <a href="http://tobybase.com/tags/oci/">OCI</a>
+      <span class="separator">•</span>
+    <a href="http://tobybase.com/tags/windows/">Windows</a>
+      <span class="separator">•</span>
+    <a href="http://tobybase.com/tags/virtual-machines/">virtual machines</a></div>
+
+        </div>
+      </header>
+
+      <div>
+        <p><img src="http://tobybase.com/img/2018-04-10-oci-add-block-volume-on-windows/access-denied.jpg" width="800px"></p>
+
+<p>If you are getting the above error when trying to add a block volume to a Windows VM in Oracle Cloud Infrastructure, the solution is quite simple.</p>
+
+<p>I ran across this problem recently when configuring a Windows virtual machine on Oracle Cloud for the first time. I needed some additional storage, so I added a SCSI block volume that gave me what I required.</p>
+
+<p><img src="http://tobybase.com/img/2018-04-10-oci-add-block-volume-on-windows/attached-block-volumes.jpg" width="800px"></p>
+
+<p>After attaching the block volume to the compute instance, I clicked on the elipsis to the right of the volume overview panel, and selected <em>iSCSI Commands &amp; Information</em> as shown.</p>
+
+<p><img src="http://tobybase.com/img/2018-04-10-oci-add-block-volume-on-windows/iscsi-commands.jpg" width="586px"></p>
+
+<p>In order to make use of your attached volume, the commands shown in the <em>Attach Commands</em> pane must be run from a Powershell or Command terminal, after which you can format and mount the volume according to the <a href="https://docs.us-phoenix-1.oraclecloud.com/Content/Block/Tasks/connectingtoavolume.htm">online instructions provided by Oracle</a>.</p>
+
+<p><img src="http://tobybase.com/img/2018-04-10-oci-add-block-volume-on-windows/powershell-button.jpg" width="369px"></p>
+
+<p>However, when I clicked on the Powershell terminal icon in the Windows Taskbar and attempted to run the iSCSI commands, I got the following error:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">Set-Service: : Service &#39;Microsoft iSCSI Initiator Service (msiscsi)&#39; cannot be configured due to the following error: Access is denied</pre></div>
+<p>The problem is that the iSCSI commands Oracle provides need to be run from a privileged terminal, or &ldquo;elevated shell&rdquo;.</p>
+
+<p><img src="http://tobybase.com/img/2018-04-10-oci-add-block-volume-on-windows/run-as-admin.jpg" width="800px"></p>
+
+<p>Search for Powershell. Right-click on the icon, and choose <em>Run as administrator</em>. You will now be able to successfully run the iSCSI commands and connect to your block volume. If you don&rsquo;t care for that method, <a href="https://www.top-password.com/blog/5-ways-to-run-powershell-as-administrator-in-windows-10/">there are a number of other ways</a> to launch an elevated shell in Windows.</p>
+
+<p>Have fun experimenting with OCI. There is no better cost/performance value for cloud infrastructure.</p>
+      </div>
+
+      <footer>
+        
+
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tobybase-com" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    
+      <p>Oracle Database Developer and Performance Tuner, specialized on the Exadata platform. Working for Infolob from Irving, Texas. Life is beautiful. 🌼🐝</p>
+    
+     © 2019
+    
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+
+  </body>
+
+</html>

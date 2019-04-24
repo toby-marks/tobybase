@@ -1,356 +1,409 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tobybase: A Tech Blog on Tobybase: A Tech Blog</title>
+    <title>👨🏻‍💻 Tobybase</title>
     <link>http://tobybase.com/</link>
-    <description>Recent content in Tobybase: A Tech Blog on Tobybase: A Tech Blog</description>
+    <description>Recent content on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
-    <managingEditor>toby.marks@infolob.com (Toby Marks)</managingEditor>
-    <webMaster>toby.marks@infolob.com (Toby Marks)</webMaster>
+    <language>en</language>
     <lastBuildDate>Tue, 01 May 2018 09:05:54 -0500</lastBuildDate>
-    <atom:link href="/" rel="self" type="application/rss+xml" />
     
-      
-        <item>
-          <title>Linklog: They Don&#39;t Need ML</title>
-          <link>http://tobybase.com/link/2018-05-01-sql-over-ml/</link>
-          <pubDate>Tue, 01 May 2018 09:05:54 -0500</pubDate>
-          <author>Celestine Omin</author>
-          <guid>http://tobybase.com/link/2018-05-01-sql-over-ml/</guid>
-          <description>&lt;blockquote&gt;
-&lt;p&gt;I will write a query like select from order table where last shop date is 3 or greater months. When we get this information, we will send a nice &amp;ldquo;we miss you, come back and here&amp;rsquo;s X Naira voucher&amp;rdquo; email. The conversation rate for this one was always greater than 50%.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;So-called artificial intelligence and machine learning tools are in fashion these days, and the impetus is to apply them to all problem sets. It would be a mistake to think that they &lt;em&gt;should&lt;/em&gt;, or even &lt;em&gt;could&lt;/em&gt;, substitute for rational thought and human insight. Most problems are simple, and do not require complex systems to solve. (I&amp;rsquo;ve been surprised upon learning how commonsensical are the actual rules that inform predictive analyses, recommendation engines, and relationship graphs.) Good business analysis yields teachable results, not &amp;ldquo;magic&amp;rdquo; numbers or inscrutable algorithms. Human intelligence should not be set aside when pursuing the benefits of machine intelligence.&lt;/p&gt;
-</description>
-        </item>
-      
+	<atom:link href="http://tobybase.com/index.xml" rel="self" type="application/rss+xml" />
     
-      
-        <item>
-          <title>Linklog: Finland is killing its world-famous basic income experiment	</title>
-          <link>http://tobybase.com/link/2018-04-19-finland-dumps-basic-income/</link>
-          <pubDate>Thu, 19 Apr 2018 15:18:45 -0500</pubDate>
-          <author>Karin Olli-Nilsson @businessinsider.com</author>
-          <guid>http://tobybase.com/link/2018-04-19-finland-dumps-basic-income/</guid>
-          <description>&lt;blockquote&gt;
-&lt;p&gt;In recent years, a growing number of tech entrepreneurs have endorsed universal basic income (UBI), a system system in which every individual receives a standard amount of money, simply for being alive.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;And…&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;These tech moguls recognize that UBI, as well as combatting poverty, could also help solve the problem of increased robotization in the workforce, a problem they are very much part of creating.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;This will be interesting. Official results of the experiment are to be published in 2019.&lt;/p&gt;
-
-&lt;p&gt;The push for a universal basic income comes from economically skeptical left-leaning millennials, and industrialists who see in workforce automation their answer to the problems of human labor — the need to provision, maintain, scale, and accommodate large numbers of comparatively inefficient workers, with all of their troubles and demands. Widespread automation would allow for an even greater profit efficiency than &lt;em&gt;slavery&lt;/em&gt;, without any of the associated ethical considerations — provided, of course, that the masses of dispossessed workers are maintained in a kind of minimally acceptable lifestyle.&lt;/p&gt;
-</description>
-        </item>
-      
     
+    <item>
+      <title>They Don&#39;t Need ML</title>
+      <link>http://tobybase.com/links/2018-05-01-sql-over-ml/</link>
+      <pubDate>Tue, 01 May 2018 09:05:54 -0500</pubDate>
       
-        <item>
-          <title>Linklog: Oracle Sees Autonomous Database Changing DBA Roles for the Good</title>
-          <link>http://tobybase.com/link/2018-04-10-oracle-sees-automation/</link>
-          <pubDate>Tue, 10 Apr 2018 12:47:23 -0500</pubDate>
-          <author>Lindsay Moore</author>
-          <guid>http://tobybase.com/link/2018-04-10-oracle-sees-automation/</guid>
-          <description>&lt;blockquote&gt;
-&lt;p&gt;If the tactical tasks are reduced &amp;ndash; or even eliminated &amp;ndash; DBAs will have more time to spend on higher level tasks, like data security, data lifecycle management, data architecture and data modeling, Colgan said.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;I can&amp;rsquo;t be too worried about automation replacing the need for database professionals. The first time I recall hearing such claims was in 1999 with the advent of Oracle 9i. If what Colgan says is true, and there is every reason to believe it is, then the day to day work of DBAs and consultants like myself is only bound to become more interesting and productive. All of those things she mentions — particularly security — deserve far more attention than they receive in most organizations, as underfunded and overwhelmed as they are with routine operational tasks.&lt;/p&gt;
-</description>
-        </item>
-      
+      <guid>http://tobybase.com/links/2018-05-01-sql-over-ml/</guid>
+      <description>I will write a query like select from order table where last shop date is 3 or greater months. When we get this information, we will send a nice &amp;ldquo;we miss you, come back and here&amp;rsquo;s X Naira voucher&amp;rdquo; email. The conversation rate for this one was always greater than 50%.
+ So-called artificial intelligence and machine learning tools are in fashion these days, and the impetus is to apply them to all problem sets.</description>
+    </item>
     
+    <item>
+      <title>Finland is killing its world-famous basic income experiment	</title>
+      <link>http://tobybase.com/links/2018-04-19-finland-dumps-basic-income/</link>
+      <pubDate>Thu, 19 Apr 2018 15:18:45 -0500</pubDate>
       
-        
-          <item>
-            <title></title>
-            <link>http://tobybase.com/blog/2018/04/10/</link>
-            <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
-            <author>toby.marks@infolob.com (Toby Marks)</author>
-            <guid>http://tobybase.com/blog/2018/04/10/</guid>
-            <description>&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2018-04-10-oci-add-block-volume-on-windows/access-denied.jpg&#34; width=&#34;800px&#34;&gt;&lt;/p&gt;
-
-&lt;p&gt;If you are getting the above error when trying to add a block volume to a Windows VM in Oracle Cloud Infrastructure, the solution is quite simple.&lt;/p&gt;
-
-&lt;p&gt;I ran across this problem recently when configuring a Windows virtual machine on Oracle Cloud for the first time. I needed some additional storage, so I added a SCSI block volume that gave me what I required.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2018-04-10-oci-add-block-volume-on-windows/attached-block-volumes.jpg&#34; width=&#34;800px&#34;&gt;&lt;/p&gt;
-
-&lt;p&gt;After attaching the block volume to the compute instance, I clicked on the elipsis to the right of the volume overview panel, and selected &lt;em&gt;iSCSI Commands &amp;amp; Information&lt;/em&gt; as shown.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2018-04-10-oci-add-block-volume-on-windows/iscsi-commands.jpg&#34; width=&#34;586px&#34;&gt;&lt;/p&gt;
-
-&lt;p&gt;In order to make use of your attached volume, the commands shown in the &lt;em&gt;Attach Commands&lt;/em&gt; pane must be run from a Powershell or Command terminal, after which you can format and mount the volume according to the &lt;a href=&#34;https://docs.us-phoenix-1.oraclecloud.com/Content/Block/Tasks/connectingtoavolume.htm&#34;&gt;online instructions provided by Oracle&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2018-04-10-oci-add-block-volume-on-windows/powershell-button.jpg&#34; width=&#34;369px&#34;&gt;&lt;/p&gt;
-
-&lt;p&gt;However, when I clicked on the Powershell terminal icon in the Windows Taskbar and attempted to run the iSCSI commands, I got the following error:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Set-Service: : Service &#39;Microsoft iSCSI Initiator Service (msiscsi)&#39; cannot be configured due to the following error: Access is denied
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The problem is that the iSCSI commands Oracle provides need to be run from a privileged terminal, or &amp;ldquo;elevated shell&amp;rdquo;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2018-04-10-oci-add-block-volume-on-windows/run-as-admin.jpg&#34; width=&#34;800px&#34;&gt;&lt;/p&gt;
-
-&lt;p&gt;Search for Powershell. Right-click on the icon, and choose &lt;em&gt;Run as administrator&lt;/em&gt;. You will now be able to successfully run the iSCSI commands and connect to your block volume. If you don&amp;rsquo;t care for that method, &lt;a href=&#34;https://www.top-password.com/blog/5-ways-to-run-powershell-as-administrator-in-windows-10/&#34;&gt;there are a number of other ways&lt;/a&gt; to launch an elevated shell in Windows.&lt;/p&gt;
-
-&lt;p&gt;Have fun experimenting with OCI. There is no better cost/performance value for cloud infrastructure.&lt;/p&gt;</description>
-          </item>
-        
-      
+      <guid>http://tobybase.com/links/2018-04-19-finland-dumps-basic-income/</guid>
+      <description>In recent years, a growing number of tech entrepreneurs have endorsed universal basic income (UBI), a system system in which every individual receives a standard amount of money, simply for being alive.
+ And…
+ These tech moguls recognize that UBI, as well as combatting poverty, could also help solve the problem of increased robotization in the workforce, a problem they are very much part of creating.
+ This will be interesting.</description>
+    </item>
     
+    <item>
+      <title>Oracle Sees Autonomous Database Changing DBA Roles for the Good</title>
+      <link>http://tobybase.com/links/2018-04-10-oracle-sees-automation/</link>
+      <pubDate>Tue, 10 Apr 2018 12:47:23 -0500</pubDate>
       
-        <item>
-          <title>Linklog: 2107 Was Bad for Facebook. 2018 Will Be Worse.</title>
-          <link>http://tobybase.com/link/2017-12-15-2018-bad-year-for-facebook/</link>
-          <pubDate>Fri, 15 Dec 2017 00:00:00 +0000</pubDate>
-          <author>Bloomberg</author>
-          <guid>http://tobybase.com/link/2017-12-15-2018-bad-year-for-facebook/</guid>
-          <description>&lt;blockquote&gt;
-&lt;p&gt;While Facebook remains the biggest platform, Google and Twitter are facing similar pressure from governments in the U.S. and in Europe. Germany enacted a law requiring the social networks to remove hate speech promptly or face fines. In the U.S., the activities of a Russian troll farm during the 2016 election campaign prompted scrutiny of Facebook&amp;rsquo;s ad selling practices and a (rather ham-handed) legislative attempt to force some transparency.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The government has an incentive for fostering the growth and continued success of big social media platforms like Facebook and Twitter, because they operate essentially as large data warehouses on social thought, connections and behavior — supplying information that might be difficult or illegal to collect otherwise. Because of the monopoly these companies have on online self expression, and the potentially large and instantaneous impact of that form of expression, they serve as easy chokepoints for controlling the dissemination of ideas.&lt;/p&gt;
-</description>
-        </item>
-      
+      <guid>http://tobybase.com/links/2018-04-10-oracle-sees-automation/</guid>
+      <description>If the tactical tasks are reduced &amp;ndash; or even eliminated &amp;ndash; DBAs will have more time to spend on higher level tasks, like data security, data lifecycle management, data architecture and data modeling, Colgan said.
+ I can&amp;rsquo;t be too worried about automation replacing the need for database professionals. The first time I recall hearing such claims was in 1999 with the advent of Oracle 9i. If what Colgan says is true, and there is every reason to believe it is, then the day to day work of DBAs and consultants like myself is only bound to become more interesting and productive.</description>
+    </item>
     
+    <item>
+      <title>Access Denied Attaching Block Volume to Windows VM in OCI</title>
+      <link>http://tobybase.com/posts/2018-04-10-oci-add-block-volume-on-windows/</link>
+      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
       
-        <item>
-          <title>Linklog: on YouTube</title>
-          <link>http://tobybase.com/link/2017-12-14-infolob-youtube/</link>
-          <pubDate>Thu, 14 Dec 2017 00:00:00 +0000</pubDate>
-          <author>Infolob</author>
-          <guid>http://tobybase.com/link/2017-12-14-infolob-youtube/</guid>
-          <description>&lt;p&gt;If you find this content helpful, do the like and subscribe thing to stay informed.&lt;/p&gt;
-</description>
-        </item>
-      
+      <guid>http://tobybase.com/posts/2018-04-10-oci-add-block-volume-on-windows/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2018-04-10-oci-add-block-volume-on-windows/access-denied.jpg&#34; width=&#34;800px&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;If you are getting the above error when trying to add a block volume to a Windows VM in Oracle Cloud Infrastructure, the solution is quite simple.&lt;/p&gt;</description>
+    </item>
     
+    <item>
+      <title>2017 Was Bad for Facebook. 2018 Will Be Worse.</title>
+      <link>http://tobybase.com/links/2017-12-15-2018-bad-year-for-facebook/</link>
+      <pubDate>Fri, 15 Dec 2017 00:00:00 +0000</pubDate>
       
-        
-          <item>
-            <title>Move Your VM to Oracle Cloud - Part 4</title>
-            <link>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud-part-4/</link>
-            <pubDate>Fri, 10 Mar 2017 14:56:00 +0000</pubDate>
-            <author>toby.marks@infolob.com (Toby Marks)</author>
-            <guid>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud-part-4/</guid>
-            <description>&lt;p&gt;In the last of a four-part video series, our Director of Cloud Services Brian Hill creates a new compute instance in Oracle Cloud Compute Services based on his custom Windows virtual machine image.&lt;/p&gt;
-
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//www.youtube.com/embed/c1_2foZ7MQc&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-</description>
-          </item>
-        
-      
+      <guid>http://tobybase.com/links/2017-12-15-2018-bad-year-for-facebook/</guid>
+      <description>While Facebook remains the biggest platform, Google and Twitter are facing similar pressure from governments in the U.S. and in Europe. Germany enacted a law requiring the social networks to remove hate speech promptly or face fines. In the U.S., the activities of a Russian troll farm during the 2016 election campaign prompted scrutiny of Facebook&amp;rsquo;s ad selling practices and a (rather ham-handed) legislative attempt to force some transparency.</description>
+    </item>
     
+    <item>
+      <title>Infolob on YouTube</title>
+      <link>http://tobybase.com/links/2017-12-14-infolob-youtube/</link>
+      <pubDate>Thu, 14 Dec 2017 00:00:00 +0000</pubDate>
       
-        
-          <item>
-            <title>Move Your VM to Oracle Cloud - Part 3</title>
-            <link>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud-part-3/</link>
-            <pubDate>Fri, 10 Mar 2017 14:53:00 +0000</pubDate>
-            <author>toby.marks@infolob.com (Toby Marks)</author>
-            <guid>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud-part-3/</guid>
-            <description>&lt;p&gt;In part three of a four-part video series, our Director of Cloud Services Brian Hill creates a bootable storage volume in Oracle Cloud Compute Services with his new Windows image.&lt;/p&gt;
-
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//www.youtube.com/embed/mwsMputHP-M&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-</description>
-          </item>
-        
-      
+      <guid>http://tobybase.com/links/2017-12-14-infolob-youtube/</guid>
+      <description>If you find this content helpful, do the &amp;ldquo;like and subscribe&amp;rdquo; thing to stay informed.</description>
+    </item>
     
+    <item>
+      <title>Move Your VM to Oracle Cloud - Part 4</title>
+      <link>http://tobybase.com/posts/infolob-lift-and-shift-howto-4/</link>
+      <pubDate>Fri, 10 Mar 2017 14:56:00 +0000</pubDate>
       
-        
-          <item>
-            <title>Move Your VM to Oracle Cloud - Part 2</title>
-            <link>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud-part-2/</link>
-            <pubDate>Fri, 10 Mar 2017 14:47:00 +0000</pubDate>
-            <author>toby.marks@infolob.com (Toby Marks)</author>
-            <guid>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud-part-2/</guid>
-            <description>&lt;p&gt;In part two of a four-part video series, our Director of Cloud Services Brian Hill creates an image in Oracle Cloud Compute Services based on a Windows virtual machine.&lt;/p&gt;
-
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//www.youtube.com/embed/bA7zyOh-JiY&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-</description>
-          </item>
-        
-      
+      <guid>http://tobybase.com/posts/infolob-lift-and-shift-howto-4/</guid>
+      <description>In the last of a four-part video series, our Director of Cloud Services Brian Hill creates a new compute instance in Oracle Cloud Compute Services based on his custom Windows virtual machine image.
+  </description>
+    </item>
     
+    <item>
+      <title>Move Your VM to Oracle Cloud - Part 3</title>
+      <link>http://tobybase.com/posts/infolob-lift-and-shift-howto-3/</link>
+      <pubDate>Fri, 10 Mar 2017 14:53:00 +0000</pubDate>
       
-        
-          <item>
-            <title>Move Your VM to Oracle Cloud - Part 1</title>
-            <link>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud-part-1/</link>
-            <pubDate>Fri, 10 Mar 2017 14:41:00 +0000</pubDate>
-            <author>toby.marks@infolob.com (Toby Marks)</author>
-            <guid>http://tobybase.com/blog/2017/03/10/move-your-vm-to-oracle-cloud-part-1/</guid>
-            <description>&lt;p&gt;In part one of a four-part video series, our Director of Cloud Services Brian Hill demonstrates how to prepare your virtual machine for upload to the cloud.&lt;/p&gt;
-
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//www.youtube.com/embed/lwFCj0Z4JSU&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-</description>
-          </item>
-        
-      
+      <guid>http://tobybase.com/posts/infolob-lift-and-shift-howto-3/</guid>
+      <description>In part three of a four-part video series, our Director of Cloud Services Brian Hill creates a bootable storage volume in Oracle Cloud Compute Services with his new Windows image.
+  </description>
+    </item>
     
+    <item>
+      <title>Move Your VM to Oracle Cloud - Part 2</title>
+      <link>http://tobybase.com/posts/infolob-lift-and-shift-howto-2/</link>
+      <pubDate>Fri, 10 Mar 2017 14:47:00 +0000</pubDate>
       
-        
-          <item>
-            <title>Announcing the Infolob YouTube Channel</title>
-            <link>http://tobybase.com/blog/2017/03/10/announcing-the-infolob-youtube-channel/</link>
-            <pubDate>Fri, 10 Mar 2017 00:00:00 +0000</pubDate>
-            <author>toby.marks@infolob.com (Toby Marks)</author>
-            <guid>http://tobybase.com/blog/2017/03/10/announcing-the-infolob-youtube-channel/</guid>
-            <description>&lt;p&gt;I am honored to work with some wonderful and truly &lt;em&gt;smart&lt;/em&gt; folks over at &lt;a href=&#34;http://www.infolob.com/&#34;&gt;Infolob&lt;/a&gt; in Irving, Texas. The company recently started a &lt;a href=&#34;https://www.youtube.com/channel/UCLfDjdjW6RRvKYrz_aS0Jmw&#34;&gt;YouTube channel&lt;/a&gt; and we are looking to add lots of great videos soon for your enjoyment and education.&lt;/p&gt;
-
-&lt;p&gt;Check us out!&lt;/p&gt;
-
-&lt;p&gt;In this short Oracle Platinum Partner Spotlight video, our Chief Technologist Tim Fox explains what we do as a company and the kinds of services we provide.&lt;/p&gt;
-
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//www.youtube.com/embed/g6Zenoy8GGs&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-</description>
-          </item>
-        
-      
+      <guid>http://tobybase.com/posts/infolob-lift-and-shift-howto-2/</guid>
+      <description>In part two of a four-part video series, our Director of Cloud Services Brian Hill creates an image in Oracle Cloud Compute Services based on a Windows virtual machine.
+  </description>
+    </item>
     
+    <item>
+      <title>Move Your VM to Oracle Cloud - Part 1</title>
+      <link>http://tobybase.com/posts/infolob-lift-and-shift-howto-1/</link>
+      <pubDate>Fri, 10 Mar 2017 14:41:00 +0000</pubDate>
       
+      <guid>http://tobybase.com/posts/infolob-lift-and-shift-howto-1/</guid>
+      <description>In part one of a four-part video series, our Director of Cloud Services Brian Hill demonstrates how to prepare your virtual machine for upload to the cloud.
+  </description>
+    </item>
     
+    <item>
+      <title>Announcing the Infolob YouTube Channel</title>
+      <link>http://tobybase.com/posts/infolob-youtube-channel/</link>
+      <pubDate>Fri, 10 Mar 2017 00:00:00 +0000</pubDate>
       
-        
-          <item>
-            <title>Announcing… tobybase.com</title>
-            <link>http://tobybase.com/blog/2017/01/17/announcing-tobybase.com/</link>
-            <pubDate>Tue, 17 Jan 2017 22:58:59 -0600</pubDate>
-            <author>toby.marks@infolob.com (Toby Marks)</author>
-            <guid>http://tobybase.com/blog/2017/01/17/announcing-tobybase.com/</guid>
-            <description>&lt;p&gt;Welcome one and all to my new professional blog, &lt;a href=&#34;http://tobybase.com/&#34; title=&#34;Redirects to the website you are now on&#34;&gt;tobybase.com&lt;/a&gt;. My name is Toby Marks and I work as a &lt;a href=&#34;http://oracle.com&#34; title=&#34;Oracle&#39;s website&#34;&gt;Oracle&lt;/a&gt; Consultant at &lt;a href=&#34;http://infolob.com/&#34; title=&#34;My company&#39;s website&#34;&gt;Infolob Solutions&lt;/a&gt; in &lt;a href=&#34;https://en.wikipedia.org/wiki/Las_Colinas&#34; title=&#34;Some info about sunny Las Colinas&#34;&gt;Irving, Texas&lt;/a&gt;. My &lt;a href=&#34;http://tjmoracle.tumblr.com/&#34; title=&#34;My old blog&#34;&gt;old blog&lt;/a&gt; is still up on &lt;a href=&#34;http://tumblr.com/&#34; title=&#34;Go to Tumblr&#34;&gt;Tumblr&lt;/a&gt;, and there are a &lt;a href=&#34;https://tmblr.co/Z9fAmvZapPzC&#34; title=&#34;Create PDF Reports in Oracle Apex&#34;&gt;few&lt;/a&gt; &lt;a href=&#34;https://tmblr.co/Z9fAmvXEB6iL&#34; title=&#34;Query an XML File Like an External Table&#34;&gt;items&lt;/a&gt; &lt;a href=&#34;https://tmblr.co/Z9fAmvOFEN-N&#34; title=&#34;OS X Software for Oracle Developers&#34;&gt;there&lt;/a&gt; that folks still find useful. Most of the content is a bit dated, though, as I&amp;rsquo;ve been out of the blogging game for a while.&lt;/p&gt;
-
-&lt;p&gt;This is my attempt to turn that around.&lt;/p&gt;
-
-&lt;p&gt;What I needed was a breath of technological fresh air. Something to excite me about blogging again. So as a personal challenge, and in the spirit of adopting the latest and greatest platforms, I have decided to use &lt;a href=&#34;https://gohugo.io&#34; title=&#34;Hugo makes blogging fun again&#34;&gt;Hugo&lt;/a&gt; for static web page generation. I wanted to provide a site with the fastest possible page load times by maintaining maximum control over coding and site customization. I also love the immediate feedback Hugo gives you while you&amp;rsquo;re coding a page. No more precious seconds lost on Wordpress or Blogger! The site will be hosted on my &lt;a href=&#34;https://github.com/toby-marks&#34; title=&#34;My Github repository&#34;&gt;Github&lt;/a&gt;, which will provide me with version control and an easy method for synchronization with the web server.&lt;/p&gt;
-
-&lt;p&gt;I hope you enjoy the new site. I look forward to adding some interesting content over the coming weeks.&lt;/p&gt;
-</description>
-          </item>
-        
-      
+      <guid>http://tobybase.com/posts/infolob-youtube-channel/</guid>
+      <description>I am honored to work with some wonderful and truly smart folks over at Infolob in Irving, Texas. The company recently started a YouTube channel and we are looking to add lots of great videos soon for your enjoyment and education.
+Check us out!
+In this short Oracle Platinum Partner Spotlight video, our Chief Technologist Tim Fox explains what we do as a company and the kinds of services we provide.</description>
+    </item>
     
+    <item>
+      <title>License Statement</title>
+      <link>http://tobybase.com/license/</link>
+      <pubDate>Thu, 23 Feb 2017 11:32:23 -0600</pubDate>
       
-        
-          <item>
-            <title>What to do when the Juniper Network Connect app on OS X does not connect</title>
-            <link>http://tobybase.com/blog/2016/02/04/what-to-do-when-the-juniper-network-connect-app-on-os-x-does-not-connect/</link>
-            <pubDate>Thu, 04 Feb 2016 22:50:09 +0000</pubDate>
-            <author>toby.marks@infolob.com (Toby Marks)</author>
-            <guid>http://tobybase.com/blog/2016/02/04/what-to-do-when-the-juniper-network-connect-app-on-os-x-does-not-connect/</guid>
-            <description>&lt;p&gt;If you use Juniper&amp;rsquo;s Network Connect app to connect to your office VPN over HTTPS, you might occasionally experience strange errors like &amp;ldquo;A software error caused the Network Connect tunneling service to terminate.&amp;rdquo; Shortly after that, the application may either crash or prompt you for login credentials again.&lt;/p&gt;
-
-&lt;p&gt;The solution involves removing all of the Network Connect files and allowing your browser to download and install the app all over again, as it did the first time you tried to connect to your office VPN.&lt;/p&gt;
-
-&lt;p&gt;(Note: as a precaution you may want to simply move the Network Connect.app file from /Applications to ~/Desktop, just in case your browser is not able to download it as needed.)&lt;/p&gt;
-
-&lt;p&gt;To remove all files associated with the Network Connect application, execute the following commands in Terminal.app.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#888&#34;&gt;# sudo rm -rf /Applications/Network\ Connect.app`&lt;/span&gt;
-&lt;span style=&#34;color:#888&#34;&gt;# sudo rm -rf /usr/local/juniper`&lt;/span&gt;
-&lt;span style=&#34;color:#888&#34;&gt;# sudo rm -rf ~/Library/Application\ Support/Juniper\ Networks`&lt;/span&gt;
-&lt;span style=&#34;color:#888&#34;&gt;# sudo rm ~/Library/Preferences/net.juniper.NetworkConnect.plist`&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Now try connecting to your office VPN again and the browser should prompt you to redownload the application. When I tried this I got an error the first time on Firefox saying the installation failed, but I was able to manually verify that the files were in place. My second attempt succeeded. Go figure.&lt;/p&gt;
-</description>
-          </item>
-        
-      
+      <guid>http://tobybase.com/license/</guid>
+      <description>All original content copyright &amp;copy; 2017 Toby Marks
+Database graphic by Freepik from Flaticon is licensed under CC BY 3.0. Made with Logo Maker.</description>
+    </item>
     
+    <item>
+      <title>Announcing… tobybase.com</title>
+      <link>http://tobybase.com/posts/announcing-tobybase/</link>
+      <pubDate>Tue, 17 Jan 2017 22:58:59 -0600</pubDate>
       
-        
-          <item>
-            <title>How to Use ps to List Top Memory, CPU Eating Processes</title>
-            <link>http://tobybase.com/blog/2013/07/24/how-to-use-ps-to-list-top-memory-cpu-eating-processes/</link>
-            <pubDate>Wed, 24 Jul 2013 21:42:00 +0000</pubDate>
-            <author>toby.marks@infolob.com (Toby Marks)</author>
-            <guid>http://tobybase.com/blog/2013/07/24/how-to-use-ps-to-list-top-memory-cpu-eating-processes/</guid>
-            <description>&lt;p&gt;The &lt;code&gt;ps&lt;/code&gt; command is a versatile and configurable way to look at the processes running on your system, though I&amp;rsquo;ve generally gotten by with a lazy &lt;code&gt;ps -ef&lt;/code&gt; to find out whatever I needed to know. Recently, though, a client&amp;rsquo;s server began running out of memory, and as a number of processes were running on the server, the culprit was not immediately clear. I wanted to provide them with a quick, simple diagnostic tool they could use the next time they received an alert.&lt;/p&gt;
-
-&lt;p&gt;If you look at the man page for &lt;code&gt;ps&lt;/code&gt; you&amp;rsquo;ll find a number of options available for sorting the list of processes returned as well as for filtering the columns displayed.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2013-07-24-linux-unix-use-ps-to-list-top-memory-cpu-eating-processes/ac6287b65af17b95d247ea063f0aa1bfc6f106f3b69adf0ae73ed8258d3a6c7b.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Some examples of &lt;code&gt;ps&lt;/code&gt; options, from RHEL 5.6:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;-e&lt;/strong&gt;&lt;br /&gt;
-select all processes&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;-a&lt;/strong&gt;&lt;br /&gt;
-select all &amp;ldquo;child&amp;rdquo; processes&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;-U &amp;lt;user&amp;gt;&lt;/strong&gt;&lt;br /&gt;
-select all processes for a specified user&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;-p &amp;lt;pid&amp;gt;&lt;/strong&gt;&lt;br /&gt;
-select by process id&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;-f&lt;/strong&gt;&lt;br /&gt;
-full-format listing; adds columns and shows process arguments&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;-o&lt;/strong&gt;&lt;br /&gt;
-user-defined format&lt;/p&gt;
-
-&lt;p&gt;Many others are available, of course, but in order to keep it simple for the client I wanted to show the top 10 processes in terms of memory utilization, with the pid, memory usage, and process name displayed. Here is what I came up with:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ ps -eo pid,user,pmem,args O R | tail -n &lt;span style=&#34;color:#00d;font-weight:bold&#34;&gt;10&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;And here is an explanation:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;ps&lt;/strong&gt;&lt;br /&gt;
-shows running processes&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;-e&lt;/strong&gt;&lt;br /&gt;
-show all processes&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;-o pid,user,poem,args&lt;/strong&gt;&lt;br /&gt;
-show the pid, %mem, and process columns&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;O R&lt;/strong&gt;&lt;br /&gt;
-sort by memory usage (ascending)&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;tail&lt;/strong&gt;&lt;br /&gt;
-shows only the last lines&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;-n 10&lt;/strong&gt;&lt;br /&gt;
-show the last 10 lines&lt;/p&gt;
-
-&lt;p&gt;I liked the concept so much that I decided to adapt it for OS X, where the &lt;code&gt;ps&lt;/code&gt; command takes a slightly different set of arguments. To my .bash_profile file I added the following lines:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#038&#34;&gt;alias&lt;/span&gt; &lt;span style=&#34;color:#369&#34;&gt;psmem&lt;/span&gt;=&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#34;while :; do clear; ps -ecm -o %mem,rss,pid,user,state,args | head -n 10; sleep 5; done&amp;#34;&lt;/span&gt;
-&lt;span style=&#34;color:#038&#34;&gt;alias&lt;/span&gt; &lt;span style=&#34;color:#369&#34;&gt;pscpu&lt;/span&gt;=&lt;span style=&#34;color:#d20;background-color:#fff0f0&#34;&gt;&amp;#34;while :; do clear; ps -ecr -o %cpu,pid,user,state,args | head -n 10; sleep 2; done&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;I have one alias for retrieving my top memory-utilizing processes and one for my top CPU-utilizing processes. The &lt;code&gt;while&lt;/code&gt; loop in the alias implements a functionality similar to that of the Linux &lt;code&gt;watch&lt;/code&gt; command, clearing the screen and running the process indefinitely until it is forcibly quit. For my own purposes I wanted to display some additional columns, like username and process state. I also changed the sort ordering to display the largest processes at the top of the list.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2013-07-24-linux-unix-use-ps-to-list-top-memory-cpu-eating-processes/2bcd3b2c40d8bc37893b47399aed325508e95c655492de8866a8365eede7008f.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-</description>
-          </item>
-        
+      <guid>http://tobybase.com/posts/announcing-tobybase/</guid>
+      <description>Welcome one and all to my new professional blog, tobybase.com. My name is Toby Marks and I work as a Oracle Consultant at Infolob Solutions in Irving, Texas. My old blog is still up on Tumblr, and there are a few items there that folks still find useful. Most of the content is a bit dated, though, as I&amp;rsquo;ve been out of the blogging game for a while.
+This is my attempt to turn that around.</description>
+    </item>
+    
+    <item>
+      <title>What to do when the Juniper Network Connect app on OS X does not connect</title>
+      <link>http://tobybase.com/posts/ewwww/</link>
+      <pubDate>Thu, 04 Feb 2016 22:50:09 +0000</pubDate>
       
+      <guid>http://tobybase.com/posts/ewwww/</guid>
+      <description>If you use Juniper&amp;rsquo;s Network Connect app to connect to your office VPN over HTTPS, you might occasionally experience strange errors like &amp;ldquo;A software error caused the Network Connect tunneling service to terminate.&amp;rdquo; Shortly after that, the application may either crash or prompt you for login credentials again.
+The solution involves removing all of the Network Connect files and allowing your browser to download and install the app all over again, as it did the first time you tried to connect to your office VPN.</description>
+    </item>
+    
+    <item>
+      <title>How to Use ps to List Top Memory, CPU Eating Processes</title>
+      <link>http://tobybase.com/posts/2013-07-24-linux-unix-use-ps-to-list-top-memory-cpu-eating-processes/</link>
+      <pubDate>Wed, 24 Jul 2013 21:42:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/2013-07-24-linux-unix-use-ps-to-list-top-memory-cpu-eating-processes/</guid>
+      <description>The ps command is a versatile and configurable way to look at the processes running on your system, though I&amp;rsquo;ve generally gotten by with a lazy ps -ef to find out whatever I needed to know. Recently, though, a client&amp;rsquo;s server began running out of memory, and as a number of processes were running on the server, the culprit was not immediately clear. I wanted to provide them with a quick, simple diagnostic tool they could use the next time they received an alert.</description>
+    </item>
+    
+    <item>
+      <title>Use Preview to View Formatted man Pages</title>
+      <link>http://tobybase.com/links/2013-07-24-view-man-pages/</link>
+      <pubDate>Wed, 24 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/links/2013-07-24-view-man-pages/</guid>
+      <description>This is an elegant solution for viewing, searching, and archiving man pages that eliminates the necessity for third party apps.
+Update: still works in macOS Sierra.</description>
+    </item>
+    
+    <item>
+      <title>How to Fix SQL Developer on a Retina Display Mac(book)</title>
+      <link>http://tobybase.com/posts/2013-07-19-fix-sql-developer-on-a-retina-display-macbook/</link>
+      <pubDate>Fri, 19 Jul 2013 22:32:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/2013-07-19-fix-sql-developer-on-a-retina-display-macbook/</guid>
+      <description>I just purchased a new Macbook Pro 13-inch with Retina Display and was horrified to see how fuzzy SQL Developer looked on the high-res screen. Thanks to Thunderforge on the Stack Overflow forums for this tip:
+ Java 7u40 Early Access now supports HiDPI (Retina) displays, as shown by this changelog. So retina support is now available on Java 6, Java 7u40 or higher, and Java 8.
+ I am currently running the Early Adopter release of SQL Developer 4.</description>
+    </item>
+    
+    <item>
+      <title>How To Reset Page Numbering Between Document Sections in BI Publisher&#39;s Template Builder for Word</title>
+      <link>http://tobybase.com/posts/2013-06-14-resetting-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/</link>
+      <pubDate>Fri, 14 Jun 2013 21:47:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/2013-06-14-resetting-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/</guid>
+      <description>Under normal circumstances, it is fairly easy in Microsoft Word to reset page numbering when starting a new section of your document. However, such a simple thing can be non-trivial when dealing with the BI Publisher Template Builder plugin for Microsoft Office (available from Oracle — see BI Publisher Desktop).
+In short, doing this the normal way did not work for me, and in researching the issue I ran across a number of folks who were having the same problem.</description>
+    </item>
+    
+    <item>
+      <title>Button Hotkeys in SQL Developer on OS X</title>
+      <link>http://tobybase.com/posts/2013-01-09-button-hotkeys-in-sql-developer-on-os-x/</link>
+      <pubDate>Wed, 09 Jan 2013 19:09:45 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/2013-01-09-button-hotkeys-in-sql-developer-on-os-x/</guid>
+      <description>In Windows, most applications provide menu and button accelerator keys that allow you to control the application without having to use a mouse. Java Swing apps like SQL Developer allow you to do the same, ostensibly in a cross-platform compatible manner.
+One place I use this frequently is the Enter Binds dialog window that pops up when running a query using bind variables.
+In Java 6 on OS X, the hotkey for pressing the Help and Apply buttons was OPTION-H and OPTION-A, respectively.</description>
+    </item>
+    
+    <item>
+      <title>Generate PDF Reports for Free in Oracle Apex Using PL-JRXML2PDF and iReport Designer</title>
+      <link>http://tobybase.com/posts/2012-12-18-video-post/</link>
+      <pubDate>Tue, 18 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/2012-12-18-video-post/</guid>
+      <description>Using Jaspersoft&amp;rsquo;s free iReport Designer tool and the open source PL-JRXML2PDF project, you can generate PDF reports from Oracle Apex for free, without having to install the JasperReports and JasperReports Server components. Watch my video tutorial to find out how.</description>
+    </item>
+    
+    <item>
+      <title>How To Use SQL to Query an XML Document Using Oracle External Tables</title>
+      <link>http://tobybase.com/posts/2012-11-14-query-an-xml-file-like-an-external-table/</link>
+      <pubDate>Wed, 14 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/2012-11-14-query-an-xml-file-like-an-external-table/</guid>
+      <description>Oracle&amp;rsquo;s external table feature allows you to treat structured files on the database server as tables for query and DML purposes. To use an example from the linked documentation, a tab-delimited file like this:
+56 november, 15, 1980 baker mary alice 09/01/2004 87 december, 20, 1970 roper lisa marie 01/01/1999 &amp;hellip;could be queried like this:
+SELECT employee_number, employee_first_name, substr(employee_middle_name, 1, 1), employee_last_name, employee_hire_date, to_date(employee_dob,&amp;#39;month, dd, yyyy&amp;#39;) FROM employees; After defining the external table like this:</description>
+    </item>
+    
+    <item>
+      <title>How To Restrict Access to BI Publisher Reports</title>
+      <link>http://tobybase.com/posts/2012-11-12-restricting-access-to-bi-publisher-reports/</link>
+      <pubDate>Mon, 12 Nov 2012 18:12:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/2012-11-12-restricting-access-to-bi-publisher-reports/</guid>
+      <description>In my last post I described how to configure BI Publisher to authenticate against an LDAP server, typically a corporate Active Directory server. Aside from authentication, you can also use LDAP group membership to determine who has access to a given report. Here&amp;rsquo;s how you do it.
+ Create a group in your LDAP/AD directory and assign your target users to that group. Revisit your LDAP authentication settings. These are located on the Admin Tab, on the Security Configuration page.</description>
+    </item>
+    
+    <item>
+      <title>How To Configure Oracle BI Publisher to Authenticate With Active Directory</title>
+      <link>http://tobybase.com/posts/2012-11-12-configure-oracle-bi-publisher-to-authenticate-with-active-directory/</link>
+      <pubDate>Mon, 12 Nov 2012 17:32:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/2012-11-12-configure-oracle-bi-publisher-to-authenticate-with-active-directory/</guid>
+      <description>Log in to BI Publisher as an administrator. Click on the Admin tab. Click on Security Configuration. For Security Model, choose LDAP and enter the following parameters:
+   Setting Example Value     URL ldap://ad.mycompany.com:389 Your company&amp;rsquo;s LDAP server and port.   Administrator Username CN=ADMIN,OU=Users,OU=Shared Services,DC=mycompany,DC=com The fully qualified DN of the account you use to sign in to LDAP.   Administrator Password myxlplyx The password for the above account.</description>
+    </item>
+    
+    <item>
+      <title>Use Firebug&#39;s console.debug Command to Analyze Javascript, DOM Objects</title>
+      <link>http://tobybase.com/posts/2012-10-26-use-firebugs-consoledebug-command-to-analyze-javascript-dom-objects/</link>
+      <pubDate>Fri, 26 Oct 2012 21:09:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/2012-10-26-use-firebugs-consoledebug-command-to-analyze-javascript-dom-objects/</guid>
+      <description>Occasionally when debugging my Javascript code I need to be able to analyze the properties of an unknown object; for instance, an unexpected DOM object passed to an event handler. How do you analyze the properties of an object when you don&amp;rsquo;t know what the object is? I was looking for a way to list all the properties of a generic Javascript or DOM object when I stumbled across this blog post by Andrew Peters.</description>
+    </item>
+    
+    <item>
+      <title>How to Avoid the &#34;Job scheduling failed because the user has no permission to access this report&#34; Error in BI Publisher</title>
+      <link>http://tobybase.com/posts/2012-08-27-bi-publisher-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report/</link>
+      <pubDate>Mon, 27 Aug 2012 20:48:08 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/2012-08-27-bi-publisher-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report/</guid>
+      <description>You can get this error if you are trying to schedule a report and your BI Publisher installation uses LDAP authentication.
+To avoid it, make sure that the &amp;ldquo;Administrator&amp;rdquo; account you use to connect to your LDAP server is in the XMLP_ADMIN group. The LDAP settings are located on the Admin tab, under Security Settings / Security Configuration.</description>
+    </item>
+    
+    <item>
+      <title>Safari 5.1.7 on my MacBookPro OSX 10.7.4 freezes unexpectedly</title>
+      <link>http://tobybase.com/links/2012-07-25-safari-517-freezes-on-macbook-pro/</link>
+      <pubDate>Wed, 25 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/links/2012-07-25-safari-517-freezes-on-macbook-pro/</guid>
+      <description>Lately I&amp;rsquo;ve been experiencing strange problems when clicking on links in Safari 5.1.7. Usually the progress indicator would either flash momentarily and do nothing, or else it would never appear at all. Pages would sometimes load, but after an unusual delay and with no indication that the browser was actually doing anything. I switched to Chrome as my default browser for a few days, but that was about all I could stand.</description>
+    </item>
+    
+    <item>
+      <title>How To Fix High CPU Usage by SQL Developer on OS X</title>
+      <link>http://tobybase.com/posts/2012-07-20-easy-fix-for-high-cpu-usage-in-sql-developer-on-os-x/</link>
+      <pubDate>Fri, 20 Jul 2012 16:32:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/2012-07-20-easy-fix-for-high-cpu-usage-in-sql-developer-on-os-x/</guid>
+      <description>I&amp;rsquo;ve been fighting for a couple of years now with an annoying performance bug in SQL Developer for OS X. After using the application for a while CPU usage would spike to around 100%, even when idle. This is a known issue associated with the &amp;ldquo;Look and Feel&amp;rdquo; preference.
+Basically, don&amp;rsquo;t use the &amp;ldquo;Mac OS X&amp;rdquo; setting. Instead, use the &amp;ldquo;Oracle&amp;rdquo; setting. The theme doesn&amp;rsquo;t matter.
+That fixes the CPU issue, but somewhat annoyingly moves the menu out of the menu bar at the top of the screen and into the application window, a la Windows, making the interface inconsistent with pretty much every other app I use on my Mac.</description>
+    </item>
+    
+    <item>
+      <title>How To Run Oracle Forms 11g Applications on OS X Lion</title>
+      <link>http://tobybase.com/posts/2012-07-12-run-oracle-forms-11g-applications-on-os-x-lion/</link>
+      <pubDate>Thu, 12 Jul 2012 22:28:24 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/2012-07-12-run-oracle-forms-11g-applications-on-os-x-lion/</guid>
+      <description>Need to run your company&amp;rsquo;s Oracle Forms application from your Mac, and can&amp;rsquo;t? Annoyed with having to crank up a virtual machine for just that one task? Even with the latest published Java version for OS X (1.6.0_33, as of today), you may find that some of the newer Forms applications just won&amp;rsquo;t run. Well, fret no longer. A solution may already be here, at least for Safari and Firefox.</description>
+    </item>
+    
+    <item>
+      <title>How To Use a Perl CGI Script to Show Real Web Server Host Name</title>
+      <link>http://tobybase.com/posts/2012-07-02-use-a-perl-cgi-script-to-show-real-web-server-host-name/</link>
+      <pubDate>Mon, 02 Jul 2012 22:40:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/2012-07-02-use-a-perl-cgi-script-to-show-real-web-server-host-name/</guid>
+      <description>Here is a short and simple Perl CGI script that you can use to expose the hostname of your web server, as opposed to just the server/domain portion of the URL string:
+#!/usr/bin/perl print &amp;#34;Content-type: text/html\n\n&amp;#34;; print `hostname`; 1; Name the file something like hostname.cgi and place it in your web server&amp;rsquo;s /cgi-bin/ directory, or if your web server is configured appropriately, just name it hostname.pl and drop it wherever you like.</description>
+    </item>
+    
+    <item>
+      <title>OS X Software for Oracle Developers</title>
+      <link>http://tobybase.com/posts/2012-06-27-os-x-software-for-oracle-developers/</link>
+      <pubDate>Wed, 27 Jun 2012 21:39:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/2012-06-27-os-x-software-for-oracle-developers/</guid>
+      <description>One of the great things about working for Enkitec is that it&amp;rsquo;s a very Mac-friendly shop. When I arrived there in 2007 there were a handful of us running Macs and the attitude at the top seemed to be respectful, but skeptical. They allowed me to use my own laptop, which at the time was a 15-inch Intel Core2 Duo Macbook Pro, with the understanding that I could request a standard-issue Dell laptop at any time should the need arise.</description>
+    </item>
+    
+    <item>
+      <title>Use DML Error Logging</title>
+      <link>http://tobybase.com/posts/2012-06-07-dml-error-logging/</link>
+      <pubDate>Thu, 07 Jun 2012 17:04:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/2012-06-07-dml-error-logging/</guid>
+      <description>Introduced with Oracle 10gR2, DML Error Logging allows you to make standard SQL INSERT, UPDATE, and MERGE statements behave more like the SQL*Loader utility, logging errors to a table rather than failing and rolling back the first time an error condition is encountered.
+The syntax is the same for all DML statements. Just add the following clause to the end of your DML:
+LOG ERRORS  The database will automatically create an error log table for you.</description>
+    </item>
+    
+    <item>
+      <title>Let the Database Do the Work</title>
+      <link>http://tobybase.com/links/2012-06-01-oracle-row-vs-set-processing/</link>
+      <pubDate>Fri, 01 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/links/2012-06-01-oracle-row-vs-set-processing/</guid>
+      <description>If you&amp;rsquo;re writing database-driven reports for the web, Craig Shallahamer shows why you should let the (Oracle) database handle as much of your selection and transformation logic as possible.</description>
+    </item>
+    
+    <item>
+      <title>Use SQLFiddle to Test New Features, Run Demos</title>
+      <link>http://tobybase.com/links/2012-05-25-sqlfiddle-is-a-sql-sandbox/</link>
+      <pubDate>Fri, 25 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/links/2012-05-25-sqlfiddle-is-a-sql-sandbox/</guid>
+      <description>Build your own mini-schema and run queries against it Publish your experiments for your friends to tweak Try out examples from your favorite SQL book without having to create your a database Works for Oracle, PostgreSQL, MySQL, and SQL Server flavors  All in all, a pretty cool. Very useful for bloggers or teams.</description>
+    </item>
+    
+    <item>
+      <title>ODBC Connection Fails for MS Access App on Citrix </title>
+      <link>http://tobybase.com/posts/2012-05-11-odbc-connection-fails-for-ms-access-app-on-citrix/</link>
+      <pubDate>Fri, 11 May 2012 20:54:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/2012-05-11-odbc-connection-fails-for-ms-access-app-on-citrix/</guid>
+      <description>I ran into an interesting problem recently when attempting to publish an MS Access application with Citrix XenApp. The application pulled data from an Oracle database, so an ODBC connection was created on the Citrix server. What we found was that when a non-privileged user tried to run the application, the connection failed. When the Citrix server admin ran it, however, it worked. Furthermore, as long as the admin was logged in, anybody else could run the application successfully; when he logged out, the users&amp;rsquo; connections broke again.</description>
+    </item>
+    
+    <item>
+      <title>Discovering Command-line Java Profiling Tools</title>
+      <link>http://tobybase.com/posts/2012-05-02-discovering-command-line-java-profiling-tools/</link>
+      <pubDate>Wed, 02 May 2012 21:41:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/2012-05-02-discovering-command-line-java-profiling-tools/</guid>
+      <description>At my current client I am responsible for administering a third-party Java appplication that unfortunately generates a lot of performance complaints. It&amp;rsquo;s a multi-tiered system with the middle-tier running on Oracle Appication Server 10.1.3. I am already familiar with GUI profiling tools like jconsole and jvisualvm, both of which are included with Oracle&amp;rsquo;s JDK, and I have played around with the profiling capabilities in NetBeans. All of these profiling tools are fairly similar to one another in look and functionality.</description>
+    </item>
+    
+    <item>
+      <title>Table Functions: 9i Feature Worth Revisiting (Part 2)</title>
+      <link>http://tobybase.com/posts/2012-04-27-table-functions-9i-feature-worth-revisiting-part-2/</link>
+      <pubDate>Fri, 27 Apr 2012 22:35:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/2012-04-27-table-functions-9i-feature-worth-revisiting-part-2/</guid>
+      <description>In part one of this series I showed a simple example of how table functions can be used to treat PL/SQL collection types as tables in a SQL query. We used a nested table collection type to which we manually added a few entries. In this example, I intend to show a more practical use of table functions using all three PL/SQL collection types: associative arrays, nested tables, and VARRAYs.</description>
+    </item>
+    
+    <item>
+      <title>Table Functions: 9i Feature Worth Revisiting (Part 1)</title>
+      <link>http://tobybase.com/posts/2012-04-27-table-functions-9i-feature-worth-revisiting-part-1/</link>
+      <pubDate>Fri, 27 Apr 2012 22:27:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/2012-04-27-table-functions-9i-feature-worth-revisiting-part-1/</guid>
+      <description>Yes, they&amp;rsquo;ve been around for a while, but if you haven&amp;rsquo;t made use of table functions lately you might want to reacquaint yourself with this old gem. Table functions allow you to query the contents of PL/SQL collection types using SQL&amp;rsquo;s TABLE operator. Here is a simple example.
+CREATE OR REPLACE PACKAGE example AS TYPE nested_table_typ IS TABLE OF VARCHAR2(100); FUNCTION get_nested_table_data RETURN nested_table_typ PIPELINED; END example; / CREATE OR REPLACE PACKAGE BODY example AS FUNCTION get_nested_table_data RETURN nested_table_typ PIPELINED IS BEGIN PIPE ROW (&amp;#39;one&amp;#39;); PIPE ROW (&amp;#39;two&amp;#39;); PIPE ROW (&amp;#39;three&amp;#39;); RETURN; END get_nested_table_data; END example; / The package function example.</description>
+    </item>
+    
+    <item>
+      <title>How To Make Bash Scripts crontab-Compatible</title>
+      <link>http://tobybase.com/posts/2012-04-05-make-bash-scripts-crontab-compatible/</link>
+      <pubDate>Thu, 05 Apr 2012 21:19:05 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/2012-04-05-make-bash-scripts-crontab-compatible/</guid>
+      <description>When writing shell scripts in bash, consider whether your script can be automated in a batch scheduler like cron. If you reference any external resources in your script relative to the directory in which it resides, those references may break when running your script through cron.
+By default, crontab runs scripts in the user&amp;rsquo;s home directory, as specified in /etc/passwd. For user &amp;ldquo;Tim&amp;rdquo; with home directory /home/tim, a sample crontab might look something like the following:</description>
+    </item>
+    
+    <item>
+      <title>Invalidating Toplink Session Cache To Avoid Stale Data</title>
+      <link>http://tobybase.com/posts/2012-03-09-invalidating-toplink-session-cache-to-avoid-stale-data/</link>
+      <pubDate>Fri, 09 Mar 2012 18:42:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/2012-03-09-invalidating-toplink-session-cache-to-avoid-stale-data/</guid>
+      <description>Toplink is a Java framework that maps objects to database tables. It is the reference implementation for the Java Persistence Architecture, or JPA. Developers use Toplink to manage data persistence (storage), queries, and transactions in an Oracle database. By default, Toplink makes use of a special cache called a Session Cache, maintained on the server, which is meant to speed up performance. Queried data is stored in the Session Cache and used in subsequent queries to reduce or eliminate calls to the database.</description>
+    </item>
+    
+    <item>
+      <title>About Me</title>
+      <link>http://tobybase.com/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/about/</guid>
+      <description>Hi, I&amp;rsquo;m Toby, and Tobybase is my professional blog. I update from time to time when I run across problems or solutions that I think might be of interest to people. I try not to keep too much of the good stuff to myself. I&amp;rsquo;m an Oracle developer and database performance analyst by trade, and for the last few years I&amp;rsquo;ve been working primarily on the Exadata platform, a specialty database machine developed by Oracle that changes the ordinary rules of the game for performance tuning.</description>
+    </item>
     
   </channel>
 </rss>

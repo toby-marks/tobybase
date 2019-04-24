@@ -1,23 +1,62 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Videos on Tobybase: A Tech Blog</title>
+    <title>Videos on 👨🏻‍💻 Tobybase</title>
     <link>http://tobybase.com/categories/videos/</link>
-    <description>Recent content in Videos on Tobybase: A Tech Blog</description>
+    <description>Recent content in Videos on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
-    <managingEditor>toby.marks@infolob.com (Toby Marks)</managingEditor>
-    <webMaster>toby.marks@infolob.com (Toby Marks)</webMaster>
-    <lastBuildDate>Tue, 18 Dec 2012 00:00:00 +0000</lastBuildDate>
+    <language>en</language>
+    <lastBuildDate>Fri, 10 Mar 2017 14:56:00 +0000</lastBuildDate>
     
 	<atom:link href="http://tobybase.com/categories/videos/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Move Your VM to Oracle Cloud - Part 4</title>
+      <link>http://tobybase.com/posts/infolob-lift-and-shift-howto-4/</link>
+      <pubDate>Fri, 10 Mar 2017 14:56:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/infolob-lift-and-shift-howto-4/</guid>
+      <description>In the last of a four-part video series, our Director of Cloud Services Brian Hill creates a new compute instance in Oracle Cloud Compute Services based on his custom Windows virtual machine image.
+  </description>
+    </item>
+    
+    <item>
+      <title>Move Your VM to Oracle Cloud - Part 3</title>
+      <link>http://tobybase.com/posts/infolob-lift-and-shift-howto-3/</link>
+      <pubDate>Fri, 10 Mar 2017 14:53:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/infolob-lift-and-shift-howto-3/</guid>
+      <description>In part three of a four-part video series, our Director of Cloud Services Brian Hill creates a bootable storage volume in Oracle Cloud Compute Services with his new Windows image.
+  </description>
+    </item>
+    
+    <item>
+      <title>Move Your VM to Oracle Cloud - Part 2</title>
+      <link>http://tobybase.com/posts/infolob-lift-and-shift-howto-2/</link>
+      <pubDate>Fri, 10 Mar 2017 14:47:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/infolob-lift-and-shift-howto-2/</guid>
+      <description>In part two of a four-part video series, our Director of Cloud Services Brian Hill creates an image in Oracle Cloud Compute Services based on a Windows virtual machine.
+  </description>
+    </item>
+    
+    <item>
+      <title>Move Your VM to Oracle Cloud - Part 1</title>
+      <link>http://tobybase.com/posts/infolob-lift-and-shift-howto-1/</link>
+      <pubDate>Fri, 10 Mar 2017 14:41:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/infolob-lift-and-shift-howto-1/</guid>
+      <description>In part one of a four-part video series, our Director of Cloud Services Brian Hill demonstrates how to prepare your virtual machine for upload to the cloud.
+  </description>
+    </item>
+    
+    <item>
       <title>Generate PDF Reports for Free in Oracle Apex Using PL-JRXML2PDF and iReport Designer</title>
-      <link>http://tobybase.com/blog/2012/12/18/generate-pdf-reports-for-free-in-oracle-apex-using-pl-jrxml2pdf-and-ireport-designer/</link>
+      <link>http://tobybase.com/posts/2012-12-18-video-post/</link>
       <pubDate>Tue, 18 Dec 2012 00:00:00 +0000</pubDate>
-      <author>toby.marks@infolob.com (Toby Marks)</author>
-      <guid>http://tobybase.com/blog/2012/12/18/generate-pdf-reports-for-free-in-oracle-apex-using-pl-jrxml2pdf-and-ireport-designer/</guid>
+      
+      <guid>http://tobybase.com/posts/2012-12-18-video-post/</guid>
       <description>Using Jaspersoft&amp;rsquo;s free iReport Designer tool and the open source PL-JRXML2PDF project, you can generate PDF reports from Oracle Apex for free, without having to install the JasperReports and JasperReports Server components. Watch my video tutorial to find out how.</description>
     </item>
     

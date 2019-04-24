@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tools on 👨🏻‍💻 Tobybase</title>
+    <link>http://tobybase.com/tags/tools/</link>
+    <description>Recent content in tools on 👨🏻‍💻 Tobybase</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 May 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://tobybase.com/tags/tools/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Use SQLFiddle to Test New Features, Run Demos</title>
+      <link>http://tobybase.com/links/2012-05-25-sqlfiddle-is-a-sql-sandbox/</link>
+      <pubDate>Fri, 25 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/links/2012-05-25-sqlfiddle-is-a-sql-sandbox/</guid>
+      <description>Build your own mini-schema and run queries against it Publish your experiments for your friends to tweak Try out examples from your favorite SQL book without having to create your a database Works for Oracle, PostgreSQL, MySQL, and SQL Server flavors  All in all, a pretty cool. Very useful for bloggers or teams.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web Development on 👨🏻‍💻 Tobybase</title>
+    <link>http://tobybase.com/categories/web-development/</link>
+    <description>Recent content in Web Development on 👨🏻‍💻 Tobybase</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 26 Oct 2012 21:09:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://tobybase.com/categories/web-development/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Use Firebug&#39;s console.debug Command to Analyze Javascript, DOM Objects</title>
+      <link>http://tobybase.com/posts/2012-10-26-use-firebugs-consoledebug-command-to-analyze-javascript-dom-objects/</link>
+      <pubDate>Fri, 26 Oct 2012 21:09:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/2012-10-26-use-firebugs-consoledebug-command-to-analyze-javascript-dom-objects/</guid>
+      <description>Occasionally when debugging my Javascript code I need to be able to analyze the properties of an unknown object; for instance, an unexpected DOM object passed to an event handler. How do you analyze the properties of an object when you don&amp;rsquo;t know what the object is? I was looking for a way to list all the properties of a generic Javascript or DOM object when I stumbled across this blog post by Andrew Peters.</description>
+    </item>
+    
+    <item>
+      <title>How To Use a Perl CGI Script to Show Real Web Server Host Name</title>
+      <link>http://tobybase.com/posts/2012-07-02-use-a-perl-cgi-script-to-show-real-web-server-host-name/</link>
+      <pubDate>Mon, 02 Jul 2012 22:40:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/2012-07-02-use-a-perl-cgi-script-to-show-real-web-server-host-name/</guid>
+      <description>Here is a short and simple Perl CGI script that you can use to expose the hostname of your web server, as opposed to just the server/domain portion of the URL string:
+#!/usr/bin/perl print &amp;#34;Content-type: text/html\n\n&amp;#34;; print `hostname`; 1; Name the file something like hostname.cgi and place it in your web server&amp;rsquo;s /cgi-bin/ directory, or if your web server is configured appropriately, just name it hostname.pl and drop it wherever you like.</description>
+    </item>
+    
+    <item>
+      <title>Let the Database Do the Work</title>
+      <link>http://tobybase.com/links/2012-06-01-oracle-row-vs-set-processing/</link>
+      <pubDate>Fri, 01 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/links/2012-06-01-oracle-row-vs-set-processing/</guid>
+      <description>If you&amp;rsquo;re writing database-driven reports for the web, Craig Shallahamer shows why you should let the (Oracle) database handle as much of your selection and transformation logic as possible.</description>
+    </item>
+    
+  </channel>
+</rss>

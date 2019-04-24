@@ -1,30 +1,75 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Tobybase: A Tech Blog</title>
+    <title>Categories on 👨🏻‍💻 Tobybase</title>
     <link>http://tobybase.com/categories/</link>
-    <description>Recent content in Categories on Tobybase: A Tech Blog</description>
+    <description>Recent content in Categories on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
-    <managingEditor>toby.marks@infolob.com (Toby Marks)</managingEditor>
-    <webMaster>toby.marks@infolob.com (Toby Marks)</webMaster>
+    <language>en</language>
+    <lastBuildDate>Tue, 01 May 2018 09:05:54 -0500</lastBuildDate>
     
 	<atom:link href="http://tobybase.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Community</title>
-      <link>http://tobybase.com/categories/community/</link>
-      <pubDate>Wed, 27 Jun 2012 21:39:00 +0000</pubDate>
-      <author>toby.marks@infolob.com (Toby Marks)</author>
-      <guid>http://tobybase.com/categories/community/</guid>
+      <title>AI</title>
+      <link>http://tobybase.com/categories/ai/</link>
+      <pubDate>Tue, 01 May 2018 09:05:54 -0500</pubDate>
+      
+      <guid>http://tobybase.com/categories/ai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>News</title>
+      <link>http://tobybase.com/categories/news/</link>
+      <pubDate>Tue, 01 May 2018 09:05:54 -0500</pubDate>
+      
+      <guid>http://tobybase.com/categories/news/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Oracle Database</title>
+      <link>http://tobybase.com/categories/oracle-database/</link>
+      <pubDate>Tue, 10 Apr 2018 12:47:23 -0500</pubDate>
+      
+      <guid>http://tobybase.com/categories/oracle-database/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cloud</title>
+      <link>http://tobybase.com/categories/cloud/</link>
+      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/categories/cloud/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Infolob</title>
+      <link>http://tobybase.com/categories/infolob/</link>
+      <pubDate>Thu, 14 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/categories/infolob/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Videos</title>
+      <link>http://tobybase.com/categories/videos/</link>
+      <pubDate>Fri, 10 Mar 2017 14:56:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/categories/videos/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Education</title>
       <link>http://tobybase.com/categories/education/</link>
-      <pubDate>Fri, 10 Mar 2017 14:56:00 +0000</pubDate>
-      <author>toby.marks@infolob.com (Toby Marks)</author>
+      <pubDate>Fri, 10 Mar 2017 00:00:00 +0000</pubDate>
+      
       <guid>http://tobybase.com/categories/education/</guid>
       <description></description>
     </item>
@@ -33,53 +78,71 @@
       <title>Housekeeping</title>
       <link>http://tobybase.com/categories/housekeeping/</link>
       <pubDate>Tue, 17 Jan 2017 22:58:59 -0600</pubDate>
-      <author>toby.marks@infolob.com (Toby Marks)</author>
+      
       <guid>http://tobybase.com/categories/housekeeping/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Howtos</title>
-      <link>http://tobybase.com/categories/howtos/</link>
+      <title>Mac</title>
+      <link>http://tobybase.com/categories/mac/</link>
       <pubDate>Thu, 04 Feb 2016 22:50:09 +0000</pubDate>
-      <author>toby.marks@infolob.com (Toby Marks)</author>
-      <guid>http://tobybase.com/categories/howtos/</guid>
+      
+      <guid>http://tobybase.com/categories/mac/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Oci</title>
-      <link>http://tobybase.com/categories/oci/</link>
-      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
-      <author>toby.marks@infolob.com (Toby Marks)</author>
-      <guid>http://tobybase.com/categories/oci/</guid>
+      <title>Unix</title>
+      <link>http://tobybase.com/categories/unix/</link>
+      <pubDate>Wed, 24 Jul 2013 21:42:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/categories/unix/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Splaining</title>
-      <link>http://tobybase.com/categories/splaining/</link>
-      <pubDate>Wed, 09 Jan 2013 19:09:45 +0000</pubDate>
-      <author>toby.marks@infolob.com (Toby Marks)</author>
-      <guid>http://tobybase.com/categories/splaining/</guid>
+      <title>Tools</title>
+      <link>http://tobybase.com/categories/tools/</link>
+      <pubDate>Fri, 19 Jul 2013 22:32:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/categories/tools/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Videos</title>
-      <link>http://tobybase.com/categories/videos/</link>
-      <pubDate>Tue, 18 Dec 2012 00:00:00 +0000</pubDate>
-      <author>toby.marks@infolob.com (Toby Marks)</author>
-      <guid>http://tobybase.com/categories/videos/</guid>
+      <title>Web Development</title>
+      <link>http://tobybase.com/categories/web-development/</link>
+      <pubDate>Fri, 26 Oct 2012 21:09:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/categories/web-development/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>War Stories</title>
-      <link>http://tobybase.com/categories/war-stories/</link>
+      <title>Oracle Forms</title>
+      <link>http://tobybase.com/categories/oracle-forms/</link>
+      <pubDate>Thu, 12 Jul 2012 22:28:24 +0000</pubDate>
+      
+      <guid>http://tobybase.com/categories/oracle-forms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Windows</title>
+      <link>http://tobybase.com/categories/windows/</link>
       <pubDate>Fri, 11 May 2012 20:54:00 +0000</pubDate>
-      <author>toby.marks@infolob.com (Toby Marks)</author>
-      <guid>http://tobybase.com/categories/war-stories/</guid>
+      
+      <guid>http://tobybase.com/categories/windows/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Java</title>
+      <link>http://tobybase.com/categories/java/</link>
+      <pubDate>Wed, 02 May 2012 21:41:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/categories/java/</guid>
       <description></description>
     </item>
     

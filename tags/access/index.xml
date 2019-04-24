@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Access on Tobybase: A Tech Blog</title>
+    <title>access on 👨🏻‍💻 Tobybase</title>
     <link>http://tobybase.com/tags/access/</link>
-    <description>Recent content in Access on Tobybase: A Tech Blog</description>
+    <description>Recent content in access on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
-    <managingEditor>toby.marks@infolob.com (Toby Marks)</managingEditor>
-    <webMaster>toby.marks@infolob.com (Toby Marks)</webMaster>
+    <language>en</language>
     <lastBuildDate>Fri, 11 May 2012 20:54:00 +0000</lastBuildDate>
     
 	<atom:link href="http://tobybase.com/tags/access/index.xml" rel="self" type="application/rss+xml" />
@@ -14,10 +13,10 @@
     
     <item>
       <title>ODBC Connection Fails for MS Access App on Citrix </title>
-      <link>http://tobybase.com/blog/2012/05/11/odbc-connection-fails-for-ms-access-app-on-citrix/</link>
+      <link>http://tobybase.com/posts/2012-05-11-odbc-connection-fails-for-ms-access-app-on-citrix/</link>
       <pubDate>Fri, 11 May 2012 20:54:00 +0000</pubDate>
-      <author>toby.marks@infolob.com (Toby Marks)</author>
-      <guid>http://tobybase.com/blog/2012/05/11/odbc-connection-fails-for-ms-access-app-on-citrix/</guid>
+      
+      <guid>http://tobybase.com/posts/2012-05-11-odbc-connection-fails-for-ms-access-app-on-citrix/</guid>
       <description>I ran into an interesting problem recently when attempting to publish an MS Access application with Citrix XenApp. The application pulled data from an Oracle database, so an ODBC connection was created on the Citrix server. What we found was that when a non-privileged user tried to run the application, the connection failed. When the Citrix server admin ran it, however, it worked. Furthermore, as long as the admin was logged in, anybody else could run the application successfully; when he logged out, the users&amp;rsquo; connections broke again.</description>
     </item>
     

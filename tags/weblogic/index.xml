@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Weblogic on Tobybase: A Tech Blog</title>
+    <title>weblogic on 👨🏻‍💻 Tobybase</title>
     <link>http://tobybase.com/tags/weblogic/</link>
-    <description>Recent content in Weblogic on Tobybase: A Tech Blog</description>
+    <description>Recent content in weblogic on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
-    <managingEditor>toby.marks@infolob.com (Toby Marks)</managingEditor>
-    <webMaster>toby.marks@infolob.com (Toby Marks)</webMaster>
+    <language>en</language>
     <lastBuildDate>Fri, 09 Mar 2012 18:42:00 +0000</lastBuildDate>
     
 	<atom:link href="http://tobybase.com/tags/weblogic/index.xml" rel="self" type="application/rss+xml" />
@@ -14,10 +13,10 @@
     
     <item>
       <title>Invalidating Toplink Session Cache To Avoid Stale Data</title>
-      <link>http://tobybase.com/blog/2012/03/09/invalidating-toplink-session-cache-to-avoid-stale-data/</link>
+      <link>http://tobybase.com/posts/2012-03-09-invalidating-toplink-session-cache-to-avoid-stale-data/</link>
       <pubDate>Fri, 09 Mar 2012 18:42:00 +0000</pubDate>
-      <author>toby.marks@infolob.com (Toby Marks)</author>
-      <guid>http://tobybase.com/blog/2012/03/09/invalidating-toplink-session-cache-to-avoid-stale-data/</guid>
+      
+      <guid>http://tobybase.com/posts/2012-03-09-invalidating-toplink-session-cache-to-avoid-stale-data/</guid>
       <description>Toplink is a Java framework that maps objects to database tables. It is the reference implementation for the Java Persistence Architecture, or JPA. Developers use Toplink to manage data persistence (storage), queries, and transactions in an Oracle database. By default, Toplink makes use of a special cache called a Session Cache, maintained on the server, which is meant to speed up performance. Queried data is stored in the Session Cache and used in subsequent queries to reduce or eliminate calls to the database.</description>
     </item>
     

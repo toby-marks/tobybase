@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Toby Marks">
+    <meta name="description" content="My tech blog">
+    <meta name="keywords" content="oracle,infolob,blog,consultant,developer,tuning,exadata,personal">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Table Functions: 9i Feature Worth Revisiting (Part 1)"/>
+<meta name="twitter:description" content="Yes, they&rsquo;ve been around for a while, but if you haven&rsquo;t made use of table functions lately you might want to reacquaint yourself with this old gem. Table functions allow you to query the contents of PL/SQL collection types using SQL&rsquo;s TABLE operator. Here is a simple example.
+CREATE OR REPLACE PACKAGE example AS TYPE nested_table_typ IS TABLE OF VARCHAR2(100); FUNCTION get_nested_table_data RETURN nested_table_typ PIPELINED; END example; / CREATE OR REPLACE PACKAGE BODY example AS FUNCTION get_nested_table_data RETURN nested_table_typ PIPELINED IS BEGIN PIPE ROW (&#39;one&#39;); PIPE ROW (&#39;two&#39;); PIPE ROW (&#39;three&#39;); RETURN; END get_nested_table_data; END example; / The package function example."/>
+
+    <meta property="og:title" content="Table Functions: 9i Feature Worth Revisiting (Part 1)" />
+<meta property="og:description" content="Yes, they&rsquo;ve been around for a while, but if you haven&rsquo;t made use of table functions lately you might want to reacquaint yourself with this old gem. Table functions allow you to query the contents of PL/SQL collection types using SQL&rsquo;s TABLE operator. Here is a simple example.
+CREATE OR REPLACE PACKAGE example AS TYPE nested_table_typ IS TABLE OF VARCHAR2(100); FUNCTION get_nested_table_data RETURN nested_table_typ PIPELINED; END example; / CREATE OR REPLACE PACKAGE BODY example AS FUNCTION get_nested_table_data RETURN nested_table_typ PIPELINED IS BEGIN PIPE ROW (&#39;one&#39;); PIPE ROW (&#39;two&#39;); PIPE ROW (&#39;three&#39;); RETURN; END get_nested_table_data; END example; / The package function example." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tobybase.com/posts/2012-04-27-table-functions-9i-feature-worth-revisiting-part-1/" />
+<meta property="article:published_time" content="2012-04-27T22:27:00&#43;00:00"/>
+<meta property="article:modified_time" content="2017-02-22T00:00:00&#43;00:00"/>
+
+
+    
+      <base href="http://tobybase.com/posts/2012-04-27-table-functions-9i-feature-worth-revisiting-part-1/">
+    
+    <title>
+  Table Functions: 9i Feature Worth Revisiting (Part 1) · 👨🏻‍💻 Tobybase
+</title>
+
+    
+      <link rel="canonical" href="http://tobybase.com/posts/2012-04-27-table-functions-9i-feature-worth-revisiting-part-1/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" integrity="sha256-oSrCnRYXvHG31SBifqP2PM1uje7SJUyX0nTwO2RJV54=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="http://tobybase.com/css/coder.min.28d751104f30c16da1aa1bb04015cbe662cacfe0d1b01af4f2240ad58580069c.css" integrity="sha256-KNdREE8wwW2hqhuwQBXL5mLKz&#43;DRsBr08iQK1YWABpw=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+      <link rel="stylesheet" href="http://tobybase.com/css/custom.css">
+    
+
+    <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.55.3" />
+  </head>
+
+  <body class=" ">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="http://tobybase.com">
+      👨🏻‍💻 Tobybase
+    </a>
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://tobybase.com/posts/">Blog</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://tobybase.com/links/">Links</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://tobybase.com/about/">About</a>
+          </li>
+        
+      
+      
+    </ul>
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">Table Functions: 9i Feature Worth Revisiting (Part 1)</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fas fa-calendar"></i>
+              <time datetime='2012-04-27T22:27:00Z'>
+                April 27, 2012
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              3 minutes read
+            </span>
+          </div>
+          <div class="categories">
+  <i class="fas fa-folder"></i>
+    <a href="http://tobybase.com/categories/oracle-database/">Oracle Database</a></div>
+
+          <div class="tags">
+  <i class="fas fa-tag"></i>
+    <a href="http://tobybase.com/tags/oracle/">oracle</a>
+      <span class="separator">•</span>
+    <a href="http://tobybase.com/tags/plsql/">plsql</a>
+      <span class="separator">•</span>
+    <a href="http://tobybase.com/tags/pipelined-table-functions/">pipelined table functions</a></div>
+
+        </div>
+      </header>
+
+      <div>
+        <p>Yes, they&rsquo;ve been around for a while, but if you haven&rsquo;t made use of table functions lately you might want to reacquaint yourself with this old gem. Table functions allow you to query the contents of PL/SQL collection types using SQL&rsquo;s TABLE operator. Here is a simple example.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plpgsql" data-lang="plpgsql">    <span style="font-weight:bold">CREATE</span> <span style="font-weight:bold">OR</span> <span style="font-weight:bold">REPLACE</span> PACKAGE example <span style="font-weight:bold">AS</span>
+
+         <span style="font-weight:bold">TYPE</span> nested_table_typ <span style="font-weight:bold">IS</span> <span style="font-weight:bold">TABLE</span> <span style="font-weight:bold">OF</span> VARCHAR2(100);
+
+         <span style="font-weight:bold">FUNCTION</span> get_nested_table_data <span style="font-weight:bold">RETURN</span> nested_table_typ PIPELINED;
+
+    <span style="font-weight:bold">END</span> example;
+    /
+
+    <span style="font-weight:bold">CREATE</span> <span style="font-weight:bold">OR</span> <span style="font-weight:bold">REPLACE</span> PACKAGE BODY example <span style="font-weight:bold">AS</span>
+
+         <span style="font-weight:bold">FUNCTION</span> get_nested_table_data <span style="font-weight:bold">RETURN</span> nested_table_typ PIPELINED <span style="font-weight:bold">IS</span>
+         <span style="font-weight:bold">BEGIN</span>
+              PIPE <span style="font-weight:bold">ROW</span> (<span style="font-style:italic">&#39;one&#39;</span>);
+              PIPE <span style="font-weight:bold">ROW</span> (<span style="font-style:italic">&#39;two&#39;</span>);
+              PIPE <span style="font-weight:bold">ROW</span> (<span style="font-style:italic">&#39;three&#39;</span>);
+              <span style="font-weight:bold">RETURN</span>;
+         <span style="font-weight:bold">END</span> get_nested_table_data;
+
+    <span style="font-weight:bold">END</span> example;
+    /</code></pre></div>
+<p>The package function example.get_nested_table_data returns a PL/SQL collection — in this case, a nested table. The PIPELINED directive instructs the function to return data to the calling query as rows are populated by the PIPE ROW command. That way, you don&rsquo;t need to wait for the function to finish before you get results from your query.</p>
+
+<p>The function can be invoked from the SELECT clause of a query in the usual way, and will return a valid result.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">    <span style="font-weight:bold">SELECT</span> example.get_nested_table_data <span style="font-weight:bold">FROM</span> dual;
+
+    GET_NESTED_TABLE_DATA
+    <span style="font-style:italic">-------------------------------
+</span><span style="font-style:italic"></span>    <span style="font-weight:bold">SCHEMA</span>.SYS_PLSQL_166672_9_1(one,two,three)</code></pre></div>
+<p>This is possible because nested tables and VARRAYs are supported as native types in SQL. The other type of PL/SQL collection, associative arrays, are not. Therefore you cannot use an associative array as the return type of a pipelined table function. However, it&rsquo;s pretty trivial to create a wrapper function that translates an associative array into a nested table. You wouldn&rsquo;t necessarily take this approach in your own code, but it comes in handy when you&rsquo;re transforming data coming from a third party package or function.</p>
+
+<p>But what if you need the contents of the collection presented as a table, with one record per entry in the collection? This is where the TABLE operator comes in handy.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">    <span style="font-weight:bold">SELECT</span> column_value <span style="font-weight:bold">FROM</span> <span style="font-weight:bold">TABLE</span>(example.get_nested_table_data);
+
+    COLUMN_VALUE
+    <span style="font-style:italic">-------------------
+</span><span style="font-style:italic"></span>    one
+    two
+    three</code></pre></div>
+<p>The TABLE operator casts a collection type as an aggregated result set, meaning it allows you to query it as if it were a table.</p>
+
+<p>Why would you need to do this?</p>
+
+<p>One reason might be because you want to query or join data retrieved from a web service, or from an LDAP server. Another reason might be to simplify a complex query with lots of unions, case statements, and subqueries by fetching, manipulating, and combining your data inside a PL/SQL function. You can leverage the ease and maintainability of building your collection in a procedural manner, while still having access to the collection data from SQL. There is some overhead associated with that approach, though, so you&rsquo;ll want to be careful about applying it in performance-critical situations. Still, though, it&rsquo;s worth considering when the complexity of SQL constructs gets out of hand.</p>
+
+      </div>
+
+      <footer>
+        
+
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tobybase-com" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    
+      <p>Oracle Database Developer and Performance Tuner, specialized on the Exadata platform. Working for Infolob from Irving, Texas. Life is beautiful. 🌼🐝</p>
+    
+     © 2019
+    
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+
+  </body>
+
+</html>
