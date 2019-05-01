@@ -10,28 +10,26 @@
     <meta name="keywords" content="oracle,infolob,blog,consultant,developer,tuning,exadata,personal">
 
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Move Your VM to Oracle Cloud - Part 2"/>
-<meta name="twitter:description" content="In part two of a four-part video series, our Director of Cloud Services Brian Hill creates an image in Oracle Cloud Compute Services based on a Windows virtual machine.
-  "/>
+<meta name="twitter:title" content="Fix High CPU Usage / Memory Leak in SQL Developer 18&#43; for Windows"/>
+<meta name="twitter:description" content="How to fix an annoying problem in the latest versions of SQL Developer"/>
 
-    <meta property="og:title" content="Move Your VM to Oracle Cloud - Part 2" />
-<meta property="og:description" content="In part two of a four-part video series, our Director of Cloud Services Brian Hill creates an image in Oracle Cloud Compute Services based on a Windows virtual machine.
-  " />
+    <meta property="og:title" content="Fix High CPU Usage / Memory Leak in SQL Developer 18&#43; for Windows" />
+<meta property="og:description" content="How to fix an annoying problem in the latest versions of SQL Developer" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://tobybase.com/posts/infolob-lift-and-shift-howto-2/" />
-<meta property="article:published_time" content="2017-03-10T14:47:00&#43;00:00"/>
-<meta property="article:modified_time" content="2017-03-10T14:47:00&#43;00:00"/>
+<meta property="og:url" content="http://tobybase.com/posts/sqldev-memory-leak/" />
+<meta property="article:published_time" content="2019-05-01T16:47:39-05:00"/>
+<meta property="article:modified_time" content="2019-05-01T16:47:39-05:00"/>
 
 
     
-      <base href="http://tobybase.com/posts/infolob-lift-and-shift-howto-2/">
+      <base href="http://tobybase.com/posts/sqldev-memory-leak/">
     
     <title>
-  Move Your VM to Oracle Cloud - Part 2 · 👨🏻‍💻 Tobybase
+  Fix High CPU Usage / Memory Leak in SQL Developer 18&#43; for Windows · 👨🏻‍💻 Tobybase
 </title>
 
     
-      <link rel="canonical" href="http://tobybase.com/posts/infolob-lift-and-shift-howto-2/">
+      <link rel="canonical" href="http://tobybase.com/posts/sqldev-memory-leak/">
     
 
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700" rel="stylesheet">
@@ -95,14 +93,14 @@
     <article>
       <header>
         <div class="post-title">
-          <h1 class="title">Move Your VM to Oracle Cloud - Part 2</h1>
+          <h1 class="title">Fix High CPU Usage / Memory Leak in SQL Developer 18&#43; for Windows</h1>
         </div>
         <div class="post-meta">
           <div class="date">
             <span class="posted-on">
               <i class="fas fa-calendar"></i>
-              <time datetime='2017-03-10T14:47:00Z'>
-                March 10, 2017
+              <time datetime='2019-05-01T16:47:39-05:00'>
+                May 1, 2019
               </time>
             </span>
             <span class="reading-time">
@@ -112,37 +110,35 @@
           </div>
           <div class="categories">
   <i class="fas fa-folder"></i>
-    <a href="http://tobybase.com/categories/infolob/">Infolob</a>
+    <a href="http://tobybase.com/categories/mac/">Mac</a>
       <span class="separator">•</span>
-    <a href="http://tobybase.com/categories/videos/">Videos</a></div>
+    <a href="http://tobybase.com/categories/tools/">Tools</a>
+      <span class="separator">•</span>
+    <a href="http://tobybase.com/categories/oracle-database/">Oracle Database</a></div>
 
           <div class="tags">
   <i class="fas fa-tag"></i>
-    <a href="http://tobybase.com/tags/cloud/">cloud</a>
+    <a href="http://tobybase.com/tags/oracle/">oracle</a>
       <span class="separator">•</span>
-    <a href="http://tobybase.com/tags/brian-hill/">brian hill</a>
+    <a href="http://tobybase.com/tags/macos/">macos</a>
       <span class="separator">•</span>
-    <a href="http://tobybase.com/tags/lift-and-shift/">lift and shift</a>
+    <a href="http://tobybase.com/tags/sql-developer/">sql developer</a>
       <span class="separator">•</span>
-    <a href="http://tobybase.com/tags/oracle-cloud-services/">oracle cloud services</a>
+    <a href="http://tobybase.com/tags/utilities/">utilities</a>
       <span class="separator">•</span>
-    <a href="http://tobybase.com/tags/virtual-machines/">virtual machines</a>
-      <span class="separator">•</span>
-    <a href="http://tobybase.com/tags/windows/">windows</a>
-      <span class="separator">•</span>
-    <a href="http://tobybase.com/tags/infolob/">infolob</a></div>
+    <a href="http://tobybase.com/tags/java/">java</a></div>
 
         </div>
       </header>
 
       <div>
-        <p>In part two of a four-part video series, our Director of Cloud Services Brian Hill creates an image in Oracle Cloud Compute Services based on a Windows virtual machine.</p>
+        <p>If you run SQL Developer on Windows and experience high CPU usage and/or memory leak issues that freeze your PC, then you might want to try disabling some features that are likely causing the problem.</p>
 
+<p>I have personally observed this behavior on every version of SQL Developer since 18.2. Only my PC laptop is affected; my Macbook installation runs fine. I use the prepackaged Java 8 JDK. I have several colleagues who run the same configuration on Windows with no issues at all, so go figure.</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="//www.youtube.com/embed/bA7zyOh-JiY" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+<p><img src="https://res.cloudinary.com/tobyblog/image/upload/v1556748201/img/image001.png" alt="Disable Completion Insight in SQL Developer" /></p>
 
+<p>The &ldquo;fix&rdquo; is to disable all Completion Insight features from the Preferences panel, as shown above. Since making that change I&rsquo;ve not encountered any further problems. So if you&rsquo;re having trouble, give it a shot. If your experience varies, or if you have better insight into the cause of the problem, let me know.</p>
 
       </div>
 
