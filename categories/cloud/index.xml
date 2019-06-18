@@ -22,5 +22,45 @@
 &lt;p&gt;If you are getting the above error when trying to add a block volume to a Windows VM in Oracle Cloud Infrastructure, the solution is quite simple.&lt;/p&gt;</description>
     </item>
     
+    <item>
+      <title>Move Your VM to Oracle Cloud - Part 4</title>
+      <link>http://tobybase.com/posts/infolob-lift-and-shift-howto-4/</link>
+      <pubDate>Fri, 10 Mar 2017 14:56:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/infolob-lift-and-shift-howto-4/</guid>
+      <description>In the last of a four-part video series, our Director of Cloud Services Brian Hill creates a new compute instance in Oracle Cloud Compute Services based on his custom Windows virtual machine image.
+  </description>
+    </item>
+    
+    <item>
+      <title>Move Your VM to Oracle Cloud - Part 3</title>
+      <link>http://tobybase.com/posts/infolob-lift-and-shift-howto-3/</link>
+      <pubDate>Fri, 10 Mar 2017 14:53:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/infolob-lift-and-shift-howto-3/</guid>
+      <description>In part three of a four-part video series, our Director of Cloud Services Brian Hill creates a bootable storage volume in Oracle Cloud Compute Services with his new Windows image.
+  </description>
+    </item>
+    
+    <item>
+      <title>Move Your VM to Oracle Cloud - Part 2</title>
+      <link>http://tobybase.com/posts/infolob-lift-and-shift-howto-2/</link>
+      <pubDate>Fri, 10 Mar 2017 14:47:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/infolob-lift-and-shift-howto-2/</guid>
+      <description>In part two of a four-part video series, our Director of Cloud Services Brian Hill creates an image in Oracle Cloud Compute Services based on a Windows virtual machine.
+  </description>
+    </item>
+    
+    <item>
+      <title>Move Your VM to Oracle Cloud - Part 1</title>
+      <link>http://tobybase.com/posts/infolob-lift-and-shift-howto-1/</link>
+      <pubDate>Fri, 10 Mar 2017 14:41:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/infolob-lift-and-shift-howto-1/</guid>
+      <description>In part one of a four-part video series, our Director of Cloud Services Brian Hill demonstrates how to prepare your virtual machine for upload to the cloud.
+  </description>
+    </item>
+    
   </channel>
 </rss>

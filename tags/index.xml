@@ -6,7 +6,7 @@
     <description>Recent content in Tags on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 01 Jun 2012 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 07 May 2019 13:54:50 -0500</lastBuildDate>
     
 	<atom:link href="http://tobybase.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,203 +14,41 @@
     <item>
       <title></title>
       <link>http://tobybase.com/tags/</link>
-      <pubDate>Fri, 01 Jun 2012 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 07 May 2019 13:54:50 -0500</pubDate>
       
       <guid>http://tobybase.com/tags/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Access</title>
-      <link>http://tobybase.com/tags/access/</link>
-      <pubDate>Fri, 11 May 2012 20:54:00 +0000</pubDate>
+      <title>oracle</title>
+      <link>http://tobybase.com/tags/oracle/</link>
+      <pubDate>Tue, 07 May 2019 13:54:50 -0500</pubDate>
       
-      <guid>http://tobybase.com/tags/access/</guid>
+      <guid>http://tobybase.com/tags/oracle/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Active Directory</title>
-      <link>http://tobybase.com/tags/active-directory/</link>
-      <pubDate>Mon, 12 Nov 2012 17:32:00 +0000</pubDate>
+      <title>sas</title>
+      <link>http://tobybase.com/tags/sas/</link>
+      <pubDate>Tue, 07 May 2019 13:54:50 -0500</pubDate>
       
-      <guid>http://tobybase.com/tags/active-directory/</guid>
+      <guid>http://tobybase.com/tags/sas/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Apple</title>
-      <link>http://tobybase.com/tags/apple/</link>
-      <pubDate>Wed, 25 Jul 2012 00:00:00 +0000</pubDate>
+      <title>sql</title>
+      <link>http://tobybase.com/tags/sql/</link>
+      <pubDate>Tue, 07 May 2019 13:54:50 -0500</pubDate>
       
-      <guid>http://tobybase.com/tags/apple/</guid>
+      <guid>http://tobybase.com/tags/sql/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Application Express</title>
-      <link>http://tobybase.com/tags/application-express/</link>
-      <pubDate>Tue, 18 Dec 2012 00:00:00 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/application-express/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Bash</title>
-      <link>http://tobybase.com/tags/bash/</link>
-      <pubDate>Thu, 05 Apr 2012 21:19:05 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/bash/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Bi</title>
-      <link>http://tobybase.com/tags/bi/</link>
-      <pubDate>Fri, 14 Jun 2013 21:47:00 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/bi/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Bi Publisher</title>
-      <link>http://tobybase.com/tags/bi-publisher/</link>
-      <pubDate>Fri, 14 Jun 2013 21:47:00 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/bi-publisher/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Brian Hill</title>
-      <link>http://tobybase.com/tags/brian-hill/</link>
-      <pubDate>Fri, 10 Mar 2017 14:56:00 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/brian-hill/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Cgi</title>
-      <link>http://tobybase.com/tags/cgi/</link>
-      <pubDate>Mon, 02 Jul 2012 22:40:00 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/cgi/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Citrix</title>
-      <link>http://tobybase.com/tags/citrix/</link>
-      <pubDate>Fri, 11 May 2012 20:54:00 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/citrix/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Cloud</title>
-      <link>http://tobybase.com/tags/cloud/</link>
-      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/cloud/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Cron</title>
-      <link>http://tobybase.com/tags/cron/</link>
-      <pubDate>Thu, 05 Apr 2012 21:19:05 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/cron/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Css</title>
-      <link>http://tobybase.com/tags/css/</link>
-      <pubDate>Fri, 26 Oct 2012 21:09:00 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/css/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>External Tables</title>
-      <link>http://tobybase.com/tags/external-tables/</link>
-      <pubDate>Wed, 14 Nov 2012 00:00:00 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/external-tables/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Firefox</title>
-      <link>http://tobybase.com/tags/firefox/</link>
-      <pubDate>Fri, 26 Oct 2012 21:09:00 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/firefox/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Html</title>
-      <link>http://tobybase.com/tags/html/</link>
-      <pubDate>Fri, 26 Oct 2012 21:09:00 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/html/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Iaas</title>
-      <link>http://tobybase.com/tags/iaas/</link>
-      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/iaas/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Infolob</title>
-      <link>http://tobybase.com/tags/infolob/</link>
-      <pubDate>Fri, 10 Mar 2017 14:56:00 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/infolob/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Instrumentation</title>
-      <link>http://tobybase.com/tags/instrumentation/</link>
-      <pubDate>Wed, 02 May 2012 21:41:00 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/instrumentation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ireport</title>
-      <link>http://tobybase.com/tags/ireport/</link>
-      <pubDate>Tue, 18 Dec 2012 00:00:00 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/ireport/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Jaspersoft</title>
-      <link>http://tobybase.com/tags/jaspersoft/</link>
-      <pubDate>Tue, 18 Dec 2012 00:00:00 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/jaspersoft/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Java</title>
+      <title>java</title>
       <link>http://tobybase.com/tags/java/</link>
       <pubDate>Wed, 01 May 2019 16:47:39 -0500</pubDate>
       
@@ -219,97 +57,7 @@
     </item>
     
     <item>
-      <title>Javascript</title>
-      <link>http://tobybase.com/tags/javascript/</link>
-      <pubDate>Fri, 26 Oct 2012 21:09:00 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/javascript/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Jhat</title>
-      <link>http://tobybase.com/tags/jhat/</link>
-      <pubDate>Wed, 02 May 2012 21:41:00 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/jhat/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Jmap</title>
-      <link>http://tobybase.com/tags/jmap/</link>
-      <pubDate>Wed, 02 May 2012 21:41:00 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/jmap/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Jstack</title>
-      <link>http://tobybase.com/tags/jstack/</link>
-      <pubDate>Wed, 02 May 2012 21:41:00 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/jstack/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Jstat</title>
-      <link>http://tobybase.com/tags/jstat/</link>
-      <pubDate>Wed, 02 May 2012 21:41:00 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/jstat/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Juniper</title>
-      <link>http://tobybase.com/tags/juniper/</link>
-      <pubDate>Thu, 04 Feb 2016 22:50:09 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/juniper/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Jvm</title>
-      <link>http://tobybase.com/tags/jvm/</link>
-      <pubDate>Wed, 02 May 2012 21:41:00 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/jvm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ldap</title>
-      <link>http://tobybase.com/tags/ldap/</link>
-      <pubDate>Mon, 12 Nov 2012 17:32:00 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/ldap/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Lift and Shift</title>
-      <link>http://tobybase.com/tags/lift-and-shift/</link>
-      <pubDate>Fri, 10 Mar 2017 14:56:00 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/lift-and-shift/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Macbook</title>
-      <link>http://tobybase.com/tags/macbook/</link>
-      <pubDate>Wed, 25 Jul 2012 00:00:00 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/macbook/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Macos</title>
+      <title>macOS</title>
       <link>http://tobybase.com/tags/macos/</link>
       <pubDate>Wed, 01 May 2019 16:47:39 -0500</pubDate>
       
@@ -318,160 +66,7 @@
     </item>
     
     <item>
-      <title>Me</title>
-      <link>http://tobybase.com/tags/me/</link>
-      <pubDate>Tue, 17 Jan 2017 22:58:59 -0600</pubDate>
-      
-      <guid>http://tobybase.com/tags/me/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Oci</title>
-      <link>http://tobybase.com/tags/oci/</link>
-      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/oci/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Odbc</title>
-      <link>http://tobybase.com/tags/odbc/</link>
-      <pubDate>Fri, 11 May 2012 20:54:00 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/odbc/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Office</title>
-      <link>http://tobybase.com/tags/office/</link>
-      <pubDate>Fri, 11 May 2012 20:54:00 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/office/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Oracle</title>
-      <link>http://tobybase.com/tags/oracle/</link>
-      <pubDate>Wed, 01 May 2019 16:47:39 -0500</pubDate>
-      
-      <guid>http://tobybase.com/tags/oracle/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Oracle Application Server</title>
-      <link>http://tobybase.com/tags/oracle-application-server/</link>
-      <pubDate>Fri, 09 Mar 2012 18:42:00 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/oracle-application-server/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Oracle Cloud Services</title>
-      <link>http://tobybase.com/tags/oracle-cloud-services/</link>
-      <pubDate>Fri, 10 Mar 2017 14:56:00 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/oracle-cloud-services/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Oracle Forms</title>
-      <link>http://tobybase.com/tags/oracle-forms/</link>
-      <pubDate>Thu, 12 Jul 2012 22:28:24 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/oracle-forms/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Perl</title>
-      <link>http://tobybase.com/tags/perl/</link>
-      <pubDate>Mon, 02 Jul 2012 22:40:00 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/perl/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Pipelined Table Functions</title>
-      <link>http://tobybase.com/tags/pipelined-table-functions/</link>
-      <pubDate>Fri, 27 Apr 2012 22:35:00 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/pipelined-table-functions/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Pl Jrxml2pdf</title>
-      <link>http://tobybase.com/tags/pl-jrxml2pdf/</link>
-      <pubDate>Tue, 18 Dec 2012 00:00:00 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/pl-jrxml2pdf/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Plsql</title>
-      <link>http://tobybase.com/tags/plsql/</link>
-      <pubDate>Fri, 27 Apr 2012 22:35:00 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/plsql/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Profiling</title>
-      <link>http://tobybase.com/tags/profiling/</link>
-      <pubDate>Wed, 02 May 2012 21:41:00 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/profiling/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Reporting</title>
-      <link>http://tobybase.com/tags/reporting/</link>
-      <pubDate>Fri, 14 Jun 2013 21:47:00 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/reporting/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Safari</title>
-      <link>http://tobybase.com/tags/safari/</link>
-      <pubDate>Wed, 25 Jul 2012 00:00:00 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/safari/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Scripting</title>
-      <link>http://tobybase.com/tags/scripting/</link>
-      <pubDate>Mon, 02 Jul 2012 22:40:00 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/scripting/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Sql</title>
-      <link>http://tobybase.com/tags/sql/</link>
-      <pubDate>Wed, 14 Nov 2012 00:00:00 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/sql/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Sql Developer</title>
+      <title>sql developer</title>
       <link>http://tobybase.com/tags/sql-developer/</link>
       <pubDate>Wed, 01 May 2019 16:47:39 -0500</pubDate>
       
@@ -480,43 +75,7 @@
     </item>
     
     <item>
-      <title>Sqlloader</title>
-      <link>http://tobybase.com/tags/sqlloader/</link>
-      <pubDate>Thu, 07 Jun 2012 17:04:00 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/sqlloader/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tools</title>
-      <link>http://tobybase.com/tags/tools/</link>
-      <pubDate>Fri, 25 May 2012 00:00:00 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/tools/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Toplink</title>
-      <link>http://tobybase.com/tags/toplink/</link>
-      <pubDate>Fri, 09 Mar 2012 18:42:00 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/toplink/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Unix/Linux</title>
-      <link>http://tobybase.com/tags/unix/linux/</link>
-      <pubDate>Wed, 24 Jul 2013 21:42:00 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/unix/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Utilities</title>
+      <title>utilities</title>
       <link>http://tobybase.com/tags/utilities/</link>
       <pubDate>Wed, 01 May 2019 16:47:39 -0500</pubDate>
       
@@ -525,16 +84,34 @@
     </item>
     
     <item>
-      <title>Videos</title>
-      <link>http://tobybase.com/tags/videos/</link>
-      <pubDate>Fri, 10 Mar 2017 00:00:00 +0000</pubDate>
+      <title>IaaS</title>
+      <link>http://tobybase.com/tags/iaas/</link>
+      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://tobybase.com/tags/videos/</guid>
+      <guid>http://tobybase.com/tags/iaas/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Virtual Machines</title>
+      <title>cloud</title>
+      <link>http://tobybase.com/tags/cloud/</link>
+      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/cloud/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>oci</title>
+      <link>http://tobybase.com/tags/oci/</link>
+      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/oci/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>virtual machines</title>
       <link>http://tobybase.com/tags/virtual-machines/</link>
       <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
       
@@ -543,34 +120,7 @@
     </item>
     
     <item>
-      <title>Vpn</title>
-      <link>http://tobybase.com/tags/vpn/</link>
-      <pubDate>Thu, 04 Feb 2016 22:50:09 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/vpn/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Web Development</title>
-      <link>http://tobybase.com/tags/web-development/</link>
-      <pubDate>Fri, 26 Oct 2012 21:09:00 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/web-development/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Weblogic</title>
-      <link>http://tobybase.com/tags/weblogic/</link>
-      <pubDate>Fri, 09 Mar 2012 18:42:00 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/weblogic/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Windows</title>
+      <title>windows</title>
       <link>http://tobybase.com/tags/windows/</link>
       <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
       
@@ -579,11 +129,479 @@
     </item>
     
     <item>
-      <title>Xml</title>
+      <title>brian hill</title>
+      <link>http://tobybase.com/tags/brian-hill/</link>
+      <pubDate>Fri, 10 Mar 2017 14:56:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/brian-hill/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>infolob</title>
+      <link>http://tobybase.com/tags/infolob/</link>
+      <pubDate>Fri, 10 Mar 2017 14:56:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/infolob/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lift and shift</title>
+      <link>http://tobybase.com/tags/lift-and-shift/</link>
+      <pubDate>Fri, 10 Mar 2017 14:56:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/lift-and-shift/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>oracle cloud services</title>
+      <link>http://tobybase.com/tags/oracle-cloud-services/</link>
+      <pubDate>Fri, 10 Mar 2017 14:56:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/oracle-cloud-services/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>videos</title>
+      <link>http://tobybase.com/tags/videos/</link>
+      <pubDate>Fri, 10 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/videos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>youtube</title>
+      <link>http://tobybase.com/tags/youtube/</link>
+      <pubDate>Fri, 10 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/youtube/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>me</title>
+      <link>http://tobybase.com/tags/me/</link>
+      <pubDate>Tue, 17 Jan 2017 22:58:59 -0600</pubDate>
+      
+      <guid>http://tobybase.com/tags/me/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>juniper</title>
+      <link>http://tobybase.com/tags/juniper/</link>
+      <pubDate>Thu, 04 Feb 2016 22:50:09 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/juniper/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vpn</title>
+      <link>http://tobybase.com/tags/vpn/</link>
+      <pubDate>Thu, 04 Feb 2016 22:50:09 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/vpn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>unix/linux</title>
+      <link>http://tobybase.com/tags/unix/linux/</link>
+      <pubDate>Wed, 24 Jul 2013 21:42:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/unix/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bi</title>
+      <link>http://tobybase.com/tags/bi/</link>
+      <pubDate>Fri, 14 Jun 2013 21:47:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/bi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bi publisher</title>
+      <link>http://tobybase.com/tags/bi-publisher/</link>
+      <pubDate>Fri, 14 Jun 2013 21:47:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/bi-publisher/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>reporting</title>
+      <link>http://tobybase.com/tags/reporting/</link>
+      <pubDate>Fri, 14 Jun 2013 21:47:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/reporting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>application express</title>
+      <link>http://tobybase.com/tags/application-express/</link>
+      <pubDate>Tue, 18 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/application-express/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ireport</title>
+      <link>http://tobybase.com/tags/ireport/</link>
+      <pubDate>Tue, 18 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/ireport/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jaspersoft</title>
+      <link>http://tobybase.com/tags/jaspersoft/</link>
+      <pubDate>Tue, 18 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/jaspersoft/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pl-jrxml2pdf</title>
+      <link>http://tobybase.com/tags/pl-jrxml2pdf/</link>
+      <pubDate>Tue, 18 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/pl-jrxml2pdf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>external tables</title>
+      <link>http://tobybase.com/tags/external-tables/</link>
+      <pubDate>Wed, 14 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/external-tables/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>xml</title>
       <link>http://tobybase.com/tags/xml/</link>
       <pubDate>Wed, 14 Nov 2012 00:00:00 +0000</pubDate>
       
       <guid>http://tobybase.com/tags/xml/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>active directory</title>
+      <link>http://tobybase.com/tags/active-directory/</link>
+      <pubDate>Mon, 12 Nov 2012 17:32:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/active-directory/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ldap</title>
+      <link>http://tobybase.com/tags/ldap/</link>
+      <pubDate>Mon, 12 Nov 2012 17:32:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/ldap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>css</title>
+      <link>http://tobybase.com/tags/css/</link>
+      <pubDate>Fri, 26 Oct 2012 21:09:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/css/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>firefox</title>
+      <link>http://tobybase.com/tags/firefox/</link>
+      <pubDate>Fri, 26 Oct 2012 21:09:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/firefox/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>html</title>
+      <link>http://tobybase.com/tags/html/</link>
+      <pubDate>Fri, 26 Oct 2012 21:09:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>javascript</title>
+      <link>http://tobybase.com/tags/javascript/</link>
+      <pubDate>Fri, 26 Oct 2012 21:09:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web development</title>
+      <link>http://tobybase.com/tags/web-development/</link>
+      <pubDate>Fri, 26 Oct 2012 21:09:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/web-development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>apple</title>
+      <link>http://tobybase.com/tags/apple/</link>
+      <pubDate>Wed, 25 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/apple/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>macbook</title>
+      <link>http://tobybase.com/tags/macbook/</link>
+      <pubDate>Wed, 25 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/macbook/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>safari</title>
+      <link>http://tobybase.com/tags/safari/</link>
+      <pubDate>Wed, 25 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/safari/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>oracle forms</title>
+      <link>http://tobybase.com/tags/oracle-forms/</link>
+      <pubDate>Thu, 12 Jul 2012 22:28:24 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/oracle-forms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cgi</title>
+      <link>http://tobybase.com/tags/cgi/</link>
+      <pubDate>Mon, 02 Jul 2012 22:40:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/cgi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>perl</title>
+      <link>http://tobybase.com/tags/perl/</link>
+      <pubDate>Mon, 02 Jul 2012 22:40:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/perl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>scripting</title>
+      <link>http://tobybase.com/tags/scripting/</link>
+      <pubDate>Mon, 02 Jul 2012 22:40:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/scripting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sqlloader</title>
+      <link>http://tobybase.com/tags/sqlloader/</link>
+      <pubDate>Thu, 07 Jun 2012 17:04:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/sqlloader/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tools</title>
+      <link>http://tobybase.com/tags/tools/</link>
+      <pubDate>Fri, 25 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/tools/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>access</title>
+      <link>http://tobybase.com/tags/access/</link>
+      <pubDate>Fri, 11 May 2012 20:54:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/access/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>citrix</title>
+      <link>http://tobybase.com/tags/citrix/</link>
+      <pubDate>Fri, 11 May 2012 20:54:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/citrix/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>odbc</title>
+      <link>http://tobybase.com/tags/odbc/</link>
+      <pubDate>Fri, 11 May 2012 20:54:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/odbc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>office</title>
+      <link>http://tobybase.com/tags/office/</link>
+      <pubDate>Fri, 11 May 2012 20:54:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/office/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>instrumentation</title>
+      <link>http://tobybase.com/tags/instrumentation/</link>
+      <pubDate>Wed, 02 May 2012 21:41:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/instrumentation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jhat</title>
+      <link>http://tobybase.com/tags/jhat/</link>
+      <pubDate>Wed, 02 May 2012 21:41:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/jhat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jmap</title>
+      <link>http://tobybase.com/tags/jmap/</link>
+      <pubDate>Wed, 02 May 2012 21:41:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/jmap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jstack</title>
+      <link>http://tobybase.com/tags/jstack/</link>
+      <pubDate>Wed, 02 May 2012 21:41:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/jstack/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jstat</title>
+      <link>http://tobybase.com/tags/jstat/</link>
+      <pubDate>Wed, 02 May 2012 21:41:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/jstat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jvm</title>
+      <link>http://tobybase.com/tags/jvm/</link>
+      <pubDate>Wed, 02 May 2012 21:41:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/jvm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>profiling</title>
+      <link>http://tobybase.com/tags/profiling/</link>
+      <pubDate>Wed, 02 May 2012 21:41:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/profiling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pipelined table functions</title>
+      <link>http://tobybase.com/tags/pipelined-table-functions/</link>
+      <pubDate>Fri, 27 Apr 2012 22:35:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/pipelined-table-functions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>plsql</title>
+      <link>http://tobybase.com/tags/plsql/</link>
+      <pubDate>Fri, 27 Apr 2012 22:35:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/plsql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bash</title>
+      <link>http://tobybase.com/tags/bash/</link>
+      <pubDate>Thu, 05 Apr 2012 21:19:05 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/bash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cron</title>
+      <link>http://tobybase.com/tags/cron/</link>
+      <pubDate>Thu, 05 Apr 2012 21:19:05 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/cron/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>oracle application server</title>
+      <link>http://tobybase.com/tags/oracle-application-server/</link>
+      <pubDate>Fri, 09 Mar 2012 18:42:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/oracle-application-server/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>toplink</title>
+      <link>http://tobybase.com/tags/toplink/</link>
+      <pubDate>Fri, 09 Mar 2012 18:42:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/toplink/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>weblogic</title>
+      <link>http://tobybase.com/tags/weblogic/</link>
+      <pubDate>Fri, 09 Mar 2012 18:42:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/tags/weblogic/</guid>
       <description></description>
     </item>
     

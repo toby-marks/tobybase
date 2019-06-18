@@ -6,10 +6,20 @@
     <description>Recent content in Tools on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 01 May 2019 16:47:39 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 07 May 2019 13:54:50 -0500</lastBuildDate>
     
 	<atom:link href="http://tobybase.com/categories/tools/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>3 Tips for Running SAS Queries on Oracle</title>
+      <link>http://tobybase.com/posts/sas-exadata-performance-tips/</link>
+      <pubDate>Tue, 07 May 2019 13:54:50 -0500</pubDate>
+      
+      <guid>http://tobybase.com/posts/sas-exadata-performance-tips/</guid>
+      <description> I don&amp;rsquo;t know a whole lot about SAS, but in my current gig I am frequently called upon to tune queries that run in that environment. Here are some things to keep in mind when running queries and DML from SAS.
+Hello stuff stuff </description>
+    </item>
     
     <item>
       <title>Fix High CPU Usage / Memory Leak in SQL Developer 18&#43; for Windows</title>
@@ -19,6 +29,16 @@
       <guid>http://tobybase.com/posts/sqldev-memory-leak/</guid>
       <description>If you run SQL Developer on Windows and experience high CPU usage and/or memory leak issues that freeze your PC, then you might want to try disabling some features that are likely causing the problem.
 I have personally observed this behavior on every version of SQL Developer since 18.2. Only my PC laptop is affected; my Macbook installation runs fine. I use the prepackaged Java 8 JDK. I have several colleagues who run the same configuration on Windows with no issues at all, so go figure.</description>
+    </item>
+    
+    <item>
+      <title>What to do when the Juniper Network Connect app on OS X does not connect</title>
+      <link>http://tobybase.com/posts/ewwww/</link>
+      <pubDate>Thu, 04 Feb 2016 22:50:09 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/ewwww/</guid>
+      <description>If you use Juniper&amp;rsquo;s Network Connect app to connect to your office VPN over HTTPS, you might occasionally experience strange errors like &amp;ldquo;A software error caused the Network Connect tunneling service to terminate.&amp;rdquo; Shortly after that, the application may either crash or prompt you for login credentials again.
+The solution involves removing all of the Network Connect files and allowing your browser to download and install the app all over again, as it did the first time you tried to connect to your office VPN.</description>
     </item>
     
     <item>
@@ -93,6 +113,15 @@ To avoid it, make sure that the &amp;ldquo;Administrator&amp;rdquo; account you 
     </item>
     
     <item>
+      <title>Safari 5.1.7 on my MacBookPro OSX 10.7.4 freezes unexpectedly</title>
+      <link>http://tobybase.com/links/2012-07-25-safari-517-freezes-on-macbook-pro/</link>
+      <pubDate>Wed, 25 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/links/2012-07-25-safari-517-freezes-on-macbook-pro/</guid>
+      <description>Lately I&amp;rsquo;ve been experiencing strange problems when clicking on links in Safari 5.1.7. Usually the progress indicator would either flash momentarily and do nothing, or else it would never appear at all. Pages would sometimes load, but after an unusual delay and with no indication that the browser was actually doing anything. I switched to Chrome as my default browser for a few days, but that was about all I could stand.</description>
+    </item>
+    
+    <item>
       <title>How To Fix High CPU Usage by SQL Developer on OS X</title>
       <link>http://tobybase.com/posts/2012-07-20-easy-fix-for-high-cpu-usage-in-sql-developer-on-os-x/</link>
       <pubDate>Fri, 20 Jul 2012 16:32:00 +0000</pubDate>
@@ -104,12 +133,39 @@ That fixes the CPU issue, but somewhat annoyingly moves the menu out of the menu
     </item>
     
     <item>
+      <title>How To Run Oracle Forms 11g Applications on OS X Lion</title>
+      <link>http://tobybase.com/posts/2012-07-12-run-oracle-forms-11g-applications-on-os-x-lion/</link>
+      <pubDate>Thu, 12 Jul 2012 22:28:24 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/2012-07-12-run-oracle-forms-11g-applications-on-os-x-lion/</guid>
+      <description>Need to run your company&amp;rsquo;s Oracle Forms application from your Mac, and can&amp;rsquo;t? Annoyed with having to crank up a virtual machine for just that one task? Even with the latest published Java version for OS X (1.6.0_33, as of today), you may find that some of the newer Forms applications just won&amp;rsquo;t run. Well, fret no longer. A solution may already be here, at least for Safari and Firefox.</description>
+    </item>
+    
+    <item>
+      <title>OS X Software for Oracle Developers</title>
+      <link>http://tobybase.com/posts/2012-06-27-os-x-software-for-oracle-developers/</link>
+      <pubDate>Wed, 27 Jun 2012 21:39:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/2012-06-27-os-x-software-for-oracle-developers/</guid>
+      <description>One of the great things about working for Enkitec is that it&amp;rsquo;s a very Mac-friendly shop. When I arrived there in 2007 there were a handful of us running Macs and the attitude at the top seemed to be respectful, but skeptical. They allowed me to use my own laptop, which at the time was a 15-inch Intel Core2 Duo Macbook Pro, with the understanding that I could request a standard-issue Dell laptop at any time should the need arise.</description>
+    </item>
+    
+    <item>
       <title>Use SQLFiddle to Test New Features, Run Demos</title>
       <link>http://tobybase.com/links/2012-05-25-sqlfiddle-is-a-sql-sandbox/</link>
       <pubDate>Fri, 25 May 2012 00:00:00 +0000</pubDate>
       
       <guid>http://tobybase.com/links/2012-05-25-sqlfiddle-is-a-sql-sandbox/</guid>
       <description>Build your own mini-schema and run queries against it Publish your experiments for your friends to tweak Try out examples from your favorite SQL book without having to create your a database Works for Oracle, PostgreSQL, MySQL, and SQL Server flavors  All in all, a pretty cool. Very useful for bloggers or teams.</description>
+    </item>
+    
+    <item>
+      <title>Invalidating Toplink Session Cache To Avoid Stale Data</title>
+      <link>http://tobybase.com/posts/2012-03-09-invalidating-toplink-session-cache-to-avoid-stale-data/</link>
+      <pubDate>Fri, 09 Mar 2012 18:42:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/2012-03-09-invalidating-toplink-session-cache-to-avoid-stale-data/</guid>
+      <description>Toplink is a Java framework that maps objects to database tables. It is the reference implementation for the Java Persistence Architecture, or JPA. Developers use Toplink to manage data persistence (storage), queries, and transactions in an Oracle database. By default, Toplink makes use of a special cache called a Session Cache, maintained on the server, which is meant to speed up performance. Queried data is stored in the Session Cache and used in subsequent queries to reduce or eliminate calls to the database.</description>
     </item>
     
   </channel>
