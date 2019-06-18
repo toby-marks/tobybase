@@ -3,7 +3,7 @@ draft       = false
 date        = "2012-07-02T22:40:00+00:00"
 lastmod     = "2017-02-22"
 title       = "How To Use a Perl CGI Script to Show Real Web Server Host Name"
-categories  = ["Unix", "Web Development"]
+categories  = ["Development"]
 tags        = ["perl", "cgi", "scripting"]
 +++
 Here is a short and simple Perl CGI script that you can use to expose the hostname of your web server, as opposed to just the server/domain portion of the URL string:

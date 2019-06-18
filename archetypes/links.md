@@ -1,9 +1,8 @@
 +++
-draft = true
-date = {{ .Date }}
 title = ""
-slug = "" 
-tags = []
-categories = []
 externalLink = ""
+date = {{ .Date }}
+categories = []
+tags = []
+draft = true
 +++

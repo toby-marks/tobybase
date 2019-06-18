@@ -3,7 +3,7 @@ draft       = false
 date        = "2013-06-14T21:47:00+00:00"
 lastmod     = "2017-02-22"
 title       = "How To Reset Page Numbering Between Document Sections in BI Publisher's Template Builder for Word"
-categories  = ["Tools", "Oracle Database"]
+categories  = ["Tools", "Database"]
 tags        = ["oracle", "bi publisher", "bi", "reporting"]
 +++
 Under normal circumstances, it is fairly easy in Microsoft Word to [reset page numbering](http://www.youtube.com/watch?v=E1WtKR6FDM4) when starting a new section of your document. However, such a simple thing can be non-trivial when dealing with the BI Publisher Template Builder plugin for Microsoft Office ([available from Oracle](http://www.oracle.com/technetwork/middleware/bi-publisher/downloads/index.html) — see BI Publisher Desktop). 

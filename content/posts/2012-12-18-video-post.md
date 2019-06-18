@@ -3,7 +3,7 @@ draft       = false
 date        = "2012-12-18"
 lastmod     = "2017-02-22"
 title       = "Generate PDF Reports for Free in Oracle Apex Using PL-JRXML2PDF and iReport Designer"
-categories  = ["Tools", "Oracle Database", "Videos"]
+categories  = ["Tools", "Database"]
 tags        = ["oracle", "application express", "pl-jrxml2pdf", "ireport", "jaspersoft"]
 +++
 {{< vimeo 55818132 >}}

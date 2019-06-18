@@ -1,9 +1,9 @@
 +++
 title = "Access Denied Attaching Block Volume to Windows VM in OCI"
-categories = ["Oracle Database", "Cloud"]
+categories = ["Database", "Cloud"]
 date = "2018-04-10"
 description = "What to do when you get an access denied permissions error when attempting to attach a block volume to a Windows virtual machine in Oracle Cloud"
-tags = ["Oracle", "cloud", "IaaS", "OCI", "Windows", "virtual machines"]
+tags = ["Oracle", "cloud", "IaaS", "oci", "Windows", "virtual machines"]
 
 +++
 <img src="/img/2018-04-10-oci-add-block-volume-on-windows/access-denied.jpg" width="800px">

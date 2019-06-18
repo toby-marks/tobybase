@@ -74,3 +74,10 @@ enableEmoji = true
     name = "About"
     weight = 3
     url = "/about/"
+    
+# Taxonomies
+[taxonomies]
+	category = "categories"
+	tag = "tags"
+	series = "series"
+

@@ -3,7 +3,7 @@ draft       = false
 date        = "2012-07-12T22:28:24+00:00"
 lastmod     = "2017-02-22"
 title       = "How To Run Oracle Forms 11g Applications on OS X Lion"
-categories  = ["Mac", "Oracle Forms"]
+categories  = ["Tools", "Database"]
 tags        = ["macos", "java", "oracle", "oracle forms"]
 +++
 Need to run your company's Oracle Forms application from your Mac, and can't? Annoyed with having to crank up a virtual machine for just that one task? Even with the latest published Java version for OS X (1.6.0_33, as of today), you may find that some of the newer Forms applications just won't run. Well, fret no longer. A solution may already be here, at least for Safari and Firefox.

@@ -3,7 +3,7 @@ draft       = false
 date        = "2012-07-20T16:32:00+00:00"
 lastmod     = "2017-02-22"
 title       = "How To Fix High CPU Usage by SQL Developer on OS X"
-categories  = ["Tools", "Mac", "Oracle Database"]
+categories  = ["Tools", "Database"]
 tags        = ["oracle", "sql developer", "macos", "utilities"]
 +++
 I've been fighting for a couple of years now with an annoying performance bug in SQL Developer for OS X. After using the application for a while CPU usage would spike to around 100%, even when idle. This is a known issue associated with the "Look and Feel" preference. 

@@ -1,7 +1,7 @@
 +++
 date = "2012-05-25"
 title = "Use SQLFiddle to Test New Features, Run Demos"
-categories = ["Tools", "Oracle Database"]
+categories = ["Tools", "Database"]
 tags = ["sql", "tools"]
 externallink = "http://sqlfiddle.com/"
 +++

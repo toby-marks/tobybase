@@ -3,8 +3,9 @@ draft       = false
 date        = "2012-08-27T20:48:08+00:00"
 lastmod     = "2017-02-22"
 title       = "How to Avoid the \"Job scheduling failed because the user has no permission to access this report\" Error in BI Publisher"
-categories  = ["Tools", "Oracle Database"]
+categories  = ["Tools", "Database"]
 tags        = ["oracle", "bi publisher", "ldap", "bi", "reporting"]
+series      = ["BI Publisher"]
 +++
 ![](/img/2012-08-27-bi-publisher-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report/864dbb90dbf623eb4f36b26a3ecf315cfec7121cf33e16730b6060c6572dfb35.jpg)
 

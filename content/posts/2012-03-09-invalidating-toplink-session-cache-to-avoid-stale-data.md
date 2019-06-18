@@ -3,7 +3,7 @@ draft       = false
 date        = "2012-03-09T18:42:00+00:00"
 lastmod     = "2017-02-22"
 title       = "Invalidating Toplink Session Cache To Avoid Stale Data"
-categories  = ["Java"]
+categories  = ["Development", "Tools"]
 tags        = ["oracle", "java", "toplink", "oracle application server", "weblogic"]
 +++
 

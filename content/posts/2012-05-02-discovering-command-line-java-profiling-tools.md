@@ -3,7 +3,7 @@ draft       = false
 date        = "2012-05-02T21:41:00+00:00"
 lastmod     = "2017-02-22"
 title       = "Discovering Command-line Java Profiling Tools"
-categories  = ["Java"]
+categories  = ["Development"]
 tags        = ["java", "jstat", "jmap", "jhat", "jstack", "jvm", "profiling", "instrumentation"]
 +++
 At my current client I am responsible for administering a third-party Java appplication that unfortunately generates a lot of performance complaints. It's a multi-tiered system with the middle-tier running on Oracle Appication Server 10.1.3. I am already familiar with GUI profiling tools like `jconsole` and `jvisualvm`, both of which are included with Oracle's JDK, and I have played around with the profiling capabilities in NetBeans. All of these profiling tools are fairly similar to one another in look and functionality.

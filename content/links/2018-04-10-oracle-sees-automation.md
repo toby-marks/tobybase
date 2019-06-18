@@ -1,7 +1,7 @@
 +++
 date    = "2018-04-10T12:47:23-05:00"
 title   = "Oracle Sees Autonomous Database Changing DBA Roles for the Good"
-categories = ["News", "Oracle Database"]
+categories = ["News", "Database"]
 externallink = "https://searchoracle.techtarget.com/feature/Oracle-sees-Autonomous-Database-changing-DBA-roles-for-the-good"
 +++
 > If the tactical tasks are reduced -- or even eliminated -- DBAs will have more time to spend on higher level tasks, like data security, data lifecycle management, data architecture and data modeling, Colgan said.

@@ -1,7 +1,7 @@
 +++
 date = "2012-07-25"
 title = "Safari 5.1.7 on my MacBookPro OSX 10.7.4 freezes unexpectedly"
-categories = ["Mac"]
+categories = ["Tools"]
 tags = ["macos", "apple", "macbook", "safari"]
 externallink = "https://discussions.apple.com/thread/4054658?start=0&tstart=0"
 +++

@@ -3,7 +3,7 @@ draft       = false
 date        = "2012-05-11T20:54:00+00:00"
 lastmod     = "2017-02-22"
 title       = "ODBC Connection Fails for MS Access App on Citrix "
-categories  = ["Windows", "Oracle Database"]
+categories  = ["Database"]
 tags        = ["odbc", "citrix", "access", "office", "windows", "oracle"]
 +++
 I ran into an interesting problem recently when attempting to publish an MS Access application with [Citrix XenApp](http://www.citrix.com/English/ps2/products/product.asp?contentID=186&ntref=footer). The application pulled data from an Oracle database, so an ODBC connection was created on the Citrix server. What we found was that when a non-privileged user tried to run the application, the connection failed. When the Citrix server admin ran it, however, it worked. Furthermore, as long as the admin was logged in, anybody else could run the application successfully; when he logged out, the users' connections broke again.

@@ -3,7 +3,7 @@ draft       = false
 date        = "2012-11-14"
 lastmod     = "2017-02-22"
 title       = "How To Use SQL to Query an XML Document Using Oracle External Tables"
-categories  = ["Oracle Database"]
+categories  = ["Database"]
 tags        = ["oracle", "xml", "sql", "external tables"]
 +++
 Oracle's [external table feature](http://docs.oracle.com/cd/B28359_01/server.111/b28319/et_concepts.htm) allows you to treat structured files on the database server as tables for query and DML purposes. To use an example from the linked documentation, a tab-delimited file like this:

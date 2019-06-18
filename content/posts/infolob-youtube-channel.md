@@ -1,9 +1,9 @@
 +++
-categories = ["Education"]
-tags = ["Infolob", "Videos"]
+categories = ["Infolob"]
+tags = ["infolob", "youtube", "videos"]
 title = "Announcing the Infolob YouTube Channel"
 date = "2017-03-10"
-
+series = ["Infolob on YouTube"]
 +++
 
 I am honored to work with some wonderful and truly _smart_ folks over at [Infolob](http://www.infolob.com/) in Irving, Texas. The company recently started a [YouTube channel](https://www.youtube.com/channel/UCLfDjdjW6RRvKYrz_aS0Jmw) and we are looking to add lots of great videos soon for your enjoyment and education. 

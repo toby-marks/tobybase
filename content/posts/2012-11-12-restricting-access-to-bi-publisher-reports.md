@@ -3,8 +3,9 @@ draft       = false
 date        = "2012-11-12T18:12:00+00:00"
 lastmod     = "2017-02-22"
 title       = "How To Restrict Access to BI Publisher Reports"
-categories  = ["Oracle Database", "Tools"]
+categories  = ["Database", "Tools"]
 tags        = ["oracle", "bi publisher", "bi", "reporting"]
+series      = ["BI Publisher"]
 +++
 In [my last post]({{< relref "2012-11-12-configure-oracle-bi-publisher-to-authenticate-with-active-directory.md" >}})  I described how to configure BI Publisher to authenticate against an LDAP server, typically a corporate Active Directory server. Aside from authentication, you can also use LDAP group membership to determine who has access to a given report. Here's how you do it.
 

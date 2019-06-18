@@ -1,7 +1,7 @@
 +++
 date = "2012-06-01"
 title = "Let the Database Do the Work"
-categories = ["Oracle Database", "Web Development"]
+categories = ["Database", "Development"]
 tags = [""]
 externallink = "http://blog.orapub.com/20120513/oracle-database-row-versus-set-processing-surprise.html"
 +++

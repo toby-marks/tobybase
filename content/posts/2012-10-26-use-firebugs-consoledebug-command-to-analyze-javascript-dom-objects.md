@@ -3,7 +3,7 @@ draft       = false
 date        = "2012-10-26T21:09:00+00:00"
 lastmod     = "2017-02-22"
 title       = "Use Firebug's console.debug Command to Analyze Javascript, DOM Objects"
-categories  = ["Web Development"]
+categories  = ["Development"]
 tags        = ["firefox", "html", "css", "web development", "javascript"]
 +++
 Occasionally when debugging my Javascript code I need to be able to analyze the properties of an unknown object; for instance, an unexpected DOM object passed to an event handler. How do you analyze the properties of an object when you don't know what the object is? I was looking for a way to list all the properties of a generic Javascript or DOM object when I stumbled across this blog post by Andrew Peters. In it, he very clearly outlines two ways of doing this, but the one I found most useful was Firebug's `console.debug` command. You'll need to use Firefox with the Firebug extension for this, but the results are impressive. 
