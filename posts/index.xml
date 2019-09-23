@@ -6,7 +6,7 @@
     <description>Recent content in Posts on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 07 May 2019 13:54:50 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 23 Sep 2019 13:54:50 -0500</lastBuildDate>
     
 	<atom:link href="http://tobybase.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>3 Tips for Running SAS Queries on Oracle</title>
       <link>http://tobybase.com/posts/sas-exadata-performance-tips/</link>
-      <pubDate>Tue, 07 May 2019 13:54:50 -0500</pubDate>
+      <pubDate>Mon, 23 Sep 2019 13:54:50 -0500</pubDate>
       
       <guid>http://tobybase.com/posts/sas-exadata-performance-tips/</guid>
       <description>I don&amp;rsquo;t know a whole lot about SAS, but on my current gig I am frequently called upon to tune queries that run in that environment. Here are three things I have learned to keep in mind as a SAS developer when running against Oracle database.
