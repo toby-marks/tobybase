@@ -25,7 +25,7 @@ enableEmoji = true
     favicon_32 = "/img/favicon-32x32.png"
     favicon_16 = "/img/favicon-16x16.png"
 
-    footercontent = "Oracle Database Developer and Performance Tuner, specialized on the Exadata platform. Working for Infolob from Irving, Texas. Life is beautiful. 🌼🐝"
+    footercontent = "Oracle Database Developer and Performance Tuner, specialized on the Exadata platform. Working for Infolob from Irving, Texas. #OCICertified"
     hidecredits = true
     hidecopyright = false
 
