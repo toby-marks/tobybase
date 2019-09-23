@@ -8,88 +8,8 @@
   </url>
   
   <url>
-    <loc>http://tobybase.com/categories/</loc>
-    <lastmod>2019-09-23T13:54:50-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/categories/database/</loc>
-    <lastmod>2019-09-23T13:54:50-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/oracle/</loc>
-    <lastmod>2019-09-23T13:54:50-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/posts/</loc>
-    <lastmod>2019-09-23T13:54:50-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/sas/</loc>
-    <lastmod>2019-09-23T13:54:50-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/sql/</loc>
-    <lastmod>2019-09-23T13:54:50-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/</loc>
-    <lastmod>2019-09-23T13:54:50-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/categories/tools/</loc>
-    <lastmod>2019-09-23T13:54:50-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/</loc>
-    <lastmod>2019-09-23T13:54:50-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://tobybase.com/posts/sqldev-memory-leak/</loc>
     <lastmod>2019-05-01T16:47:39-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/java/</loc>
-    <lastmod>2019-05-01T16:47:39-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/macos/</loc>
-    <lastmod>2019-05-01T16:47:39-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/sql-developer/</loc>
-    <lastmod>2019-05-01T16:47:39-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/utilities/</loc>
-    <lastmod>2019-05-01T16:47:39-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/categories/ai/</loc>
-    <lastmod>2018-05-01T09:05:54-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/links/</loc>
-    <lastmod>2018-05-01T09:05:54-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/categories/news/</loc>
-    <lastmod>2018-05-01T09:05:54-05:00</lastmod>
   </url>
   
   <url>
@@ -113,43 +33,8 @@
   </url>
   
   <url>
-    <loc>http://tobybase.com/categories/cloud/</loc>
-    <lastmod>2018-04-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/cloud/</loc>
-    <lastmod>2018-04-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/iaas/</loc>
-    <lastmod>2018-04-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/oci/</loc>
-    <lastmod>2018-04-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/virtual-machines/</loc>
-    <lastmod>2018-04-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/windows/</loc>
-    <lastmod>2018-04-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://tobybase.com/links/2017-12-15-2018-bad-year-for-facebook/</loc>
     <lastmod>2017-12-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/categories/infolob/</loc>
-    <lastmod>2017-12-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -158,37 +43,7 @@
   </url>
   
   <url>
-    <loc>http://tobybase.com/tags/brian-hill/</loc>
-    <lastmod>2017-03-10T14:56:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/infolob/</loc>
-    <lastmod>2017-03-10T14:56:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/series/infolob-on-youtube/</loc>
-    <lastmod>2017-03-10T14:56:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/lift-and-shift/</loc>
-    <lastmod>2017-03-10T14:56:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://tobybase.com/posts/infolob-lift-and-shift-howto-4/</loc>
-    <lastmod>2017-03-10T14:56:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/oracle-cloud-services/</loc>
-    <lastmod>2017-03-10T14:56:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/series/</loc>
     <lastmod>2017-03-10T14:56:00+00:00</lastmod>
   </url>
   
@@ -213,16 +68,6 @@
   </url>
   
   <url>
-    <loc>http://tobybase.com/tags/videos/</loc>
-    <lastmod>2017-03-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/youtube/</loc>
-    <lastmod>2017-03-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://tobybase.com/license/</loc>
     <lastmod>2017-02-23T11:32:23-06:00</lastmod>
   </url>
@@ -233,42 +78,12 @@
   </url>
   
   <url>
-    <loc>http://tobybase.com/categories/housekeeping/</loc>
-    <lastmod>2017-01-17T22:58:59-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/me/</loc>
-    <lastmod>2017-01-17T22:58:59-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/juniper/</loc>
-    <lastmod>2016-02-04T22:50:09+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/vpn/</loc>
-    <lastmod>2016-02-04T22:50:09+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://tobybase.com/posts/ewwww/</loc>
     <lastmod>2016-02-04T22:50:09+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://tobybase.com/categories/development/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://tobybase.com/posts/2013-07-24-linux-unix-use-ps-to-list-top-memory-cpu-eating-processes/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/unix/linux/</loc>
     <lastmod>2017-02-22T00:00:00+00:00</lastmod>
   </url>
   
@@ -283,22 +98,7 @@
   </url>
   
   <url>
-    <loc>http://tobybase.com/tags/bi/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/bi-publisher/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://tobybase.com/posts/2013-06-14-resetting-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/reporting/</loc>
     <lastmod>2017-02-22T00:00:00+00:00</lastmod>
   </url>
   
@@ -308,32 +108,7 @@
   </url>
   
   <url>
-    <loc>http://tobybase.com/tags/application-express/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://tobybase.com/posts/2012-12-18-video-post/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/ireport/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/jaspersoft/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/pl-jrxml2pdf/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/external-tables/</loc>
     <lastmod>2017-02-22T00:00:00+00:00</lastmod>
   </url>
   
@@ -343,22 +118,7 @@
   </url>
   
   <url>
-    <loc>http://tobybase.com/tags/xml/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/series/bi-publisher/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://tobybase.com/posts/2012-11-12-restricting-access-to-bi-publisher-reports/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/active-directory/</loc>
     <lastmod>2017-02-22T00:00:00+00:00</lastmod>
   </url>
   
@@ -368,58 +128,13 @@
   </url>
   
   <url>
-    <loc>http://tobybase.com/tags/ldap/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/css/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/firefox/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/html/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/javascript/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://tobybase.com/posts/2012-10-26-use-firebugs-consoledebug-command-to-analyze-javascript-dom-objects/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/web-development/</loc>
     <lastmod>2017-02-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://tobybase.com/posts/2012-08-27-bi-publisher-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report/</loc>
     <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/apple/</loc>
-    <lastmod>2012-07-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/macbook/</loc>
-    <lastmod>2012-07-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/safari/</loc>
-    <lastmod>2012-07-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -438,37 +153,12 @@
   </url>
   
   <url>
-    <loc>http://tobybase.com/tags/oracle-forms/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/cgi/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://tobybase.com/posts/2012-07-02-use-a-perl-cgi-script-to-show-real-web-server-host-name/</loc>
     <lastmod>2017-02-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://tobybase.com/tags/perl/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/scripting/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://tobybase.com/posts/2012-06-27-os-x-software-for-oracle-developers/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/sqlloader/</loc>
     <lastmod>2017-02-22T00:00:00+00:00</lastmod>
   </url>
   
@@ -483,28 +173,8 @@
   </url>
   
   <url>
-    <loc>http://tobybase.com/tags/tools/</loc>
-    <lastmod>2012-05-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://tobybase.com/links/2012-05-25-sqlfiddle-is-a-sql-sandbox/</loc>
     <lastmod>2012-05-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/access/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/citrix/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/odbc/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -513,62 +183,7 @@
   </url>
   
   <url>
-    <loc>http://tobybase.com/tags/office/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://tobybase.com/posts/2012-05-02-discovering-command-line-java-profiling-tools/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/instrumentation/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/jhat/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/jmap/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/jstack/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/jstat/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/jvm/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/profiling/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/pipelined-table-functions/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/plsql/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/series/table-functions/</loc>
     <lastmod>2017-02-22T00:00:00+00:00</lastmod>
   </url>
   
@@ -583,16 +198,6 @@
   </url>
   
   <url>
-    <loc>http://tobybase.com/tags/bash/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/cron/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://tobybase.com/posts/2012-04-05-make-bash-scripts-crontab-compatible/</loc>
     <lastmod>2017-02-22T00:00:00+00:00</lastmod>
   </url>
@@ -603,22 +208,505 @@
   </url>
   
   <url>
+    <loc>http://tobybase.com/tags/</loc>
+    <lastmod>2012-06-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/about/</loc>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/access/</loc>
+    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/active-directory/</loc>
+    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/categories/ai/</loc>
+    <lastmod>2018-05-01T09:05:54-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/apple/</loc>
+    <lastmod>2012-07-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/application-express/</loc>
+    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/bash/</loc>
+    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/bi/</loc>
+    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/bi-publisher/</loc>
+    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/series/bi-publisher/</loc>
+    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/brian-hill/</loc>
+    <lastmod>2017-03-10T14:56:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/categories/</loc>
+    <lastmod>2018-05-01T09:05:54-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/cgi/</loc>
+    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/citrix/</loc>
+    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/categories/cloud/</loc>
+    <lastmod>2018-04-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/cloud/</loc>
+    <lastmod>2018-04-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/cron/</loc>
+    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/css/</loc>
+    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/categories/database/</loc>
+    <lastmod>2019-09-23T13:54:50-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/categories/development/</loc>
+    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/external-tables/</loc>
+    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/firefox/</loc>
+    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/categories/housekeeping/</loc>
+    <lastmod>2017-01-17T22:58:59-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/html/</loc>
+    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/iaas/</loc>
+    <lastmod>2018-04-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/categories/infolob/</loc>
+    <lastmod>2017-12-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/infolob/</loc>
+    <lastmod>2017-03-10T14:56:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/series/infolob-on-youtube/</loc>
+    <lastmod>2017-03-10T14:56:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/instrumentation/</loc>
+    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/ireport/</loc>
+    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/jaspersoft/</loc>
+    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/java/</loc>
+    <lastmod>2019-05-01T16:47:39-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/javascript/</loc>
+    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/jhat/</loc>
+    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/jmap/</loc>
+    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/jstack/</loc>
+    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/jstat/</loc>
+    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/juniper/</loc>
+    <lastmod>2016-02-04T22:50:09+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/jvm/</loc>
+    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/ldap/</loc>
+    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/lift-and-shift/</loc>
+    <lastmod>2017-03-10T14:56:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/links/</loc>
+    <lastmod>2018-05-01T09:05:54-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/macbook/</loc>
+    <lastmod>2012-07-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/macos/</loc>
+    <lastmod>2019-05-01T16:47:39-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/me/</loc>
+    <lastmod>2017-01-17T22:58:59-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/categories/news/</loc>
+    <lastmod>2018-05-01T09:05:54-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/oci/</loc>
+    <lastmod>2018-04-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/odbc/</loc>
+    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/office/</loc>
+    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/oracle/</loc>
+    <lastmod>2019-09-23T13:54:50-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://tobybase.com/tags/oracle-application-server/</loc>
     <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/oracle-cloud-services/</loc>
+    <lastmod>2017-03-10T14:56:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/oracle-forms/</loc>
+    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/perl/</loc>
+    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/pipelined-table-functions/</loc>
+    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/pl-jrxml2pdf/</loc>
+    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/plsql/</loc>
+    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/posts/</loc>
+    <lastmod>2019-09-23T13:54:50-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/profiling/</loc>
+    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/reporting/</loc>
+    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/safari/</loc>
+    <lastmod>2012-07-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/sas/</loc>
+    <lastmod>2019-09-23T13:54:50-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/scripting/</loc>
+    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/series/</loc>
+    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/sql/</loc>
+    <lastmod>2019-09-23T13:54:50-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/sql-developer/</loc>
+    <lastmod>2019-05-01T16:47:39-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/sqlloader/</loc>
+    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/series/table-functions/</loc>
+    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/</loc>
+    <lastmod>2012-06-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/categories/tools/</loc>
+    <lastmod>2019-09-23T13:54:50-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/tools/</loc>
+    <lastmod>2012-05-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://tobybase.com/tags/toplink/</loc>
     <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/unix/linux/</loc>
+    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/utilities/</loc>
+    <lastmod>2019-05-01T16:47:39-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/videos/</loc>
+    <lastmod>2017-03-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/virtual-machines/</loc>
+    <lastmod>2018-04-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/vpn/</loc>
+    <lastmod>2016-02-04T22:50:09+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/web-development/</loc>
+    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://tobybase.com/tags/weblogic/</loc>
     <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://tobybase.com/about/</loc>
+    <loc>http://tobybase.com/tags/windows/</loc>
+    <lastmod>2018-04-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/xml/</loc>
+    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/youtube/</loc>
+    <lastmod>2017-03-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/</loc>
+    <lastmod>2019-09-23T13:54:50-05:00</lastmod>
+    <priority>0</priority>
   </url>
   
 </urlset>
