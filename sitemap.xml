@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://tobybase.com/posts/connecting-to-autonomous-with-instant-client/</loc>
+    <lastmod>2020-01-17T17:08:16-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/posts/connecting-to-autonomous-with-sql-dev/</loc>
+    <lastmod>2020-01-17T16:59:40-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/posts/up-and-running-on-oracle-autonomous-database/</loc>
+    <lastmod>2020-01-09T16:58:15-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://tobybase.com/posts/sas-exadata-performance-tips/</loc>
     <lastmod>2019-09-23T13:54:50-05:00</lastmod>
   </url>
@@ -260,13 +275,13 @@
   </url>
   
   <url>
-    <loc>http://tobybase.com/tags/bi-publisher/</loc>
+    <loc>http://tobybase.com/series/bi-publisher/</loc>
     <lastmod>2017-02-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://tobybase.com/series/bi-publisher/</loc>
+    <loc>http://tobybase.com/tags/bi-publisher/</loc>
     <lastmod>2017-02-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -297,7 +312,7 @@
   
   <url>
     <loc>http://tobybase.com/categories/cloud/</loc>
-    <lastmod>2018-04-10T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-17T17:08:16-06:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -321,7 +336,7 @@
   
   <url>
     <loc>http://tobybase.com/categories/database/</loc>
-    <lastmod>2019-09-23T13:54:50-05:00</lastmod>
+    <lastmod>2020-01-17T17:08:16-06:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -340,6 +355,12 @@
   <url>
     <loc>http://tobybase.com/tags/firefox/</loc>
     <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/series/get-going-with-autonomous-database-in-the-cloud/</loc>
+    <lastmod>2020-01-17T17:08:16-06:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -518,6 +539,24 @@
   </url>
   
   <url>
+    <loc>http://tobybase.com/tags/oracle-autonomous-data-warehouse/</loc>
+    <lastmod>2020-01-17T17:08:16-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/oracle-autonomous-database/</loc>
+    <lastmod>2020-01-17T17:08:16-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/oracle-cloud/</loc>
+    <lastmod>2020-01-17T17:08:16-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://tobybase.com/tags/oracle-cloud-services/</loc>
     <lastmod>2017-03-10T14:56:00+00:00</lastmod>
     <priority>0</priority>
@@ -555,7 +594,7 @@
   
   <url>
     <loc>http://tobybase.com/posts/</loc>
-    <lastmod>2019-09-23T13:54:50-05:00</lastmod>
+    <lastmod>2020-01-17T17:08:16-06:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -705,7 +744,7 @@
   
   <url>
     <loc>http://tobybase.com/</loc>
-    <lastmod>2019-09-23T13:54:50-05:00</lastmod>
+    <lastmod>2020-01-17T17:08:16-06:00</lastmod>
     <priority>0</priority>
   </url>
   

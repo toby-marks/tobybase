@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Toby Marks">
+    <meta name="description" content="My tech blog">
+    <meta name="keywords" content="oracle,infolob,blog,consultant,developer,tuning,exadata,personal">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Get Up and Running Fast On Oracle Autonomous Database in the Cloud"/>
+<meta name="twitter:description" content="How to launch and connect to free instances of Oracle Autonomous Database and Oracle Autonomous Data Warehouse in the cloud."/>
+
+    <meta property="og:title" content="Get Up and Running Fast On Oracle Autonomous Database in the Cloud" />
+<meta property="og:description" content="How to launch and connect to free instances of Oracle Autonomous Database and Oracle Autonomous Data Warehouse in the cloud." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tobybase.com/posts/up-and-running-on-oracle-autonomous-database/" />
+<meta property="article:published_time" content="2020-01-09T16:58:15-06:00"/>
+<meta property="article:modified_time" content="2020-01-09T16:58:15-06:00"/>
+
+
+
+    
+      <base href="http://tobybase.com/posts/up-and-running-on-oracle-autonomous-database/">
+    
+    <title>
+  Get Up and Running Fast On Oracle Autonomous Database in the Cloud · 👨🏻‍💻 Tobybase
+</title>
+
+    
+      <link rel="canonical" href="http://tobybase.com/posts/up-and-running-on-oracle-autonomous-database/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" integrity="sha256-oSrCnRYXvHG31SBifqP2PM1uje7SJUyX0nTwO2RJV54=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="http://tobybase.com/css/coder.min.28d751104f30c16da1aa1bb04015cbe662cacfe0d1b01af4f2240ad58580069c.css" integrity="sha256-KNdREE8wwW2hqhuwQBXL5mLKz&#43;DRsBr08iQK1YWABpw=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+      <link rel="stylesheet" href="http://tobybase.com/css/custom.css">
+    
+
+    <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.54.0" />
+  </head>
+
+  <body class=" ">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="http://tobybase.com">
+      👨🏻‍💻 Tobybase
+    </a>
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://tobybase.com/posts/">Blog</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://tobybase.com/links/">Links</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://tobybase.com/about/">About</a>
+          </li>
+        
+      
+      
+    </ul>
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">Get Up and Running Fast On Oracle Autonomous Database in the Cloud</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fas fa-calendar"></i>
+              <time datetime='2020-01-09T16:58:15-06:00'>
+                January 9, 2020
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              2 minutes read
+            </span>
+          </div>
+          <div class="categories">
+  <i class="fas fa-folder"></i>
+    <a href="http://tobybase.com/categories/database/">Database</a>
+      <span class="separator">•</span>
+    <a href="http://tobybase.com/categories/cloud/">Cloud</a></div>
+
+          <div class="tags">
+  <i class="fas fa-tag"></i>
+    <a href="http://tobybase.com/tags/oracle-autonomous-database/">Oracle Autonomous Database</a>
+      <span class="separator">•</span>
+    <a href="http://tobybase.com/tags/oracle-autonomous-data-warehouse/">Oracle Autonomous Data Warehouse</a>
+      <span class="separator">•</span>
+    <a href="http://tobybase.com/tags/oracle-cloud/">Oracle Cloud</a></div>
+
+        </div>
+      </header>
+
+      <div>
+        
+
+<h3 id="provision-your-new-autonomous-database-in-minutes">Provision Your New Autonomous Database in Minutes</h3>
+
+<p><img src="https://res.cloudinary.com/tobyblog/image/upload/v1578611791/img/Screenshot_from_2020-01-09_17.15.20.jpg" alt="" /></p>
+
+<p>With Autonomous Database and Autonomous Data Warehouse, Oracle is promising to leverage the power of AI and machine learning to automate upgrade, maintenance, and tuning operations in the database - vastly reducing the drudgery of DBA work and freeing up human minds to add more value to their companies. As a developer, you don&rsquo;t have to wait to start experimenting with these exciting new features. They are available now for free on Oracle Cloud for small-scale testing and learning.</p>
+
+<p>In this blog I&rsquo;ll show you how to get started with Autonomous Database in a matter of minutes.</p>
+
+<p><img src="https://res.cloudinary.com/tobyblog/image/upload/v1578613738/img/Screenshot_from_2020-01-09_17.48.03.jpg" alt="" /></p>
+
+<p>The first thing you need to do is <a href="https://myservices.us.oraclecloud.com/mycloud/signup">sign up for an Oracle Cloud account</a>. Enter your account details, which includes name, address, phone, and a credit card Oracle keeps on file just in case you should want to upgrade to a paid account. If you stick to the &lsquo;Always Free&rsquo; services, however, your account should never be charged.</p>
+
+<p><img src="https://res.cloudinary.com/tobyblog/image/upload/v1578614479/img/Screenshot_from_2020-01-09_13.06.36.jpg" alt="" /></p>
+
+<p>When you&rsquo;re all done you should be presented with a clean looking dashboard from which you can launch your Autonomous Transaction Processing (ATP) or Autonomous Data Warehouse (ADW) instance. The free tier offers one of each.</p>
+
+<p>Click on the button (or panel) labelled &lsquo;Create an ATP database&rsquo;, for example.</p>
+
+<p><img src="https://res.cloudinary.com/tobyblog/image/upload/v1578694026/img/Screenshot_from_2020-01-10_16.06.51.jpg" alt="" /></p>
+
+<p>Enter a name for your database or accept the default values. The workload type should default to Transaction Processing since we chose to create an ATP database.</p>
+
+<p><img src="https://res.cloudinary.com/tobyblog/image/upload/v1579363894/img/Screenshot_from_2020-01-09_13.08.57.jpg" alt="" /></p>
+
+<p><em>Be sure to click that radio button during the setup process to avoid accidental charges!</em></p>
+
+<p><img src="https://res.cloudinary.com/tobyblog/image/upload/v1578694291/img/Screenshot_from_2020-01-09_13.11.08.jpg" alt="" /></p>
+
+<p>It will only take a minute or two for Oracle to provision and start your database instance, after which time the label will change from orange to green and the status will show as &ldquo;Running&rdquo;. Then you&rsquo;re ready to connect.</p>
+
+      </div>
+
+      <footer>
+        
+
+<section class="see-also">
+  
+    
+    
+    
+      <h3>See also in Get Going With Autonomous Database in the Cloud</h3>
+      <nav>
+        <ul>
+        
+        
+          
+            <li>
+              <a href="http://tobybase.com/posts/connecting-to-autonomous-with-instant-client/">Connect to Autonomous Database in the Cloud with Oracle Instant Client</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="http://tobybase.com/posts/connecting-to-autonomous-with-sql-dev/">Connect to Autonomous Database in the Cloud with SQL Developer and SQLcl</a>
+            </li>
+          
+        
+          
+        
+        </ul>
+      </nav>
+    
+  
+</section>
+
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tobybase-com" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    
+      <p>Oracle Database Developer and Performance Tuner, specialized on the Exadata platform. Working for Infolob from Irving, Texas. #OCICertified</p>
+    
+     © 2020
+    
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+
+  </body>
+
+</html>
