@@ -6,10 +6,22 @@
     <description>Recent content in Posts on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 17 Jan 2020 17:08:16 -0600</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jan 2020 15:20:10 -0600</lastBuildDate>
     
 	<atom:link href="http://tobybase.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Error in Cisco AnyConnect Client: &#34;Cannot Confirm it is Connected&#34;</title>
+      <link>http://tobybase.com/posts/problems-connecting-with-anyconnect-vpn/</link>
+      <pubDate>Mon, 27 Jan 2020 15:20:10 -0600</pubDate>
+      
+      <guid>http://tobybase.com/posts/problems-connecting-with-anyconnect-vpn/</guid>
+      <description>[NOTE: problem identified on my personal laptop with macOS 10.15.2, Cisco AnyConnect Secure Mobility Client 4.6.03049]
+What to Do When You Encounter This Error  AnyConnect cannot confirm it is connected to your secure gateway. The local network may not be trustworthy. Please try another network.
+ This is a potentially misleading explanation, as the problem in my case was due to a corrupted VPN certificate.
+To fix the problem on macOS, do the following.</description>
+    </item>
     
     <item>
       <title>Connect to Autonomous Database in the Cloud with Oracle Instant Client</title>

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Vpn on 👨🏻‍💻 Tobybase</title>
-    <link>http://tobybase.com/tags/vpn/</link>
-    <description>Recent content in Vpn on 👨🏻‍💻 Tobybase</description>
+    <title>Cisco on 👨🏻‍💻 Tobybase</title>
+    <link>http://tobybase.com/tags/cisco/</link>
+    <description>Recent content in Cisco on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 27 Jan 2020 15:20:10 -0600</lastBuildDate>
     
-	<atom:link href="http://tobybase.com/tags/vpn/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://tobybase.com/tags/cisco/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -21,16 +21,6 @@
 What to Do When You Encounter This Error  AnyConnect cannot confirm it is connected to your secure gateway. The local network may not be trustworthy. Please try another network.
  This is a potentially misleading explanation, as the problem in my case was due to a corrupted VPN certificate.
 To fix the problem on macOS, do the following.</description>
-    </item>
-    
-    <item>
-      <title>What to do when the Juniper Network Connect app on OS X does not connect</title>
-      <link>http://tobybase.com/posts/ewwww/</link>
-      <pubDate>Thu, 04 Feb 2016 22:50:09 +0000</pubDate>
-      
-      <guid>http://tobybase.com/posts/ewwww/</guid>
-      <description>If you use Juniper&amp;rsquo;s Network Connect app to connect to your office VPN over HTTPS, you might occasionally experience strange errors like &amp;ldquo;A software error caused the Network Connect tunneling service to terminate.&amp;rdquo; Shortly after that, the application may either crash or prompt you for login credentials again.
-The solution involves removing all of the Network Connect files and allowing your browser to download and install the app all over again, as it did the first time you tried to connect to your office VPN.</description>
     </item>
     
   </channel>
