@@ -6,10 +6,19 @@
     <description>Recent content on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 27 Jan 2020 15:20:10 -0600</lastBuildDate>
+    <lastBuildDate>Fri, 07 Feb 2020 21:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://tobybase.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Oracle Cloud Day Dallas</title>
+      <link>http://tobybase.com/post/oracle-cloud-day-dallas/</link>
+      <pubDate>Fri, 07 Feb 2020 21:00:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/post/oracle-cloud-day-dallas/</guid>
+      <description>Tobybase representing at Oracle Cloud Day in Dallas. Just another day in my so-called autonomous life…</description>
+    </item>
     
     <item>
       <title>Error in Cisco AnyConnect Client: &#34;Cannot Confirm it is Connected&#34;</title>
