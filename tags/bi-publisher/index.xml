@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>bi publisher on 👨🏻‍💻 Tobybase</title>
+    <link>http://tobybase.com/tags/bi-publisher/</link>
+    <description>Recent content in bi publisher on 👨🏻‍💻 Tobybase</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 14 Jun 2013 21:47:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://tobybase.com/tags/bi-publisher/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How To Reset Page Numbering Between Document Sections in BI Publisher&#39;s Template Builder for Word</title>
+      <link>http://tobybase.com/posts/2013-06-14-resetting-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/</link>
+      <pubDate>Fri, 14 Jun 2013 21:47:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/2013-06-14-resetting-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/</guid>
+      <description>Under normal circumstances, it is fairly easy in Microsoft Word to reset page numbering when starting a new section of your document. However, such a simple thing can be non-trivial when dealing with the BI Publisher Template Builder plugin for Microsoft Office (available from Oracle — see BI Publisher Desktop).
+In short, doing this the normal way did not work for me, and in researching the issue I ran across a number of folks who were having the same problem.</description>
+    </item>
+    
+    <item>
+      <title>How To Restrict Access to BI Publisher Reports</title>
+      <link>http://tobybase.com/posts/2012-11-12-restricting-access-to-bi-publisher-reports/</link>
+      <pubDate>Mon, 12 Nov 2012 18:12:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/2012-11-12-restricting-access-to-bi-publisher-reports/</guid>
+      <description>In my last post I described how to configure BI Publisher to authenticate against an LDAP server, typically a corporate Active Directory server. Aside from authentication, you can also use LDAP group membership to determine who has access to a given report. Here&amp;rsquo;s how you do it.
+  Create a group in your LDAP/AD directory and assign your target users to that group.
+  Revisit your LDAP authentication settings.</description>
+    </item>
+    
+    <item>
+      <title>How To Configure Oracle BI Publisher to Authenticate With Active Directory</title>
+      <link>http://tobybase.com/posts/2012-11-12-configure-oracle-bi-publisher-to-authenticate-with-active-directory/</link>
+      <pubDate>Mon, 12 Nov 2012 17:32:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/2012-11-12-configure-oracle-bi-publisher-to-authenticate-with-active-directory/</guid>
+      <description>Log in to BI Publisher as an administrator. Click on the Admin tab. Click on Security Configuration. For Security Model, choose LDAP and enter the following parameters:    Setting Example Value     URL ldap://ad.mycompany.com:389 Your company&amp;rsquo;s LDAP server and port.   Administrator Username CN=ADMIN,OU=Users,OU=Shared Services,DC=mycompany,DC=com The fully qualified DN of the account you use to sign in to LDAP.   Administrator Password myxlplyx The password for the above account.</description>
+    </item>
+    
+    <item>
+      <title>How to Avoid the &#34;Job scheduling failed because the user has no permission to access this report&#34; Error in BI Publisher</title>
+      <link>http://tobybase.com/posts/2012-08-27-bi-publisher-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report/</link>
+      <pubDate>Mon, 27 Aug 2012 20:48:08 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/2012-08-27-bi-publisher-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report/</guid>
+      <description>You can get this error if you are trying to schedule a report and your BI Publisher installation uses LDAP authentication.
+To avoid it, make sure that the &amp;ldquo;Administrator&amp;rdquo; account you use to connect to your LDAP server is in the XMLP_ADMIN group. The LDAP settings are located on the Admin tab, under Security Settings / Security Configuration.</description>
+    </item>
+    
+  </channel>
+</rss>

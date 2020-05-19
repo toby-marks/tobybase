@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sql developer on 👨🏻‍💻 Tobybase</title>
+    <link>http://tobybase.com/tags/sql-developer/</link>
+    <description>Recent content in sql developer on 👨🏻‍💻 Tobybase</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 01 May 2019 16:47:39 -0500</lastBuildDate>
+    
+	<atom:link href="http://tobybase.com/tags/sql-developer/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Fix High CPU Usage / Memory Leak in SQL Developer 18&#43; for Windows</title>
+      <link>http://tobybase.com/posts/sqldev-memory-leak/</link>
+      <pubDate>Wed, 01 May 2019 16:47:39 -0500</pubDate>
+      
+      <guid>http://tobybase.com/posts/sqldev-memory-leak/</guid>
+      <description>If you run SQL Developer on Windows and experience high CPU usage and/or memory leak issues that freeze your PC, then you might want to try disabling some features that are likely causing the problem.
+I have personally observed this behavior on every version of SQL Developer since 18.2. Only my PC laptop is affected; my Macbook installation runs fine. I use the prepackaged Java 8 JDK. I have several colleagues who run the same configuration on Windows with no issues at all, so go figure.</description>
+    </item>
+    
+    <item>
+      <title>How to Fix SQL Developer on a Retina Display Mac(book)</title>
+      <link>http://tobybase.com/posts/2013-07-19-fix-sql-developer-on-a-retina-display-macbook/</link>
+      <pubDate>Fri, 19 Jul 2013 22:32:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/2013-07-19-fix-sql-developer-on-a-retina-display-macbook/</guid>
+      <description>I just purchased a new Macbook Pro 13-inch with Retina Display and was horrified to see how fuzzy SQL Developer looked on the high-res screen. Thanks to Thunderforge on the Stack Overflow forums for this tip:
+ Java 7u40 Early Access now supports HiDPI (Retina) displays, as shown by this changelog. So retina support is now available on Java 6, Java 7u40 or higher, and Java 8.
+ I am currently running the Early Adopter release of SQL Developer 4.</description>
+    </item>
+    
+    <item>
+      <title>Button Hotkeys in SQL Developer on OS X</title>
+      <link>http://tobybase.com/posts/2013-01-09-button-hotkeys-in-sql-developer-on-os-x/</link>
+      <pubDate>Wed, 09 Jan 2013 19:09:45 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/2013-01-09-button-hotkeys-in-sql-developer-on-os-x/</guid>
+      <description>In Windows, most applications provide menu and button accelerator keys that allow you to control the application without having to use a mouse. Java Swing apps like SQL Developer allow you to do the same, ostensibly in a cross-platform compatible manner.
+One place I use this frequently is the Enter Binds dialog window that pops up when running a query using bind variables.
+In Java 6 on OS X, the hotkey for pressing the Help and Apply buttons was OPTION-H and OPTION-A, respectively.</description>
+    </item>
+    
+    <item>
+      <title>How To Fix High CPU Usage by SQL Developer on OS X</title>
+      <link>http://tobybase.com/posts/2012-07-20-easy-fix-for-high-cpu-usage-in-sql-developer-on-os-x/</link>
+      <pubDate>Fri, 20 Jul 2012 16:32:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/2012-07-20-easy-fix-for-high-cpu-usage-in-sql-developer-on-os-x/</guid>
+      <description>I&amp;rsquo;ve been fighting for a couple of years now with an annoying performance bug in SQL Developer for OS X. After using the application for a while CPU usage would spike to around 100%, even when idle. This is a known issue associated with the &amp;ldquo;Look and Feel&amp;rdquo; preference.
+Basically, don&amp;rsquo;t use the &amp;ldquo;Mac OS X&amp;rdquo; setting. Instead, use the &amp;ldquo;Oracle&amp;rdquo; setting. The theme doesn&amp;rsquo;t matter.
+That fixes the CPU issue, but somewhat annoyingly moves the menu out of the menu bar at the top of the screen and into the application window, a la Windows, making the interface inconsistent with pretty much every other app I use on my Mac.</description>
+    </item>
+    
+  </channel>
+</rss>

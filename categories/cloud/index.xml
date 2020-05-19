@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cloud on 👨🏻‍💻 Tobybase</title>
+    <link>http://tobybase.com/categories/cloud/</link>
+    <description>Recent content in Cloud on 👨🏻‍💻 Tobybase</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 17 Jan 2020 17:08:16 -0600</lastBuildDate>
+    
+	<atom:link href="http://tobybase.com/categories/cloud/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Connect to Autonomous Database in the Cloud with Oracle Instant Client</title>
+      <link>http://tobybase.com/posts/connecting-to-autonomous-with-instant-client/</link>
+      <pubDate>Fri, 17 Jan 2020 17:08:16 -0600</pubDate>
+      
+      <guid>http://tobybase.com/posts/connecting-to-autonomous-with-instant-client/</guid>
+      <description>The easiest and fastest way to query and create data in your new cloud database is with SQL Developer Web, provided free with every new instance of Autonomous Database and Autonomous Data Warehouse in the Cloud. Second fastest would be with a local installation of SQL Developer or SQLcl. But if you want an authentic SQL*Plus environment, then you&amp;rsquo;ll need Oracle Instant Client.
+You have two options for running SQL*Plus under Instant Client: download and install a platform-native version, or else run Instant Client in a Docker container.</description>
+    </item>
+    
+    <item>
+      <title>Connect to Autonomous Database in the Cloud with SQL Developer and SQLcl</title>
+      <link>http://tobybase.com/posts/connecting-to-autonomous-with-sql-dev/</link>
+      <pubDate>Fri, 17 Jan 2020 16:59:40 -0600</pubDate>
+      
+      <guid>http://tobybase.com/posts/connecting-to-autonomous-with-sql-dev/</guid>
+      <description>Connect with SQL Developer Web If you don&amp;rsquo;t have SQL Developer installed, or you just want a quick and easy way to work with your new autonomous database, you can get started right away with SQL Developer Web, available from the Service Console. SQL Developer Web is a scaled down version of the desktop tool that allows you to query and enter data, run scripts, compile database objects, and monitor and administrate your database.</description>
+    </item>
+    
+    <item>
+      <title>Get Up and Running Fast On Oracle Autonomous Database in the Cloud</title>
+      <link>http://tobybase.com/posts/up-and-running-on-oracle-autonomous-database/</link>
+      <pubDate>Thu, 09 Jan 2020 16:58:15 -0600</pubDate>
+      
+      <guid>http://tobybase.com/posts/up-and-running-on-oracle-autonomous-database/</guid>
+      <description>Provision Your New Autonomous Database in Minutes With Autonomous Database and Autonomous Data Warehouse, Oracle is promising to leverage the power of AI and machine learning to automate upgrade, maintenance, and tuning operations in the database - vastly reducing the drudgery of DBA work and freeing up human minds to add more value to their companies. As a developer, you don&amp;rsquo;t have to wait to start experimenting with these exciting new features.</description>
+    </item>
+    
+    <item>
+      <title>Access Denied Attaching Block Volume to Windows VM in OCI</title>
+      <link>http://tobybase.com/posts/2018-04-10-oci-add-block-volume-on-windows/</link>
+      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/2018-04-10-oci-add-block-volume-on-windows/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;If you are getting the above error when trying to add a block volume to a Windows VM in Oracle Cloud Infrastructure, the solution is quite simple.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Move Your VM to Oracle Cloud - Part 4</title>
+      <link>http://tobybase.com/posts/infolob-lift-and-shift-howto-4/</link>
+      <pubDate>Fri, 10 Mar 2017 14:56:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/infolob-lift-and-shift-howto-4/</guid>
+      <description>In the last of a four-part video series, our Director of Cloud Services Brian Hill creates a new compute instance in Oracle Cloud Compute Services based on his custom Windows virtual machine image.
+  </description>
+    </item>
+    
+    <item>
+      <title>Move Your VM to Oracle Cloud - Part 3</title>
+      <link>http://tobybase.com/posts/infolob-lift-and-shift-howto-3/</link>
+      <pubDate>Fri, 10 Mar 2017 14:53:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/infolob-lift-and-shift-howto-3/</guid>
+      <description>In part three of a four-part video series, our Director of Cloud Services Brian Hill creates a bootable storage volume in Oracle Cloud Compute Services with his new Windows image.
+  </description>
+    </item>
+    
+    <item>
+      <title>Move Your VM to Oracle Cloud - Part 2</title>
+      <link>http://tobybase.com/posts/infolob-lift-and-shift-howto-2/</link>
+      <pubDate>Fri, 10 Mar 2017 14:47:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/infolob-lift-and-shift-howto-2/</guid>
+      <description>In part two of a four-part video series, our Director of Cloud Services Brian Hill creates an image in Oracle Cloud Compute Services based on a Windows virtual machine.
+  </description>
+    </item>
+    
+    <item>
+      <title>Move Your VM to Oracle Cloud - Part 1</title>
+      <link>http://tobybase.com/posts/infolob-lift-and-shift-howto-1/</link>
+      <pubDate>Fri, 10 Mar 2017 14:41:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/infolob-lift-and-shift-howto-1/</guid>
+      <description>In part one of a four-part video series, our Director of Cloud Services Brian Hill demonstrates how to prepare your virtual machine for upload to the cloud.
+  </description>
+    </item>
+    
+  </channel>
+</rss>
