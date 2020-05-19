@@ -15,5 +15,3 @@ fields:
   label: 'Description '
   config:
     required: false
-pages:
-- content/post/oracle-cloud-day-dallas.md
