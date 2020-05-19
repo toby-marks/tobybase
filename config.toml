@@ -28,11 +28,26 @@ enableEmoji = true
     footercontent = "Oracle Database Developer and Performance Tuner, specialized on the Exadata platform. Working for Infolob from Irving, Texas. #OCICertified "
     hidecredits = true
     hidecopyright = false
+    since = 2012
 
     rtl = false   
 
-    math = false
+	# Specify light/dark colorscheme
+    # Supported values:
+    # "auto" (use preference set by browser)
+    # "dark" (dark background, light foreground)
+    # "light" (light background, dark foreground) (default)
+#    colorscheme = "light"
+    
+	math = false
     custom_css = ["css/custom.css"]
+#     custom_js = []
+
+# If you want to use fathom(https://usefathom.com) for analytics, add this section
+# [params.fathomAnalytics]
+#     siteID = ""
+#     # Default value is cdn.usefathom.com, overwrite this if you are self-hosting
+#     serverURL = ""
 
 # Social links
 [[params.social]]
@@ -60,17 +75,12 @@ enableEmoji = true
 #     icon = "fab fa-facebook fa-2x"
 #     weight = 4
 #     url = "https://facebook.com/tobyjmarks/"
-[[params.social]]
-	name = "Oracle Cloud Infrastructure Foundations 2020 Certified Associate"
-	icon = "fab fa-studiovinari fa-2x"
-	weight = 5
-	url = "https://www.youracclaim.com/badges/b73bc606-4a88-4806-8184-d731e6150b8f/public_url"
 
 # Menu links
 [[menu.main]]
     name = "Blog"
     weight = 1
-    url  = "/post/"
+    url  = "/posts/"
 [[menu.main]]
     name = "Links"
     weight = 2
