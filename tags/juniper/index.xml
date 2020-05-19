@@ -13,10 +13,10 @@
     
     <item>
       <title>What to do when the Juniper Network Connect app on OS X does not connect</title>
-      <link>http://tobybase.com/posts/ewwww/</link>
+      <link>http://tobybase.com/post/ewwww/</link>
       <pubDate>Thu, 04 Feb 2016 22:50:09 +0000</pubDate>
       
-      <guid>http://tobybase.com/posts/ewwww/</guid>
+      <guid>http://tobybase.com/post/ewwww/</guid>
       <description>If you use Juniper&amp;rsquo;s Network Connect app to connect to your office VPN over HTTPS, you might occasionally experience strange errors like &amp;ldquo;A software error caused the Network Connect tunneling service to terminate.&amp;rdquo; Shortly after that, the application may either crash or prompt you for login credentials again.
 The solution involves removing all of the Network Connect files and allowing your browser to download and install the app all over again, as it did the first time you tried to connect to your office VPN.</description>
     </item>

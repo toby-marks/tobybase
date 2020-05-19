@@ -13,10 +13,10 @@
     
     <item>
       <title>Error in Cisco AnyConnect Client: &#34;Cannot Confirm it is Connected&#34;</title>
-      <link>http://tobybase.com/posts/problems-connecting-with-anyconnect-vpn/</link>
+      <link>http://tobybase.com/post/problems-connecting-with-anyconnect-vpn/</link>
       <pubDate>Mon, 27 Jan 2020 15:20:10 -0600</pubDate>
       
-      <guid>http://tobybase.com/posts/problems-connecting-with-anyconnect-vpn/</guid>
+      <guid>http://tobybase.com/post/problems-connecting-with-anyconnect-vpn/</guid>
       <description>[NOTE: problem identified on my personal laptop with macOS 10.15.2, Cisco AnyConnect Secure Mobility Client 4.6.03049]
 What to Do When You Encounter This Error  AnyConnect cannot confirm it is connected to your secure gateway. The local network may not be trustworthy. Please try another network.
  This is a potentially misleading explanation, as the problem in my case was due to a corrupted VPN certificate.
