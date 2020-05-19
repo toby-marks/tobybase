@@ -13,60 +13,60 @@
     
     <item>
       <title>Access Denied Attaching Block Volume to Windows VM in OCI</title>
-      <link>http://tobybase.com/post/2018-04-10-oci-add-block-volume-on-windows/</link>
+      <link>http://tobybase.com/posts/2018-04-10-oci-add-block-volume-on-windows/</link>
       <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://tobybase.com/post/2018-04-10-oci-add-block-volume-on-windows/</guid>
+      <guid>http://tobybase.com/posts/2018-04-10-oci-add-block-volume-on-windows/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;If you are getting the above error when trying to add a block volume to a Windows VM in Oracle Cloud Infrastructure, the solution is quite simple.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Move Your VM to Oracle Cloud - Part 4</title>
-      <link>http://tobybase.com/post/infolob-lift-and-shift-howto-4/</link>
+      <link>http://tobybase.com/posts/infolob-lift-and-shift-howto-4/</link>
       <pubDate>Fri, 10 Mar 2017 14:56:00 +0000</pubDate>
       
-      <guid>http://tobybase.com/post/infolob-lift-and-shift-howto-4/</guid>
+      <guid>http://tobybase.com/posts/infolob-lift-and-shift-howto-4/</guid>
       <description>In the last of a four-part video series, our Director of Cloud Services Brian Hill creates a new compute instance in Oracle Cloud Compute Services based on his custom Windows virtual machine image.
   </description>
     </item>
     
     <item>
       <title>Move Your VM to Oracle Cloud - Part 3</title>
-      <link>http://tobybase.com/post/infolob-lift-and-shift-howto-3/</link>
+      <link>http://tobybase.com/posts/infolob-lift-and-shift-howto-3/</link>
       <pubDate>Fri, 10 Mar 2017 14:53:00 +0000</pubDate>
       
-      <guid>http://tobybase.com/post/infolob-lift-and-shift-howto-3/</guid>
+      <guid>http://tobybase.com/posts/infolob-lift-and-shift-howto-3/</guid>
       <description>In part three of a four-part video series, our Director of Cloud Services Brian Hill creates a bootable storage volume in Oracle Cloud Compute Services with his new Windows image.
   </description>
     </item>
     
     <item>
       <title>Move Your VM to Oracle Cloud - Part 2</title>
-      <link>http://tobybase.com/post/infolob-lift-and-shift-howto-2/</link>
+      <link>http://tobybase.com/posts/infolob-lift-and-shift-howto-2/</link>
       <pubDate>Fri, 10 Mar 2017 14:47:00 +0000</pubDate>
       
-      <guid>http://tobybase.com/post/infolob-lift-and-shift-howto-2/</guid>
+      <guid>http://tobybase.com/posts/infolob-lift-and-shift-howto-2/</guid>
       <description>In part two of a four-part video series, our Director of Cloud Services Brian Hill creates an image in Oracle Cloud Compute Services based on a Windows virtual machine.
   </description>
     </item>
     
     <item>
       <title>Move Your VM to Oracle Cloud - Part 1</title>
-      <link>http://tobybase.com/post/infolob-lift-and-shift-howto-1/</link>
+      <link>http://tobybase.com/posts/infolob-lift-and-shift-howto-1/</link>
       <pubDate>Fri, 10 Mar 2017 14:41:00 +0000</pubDate>
       
-      <guid>http://tobybase.com/post/infolob-lift-and-shift-howto-1/</guid>
+      <guid>http://tobybase.com/posts/infolob-lift-and-shift-howto-1/</guid>
       <description>In part one of a four-part video series, our Director of Cloud Services Brian Hill demonstrates how to prepare your virtual machine for upload to the cloud.
   </description>
     </item>
     
     <item>
       <title>ODBC Connection Fails for MS Access App on Citrix </title>
-      <link>http://tobybase.com/post/2012-05-11-odbc-connection-fails-for-ms-access-app-on-citrix/</link>
+      <link>http://tobybase.com/posts/2012-05-11-odbc-connection-fails-for-ms-access-app-on-citrix/</link>
       <pubDate>Fri, 11 May 2012 20:54:00 +0000</pubDate>
       
-      <guid>http://tobybase.com/post/2012-05-11-odbc-connection-fails-for-ms-access-app-on-citrix/</guid>
+      <guid>http://tobybase.com/posts/2012-05-11-odbc-connection-fails-for-ms-access-app-on-citrix/</guid>
       <description>I ran into an interesting problem recently when attempting to publish an MS Access application with Citrix XenApp. The application pulled data from an Oracle database, so an ODBC connection was created on the Citrix server. What we found was that when a non-privileged user tried to run the application, the connection failed. When the Citrix server admin ran it, however, it worked. Furthermore, as long as the admin was logged in, anybody else could run the application successfully; when he logged out, the users&amp;rsquo; connections broke again.</description>
     </item>
     

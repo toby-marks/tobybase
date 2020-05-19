@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+
+    <meta name="author" content="Toby Marks">
+    <meta name="description" content="Connect with SQL Developer Web If you don&rsquo;t have SQL Developer installed, or you just want a quick and easy way to work with your new autonomous database, you can get started right away with SQL Developer Web, available from the Service Console. SQL Developer Web is a scaled down version of the desktop tool that allows you to query and enter data, run scripts, compile database objects, and monitor and administrate your database.">
+    <meta name="keywords" content="oracle,infolob,blog,consultant,developer,tuning,exadata,personal">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Connect to Autonomous Database in the Cloud with SQL Developer and SQLcl"/>
+<meta name="twitter:description" content="Connect with SQL Developer Web If you don&rsquo;t have SQL Developer installed, or you just want a quick and easy way to work with your new autonomous database, you can get started right away with SQL Developer Web, available from the Service Console. SQL Developer Web is a scaled down version of the desktop tool that allows you to query and enter data, run scripts, compile database objects, and monitor and administrate your database."/>
+
+    <meta property="og:title" content="Connect to Autonomous Database in the Cloud with SQL Developer and SQLcl" />
+<meta property="og:description" content="Connect with SQL Developer Web If you don&rsquo;t have SQL Developer installed, or you just want a quick and easy way to work with your new autonomous database, you can get started right away with SQL Developer Web, available from the Service Console. SQL Developer Web is a scaled down version of the desktop tool that allows you to query and enter data, run scripts, compile database objects, and monitor and administrate your database." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tobybase.com/posts/connecting-to-autonomous-with-sql-dev/" />
+<meta property="article:published_time" content="2020-01-17T16:59:40-06:00" />
+<meta property="article:modified_time" content="2020-01-17T16:59:40-06:00" />
+
+
+
+    
+      <base href="http://tobybase.com/posts/connecting-to-autonomous-with-sql-dev/">
+    
+    <title>
+  Connect to Autonomous Database in the Cloud with SQL Developer and SQLcl · 👨🏻‍💻 Tobybase
+</title>
+
+    
+      <link rel="canonical" href="http://tobybase.com/posts/connecting-to-autonomous-with-sql-dev/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="http://tobybase.com/css/coder.min.a4f332213a21ce8eb521670c614470c58923aaaf385e2a73982c31dd7642decb.css" integrity="sha256-pPMyITohzo61IWcMYURwxYkjqq84XipzmCwx3XZC3ss=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+      <link rel="stylesheet" href="http://tobybase.com/css/custom.css" />
+    
+
+    
+
+    <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.71.0" />
+  </head>
+
+  
+  
+  <body class="colorscheme-light">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="http://tobybase.com/">
+      👨🏻‍💻 Tobybase
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://tobybase.com/posts/">Blog</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://tobybase.com/links/">Links</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://tobybase.com/about/">About</a>
+          </li>
+        
+      
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">Connect to Autonomous Database in the Cloud with SQL Developer and SQLcl</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fas fa-calendar"></i>
+              <time datetime='2020-01-17T16:59:40-06:00'>
+                January 17, 2020
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              4-minute read
+            </span>
+          </div>
+          <div class="categories">
+  <i class="fas fa-folder"></i>
+    <a href="http://tobybase.com/categories/database/">Database</a>
+      <span class="separator">•</span>
+    <a href="http://tobybase.com/categories/cloud/">Cloud</a></div>
+
+          <div class="tags">
+  <i class="fas fa-tag"></i>
+    <a href="http://tobybase.com/tags/oracle-autonomous-database/">Oracle Autonomous Database</a>
+      <span class="separator">•</span>
+    <a href="http://tobybase.com/tags/oracle-autonomous-data-warehouse/">Oracle Autonomous Data Warehouse</a>
+      <span class="separator">•</span>
+    <a href="http://tobybase.com/tags/oracle-cloud/">Oracle Cloud</a></div>
+
+        </div>
+      </header>
+
+      <div>
+        
+        <h3 id="connect-with-sql-developer-web">Connect with SQL Developer Web</h3>
+<p><img src="https://res.cloudinary.com/tobyblog/image/upload/v1579364810/img/Screenshot_from_2020-01-09_17.11.52.jpg" alt=""></p>
+<p>If you don&rsquo;t have SQL Developer installed, or you just want a quick and easy way to work with your new autonomous database, you can get started right away with SQL Developer Web, available from the Service Console. SQL Developer Web is a scaled down version of the desktop tool that allows you to query and enter data, run scripts, compile database objects, and monitor and administrate your database.</p>
+<p><em>[To get to the Service Console, first <a href="https://www.oracle.com/cloud/sign-in.html">Sign in to Oracle Cloud</a> if you haven&rsquo;t already, and from the hamburger menu in the upper-left corner, choose &ldquo;Autonomous Data Warehouse&rdquo; or &ldquo;Autonomous Transaction Processing&rdquo;, depending on the type of database you created. If necessary, select the appropriate Compartment, and you should see a list of databases. Click on the one you&rsquo;re interested in, and you should get to a screen like the one shown above, the Details page for your Autonomous Database.]</em></p>
+<p>Click on Service Console.</p>
+<p><img src="https://res.cloudinary.com/tobyblog/image/upload/v1579303667/img/Screen_Shot_2020-01-17_at_5.27.37_PM.jpg" alt=""></p>
+<p>From here you can monitor usage and activity in your database (Overview and Activity), reset your ADMIN password (Administration), create resource management rules (Administration), and connect to and develop applications against your database (Development).</p>
+<p><img src="https://res.cloudinary.com/tobyblog/image/upload/v1579365886/img/Screen_Shot_2020-01-18_at_10.44.34_AM.jpg" alt=""></p>
+<p>Click on Development, then click on SQL Developer Web.</p>
+<p><img src="https://res.cloudinary.com/tobyblog/image/upload/v1579365998/img/Screen_Shot_2020-01-18_at_10.46.30_AM.jpg" alt=""></p>
+<p>If this is your first time using SQL Developer Web, enter ADMIN for username and the password you provided when setting up Autonomous Database.</p>
+<p>That&rsquo;s it! From here you can create new schemas, new tables and views, load data, run scripts, and run queries just as you would from the desktop version of the tool. A simple Data Modeler is also provided where you can save and load diagrams, and generate and run DDL. Using SQL Developer Web is a great option, even for folks with more serious intended use cases than just setting up a transitory test environment. It has a simplified but powerful set of features that can get the job done. And if you have a larger team that requires connectivity, there&rsquo;s no worry about rolling out a new toolset or downloading credentials files. You can be productive immediately.</p>
+<h3 id="connect-from-a-local-instance-of-sql-developer">Connect From a Local Instance of SQL Developer</h3>
+<p>However, if you already have a development tool like SQL Developer or SQLcl installed, and you want to integrate connectivity to your Autonomous Cloud Database into your existing workflows, then follow these instructions to get connected.</p>
+<p><img src="https://res.cloudinary.com/tobyblog/image/upload/v1579367350/img/dbconnect.jpg" alt=""></p>
+<p>Navigate to the Details screen for your Autonomous Database or Autonomous Data Warehouse. Click on DB Connection.</p>
+<p><img src="https://res.cloudinary.com/tobyblog/image/upload/v1579367467/img/Screenshot_from_2020-01-09_16.23.01.jpg" alt=""></p>
+<p>Now click on Download Wallet and save the file to your local disk. Now you&rsquo;re ready to connect! SQL Developer makes connecting to your new cloud database a breeze.</p>
+<p><img src="https://res.cloudinary.com/tobyblog/image/upload/v1578694991/img/Screenshot_from_2020-01-10_16.20.49.jpg" alt=""></p>
+<p>From the Connections window, create a new connection.</p>
+<p><img src="https://res.cloudinary.com/tobyblog/image/upload/v1578695134/img/Screenshot_from_2020-01-10_16.25.12.jpg" alt=""></p>
+<p>For Authentication Type, choose Default. Your username should be &lsquo;admin&rsquo;. Enter the password you provided during the database configuration process. For Connection Type, choose Cloud Wallet, and simply point to the wallet file you downloaded earlier. You do not have to decrompress the file. Test your connection and save. That&rsquo;s it.</p>
+<h3 id="connect-with-sqlcl">Connect with SQLcl</h3>
+<p>If you&rsquo;re using a command line client like SQLcl, you will likely need to extract the contents of the wallet file (the ZIP file you just downloaded), and place them in your TNS_ADMIN diretory. If you don&rsquo;t have a TNS_ADMIN directory, create an environmental parameter TNS_ADMIN and point to the directory where the expanded contents of the wallet are located. Here is what is included in the wallet file.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">toby@michael:~$ cd $TNS_ADMIN
+toby@michael:~/oracle/admin/atpsb$ ll
+total 64
+drwxrwxr-x 2 toby toby  4096 Jan  9 16:42 ./
+drwxrwxr-x 4 toby toby  4096 Jan 10 16:48 ../
+-rw-rw-r-- 1 toby toby  6733 Jan  9 16:38 cwallet.sso
+-rw-rw-r-- 1 toby toby  6688 Jan  9 16:38 ewallet.p12
+-rw-rw-r-- 1 toby toby  3276 Jan  9 16:38 keystore.jks
+-rw-rw-r-- 1 toby toby   301 Jan  9 16:38 ojdbc.properties
+-rw-rw-r-- 1 toby toby   114 Jan  9 16:38 sqlnet.ora
+-rw-rw-r-- 1 toby toby  1791 Jan  9 16:38 tnsnames.ora
+-rw-rw-r-- 1 toby toby  3336 Jan  9 16:38 truststore.jks
+-rw-rw-r-- 1 toby toby 20050 Jan  9 16:38 Wallet_ATPSB.zip
+</code></pre></div><p>As you can see it not only contains the tnsnames.ora and sqlnet.ora files normally used to connect to a local database, but also certificate and wallet files required to open and maintain a secure connection to your database in the cloud.</p>
+<p>Take a look at the tnsnames.ora file, and you&rsquo;ll see something like this:</p>
+<p><img src="https://res.cloudinary.com/tobyblog/image/upload/v1579367810/img/Screen_Shot_2020-01-18_at_11.16.39_AM.jpg" alt=""></p>
+<p>You&rsquo;ll notice that <em>three</em> TNS entries were created for your database, <code>_high</code>, <code>_medium</code>, and <code>_low</code>. <a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/connect-predefined.html#GUID-9747539B-FD46-44F1-8FF8-F5AC650F15BE">These represent the priority</a> given (or resources allocated) to processes connecting to those services. Mostly you&rsquo;ll want to use the <code>_high</code> connection, unless you plan to have lower priority users or background processes connecting to Autonomous Database.</p>
+<p><img src="https://res.cloudinary.com/tobyblog/image/upload/v1578695737/img/Screenshot_from_2020-01-10_16.33.11.jpg" alt=""></p>
+<p>Since I&rsquo;m running in Bash shell, I added the parameter declaration in my .bash_profile script, and after sourcing the script (i.e. <code>$ . ~/.bash_profile</code>), I am able to log in to my database using SQLcl.</p>
+<p><img src="https://res.cloudinary.com/tobyblog/image/upload/v1578696605/img/Screenshot_from_2020-01-10_16.49.36.jpg" alt=""></p>
+<p>Success!</p>
+
+      </div>
+
+
+      <footer>
+        
+
+<section class="see-also">
+  
+    
+    
+    
+      <h3>See also in Get Going With Autonomous Database in the Cloud</h3>
+      <nav>
+        <ul>
+        
+        
+          
+            <li>
+              <a href="http://tobybase.com/posts/connecting-to-autonomous-with-instant-client/">Connect to Autonomous Database in the Cloud with Oracle Instant Client</a>
+            </li>
+          
+        
+          
+        
+          
+            <li>
+              <a href="http://tobybase.com/posts/up-and-running-on-oracle-autonomous-database/">Get Up and Running Fast On Oracle Autonomous Database in the Cloud</a>
+            </li>
+          
+        
+        </ul>
+      </nav>
+    
+  
+</section>
+
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tobybase-com" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+        <p>Oracle Database Developer and Performance Tuner, specialized on the Exadata platform. Working for Infolob from Irving, Texas. #OCICertified </p>
+      
+      
+        ©
+        
+          2012 -
+        
+        2020
+         Toby Marks 
+      
+      
+      
+    </section>
+  </footer>
+
+    </main>
+
+    
+
+    
+
+    
+
+  </body>
+
+</html>
