@@ -6,7 +6,7 @@ series = ["Get Going With Autonomous Database in the Cloud"]
 categories = ["Database", "Cloud"]
 tags = ["Oracle Autonomous Database", "Oracle Autonomous Data Warehouse", "Oracle Cloud"]
 +++
-The easiest and fastest way to query and create data in your new cloud database is with SQL Developer Web, provided free with every new instance of Autonomous Database and Autonomous Data Warehouse in the Cloud. Second fastest would be with a local installation of [SQL Developer or SQLcl]({{< ref "/posts/connecting-to-autonomous-with-sql-dev.md" >}}). But if you want an authentic SQL*Plus environment, then you'll need Oracle Instant Client.
+The easiest and fastest way to query and create data in your new cloud database is with SQL Developer Web, provided free with every new instance of Autonomous Database and Autonomous Data Warehouse in the Cloud. Second fastest would be with a local installation of [SQL Developer or SQLcl]({{< ref "connecting-to-autonomous-with-sql-dev">}}). But if you want an authentic SQL*Plus environment, then you'll need Oracle Instant Client.
 
 You have two options for running SQL*Plus under Instant Client: [download and install](#download-and-install-instant-client) a platform-native version, or else run Instant Client in a [Docker container](#run-instant-client-in-a-docker-container). Your database Service Console has instructions and download links for whichever approach you choose.
 
@@ -98,7 +98,7 @@ Navigate to the Details screen for your Autonomous Database or Autonomous Data W
 
 ![](https://res.cloudinary.com/tobyblog/image/upload/v1579367467/img/Screenshot_from_2020-01-09_16.23.01.jpg)
 
-Click on Download Wallet. Extract the contents of the wallet file (the ZIP file you just downloaded), and place them in your TNS_ADMIN diretory. If you don't have a TNS_ADMIN directory, create an environmental parameter TNS_ADMIN and point to the directory where the expanded contents of the wallet are located. (*See [my other post]({{< ref "/posts/connecting-to-autonomous-with-sql-dev.md" >}}) for more on the contents of the wallet file.*)
+Click on Download Wallet. Extract the contents of the wallet file (the ZIP file you just downloaded), and place them in your TNS_ADMIN diretory. If you don't have a TNS_ADMIN directory, create an environmental parameter TNS_ADMIN and point to the directory where the expanded contents of the wallet are located. (*See [my other post]({{< ref "connecting-to-autonomous-with-sql-dev" >}}) for more on the contents of the wallet file.*)
 
 When you run SQL*Plus in a container, you'll want to map your local TNS_ADMIN directory to the container, so that the container sees the TNS connection info for your database and uses the appropriate wallet file to establish an encrypted connection. Fortunately, this is fairly easy. You can use the `-v` flag with Docker's run command to map a local file to the container. 
 
