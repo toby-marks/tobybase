@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tools on 👨🏻‍💻 Tobybase</title>
@@ -101,7 +101,8 @@ In Java 6 on OS X, the hotkey for pressing the Help and Apply buttons was OPTION
       
       <guid>http://tobybase.com/posts/2012-11-12-restricting-access-to-bi-publisher-reports/</guid>
       <description>In my last post I described how to configure BI Publisher to authenticate against an LDAP server, typically a corporate Active Directory server. Aside from authentication, you can also use LDAP group membership to determine who has access to a given report. Here&amp;rsquo;s how you do it.
- Create a group in your LDAP/AD directory and assign your target users to that group. Revisit your LDAP authentication settings. These are located on the Admin Tab, on the Security Configuration page.</description>
+  Create a group in your LDAP/AD directory and assign your target users to that group.
+  Revisit your LDAP authentication settings.</description>
     </item>
     
     <item>
@@ -110,8 +111,7 @@ In Java 6 on OS X, the hotkey for pressing the Help and Apply buttons was OPTION
       <pubDate>Mon, 12 Nov 2012 17:32:00 +0000</pubDate>
       
       <guid>http://tobybase.com/posts/2012-11-12-configure-oracle-bi-publisher-to-authenticate-with-active-directory/</guid>
-      <description>Log in to BI Publisher as an administrator. Click on the Admin tab. Click on Security Configuration. For Security Model, choose LDAP and enter the following parameters:
-   Setting Example Value     URL ldap://ad.mycompany.com:389 Your company&amp;rsquo;s LDAP server and port.   Administrator Username CN=ADMIN,OU=Users,OU=Shared Services,DC=mycompany,DC=com The fully qualified DN of the account you use to sign in to LDAP.   Administrator Password myxlplyx The password for the above account.</description>
+      <description>Log in to BI Publisher as an administrator. Click on the Admin tab. Click on Security Configuration. For Security Model, choose LDAP and enter the following parameters:    Setting Example Value     URL ldap://ad.mycompany.com:389 Your company&amp;rsquo;s LDAP server and port.   Administrator Username CN=ADMIN,OU=Users,OU=Shared Services,DC=mycompany,DC=com The fully qualified DN of the account you use to sign in to LDAP.   Administrator Password myxlplyx The password for the above account.</description>
     </item>
     
     <item>

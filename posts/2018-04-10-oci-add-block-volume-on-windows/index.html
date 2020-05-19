@@ -17,8 +17,8 @@
 <meta property="og:description" content="What to do when you get an access denied permissions error when attempting to attach a block volume to a Windows virtual machine in Oracle Cloud" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://tobybase.com/posts/2018-04-10-oci-add-block-volume-on-windows/" />
-<meta property="article:published_time" content="2018-04-10T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2018-04-10T00:00:00&#43;00:00"/>
+<meta property="article:published_time" content="2018-04-10T00:00:00+00:00" />
+<meta property="article:modified_time" content="2018-04-10T00:00:00+00:00" />
 
 
     
@@ -53,7 +53,7 @@
     <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-16x16.png" sizes="16x16">
 
-    <meta name="generator" content="Hugo 0.54.0" />
+    <meta name="generator" content="Hugo 0.64.1" />
   </head>
 
   <body class=" ">
@@ -132,30 +132,20 @@
       </header>
 
       <div>
-        <p><img src="http://tobybase.com/img/2018-04-10-oci-add-block-volume-on-windows/access-denied.jpg" width="800px"></p>
-
+        <!-- raw HTML omitted -->
 <p>If you are getting the above error when trying to add a block volume to a Windows VM in Oracle Cloud Infrastructure, the solution is quite simple.</p>
-
 <p>I ran across this problem recently when configuring a Windows virtual machine on Oracle Cloud for the first time. I needed some additional storage, so I added a SCSI block volume that gave me what I required.</p>
-
-<p><img src="http://tobybase.com/img/2018-04-10-oci-add-block-volume-on-windows/attached-block-volumes.jpg" width="800px"></p>
-
+<!-- raw HTML omitted -->
 <p>After attaching the block volume to the compute instance, I clicked on the elipsis to the right of the volume overview panel, and selected <em>iSCSI Commands &amp; Information</em> as shown.</p>
-
-<p><img src="http://tobybase.com/img/2018-04-10-oci-add-block-volume-on-windows/iscsi-commands.jpg" width="586px"></p>
-
+<!-- raw HTML omitted -->
 <p>In order to make use of your attached volume, the commands shown in the <em>Attach Commands</em> pane must be run from a Powershell or Command terminal, after which you can format and mount the volume according to the <a href="https://docs.us-phoenix-1.oraclecloud.com/Content/Block/Tasks/connectingtoavolume.htm">online instructions provided by Oracle</a>.</p>
-
-<p><img src="http://tobybase.com/img/2018-04-10-oci-add-block-volume-on-windows/powershell-button.jpg" width="369px"></p>
-
+<!-- raw HTML omitted -->
 <p>However, when I clicked on the Powershell terminal icon in the Windows Taskbar and attempted to run the iSCSI commands, I got the following error:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">Set-Service: : Service &#39;Microsoft iSCSI Initiator Service (msiscsi)&#39; cannot be configured due to the following error: Access is denied</pre></div>
+<pre><code>Set-Service: : Service 'Microsoft iSCSI Initiator Service (msiscsi)' cannot be configured due to the following error: Access is denied
+</code></pre>
 <p>The problem is that the iSCSI commands Oracle provides need to be run from a privileged terminal, or &ldquo;elevated shell&rdquo;.</p>
-
-<p><img src="http://tobybase.com/img/2018-04-10-oci-add-block-volume-on-windows/run-as-admin.jpg" width="800px"></p>
-
+<!-- raw HTML omitted -->
 <p>Search for Powershell. Right-click on the icon, and choose <em>Run as administrator</em>. You will now be able to successfully run the iSCSI commands and connect to your block volume. If you don&rsquo;t care for that method, <a href="https://www.top-password.com/blog/5-ways-to-run-powershell-as-administrator-in-windows-10/">there are a number of other ways</a> to launch an elevated shell in Windows.</p>
-
 <p>Have fun experimenting with OCI. There is no better cost/performance value for cloud infrastructure.</p>
       </div>
 
@@ -194,7 +184,7 @@
       <footer class="footer">
   <section class="container">
     
-      <p>Oracle Database Developer and Performance Tuner, specialized on the Exadata platform. Working for Infolob from Irving, Texas. #OCICertified</p>
+      <p>Oracle Database Developer and Performance Tuner, specialized on the Exadata platform. Working for Infolob from Irving, Texas. #OCICertified </p>
     
      © 2020
     

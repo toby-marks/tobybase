@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Sql on 👨🏻‍💻 Tobybase</title>
+    <title>sql on 👨🏻‍💻 Tobybase</title>
     <link>http://tobybase.com/tags/sql/</link>
-    <description>Recent content in Sql on 👨🏻‍💻 Tobybase</description>
+    <description>Recent content in sql on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 23 Sep 2019 13:54:50 -0500</lastBuildDate>
@@ -28,7 +28,7 @@ Use PRESERVE_COMMENTS This is most critical. In Oracle, SQL hints are specified 
       
       <guid>http://tobybase.com/posts/2012-11-14-query-an-xml-file-like-an-external-table/</guid>
       <description>Oracle&amp;rsquo;s external table feature allows you to treat structured files on the database server as tables for query and DML purposes. To use an example from the linked documentation, a tab-delimited file like this:
-56 november, 15, 1980 baker mary alice 09/01/2004 87 december, 20, 1970 roper lisa marie 01/01/1999 &amp;hellip;could be queried like this:
+56 november, 15, 1980 baker mary alice 09/01/2004 87 december, 20, 1970 roper lisa marie 01/01/1999  &amp;hellip;could be queried like this:
 SELECT employee_number, employee_first_name, substr(employee_middle_name, 1, 1), employee_last_name, employee_hire_date, to_date(employee_dob,&amp;#39;month, dd, yyyy&amp;#39;) FROM employees; After defining the external table like this:</description>
     </item>
     
@@ -40,7 +40,7 @@ SELECT employee_number, employee_first_name, substr(employee_middle_name, 1, 1),
       <guid>http://tobybase.com/posts/2012-06-07-dml-error-logging/</guid>
       <description>Introduced with Oracle 10gR2, DML Error Logging allows you to make standard SQL INSERT, UPDATE, and MERGE statements behave more like the SQL*Loader utility, logging errors to a table rather than failing and rolling back the first time an error condition is encountered.
 The syntax is the same for all DML statements. Just add the following clause to the end of your DML:
-LOG ERRORS  The database will automatically create an error log table for you.</description>
+LOG ERRORS The database will automatically create an error log table for you.</description>
     </item>
     
     <item>

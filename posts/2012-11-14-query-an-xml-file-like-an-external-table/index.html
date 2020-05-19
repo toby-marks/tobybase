@@ -12,17 +12,17 @@
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="How To Use SQL to Query an XML Document Using Oracle External Tables"/>
 <meta name="twitter:description" content="Oracle&rsquo;s external table feature allows you to treat structured files on the database server as tables for query and DML purposes. To use an example from the linked documentation, a tab-delimited file like this:
-56 november, 15, 1980 baker mary alice 09/01/2004 87 december, 20, 1970 roper lisa marie 01/01/1999 &hellip;could be queried like this:
+56 november, 15, 1980 baker mary alice 09/01/2004 87 december, 20, 1970 roper lisa marie 01/01/1999  &hellip;could be queried like this:
 SELECT employee_number, employee_first_name, substr(employee_middle_name, 1, 1), employee_last_name, employee_hire_date, to_date(employee_dob,&#39;month, dd, yyyy&#39;) FROM employees; After defining the external table like this:"/>
 
     <meta property="og:title" content="How To Use SQL to Query an XML Document Using Oracle External Tables" />
 <meta property="og:description" content="Oracle&rsquo;s external table feature allows you to treat structured files on the database server as tables for query and DML purposes. To use an example from the linked documentation, a tab-delimited file like this:
-56 november, 15, 1980 baker mary alice 09/01/2004 87 december, 20, 1970 roper lisa marie 01/01/1999 &hellip;could be queried like this:
+56 november, 15, 1980 baker mary alice 09/01/2004 87 december, 20, 1970 roper lisa marie 01/01/1999  &hellip;could be queried like this:
 SELECT employee_number, employee_first_name, substr(employee_middle_name, 1, 1), employee_last_name, employee_hire_date, to_date(employee_dob,&#39;month, dd, yyyy&#39;) FROM employees; After defining the external table like this:" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://tobybase.com/posts/2012-11-14-query-an-xml-file-like-an-external-table/" />
-<meta property="article:published_time" content="2012-11-14T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2017-02-22T00:00:00&#43;00:00"/>
+<meta property="article:published_time" content="2012-11-14T00:00:00+00:00" />
+<meta property="article:modified_time" content="2017-02-22T00:00:00+00:00" />
 
 
     
@@ -57,7 +57,7 @@ SELECT employee_number, employee_first_name, substr(employee_middle_name, 1, 1),
     <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-16x16.png" sizes="16x16">
 
-    <meta name="generator" content="Hugo 0.54.0" />
+    <meta name="generator" content="Hugo 0.64.1" />
   </head>
 
   <body class=" ">
@@ -131,17 +131,18 @@ SELECT employee_number, employee_first_name, substr(employee_middle_name, 1, 1),
 
       <div>
         <p>Oracle&rsquo;s <a href="http://docs.oracle.com/cd/B28359_01/server.111/b28319/et_concepts.htm">external table feature</a> allows you to treat structured files on the database server as tables for query and DML purposes. To use an example from the linked documentation, a tab-delimited file like this:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">56   november, 15, 1980  baker             mary       alice     09/01/2004
-87   december, 20, 1970  roper             lisa       marie     01/01/1999</pre></div>
+<pre><code>56   november, 15, 1980  baker             mary       alice     09/01/2004
+87   december, 20, 1970  roper             lisa       marie     01/01/1999
+</code></pre>
 <p>&hellip;could be queried like this:</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-SQL" data-lang="SQL"><span style="font-weight:bold">SELECT</span> employee_number,
        employee_first_name,
        substr(employee_middle_name, 1, 1),
        employee_last_name,
        employee_hire_date,
-       to_date(employee_dob,<span style="font-style:italic">&#39;month, dd, yyyy&#39;</span>)
-  <span style="font-weight:bold">FROM</span> employees;</code></pre></div>
-<p>After defining the external table like this:</p>
+       to_date(employee_dob,<span style="font-style:italic">&#39;</span><span style="font-style:italic">month, dd, yyyy</span><span style="font-style:italic">&#39;</span>)
+  <span style="font-weight:bold">FROM</span> employees;
+</code></pre></div><p>After defining the external table like this:</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">    <span style="font-weight:bold">CREATE</span> <span style="font-weight:bold">TABLE</span> employees
            (employee_number      CHAR(5),
             employee_dob         CHAR(20),
@@ -159,56 +160,53 @@ SELECT employee_number, employee_first_name, substr(employee_middle_name, 1, 1),
                        employee_last_name   CHAR(18),
                        employee_first_name  CHAR(11),
                        employee_middle_name CHAR(11),
-                       employee_hire_date   CHAR(10) date_format DATE mask <span style="font-style:italic">&#34;mm/dd/yyyy&#34;</span>
+                       employee_hire_date   CHAR(10) date_format DATE mask <span style="font-style:italic">&#34;</span><span style="font-style:italic">mm/dd/yyyy</span><span style="font-style:italic">&#34;</span>
                       )
               )
-            <span style="font-weight:bold">LOCATION</span> (<span style="font-style:italic">&#39;info.dat&#39;</span>)
-           );</code></pre></div>
-<p>Assuming of course that the file&rsquo;s name is <code>info.dat</code>, and its path on the filesystem has already been created as a directory object <code>DEF_DIR1</code> in the database.</p>
-
-<p>A similar technique exists for querying simple XML files, taking advantage of <a href="http://docs.oracle.com/cd/E11882_01/appdev.112/e23094/toc.htm">Oracle&rsquo;s XML DB</a> features. _HT to <a href="https://forums.oracle.com/forums/profile.jspa?userID=695787">odie_63</a> on the XML DB forums for introducing me to this method._</p>
-
+            <span style="font-weight:bold">LOCATION</span> (<span style="font-style:italic">&#39;</span><span style="font-style:italic">info.dat</span><span style="font-style:italic">&#39;</span>)
+           );
+</code></pre></div><p>Assuming of course that the file&rsquo;s name is <code>info.dat</code>, and its path on the filesystem has already been created as a directory object <code>DEF_DIR1</code> in the database.</p>
+<p>A similar technique exists for querying simple XML files, taking advantage of <a href="http://docs.oracle.com/cd/E11882_01/appdev.112/e23094/toc.htm">Oracle&rsquo;s XML DB</a> features. <em>HT to <a href="https://forums.oracle.com/forums/profile.jspa?userID=695787">odie_63</a> on the XML DB forums for introducing me to this method.</em></p>
 <p>Suppose you have a simple XML file (elements, but no attributes; no complex column types - it could work for the preceding, but I&rsquo;m not sure) like so.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">    <span style="font-weight:bold">&lt;Employees&gt;</span>
-        <span style="font-weight:bold">&lt;Employee&gt;</span>
-            <span style="font-weight:bold">&lt;id&gt;</span>1234<span style="font-weight:bold">&lt;/id&gt;</span>
-            <span style="font-weight:bold">&lt;lastname&gt;</span>Jetson<span style="font-weight:bold">&lt;/lastname&gt;</span>
-            <span style="font-weight:bold">&lt;firstname&gt;</span>George<span style="font-weight:bold">&lt;/firstname&gt;</span>
-            <span style="font-weight:bold">&lt;department&gt;</span>10<span style="font-weight:bold">&lt;/department&gt;</span>
-            <span style="font-weight:bold">&lt;salary&gt;</span>50000.00<span style="font-weight:bold">&lt;/salary&gt;</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">    <span style="font-weight:bold">&lt;Employees</span><span style="font-weight:bold">&gt;</span>
+        <span style="font-weight:bold">&lt;Employee</span><span style="font-weight:bold">&gt;</span>
+            <span style="font-weight:bold">&lt;id</span><span style="font-weight:bold">&gt;</span>1234<span style="font-weight:bold">&lt;/id&gt;</span>
+            <span style="font-weight:bold">&lt;lastname</span><span style="font-weight:bold">&gt;</span>Jetson<span style="font-weight:bold">&lt;/lastname&gt;</span>
+            <span style="font-weight:bold">&lt;firstname</span><span style="font-weight:bold">&gt;</span>George<span style="font-weight:bold">&lt;/firstname&gt;</span>
+            <span style="font-weight:bold">&lt;department</span><span style="font-weight:bold">&gt;</span>10<span style="font-weight:bold">&lt;/department&gt;</span>
+            <span style="font-weight:bold">&lt;salary</span><span style="font-weight:bold">&gt;</span>50000.00<span style="font-weight:bold">&lt;/salary&gt;</span>
         <span style="font-weight:bold">&lt;/Employee&gt;</span>
-        <span style="font-weight:bold">&lt;Employee&gt;</span>
-            <span style="font-weight:bold">&lt;id&gt;</span>1235<span style="font-weight:bold">&lt;/id&gt;</span>
-            <span style="font-weight:bold">&lt;lastname&gt;</span>Crackorn<span style="font-weight:bold">&lt;/lastname&gt;</span>
-            <span style="font-weight:bold">&lt;firstname&gt;</span>James<span style="font-weight:bold">&lt;/firstname&gt;</span>
-            <span style="font-weight:bold">&lt;department&gt;</span>10<span style="font-weight:bold">&lt;/department&gt;</span>
-            <span style="font-weight:bold">&lt;salary&gt;</span>40000.00<span style="font-weight:bold">&lt;/salary&gt;</span>
+        <span style="font-weight:bold">&lt;Employee</span><span style="font-weight:bold">&gt;</span>
+            <span style="font-weight:bold">&lt;id</span><span style="font-weight:bold">&gt;</span>1235<span style="font-weight:bold">&lt;/id&gt;</span>
+            <span style="font-weight:bold">&lt;lastname</span><span style="font-weight:bold">&gt;</span>Crackorn<span style="font-weight:bold">&lt;/lastname&gt;</span>
+            <span style="font-weight:bold">&lt;firstname</span><span style="font-weight:bold">&gt;</span>James<span style="font-weight:bold">&lt;/firstname&gt;</span>
+            <span style="font-weight:bold">&lt;department</span><span style="font-weight:bold">&gt;</span>10<span style="font-weight:bold">&lt;/department&gt;</span>
+            <span style="font-weight:bold">&lt;salary</span><span style="font-weight:bold">&gt;</span>40000.00<span style="font-weight:bold">&lt;/salary&gt;</span>
         <span style="font-weight:bold">&lt;/Employee&gt;</span>
-        <span style="font-weight:bold">&lt;Employee&gt;</span>
-            <span style="font-weight:bold">&lt;id&gt;</span>1236<span style="font-weight:bold">&lt;/id&gt;</span>
-            <span style="font-weight:bold">&lt;lastname&gt;</span>Hoffman<span style="font-weight:bold">&lt;/lastname&gt;</span>
-            <span style="font-weight:bold">&lt;firstname&gt;</span>Burl<span style="font-weight:bold">&lt;/firstname&gt;</span>
-            <span style="font-weight:bold">&lt;department&gt;</span>20<span style="font-weight:bold">&lt;/department&gt;</span>
-            <span style="font-weight:bold">&lt;salary&gt;</span>75000.00<span style="font-weight:bold">&lt;/salary&gt;</span>
+        <span style="font-weight:bold">&lt;Employee</span><span style="font-weight:bold">&gt;</span>
+            <span style="font-weight:bold">&lt;id</span><span style="font-weight:bold">&gt;</span>1236<span style="font-weight:bold">&lt;/id&gt;</span>
+            <span style="font-weight:bold">&lt;lastname</span><span style="font-weight:bold">&gt;</span>Hoffman<span style="font-weight:bold">&lt;/lastname&gt;</span>
+            <span style="font-weight:bold">&lt;firstname</span><span style="font-weight:bold">&gt;</span>Burl<span style="font-weight:bold">&lt;/firstname&gt;</span>
+            <span style="font-weight:bold">&lt;department</span><span style="font-weight:bold">&gt;</span>20<span style="font-weight:bold">&lt;/department&gt;</span>
+            <span style="font-weight:bold">&lt;salary</span><span style="font-weight:bold">&gt;</span>75000.00<span style="font-weight:bold">&lt;/salary&gt;</span>
         <span style="font-weight:bold">&lt;/Employee&gt;</span>
-    <span style="font-weight:bold">&lt;/Employees&gt;</span></code></pre></div>
-<p>Place it on the database server in a readable directory, e.g. <code>/home/oracle</code>. Name it <code>employees.xml</code>.</p>
-
+    <span style="font-weight:bold">&lt;/Employees&gt;</span>
+</code></pre></div><p>Place it on the database server in a readable directory, e.g. <code>/home/oracle</code>. Name it <code>employees.xml</code>.</p>
 <p>Now execute the following in SQL*Plus:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">    <span style="font-weight:bold">SQL</span>&gt; <span style="font-weight:bold">CREATE</span> <span style="font-weight:bold">OR</span> <span style="font-weight:bold">REPLACE</span> DIRECTORY XML_DIR <span style="font-weight:bold">AS</span> <span style="font-style:italic">&#39;/home/oracle&#39;</span>;
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">    <span style="font-weight:bold">SQL</span>&gt; <span style="font-weight:bold">CREATE</span> <span style="font-weight:bold">OR</span> <span style="font-weight:bold">REPLACE</span> DIRECTORY XML_DIR <span style="font-weight:bold">AS</span> <span style="font-style:italic">&#39;</span><span style="font-style:italic">/home/oracle</span><span style="font-style:italic">&#39;</span>;
 
     <span style="font-weight:bold">SQL</span>&gt; <span style="font-weight:bold">CREATE</span> <span style="font-weight:bold">OR</span> <span style="font-weight:bold">REPLACE</span> <span style="font-weight:bold">VIEW</span> employees_v <span style="font-weight:bold">AS</span>
     <span style="font-weight:bold">SELECT</span> *
-    <span style="font-weight:bold">FROM</span> XMLTable(<span style="font-style:italic">&#39;/Employees/Employee&#39;</span>
+    <span style="font-weight:bold">FROM</span> XMLTable(<span style="font-style:italic">&#39;</span><span style="font-style:italic">/Employees/Employee</span><span style="font-style:italic">&#39;</span>
             passing xmltype(
-                     bfilename(<span style="font-style:italic">&#39;XML_DIR&#39;</span>,<span style="font-style:italic">&#39;employees.xml&#39;</span>)
-                    , nls_charset_id(<span style="font-style:italic">&#39;AL32UTF8&#39;</span>)
+                     bfilename(<span style="font-style:italic">&#39;</span><span style="font-style:italic">XML_DIR</span><span style="font-style:italic">&#39;</span>,<span style="font-style:italic">&#39;</span><span style="font-style:italic">employees.xml</span><span style="font-style:italic">&#39;</span>)
+                    , nls_charset_id(<span style="font-style:italic">&#39;</span><span style="font-style:italic">AL32UTF8</span><span style="font-style:italic">&#39;</span>)
                     )
-            columns id           number path <span style="font-style:italic">&#39;id&#39;</span>
-                  , lastname     varchar2(30) path <span style="font-style:italic">&#39;lastname&#39;</span>
-                  , firstname    varchar2(30) path <span style="font-style:italic">&#39;firstname&#39;</span>
-                  , department   number path <span style="font-style:italic">&#39;department&#39;</span>
-                  , salary       number path <span style="font-style:italic">&#39;salary&#39;</span>
+            columns id           number path <span style="font-style:italic">&#39;</span><span style="font-style:italic">id</span><span style="font-style:italic">&#39;</span>
+                  , lastname     varchar2(30) path <span style="font-style:italic">&#39;</span><span style="font-style:italic">lastname</span><span style="font-style:italic">&#39;</span>
+                  , firstname    varchar2(30) path <span style="font-style:italic">&#39;</span><span style="font-style:italic">firstname</span><span style="font-style:italic">&#39;</span>
+                  , department   number path <span style="font-style:italic">&#39;</span><span style="font-style:italic">department</span><span style="font-style:italic">&#39;</span>
+                  , salary       number path <span style="font-style:italic">&#39;</span><span style="font-style:italic">salary</span><span style="font-style:italic">&#39;</span>
            );
 
     <span style="font-weight:bold">SQL</span>&gt; <span style="font-weight:bold">SELECT</span> * <span style="font-weight:bold">FROM</span> employees_v;
@@ -216,23 +214,23 @@ SELECT employee_number, employee_first_name, substr(employee_middle_name, 1, 1),
     <span style="font-style:italic">---- -------- --------- ---------- ------
 </span><span style="font-style:italic"></span>    1234 Jetson   George    10         50000    
     1235 Crackorn James     10         40000
-    1236 Hoffman  Burl      20         75000</code></pre></div>
-<p>You can modify construction of the view to read from multiple files by using a simple <code>UNION</code> operator, or you can make the source filename dynamic so you can switch datasets at runtime. Here&rsquo;s how you might do something like that:</p>
+    1236 Hoffman  Burl      20         75000
+</code></pre></div><p>You can modify construction of the view to read from multiple files by using a simple <code>UNION</code> operator, or you can make the source filename dynamic so you can switch datasets at runtime. Here&rsquo;s how you might do something like that:</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">    <span style="font-weight:bold">SQL</span>&gt; <span style="font-weight:bold">CREATE</span> <span style="font-weight:bold">OR</span> <span style="font-weight:bold">REPLACE</span> <span style="font-weight:bold">VIEW</span> employees_v <span style="font-weight:bold">AS</span>
     <span style="font-weight:bold">SELECT</span> *
-    <span style="font-weight:bold">FROM</span> XMLTable(<span style="font-style:italic">&#39;/Employees/Employee&#39;</span>
+    <span style="font-weight:bold">FROM</span> XMLTable(<span style="font-style:italic">&#39;</span><span style="font-style:italic">/Employees/Employee</span><span style="font-style:italic">&#39;</span>
             passing xmltype(
-                     bfilename(<span style="font-style:italic">&#39;XML_DIR&#39;</span>, userenv(<span style="font-style:italic">&#39;CLIENT_INFO&#39;</span>))
-                    , nls_charset_id(<span style="font-style:italic">&#39;AL32UTF8&#39;</span>)
+                     bfilename(<span style="font-style:italic">&#39;</span><span style="font-style:italic">XML_DIR</span><span style="font-style:italic">&#39;</span>, userenv(<span style="font-style:italic">&#39;</span><span style="font-style:italic">CLIENT_INFO</span><span style="font-style:italic">&#39;</span>))
+                    , nls_charset_id(<span style="font-style:italic">&#39;</span><span style="font-style:italic">AL32UTF8</span><span style="font-style:italic">&#39;</span>)
                     )
-            columns id           number path <span style="font-style:italic">&#39;id&#39;</span>
-                  , lastname     varchar2(30) path <span style="font-style:italic">&#39;lastname&#39;</span>
-                  , firstname    varchar2(30) path <span style="font-style:italic">&#39;firstname&#39;</span>
-                  , department   number path <span style="font-style:italic">&#39;department&#39;</span>
-                  , salary       number path <span style="font-style:italic">&#39;salary&#39;</span>
-           );</code></pre></div>
-<p>Then at runtime, specify the file you want to use like this:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plpgsql" data-lang="plpgsql">    SQL&gt; exec dbms_application_info.set_client_info(<span style="font-style:italic">&#39;employees_01.xml&#39;</span>);
+            columns id           number path <span style="font-style:italic">&#39;</span><span style="font-style:italic">id</span><span style="font-style:italic">&#39;</span>
+                  , lastname     varchar2(30) path <span style="font-style:italic">&#39;</span><span style="font-style:italic">lastname</span><span style="font-style:italic">&#39;</span>
+                  , firstname    varchar2(30) path <span style="font-style:italic">&#39;</span><span style="font-style:italic">firstname</span><span style="font-style:italic">&#39;</span>
+                  , department   number path <span style="font-style:italic">&#39;</span><span style="font-style:italic">department</span><span style="font-style:italic">&#39;</span>
+                  , salary       number path <span style="font-style:italic">&#39;</span><span style="font-style:italic">salary</span><span style="font-style:italic">&#39;</span>
+           );
+</code></pre></div><p>Then at runtime, specify the file you want to use like this:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plpgsql" data-lang="plpgsql">    SQL&gt; exec dbms_application_info.set_client_info(<span style="font-style:italic"></span><span style="font-style:italic">&#39;</span><span style="font-style:italic">employees_01.xml</span><span style="font-style:italic">&#39;</span>);
 
     SQL&gt; <span style="font-weight:bold">SELECT</span> * <span style="font-weight:bold">FROM</span> employees_v;
     ID   LASTNAME FIRSTNAME DEPARTMENT SALARY
@@ -241,22 +239,20 @@ SELECT employee_number, employee_first_name, substr(employee_middle_name, 1, 1),
     1235 Crackorn James     10         40000
     1236 Hoffman  Burl      20         75000
 
-    SQL&gt; exec dbms_application_info.set_client_info(<span style="font-style:italic">&#39;employees_02.xml&#39;</span>);
+    SQL&gt; exec dbms_application_info.set_client_info(<span style="font-style:italic"></span><span style="font-style:italic">&#39;</span><span style="font-style:italic">employees_02.xml</span><span style="font-style:italic">&#39;</span>);
 
     SQL&gt; <span style="font-weight:bold">SELECT</span> * <span style="font-weight:bold">FROM</span> employees_v;
     ID   LASTNAME FIRSTNAME DEPARTMENT SALARY
     <span style="font-style:italic">---- -------- --------- ---------- ------
 </span><span style="font-style:italic"></span>    1234 Ringwald Malory    30         63000    
     1235 Dulles   Bob       10         100000
-    1236 Stein    Frank     50         55000</code></pre></div>
-<p>Why might this be useful? Suppose you have an arbitrary number of identically structured XML files in a directory that you want to import into a relational database table. Using a shell script you can, for each file in the directory,</p>
-
+    1236 Stein    Frank     50         55000
+</code></pre></div><p>Why might this be useful? Suppose you have an arbitrary number of identically structured XML files in a directory that you want to import into a relational database table. Using a shell script you can, for each file in the directory,</p>
 <ul>
 <li>log in to SQL*Plus</li>
 <li>set the <code>CLIENT_INFO</code> variable to the name of the current file</li>
 <li>perform a simple insert into your table reading all records from the view</li>
 </ul>
-
 <p>You might even create a cron job to monitor a particular directory for new XML files, processing them into tables and then deleting or archiving the files when done.</p>
 
       </div>
@@ -296,7 +292,7 @@ SELECT employee_number, employee_first_name, substr(employee_middle_name, 1, 1),
       <footer class="footer">
   <section class="container">
     
-      <p>Oracle Database Developer and Performance Tuner, specialized on the Exadata platform. Working for Infolob from Irving, Texas. #OCICertified</p>
+      <p>Oracle Database Developer and Performance Tuner, specialized on the Exadata platform. Working for Infolob from Irving, Texas. #OCICertified </p>
     
      © 2020
     

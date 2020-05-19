@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Database on 👨🏻‍💻 Tobybase</title>
@@ -75,8 +75,7 @@ I have personally observed this behavior on every version of SQL Developer since
       <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>http://tobybase.com/posts/2018-04-10-oci-add-block-volume-on-windows/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://tobybase.com/img/2018-04-10-oci-add-block-volume-on-windows/access-denied.jpg&#34; width=&#34;800px&#34;&gt;&lt;/p&gt;
-
+      <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;If you are getting the above error when trying to add a block volume to a Windows VM in Oracle Cloud Infrastructure, the solution is quite simple.&lt;/p&gt;</description>
     </item>
     
@@ -128,7 +127,7 @@ In Java 6 on OS X, the hotkey for pressing the Help and Apply buttons was OPTION
       
       <guid>http://tobybase.com/posts/2012-11-14-query-an-xml-file-like-an-external-table/</guid>
       <description>Oracle&amp;rsquo;s external table feature allows you to treat structured files on the database server as tables for query and DML purposes. To use an example from the linked documentation, a tab-delimited file like this:
-56 november, 15, 1980 baker mary alice 09/01/2004 87 december, 20, 1970 roper lisa marie 01/01/1999 &amp;hellip;could be queried like this:
+56 november, 15, 1980 baker mary alice 09/01/2004 87 december, 20, 1970 roper lisa marie 01/01/1999  &amp;hellip;could be queried like this:
 SELECT employee_number, employee_first_name, substr(employee_middle_name, 1, 1), employee_last_name, employee_hire_date, to_date(employee_dob,&amp;#39;month, dd, yyyy&amp;#39;) FROM employees; After defining the external table like this:</description>
     </item>
     
@@ -139,7 +138,8 @@ SELECT employee_number, employee_first_name, substr(employee_middle_name, 1, 1),
       
       <guid>http://tobybase.com/posts/2012-11-12-restricting-access-to-bi-publisher-reports/</guid>
       <description>In my last post I described how to configure BI Publisher to authenticate against an LDAP server, typically a corporate Active Directory server. Aside from authentication, you can also use LDAP group membership to determine who has access to a given report. Here&amp;rsquo;s how you do it.
- Create a group in your LDAP/AD directory and assign your target users to that group. Revisit your LDAP authentication settings. These are located on the Admin Tab, on the Security Configuration page.</description>
+  Create a group in your LDAP/AD directory and assign your target users to that group.
+  Revisit your LDAP authentication settings.</description>
     </item>
     
     <item>
@@ -148,8 +148,7 @@ SELECT employee_number, employee_first_name, substr(employee_middle_name, 1, 1),
       <pubDate>Mon, 12 Nov 2012 17:32:00 +0000</pubDate>
       
       <guid>http://tobybase.com/posts/2012-11-12-configure-oracle-bi-publisher-to-authenticate-with-active-directory/</guid>
-      <description>Log in to BI Publisher as an administrator. Click on the Admin tab. Click on Security Configuration. For Security Model, choose LDAP and enter the following parameters:
-   Setting Example Value     URL ldap://ad.mycompany.com:389 Your company&amp;rsquo;s LDAP server and port.   Administrator Username CN=ADMIN,OU=Users,OU=Shared Services,DC=mycompany,DC=com The fully qualified DN of the account you use to sign in to LDAP.   Administrator Password myxlplyx The password for the above account.</description>
+      <description>Log in to BI Publisher as an administrator. Click on the Admin tab. Click on Security Configuration. For Security Model, choose LDAP and enter the following parameters:    Setting Example Value     URL ldap://ad.mycompany.com:389 Your company&amp;rsquo;s LDAP server and port.   Administrator Username CN=ADMIN,OU=Users,OU=Shared Services,DC=mycompany,DC=com The fully qualified DN of the account you use to sign in to LDAP.   Administrator Password myxlplyx The password for the above account.</description>
     </item>
     
     <item>
@@ -199,7 +198,7 @@ That fixes the CPU issue, but somewhat annoyingly moves the menu out of the menu
       <guid>http://tobybase.com/posts/2012-06-07-dml-error-logging/</guid>
       <description>Introduced with Oracle 10gR2, DML Error Logging allows you to make standard SQL INSERT, UPDATE, and MERGE statements behave more like the SQL*Loader utility, logging errors to a table rather than failing and rolling back the first time an error condition is encountered.
 The syntax is the same for all DML statements. Just add the following clause to the end of your DML:
-LOG ERRORS  The database will automatically create an error log table for you.</description>
+LOG ERRORS The database will automatically create an error log table for you.</description>
     </item>
     
     <item>
