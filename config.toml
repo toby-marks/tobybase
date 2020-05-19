@@ -25,11 +25,11 @@ enableEmoji = true
     favicon_32 = "/img/favicon-32x32.png"
     favicon_16 = "/img/favicon-16x16.png"
 
-    footercontent = "Oracle Database Developer and Performance Tuner, specialized on the Exadata platform. Working for Infolob from Irving, Texas. #OCICertified"
+    footercontent = "Oracle Database Developer and Performance Tuner, specialized on the Exadata platform. Working for Infolob from Irving, Texas. #OCICertified "
     hidecredits = true
     hidecopyright = false
 
-    rtl = false
+    rtl = false   
 
     math = false
     custom_css = ["css/custom.css"]
@@ -60,6 +60,11 @@ enableEmoji = true
 #     icon = "fab fa-facebook fa-2x"
 #     weight = 4
 #     url = "https://facebook.com/tobyjmarks/"
+[[params.social]]
+	name = "Oracle Cloud Infrastructure Foundations 2020 Certified Associate"
+	icon = "fab fa-studiovinari fa-2x"
+	weight = 5
+	url = "https://www.youracclaim.com/badges/b73bc606-4a88-4806-8184-d731e6150b8f/public_url"
 
 # Menu links
 [[menu.main]]
