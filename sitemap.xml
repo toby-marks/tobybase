@@ -13,11 +13,6 @@
   </url>
   
   <url>
-    <loc>http://tobybase.com/</loc>
-    <lastmod>2020-02-07T21:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://tobybase.com/categories/</loc>
     <lastmod>2020-01-27T15:20:10-06:00</lastmod>
   </url>
@@ -34,11 +29,6 @@
   
   <url>
     <loc>http://tobybase.com/tags/macos/</loc>
-    <lastmod>2020-01-27T15:20:10-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/posts/</loc>
     <lastmod>2020-01-27T15:20:10-06:00</lastmod>
   </url>
   
@@ -83,6 +73,11 @@
   </url>
   
   <url>
+    <loc>http://tobybase.com/tags/oracle/</loc>
+    <lastmod>2020-01-17T17:08:16-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://tobybase.com/tags/oracle-autonomous-data-warehouse/</loc>
     <lastmod>2020-01-17T17:08:16-06:00</lastmod>
   </url>
@@ -114,11 +109,6 @@
   
   <url>
     <loc>http://tobybase.com/posts/sas-exadata-performance-tips/</loc>
-    <lastmod>2019-09-23T13:54:50-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/oracle/</loc>
     <lastmod>2019-09-23T13:54:50-05:00</lastmod>
   </url>
   
@@ -288,6 +278,11 @@
   </url>
   
   <url>
+    <loc>http://tobybase.com/</loc>
+    <lastmod>2017-02-23T11:32:23-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://tobybase.com/posts/announcing-tobybase/</loc>
     <lastmod>2017-01-17T22:58:59-06:00</lastmod>
   </url>
@@ -319,11 +314,6 @@
   
   <url>
     <loc>http://tobybase.com/posts/2013-07-24-linux-unix-use-ps-to-list-top-memory-cpu-eating-processes/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/unix/linux/</loc>
     <lastmod>2017-02-22T00:00:00+00:00</lastmod>
   </url>
   
@@ -674,6 +664,10 @@
   
   <url>
     <loc>http://tobybase.com/about/</loc>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/unix/linux/</loc>
   </url>
   
 </urlset>

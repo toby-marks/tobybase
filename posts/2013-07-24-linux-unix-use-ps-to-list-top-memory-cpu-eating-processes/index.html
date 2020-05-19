@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+
+    <meta name="author" content="Toby Marks">
+    <meta name="description" content="The ps command is a versatile and configurable way to look at the processes running on your system, though I&rsquo;ve generally gotten by with a lazy ps -ef to find out whatever I needed to know. Recently, though, a client&rsquo;s server began running out of memory, and as a number of processes were running on the server, the culprit was not immediately clear. I wanted to provide them with a quick, simple diagnostic tool they could use the next time they received an alert.">
+    <meta name="keywords" content="oracle,infolob,blog,consultant,developer,tuning,exadata,personal">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How to Use ps to List Top Memory, CPU Eating Processes"/>
+<meta name="twitter:description" content="The ps command is a versatile and configurable way to look at the processes running on your system, though I&rsquo;ve generally gotten by with a lazy ps -ef to find out whatever I needed to know. Recently, though, a client&rsquo;s server began running out of memory, and as a number of processes were running on the server, the culprit was not immediately clear. I wanted to provide them with a quick, simple diagnostic tool they could use the next time they received an alert."/>
+
+    <meta property="og:title" content="How to Use ps to List Top Memory, CPU Eating Processes" />
+<meta property="og:description" content="The ps command is a versatile and configurable way to look at the processes running on your system, though I&rsquo;ve generally gotten by with a lazy ps -ef to find out whatever I needed to know. Recently, though, a client&rsquo;s server began running out of memory, and as a number of processes were running on the server, the culprit was not immediately clear. I wanted to provide them with a quick, simple diagnostic tool they could use the next time they received an alert." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tobybase.com/posts/2013-07-24-linux-unix-use-ps-to-list-top-memory-cpu-eating-processes/" />
+<meta property="article:published_time" content="2013-07-24T21:42:00+00:00" />
+<meta property="article:modified_time" content="2017-02-22T00:00:00+00:00" />
+
+
+    
+      <base href="http://tobybase.com/posts/2013-07-24-linux-unix-use-ps-to-list-top-memory-cpu-eating-processes/">
+    
+    <title>
+  How to Use ps to List Top Memory, CPU Eating Processes · 👨🏻‍💻 Tobybase
+</title>
+
+    
+      <link rel="canonical" href="http://tobybase.com/posts/2013-07-24-linux-unix-use-ps-to-list-top-memory-cpu-eating-processes/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="http://tobybase.com/css/coder.min.a4f332213a21ce8eb521670c614470c58923aaaf385e2a73982c31dd7642decb.css" integrity="sha256-pPMyITohzo61IWcMYURwxYkjqq84XipzmCwx3XZC3ss=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+      <link rel="stylesheet" href="http://tobybase.com/css/custom.css" />
+    
+
+    
+
+    <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.71.0" />
+  </head>
+
+  
+  
+  <body class="colorscheme-light">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="http://tobybase.com/">
+      👨🏻‍💻 Tobybase
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://tobybase.com/posts/">Blog</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://tobybase.com/links/">Links</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://tobybase.com/about/">About</a>
+          </li>
+        
+      
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">How to Use ps to List Top Memory, CPU Eating Processes</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fas fa-calendar"></i>
+              <time datetime='2013-07-24T21:42:00Z'>
+                July 24, 2013
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              2-minute read
+            </span>
+          </div>
+          <div class="categories">
+  <i class="fas fa-folder"></i>
+    <a href="http://tobybase.com/categories/development/">Development</a></div>
+
+          <div class="tags">
+  <i class="fas fa-tag"></i>
+    <a href="http://tobybase.com/tags/unix/linux/">unix/linux</a>
+      <span class="separator">•</span>
+    <a href="http://tobybase.com/tags/macos/">macos</a></div>
+
+        </div>
+      </header>
+
+      <div>
+        
+        <p>The <code>ps</code> command is a versatile and configurable way to look at the processes running on your system, though I&rsquo;ve generally gotten by with a lazy <code>ps -ef</code> to find out whatever I needed to know. Recently, though, a client&rsquo;s server began running out of memory, and as a number of processes were running on the server, the culprit was not immediately clear. I wanted to provide them with a quick, simple diagnostic tool they could use the next time they received an alert.</p>
+<p>If you look at the man page for <code>ps</code> you&rsquo;ll find a number of options available for sorting the list of processes returned as well as for filtering the columns displayed.</p>
+<p><img src="http://tobybase.com/img/2013-07-24-linux-unix-use-ps-to-list-top-memory-cpu-eating-processes/ac6287b65af17b95d247ea063f0aa1bfc6f106f3b69adf0ae73ed8258d3a6c7b.png" alt=""></p>
+<p>Some examples of <code>ps</code> options, from RHEL 5.6:</p>
+<p><strong>-e</strong><br>
+select all processes</p>
+<p><strong>-a</strong><br>
+select all &ldquo;child&rdquo; processes</p>
+<p><strong>-U &lt;user&gt;</strong><br>
+select all processes for a specified user</p>
+<p><strong>-p &lt;pid&gt;</strong><br>
+select by process id</p>
+<p><strong>-f</strong><br>
+full-format listing; adds columns and shows process arguments</p>
+<p><strong>-o</strong><br>
+user-defined format</p>
+<p>Many others are available, of course, but in order to keep it simple for the client I wanted to show the top 10 processes in terms of memory utilization, with the pid, memory usage, and process name displayed. Here is what I came up with:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ps -eo pid,user,pmem,args O R | tail -n 10
+</code></pre></div><p>And here is an explanation:</p>
+<p><strong>ps</strong><br>
+shows running processes</p>
+<p><strong>      -e</strong><br>
+show all processes</p>
+<p><strong>      -o pid,user,poem,args</strong><br>
+show the pid, %mem, and process columns</p>
+<p><strong>      O R</strong><br>
+sort by memory usage (ascending)</p>
+<p><strong>tail</strong><br>
+shows only the last lines</p>
+<p><strong>      -n 10</strong><br>
+show the last 10 lines</p>
+<p>I liked the concept so much that I decided to adapt it for OS X, where the <code>ps</code> command takes a slightly different set of arguments. To my .bash_profile file I added the following lines:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">alias psmem=<span style="font-style:italic">&#34;while :; do clear; ps -ecm -o %mem,rss,pid,user,state,args | head -n 10; sleep 5; done&#34;</span>
+alias pscpu=<span style="font-style:italic">&#34;while :; do clear; ps -ecr -o %cpu,pid,user,state,args | head -n 10; sleep 2; done&#34;</span>
+</code></pre></div><p>I have one alias for retrieving my top memory-utilizing processes and one for my top CPU-utilizing processes. The <code>while</code> loop in the alias implements a functionality similar to that of the Linux <code>watch</code> command, clearing the screen and running the process indefinitely until it is forcibly quit. For my own purposes I wanted to display some additional columns, like username and process state. I also changed the sort ordering to display the largest processes at the top of the list.</p>
+<p><img src="http://tobybase.com/img/2013-07-24-linux-unix-use-ps-to-list-top-memory-cpu-eating-processes/2bcd3b2c40d8bc37893b47399aed325508e95c655492de8866a8365eede7008f.png" alt=""></p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tobybase-com" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+        <p>Oracle Database Developer and Performance Tuner, specialized on the Exadata platform. Working for Infolob from Irving, Texas. #OCICertified </p>
+      
+      
+        ©
+        
+        2020
+         Toby Marks 
+      
+      
+      
+    </section>
+  </footer>
+
+    </main>
+
+    
+
+    
+
+    
+
+  </body>
+
+</html>

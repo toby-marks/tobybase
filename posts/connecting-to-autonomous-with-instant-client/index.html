@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+
+    <meta name="author" content="Toby Marks">
+    <meta name="description" content="The easiest and fastest way to query and create data in your new cloud database is with SQL Developer Web, provided free with every new instance of Autonomous Database and Autonomous Data Warehouse in the Cloud. Second fastest would be with a local installation of SQL Developer or SQLcl. But if you want an authentic SQL*Plus environment, then you&rsquo;ll need Oracle Instant Client.
+You have two options for running SQL*Plus under Instant Client: download and install a platform-native version, or else run Instant Client in a Docker container.">
+    <meta name="keywords" content="oracle,infolob,blog,consultant,developer,tuning,exadata,personal">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Connect to Autonomous Database in the Cloud with Oracle Instant Client"/>
+<meta name="twitter:description" content="The easiest and fastest way to query and create data in your new cloud database is with SQL Developer Web, provided free with every new instance of Autonomous Database and Autonomous Data Warehouse in the Cloud. Second fastest would be with a local installation of SQL Developer or SQLcl. But if you want an authentic SQL*Plus environment, then you&rsquo;ll need Oracle Instant Client.
+You have two options for running SQL*Plus under Instant Client: download and install a platform-native version, or else run Instant Client in a Docker container."/>
+
+    <meta property="og:title" content="Connect to Autonomous Database in the Cloud with Oracle Instant Client" />
+<meta property="og:description" content="The easiest and fastest way to query and create data in your new cloud database is with SQL Developer Web, provided free with every new instance of Autonomous Database and Autonomous Data Warehouse in the Cloud. Second fastest would be with a local installation of SQL Developer or SQLcl. But if you want an authentic SQL*Plus environment, then you&rsquo;ll need Oracle Instant Client.
+You have two options for running SQL*Plus under Instant Client: download and install a platform-native version, or else run Instant Client in a Docker container." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tobybase.com/posts/connecting-to-autonomous-with-instant-client/" />
+<meta property="article:published_time" content="2020-01-17T17:08:16-06:00" />
+<meta property="article:modified_time" content="2020-01-17T17:08:16-06:00" />
+
+
+
+    
+      <base href="http://tobybase.com/posts/connecting-to-autonomous-with-instant-client/">
+    
+    <title>
+  Connect to Autonomous Database in the Cloud with Oracle Instant Client · 👨🏻‍💻 Tobybase
+</title>
+
+    
+      <link rel="canonical" href="http://tobybase.com/posts/connecting-to-autonomous-with-instant-client/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="http://tobybase.com/css/coder.min.a4f332213a21ce8eb521670c614470c58923aaaf385e2a73982c31dd7642decb.css" integrity="sha256-pPMyITohzo61IWcMYURwxYkjqq84XipzmCwx3XZC3ss=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+      <link rel="stylesheet" href="http://tobybase.com/css/custom.css" />
+    
+
+    
+
+    <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.71.0" />
+  </head>
+
+  
+  
+  <body class="colorscheme-light">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="http://tobybase.com/">
+      👨🏻‍💻 Tobybase
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://tobybase.com/posts/">Blog</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://tobybase.com/links/">Links</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://tobybase.com/about/">About</a>
+          </li>
+        
+      
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">Connect to Autonomous Database in the Cloud with Oracle Instant Client</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fas fa-calendar"></i>
+              <time datetime='2020-01-17T17:08:16-06:00'>
+                January 17, 2020
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              6-minute read
+            </span>
+          </div>
+          <div class="categories">
+  <i class="fas fa-folder"></i>
+    <a href="http://tobybase.com/categories/database/">Database</a>
+      <span class="separator">•</span>
+    <a href="http://tobybase.com/categories/cloud/">Cloud</a></div>
+
+          <div class="tags">
+  <i class="fas fa-tag"></i>
+    <a href="http://tobybase.com/tags/oracle-autonomous-database/">Oracle Autonomous Database</a>
+      <span class="separator">•</span>
+    <a href="http://tobybase.com/tags/oracle-autonomous-data-warehouse/">Oracle Autonomous Data Warehouse</a>
+      <span class="separator">•</span>
+    <a href="http://tobybase.com/tags/oracle-cloud/">Oracle Cloud</a></div>
+
+        </div>
+      </header>
+
+      <div>
+        
+        <p>The easiest and fastest way to query and create data in your new cloud database is with SQL Developer Web, provided free with every new instance of Autonomous Database and Autonomous Data Warehouse in the Cloud. Second fastest would be with a local installation of <a href="http://tobybase.com/posts/connecting-to-autonomous-with-sql-dev/">SQL Developer or SQLcl</a>. But if you want an authentic SQL*Plus environment, then you&rsquo;ll need Oracle Instant Client.</p>
+<p>You have two options for running SQL*Plus under Instant Client: <a href="#download-and-install-instant-client">download and install</a> a platform-native version, or else run Instant Client in a <a href="#run-instant-client-in-a-docker-container">Docker container</a>. Your database Service Console has instructions and download links for whichever approach you choose.</p>
+<h3 id="download-and-install-instant-client">Download and Install Instant Client</h3>
+<p><img src="https://res.cloudinary.com/tobyblog/image/upload/v1579364810/img/Screenshot_from_2020-01-09_17.11.52.jpg" alt=""></p>
+<p>Navigate to the Details page for your Autonomous Database, and click on Service Console.</p>
+<p><img src="https://res.cloudinary.com/tobyblog/image/upload/v1579303903/img/Screen_Shot_2020-01-17_at_5.31.33_PM.jpg" alt=""></p>
+<p>Click on Development, then click on <a href="https://www.oracle.com/database/technologies/instant-client.html">Download Oracle Instant Client</a>.</p>
+<p><img src="https://res.cloudinary.com/tobyblog/image/upload/v1579644051/img/Screen_Shot_2020-01-21_at_4.00.38_PM.jpg" alt=""></p>
+<p>Click <a href="https://www.oracle.com/database/technologies/instant-client/downloads.html">Download Now</a> to get to the downloads page, and select a suitable installer. Download Instant Client and follow the simple installation instructions, which will be some variant of the following:</p>
+<ol>
+<li>Download the appropriate Instant Client packages for your platform. All installations REQUIRE the Basic package.</li>
+<li>Unzip the packages into a single directory such as &ldquo;instantclient&rdquo;.</li>
+<li>Set the library loading path in your environment to the directory in Step 2 (i.e., &ldquo;instantclient&rdquo;). On MacOS, DYLD_LIBRARY_PATH is the appropriate environment variable.</li>
+<li>Set the executable path in your environment to the directory in Step 2 (i.e., &ldquo;instantclient&rdquo;). On most systems, PATH is the appropriate variable.</li>
+</ol>
+<h3 id="run-instant-client-in-a-docker-container">Run Instant Client in a Docker Container</h3>
+<p>While Oracle Instant Client is available for most all major platforms, you may find it advantageous to run it in a <a href="https://www.docker.com/">Docker</a> container; for instance, if you need the ability to run multiple versions for testing purposes, or if you want to integrate Instant Client installations into a CI/CD build and deploy workflow.</p>
+<p><em>I&rsquo;ll skip the steps for installing Docker on this blog. You can find instructions on the Docker website <a href="https://lmgtfy.com/?q=how+to+install+docker">or here</a>. For those unfamiliar with Docker or container technologies, you can think of containers as a lighter-weight version of virtual machines; whereas a virtual machine attempts to emulate hardware in software, a container seeks to emulate only the O/S or application service layer needed by a specific applicatoin. As a result, containers use far less memory and CPU than software running in virtual machines.</em></p>
+<p>Oracle provides ready-made containers for the 12c Instant Client on both <a href="#pull-the-instant-client-12c-container-from-docker-hub">Docker Hub</a> and its own <a href="#pull-the-instant-client-12c-container-from-the-oracle-container-registry">Oracle Container Registry</a>. If you want to run the latest 19c version, you&rsquo;ll need to download the Dockerfiles (the build script for the Docker image) from <a href="#build-instant-client-19c-from-dockerfiles-on-oracles-github-repo">Oracle&rsquo;s Github repository</a> and build the container yourself.</p>
+<h4 id="pull-the-instant-client-12c-container-from-docker-hub">Pull the Instant Client 12c Container From Docker Hub</h4>
+<p>You can find <a href="https://hub.docker.com/_/oracle-instant-client">Instant Client</a> on the <a href="https://hub.docker.com/">Docker Hub</a> under <a href="https://hub.docker.com/publishers/oracle">Oracle&rsquo;s Publisher Page</a>. Click the Proceed to Download button. You&rsquo;ll need to sign in or create a (free) account with Docker, and then accept Oracle&rsquo;s licensing terms to get the download instructions.</p>
+<p>To pull the container from Docker Hub, run the following.</p>
+<pre><code>$ docker login
+</code></pre>
+<p>If prompted, provide your Docker Hub credentials.</p>
+<pre><code>$ docker pull store/oracle/database-instantclient:12.2.0.1
+</code></pre>
+<p>You can now run SQL*Plus with something like the following command.</p>
+<pre><code>$ docker run -ti --rm database-instantclient:12.2.0.1 sqlplus admin/password@example.com/pdborcl
+</code></pre>
+<h4 id="pull-the-instant-client-12c-container-from-the-oracle-container-registry">Pull the Instant Client 12c Container From the Oracle Container Registry</h4>
+<p>Another option would be to pull the container directly from Oracle. However, the ready-made container that Oracle provides is no more recent than the one available from Docker.</p>
+<p>Navigate to the <a href="https://container-registry.oracle.com/pls/apex/f?p=113">Oracle Container Registry</a> and click on Database. Then click on &ldquo;instantclient.&rdquo;</p>
+<p>As with Docker Hub, you&rsquo;ll need to sign in or create a (free) Oracle account before you can pull the container.</p>
+<pre><code>$ docker login container-registry.oracle.com
+</code></pre>
+<p>Enter your Oracle credentials. Then pull the container with the following command.</p>
+<pre><code>$ docker pull container-registry.oracle.com/database/instantclient:latest
+</code></pre>
+<p>You can now run SQL*Plus with something like the following command.</p>
+<pre><code>$ docker run -ti --rm instantclient:latest sqlplus admin/password@example.com/pdborcl
+</code></pre>
+<h4 id="build-instant-client-19c-from-dockerfiles-on-oracles-github-repo">Build Instant Client 19c From Dockerfiles on Oracle&rsquo;s Github Repo</h4>
+<p>This option involves a couple of extra steps, but it will definitely allow you to run the latest version of the Instant Client software. For whatever reason, Oracle seems to keep their Github repo more current than their container registry.</p>
+<p>Navigate to the <a href="https://github.com/oracle/docker-images">Oracle Github Repository</a> and click on &ldquo;docker-images&rdquo;. Click on the green &ldquo;clone or download&rdquo; button.</p>
+<p>If you have git and wish to clone the repository, run the following command.</p>
+<pre><code>$ git clone https://github.com/oracle/docker-images.git
+</code></pre>
+<p>Or else just download and extract the ZIP file to a suitable directory.</p>
+<p>Navigate to &ldquo;OracleInstantClient&rdquo; and view the README file. It has instructions for building the container image.</p>
+<p>Change directory to <code>dockerfiles/19</code> and run:</p>
+<pre><code>docker build --pull -t oracle/instantclient:19 .
+</code></pre>
+<p>You do <em>not</em> need to download any Instant Client installation files as the build process automatically downloads them from Oracle&rsquo;s yum server.</p>
+<h3 id="connect-to-autonomous-database-in-the-cloud-with-sqlplus">Connect to Autonomous Database in the Cloud With SQL*Plus</h3>
+<p><img src="https://res.cloudinary.com/tobyblog/image/upload/v1579367350/img/dbconnect.jpg" alt=""></p>
+<p>Navigate to the Details screen for your Autonomous Database or Autonomous Data Warehouse. Click on DB Connection.</p>
+<p><img src="https://res.cloudinary.com/tobyblog/image/upload/v1579367467/img/Screenshot_from_2020-01-09_16.23.01.jpg" alt=""></p>
+<p>Click on Download Wallet. Extract the contents of the wallet file (the ZIP file you just downloaded), and place them in your TNS_ADMIN diretory. If you don&rsquo;t have a TNS_ADMIN directory, create an environmental parameter TNS_ADMIN and point to the directory where the expanded contents of the wallet are located. (<em>See <a href="http://tobybase.com/posts/connecting-to-autonomous-with-sql-dev/">my other post</a> for more on the contents of the wallet file.</em>)</p>
+<p>When you run SQL*Plus in a container, you&rsquo;ll want to map your local TNS_ADMIN directory to the container, so that the container sees the TNS connection info for your database and uses the appropriate wallet file to establish an encrypted connection. Fortunately, this is fairly easy. You can use the <code>-v</code> flag with Docker&rsquo;s run command to map a local file to the container.</p>
+<p>When you map a local directory to a directory on a container, the contents of that directory get &ldquo;overwritten&rdquo; — <em>overlapped</em> might be a better way to think about it — by the contents of the local directory at runtime. You&rsquo;ll need the location of the TNS_ADMIN directory on the container, which thankfully is noted in the README file in the &ldquo;OracleInstantClient&rdquo; directory.</p>
+<p><code>/usr/lib/oracle/19.5/client64/lib/network/admin</code></p>
+<p>So to properly connect to Autonomous Database in the Cloud from SQL*Plus in a Docker container, you&rsquo;ll need to run something like the following command.</p>
+<p><em>NOTE: Scroll the region below to the right to see the whole command.</em></p>
+<pre><code>$ docker run -it --rm -v /path/to/local/TNS_ADMIN/directory:/usr/lib/oracle/19.5/client64/lib/network/admin oracle/instantclient:19 sqlplus admin@myclouddb_high
+</code></pre>
+<p>To make that a little quicker to invoke, you can stick an alias in your SHELL profile script like so.</p>
+<pre><code>#
+# Shell Aliases
+#
+alias sql2cloud='docker run -it --rm -v /path/to/local/TNS_ADMIN/directory:/usr/lib/oracle/19.5/client64/lib/network/admin oracle/instantclient:19 sqlplus admin@myclouddb_high'
+</code></pre>
+<p>Then the next time you login you can just run the following at the prompt to connect to Autonomous Database.</p>
+<pre><code>$ sql2cloud
+</code></pre>
+<p>In conclusion, it&rsquo;s really quick and simple to launch a free instance of Oracle Autonomous Database or Data Warehouse in the Cloud. But connecting to and using your new database might leave a few folks scratching their heads. I hope you found this series of articles helpful in bridging that gap and getting you going with your development tool of choice.</p>
+<p>Now get to work!</p>
+
+      </div>
+
+
+      <footer>
+        
+
+<section class="see-also">
+  
+    
+    
+    
+      <h3>See also in Get Going With Autonomous Database in the Cloud</h3>
+      <nav>
+        <ul>
+        
+        
+          
+        
+          
+            <li>
+              <a href="http://tobybase.com/posts/connecting-to-autonomous-with-sql-dev/">Connect to Autonomous Database in the Cloud with SQL Developer and SQLcl</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="http://tobybase.com/posts/up-and-running-on-oracle-autonomous-database/">Get Up and Running Fast On Oracle Autonomous Database in the Cloud</a>
+            </li>
+          
+        
+        </ul>
+      </nav>
+    
+  
+</section>
+
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tobybase-com" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+        <p>Oracle Database Developer and Performance Tuner, specialized on the Exadata platform. Working for Infolob from Irving, Texas. #OCICertified </p>
+      
+      
+        ©
+        
+        2020
+         Toby Marks 
+      
+      
+      
+    </section>
+  </footer>
+
+    </main>
+
+    
+
+    
+
+    
+
+  </body>
+
+</html>
