@@ -12,6 +12,17 @@
     
     
     <item>
+      <title>How to Configure Static Networking in a Linux VM</title>
+      <link>http://tobybase.com/posts/configure-static-networking/</link>
+      <pubDate>Wed, 20 May 2020 16:36:06 -0500</pubDate>
+      
+      <guid>http://tobybase.com/posts/configure-static-networking/</guid>
+      <description>I originally had this requirement after creating a new persistent linux virtual machine in OVM that needed static addressing. This is just standard linux setup, though, and can be applied to both virtual and physical machines.
+Turn on Networking # sudo vi /etc/sysconfig/network Make sure networking is enabled and configure the hostname.
+NETWORKING=yes HOSTNAME=myhost.mycompany.local Configure the Network Interface # sudo vi /etc/sysconfig/network-scripts/ifcfg-eth0 Here is a sample config for static IPs.</description>
+    </item>
+    
+    <item>
       <title>How to Restore Files From a Previous Version in Git/Github</title>
       <link>http://tobybase.com/posts/how-to-recover-a-prior-version-on-github/</link>
       <pubDate>Tue, 19 May 2020 17:09:28 -0500</pubDate>

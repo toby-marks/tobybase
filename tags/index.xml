@@ -6,10 +6,28 @@
     <description>Recent content in Tags on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 19 May 2020 17:09:28 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 20 May 2020 16:36:06 -0500</lastBuildDate>
     
 	<atom:link href="http://tobybase.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Docker</title>
+      <link>http://tobybase.com/tags/docker/</link>
+      <pubDate>Wed, 20 May 2020 16:36:06 -0500</pubDate>
+      
+      <guid>http://tobybase.com/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>virtual machines</title>
+      <link>http://tobybase.com/tags/virtual-machines/</link>
+      <pubDate>Wed, 20 May 2020 16:36:06 -0500</pubDate>
+      
+      <guid>http://tobybase.com/tags/virtual-machines/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>git</title>
@@ -170,15 +188,6 @@
       <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>http://tobybase.com/tags/oci/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>virtual machines</title>
-      <link>http://tobybase.com/tags/virtual-machines/</link>
-      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/virtual-machines/</guid>
       <description></description>
     </item>
     

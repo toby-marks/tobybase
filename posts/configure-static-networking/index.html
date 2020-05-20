@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+
+    <meta name="author" content="Toby Marks">
+    <meta name="description" content="I originally had this requirement after creating a new persistent linux virtual machine in OVM that needed static addressing. This is just standard linux setup, though, and can be applied to both virtual and physical machines.
+Turn on Networking # sudo vi /etc/sysconfig/network Make sure networking is enabled and configure the hostname.
+NETWORKING=yes HOSTNAME=myhost.mycompany.local Configure the Network Interface # sudo vi /etc/sysconfig/network-scripts/ifcfg-eth0 Here is a sample config for static IPs.">
+    <meta name="keywords" content="oracle,infolob,blog,consultant,developer,tuning,exadata,personal">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How to Configure Static Networking in a Linux VM"/>
+<meta name="twitter:description" content="I originally had this requirement after creating a new persistent linux virtual machine in OVM that needed static addressing. This is just standard linux setup, though, and can be applied to both virtual and physical machines.
+Turn on Networking # sudo vi /etc/sysconfig/network Make sure networking is enabled and configure the hostname.
+NETWORKING=yes HOSTNAME=myhost.mycompany.local Configure the Network Interface # sudo vi /etc/sysconfig/network-scripts/ifcfg-eth0 Here is a sample config for static IPs."/>
+
+    <meta property="og:title" content="How to Configure Static Networking in a Linux VM" />
+<meta property="og:description" content="I originally had this requirement after creating a new persistent linux virtual machine in OVM that needed static addressing. This is just standard linux setup, though, and can be applied to both virtual and physical machines.
+Turn on Networking # sudo vi /etc/sysconfig/network Make sure networking is enabled and configure the hostname.
+NETWORKING=yes HOSTNAME=myhost.mycompany.local Configure the Network Interface # sudo vi /etc/sysconfig/network-scripts/ifcfg-eth0 Here is a sample config for static IPs." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tobybase.com/posts/configure-static-networking/" />
+<meta property="article:published_time" content="2020-05-20T16:36:06-05:00" />
+<meta property="article:modified_time" content="2020-05-20T16:36:06-05:00" />
+
+
+    
+      <base href="http://tobybase.com/posts/configure-static-networking/">
+    
+    <title>
+  How to Configure Static Networking in a Linux VM · 👨🏻‍💻 Tobybase
+</title>
+
+    
+      <link rel="canonical" href="http://tobybase.com/posts/configure-static-networking/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="http://tobybase.com/css/coder.min.a4f332213a21ce8eb521670c614470c58923aaaf385e2a73982c31dd7642decb.css" integrity="sha256-pPMyITohzo61IWcMYURwxYkjqq84XipzmCwx3XZC3ss=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+      <link rel="stylesheet" href="http://tobybase.com/css/custom.css" />
+    
+
+    
+
+    <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.71.0" />
+  </head>
+
+  
+  
+  <body class="colorscheme-light">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="http://tobybase.com/">
+      👨🏻‍💻 Tobybase
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://tobybase.com/posts/">Blog</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://tobybase.com/links/">Links</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://tobybase.com/about/">About</a>
+          </li>
+        
+      
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">How to Configure Static Networking in a Linux VM</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fas fa-calendar"></i>
+              <time datetime='2020-05-20T16:36:06-05:00'>
+                May 20, 2020
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              1-minute read
+            </span>
+          </div>
+          <div class="categories">
+  <i class="fas fa-folder"></i>
+    <a href="http://tobybase.com/categories/linux/">Linux</a></div>
+
+          <div class="tags">
+  <i class="fas fa-tag"></i>
+    <a href="http://tobybase.com/tags/virtual-machines/">virtual machines</a>
+      <span class="separator">•</span>
+    <a href="http://tobybase.com/tags/docker/">Docker</a>
+      <span class="separator">•</span>
+    <a href="http://tobybase.com/tags/unix/linux/">unix/linux</a></div>
+
+        </div>
+      </header>
+
+      <div>
+        
+        <p>I originally had this requirement after creating a new persistent linux virtual machine in <a href="https://www.oracle.com/virtualization/technologies/vm/">OVM</a> that needed static addressing. This is just standard linux setup, though, and can be applied to both virtual and physical machines.</p>
+<h2 id="turn-on-networking">Turn on Networking</h2>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"># sudo vi /etc/sysconfig/network
+</code></pre></div><p>Make sure networking is enabled and configure the hostname.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">NETWORKING=yes
+HOSTNAME=myhost.mycompany.local
+</code></pre></div><h2 id="configure-the-network-interface">Configure the Network Interface</h2>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"># sudo vi /etc/sysconfig/network-scripts/ifcfg-eth0
+</code></pre></div><p>Here is a sample config for static IPs.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">HWADDR=00:30:48:56:A6:2E
+TYPE=Ethernet
+BOOTPROTO=none
+IPADDR=192.168.1.10
+PREFIX=24
+GATEWAY=192.168.1.0
+DNS1=192.168.1.254
+DNS2=8.8.8.8
+DNS3=8.8.4.4
+DEFROUTE=yes
+IPV4_FAILURE_FATAL=no
+# Disable IPV6
+IPV6INIT=no
+NAME=eth0
+# This is system specific and can be created using &#39;uuidgen eth0&#39; command
+UUID=41171a6f-bce1-44de-8a6e-cf5e782f8bd6
+DEVICE=eth0
+ONBOOT=yes
+</code></pre></div><h2 id="configure-dns-servers">Configure DNS Servers</h2>
+<p>I also edit /etc/resolv.conf and setup DNS servers there. TBH, I&rsquo;m not sure if this is necessary or redundant with ipcgf-eth0</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"># sudo vi /etc/resolv.conf
+</code></pre></div><p>Configure similar to the following:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">search yourcompany.com
+nameserver 192.168.1.254
+nameserver 8.8.8.8
+nameserver 8.8.4.4
+</code></pre></div><h2 id="finally-restart-networking">Finally, Restart Networking</h2>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"># sudo systemctl network restart
+</code></pre></div><p>You can verify that networking is working properly with the following commands</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"># ifconfig eth0
+# ip a s eth0
+# ip r
+# route -n
+# ping 192.168.1.254
+# ping google.com
+</code></pre></div>
+      </div>
+
+
+      <footer>
+        
+
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tobybase-com" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+        <p>Oracle Database Developer and Performance Tuner, specialized on the Exadata platform. Working for Infolob from Irving, Texas. #OCICertified </p>
+      
+      
+        ©
+        
+          2012 -
+        
+        2020
+         Toby Marks 
+      
+      
+      
+    </section>
+  </footer>
+
+    </main>
+
+    
+
+    
+
+    
+
+  </body>
+
+</html>
