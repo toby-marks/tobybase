@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>git</title>
+      <link>http://tobybase.com/tags/git/</link>
+      <pubDate>Tue, 19 May 2020 17:09:28 -0500</pubDate>
+      
+      <guid>http://tobybase.com/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>github</title>
       <link>http://tobybase.com/tags/github/</link>
       <pubDate>Tue, 19 May 2020 17:09:28 -0500</pubDate>
@@ -21,11 +30,11 @@
     </item>
     
     <item>
-      <title>version control</title>
-      <link>http://tobybase.com/tags/version-control/</link>
+      <title>source control</title>
+      <link>http://tobybase.com/tags/source-control/</link>
       <pubDate>Tue, 19 May 2020 17:09:28 -0500</pubDate>
       
-      <guid>http://tobybase.com/tags/version-control/</guid>
+      <guid>http://tobybase.com/tags/source-control/</guid>
       <description></description>
     </item>
     

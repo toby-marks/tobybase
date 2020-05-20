@@ -7,15 +7,18 @@
     <meta http-equiv="Content-Language" content="en">
 
     <meta name="author" content="Toby Marks">
-    <meta name="description" content="asdfasdf">
+    <meta name="description" content="Get the hash of the &ldquo;good&rdquo; version you want to recover You first need to identify where things went wrong. Then get the commit identifier (also called the hash) for the version immediately prior to that. (Also make sure you&rsquo;re pulling from the appropriate branch; for simplicity&rsquo;s sake, this example assumes all changes are being committed to the master branch.)
+# git log commit 07c5f535743e3f70fcdf09c0d032580820ca38c9 Author: Toby Base &lt;xxxxx@gmail.com&gt; Date: Tue May 19 14:33:17 2020 -0500 Created content/post/my-newest-article.">
     <meta name="keywords" content="oracle,infolob,blog,consultant,developer,tuning,exadata,personal">
 
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="How to Recover a Prior Version of Your Project on Github"/>
-<meta name="twitter:description" content="asdfasdf"/>
+<meta name="twitter:title" content="How to Restore Files From a Previous Version in Git/Github"/>
+<meta name="twitter:description" content="Get the hash of the &ldquo;good&rdquo; version you want to recover You first need to identify where things went wrong. Then get the commit identifier (also called the hash) for the version immediately prior to that. (Also make sure you&rsquo;re pulling from the appropriate branch; for simplicity&rsquo;s sake, this example assumes all changes are being committed to the master branch.)
+# git log commit 07c5f535743e3f70fcdf09c0d032580820ca38c9 Author: Toby Base &lt;xxxxx@gmail.com&gt; Date: Tue May 19 14:33:17 2020 -0500 Created content/post/my-newest-article."/>
 
-    <meta property="og:title" content="How to Recover a Prior Version of Your Project on Github" />
-<meta property="og:description" content="asdfasdf" />
+    <meta property="og:title" content="How to Restore Files From a Previous Version in Git/Github" />
+<meta property="og:description" content="Get the hash of the &ldquo;good&rdquo; version you want to recover You first need to identify where things went wrong. Then get the commit identifier (also called the hash) for the version immediately prior to that. (Also make sure you&rsquo;re pulling from the appropriate branch; for simplicity&rsquo;s sake, this example assumes all changes are being committed to the master branch.)
+# git log commit 07c5f535743e3f70fcdf09c0d032580820ca38c9 Author: Toby Base &lt;xxxxx@gmail.com&gt; Date: Tue May 19 14:33:17 2020 -0500 Created content/post/my-newest-article." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://tobybase.com/posts/how-to-recover-a-prior-version-on-github/" />
 <meta property="article:published_time" content="2020-05-19T17:09:28-05:00" />
@@ -26,7 +29,7 @@
       <base href="http://tobybase.com/posts/how-to-recover-a-prior-version-on-github/">
     
     <title>
-  How to Recover a Prior Version of Your Project on Github · 👨🏻‍💻 Tobybase
+  How to Restore Files From a Previous Version in Git/Github · 👨🏻‍💻 Tobybase
 </title>
 
     
@@ -100,7 +103,7 @@
     <article>
       <header>
         <div class="post-title">
-          <h1 class="title">How to Recover a Prior Version of Your Project on Github</h1>
+          <h1 class="title">How to Restore Files From a Previous Version in Git/Github</h1>
         </div>
         <div class="post-meta">
           <div class="date">
@@ -112,7 +115,7 @@
             </span>
             <span class="reading-time">
               <i class="fas fa-clock"></i>
-              1-minute read
+              3-minute read
             </span>
           </div>
           <div class="categories">
@@ -121,17 +124,64 @@
 
           <div class="tags">
   <i class="fas fa-tag"></i>
+    <a href="http://tobybase.com/tags/git/">git</a>
+      <span class="separator">•</span>
     <a href="http://tobybase.com/tags/github/">github</a>
       <span class="separator">•</span>
-    <a href="http://tobybase.com/tags/version-control/">version control</a></div>
+    <a href="http://tobybase.com/tags/source-control/">source control</a></div>
 
         </div>
       </header>
 
       <div>
         
-        <p>asdfasdf</p>
+        <h3 id="get-the-hash-of-the-good-version-you-want-to-recover">Get the hash of the &ldquo;good&rdquo; version you want to recover</h3>
+<p>You first need to identify where things went wrong. Then get the commit identifier (also called the hash) for the version immediately prior to that. (Also make sure you&rsquo;re pulling from the appropriate branch; for simplicity&rsquo;s sake, this example assumes all changes are being committed to the master branch.)</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"># git log
 
+commit 07c5f535743e3f70fcdf09c0d032580820ca38c9
+Author: Toby Base &lt;xxxxx@gmail.com&gt;
+Date:   Tue May 19 14:33:17 2020 -0500
+
+    Created content/post/my-newest-article.md
+    (Oh no! Accidentally deleted some files after the last commit!)
+
+commit 85add47b28670abaf99b17e010edeafb2fbb3189
+Author: Toby Base &lt;xxxxx@gmail.com&gt;
+Date:   Fri Feb 7 21:04:39 2020 +0000
+
+    Updated content/post/oracle-cloud-day-dallas.md
+
+commit c3a520e136dc90e7982bc50d56a33aa3c3885f85
+Author: Toby Base &lt;xxxxx@gmail.com&gt;
+Date:   Fri Feb 7 21:02:29 2020 +0000
+
+    Created static/uploads/BC9419D3-B290-4CF3-845C-5C008A19419C.jpeg
+</code></pre></div><p>In my case, I know I deleted files in the commit on May 19. So I want to restore those files from the version right before that, the one with hash <code>85add47b28670abaf99b17e010edeafb2fbb3189</code>.</p>
+<h3 id="flash-back-to-the-state-of-the-repository-at-the-desired-commit">Flash back to the state of the repository at the desired commit</h3>
+<p>Do this only if you don&rsquo;t care about eliminating commit history or losing changes since the specified commit.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"># git reset --hard 85add47b28670abaf99b17e010edeafb2fbb3189
+</code></pre></div><p>Other options for <code>git reset</code> include <code>--soft</code> and <code>--mixed</code>, which retain the changed files in your working directory, but treat the states of those files differently. A more thorough explanation of how <code>git reset</code> works <a href="https://www.atlassian.com/git/tutorials/undoing-changes/git-reset">can be found here</a>.</p>
+<h3 id="recover-files-while-retaining-the-commit-history">Recover files while retaining the commit history</h3>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"># git checkout -b new_branch 85add47b28670abaf99b17e010edeafb2fbb3189
+</code></pre></div><p>The checkout command will revert any unchanged files and restore any deleted files as of the specified commit. New and changed files since that time are retained. We fork a new branch in order to avoid the &ldquo;detached HEAD&rdquo; state, discussed in the <a href="https://www.atlassian.com/git/tutorials/undoing-changes/git-reset">above linked article</a>, that could lead to problems on future commits.</p>
+<p>If you were working on the master branch and want to continue committing changes on that branch, simply commit your changes on the new branch, switch back to the master, and merge in your changes.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"># git add -A
+# git commit -m &#34;Restoring files from previous commit&#34;
+# git checkout master
+# git merge new_branch
+</code></pre></div><p>Here <code>checkout master</code> switches us back to the master branch, and then we use <code>merge new_branch</code> to restore the lost files to the master.</p>
+<h3 id="another-option-just-to-recover-the-files">Another option just to recover the files</h3>
+<p>The simplest way to get your files back without dealing with the branching and merging is to checkout a prior version in a temporary directory, then copy the missing files from there back to your working directory. Then just add and commit those files back to source control.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"># cd /tmp
+# git clone https://github.com/toby-marks/tobybase.git
+# cd tobybase
+# git checkout 85add47b28670abaf99b17e010edeafb2fbb3189
+# cp content/posts/*.md /path/to/tobybase/working/directory/content/posts/
+# cd /path/to/tobybase/working/directory
+# git add -A
+# git commit -m &#34;Restoring files lost after 85add47b28670abaf99b17e010edeafb2fbb3189&#34;
+</code></pre></div>
       </div>
 
 
