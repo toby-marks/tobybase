@@ -1,10 +1,9 @@
 AI
 Cloud
-Tools
 Database
+Development
 Docker
 Housekeeping
 Infolob
 News
-Design
-Development
+Tools

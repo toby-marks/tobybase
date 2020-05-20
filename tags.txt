@@ -7,12 +7,14 @@ bi
 bi publisher
 brian hill
 cgi
+cisco
 citrix
 cloud
 cron
 css
 external tables
 firefox
+github
 html
 IaaS
 infolob
@@ -32,11 +34,14 @@ lift and shift
 macbook
 macos
 me
-OCI
+oci
 odbc
 office
 oracle
 oracle application server
+Oracle Autonomous Data Warehouse
+Oracle Autonomous Database
+Oracle Cloud
 oracle cloud services
 oracle forms
 perl
@@ -46,6 +51,7 @@ plsql
 profiling
 reporting
 safari
+sas
 scripting
 sql
 sql developer
@@ -54,10 +60,12 @@ tools
 toplink
 unix/linux
 utilities
-Videos
+version control
+videos
 virtual machines
 vpn
 web development
 weblogic
 windows
 xml
+youtube
