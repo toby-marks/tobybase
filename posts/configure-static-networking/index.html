@@ -7,19 +7,19 @@
     <meta http-equiv="Content-Language" content="en">
 
     <meta name="author" content="Toby Marks">
-    <meta name="description" content="I originally had this requirement after creating a new persistent linux virtual machine in OVM that needed static addressing. This is just standard linux setup, though, and can be applied to both virtual and physical machines.
+    <meta name="description" content="I originally had this requirement after creating a new persistent linux virtual machine in OVM that needed static addressing. This is just standard linux setup, though, and can be adapted to both virtual and physical machines.
 Turn on Networking # sudo vi /etc/sysconfig/network Make sure networking is enabled and configure the hostname.
 NETWORKING=yes HOSTNAME=myhost.mycompany.local Configure the Network Interface # sudo vi /etc/sysconfig/network-scripts/ifcfg-eth0 Here is a sample config for static IPs.">
     <meta name="keywords" content="oracle,infolob,blog,consultant,developer,tuning,exadata,personal">
 
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="How to Configure Static Networking in a Linux VM"/>
-<meta name="twitter:description" content="I originally had this requirement after creating a new persistent linux virtual machine in OVM that needed static addressing. This is just standard linux setup, though, and can be applied to both virtual and physical machines.
+<meta name="twitter:description" content="I originally had this requirement after creating a new persistent linux virtual machine in OVM that needed static addressing. This is just standard linux setup, though, and can be adapted to both virtual and physical machines.
 Turn on Networking # sudo vi /etc/sysconfig/network Make sure networking is enabled and configure the hostname.
 NETWORKING=yes HOSTNAME=myhost.mycompany.local Configure the Network Interface # sudo vi /etc/sysconfig/network-scripts/ifcfg-eth0 Here is a sample config for static IPs."/>
 
     <meta property="og:title" content="How to Configure Static Networking in a Linux VM" />
-<meta property="og:description" content="I originally had this requirement after creating a new persistent linux virtual machine in OVM that needed static addressing. This is just standard linux setup, though, and can be applied to both virtual and physical machines.
+<meta property="og:description" content="I originally had this requirement after creating a new persistent linux virtual machine in OVM that needed static addressing. This is just standard linux setup, though, and can be adapted to both virtual and physical machines.
 Turn on Networking # sudo vi /etc/sysconfig/network Make sure networking is enabled and configure the hostname.
 NETWORKING=yes HOSTNAME=myhost.mycompany.local Configure the Network Interface # sudo vi /etc/sysconfig/network-scripts/ifcfg-eth0 Here is a sample config for static IPs." />
 <meta property="og:type" content="article" />
@@ -62,7 +62,7 @@ NETWORKING=yes HOSTNAME=myhost.mycompany.local Configure the Network Interface #
     <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-16x16.png" sizes="16x16">
 
-    <meta name="generator" content="Hugo 0.71.0" />
+    <meta name="generator" content="Hugo 0.71.1" />
   </head>
 
   
@@ -123,13 +123,15 @@ NETWORKING=yes HOSTNAME=myhost.mycompany.local Configure the Network Interface #
           </div>
           <div class="categories">
   <i class="fas fa-folder"></i>
-    <a href="http://tobybase.com/categories/linux/">Linux</a></div>
+    <a href="http://tobybase.com/categories/linux/">linux</a></div>
 
           <div class="tags">
   <i class="fas fa-tag"></i>
     <a href="http://tobybase.com/tags/virtual-machines/">virtual machines</a>
       <span class="separator">•</span>
     <a href="http://tobybase.com/tags/docker/">Docker</a>
+      <span class="separator">•</span>
+    <a href="http://tobybase.com/tags/ovm/">OVM</a>
       <span class="separator">•</span>
     <a href="http://tobybase.com/tags/unix/linux/">unix/linux</a></div>
 
@@ -138,7 +140,7 @@ NETWORKING=yes HOSTNAME=myhost.mycompany.local Configure the Network Interface #
 
       <div>
         
-        <p>I originally had this requirement after creating a new persistent linux virtual machine in <a href="https://www.oracle.com/virtualization/technologies/vm/">OVM</a> that needed static addressing. This is just standard linux setup, though, and can be applied to both virtual and physical machines.</p>
+        <p>I originally had this requirement after creating a new persistent linux virtual machine in <a href="https://www.oracle.com/virtualization/technologies/vm/">OVM</a> that needed static addressing. This is just standard linux setup, though, and can be adapted to both virtual and physical machines.</p>
 <h2 id="turn-on-networking">Turn on Networking</h2>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"># sudo vi /etc/sysconfig/network
 </code></pre></div><p>Make sure networking is enabled and configure the hostname.</p>
@@ -151,21 +153,16 @@ HOSTNAME=myhost.mycompany.local
 TYPE=Ethernet
 BOOTPROTO=none
 IPADDR=192.168.1.10
-PREFIX=24
 GATEWAY=192.168.1.0
-DNS1=192.168.1.254
-DNS2=8.8.8.8
-DNS3=8.8.4.4
+PREFIX=24
 DEFROUTE=yes
 IPV4_FAILURE_FATAL=no
-# Disable IPV6
 IPV6INIT=no
 NAME=eth0
-# This is system specific and can be created using &#39;uuidgen eth0&#39; command
-UUID=41171a6f-bce1-44de-8a6e-cf5e782f8bd6
 DEVICE=eth0
 ONBOOT=yes
-</code></pre></div><h2 id="configure-dns-servers">Configure DNS Servers</h2>
+</code></pre></div><p>The <code>HWADDR</code> value is just the MAC address of the VM, which I got from the OVM console. The <code>PREFIX</code> value relates to the network mask; eg. a value of 24 equates to a mask of <code>255.255.255.0</code>. Disabling IPV6 is optional.</p>
+<h2 id="configure-dns-servers">Configure DNS Servers</h2>
 <p>I also edit /etc/resolv.conf and setup DNS servers there. TBH, I&rsquo;m not sure if this is necessary or redundant with ipcgf-eth0</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"># sudo vi /etc/resolv.conf
 </code></pre></div><p>Configure similar to the following:</p>

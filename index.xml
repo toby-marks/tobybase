@@ -6,10 +6,45 @@
     <description>Recent content on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 23 Feb 2017 11:32:23 -0600</lastBuildDate>
+    <lastBuildDate>Fri, 29 May 2020 13:41:02 -0500</lastBuildDate>
     
 	<atom:link href="http://tobybase.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to Share Files Between a Photon OS VM and the VM Host</title>
+      <link>http://tobybase.com/posts/share-files-between-photon-vm-and-host/</link>
+      <pubDate>Fri, 29 May 2020 13:41:02 -0500</pubDate>
+      
+      <guid>http://tobybase.com/posts/share-files-between-photon-vm-and-host/</guid>
+      <description>(The following is adapted from the official Photon OS FAQ.)
+How do I transfer or share files between #Photon and my host machine? Use vmhgfs-fuse to transfer files between Photon and your host machine:
+  Enable Shared folders in the Workstation or Fusion UI (edit the VM settings and choose Options-&amp;gt;Enabled shared folders).
+  Make sure open-vm-tools is installed (it is installed by default in the Minimal installation and OVA import).</description>
+    </item>
+    
+    <item>
+      <title>Translating Teradata&#39;s MDIFF Function to Oracle SQL</title>
+      <link>http://tobybase.com/posts/translating-mdiff-to-oracle/</link>
+      <pubDate>Wed, 27 May 2020 10:22:08 -0500</pubDate>
+      
+      <guid>http://tobybase.com/posts/translating-mdiff-to-oracle/</guid>
+      <description>Teradata defines its MDIFF function as follows:
+ MDIFF
+Returns the moving difference between the specified value expression for the current row and the preceding width rows for each row in the partition.
+ Here &amp;ldquo;the preceding width rows&amp;rdquo; means something like the preceding n rows, where n is sometimes interpreted as the sum of all of the preceding rows, but generally as the value of the last row.
+Teradata&amp;rsquo;s docs also has this to say about MDIFF:</description>
+    </item>
+    
+    <item>
+      <title>An Example of Dynamic SQL Using a CLOB</title>
+      <link>http://tobybase.com/posts/dynamic-sql-with-clob/</link>
+      <pubDate>Fri, 22 May 2020 13:28:39 -0500</pubDate>
+      
+      <guid>http://tobybase.com/posts/dynamic-sql-with-clob/</guid>
+      <description>You might not know this, but you can use the EXECUTE IMMEDIATE command with a CLOB, the same as with a VARCHAR2 variable.
+declare l_sql clob; l_str1 varchar2(32767); l_str2 varchar2(32767); begin dbms_lob.createtemporary(l_sql, false); l_str1 := &amp;#39;some large SQL chunk&amp;#39;; l_str2 := &amp;#39;and the rest of large SQL chunk&amp;#39;; l_sql := l_str1; dbms_lob.writeappend(l_sql, length(l_str2), l_str2); execute immediate l_sql; dbms_lob.freetemporary(l_sql); end; </description>
+    </item>
     
     <item>
       <title>How to Configure Static Networking in a Linux VM</title>
@@ -17,7 +52,7 @@
       <pubDate>Wed, 20 May 2020 16:36:06 -0500</pubDate>
       
       <guid>http://tobybase.com/posts/configure-static-networking/</guid>
-      <description>I originally had this requirement after creating a new persistent linux virtual machine in OVM that needed static addressing. This is just standard linux setup, though, and can be applied to both virtual and physical machines.
+      <description>I originally had this requirement after creating a new persistent linux virtual machine in OVM that needed static addressing. This is just standard linux setup, though, and can be adapted to both virtual and physical machines.
 Turn on Networking # sudo vi /etc/sysconfig/network Make sure networking is enabled and configure the hostname.
 NETWORKING=yes HOSTNAME=myhost.mycompany.local Configure the Network Interface # sudo vi /etc/sysconfig/network-scripts/ifcfg-eth0 Here is a sample config for static IPs.</description>
     </item>

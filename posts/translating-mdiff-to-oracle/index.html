@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+
+    <meta name="author" content="Toby Marks">
+    <meta name="description" content="How to code the MDIFF function in Oracle SQL">
+    <meta name="keywords" content="oracle,infolob,blog,consultant,developer,tuning,exadata,personal">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Translating Teradata&#39;s MDIFF Function to Oracle SQL"/>
+<meta name="twitter:description" content="How to code the MDIFF function in Oracle SQL"/>
+
+    <meta property="og:title" content="Translating Teradata&#39;s MDIFF Function to Oracle SQL" />
+<meta property="og:description" content="How to code the MDIFF function in Oracle SQL" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tobybase.com/posts/translating-mdiff-to-oracle/" />
+<meta property="article:published_time" content="2020-05-27T10:22:08-05:00" />
+<meta property="article:modified_time" content="2020-05-27T10:22:08-05:00" />
+
+
+    
+      <base href="http://tobybase.com/posts/translating-mdiff-to-oracle/">
+    
+    <title>
+  Translating Teradata&#39;s MDIFF Function to Oracle SQL · 👨🏻‍💻 Tobybase
+</title>
+
+    
+      <link rel="canonical" href="http://tobybase.com/posts/translating-mdiff-to-oracle/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="http://tobybase.com/css/coder.min.a4f332213a21ce8eb521670c614470c58923aaaf385e2a73982c31dd7642decb.css" integrity="sha256-pPMyITohzo61IWcMYURwxYkjqq84XipzmCwx3XZC3ss=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+      <link rel="stylesheet" href="http://tobybase.com/css/custom.css" />
+    
+
+    
+
+    <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.71.1" />
+  </head>
+
+  
+  
+  <body class="colorscheme-light">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="http://tobybase.com/">
+      👨🏻‍💻 Tobybase
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://tobybase.com/posts/">Blog</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://tobybase.com/links/">Links</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://tobybase.com/about/">About</a>
+          </li>
+        
+      
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">Translating Teradata&#39;s MDIFF Function to Oracle SQL</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fas fa-calendar"></i>
+              <time datetime='2020-05-27T10:22:08-05:00'>
+                May 27, 2020
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              2-minute read
+            </span>
+          </div>
+          <div class="categories">
+  <i class="fas fa-folder"></i>
+    <a href="http://tobybase.com/categories/sql-pl/sql/">SQL &amp; PL/SQL</a></div>
+
+          <div class="tags">
+  <i class="fas fa-tag"></i>
+    <a href="http://tobybase.com/tags/oracle/">Oracle</a>
+      <span class="separator">•</span>
+    <a href="http://tobybase.com/tags/teradata/">Teradata</a>
+      <span class="separator">•</span>
+    <a href="http://tobybase.com/tags/migrations/">migrations</a></div>
+
+        </div>
+      </header>
+
+      <div>
+        
+        <p>Teradata <a href="https://docs.teradata.com/reader/kmuOwjp1zEYg98JsB8fu_A/Q5tWBsRwZN7VBXQkzAoddQ">defines its MDIFF function</a> as follows:</p>
+<blockquote>
+<p><strong>MDIFF</strong></p>
+<p>Returns the moving difference between the specified value expression for the current row and the preceding width rows for each row in the partition.</p>
+</blockquote>
+<p>Here &ldquo;the preceding width rows&rdquo; means something like the preceding <em>n</em> rows, where n is sometimes interpreted as the sum of <em>all</em> of the preceding rows, but generally as the value of the last row.</p>
+<p>Teradata&rsquo;s docs also has this to say about MDIFF:</p>
+<blockquote>
+<p><strong>Using SUM Instead of MDIFF</strong></p>
+<p>The use of MDIFF is strongly discouraged. It is a Teradata extension to the ANSI SQL:2011 standard, and is retained only for backward compatibility with existing applications. MDIFF(x, w, y) is equivalent to:</p>
+<p><em>x - SUM(x) OVER (ORDER BY y</em>
+<em>ROWS BETWEEN w PRECEDING AND w PRECEDING)</em></p>
+</blockquote>
+<p>MDIFF applies to <code>NUMBER</code> columns or <code>DATE</code> and the window <em>(w, y)</em> is typically defined as (1, 1), to specify only the value of column <em>x</em> in the preceding row. If this is the case, then MDIFF is simply <strong>the delta between the current row and the previous row.</strong></p>
+<p>That function can be simplified and rewritten in Oracle SQL as</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">x - LAG(x) OVER (ORDER BY y)
+</code></pre></div><p>Or alternatively, if you want to break delta calculations on column <em>z</em>, then</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">x - LAG(x) OVER (PARTITION BY z ORDER BY y)
+</code></pre></div><p>One last thing to consider is how you want to treat the edge cases, such as when there is no preceding row. Is the expected value NULL in that case, as it is by default, or do you want to treat the delta as zero? You need to understand how how this value is being used in the code you are converting — whether that value is being used in higher-level calculations, etc.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">x - LAG(x, 1, 0) OVER (PARTITION BY z ORDER BY y)
+x - LAG(x, 1, NULL) OVER (PARTITION BY z ORDER BY y)
+</code></pre></div>
+      </div>
+
+
+      <footer>
+        
+
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tobybase-com" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+        <p>Oracle Database Developer and Performance Tuner, specialized on the Exadata platform. Working for Infolob from Irving, Texas. #OCICertified </p>
+      
+      
+        ©
+        
+          2012 -
+        
+        2020
+         Toby Marks 
+      
+      
+      
+    </section>
+  </footer>
+
+    </main>
+
+    
+
+    
+
+    
+
+  </body>
+
+</html>

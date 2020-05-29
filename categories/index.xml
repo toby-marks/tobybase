@@ -6,44 +6,71 @@
     <description>Recent content in Categories on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 20 May 2020 16:36:06 -0500</lastBuildDate>
+    <lastBuildDate>Fri, 29 May 2020 13:41:02 -0500</lastBuildDate>
     
 	<atom:link href="http://tobybase.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Linux</title>
+      <title>Docker</title>
+      <link>http://tobybase.com/categories/docker/</link>
+      <pubDate>Fri, 29 May 2020 13:41:02 -0500</pubDate>
+      
+      <guid>http://tobybase.com/categories/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
       <link>http://tobybase.com/categories/linux/</link>
-      <pubDate>Wed, 20 May 2020 16:36:06 -0500</pubDate>
+      <pubDate>Fri, 29 May 2020 13:41:02 -0500</pubDate>
       
       <guid>http://tobybase.com/categories/linux/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Tools</title>
-      <link>http://tobybase.com/categories/tools/</link>
+      <title>source control</title>
+      <link>http://tobybase.com/categories/source-control/</link>
       <pubDate>Tue, 19 May 2020 17:09:28 -0500</pubDate>
       
-      <guid>http://tobybase.com/categories/tools/</guid>
+      <guid>http://tobybase.com/categories/source-control/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Cloud</title>
+      <title>cloud</title>
       <link>http://tobybase.com/categories/cloud/</link>
-      <pubDate>Fri, 17 Jan 2020 17:08:16 -0600</pubDate>
+      <pubDate>Fri, 07 Feb 2020 21:00:00 +0000</pubDate>
       
       <guid>http://tobybase.com/categories/cloud/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Database</title>
-      <link>http://tobybase.com/categories/database/</link>
-      <pubDate>Fri, 17 Jan 2020 17:08:16 -0600</pubDate>
+      <title>Cisco</title>
+      <link>http://tobybase.com/categories/cisco/</link>
+      <pubDate>Mon, 27 Jan 2020 15:20:10 -0600</pubDate>
       
-      <guid>http://tobybase.com/categories/database/</guid>
+      <guid>http://tobybase.com/categories/cisco/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Java</title>
+      <link>http://tobybase.com/categories/java/</link>
+      <pubDate>Wed, 01 May 2019 16:47:39 -0500</pubDate>
+      
+      <guid>http://tobybase.com/categories/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>macOS</title>
+      <link>http://tobybase.com/categories/macos/</link>
+      <pubDate>Wed, 01 May 2019 16:47:39 -0500</pubDate>
+      
+      <guid>http://tobybase.com/categories/macos/</guid>
       <description></description>
     </item>
     
@@ -66,6 +93,15 @@
     </item>
     
     <item>
+      <title>Database</title>
+      <link>http://tobybase.com/categories/database/</link>
+      <pubDate>Tue, 10 Apr 2018 12:47:23 -0500</pubDate>
+      
+      <guid>http://tobybase.com/categories/database/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Infolob</title>
       <link>http://tobybase.com/categories/infolob/</link>
       <pubDate>Thu, 14 Dec 2017 00:00:00 +0000</pubDate>
@@ -75,20 +111,83 @@
     </item>
     
     <item>
-      <title>Housekeeping</title>
-      <link>http://tobybase.com/categories/housekeeping/</link>
+      <title>blog</title>
+      <link>http://tobybase.com/categories/blog/</link>
       <pubDate>Tue, 17 Jan 2017 22:58:59 -0600</pubDate>
       
-      <guid>http://tobybase.com/categories/housekeeping/</guid>
+      <guid>http://tobybase.com/categories/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shell scripting</title>
+      <link>http://tobybase.com/categories/shell-scripting/</link>
+      <pubDate>Wed, 24 Jul 2013 21:42:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/categories/shell-scripting/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Development</title>
       <link>http://tobybase.com/categories/development/</link>
-      <pubDate>Wed, 24 Jul 2013 21:42:00 +0000</pubDate>
+      <pubDate>Wed, 24 Jul 2013 00:00:00 +0000</pubDate>
       
       <guid>http://tobybase.com/categories/development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reporting</title>
+      <link>http://tobybase.com/categories/reporting/</link>
+      <pubDate>Fri, 14 Jun 2013 21:47:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/categories/reporting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Javascript</title>
+      <link>http://tobybase.com/categories/javascript/</link>
+      <pubDate>Fri, 26 Oct 2012 21:09:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/categories/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tools</title>
+      <link>http://tobybase.com/categories/tools/</link>
+      <pubDate>Wed, 25 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/categories/tools/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Perl</title>
+      <link>http://tobybase.com/categories/perl/</link>
+      <pubDate>Mon, 02 Jul 2012 22:40:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/categories/perl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Citrix</title>
+      <link>http://tobybase.com/categories/citrix/</link>
+      <pubDate>Fri, 11 May 2012 20:54:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/categories/citrix/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SQL &amp; PL/SQL</title>
+      <link>http://tobybase.com/categories/sql-pl/sql/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/categories/sql-pl/sql/</guid>
       <description></description>
     </item>
     

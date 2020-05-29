@@ -4,7 +4,82 @@
   
   <url>
     <loc>http://tobybase.com/categories/</loc>
-    <lastmod>2020-05-20T16:36:06-05:00</lastmod>
+    <lastmod>2020-05-29T13:41:02-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/containers/</loc>
+    <lastmod>2020-05-29T13:41:02-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/categories/docker/</loc>
+    <lastmod>2020-05-29T13:41:02-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/posts/share-files-between-photon-vm-and-host/</loc>
+    <lastmod>2020-05-29T13:41:02-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/categories/linux/</loc>
+    <lastmod>2020-05-29T13:41:02-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/photon-os/</loc>
+    <lastmod>2020-05-29T13:41:02-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/posts/</loc>
+    <lastmod>2020-05-29T13:41:02-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/</loc>
+    <lastmod>2020-05-29T13:41:02-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/virtual-machines/</loc>
+    <lastmod>2020-05-29T13:41:02-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/vmware/</loc>
+    <lastmod>2020-05-29T13:41:02-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/</loc>
+    <lastmod>2020-05-29T13:41:02-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/migrations/</loc>
+    <lastmod>2020-05-27T10:22:08-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/oracle/</loc>
+    <lastmod>2020-05-27T10:22:08-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/teradata/</loc>
+    <lastmod>2020-05-27T10:22:08-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/posts/translating-mdiff-to-oracle/</loc>
+    <lastmod>2020-05-27T10:22:08-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/posts/dynamic-sql-with-clob/</loc>
+    <lastmod>2020-05-22T13:28:39-05:00</lastmod>
   </url>
   
   <url>
@@ -18,22 +93,7 @@
   </url>
   
   <url>
-    <loc>http://tobybase.com/categories/linux/</loc>
-    <lastmod>2020-05-20T16:36:06-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/posts/</loc>
-    <lastmod>2020-05-20T16:36:06-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/</loc>
-    <lastmod>2020-05-20T16:36:06-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/virtual-machines/</loc>
+    <loc>http://tobybase.com/tags/ovm/</loc>
     <lastmod>2020-05-20T16:36:06-05:00</lastmod>
   </url>
   
@@ -53,13 +113,28 @@
   </url>
   
   <url>
-    <loc>http://tobybase.com/tags/source-control/</loc>
+    <loc>http://tobybase.com/categories/source-control/</loc>
     <lastmod>2020-05-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://tobybase.com/categories/tools/</loc>
+    <loc>http://tobybase.com/tags/tools/</loc>
     <lastmod>2020-05-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/categories/cloud/</loc>
+    <lastmod>2020-02-07T21:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/infolob/</loc>
+    <lastmod>2020-02-07T21:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/oci/</loc>
+    <lastmod>2020-02-07T21:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -68,7 +143,7 @@
   </url>
   
   <url>
-    <loc>http://tobybase.com/tags/cisco/</loc>
+    <loc>http://tobybase.com/categories/cisco/</loc>
     <lastmod>2020-01-27T15:20:10-06:00</lastmod>
   </url>
   
@@ -83,18 +158,8 @@
   </url>
   
   <url>
-    <loc>http://tobybase.com/tags/utilities/</loc>
-    <lastmod>2020-01-27T15:20:10-06:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://tobybase.com/tags/vpn/</loc>
     <lastmod>2020-01-27T15:20:10-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/categories/cloud/</loc>
-    <lastmod>2020-01-17T17:08:16-06:00</lastmod>
   </url>
   
   <url>
@@ -103,17 +168,7 @@
   </url>
   
   <url>
-    <loc>http://tobybase.com/categories/database/</loc>
-    <lastmod>2020-01-17T17:08:16-06:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://tobybase.com/series/get-going-with-autonomous-database-in-the-cloud/</loc>
-    <lastmod>2020-01-17T17:08:16-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/oracle/</loc>
     <lastmod>2020-01-17T17:08:16-06:00</lastmod>
   </url>
   
@@ -124,11 +179,6 @@
   
   <url>
     <loc>http://tobybase.com/tags/oracle-autonomous-database/</loc>
-    <lastmod>2020-01-17T17:08:16-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/oracle-cloud/</loc>
     <lastmod>2020-01-17T17:08:16-06:00</lastmod>
   </url>
   
@@ -158,7 +208,7 @@
   </url>
   
   <url>
-    <loc>http://tobybase.com/tags/sql/</loc>
+    <loc>http://tobybase.com/tags/tuning/</loc>
     <lastmod>2019-09-23T13:54:50-05:00</lastmod>
   </url>
   
@@ -168,7 +218,12 @@
   </url>
   
   <url>
-    <loc>http://tobybase.com/tags/java/</loc>
+    <loc>http://tobybase.com/categories/java/</loc>
+    <lastmod>2019-05-01T16:47:39-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/categories/macos/</loc>
     <lastmod>2019-05-01T16:47:39-05:00</lastmod>
   </url>
   
@@ -203,6 +258,11 @@
   </url>
   
   <url>
+    <loc>http://tobybase.com/categories/database/</loc>
+    <lastmod>2018-04-10T12:47:23-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://tobybase.com/links/2018-04-10-oracle-sees-automation/</loc>
     <lastmod>2018-04-10T12:47:23-05:00</lastmod>
   </url>
@@ -213,22 +273,12 @@
   </url>
   
   <url>
-    <loc>http://tobybase.com/tags/cloud/</loc>
-    <lastmod>2018-04-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://tobybase.com/tags/iaas/</loc>
     <lastmod>2018-04-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://tobybase.com/tags/oci/</loc>
-    <lastmod>2018-04-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/windows/</loc>
+    <loc>http://tobybase.com/tags/microsoft-windows/</loc>
     <lastmod>2018-04-10T00:00:00+00:00</lastmod>
   </url>
   
@@ -248,32 +298,12 @@
   </url>
   
   <url>
-    <loc>http://tobybase.com/tags/brian-hill/</loc>
-    <lastmod>2017-03-10T14:56:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/infolob/</loc>
-    <lastmod>2017-03-10T14:56:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://tobybase.com/series/infolob-on-youtube/</loc>
     <lastmod>2017-03-10T14:56:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://tobybase.com/tags/lift-and-shift/</loc>
-    <lastmod>2017-03-10T14:56:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://tobybase.com/posts/infolob-lift-and-shift-howto-4/</loc>
-    <lastmod>2017-03-10T14:56:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/oracle-cloud-services/</loc>
     <lastmod>2017-03-10T14:56:00+00:00</lastmod>
   </url>
   
@@ -298,22 +328,7 @@
   </url>
   
   <url>
-    <loc>http://tobybase.com/tags/videos/</loc>
-    <lastmod>2017-03-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/youtube/</loc>
-    <lastmod>2017-03-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://tobybase.com/license/</loc>
-    <lastmod>2017-02-23T11:32:23-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/</loc>
     <lastmod>2017-02-23T11:32:23-06:00</lastmod>
   </url>
   
@@ -323,12 +338,7 @@
   </url>
   
   <url>
-    <loc>http://tobybase.com/categories/housekeeping/</loc>
-    <lastmod>2017-01-17T22:58:59-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/me/</loc>
+    <loc>http://tobybase.com/categories/blog/</loc>
     <lastmod>2017-01-17T22:58:59-06:00</lastmod>
   </url>
   
@@ -343,13 +353,18 @@
   </url>
   
   <url>
-    <loc>http://tobybase.com/categories/development/</loc>
+    <loc>http://tobybase.com/posts/2013-07-24-linux-unix-use-ps-to-list-top-memory-cpu-eating-processes/</loc>
     <lastmod>2017-02-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://tobybase.com/posts/2013-07-24-linux-unix-use-ps-to-list-top-memory-cpu-eating-processes/</loc>
+    <loc>http://tobybase.com/categories/shell-scripting/</loc>
     <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/categories/development/</loc>
+    <lastmod>2013-07-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -359,11 +374,6 @@
   
   <url>
     <loc>http://tobybase.com/posts/2013-07-19-fix-sql-developer-on-a-retina-display-macbook/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/bi/</loc>
     <lastmod>2017-02-22T00:00:00+00:00</lastmod>
   </url>
   
@@ -378,7 +388,12 @@
   </url>
   
   <url>
-    <loc>http://tobybase.com/tags/reporting/</loc>
+    <loc>http://tobybase.com/tags/microsoft-word/</loc>
+    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/categories/reporting/</loc>
     <lastmod>2017-02-22T00:00:00+00:00</lastmod>
   </url>
   
@@ -388,7 +403,7 @@
   </url>
   
   <url>
-    <loc>http://tobybase.com/tags/application-express/</loc>
+    <loc>http://tobybase.com/tags/apex/</loc>
     <lastmod>2017-02-22T00:00:00+00:00</lastmod>
   </url>
   
@@ -413,11 +428,6 @@
   </url>
   
   <url>
-    <loc>http://tobybase.com/tags/external-tables/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://tobybase.com/posts/2012-11-14-query-an-xml-file-like-an-external-table/</loc>
     <lastmod>2017-02-22T00:00:00+00:00</lastmod>
   </url>
@@ -438,17 +448,17 @@
   </url>
   
   <url>
-    <loc>http://tobybase.com/tags/active-directory/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://tobybase.com/posts/2012-11-12-configure-oracle-bi-publisher-to-authenticate-with-active-directory/</loc>
     <lastmod>2017-02-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://tobybase.com/tags/ldap/</loc>
+    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/microsoft-active-directory/</loc>
     <lastmod>2017-02-22T00:00:00+00:00</lastmod>
   </url>
   
@@ -468,17 +478,12 @@
   </url>
   
   <url>
-    <loc>http://tobybase.com/tags/javascript/</loc>
+    <loc>http://tobybase.com/categories/javascript/</loc>
     <lastmod>2017-02-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://tobybase.com/posts/2012-10-26-use-firebugs-consoledebug-command-to-analyze-javascript-dom-objects/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/web-development/</loc>
     <lastmod>2017-02-22T00:00:00+00:00</lastmod>
   </url>
   
@@ -508,6 +513,11 @@
   </url>
   
   <url>
+    <loc>http://tobybase.com/categories/tools/</loc>
+    <lastmod>2012-07-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://tobybase.com/posts/2012-07-20-easy-fix-for-high-cpu-usage-in-sql-developer-on-os-x/</loc>
     <lastmod>2017-02-22T00:00:00+00:00</lastmod>
   </url>
@@ -533,17 +543,17 @@
   </url>
   
   <url>
-    <loc>http://tobybase.com/tags/perl/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/scripting/</loc>
+    <loc>http://tobybase.com/categories/perl/</loc>
     <lastmod>2017-02-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://tobybase.com/posts/2012-06-27-os-x-software-for-oracle-developers/</loc>
+    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/dml/</loc>
     <lastmod>2017-02-22T00:00:00+00:00</lastmod>
   </url>
   
@@ -563,7 +573,7 @@
   </url>
   
   <url>
-    <loc>http://tobybase.com/tags/tools/</loc>
+    <loc>http://tobybase.com/tags/sql/</loc>
     <lastmod>2012-05-25T00:00:00+00:00</lastmod>
   </url>
   
@@ -573,12 +583,17 @@
   </url>
   
   <url>
-    <loc>http://tobybase.com/tags/access/</loc>
+    <loc>http://tobybase.com/categories/citrix/</loc>
     <lastmod>2017-02-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://tobybase.com/tags/citrix/</loc>
+    <loc>http://tobybase.com/tags/microsoft-access/</loc>
+    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/microsoft-office/</loc>
     <lastmod>2017-02-22T00:00:00+00:00</lastmod>
   </url>
   
@@ -589,11 +604,6 @@
   
   <url>
     <loc>http://tobybase.com/posts/2012-05-11-odbc-connection-fails-for-ms-access-app-on-citrix/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/office/</loc>
     <lastmod>2017-02-22T00:00:00+00:00</lastmod>
   </url>
   
@@ -633,17 +643,7 @@
   </url>
   
   <url>
-    <loc>http://tobybase.com/tags/profiling/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/pipelined-table-functions/</loc>
-    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/plsql/</loc>
+    <loc>http://tobybase.com/tags/database/</loc>
     <lastmod>2017-02-22T00:00:00+00:00</lastmod>
   </url>
   
@@ -699,6 +699,10 @@
   
   <url>
     <loc>http://tobybase.com/about/</loc>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/categories/sql-pl/sql/</loc>
   </url>
   
   <url>

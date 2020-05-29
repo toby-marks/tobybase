@@ -1,15 +1,56 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>oracle on 👨🏻‍💻 Tobybase</title>
+    <title>Oracle on 👨🏻‍💻 Tobybase</title>
     <link>http://tobybase.com/tags/oracle/</link>
-    <description>Recent content in oracle on 👨🏻‍💻 Tobybase</description>
+    <description>Recent content in Oracle on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 17 Jan 2020 17:08:16 -0600</lastBuildDate>
+    <lastBuildDate>Wed, 27 May 2020 10:22:08 -0500</lastBuildDate>
     
 	<atom:link href="http://tobybase.com/tags/oracle/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Translating Teradata&#39;s MDIFF Function to Oracle SQL</title>
+      <link>http://tobybase.com/posts/translating-mdiff-to-oracle/</link>
+      <pubDate>Wed, 27 May 2020 10:22:08 -0500</pubDate>
+      
+      <guid>http://tobybase.com/posts/translating-mdiff-to-oracle/</guid>
+      <description>Teradata defines its MDIFF function as follows:
+ MDIFF
+Returns the moving difference between the specified value expression for the current row and the preceding width rows for each row in the partition.
+ Here &amp;ldquo;the preceding width rows&amp;rdquo; means something like the preceding n rows, where n is sometimes interpreted as the sum of all of the preceding rows, but generally as the value of the last row.
+Teradata&amp;rsquo;s docs also has this to say about MDIFF:</description>
+    </item>
+    
+    <item>
+      <title>An Example of Dynamic SQL Using a CLOB</title>
+      <link>http://tobybase.com/posts/dynamic-sql-with-clob/</link>
+      <pubDate>Fri, 22 May 2020 13:28:39 -0500</pubDate>
+      
+      <guid>http://tobybase.com/posts/dynamic-sql-with-clob/</guid>
+      <description>You might not know this, but you can use the EXECUTE IMMEDIATE command with a CLOB, the same as with a VARCHAR2 variable.
+declare l_sql clob; l_str1 varchar2(32767); l_str2 varchar2(32767); begin dbms_lob.createtemporary(l_sql, false); l_str1 := &amp;#39;some large SQL chunk&amp;#39;; l_str2 := &amp;#39;and the rest of large SQL chunk&amp;#39;; l_sql := l_str1; dbms_lob.writeappend(l_sql, length(l_str2), l_str2); execute immediate l_sql; dbms_lob.freetemporary(l_sql); end; </description>
+    </item>
+    
+    <item>
+      <title>Oracle Cloud Day Dallas</title>
+      <link>http://tobybase.com/posts/oracle-cloud-day-dallas/</link>
+      <pubDate>Fri, 07 Feb 2020 21:00:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/oracle-cloud-day-dallas/</guid>
+      <description>Tobybase representing at Oracle Cloud Day in Dallas. Just another day in my so-called autonomous life…</description>
+    </item>
+    
+    <item>
+      <title>Get Up and Running Fast On Oracle Autonomous Database in the Cloud</title>
+      <link>http://tobybase.com/posts/up-and-running-on-oracle-autonomous-database/</link>
+      <pubDate>Thu, 09 Jan 2020 16:58:15 -0600</pubDate>
+      
+      <guid>http://tobybase.com/posts/up-and-running-on-oracle-autonomous-database/</guid>
+      <description>Provision Your New Autonomous Database in Minutes With Autonomous Database and Autonomous Data Warehouse, Oracle is promising to leverage the power of AI and machine learning to automate upgrade, maintenance, and tuning operations in the database - vastly reducing the drudgery of DBA work and freeing up human minds to add more value to their companies. As a developer, you don&amp;rsquo;t have to wait to start experimenting with these exciting new features.</description>
+    </item>
     
     <item>
       <title>3 Tips for Running SAS Queries on Oracle</title>
@@ -39,6 +80,57 @@ I have personally observed this behavior on every version of SQL Developer since
       <guid>http://tobybase.com/posts/2018-04-10-oci-add-block-volume-on-windows/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;If you are getting the above error when trying to add a block volume to a Windows VM in Oracle Cloud Infrastructure, the solution is quite simple.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Move Your VM to Oracle Cloud - Part 4</title>
+      <link>http://tobybase.com/posts/infolob-lift-and-shift-howto-4/</link>
+      <pubDate>Fri, 10 Mar 2017 14:56:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/infolob-lift-and-shift-howto-4/</guid>
+      <description>In the last of a four-part video series, our Director of Cloud Services Brian Hill creates a new compute instance in Oracle Cloud Compute Services based on his custom Windows virtual machine image.
+  </description>
+    </item>
+    
+    <item>
+      <title>Move Your VM to Oracle Cloud - Part 3</title>
+      <link>http://tobybase.com/posts/infolob-lift-and-shift-howto-3/</link>
+      <pubDate>Fri, 10 Mar 2017 14:53:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/infolob-lift-and-shift-howto-3/</guid>
+      <description>In part three of a four-part video series, our Director of Cloud Services Brian Hill creates a bootable storage volume in Oracle Cloud Compute Services with his new Windows image.
+  </description>
+    </item>
+    
+    <item>
+      <title>Move Your VM to Oracle Cloud - Part 2</title>
+      <link>http://tobybase.com/posts/infolob-lift-and-shift-howto-2/</link>
+      <pubDate>Fri, 10 Mar 2017 14:47:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/infolob-lift-and-shift-howto-2/</guid>
+      <description>In part two of a four-part video series, our Director of Cloud Services Brian Hill creates an image in Oracle Cloud Compute Services based on a Windows virtual machine.
+  </description>
+    </item>
+    
+    <item>
+      <title>Move Your VM to Oracle Cloud - Part 1</title>
+      <link>http://tobybase.com/posts/infolob-lift-and-shift-howto-1/</link>
+      <pubDate>Fri, 10 Mar 2017 14:41:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/infolob-lift-and-shift-howto-1/</guid>
+      <description>In part one of a four-part video series, our Director of Cloud Services Brian Hill demonstrates how to prepare your virtual machine for upload to the cloud.
+  </description>
+    </item>
+    
+    <item>
+      <title>Announcing the Infolob YouTube Channel</title>
+      <link>http://tobybase.com/posts/infolob-youtube-channel/</link>
+      <pubDate>Fri, 10 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/infolob-youtube-channel/</guid>
+      <description>I am honored to work with some wonderful and truly smart folks over at Infolob in Irving, Texas. The company recently started a YouTube channel and we are looking to add lots of great videos soon for your enjoyment and education.
+Check us out!
+In this short Oracle Platinum Partner Spotlight video, our Chief Technologist Tim Fox explains what we do as a company and the kinds of services we provide.</description>
     </item>
     
     <item>
@@ -81,15 +173,6 @@ In short, doing this the normal way did not work for me, and in researching the 
       <description>In Windows, most applications provide menu and button accelerator keys that allow you to control the application without having to use a mouse. Java Swing apps like SQL Developer allow you to do the same, ostensibly in a cross-platform compatible manner.
 One place I use this frequently is the Enter Binds dialog window that pops up when running a query using bind variables.
 In Java 6 on OS X, the hotkey for pressing the Help and Apply buttons was OPTION-H and OPTION-A, respectively.</description>
-    </item>
-    
-    <item>
-      <title>Generate PDF Reports for Free in Oracle Apex Using PL-JRXML2PDF and iReport Designer</title>
-      <link>http://tobybase.com/posts/2012-12-18-video-post/</link>
-      <pubDate>Tue, 18 Dec 2012 00:00:00 +0000</pubDate>
-      
-      <guid>http://tobybase.com/posts/2012-12-18-video-post/</guid>
-      <description>Using Jaspersoft&amp;rsquo;s free iReport Designer tool and the open source PL-JRXML2PDF project, you can generate PDF reports from Oracle Apex for free, without having to install the JasperReports and JasperReports Server components. Watch my video tutorial to find out how.</description>
     </item>
     
     <item>

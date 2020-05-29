@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Cloud on 👨🏻‍💻 Tobybase</title>
+    <title>cloud on 👨🏻‍💻 Tobybase</title>
     <link>http://tobybase.com/categories/cloud/</link>
-    <description>Recent content in Cloud on 👨🏻‍💻 Tobybase</description>
+    <description>Recent content in cloud on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 17 Jan 2020 17:08:16 -0600</lastBuildDate>
+    <lastBuildDate>Fri, 07 Feb 2020 21:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://tobybase.com/categories/cloud/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Oracle Cloud Day Dallas</title>
+      <link>http://tobybase.com/posts/oracle-cloud-day-dallas/</link>
+      <pubDate>Fri, 07 Feb 2020 21:00:00 +0000</pubDate>
+      
+      <guid>http://tobybase.com/posts/oracle-cloud-day-dallas/</guid>
+      <description>Tobybase representing at Oracle Cloud Day in Dallas. Just another day in my so-called autonomous life…</description>
+    </item>
     
     <item>
       <title>Connect to Autonomous Database in the Cloud with Oracle Instant Client</title>
