@@ -2,8 +2,8 @@
 date = "2020-05-19T17:09:28-05:00"
 lastmod = "2020-05-19"
 title = "How to Restore Files From a Previous Version in Git/Github"
-categories = ["Tools"]
-tags = ["git", "github", "source control"]
+categories = ["source control"]
+tags = ["git", "GitHub", "tools"]
 +++
 ### Get the hash of the "good" version you want to recover
 

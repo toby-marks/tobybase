@@ -2,8 +2,8 @@
 date = "2017-01-17T22:58:59-06:00"
 title = "Announcing… tobybase.com"
 draft = false
-categories = ["Housekeeping"]
-tags = ["me", "infolob", "oracle"]
+categories = ["blog"]
+tags = ["Infolob", "Oracle"]
 +++
 
 Welcome one and all to my new professional blog, [tobybase.com](http://tobybase.com/ "Redirects to the website you are now on"). My name is Toby Marks and I work as a [Oracle](http://oracle.com "Oracle's website") Consultant at [Infolob Solutions](http://infolob.com/ "My company's website") in [Irving, Texas](https://en.wikipedia.org/wiki/Las_Colinas "Some info about sunny Las Colinas"). My [old blog](http://tjmoracle.tumblr.com/ "My old blog") is still up on [Tumblr](http://tumblr.com/ "Go to Tumblr"), and there are a [few](https://tmblr.co/Z9fAmvZapPzC "Create PDF Reports in Oracle Apex") [items](https://tmblr.co/Z9fAmvXEB6iL "Query an XML File Like an External Table") [there](https://tmblr.co/Z9fAmvOFEN-N "OS X Software for Oracle Developers") that folks still find useful. Most of the content is a bit dated, though, as I've been out of the blogging game for a while. 

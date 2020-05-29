@@ -3,8 +3,8 @@ title = "Connect to Autonomous Database in the Cloud with Oracle Instant Client"
 description = ""
 date = 2020-01-17T17:08:16-06:00
 series = ["Get Going With Autonomous Database in the Cloud"]
-categories = ["Database", "Cloud"]
-tags = ["Oracle Autonomous Database", "Oracle Autonomous Data Warehouse", "Oracle Cloud"]
+categories = ["cloud"]
+tags = ["Oracle Autonomous Database", "Oracle Autonomous Data Warehouse", "OCI"]
 +++
 The easiest and fastest way to query and create data in your new cloud database is with SQL Developer Web, provided free with every new instance of Autonomous Database and Autonomous Data Warehouse in the Cloud. Second fastest would be with a local installation of [SQL Developer or SQLcl]({{< ref "connecting-to-autonomous-with-sql-dev">}}). But if you want an authentic SQL*Plus environment, then you'll need Oracle Instant Client.
 

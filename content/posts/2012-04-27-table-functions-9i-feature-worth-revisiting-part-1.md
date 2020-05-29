@@ -3,8 +3,8 @@ draft       = false
 date        = "2012-04-27T22:27:00+00:00"
 lastmod     = "2017-02-22"
 title       = "Table Functions: 9i Feature Worth Revisiting (Part 1)"
-categories  = ["Database"]
-tags        = ["oracle", "plsql", "pipelined table functions"]
+categories  = ["SQL & PL/SQL"]
+tags        = ["Oracle", "database"]
 series      = ["Table Functions"]
 +++
 Yes, they've been around for a while, but if you haven't made use of table functions lately you might want to reacquaint yourself with this old gem. Table functions allow you to query the contents of PL/SQL collection types using SQL's TABLE operator. Here is a simple example.

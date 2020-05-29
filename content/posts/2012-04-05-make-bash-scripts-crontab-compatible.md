@@ -3,8 +3,8 @@ draft       = false
 date        = "2012-04-05T21:19:05+00:00"
 lastmod     = "2017-02-22"
 title       = "How To Make Bash Scripts crontab-Compatible"
-categories  = ["Development"]
-tags        = ["bash", "cron", "scripting", "unix/linux"]
+categories  = ["shell scripting"]
+tags        = ["bash", "cron", "unix/linux"]
 +++
 When writing shell scripts in bash, consider whether your script can be automated in a batch scheduler like cron. If you reference any external resources in your script relative to the directory in which it resides, those references may break when running your script through cron.
 

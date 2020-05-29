@@ -2,8 +2,8 @@
 date 		= 2019-05-01T16:47:39-05:00
 title 		= "Fix High CPU Usage / Memory Leak in SQL Developer 18+ for Windows"
 description = "How to fix an annoying problem in the latest versions of SQL Developer"
-categories  = ["Tools", "Database"]
-tags        = ["oracle", "macos", "sql developer", "utilities", "java"]
+categories  = ["Java", "macOS"]
+tags        = ["Oracle", "SQL Developer", "tools"]
 +++
 If you run SQL Developer on Windows and experience high CPU usage and/or memory leak issues that freeze your PC, then you might want to try disabling some features that are likely causing the problem. 
 

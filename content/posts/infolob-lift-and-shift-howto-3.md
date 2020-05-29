@@ -1,7 +1,7 @@
 +++
 date = "2017-03-10T14:53:00Z"
-categories = ["Infolob", "Cloud"]
-tags = ["cloud", "brian hill", "lift and shift", "oracle cloud services", "virtual machines", "windows", "infolob"]
+categories = ["cloud"]
+tags = ["Infolob", "Oracle", "OCI", "virtual machines", "Microsoft Windows"]
 title = "Move Your VM to Oracle Cloud - Part 3"
 series = ["Infolob on YouTube"]
 +++

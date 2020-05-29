@@ -3,8 +3,8 @@ title 		= "Error in Cisco AnyConnect Client: \"Cannot Confirm it is Connected\""
 description = "What to do when you experience this error when attempting to connect to your company's Cisco VPN: AnyConnect cannot confirm it is connected to your secure gateway. The local network may not be trustworthy. Please try another network."
 date = 2020-01-27T15:20:10-06:00
 series 		= []
-categories  = ["Tools"]
-tags        = ["macos", "vpn", "cisco", "utilities"]
+categories  = ["Cisco"]
+tags        = ["macOS", "VPN", "tools"]
 +++
 *[NOTE: problem identified on my personal laptop with macOS 10.15.2, Cisco AnyConnect Secure Mobility Client 4.6.03049]*
 ### What to Do When You Encounter This Error

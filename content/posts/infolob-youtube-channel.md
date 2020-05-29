@@ -1,6 +1,6 @@
 +++
-categories = ["Infolob"]
-tags = ["infolob", "youtube", "videos"]
+categories = ["News"]
+tags = ["Infolob", "Oracle", "OCI", "virtual machines", "Microsoft Windows"]
 title = "Announcing the Infolob YouTube Channel"
 date = "2017-03-10"
 series = ["Infolob on YouTube"]

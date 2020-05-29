@@ -3,8 +3,8 @@ draft       = false
 date        = "2013-01-09T19:09:45+00:00"
 lastmod     = "2017-02-22"
 title       = "Button Hotkeys in SQL Developer on OS X"
-categories  = ["Tools", "Database"]
-tags        = ["oracle", "sql developer", "macOS", "utilities"]
+categories  = ["macOS"]
+tags        = ["Oracle", "SQL Developer", "tools"]
 +++
 In Windows, most applications provide menu and button accelerator keys that allow you to control the application without having to use a mouse. Java Swing apps like SQL Developer allow you to do the same, ostensibly in a cross-platform compatible manner. 
 

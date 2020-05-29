@@ -3,8 +3,8 @@ draft       = false
 date        = "2012-11-12T17:32:00+00:00"
 lastmod     = "2017-02-22"
 title       = "How To Configure Oracle BI Publisher to Authenticate With Active Directory"
-categories  = ["Tools", "Database"]
-tags        = ["bi publisher", "active directory", "ldap", "oracle"]
+categories  = ["Reporting"]
+tags        = ["BI Publisher", "Microsoft Active Directory", "LDAP", "Oracle"]
 series      = ["BI Publisher"]
 +++
 + Log in to BI Publisher as an administrator.

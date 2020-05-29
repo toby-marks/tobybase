@@ -3,8 +3,8 @@ draft       = false
 date        = "2012-03-09T18:42:00+00:00"
 lastmod     = "2017-02-22"
 title       = "Invalidating Toplink Session Cache To Avoid Stale Data"
-categories  = ["Development", "Tools"]
-tags        = ["oracle", "java", "toplink", "oracle application server", "weblogic"]
+categories  = ["Java"]
+tags        = ["Oracle", "Toplink", "Oracle Application Server", "Weblogic"]
 +++
 
 Toplink is a Java framework that maps objects to database tables. It is the reference implementation for the Java Persistence Architecture, or JPA. Developers use Toplink to manage data persistence (storage), queries, and transactions in an Oracle database. By default, Toplink makes use of a special cache called a Session Cache, maintained on the server, which is meant to speed up performance. Queried data is stored in the Session Cache and used in subsequent queries to reduce or eliminate calls to the database.

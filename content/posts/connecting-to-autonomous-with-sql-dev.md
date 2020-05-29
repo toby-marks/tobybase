@@ -3,8 +3,8 @@ title = "Connect to Autonomous Database in the Cloud with SQL Developer and SQLc
 description = ""
 date = 2020-01-17T16:59:40-06:00
 series = ["Get Going With Autonomous Database in the Cloud"]
-categories = ["Database", "Cloud"]
-tags = ["Oracle Autonomous Database", "Oracle Autonomous Data Warehouse", "Oracle Cloud"]
+categories = ["cloud"]
+tags = ["Oracle Autonomous Database", "Oracle Autonomous Data Warehouse", "OCI"]
 +++
 ### Connect with SQL Developer Web 
 ![](https://res.cloudinary.com/tobyblog/image/upload/v1579364810/img/Screenshot_from_2020-01-09_17.11.52.jpg)

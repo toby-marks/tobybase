@@ -3,8 +3,8 @@ draft       = false
 date        = "2012-06-27T21:39:00+00:00"
 lastmod     = "2017-02-22"
 title       = "OS X Software for Oracle Developers"
-categories  = ["Tools", "Database"]
-tags        = ["macos", "oracle", "utilities"]
+categories  = ["macOS"]
+tags        = ["Oracle", "tools"]
 +++
 One of the great things about working for [Enkitec](http://www.enkitec.com/) is that it's a very Mac-friendly shop. When I arrived there in 2007 there were a handful of us running Macs and the attitude at the top seemed to be respectful, but skeptical. They allowed me to use my own laptop, which at the time was a 15-inch Intel Core2 Duo Macbook Pro, with the understanding that I could request a standard-issue Dell laptop at any time should the need arise. It never did. Since that time a large number of my coworkers have made the switch, abandoning their bulky, slow Dell Latitude laptops for 13-inch Macbook Pros, as have both owners of the company.
 

@@ -2,10 +2,10 @@
 title = "How to Configure Static Networking in a Linux VM"
 description = ""
 date = 2020-05-20T16:36:06-05:00
-categories = ["Linux"]
-tags = ["virtual machines", "Docker", "unix/linux"]
+categories = ["linux"]
+tags = ["virtual machines", "Docker", "OVM", "unix/linux"]
 +++
-I originally had this requirement after creating a new persistent linux virtual machine in [OVM](https://www.oracle.com/virtualization/technologies/vm/) that needed static addressing. This is just standard linux setup, though, and can be applied to both virtual and physical machines.
+I originally had this requirement after creating a new persistent linux virtual machine in [OVM](https://www.oracle.com/virtualization/technologies/vm/) that needed static addressing. This is just standard linux setup, though, and can be adapted to both virtual and physical machines.
 
 ## Turn on Networking
 
@@ -33,21 +33,17 @@ HWADDR=00:30:48:56:A6:2E
 TYPE=Ethernet
 BOOTPROTO=none
 IPADDR=192.168.1.10
-PREFIX=24
 GATEWAY=192.168.1.0
-DNS1=192.168.1.254
-DNS2=8.8.8.8
-DNS3=8.8.4.4
+PREFIX=24
 DEFROUTE=yes
 IPV4_FAILURE_FATAL=no
-# Disable IPV6
 IPV6INIT=no
 NAME=eth0
-# This is system specific and can be created using 'uuidgen eth0' command
-UUID=41171a6f-bce1-44de-8a6e-cf5e782f8bd6
 DEVICE=eth0
 ONBOOT=yes
 ```
+
+The `HWADDR` value is just the MAC address of the VM, which I got from the OVM console. The `PREFIX` value relates to the network mask; eg. a value of 24 equates to a mask of `255.255.255.0`. Disabling IPV6 is optional. 
 
 ## Configure DNS Servers
 

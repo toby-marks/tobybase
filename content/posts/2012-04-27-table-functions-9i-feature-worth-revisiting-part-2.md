@@ -3,8 +3,8 @@ draft       = false
 date        = "2012-04-27T22:35:00+00:00"
 lastmod     = "2017-02-22"
 title       = "Table Functions: 9i Feature Worth Revisiting (Part 2)"
-categories  = ["Database"]
-tags        = ["oracle", "plsql", "pipelined table functions"]
+categories  = ["SQL & PL/SQL"]
+tags        = ["Oracle", "database"]
 series      = ["Table Functions"]
 +++
 In [part one of this series]({{< relref "2012-04-27-table-functions-9i-feature-worth-revisiting-part-1.md" >}}-1) I showed a simple example of how table functions can be used to treat PL/SQL collection types as tables in a SQL query. We used a nested table collection type to which we manually added a few entries. In this example, I intend to show a more practical use of table functions using all three PL/SQL collection types: associative arrays, nested tables, and VARRAYs.

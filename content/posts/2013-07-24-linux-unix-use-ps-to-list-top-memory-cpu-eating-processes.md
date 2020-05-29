@@ -3,8 +3,8 @@ draft       = false
 date        = "2013-07-24T21:42:00+00:00"
 lastmod     = "2017-02-22"
 title       = "How to Use ps to List Top Memory, CPU Eating Processes"
-categories  = ["Development"]
-tags        = ["unix/linux", "macos"]
+categories  = ["shell scripting"]
+tags        = ["unix/linux"]
 +++
 The `ps` command is a versatile and configurable way to look at the processes running on your system, though I've generally gotten by with a lazy `ps -ef` to find out whatever I needed to know. Recently, though, a client's server began running out of memory, and as a number of processes were running on the server, the culprit was not immediately clear. I wanted to provide them with a quick, simple diagnostic tool they could use the next time they received an alert. 
 

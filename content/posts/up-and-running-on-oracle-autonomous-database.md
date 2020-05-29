@@ -3,8 +3,8 @@ title = "Get Up and Running Fast On Oracle Autonomous Database in the Cloud"
 description = "How to launch and connect to free instances of Oracle Autonomous Database and Oracle Autonomous Data Warehouse in the cloud."
 date = 2020-01-09T16:58:15-06:00
 series = ["Get Going With Autonomous Database in the Cloud"]
-categories = ["Database", "Cloud"]
-tags = ["Oracle Autonomous Database", "Oracle Autonomous Data Warehouse", "Oracle Cloud"]
+categories = ["cloud"]
+tags = ["Oracle Autonomous Database", "Oracle Autonomous Data Warehouse", "Oracle", "OCI"]
 +++
 ### Provision Your New Autonomous Database in Minutes
 
