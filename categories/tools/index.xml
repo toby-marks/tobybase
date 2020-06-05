@@ -6,10 +6,19 @@
     <description>Recent content in Tools on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 25 Jul 2012 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jun 2020 17:23:31 -0500</lastBuildDate>
     
 	<atom:link href="http://tobybase.com/categories/tools/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>TIL: How to Replace Newline in Atom</title>
+      <link>http://tobybase.com/posts/til-replacing-newlins-in-atom/</link>
+      <pubDate>Fri, 05 Jun 2020 17:23:31 -0500</pubDate>
+      
+      <guid>http://tobybase.com/posts/til-replacing-newlins-in-atom/</guid>
+      <description>Newline characters are matched as \r\n in Atom. To remove all newlines from a file or selection of text, do a regex search for \r\n and replace with nothing.</description>
+    </item>
     
     <item>
       <title>Safari 5.1.7 on my MacBookPro OSX 10.7.4 freezes unexpectedly</title>
