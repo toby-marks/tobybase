@@ -3,8 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://tobybase.com/posts/invalid-format-connecting-to-server-with-ssh/</loc>
+    <lastmod>2020-06-06T12:01:34-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://tobybase.com/categories/</loc>
-    <lastmod>2020-06-05T17:37:14-05:00</lastmod>
+    <lastmod>2020-06-06T12:01:34-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/categories/linux/</loc>
+    <lastmod>2020-06-06T12:01:34-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/posts/</loc>
+    <lastmod>2020-06-06T12:01:34-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/</loc>
+    <lastmod>2020-06-06T12:01:34-05:00</lastmod>
   </url>
   
   <url>
@@ -23,11 +43,6 @@
   </url>
   
   <url>
-    <loc>http://tobybase.com/posts/</loc>
-    <lastmod>2020-06-05T17:37:14-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://tobybase.com/tags/sql-developer/</loc>
     <lastmod>2020-06-05T17:37:14-05:00</lastmod>
   </url>
@@ -39,11 +54,6 @@
   
   <url>
     <loc>http://tobybase.com/categories/tools/</loc>
-    <lastmod>2020-06-05T17:37:14-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/</loc>
     <lastmod>2020-06-05T17:37:14-05:00</lastmod>
   </url>
   
@@ -79,11 +89,6 @@
   
   <url>
     <loc>http://tobybase.com/posts/share-files-between-photon-vm-and-host/</loc>
-    <lastmod>2020-05-29T13:41:02-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/categories/linux/</loc>
     <lastmod>2020-05-29T13:41:02-05:00</lastmod>
   </url>
   

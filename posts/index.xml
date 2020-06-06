@@ -6,10 +6,20 @@
     <description>Recent content in Posts on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 05 Jun 2020 17:37:14 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 06 Jun 2020 12:01:34 -0500</lastBuildDate>
     
 	<atom:link href="http://tobybase.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>&#39;Invalid Format&#39; Error Connecting to Server with SSH and Private Key</title>
+      <link>http://tobybase.com/posts/invalid-format-connecting-to-server-with-ssh/</link>
+      <pubDate>Sat, 06 Jun 2020 12:01:34 -0500</pubDate>
+      
+      <guid>http://tobybase.com/posts/invalid-format-connecting-to-server-with-ssh/</guid>
+      <description>If you get an &amp;lsquo;invalid format&amp;rsquo; error when trying to SSH in to a remote server using a private key file that you know is valid, it may be because the key was generated with PuTTY.
+If the key begins with PuTTY-User-Key-File and you are using SSH/openSSH (ie. command line SSH) to connect to your server, you will need to first convert the key file using the puttygen tool that comes with PuTTY.</description>
+    </item>
     
     <item>
       <title>Enable OCI Thick Client Connections in SQL Developer on Windows</title>
