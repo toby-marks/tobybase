@@ -3,27 +3,57 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://tobybase.com/categories/</loc>
+    <lastmod>2020-06-05T17:37:14-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/posts/enable-oci-connections-in-sql-developer/</loc>
+    <lastmod>2020-06-05T17:37:14-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/microsoft-windows/</loc>
+    <lastmod>2020-06-05T17:37:14-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/oracle/</loc>
+    <lastmod>2020-06-05T17:37:14-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/posts/</loc>
+    <lastmod>2020-06-05T17:37:14-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/sql-developer/</loc>
+    <lastmod>2020-06-05T17:37:14-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/tags/</loc>
+    <lastmod>2020-06-05T17:37:14-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/categories/tools/</loc>
+    <lastmod>2020-06-05T17:37:14-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tobybase.com/</loc>
+    <lastmod>2020-06-05T17:37:14-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://tobybase.com/tags/atom/</loc>
     <lastmod>2020-06-05T17:23:31-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://tobybase.com/categories/</loc>
-    <lastmod>2020-06-05T17:23:31-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/posts/</loc>
-    <lastmod>2020-06-05T17:23:31-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://tobybase.com/series/</loc>
-    <lastmod>2020-06-05T17:23:31-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/</loc>
     <lastmod>2020-06-05T17:23:31-05:00</lastmod>
   </url>
   
@@ -34,16 +64,6 @@
   
   <url>
     <loc>http://tobybase.com/posts/til-replacing-newlins-in-atom/</loc>
-    <lastmod>2020-06-05T17:23:31-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/categories/tools/</loc>
-    <lastmod>2020-06-05T17:23:31-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/</loc>
     <lastmod>2020-06-05T17:23:31-05:00</lastmod>
   </url>
   
@@ -84,11 +104,6 @@
   
   <url>
     <loc>http://tobybase.com/tags/migrations/</loc>
-    <lastmod>2020-05-27T10:22:08-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/oracle/</loc>
     <lastmod>2020-05-27T10:22:08-05:00</lastmod>
   </url>
   
@@ -248,11 +263,6 @@
   </url>
   
   <url>
-    <loc>http://tobybase.com/tags/sql-developer/</loc>
-    <lastmod>2019-05-01T16:47:39-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://tobybase.com/categories/ai/</loc>
     <lastmod>2018-05-01T09:05:54-05:00</lastmod>
   </url>
@@ -294,11 +304,6 @@
   
   <url>
     <loc>http://tobybase.com/tags/iaas/</loc>
-    <lastmod>2018-04-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tobybase.com/tags/microsoft-windows/</loc>
     <lastmod>2018-04-10T00:00:00+00:00</lastmod>
   </url>
   

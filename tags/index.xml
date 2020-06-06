@@ -6,10 +6,37 @@
     <description>Recent content in Tags on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 05 Jun 2020 17:23:31 -0500</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jun 2020 17:37:14 -0500</lastBuildDate>
     
 	<atom:link href="http://tobybase.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Microsoft Windows</title>
+      <link>http://tobybase.com/tags/microsoft-windows/</link>
+      <pubDate>Fri, 05 Jun 2020 17:37:14 -0500</pubDate>
+      
+      <guid>http://tobybase.com/tags/microsoft-windows/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Oracle</title>
+      <link>http://tobybase.com/tags/oracle/</link>
+      <pubDate>Fri, 05 Jun 2020 17:37:14 -0500</pubDate>
+      
+      <guid>http://tobybase.com/tags/oracle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SQL Developer</title>
+      <link>http://tobybase.com/tags/sql-developer/</link>
+      <pubDate>Fri, 05 Jun 2020 17:37:14 -0500</pubDate>
+      
+      <guid>http://tobybase.com/tags/sql-developer/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Atom</title>
@@ -62,15 +89,6 @@
       <pubDate>Wed, 27 May 2020 10:22:08 -0500</pubDate>
       
       <guid>http://tobybase.com/tags/migrations/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Oracle</title>
-      <link>http://tobybase.com/tags/oracle/</link>
-      <pubDate>Wed, 27 May 2020 10:22:08 -0500</pubDate>
-      
-      <guid>http://tobybase.com/tags/oracle/</guid>
       <description></description>
     </item>
     
@@ -201,29 +219,11 @@
     </item>
     
     <item>
-      <title>SQL Developer</title>
-      <link>http://tobybase.com/tags/sql-developer/</link>
-      <pubDate>Wed, 01 May 2019 16:47:39 -0500</pubDate>
-      
-      <guid>http://tobybase.com/tags/sql-developer/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>IaaS</title>
       <link>http://tobybase.com/tags/iaas/</link>
       <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>http://tobybase.com/tags/iaas/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Microsoft Windows</title>
-      <link>http://tobybase.com/tags/microsoft-windows/</link>
-      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://tobybase.com/tags/microsoft-windows/</guid>
       <description></description>
     </item>
     
