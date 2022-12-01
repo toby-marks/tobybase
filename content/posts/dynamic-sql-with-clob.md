@@ -3,7 +3,7 @@ title 		= "An Example of Dynamic SQL Using a CLOB"
 description = ""
 date 		= 2020-05-22T13:28:39-05:00
 series 		= []
-categories 	= ["SQL & PL/SQL"]
+categories 	= ["SQL"]
 tags 		= ["Oracle"]
 +++
 You might not know this, but you can use the `EXECUTE IMMEDIATE` command with a CLOB, the same as with a VARCHAR2 variable.

@@ -3,7 +3,7 @@ draft       = false
 date        = "2012-04-27T22:27:00+00:00"
 lastmod     = "2017-02-22"
 title       = "Table Functions: 9i Feature Worth Revisiting (Part 1)"
-categories  = ["SQL & PL/SQL"]
+categories  = ["SQL"]
 tags        = ["Oracle", "database"]
 series      = ["Table Functions"]
 +++

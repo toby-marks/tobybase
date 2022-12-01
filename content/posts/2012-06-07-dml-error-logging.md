@@ -3,7 +3,7 @@ draft       = false
 date        = "2012-06-07T17:04:00+00:00"
 lastmod     = "2017-02-22"
 title       = "Use DML Error Logging"
-categories  = ["SQL & PL/SQL"]
+categories  = ["SQL"]
 tags        = ["Oracle", "DML", "SQL*Loader"]
 +++
 Introduced with Oracle 10gR2, DML Error Logging allows you to make standard SQL `INSERT`, `UPDATE`, and `MERGE` statements behave more like the SQL*Loader utility, logging errors to a table rather than failing and rolling back the first time an error condition is encountered. 

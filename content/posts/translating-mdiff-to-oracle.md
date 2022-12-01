@@ -3,7 +3,7 @@ title = "Translating Teradata's MDIFF Function to Oracle SQL"
 description = "How to code the MDIFF function in Oracle SQL"
 date = 2020-05-27T10:22:08-05:00
 series = []
-categories = ["SQL & PL/SQL"]
+categories = ["SQL"]
 tags = ["Oracle", "Teradata", "migrations"]
 +++
 Teradata [defines its MDIFF function](https://docs.teradata.com/reader/kmuOwjp1zEYg98JsB8fu_A/Q5tWBsRwZN7VBXQkzAoddQ) as follows:

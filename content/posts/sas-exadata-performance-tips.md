@@ -2,7 +2,7 @@
 title = "3 Tips for Running SAS Queries on Oracle"
 description = "Some helpful tips for boosting the performance of SAS queries on Oracle database."
 date = 2019-09-23T13:54:50-05:00
-categories = ["SQL & PL/SQL"]
+categories = ["SQL"]
 tags = ["Oracle", "SAS", "tuning"]
 +++
 I don't know a whole lot about SAS, but on my current gig I am frequently called upon to tune queries that run in that environment. Here are three things I have learned to keep in mind as a SAS developer when running against Oracle database.
