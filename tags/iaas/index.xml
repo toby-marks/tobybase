@@ -6,11 +6,7 @@
     <description>Recent content in IaaS on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 10 Apr 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://tobybase.com/tags/iaas/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 10 Apr 2018 00:00:00 +0000</lastBuildDate><atom:link href="http://tobybase.com/tags/iaas/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Access Denied Attaching Block Volume to Windows VM in OCI</title>
       <link>http://tobybase.com/posts/2018-04-10-oci-add-block-volume-on-windows/</link>

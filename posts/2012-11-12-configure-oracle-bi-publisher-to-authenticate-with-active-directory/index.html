@@ -7,19 +7,20 @@
     <meta http-equiv="Content-Language" content="en">
 
     <meta name="author" content="Toby Marks">
-    <meta name="description" content="Log in to BI Publisher as an administrator. Click on the Admin tab. Click on Security Configuration. For Security Model, choose LDAP and enter the following parameters:    Setting Example Value     URL ldap://ad.mycompany.com:389 Your company&rsquo;s LDAP server and port.   Administrator Username CN=ADMIN,OU=Users,OU=Shared Services,DC=mycompany,DC=com The fully qualified DN of the account you use to sign in to LDAP.   Administrator Password myxlplyx The password for the above account.">
+    <meta name="description" content="Log in to BI Publisher as an administrator. Click on the Admin tab. Click on Security Configuration. For Security Model, choose LDAP and enter the following parameters: Setting Example Value URL ldap://ad.mycompany.com:389 Your company&rsquo;s LDAP server and port. Administrator Username CN=ADMIN,OU=Users,OU=Shared Services,DC=mycompany,DC=com The fully qualified DN of the account you use to sign in to LDAP. Administrator Password myxlplyx The password for the above account. Distinguished Name for Users DC=mycompany,DC=com The &ldquo;root&rdquo; level at which to search for users.">
     <meta name="keywords" content="oracle,infolob,blog,consultant,developer,tuning,exadata,personal">
 
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="How To Configure Oracle BI Publisher to Authenticate With Active Directory"/>
-<meta name="twitter:description" content="Log in to BI Publisher as an administrator. Click on the Admin tab. Click on Security Configuration. For Security Model, choose LDAP and enter the following parameters:    Setting Example Value     URL ldap://ad.mycompany.com:389 Your company&rsquo;s LDAP server and port.   Administrator Username CN=ADMIN,OU=Users,OU=Shared Services,DC=mycompany,DC=com The fully qualified DN of the account you use to sign in to LDAP.   Administrator Password myxlplyx The password for the above account."/>
+<meta name="twitter:description" content="Log in to BI Publisher as an administrator. Click on the Admin tab. Click on Security Configuration. For Security Model, choose LDAP and enter the following parameters: Setting Example Value URL ldap://ad.mycompany.com:389 Your company&rsquo;s LDAP server and port. Administrator Username CN=ADMIN,OU=Users,OU=Shared Services,DC=mycompany,DC=com The fully qualified DN of the account you use to sign in to LDAP. Administrator Password myxlplyx The password for the above account. Distinguished Name for Users DC=mycompany,DC=com The &ldquo;root&rdquo; level at which to search for users."/>
 
     <meta property="og:title" content="How To Configure Oracle BI Publisher to Authenticate With Active Directory" />
-<meta property="og:description" content="Log in to BI Publisher as an administrator. Click on the Admin tab. Click on Security Configuration. For Security Model, choose LDAP and enter the following parameters:    Setting Example Value     URL ldap://ad.mycompany.com:389 Your company&rsquo;s LDAP server and port.   Administrator Username CN=ADMIN,OU=Users,OU=Shared Services,DC=mycompany,DC=com The fully qualified DN of the account you use to sign in to LDAP.   Administrator Password myxlplyx The password for the above account." />
+<meta property="og:description" content="Log in to BI Publisher as an administrator. Click on the Admin tab. Click on Security Configuration. For Security Model, choose LDAP and enter the following parameters: Setting Example Value URL ldap://ad.mycompany.com:389 Your company&rsquo;s LDAP server and port. Administrator Username CN=ADMIN,OU=Users,OU=Shared Services,DC=mycompany,DC=com The fully qualified DN of the account you use to sign in to LDAP. Administrator Password myxlplyx The password for the above account. Distinguished Name for Users DC=mycompany,DC=com The &ldquo;root&rdquo; level at which to search for users." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://tobybase.com/posts/2012-11-12-configure-oracle-bi-publisher-to-authenticate-with-active-directory/" />
+<meta property="og:url" content="http://tobybase.com/posts/2012-11-12-configure-oracle-bi-publisher-to-authenticate-with-active-directory/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2012-11-12T17:32:00+00:00" />
 <meta property="article:modified_time" content="2017-02-22T00:00:00+00:00" />
+<meta property="og:see_also" content="http://tobybase.com/posts/2012-11-12-restricting-access-to-bi-publisher-reports/" /><meta property="og:see_also" content="http://tobybase.com/posts/2012-08-27-bi-publisher-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report/" />
 
 
 
@@ -57,7 +58,7 @@
     <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-16x16.png" sizes="16x16">
 
-    <meta name="generator" content="Hugo 0.71.1" />
+    <meta name="generator" content="Hugo 0.107.0">
   </head>
 
   
@@ -277,7 +278,7 @@ XMLP_TEMPLATE_DESIGNER</p>
 
         <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -309,14 +310,14 @@ XMLP_TEMPLATE_DESIGNER</p>
   <footer class="footer">
     <section class="container">
       
-        <p>Oracle Database Developer and Performance Tuner, specialized on the Exadata platform. Working for Infolob from Irving, Texas. #OCICertified </p>
+        <p>Oracle Database Developer and Performance Tuner, specialized on the Exadata platform. Working for Infolob from Irving, Texas.</p>
       
       
         ©
         
           2012 -
         
-        2020
+        2022
          Toby Marks 
       
       

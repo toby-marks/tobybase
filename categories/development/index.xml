@@ -6,11 +6,7 @@
     <description>Recent content in Development on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 24 Jul 2013 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://tobybase.com/categories/development/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 24 Jul 2013 00:00:00 +0000</lastBuildDate><atom:link href="http://tobybase.com/categories/development/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Use Preview to View Formatted man Pages</title>
       <link>http://tobybase.com/links/2013-07-24-view-man-pages/</link>

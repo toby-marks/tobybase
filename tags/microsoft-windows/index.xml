@@ -6,11 +6,7 @@
     <description>Recent content in Microsoft Windows on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 05 Jun 2020 17:37:14 -0500</lastBuildDate>
-    
-	<atom:link href="http://tobybase.com/tags/microsoft-windows/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 05 Jun 2020 17:37:14 -0500</lastBuildDate><atom:link href="http://tobybase.com/tags/microsoft-windows/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Enable OCI Thick Client Connections in SQL Developer on Windows</title>
       <link>http://tobybase.com/posts/enable-oci-connections-in-sql-developer/</link>
@@ -36,8 +32,7 @@
       <pubDate>Fri, 10 Mar 2017 14:56:00 +0000</pubDate>
       
       <guid>http://tobybase.com/posts/infolob-lift-and-shift-howto-4/</guid>
-      <description>In the last of a four-part video series, our Director of Cloud Services Brian Hill creates a new compute instance in Oracle Cloud Compute Services based on his custom Windows virtual machine image.
-  </description>
+      <description>In the last of a four-part video series, our Director of Cloud Services Brian Hill creates a new compute instance in Oracle Cloud Compute Services based on his custom Windows virtual machine image.</description>
     </item>
     
     <item>
@@ -46,8 +41,7 @@
       <pubDate>Fri, 10 Mar 2017 14:53:00 +0000</pubDate>
       
       <guid>http://tobybase.com/posts/infolob-lift-and-shift-howto-3/</guid>
-      <description>In part three of a four-part video series, our Director of Cloud Services Brian Hill creates a bootable storage volume in Oracle Cloud Compute Services with his new Windows image.
-  </description>
+      <description>In part three of a four-part video series, our Director of Cloud Services Brian Hill creates a bootable storage volume in Oracle Cloud Compute Services with his new Windows image.</description>
     </item>
     
     <item>
@@ -56,8 +50,7 @@
       <pubDate>Fri, 10 Mar 2017 14:47:00 +0000</pubDate>
       
       <guid>http://tobybase.com/posts/infolob-lift-and-shift-howto-2/</guid>
-      <description>In part two of a four-part video series, our Director of Cloud Services Brian Hill creates an image in Oracle Cloud Compute Services based on a Windows virtual machine.
-  </description>
+      <description>In part two of a four-part video series, our Director of Cloud Services Brian Hill creates an image in Oracle Cloud Compute Services based on a Windows virtual machine.</description>
     </item>
     
     <item>
@@ -66,8 +59,7 @@
       <pubDate>Fri, 10 Mar 2017 14:41:00 +0000</pubDate>
       
       <guid>http://tobybase.com/posts/infolob-lift-and-shift-howto-1/</guid>
-      <description>In part one of a four-part video series, our Director of Cloud Services Brian Hill demonstrates how to prepare your virtual machine for upload to the cloud.
-  </description>
+      <description>In part one of a four-part video series, our Director of Cloud Services Brian Hill demonstrates how to prepare your virtual machine for upload to the cloud.</description>
     </item>
     
     <item>

@@ -9,26 +9,30 @@
     <meta name="author" content="Toby Marks">
     <meta name="description" content="(The following is adapted from the official Photon OS FAQ.)
 How do I transfer or share files between #Photon and my host machine? Use vmhgfs-fuse to transfer files between Photon and your host machine:
-  Enable Shared folders in the Workstation or Fusion UI (edit the VM settings and choose Options-&gt;Enabled shared folders).
-  Make sure open-vm-tools is installed (it is installed by default in the Minimal installation and OVA import).">
+Enable Shared folders in the Workstation or Fusion UI (edit the VM settings and choose Options-&gt;Enabled shared folders).
+Make sure open-vm-tools is installed (it is installed by default in the Minimal installation and OVA import).
+Run vmware-hgfsclient to list the shares.">
     <meta name="keywords" content="oracle,infolob,blog,consultant,developer,tuning,exadata,personal">
 
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="How to Share Files Between a Photon OS VM and the VM Host"/>
 <meta name="twitter:description" content="(The following is adapted from the official Photon OS FAQ.)
 How do I transfer or share files between #Photon and my host machine? Use vmhgfs-fuse to transfer files between Photon and your host machine:
-  Enable Shared folders in the Workstation or Fusion UI (edit the VM settings and choose Options-&gt;Enabled shared folders).
-  Make sure open-vm-tools is installed (it is installed by default in the Minimal installation and OVA import)."/>
+Enable Shared folders in the Workstation or Fusion UI (edit the VM settings and choose Options-&gt;Enabled shared folders).
+Make sure open-vm-tools is installed (it is installed by default in the Minimal installation and OVA import).
+Run vmware-hgfsclient to list the shares."/>
 
     <meta property="og:title" content="How to Share Files Between a Photon OS VM and the VM Host" />
 <meta property="og:description" content="(The following is adapted from the official Photon OS FAQ.)
 How do I transfer or share files between #Photon and my host machine? Use vmhgfs-fuse to transfer files between Photon and your host machine:
-  Enable Shared folders in the Workstation or Fusion UI (edit the VM settings and choose Options-&gt;Enabled shared folders).
-  Make sure open-vm-tools is installed (it is installed by default in the Minimal installation and OVA import)." />
+Enable Shared folders in the Workstation or Fusion UI (edit the VM settings and choose Options-&gt;Enabled shared folders).
+Make sure open-vm-tools is installed (it is installed by default in the Minimal installation and OVA import).
+Run vmware-hgfsclient to list the shares." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://tobybase.com/posts/share-files-between-photon-vm-and-host/" />
+<meta property="og:url" content="http://tobybase.com/posts/share-files-between-photon-vm-and-host/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-05-29T13:41:02-05:00" />
 <meta property="article:modified_time" content="2020-05-29T13:41:02-05:00" />
+
 
 
     
@@ -65,7 +69,7 @@ How do I transfer or share files between #Photon and my host machine? Use vmhgfs
     <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-16x16.png" sizes="16x16">
 
-    <meta name="generator" content="Hugo 0.71.1" />
+    <meta name="generator" content="Hugo 0.107.0">
   </head>
 
   
@@ -167,20 +171,19 @@ How do I transfer or share files between #Photon and my host machine? Use vmhgfs
 </ul>
 <p><del><code>vmhgfs-fuse .host:/$(vmware-hgfsclient) /mnt/hgfs</code></del></p>
 <p><em>(Note: The above doesn&rsquo;t work with more than one shared folder. Since I only had a handful, I just enumerated the ones I wanted to share.)</em></p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">mkdir /mnt/hgfs/share1 /mnt/hgfs/share2 /mnt/hgfs/share3
-vmhgfs-fuse .host:/share1 /mnt/hgfs/share1
-vmhgfs-fuse .host:/share2 /mnt/hgfs/share2
-vmhgfs-fuse .host:/share3 /mnt/hgfs/share3
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>mkdir /mnt/hgfs/share1 /mnt/hgfs/share2 /mnt/hgfs/share3
+</span></span><span style="display:flex;"><span>vmhgfs-fuse .host:/share1 /mnt/hgfs/share1
+</span></span><span style="display:flex;"><span>vmhgfs-fuse .host:/share2 /mnt/hgfs/share2
+</span></span><span style="display:flex;"><span>vmhgfs-fuse .host:/share3 /mnt/hgfs/share3
+</span></span></code></pre></div><ul>
 <li>or, add the following line(s) to <code>/etc/fstab</code> and reboot</li>
 </ul>
 <p><del><code>.host:/ /mnt/hgfs fuse.vmhgfs-fuse &lt;options&gt; 0 0</code></del></p>
 <p><em>(Note: Likewise, enumerate the individual desired shares in the fstab file)</em></p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">.host:/share1 /mnt/hgfs/share1 fuse.vmhgfs-fuse &lt;options&gt; 0 0
-.host:/share2 /mnt/hgfs/share2 fuse.vmhgfs-fuse &lt;options&gt; 0 0
-.host:/share3 /mnt/hgfs/share3 fuse.vmhgfs-fuse &lt;options&gt; 0 0
-</code></pre></div><p>``</p>
-</li>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>.host:/share1 /mnt/hgfs/share1 fuse.vmhgfs-fuse &lt;options&gt; 0 0
+</span></span><span style="display:flex;"><span>.host:/share2 /mnt/hgfs/share2 fuse.vmhgfs-fuse &lt;options&gt; 0 0
+</span></span><span style="display:flex;"><span>.host:/share3 /mnt/hgfs/share3 fuse.vmhgfs-fuse &lt;options&gt; 0 0
+</span></span></code></pre></div></li>
 </ol>
 
       </div>
@@ -192,7 +195,7 @@ vmhgfs-fuse .host:/share3 /mnt/hgfs/share3
 
         <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -224,14 +227,14 @@ vmhgfs-fuse .host:/share3 /mnt/hgfs/share3
   <footer class="footer">
     <section class="container">
       
-        <p>Oracle Database Developer and Performance Tuner, specialized on the Exadata platform. Working for Infolob from Irving, Texas. #OCICertified </p>
+        <p>Oracle Database Developer and Performance Tuner, specialized on the Exadata platform. Working for Infolob from Irving, Texas.</p>
       
       
         ©
         
           2012 -
         
-        2020
+        2022
          Toby Marks 
       
       

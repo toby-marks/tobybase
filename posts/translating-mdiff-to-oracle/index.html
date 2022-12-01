@@ -17,9 +17,10 @@
     <meta property="og:title" content="Translating Teradata&#39;s MDIFF Function to Oracle SQL" />
 <meta property="og:description" content="How to code the MDIFF function in Oracle SQL" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://tobybase.com/posts/translating-mdiff-to-oracle/" />
+<meta property="og:url" content="http://tobybase.com/posts/translating-mdiff-to-oracle/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-05-27T10:22:08-05:00" />
 <meta property="article:modified_time" content="2020-05-27T10:22:08-05:00" />
+
 
 
     
@@ -56,7 +57,7 @@
     <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-16x16.png" sizes="16x16">
 
-    <meta name="generator" content="Hugo 0.71.1" />
+    <meta name="generator" content="Hugo 0.107.0">
   </head>
 
   
@@ -117,7 +118,7 @@
           </div>
           <div class="categories">
   <i class="fas fa-folder"></i>
-    <a href="http://tobybase.com/categories/sql-pl/sql/">SQL &amp; PL/SQL</a></div>
+    <a href="http://tobybase.com/categories/sql/">SQL</a></div>
 
           <div class="tags">
   <i class="fas fa-tag"></i>
@@ -147,13 +148,13 @@
 </blockquote>
 <p>MDIFF applies to <code>NUMBER</code> columns or <code>DATE</code> and the window <em>(w, y)</em> is typically defined as (1, 1), to specify only the value of column <em>x</em> in the preceding row. If this is the case, then MDIFF is simply <strong>the delta between the current row and the previous row.</strong></p>
 <p>That function can be simplified and rewritten in Oracle SQL as</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">x - LAG(x) OVER (ORDER BY y)
-</code></pre></div><p>Or alternatively, if you want to break delta calculations on column <em>z</em>, then</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">x - LAG(x) OVER (PARTITION BY z ORDER BY y)
-</code></pre></div><p>One last thing to consider is how you want to treat the edge cases, such as when there is no preceding row. Is the expected value NULL in that case, as it is by default, or do you want to treat the delta as zero? You need to understand how how this value is being used in the code you are converting — whether that value is being used in higher-level calculations, etc.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">x - LAG(x, 1, 0) OVER (PARTITION BY z ORDER BY y)
-x - LAG(x, 1, NULL) OVER (PARTITION BY z ORDER BY y)
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>x - LAG(x) OVER (ORDER BY y)
+</span></span></code></pre></div><p>Or alternatively, if you want to break delta calculations on column <em>z</em>, then</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>x - LAG(x) OVER (PARTITION BY z ORDER BY y)
+</span></span></code></pre></div><p>One last thing to consider is how you want to treat the edge cases, such as when there is no preceding row. Is the expected value NULL in that case, as it is by default, or do you want to treat the delta as zero? You need to understand how how this value is being used in the code you are converting — whether that value is being used in higher-level calculations, etc.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>x - LAG(x, 1, 0) OVER (PARTITION BY z ORDER BY y)
+</span></span><span style="display:flex;"><span>x - LAG(x, 1, NULL) OVER (PARTITION BY z ORDER BY y)
+</span></span></code></pre></div>
       </div>
 
 
@@ -163,7 +164,7 @@ x - LAG(x, 1, NULL) OVER (PARTITION BY z ORDER BY y)
 
         <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -195,14 +196,14 @@ x - LAG(x, 1, NULL) OVER (PARTITION BY z ORDER BY y)
   <footer class="footer">
     <section class="container">
       
-        <p>Oracle Database Developer and Performance Tuner, specialized on the Exadata platform. Working for Infolob from Irving, Texas. #OCICertified </p>
+        <p>Oracle Database Developer and Performance Tuner, specialized on the Exadata platform. Working for Infolob from Irving, Texas.</p>
       
       
         ©
         
           2012 -
         
-        2020
+        2022
          Toby Marks 
       
       

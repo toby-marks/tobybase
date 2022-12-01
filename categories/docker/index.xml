@@ -6,11 +6,7 @@
     <description>Recent content in Docker on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 29 May 2020 13:41:02 -0500</lastBuildDate>
-    
-	<atom:link href="http://tobybase.com/categories/docker/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 29 May 2020 13:41:02 -0500</lastBuildDate><atom:link href="http://tobybase.com/categories/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Share Files Between a Photon OS VM and the VM Host</title>
       <link>http://tobybase.com/posts/share-files-between-photon-vm-and-host/</link>
@@ -19,8 +15,9 @@
       <guid>http://tobybase.com/posts/share-files-between-photon-vm-and-host/</guid>
       <description>(The following is adapted from the official Photon OS FAQ.)
 How do I transfer or share files between #Photon and my host machine? Use vmhgfs-fuse to transfer files between Photon and your host machine:
-  Enable Shared folders in the Workstation or Fusion UI (edit the VM settings and choose Options-&amp;gt;Enabled shared folders).
-  Make sure open-vm-tools is installed (it is installed by default in the Minimal installation and OVA import).</description>
+Enable Shared folders in the Workstation or Fusion UI (edit the VM settings and choose Options-&amp;gt;Enabled shared folders).
+Make sure open-vm-tools is installed (it is installed by default in the Minimal installation and OVA import).
+Run vmware-hgfsclient to list the shares.</description>
     </item>
     
   </channel>

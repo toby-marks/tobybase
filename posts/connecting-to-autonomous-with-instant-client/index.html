@@ -20,9 +20,10 @@ You have two options for running SQL*Plus under Instant Client: download and ins
 <meta property="og:description" content="The easiest and fastest way to query and create data in your new cloud database is with SQL Developer Web, provided free with every new instance of Autonomous Database and Autonomous Data Warehouse in the Cloud. Second fastest would be with a local installation of SQL Developer or SQLcl. But if you want an authentic SQL*Plus environment, then you&rsquo;ll need Oracle Instant Client.
 You have two options for running SQL*Plus under Instant Client: download and install a platform-native version, or else run Instant Client in a Docker container." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://tobybase.com/posts/connecting-to-autonomous-with-instant-client/" />
+<meta property="og:url" content="http://tobybase.com/posts/connecting-to-autonomous-with-instant-client/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-01-17T17:08:16-06:00" />
 <meta property="article:modified_time" content="2020-01-17T17:08:16-06:00" />
+<meta property="og:see_also" content="http://tobybase.com/posts/connecting-to-autonomous-with-sql-dev/" /><meta property="og:see_also" content="http://tobybase.com/posts/up-and-running-on-oracle-autonomous-database/" />
 
 
 
@@ -60,7 +61,7 @@ You have two options for running SQL*Plus under Instant Client: download and ins
     <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-16x16.png" sizes="16x16">
 
-    <meta name="generator" content="Hugo 0.71.1" />
+    <meta name="generator" content="Hugo 0.107.0">
   </head>
 
   
@@ -253,7 +254,7 @@ alias sql2cloud='docker run -it --rm -v /path/to/local/TNS_ADMIN/directory:/usr/
 
         <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -285,14 +286,14 @@ alias sql2cloud='docker run -it --rm -v /path/to/local/TNS_ADMIN/directory:/usr/
   <footer class="footer">
     <section class="container">
       
-        <p>Oracle Database Developer and Performance Tuner, specialized on the Exadata platform. Working for Infolob from Irving, Texas. #OCICertified </p>
+        <p>Oracle Database Developer and Performance Tuner, specialized on the Exadata platform. Working for Infolob from Irving, Texas.</p>
       
       
         ©
         
           2012 -
         
-        2020
+        2022
          Toby Marks 
       
       

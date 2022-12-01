@@ -6,11 +6,7 @@
     <description>Recent content in Perl on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 02 Jul 2012 22:40:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://tobybase.com/categories/perl/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 02 Jul 2012 22:40:00 +0000</lastBuildDate><atom:link href="http://tobybase.com/categories/perl/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How To Use a Perl CGI Script to Show Real Web Server Host Name</title>
       <link>http://tobybase.com/posts/2012-07-02-use-a-perl-cgi-script-to-show-real-web-server-host-name/</link>

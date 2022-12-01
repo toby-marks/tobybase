@@ -17,9 +17,10 @@
     <meta property="og:title" content="Enable OCI Thick Client Connections in SQL Developer on Windows" />
 <meta property="og:description" content="Jeff Smith has an excellent article on how to enable OCI Thick Client connections in SQL Developer, and all the reasons you might want to. For me, it all comes down to the ability to cancel a running query or process in a timely manner. The &ldquo;hang&rdquo; normally associated with canceling JDBC-based thin client connections is pretty unacceptable. With thick client you get the same level of responsiveness as you would in a console SQL*Plus session." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://tobybase.com/posts/enable-oci-connections-in-sql-developer/" />
+<meta property="og:url" content="http://tobybase.com/posts/enable-oci-connections-in-sql-developer/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-06-05T17:37:14-05:00" />
 <meta property="article:modified_time" content="2020-06-05T17:37:14-05:00" />
+
 
 
     
@@ -56,7 +57,7 @@
     <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-16x16.png" sizes="16x16">
 
-    <meta name="generator" content="Hugo 0.71.1" />
+    <meta name="generator" content="Hugo 0.107.0">
   </head>
 
   
@@ -136,8 +137,8 @@
 <p>If you want to set up thick client connections, you&rsquo;ll need to download the Oracle Instant Client and follow the instructions in Jeff&rsquo;s blog to configure SQL Developer to use the Instant Client OCI libraries. However, there are a couple of extra steps only hinted at in the comments of the blog that are necessary to get everything working properly. I thought I&rsquo;d just spell it out here for anyone still confused.</p>
 <h2 id="add-the-following-line-to-sqldeveloperconf">Add the following line to <code>sqldeveloper.conf</code></h2>
 <p>In the directory where you installed SQL Developer, navigate to <code>sqldeveloper\bin</code> and edit the file <code>sqldeveloper.conf</code>. Add this line to the bottom of the file.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">AddVMOption -Djava.library.path=C:\path\to\oracle\instantclient
-</code></pre></div><p>Even though you&rsquo;ve already configured the path to the Instant Client home directory in SQL Developer&rsquo;s Preferences if you&rsquo;ve followed all the instructions in Jeff&rsquo;s blog, you still have to add this line to the config file or SQL Developer will not be able to find the OCI libraries. Go figure.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>AddVMOption -Djava.library.path=C:\path\to\oracle\instantclient
+</span></span></code></pre></div><p>Even though you&rsquo;ve already configured the path to the Instant Client home directory in SQL Developer&rsquo;s Preferences if you&rsquo;ve followed all the instructions in Jeff&rsquo;s blog, you still have to add this line to the config file or SQL Developer will not be able to find the OCI libraries. Go figure.</p>
 <h2 id="add-the-instant-client-installation-directory-to-the-windows-path">Add the Instant Client installation directory to the Windows %PATH%</h2>
 <p><img src="https://res.cloudinary.com/tobyblog/image/upload/v1591396478/img/envvar01.jpg" alt=""></p>
 <p>Go to the User Accounts control panel and click on &ldquo;Change my environment variables.&rdquo;</p>
@@ -156,7 +157,7 @@
 
         <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -188,14 +189,14 @@
   <footer class="footer">
     <section class="container">
       
-        <p>Oracle Database Developer and Performance Tuner, specialized on the Exadata platform. Working for Infolob from Irving, Texas. #OCICertified </p>
+        <p>Oracle Database Developer and Performance Tuner, specialized on the Exadata platform. Working for Infolob from Irving, Texas.</p>
       
       
         ©
         
           2012 -
         
-        2020
+        2022
          Toby Marks 
       
       

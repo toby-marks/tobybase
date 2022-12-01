@@ -6,11 +6,7 @@
     <description>Recent content in virtual machines on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 29 May 2020 13:41:02 -0500</lastBuildDate>
-    
-	<atom:link href="http://tobybase.com/tags/virtual-machines/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 29 May 2020 13:41:02 -0500</lastBuildDate><atom:link href="http://tobybase.com/tags/virtual-machines/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Share Files Between a Photon OS VM and the VM Host</title>
       <link>http://tobybase.com/posts/share-files-between-photon-vm-and-host/</link>
@@ -19,8 +15,9 @@
       <guid>http://tobybase.com/posts/share-files-between-photon-vm-and-host/</guid>
       <description>(The following is adapted from the official Photon OS FAQ.)
 How do I transfer or share files between #Photon and my host machine? Use vmhgfs-fuse to transfer files between Photon and your host machine:
-  Enable Shared folders in the Workstation or Fusion UI (edit the VM settings and choose Options-&amp;gt;Enabled shared folders).
-  Make sure open-vm-tools is installed (it is installed by default in the Minimal installation and OVA import).</description>
+Enable Shared folders in the Workstation or Fusion UI (edit the VM settings and choose Options-&amp;gt;Enabled shared folders).
+Make sure open-vm-tools is installed (it is installed by default in the Minimal installation and OVA import).
+Run vmware-hgfsclient to list the shares.</description>
     </item>
     
     <item>
@@ -50,8 +47,7 @@ NETWORKING=yes HOSTNAME=myhost.mycompany.local Configure the Network Interface #
       <pubDate>Fri, 10 Mar 2017 14:56:00 +0000</pubDate>
       
       <guid>http://tobybase.com/posts/infolob-lift-and-shift-howto-4/</guid>
-      <description>In the last of a four-part video series, our Director of Cloud Services Brian Hill creates a new compute instance in Oracle Cloud Compute Services based on his custom Windows virtual machine image.
-  </description>
+      <description>In the last of a four-part video series, our Director of Cloud Services Brian Hill creates a new compute instance in Oracle Cloud Compute Services based on his custom Windows virtual machine image.</description>
     </item>
     
     <item>
@@ -60,8 +56,7 @@ NETWORKING=yes HOSTNAME=myhost.mycompany.local Configure the Network Interface #
       <pubDate>Fri, 10 Mar 2017 14:53:00 +0000</pubDate>
       
       <guid>http://tobybase.com/posts/infolob-lift-and-shift-howto-3/</guid>
-      <description>In part three of a four-part video series, our Director of Cloud Services Brian Hill creates a bootable storage volume in Oracle Cloud Compute Services with his new Windows image.
-  </description>
+      <description>In part three of a four-part video series, our Director of Cloud Services Brian Hill creates a bootable storage volume in Oracle Cloud Compute Services with his new Windows image.</description>
     </item>
     
     <item>
@@ -70,8 +65,7 @@ NETWORKING=yes HOSTNAME=myhost.mycompany.local Configure the Network Interface #
       <pubDate>Fri, 10 Mar 2017 14:47:00 +0000</pubDate>
       
       <guid>http://tobybase.com/posts/infolob-lift-and-shift-howto-2/</guid>
-      <description>In part two of a four-part video series, our Director of Cloud Services Brian Hill creates an image in Oracle Cloud Compute Services based on a Windows virtual machine.
-  </description>
+      <description>In part two of a four-part video series, our Director of Cloud Services Brian Hill creates an image in Oracle Cloud Compute Services based on a Windows virtual machine.</description>
     </item>
     
     <item>
@@ -80,8 +74,7 @@ NETWORKING=yes HOSTNAME=myhost.mycompany.local Configure the Network Interface #
       <pubDate>Fri, 10 Mar 2017 14:41:00 +0000</pubDate>
       
       <guid>http://tobybase.com/posts/infolob-lift-and-shift-howto-1/</guid>
-      <description>In part one of a four-part video series, our Director of Cloud Services Brian Hill demonstrates how to prepare your virtual machine for upload to the cloud.
-  </description>
+      <description>In part one of a four-part video series, our Director of Cloud Services Brian Hill demonstrates how to prepare your virtual machine for upload to the cloud.</description>
     </item>
     
     <item>

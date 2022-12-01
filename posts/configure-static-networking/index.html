@@ -23,9 +23,10 @@ NETWORKING=yes HOSTNAME=myhost.mycompany.local Configure the Network Interface #
 Turn on Networking # sudo vi /etc/sysconfig/network Make sure networking is enabled and configure the hostname.
 NETWORKING=yes HOSTNAME=myhost.mycompany.local Configure the Network Interface # sudo vi /etc/sysconfig/network-scripts/ifcfg-eth0 Here is a sample config for static IPs." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://tobybase.com/posts/configure-static-networking/" />
+<meta property="og:url" content="http://tobybase.com/posts/configure-static-networking/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-05-20T16:36:06-05:00" />
 <meta property="article:modified_time" content="2020-05-20T16:36:06-05:00" />
+
 
 
     
@@ -62,7 +63,7 @@ NETWORKING=yes HOSTNAME=myhost.mycompany.local Configure the Network Interface #
     <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-16x16.png" sizes="16x16">
 
-    <meta name="generator" content="Hugo 0.71.1" />
+    <meta name="generator" content="Hugo 0.107.0">
   </head>
 
   
@@ -142,44 +143,44 @@ NETWORKING=yes HOSTNAME=myhost.mycompany.local Configure the Network Interface #
         
         <p>I originally had this requirement after creating a new persistent linux virtual machine in <a href="https://www.oracle.com/virtualization/technologies/vm/">OVM</a> that needed static addressing. This is just standard linux setup, though, and can be adapted to both virtual and physical machines.</p>
 <h2 id="turn-on-networking">Turn on Networking</h2>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"># sudo vi /etc/sysconfig/network
-</code></pre></div><p>Make sure networking is enabled and configure the hostname.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">NETWORKING=yes
-HOSTNAME=myhost.mycompany.local
-</code></pre></div><h2 id="configure-the-network-interface">Configure the Network Interface</h2>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"># sudo vi /etc/sysconfig/network-scripts/ifcfg-eth0
-</code></pre></div><p>Here is a sample config for static IPs.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">HWADDR=00:30:48:56:A6:2E
-TYPE=Ethernet
-BOOTPROTO=none
-IPADDR=192.168.1.10
-GATEWAY=192.168.1.0
-PREFIX=24
-DEFROUTE=yes
-IPV4_FAILURE_FATAL=no
-IPV6INIT=no
-NAME=eth0
-DEVICE=eth0
-ONBOOT=yes
-</code></pre></div><p>The <code>HWADDR</code> value is just the MAC address of the VM, which I got from the OVM console. The <code>PREFIX</code> value relates to the network mask; eg. a value of 24 equates to a mask of <code>255.255.255.0</code>. Disabling IPV6 is optional.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span># sudo vi /etc/sysconfig/network
+</span></span></code></pre></div><p>Make sure networking is enabled and configure the hostname.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>NETWORKING=yes
+</span></span><span style="display:flex;"><span>HOSTNAME=myhost.mycompany.local
+</span></span></code></pre></div><h2 id="configure-the-network-interface">Configure the Network Interface</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span># sudo vi /etc/sysconfig/network-scripts/ifcfg-eth0
+</span></span></code></pre></div><p>Here is a sample config for static IPs.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>HWADDR=00:30:48:56:A6:2E
+</span></span><span style="display:flex;"><span>TYPE=Ethernet
+</span></span><span style="display:flex;"><span>BOOTPROTO=none
+</span></span><span style="display:flex;"><span>IPADDR=192.168.1.10
+</span></span><span style="display:flex;"><span>GATEWAY=192.168.1.0
+</span></span><span style="display:flex;"><span>PREFIX=24
+</span></span><span style="display:flex;"><span>DEFROUTE=yes
+</span></span><span style="display:flex;"><span>IPV4_FAILURE_FATAL=no
+</span></span><span style="display:flex;"><span>IPV6INIT=no
+</span></span><span style="display:flex;"><span>NAME=eth0
+</span></span><span style="display:flex;"><span>DEVICE=eth0
+</span></span><span style="display:flex;"><span>ONBOOT=yes
+</span></span></code></pre></div><p>The <code>HWADDR</code> value is just the MAC address of the VM, which I got from the OVM console. The <code>PREFIX</code> value relates to the network mask; eg. a value of 24 equates to a mask of <code>255.255.255.0</code>. Disabling IPV6 is optional.</p>
 <h2 id="configure-dns-servers">Configure DNS Servers</h2>
 <p>I also edit /etc/resolv.conf and setup DNS servers there. TBH, I&rsquo;m not sure if this is necessary or redundant with ipcgf-eth0</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"># sudo vi /etc/resolv.conf
-</code></pre></div><p>Configure similar to the following:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">search yourcompany.com
-nameserver 192.168.1.254
-nameserver 8.8.8.8
-nameserver 8.8.4.4
-</code></pre></div><h2 id="finally-restart-networking">Finally, Restart Networking</h2>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"># sudo systemctl network restart
-</code></pre></div><p>You can verify that networking is working properly with the following commands</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"># ifconfig eth0
-# ip a s eth0
-# ip r
-# route -n
-# ping 192.168.1.254
-# ping google.com
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span># sudo vi /etc/resolv.conf
+</span></span></code></pre></div><p>Configure similar to the following:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>search yourcompany.com
+</span></span><span style="display:flex;"><span>nameserver 192.168.1.254
+</span></span><span style="display:flex;"><span>nameserver 8.8.8.8
+</span></span><span style="display:flex;"><span>nameserver 8.8.4.4
+</span></span></code></pre></div><h2 id="finally-restart-networking">Finally, Restart Networking</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span># sudo systemctl network restart
+</span></span></code></pre></div><p>You can verify that networking is working properly with the following commands</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span># ifconfig eth0
+</span></span><span style="display:flex;"><span># ip a s eth0
+</span></span><span style="display:flex;"><span># ip r
+</span></span><span style="display:flex;"><span># route -n
+</span></span><span style="display:flex;"><span># ping 192.168.1.254
+</span></span><span style="display:flex;"><span># ping google.com
+</span></span></code></pre></div>
       </div>
 
 
@@ -189,7 +190,7 @@ nameserver 8.8.4.4
 
         <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -221,14 +222,14 @@ nameserver 8.8.4.4
   <footer class="footer">
     <section class="container">
       
-        <p>Oracle Database Developer and Performance Tuner, specialized on the Exadata platform. Working for Infolob from Irving, Texas. #OCICertified </p>
+        <p>Oracle Database Developer and Performance Tuner, specialized on the Exadata platform. Working for Infolob from Irving, Texas.</p>
       
       
         ©
         
           2012 -
         
-        2020
+        2022
          Toby Marks 
       
       

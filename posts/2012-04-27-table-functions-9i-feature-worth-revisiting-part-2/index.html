@@ -17,9 +17,10 @@
     <meta property="og:title" content="Table Functions: 9i Feature Worth Revisiting (Part 2)" />
 <meta property="og:description" content="In part one of this series I showed a simple example of how table functions can be used to treat PL/SQL collection types as tables in a SQL query. We used a nested table collection type to which we manually added a few entries. In this example, I intend to show a more practical use of table functions using all three PL/SQL collection types: associative arrays, nested tables, and VARRAYs." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://tobybase.com/posts/2012-04-27-table-functions-9i-feature-worth-revisiting-part-2/" />
+<meta property="og:url" content="http://tobybase.com/posts/2012-04-27-table-functions-9i-feature-worth-revisiting-part-2/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2012-04-27T22:35:00+00:00" />
 <meta property="article:modified_time" content="2017-02-22T00:00:00+00:00" />
+<meta property="og:see_also" content="http://tobybase.com/posts/2012-04-27-table-functions-9i-feature-worth-revisiting-part-1/" />
 
 
 
@@ -57,7 +58,7 @@
     <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-16x16.png" sizes="16x16">
 
-    <meta name="generator" content="Hugo 0.71.1" />
+    <meta name="generator" content="Hugo 0.107.0">
   </head>
 
   
@@ -118,7 +119,7 @@
           </div>
           <div class="categories">
   <i class="fas fa-folder"></i>
-    <a href="http://tobybase.com/categories/sql-pl/sql/">SQL &amp; PL/SQL</a></div>
+    <a href="http://tobybase.com/categories/sql/">SQL</a></div>
 
           <div class="tags">
   <i class="fas fa-tag"></i>
@@ -134,355 +135,355 @@
         <p>In <a href="http://tobybase.com/posts/2012-04-27-table-functions-9i-feature-worth-revisiting-part-1/-1">part one of this series</a> I showed a simple example of how table functions can be used to treat PL/SQL collection types as tables in a SQL query. We used a nested table collection type to which we manually added a few entries. In this example, I intend to show a more practical use of table functions using all three PL/SQL collection types: associative arrays, nested tables, and VARRAYs.</p>
 <p>Let&rsquo;s revisit a use case I alluded to in my earlier blog entry: incorporating LDAP data into a query. Suppose your task is to code a custom authorization scheme for an enterprise application reporting system. You want row access to be determined by a user&rsquo;s group memberships in the company&rsquo;s Active Directory server. If a user is assigned to &ldquo;the Company A group&rdquo; in Active Directory, he gets to see Company A&rsquo;s data. You can configure that kind of restriction at a database level using <a href="http://www.oracle.com/technetwork/database/security/index-088277.html">Oracle&rsquo;s Virtual Private Database</a> feature. Configuring VPD is beyond the scope of this blog entry, but ultimately you will be associating a table to a portion of a SQL WHERE clause that gets appended to every query written against that table. You can find more documentation on VPD <a href="http://download.oracle.com/docs/cd/B28359_01/network.111/b28531/vpd.htm">on the OTN site</a>. In this case, let&rsquo;s assume you know that another team has written a PL/SQL database package to query data from Active Directory, and you want to make use of that code. The only problem is that all the functions in that package return collections of various types, and you need to be able to access that information from the WHERE clause you are building with VPD. This is where table functions come in handy.</p>
 <p>Let&rsquo;s begin by setting up our example schema. We&rsquo;ll be looking at client sales data. First, let&rsquo;s set up our clients.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">    <span style="font-weight:bold">CREATE</span> <span style="font-weight:bold">TABLE</span> clients (
-      client_id NUMBER,
-      client_name VARCHAR2(50));
-
-    <span style="font-weight:bold">INSERT</span> <span style="font-weight:bold">INTO</span> clients <span style="font-weight:bold">VALUES</span> (100, <span style="font-style:italic">&#39;Timco Industries&#39;</span>);
-    <span style="font-weight:bold">INSERT</span> <span style="font-weight:bold">INTO</span> clients <span style="font-weight:bold">VALUES</span> (200, <span style="font-style:italic">&#39;Moneybros&#39;</span>);
-    <span style="font-weight:bold">INSERT</span> <span style="font-weight:bold">INTO</span> clients <span style="font-weight:bold">VALUES</span> (300, <span style="font-style:italic">&#39;The Monacle Corporation&#39;</span>);
-    <span style="font-weight:bold">INSERT</span> <span style="font-weight:bold">INTO</span> clients <span style="font-weight:bold">VALUES</span> (400, <span style="font-style:italic">&#39;Schmapple&#39;</span>);
-</code></pre></div><p>We also need application users who will be logging in to view the report data. We&rsquo;ll assume each application user is uniquely linked to a user in Active Directory via the external_id column.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">    <span style="font-weight:bold">CREATE</span> <span style="font-weight:bold">TABLE</span> users (
-      sequence_number NUMBER,
-      user_name VARCHAR2(20),
-      external_id VARCHAR2(20),
-      first_name VARCHAR2(30),
-      last_name VARCHAR2(30));
-
-    <span style="font-weight:bold">INSERT</span> <span style="font-weight:bold">INTO</span> users <span style="font-weight:bold">VALUES</span> (1, <span style="font-style:italic">&#39;JACKA&#39;</span>, <span style="font-style:italic">&#39;jaugusti&#39;</span>, <span style="font-style:italic">&#39;Jack&#39;</span>, <span style="font-style:italic">&#39;Augustine&#39;</span>);
-    <span style="font-weight:bold">INSERT</span> <span style="font-weight:bold">INTO</span> users <span style="font-weight:bold">VALUES</span> (2, <span style="font-style:italic">&#39;KENKI&#39;</span>, <span style="font-style:italic">&#39;kkidd&#39;</span>, <span style="font-style:italic">&#39;Ken&#39;</span>, <span style="font-style:italic">&#39;Kidd&#39;</span>);
-    <span style="font-weight:bold">INSERT</span> <span style="font-weight:bold">INTO</span> users <span style="font-weight:bold">VALUES</span> (3, <span style="font-style:italic">&#39;BRIAH&#39;</span>, <span style="font-style:italic">&#39;bhill&#39;</span>, <span style="font-style:italic">&#39;Brian&#39;</span>, <span style="font-style:italic">&#39;Hill&#39;</span>);
-    <span style="font-weight:bold">INSERT</span> <span style="font-weight:bold">INTO</span> users <span style="font-weight:bold">VALUES</span> (4, <span style="font-style:italic">&#39;KEOVO&#39;</span>, <span style="font-style:italic">&#39;kvongkas&#39;</span>, <span style="font-style:italic">&#39;Keo&#39;</span>, <span style="font-style:italic">&#39;Vongkaseum&#39;</span>);
-</code></pre></div><p>Finally, we need a data table on which to report.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">    <span style="font-weight:bold">CREATE</span> <span style="font-weight:bold">TABLE</span> quarterly_sales_data (
-      sequence_number NUMBER,
-      client_id NUMBER,
-      sales_year NUMBER,
-      sales_quarter NUMBER,
-      sales_amount NUMBER);
-
-    <span style="font-weight:bold">INSERT</span> <span style="font-weight:bold">INTO</span> quarterly_sales_data <span style="font-weight:bold">VALUES</span> (1, 100, 2011, 1, 20000);
-    <span style="font-weight:bold">INSERT</span> <span style="font-weight:bold">INTO</span> quarterly_sales_data <span style="font-weight:bold">VALUES</span> (2, 100, 2011, 2, 17500);
-    <span style="font-weight:bold">INSERT</span> <span style="font-weight:bold">INTO</span> quarterly_sales_data <span style="font-weight:bold">VALUES</span> (3, 100, 2011, 3, 33000);
-    <span style="font-weight:bold">INSERT</span> <span style="font-weight:bold">INTO</span> quarterly_sales_data <span style="font-weight:bold">VALUES</span> (4, 200, 2011, 1, 4500);
-    <span style="font-weight:bold">INSERT</span> <span style="font-weight:bold">INTO</span> quarterly_sales_data <span style="font-weight:bold">VALUES</span> (5, 200, 2011, 2, 7000);
-    <span style="font-weight:bold">INSERT</span> <span style="font-weight:bold">INTO</span> quarterly_sales_data <span style="font-weight:bold">VALUES</span> (6, 200, 2011, 3, 6300);
-    <span style="font-weight:bold">INSERT</span> <span style="font-weight:bold">INTO</span> quarterly_sales_data <span style="font-weight:bold">VALUES</span> (7, 300, 2011, 1, 11100);
-    <span style="font-weight:bold">INSERT</span> <span style="font-weight:bold">INTO</span> quarterly_sales_data <span style="font-weight:bold">VALUES</span> (8, 300, 2011, 2, 12800);
-    <span style="font-weight:bold">INSERT</span> <span style="font-weight:bold">INTO</span> quarterly_sales_data <span style="font-weight:bold">VALUES</span> (9, 300, 2011, 3, 14000);
-    <span style="font-weight:bold">INSERT</span> <span style="font-weight:bold">INTO</span> quarterly_sales_data <span style="font-weight:bold">VALUES</span> (10, 400, 2011, 1, 55600);
-    <span style="font-weight:bold">INSERT</span> <span style="font-weight:bold">INTO</span> quarterly_sales_data <span style="font-weight:bold">VALUES</span> (11, 400, 2011, 2, 80000);
-    <span style="font-weight:bold">INSERT</span> <span style="font-weight:bold">INTO</span> quarterly_sales_data <span style="font-weight:bold">VALUES</span> (12, 400, 2011, 3, 78500);
-</code></pre></div><p>Our basic report query will look something like this:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">    <span style="font-weight:bold">SELECT</span> client_name, sales_year, sales_quarter, sales_amount
-      <span style="font-weight:bold">FROM</span> quarterly_sales_data <span style="font-weight:bold">NATURAL</span> <span style="font-weight:bold">JOIN</span> clients;
-</code></pre></div><p>Our Active Directory groups will be TIMCO_GRP, MONEYBROS_GRP, MONACLE_GRP, and SCHMAPPLE_GRP. If a user belongs to one or more of these groups, he has permission to view the respective client&rsquo;s data.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    <span style="font-weight:bold">CREATE</span> <span style="font-weight:bold">TABLE</span> clients (
+</span></span><span style="display:flex;"><span>      client_id NUMBER,
+</span></span><span style="display:flex;"><span>      client_name VARCHAR2(50));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">INSERT</span> <span style="font-weight:bold">INTO</span> clients <span style="font-weight:bold">VALUES</span> (100, <span style="font-style:italic">&#39;Timco Industries&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">INSERT</span> <span style="font-weight:bold">INTO</span> clients <span style="font-weight:bold">VALUES</span> (200, <span style="font-style:italic">&#39;Moneybros&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">INSERT</span> <span style="font-weight:bold">INTO</span> clients <span style="font-weight:bold">VALUES</span> (300, <span style="font-style:italic">&#39;The Monacle Corporation&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">INSERT</span> <span style="font-weight:bold">INTO</span> clients <span style="font-weight:bold">VALUES</span> (400, <span style="font-style:italic">&#39;Schmapple&#39;</span>);
+</span></span></code></pre></div><p>We also need application users who will be logging in to view the report data. We&rsquo;ll assume each application user is uniquely linked to a user in Active Directory via the external_id column.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    <span style="font-weight:bold">CREATE</span> <span style="font-weight:bold">TABLE</span> users (
+</span></span><span style="display:flex;"><span>      sequence_number NUMBER,
+</span></span><span style="display:flex;"><span>      user_name VARCHAR2(20),
+</span></span><span style="display:flex;"><span>      external_id VARCHAR2(20),
+</span></span><span style="display:flex;"><span>      first_name VARCHAR2(30),
+</span></span><span style="display:flex;"><span>      last_name VARCHAR2(30));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">INSERT</span> <span style="font-weight:bold">INTO</span> users <span style="font-weight:bold">VALUES</span> (1, <span style="font-style:italic">&#39;JACKA&#39;</span>, <span style="font-style:italic">&#39;jaugusti&#39;</span>, <span style="font-style:italic">&#39;Jack&#39;</span>, <span style="font-style:italic">&#39;Augustine&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">INSERT</span> <span style="font-weight:bold">INTO</span> users <span style="font-weight:bold">VALUES</span> (2, <span style="font-style:italic">&#39;KENKI&#39;</span>, <span style="font-style:italic">&#39;kkidd&#39;</span>, <span style="font-style:italic">&#39;Ken&#39;</span>, <span style="font-style:italic">&#39;Kidd&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">INSERT</span> <span style="font-weight:bold">INTO</span> users <span style="font-weight:bold">VALUES</span> (3, <span style="font-style:italic">&#39;BRIAH&#39;</span>, <span style="font-style:italic">&#39;bhill&#39;</span>, <span style="font-style:italic">&#39;Brian&#39;</span>, <span style="font-style:italic">&#39;Hill&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">INSERT</span> <span style="font-weight:bold">INTO</span> users <span style="font-weight:bold">VALUES</span> (4, <span style="font-style:italic">&#39;KEOVO&#39;</span>, <span style="font-style:italic">&#39;kvongkas&#39;</span>, <span style="font-style:italic">&#39;Keo&#39;</span>, <span style="font-style:italic">&#39;Vongkaseum&#39;</span>);
+</span></span></code></pre></div><p>Finally, we need a data table on which to report.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    <span style="font-weight:bold">CREATE</span> <span style="font-weight:bold">TABLE</span> quarterly_sales_data (
+</span></span><span style="display:flex;"><span>      sequence_number NUMBER,
+</span></span><span style="display:flex;"><span>      client_id NUMBER,
+</span></span><span style="display:flex;"><span>      sales_year NUMBER,
+</span></span><span style="display:flex;"><span>      sales_quarter NUMBER,
+</span></span><span style="display:flex;"><span>      sales_amount NUMBER);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">INSERT</span> <span style="font-weight:bold">INTO</span> quarterly_sales_data <span style="font-weight:bold">VALUES</span> (1, 100, 2011, 1, 20000);
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">INSERT</span> <span style="font-weight:bold">INTO</span> quarterly_sales_data <span style="font-weight:bold">VALUES</span> (2, 100, 2011, 2, 17500);
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">INSERT</span> <span style="font-weight:bold">INTO</span> quarterly_sales_data <span style="font-weight:bold">VALUES</span> (3, 100, 2011, 3, 33000);
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">INSERT</span> <span style="font-weight:bold">INTO</span> quarterly_sales_data <span style="font-weight:bold">VALUES</span> (4, 200, 2011, 1, 4500);
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">INSERT</span> <span style="font-weight:bold">INTO</span> quarterly_sales_data <span style="font-weight:bold">VALUES</span> (5, 200, 2011, 2, 7000);
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">INSERT</span> <span style="font-weight:bold">INTO</span> quarterly_sales_data <span style="font-weight:bold">VALUES</span> (6, 200, 2011, 3, 6300);
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">INSERT</span> <span style="font-weight:bold">INTO</span> quarterly_sales_data <span style="font-weight:bold">VALUES</span> (7, 300, 2011, 1, 11100);
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">INSERT</span> <span style="font-weight:bold">INTO</span> quarterly_sales_data <span style="font-weight:bold">VALUES</span> (8, 300, 2011, 2, 12800);
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">INSERT</span> <span style="font-weight:bold">INTO</span> quarterly_sales_data <span style="font-weight:bold">VALUES</span> (9, 300, 2011, 3, 14000);
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">INSERT</span> <span style="font-weight:bold">INTO</span> quarterly_sales_data <span style="font-weight:bold">VALUES</span> (10, 400, 2011, 1, 55600);
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">INSERT</span> <span style="font-weight:bold">INTO</span> quarterly_sales_data <span style="font-weight:bold">VALUES</span> (11, 400, 2011, 2, 80000);
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">INSERT</span> <span style="font-weight:bold">INTO</span> quarterly_sales_data <span style="font-weight:bold">VALUES</span> (12, 400, 2011, 3, 78500);
+</span></span></code></pre></div><p>Our basic report query will look something like this:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    <span style="font-weight:bold">SELECT</span> client_name, sales_year, sales_quarter, sales_amount
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">FROM</span> quarterly_sales_data <span style="font-weight:bold">NATURAL</span> <span style="font-weight:bold">JOIN</span> clients;
+</span></span></code></pre></div><p>Our Active Directory groups will be TIMCO_GRP, MONEYBROS_GRP, MONACLE_GRP, and SCHMAPPLE_GRP. If a user belongs to one or more of these groups, he has permission to view the respective client&rsquo;s data.</p>
 <p>Now we need a function that returns data from Active Directory. Just to keep it simple we will create a package that hardcodes the group memberships and returns them as collections of various types. We will then look at how table functions can be used to transform each one of those collections into an aggregate result set. (NOTE: querying LDAP directories from PL/SQL is not too difficult, and might serve as the basis for a future blog entry.)</p>
 <p>Here&rsquo;s our function. We&rsquo;ve placed it in a package called LDAP_UTIL.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">    CREATE OR REPLACE PACKAGE ldap_util AS
-
-      TYPE ldap_entry_typ IS RECORD (
-        cn VARCHAR2(30),
-        description VARCHAR2(1000),
-        distinguished_name VARCHAR2(200),
-        name VARCHAR2(30),
-        samaccountname VARCHAR2(30));
-
-      TYPE ldap_groups_nt IS TABLE OF ldap_entry_typ;
-      TYPE ldap_groups_aa IS TABLE OF ldap_entry_typ INDEX BY PLS_INTEGER;
-      TYPE ldap_groups_va IS VARRAY(100) of ldap_entry_typ;
-
-      FUNCTION get_user_groups_nt (p_user VARCHAR2) RETURN ldap_groups_nt;
-      FUNCTION get_user_groups_aa (p_user VARCHAR2) RETURN ldap_groups_aa;
-      FUNCTION get_user_groups_va (p_user VARCHAR2) RETURN ldap_groups_va;
-
-    END ldap_util;
-    /
-    SHOW ERRORS
-
-    CREATE OR REPLACE PACKAGE BODY ldap_util AS
-
-      FUNCTION get_user_groups_nt (p_user VARCHAR2) RETURN ldap_groups_nt IS
-        l_groups ldap_groups_nt := ldap_groups_nt();
-      BEGIN
-        CASE p_user
-          WHEN &#39;jaugusti&#39; THEN
-
-            l_groups.extend;
-            l_groups(1).cn := &#39;TIMCO_GRP&#39;;
-            l_groups(1).description := &#39;Employees working on the Timco Industries account.&#39;;
-            l_groups(1).distinguished_name := &#39;CN=TIMCO_GRP,OU=Global Groups,DC=acme,DC=com&#39;;
-            l_groups(1).name := &#39;TIMCO_GRP&#39;;
-            l_groups(1).samaccountname := &#39;TIMCO_GRP&#39;;
-
-          WHEN &#39;kkidd&#39; THEN
-
-            l_groups.extend;
-            l_groups(1).cn := &#39;MONEYBROS_GRP&#39;;
-            l_groups(1).description := &#39;Employees working on the Moneybros account.&#39;;
-            l_groups(1).distinguished_name := &#39;CN=MONEYBROS_GRP,OU=Global Groups,DC=acme,DC=com&#39;;
-            l_groups(1).name := &#39;MONEYBROS_GRP&#39;;
-            l_groups(1).samaccountname := &#39;MONEYBROS_GRP&#39;;
-
-          WHEN &#39;bhill&#39; THEN
-
-            l_groups.extend;
-            l_groups(1).cn := &#39;TIMCO_GRP&#39;;
-            l_groups(1).description := &#39;Employees working on the Timco Industries account.&#39;;
-            l_groups(1).distinguished_name := &#39;CN=TIMCO_GRP,OU=Global Groups,DC=acme,DC=com&#39;;
-            l_groups(1).name := &#39;TIMCO_GRP&#39;;
-            l_groups(1).samaccountname := &#39;TIMCO_GRP&#39;;
-
-            l_groups.extend;
-            l_groups(2).cn := &#39;MONACLE_GRP&#39;;
-            l_groups(2).description := &#39;Employees working on the Monacle Corporation account.&#39;;
-            l_groups(2).distinguished_name := &#39;CN=MONACLE_GRP,OU=Global Groups,DC=acme,DC=com&#39;;
-            l_groups(2).name := &#39;MONACLE_GRP&#39;;
-            l_groups(2).samaccountname := &#39;MONACLE_GRP&#39;;
-
-          WHEN &#39;kvongkas&#39; THEN
-
-            l_groups.extend;
-            l_groups(1).cn := &#39;MONEYBROS_GRP&#39;;
-            l_groups(1).description := &#39;Employees working on the Moneybros account.&#39;;
-            l_groups(1).distinguished_name := &#39;CN=MONEYBROS_GRP,OU=Global Groups,DC=acme,DC=com&#39;;
-            l_groups(1).name := &#39;MONEYBROS_GRP&#39;;
-            l_groups(1).samaccountname := &#39;MONEYBROS_GRP&#39;;
-
-            l_groups.extend;
-            l_groups(2).cn := &#39;MONACLE_GRP&#39;;
-            l_groups(2).description := &#39;Employees working on the Monacle Corporation account.&#39;;
-            l_groups(2).distinguished_name := &#39;CN=MONACLE_GRP,OU=Global Groups,DC=acme,DC=com&#39;;
-            l_groups(2).name := &#39;MONACLE_GRP&#39;;
-            l_groups(2).samaccountname := &#39;MONACLE_GRP&#39;;
-
-            l_groups.extend;
-            l_groups(3).cn := &#39;SCHMAPPLE_GRP&#39;;
-            l_groups(3).description := &#39;Employees working on the Schmapple account.&#39;;
-            l_groups(3).distinguished_name := &#39;CN=SCHMAPPLE_GRP,OU=Global Groups,DC=acme,DC=com&#39;;
-            l_groups(3).name := &#39;SCHMAPPLE_GRP&#39;;
-            l_groups(3).samaccountname := &#39;SCHMAPPLE_GRP&#39;;
-
-        END CASE;
-        RETURN l_groups;
-      END get_user_groups_nt;
-
-      FUNCTION get_user_groups_aa (p_user VARCHAR2) RETURN ldap_groups_aa IS
-        l_groups ldap_groups_aa;
-      BEGIN
-        CASE p_user
-          WHEN &#39;jaugusti&#39; THEN
-
-            l_groups(1).cn := &#39;TIMCO_GRP&#39;;
-            l_groups(1).description := &#39;Employees working on the Timco Industries account.&#39;;
-            l_groups(1).distinguished_name := &#39;CN=TIMCO_GRP,OU=Global Groups,DC=acme,DC=com&#39;;
-            l_groups(1).name := &#39;TIMCO_GRP&#39;;
-            l_groups(1).samaccountname := &#39;TIMCO_GRP&#39;;
-
-          WHEN &#39;kkidd&#39; THEN
-
-            l_groups(1).cn := &#39;MONEYBROS_GRP&#39;;
-            l_groups(1).description := &#39;Employees working on the Moneybros account.&#39;;
-            l_groups(1).distinguished_name := &#39;CN=MONEYBROS_GRP,OU=Global Groups,DC=acme,DC=com&#39;;
-            l_groups(1).name := &#39;MONEYBROS_GRP&#39;;
-            l_groups(1).samaccountname := &#39;MONEYBROS_GRP&#39;;
-
-          WHEN &#39;bhill&#39; THEN
-
-            l_groups(1).cn := &#39;TIMCO_GRP&#39;;
-            l_groups(1).description := &#39;Employees working on the Timco Industries account.&#39;;
-            l_groups(1).distinguished_name := &#39;CN=TIMCO_GRP,OU=Global Groups,DC=acme,DC=com&#39;;
-            l_groups(1).name := &#39;TIMCO_GRP&#39;;
-            l_groups(1).samaccountname := &#39;TIMCO_GRP&#39;;
-
-            l_groups(2).cn := &#39;MONACLE_GRP&#39;;
-            l_groups(2).description := &#39;Employees working on the Monacle Corporation account.&#39;;
-            l_groups(2).distinguished_name := &#39;CN=MONACLE_GRP,OU=Global Groups,DC=acme,DC=com&#39;;
-            l_groups(2).name := &#39;MONACLE_GRP&#39;;
-            l_groups(2).samaccountname := &#39;MONACLE_GRP&#39;;
-
-          WHEN &#39;kvongkas&#39; THEN
-
-            l_groups(1).cn := &#39;MONEYBROS_GRP&#39;;
-            l_groups(1).description := &#39;Employees working on the Moneybros account.&#39;;
-            l_groups(1).distinguished_name := &#39;CN=MONEYBROS_GRP,OU=Global Groups,DC=acme,DC=com&#39;;
-            l_groups(1).name := &#39;MONEYBROS_GRP&#39;;
-            l_groups(1).samaccountname := &#39;MONEYBROS_GRP&#39;;
-
-            l_groups(2).cn := &#39;MONACLE_GRP&#39;;
-            l_groups(2).description := &#39;Employees working on the Monacle Corporation account.&#39;;
-            l_groups(2).distinguished_name := &#39;CN=MONACLE_GRP,OU=Global Groups,DC=acme,DC=com&#39;;
-            l_groups(2).name := &#39;MONACLE_GRP&#39;;
-            l_groups(2).samaccountname := &#39;MONACLE_GRP&#39;;
-
-            l_groups(3).cn := &#39;SCHMAPPLE_GRP&#39;;
-            l_groups(3).description := &#39;Employees working on the Schmapple account.&#39;;
-            l_groups(3).distinguished_name := &#39;CN=SCHMAPPLE_GRP,OU=Global Groups,DC=acme,DC=com&#39;;
-            l_groups(3).name := &#39;SCHMAPPLE_GRP&#39;;
-            l_groups(3).samaccountname := &#39;SCHMAPPLE_GRP&#39;;
-
-        END CASE;
-        RETURN l_groups;
-      END get_user_groups_aa;
-
-      FUNCTION get_user_groups_va (p_user VARCHAR2) RETURN ldap_groups_va IS
-        l_groups ldap_groups_va := ldap_groups_va();
-      BEGIN
-        CASE p_user
-          WHEN &#39;jaugusti&#39; THEN
-
-            l_groups.extend;
-            l_groups(1).cn := &#39;TIMCO_GRP&#39;;
-            l_groups(1).description := &#39;Employees working on the Timco Industries account.&#39;;
-            l_groups(1).distinguished_name := &#39;CN=TIMCO_GRP,OU=Global Groups,DC=acme,DC=com&#39;;
-            l_groups(1).name := &#39;TIMCO_GRP&#39;;
-            l_groups(1).samaccountname := &#39;TIMCO_GRP&#39;;
-
-          WHEN &#39;kkidd&#39; THEN
-
-            l_groups.extend;
-            l_groups(1).cn := &#39;MONEYBROS_GRP&#39;;
-            l_groups(1).description := &#39;Employees working on the Moneybros account.&#39;;
-            l_groups(1).distinguished_name := &#39;CN=MONEYBROS_GRP,OU=Global Groups,DC=acme,DC=com&#39;;
-            l_groups(1).name := &#39;MONEYBROS_GRP&#39;;
-            l_groups(1).samaccountname := &#39;MONEYBROS_GRP&#39;;
-
-          WHEN &#39;bhill&#39; THEN
-
-            l_groups.extend;
-            l_groups(1).cn := &#39;TIMCO_GRP&#39;;
-            l_groups(1).description := &#39;Employees working on the Timco Industries account.&#39;;
-            l_groups(1).distinguished_name := &#39;CN=TIMCO_GRP,OU=Global Groups,DC=acme,DC=com&#39;;
-            l_groups(1).name := &#39;TIMCO_GRP&#39;;
-            l_groups(1).samaccountname := &#39;TIMCO_GRP&#39;;
-
-            l_groups.extend;
-            l_groups(2).cn := &#39;MONACLE_GRP&#39;;
-            l_groups(2).description := &#39;Employees working on the Monacle Corporation account.&#39;;
-            l_groups(2).distinguished_name := &#39;CN=MONACLE_GRP,OU=Global Groups,DC=acme,DC=com&#39;;
-            l_groups(2).name := &#39;MONACLE_GRP&#39;;
-            l_groups(2).samaccountname := &#39;MONACLE_GRP&#39;;
-
-          WHEN &#39;kvongkas&#39; THEN
-
-            l_groups.extend;
-            l_groups(1).cn := &#39;MONEYBROS_GRP&#39;;
-            l_groups(1).description := &#39;Employees working on the Moneybros account.&#39;;
-            l_groups(1).distinguished_name := &#39;CN=MONEYBROS_GRP,OU=Global Groups,DC=acme,DC=com&#39;;
-            l_groups(1).name := &#39;MONEYBROS_GRP&#39;;
-            l_groups(1).samaccountname := &#39;MONEYBROS_GRP&#39;;
-
-            l_groups.extend;
-            l_groups(2).cn := &#39;MONACLE_GRP&#39;;
-            l_groups(2).description := &#39;Employees working on the Monacle Corporation account.&#39;;
-            l_groups(2).distinguished_name := &#39;CN=MONACLE_GRP,OU=Global Groups,DC=acme,DC=com&#39;;
-            l_groups(2).name := &#39;MONACLE_GRP&#39;;
-            l_groups(2).samaccountname := &#39;MONACLE_GRP&#39;;
-
-            l_groups.extend;
-            l_groups(3).cn := &#39;SCHMAPPLE_GRP&#39;;
-            l_groups(3).description := &#39;Employees working on the Schmapple account.&#39;;
-            l_groups(3).distinguished_name := &#39;CN=SCHMAPPLE_GRP,OU=Global Groups,DC=acme,DC=com&#39;;
-            l_groups(3).name := &#39;SCHMAPPLE_GRP&#39;;
-            l_groups(3).samaccountname := &#39;SCHMAPPLE_GRP&#39;;
-
-        END CASE;
-        RETURN l_groups;
-      END get_user_groups_va;
-
-    END ldap_util;
-    /
-    SHOW ERRORS
-</code></pre></div><p>As you can see, LDAP_UTIL has three functions that return the three kinds of collections in PL/SQL: nested tables, associative arrays, and varrays.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">    <span style="font-weight:bold">FUNCTION</span> get_user_groups_nt (p_user VARCHAR2) <span style="font-weight:bold">RETURN</span> ldap_groups_nt;
-    <span style="font-weight:bold">FUNCTION</span> get_user_groups_aa (p_user VARCHAR2) <span style="font-weight:bold">RETURN</span> ldap_groups_aa;
-    <span style="font-weight:bold">FUNCTION</span> get_user_groups_va (p_user VARCHAR2) <span style="font-weight:bold">RETURN</span> ldap_groups_va;
-</code></pre></div><p>The collections consist of a group of records representing &ldquo;group&rdquo; data from Active Directory.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">    <span style="font-weight:bold">TYPE</span> ldap_entry_typ <span style="font-weight:bold">IS</span> RECORD (
-        cn VARCHAR2(30),
-        description VARCHAR2(1000),
-        distinguished_name VARCHAR2(200),
-        name VARCHAR2(30),
-        samaccountname VARCHAR2(30));
-</code></pre></div><p>The p_user parameter would be the user&rsquo;s network id, corresponding to the sAMAccountName attribute in Active Directory; since we&rsquo;re hardcoding group data this is not important to us at the moment. The point is you pass in a username and you get a collection of groups.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>    CREATE OR REPLACE PACKAGE ldap_util AS
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      TYPE ldap_entry_typ IS RECORD (
+</span></span><span style="display:flex;"><span>        cn VARCHAR2(30),
+</span></span><span style="display:flex;"><span>        description VARCHAR2(1000),
+</span></span><span style="display:flex;"><span>        distinguished_name VARCHAR2(200),
+</span></span><span style="display:flex;"><span>        name VARCHAR2(30),
+</span></span><span style="display:flex;"><span>        samaccountname VARCHAR2(30));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      TYPE ldap_groups_nt IS TABLE OF ldap_entry_typ;
+</span></span><span style="display:flex;"><span>      TYPE ldap_groups_aa IS TABLE OF ldap_entry_typ INDEX BY PLS_INTEGER;
+</span></span><span style="display:flex;"><span>      TYPE ldap_groups_va IS VARRAY(100) of ldap_entry_typ;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      FUNCTION get_user_groups_nt (p_user VARCHAR2) RETURN ldap_groups_nt;
+</span></span><span style="display:flex;"><span>      FUNCTION get_user_groups_aa (p_user VARCHAR2) RETURN ldap_groups_aa;
+</span></span><span style="display:flex;"><span>      FUNCTION get_user_groups_va (p_user VARCHAR2) RETURN ldap_groups_va;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    END ldap_util;
+</span></span><span style="display:flex;"><span>    /
+</span></span><span style="display:flex;"><span>    SHOW ERRORS
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    CREATE OR REPLACE PACKAGE BODY ldap_util AS
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      FUNCTION get_user_groups_nt (p_user VARCHAR2) RETURN ldap_groups_nt IS
+</span></span><span style="display:flex;"><span>        l_groups ldap_groups_nt := ldap_groups_nt();
+</span></span><span style="display:flex;"><span>      BEGIN
+</span></span><span style="display:flex;"><span>        CASE p_user
+</span></span><span style="display:flex;"><span>          WHEN &#39;jaugusti&#39; THEN
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            l_groups.extend;
+</span></span><span style="display:flex;"><span>            l_groups(1).cn := &#39;TIMCO_GRP&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(1).description := &#39;Employees working on the Timco Industries account.&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(1).distinguished_name := &#39;CN=TIMCO_GRP,OU=Global Groups,DC=acme,DC=com&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(1).name := &#39;TIMCO_GRP&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(1).samaccountname := &#39;TIMCO_GRP&#39;;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>          WHEN &#39;kkidd&#39; THEN
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            l_groups.extend;
+</span></span><span style="display:flex;"><span>            l_groups(1).cn := &#39;MONEYBROS_GRP&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(1).description := &#39;Employees working on the Moneybros account.&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(1).distinguished_name := &#39;CN=MONEYBROS_GRP,OU=Global Groups,DC=acme,DC=com&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(1).name := &#39;MONEYBROS_GRP&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(1).samaccountname := &#39;MONEYBROS_GRP&#39;;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>          WHEN &#39;bhill&#39; THEN
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            l_groups.extend;
+</span></span><span style="display:flex;"><span>            l_groups(1).cn := &#39;TIMCO_GRP&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(1).description := &#39;Employees working on the Timco Industries account.&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(1).distinguished_name := &#39;CN=TIMCO_GRP,OU=Global Groups,DC=acme,DC=com&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(1).name := &#39;TIMCO_GRP&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(1).samaccountname := &#39;TIMCO_GRP&#39;;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            l_groups.extend;
+</span></span><span style="display:flex;"><span>            l_groups(2).cn := &#39;MONACLE_GRP&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(2).description := &#39;Employees working on the Monacle Corporation account.&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(2).distinguished_name := &#39;CN=MONACLE_GRP,OU=Global Groups,DC=acme,DC=com&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(2).name := &#39;MONACLE_GRP&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(2).samaccountname := &#39;MONACLE_GRP&#39;;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>          WHEN &#39;kvongkas&#39; THEN
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            l_groups.extend;
+</span></span><span style="display:flex;"><span>            l_groups(1).cn := &#39;MONEYBROS_GRP&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(1).description := &#39;Employees working on the Moneybros account.&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(1).distinguished_name := &#39;CN=MONEYBROS_GRP,OU=Global Groups,DC=acme,DC=com&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(1).name := &#39;MONEYBROS_GRP&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(1).samaccountname := &#39;MONEYBROS_GRP&#39;;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            l_groups.extend;
+</span></span><span style="display:flex;"><span>            l_groups(2).cn := &#39;MONACLE_GRP&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(2).description := &#39;Employees working on the Monacle Corporation account.&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(2).distinguished_name := &#39;CN=MONACLE_GRP,OU=Global Groups,DC=acme,DC=com&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(2).name := &#39;MONACLE_GRP&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(2).samaccountname := &#39;MONACLE_GRP&#39;;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            l_groups.extend;
+</span></span><span style="display:flex;"><span>            l_groups(3).cn := &#39;SCHMAPPLE_GRP&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(3).description := &#39;Employees working on the Schmapple account.&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(3).distinguished_name := &#39;CN=SCHMAPPLE_GRP,OU=Global Groups,DC=acme,DC=com&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(3).name := &#39;SCHMAPPLE_GRP&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(3).samaccountname := &#39;SCHMAPPLE_GRP&#39;;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        END CASE;
+</span></span><span style="display:flex;"><span>        RETURN l_groups;
+</span></span><span style="display:flex;"><span>      END get_user_groups_nt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      FUNCTION get_user_groups_aa (p_user VARCHAR2) RETURN ldap_groups_aa IS
+</span></span><span style="display:flex;"><span>        l_groups ldap_groups_aa;
+</span></span><span style="display:flex;"><span>      BEGIN
+</span></span><span style="display:flex;"><span>        CASE p_user
+</span></span><span style="display:flex;"><span>          WHEN &#39;jaugusti&#39; THEN
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            l_groups(1).cn := &#39;TIMCO_GRP&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(1).description := &#39;Employees working on the Timco Industries account.&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(1).distinguished_name := &#39;CN=TIMCO_GRP,OU=Global Groups,DC=acme,DC=com&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(1).name := &#39;TIMCO_GRP&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(1).samaccountname := &#39;TIMCO_GRP&#39;;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>          WHEN &#39;kkidd&#39; THEN
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            l_groups(1).cn := &#39;MONEYBROS_GRP&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(1).description := &#39;Employees working on the Moneybros account.&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(1).distinguished_name := &#39;CN=MONEYBROS_GRP,OU=Global Groups,DC=acme,DC=com&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(1).name := &#39;MONEYBROS_GRP&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(1).samaccountname := &#39;MONEYBROS_GRP&#39;;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>          WHEN &#39;bhill&#39; THEN
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            l_groups(1).cn := &#39;TIMCO_GRP&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(1).description := &#39;Employees working on the Timco Industries account.&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(1).distinguished_name := &#39;CN=TIMCO_GRP,OU=Global Groups,DC=acme,DC=com&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(1).name := &#39;TIMCO_GRP&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(1).samaccountname := &#39;TIMCO_GRP&#39;;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            l_groups(2).cn := &#39;MONACLE_GRP&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(2).description := &#39;Employees working on the Monacle Corporation account.&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(2).distinguished_name := &#39;CN=MONACLE_GRP,OU=Global Groups,DC=acme,DC=com&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(2).name := &#39;MONACLE_GRP&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(2).samaccountname := &#39;MONACLE_GRP&#39;;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>          WHEN &#39;kvongkas&#39; THEN
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            l_groups(1).cn := &#39;MONEYBROS_GRP&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(1).description := &#39;Employees working on the Moneybros account.&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(1).distinguished_name := &#39;CN=MONEYBROS_GRP,OU=Global Groups,DC=acme,DC=com&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(1).name := &#39;MONEYBROS_GRP&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(1).samaccountname := &#39;MONEYBROS_GRP&#39;;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            l_groups(2).cn := &#39;MONACLE_GRP&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(2).description := &#39;Employees working on the Monacle Corporation account.&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(2).distinguished_name := &#39;CN=MONACLE_GRP,OU=Global Groups,DC=acme,DC=com&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(2).name := &#39;MONACLE_GRP&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(2).samaccountname := &#39;MONACLE_GRP&#39;;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            l_groups(3).cn := &#39;SCHMAPPLE_GRP&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(3).description := &#39;Employees working on the Schmapple account.&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(3).distinguished_name := &#39;CN=SCHMAPPLE_GRP,OU=Global Groups,DC=acme,DC=com&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(3).name := &#39;SCHMAPPLE_GRP&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(3).samaccountname := &#39;SCHMAPPLE_GRP&#39;;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        END CASE;
+</span></span><span style="display:flex;"><span>        RETURN l_groups;
+</span></span><span style="display:flex;"><span>      END get_user_groups_aa;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      FUNCTION get_user_groups_va (p_user VARCHAR2) RETURN ldap_groups_va IS
+</span></span><span style="display:flex;"><span>        l_groups ldap_groups_va := ldap_groups_va();
+</span></span><span style="display:flex;"><span>      BEGIN
+</span></span><span style="display:flex;"><span>        CASE p_user
+</span></span><span style="display:flex;"><span>          WHEN &#39;jaugusti&#39; THEN
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            l_groups.extend;
+</span></span><span style="display:flex;"><span>            l_groups(1).cn := &#39;TIMCO_GRP&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(1).description := &#39;Employees working on the Timco Industries account.&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(1).distinguished_name := &#39;CN=TIMCO_GRP,OU=Global Groups,DC=acme,DC=com&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(1).name := &#39;TIMCO_GRP&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(1).samaccountname := &#39;TIMCO_GRP&#39;;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>          WHEN &#39;kkidd&#39; THEN
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            l_groups.extend;
+</span></span><span style="display:flex;"><span>            l_groups(1).cn := &#39;MONEYBROS_GRP&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(1).description := &#39;Employees working on the Moneybros account.&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(1).distinguished_name := &#39;CN=MONEYBROS_GRP,OU=Global Groups,DC=acme,DC=com&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(1).name := &#39;MONEYBROS_GRP&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(1).samaccountname := &#39;MONEYBROS_GRP&#39;;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>          WHEN &#39;bhill&#39; THEN
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            l_groups.extend;
+</span></span><span style="display:flex;"><span>            l_groups(1).cn := &#39;TIMCO_GRP&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(1).description := &#39;Employees working on the Timco Industries account.&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(1).distinguished_name := &#39;CN=TIMCO_GRP,OU=Global Groups,DC=acme,DC=com&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(1).name := &#39;TIMCO_GRP&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(1).samaccountname := &#39;TIMCO_GRP&#39;;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            l_groups.extend;
+</span></span><span style="display:flex;"><span>            l_groups(2).cn := &#39;MONACLE_GRP&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(2).description := &#39;Employees working on the Monacle Corporation account.&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(2).distinguished_name := &#39;CN=MONACLE_GRP,OU=Global Groups,DC=acme,DC=com&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(2).name := &#39;MONACLE_GRP&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(2).samaccountname := &#39;MONACLE_GRP&#39;;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>          WHEN &#39;kvongkas&#39; THEN
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            l_groups.extend;
+</span></span><span style="display:flex;"><span>            l_groups(1).cn := &#39;MONEYBROS_GRP&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(1).description := &#39;Employees working on the Moneybros account.&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(1).distinguished_name := &#39;CN=MONEYBROS_GRP,OU=Global Groups,DC=acme,DC=com&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(1).name := &#39;MONEYBROS_GRP&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(1).samaccountname := &#39;MONEYBROS_GRP&#39;;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            l_groups.extend;
+</span></span><span style="display:flex;"><span>            l_groups(2).cn := &#39;MONACLE_GRP&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(2).description := &#39;Employees working on the Monacle Corporation account.&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(2).distinguished_name := &#39;CN=MONACLE_GRP,OU=Global Groups,DC=acme,DC=com&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(2).name := &#39;MONACLE_GRP&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(2).samaccountname := &#39;MONACLE_GRP&#39;;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            l_groups.extend;
+</span></span><span style="display:flex;"><span>            l_groups(3).cn := &#39;SCHMAPPLE_GRP&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(3).description := &#39;Employees working on the Schmapple account.&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(3).distinguished_name := &#39;CN=SCHMAPPLE_GRP,OU=Global Groups,DC=acme,DC=com&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(3).name := &#39;SCHMAPPLE_GRP&#39;;
+</span></span><span style="display:flex;"><span>            l_groups(3).samaccountname := &#39;SCHMAPPLE_GRP&#39;;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        END CASE;
+</span></span><span style="display:flex;"><span>        RETURN l_groups;
+</span></span><span style="display:flex;"><span>      END get_user_groups_va;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    END ldap_util;
+</span></span><span style="display:flex;"><span>    /
+</span></span><span style="display:flex;"><span>    SHOW ERRORS
+</span></span></code></pre></div><p>As you can see, LDAP_UTIL has three functions that return the three kinds of collections in PL/SQL: nested tables, associative arrays, and varrays.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    <span style="font-weight:bold">FUNCTION</span> get_user_groups_nt (p_user VARCHAR2) <span style="font-weight:bold">RETURN</span> ldap_groups_nt;
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">FUNCTION</span> get_user_groups_aa (p_user VARCHAR2) <span style="font-weight:bold">RETURN</span> ldap_groups_aa;
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">FUNCTION</span> get_user_groups_va (p_user VARCHAR2) <span style="font-weight:bold">RETURN</span> ldap_groups_va;
+</span></span></code></pre></div><p>The collections consist of a group of records representing &ldquo;group&rdquo; data from Active Directory.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    <span style="font-weight:bold">TYPE</span> ldap_entry_typ <span style="font-weight:bold">IS</span> RECORD (
+</span></span><span style="display:flex;"><span>        cn VARCHAR2(30),
+</span></span><span style="display:flex;"><span>        description VARCHAR2(1000),
+</span></span><span style="display:flex;"><span>        distinguished_name VARCHAR2(200),
+</span></span><span style="display:flex;"><span>        name VARCHAR2(30),
+</span></span><span style="display:flex;"><span>        samaccountname VARCHAR2(30));
+</span></span></code></pre></div><p>The p_user parameter would be the user&rsquo;s network id, corresponding to the sAMAccountName attribute in Active Directory; since we&rsquo;re hardcoding group data this is not important to us at the moment. The point is you pass in a username and you get a collection of groups.</p>
 <p>Using the same technique we demonstrated in part one, we now create a wrapper package of pipelined functions to transform the collection data into something we can query - an aggregate result set.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">    <span style="font-weight:bold">CREATE</span> <span style="font-weight:bold">OR</span> <span style="font-weight:bold">REPLACE</span> PACKAGE ldap_util_pipelined <span style="font-weight:bold">AS</span>
-
-      <span style="font-weight:bold">FUNCTION</span> get_user_groups_nt (p_user VARCHAR2) <span style="font-weight:bold">RETURN</span> ldap_util.ldap_groups_nt PIPELINED;
-      <span style="font-weight:bold">FUNCTION</span> get_user_groups_aa (p_user VARCHAR2) <span style="font-weight:bold">RETURN</span> ldap_util.ldap_groups_nt PIPELINED;
-      <span style="font-weight:bold">FUNCTION</span> get_user_groups_va (p_user VARCHAR2) <span style="font-weight:bold">RETURN</span> ldap_util.ldap_groups_va PIPELINED;
-
-    <span style="font-weight:bold">END</span> ldap_util_pipelined;
-    /
-    <span style="font-weight:bold">SHOW</span> ERRORS
-
-    <span style="font-weight:bold">CREATE</span> <span style="font-weight:bold">OR</span> <span style="font-weight:bold">REPLACE</span> PACKAGE BODY ldap_util_pipelined <span style="font-weight:bold">AS</span>
-
-      <span style="font-weight:bold">FUNCTION</span> get_user_groups_nt (p_user VARCHAR2)
-      <span style="font-weight:bold">RETURN</span> ldap_util.ldap_groups_nt PIPELINED <span style="font-weight:bold">IS</span>
-        l_groups ldap_util.ldap_groups_nt;
-      <span style="font-weight:bold">BEGIN</span>
-        l_groups := ldap_util.get_user_groups_nt(p_user);
-        <span style="font-weight:bold">FOR</span> i <span style="font-weight:bold">IN</span> 1 .. l_groups.<span style="font-weight:bold">count</span> LOOP
-          PIPE <span style="font-weight:bold">ROW</span> (l_groups(i));
-        <span style="font-weight:bold">END</span> LOOP;
-        <span style="font-weight:bold">RETURN</span>;
-      <span style="font-weight:bold">END</span> get_user_groups_nt;
-
-      <span style="font-weight:bold">FUNCTION</span> get_user_groups_aa (p_user VARCHAR2)
-      <span style="font-weight:bold">RETURN</span> ldap_util.ldap_groups_nt PIPELINED <span style="font-weight:bold">IS</span>
-        l_groups ldap_util.ldap_groups_aa;
-      <span style="font-weight:bold">BEGIN</span>
-        l_groups := ldap_util.get_user_groups_aa(p_user);
-        <span style="font-weight:bold">FOR</span> i <span style="font-weight:bold">IN</span> 1 .. l_groups.<span style="font-weight:bold">count</span> LOOP
-          PIPE <span style="font-weight:bold">ROW</span> (l_groups(i));
-        <span style="font-weight:bold">END</span> LOOP;
-        <span style="font-weight:bold">RETURN</span>;
-      <span style="font-weight:bold">END</span> get_user_groups_aa;
-
-      <span style="font-weight:bold">FUNCTION</span> get_user_groups_va (p_user VARCHAR2)
-      <span style="font-weight:bold">RETURN</span> ldap_util.ldap_groups_va PIPELINED <span style="font-weight:bold">IS</span>
-        l_groups ldap_util.ldap_groups_va;
-      <span style="font-weight:bold">BEGIN</span>
-        l_groups := ldap_util.get_user_groups_va(p_user);
-        <span style="font-weight:bold">FOR</span> i <span style="font-weight:bold">IN</span> 1 .. l_groups.<span style="font-weight:bold">count</span> LOOP
-          PIPE <span style="font-weight:bold">ROW</span> (l_groups(i));
-        <span style="font-weight:bold">END</span> LOOP;
-        <span style="font-weight:bold">RETURN</span>;
-      <span style="font-weight:bold">END</span> get_user_groups_va;
-
-    <span style="font-weight:bold">END</span> ldap_util_pipelined;
-    /
-    <span style="font-weight:bold">SHOW</span> ERRORS
-</code></pre></div><p>Note the return types of the three functions in ldap_util_pipelined.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">    <span style="font-weight:bold">FUNCTION</span> get_user_groups_nt (p_user VARCHAR2) <span style="font-weight:bold">RETURN</span> ldap_util.ldap_groups_nt PIPELINED;
-    <span style="font-weight:bold">FUNCTION</span> get_user_groups_aa (p_user VARCHAR2) <span style="font-weight:bold">RETURN</span> ldap_util.ldap_groups_nt PIPELINED;
-    <span style="font-weight:bold">FUNCTION</span> get_user_groups_va (p_user VARCHAR2) <span style="font-weight:bold">RETURN</span> ldap_util.ldap_groups_va PIPELINED;
-</code></pre></div><p>The first two return a nested table collection, while the third returns a VARRAY. These two collections can be pipelined because they correspond to native SQL datatypes in Oracle; not so for associative arrays. In order to pipeline the associative array returned from ldap_util.get_user_groups_aa, we need to map that collection to one of the other types. Here, we map it to a nested table. The iterative logic is the same, though, as the other two functions.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    <span style="font-weight:bold">CREATE</span> <span style="font-weight:bold">OR</span> <span style="font-weight:bold">REPLACE</span> PACKAGE ldap_util_pipelined <span style="font-weight:bold">AS</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">FUNCTION</span> get_user_groups_nt (p_user VARCHAR2) <span style="font-weight:bold">RETURN</span> ldap_util.ldap_groups_nt PIPELINED;
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">FUNCTION</span> get_user_groups_aa (p_user VARCHAR2) <span style="font-weight:bold">RETURN</span> ldap_util.ldap_groups_nt PIPELINED;
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">FUNCTION</span> get_user_groups_va (p_user VARCHAR2) <span style="font-weight:bold">RETURN</span> ldap_util.ldap_groups_va PIPELINED;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">END</span> ldap_util_pipelined;
+</span></span><span style="display:flex;"><span>    /
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">SHOW</span> ERRORS
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">CREATE</span> <span style="font-weight:bold">OR</span> <span style="font-weight:bold">REPLACE</span> PACKAGE BODY ldap_util_pipelined <span style="font-weight:bold">AS</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">FUNCTION</span> get_user_groups_nt (p_user VARCHAR2)
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">RETURN</span> ldap_util.ldap_groups_nt PIPELINED <span style="font-weight:bold">IS</span>
+</span></span><span style="display:flex;"><span>        l_groups ldap_util.ldap_groups_nt;
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">BEGIN</span>
+</span></span><span style="display:flex;"><span>        l_groups := ldap_util.get_user_groups_nt(p_user);
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">FOR</span> i <span style="font-weight:bold">IN</span> 1 .. l_groups.<span style="font-weight:bold">count</span> LOOP
+</span></span><span style="display:flex;"><span>          PIPE <span style="font-weight:bold">ROW</span> (l_groups(i));
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">END</span> LOOP;
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">RETURN</span>;
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">END</span> get_user_groups_nt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">FUNCTION</span> get_user_groups_aa (p_user VARCHAR2)
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">RETURN</span> ldap_util.ldap_groups_nt PIPELINED <span style="font-weight:bold">IS</span>
+</span></span><span style="display:flex;"><span>        l_groups ldap_util.ldap_groups_aa;
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">BEGIN</span>
+</span></span><span style="display:flex;"><span>        l_groups := ldap_util.get_user_groups_aa(p_user);
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">FOR</span> i <span style="font-weight:bold">IN</span> 1 .. l_groups.<span style="font-weight:bold">count</span> LOOP
+</span></span><span style="display:flex;"><span>          PIPE <span style="font-weight:bold">ROW</span> (l_groups(i));
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">END</span> LOOP;
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">RETURN</span>;
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">END</span> get_user_groups_aa;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">FUNCTION</span> get_user_groups_va (p_user VARCHAR2)
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">RETURN</span> ldap_util.ldap_groups_va PIPELINED <span style="font-weight:bold">IS</span>
+</span></span><span style="display:flex;"><span>        l_groups ldap_util.ldap_groups_va;
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">BEGIN</span>
+</span></span><span style="display:flex;"><span>        l_groups := ldap_util.get_user_groups_va(p_user);
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">FOR</span> i <span style="font-weight:bold">IN</span> 1 .. l_groups.<span style="font-weight:bold">count</span> LOOP
+</span></span><span style="display:flex;"><span>          PIPE <span style="font-weight:bold">ROW</span> (l_groups(i));
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">END</span> LOOP;
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">RETURN</span>;
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">END</span> get_user_groups_va;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">END</span> ldap_util_pipelined;
+</span></span><span style="display:flex;"><span>    /
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">SHOW</span> ERRORS
+</span></span></code></pre></div><p>Note the return types of the three functions in ldap_util_pipelined.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    <span style="font-weight:bold">FUNCTION</span> get_user_groups_nt (p_user VARCHAR2) <span style="font-weight:bold">RETURN</span> ldap_util.ldap_groups_nt PIPELINED;
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">FUNCTION</span> get_user_groups_aa (p_user VARCHAR2) <span style="font-weight:bold">RETURN</span> ldap_util.ldap_groups_nt PIPELINED;
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">FUNCTION</span> get_user_groups_va (p_user VARCHAR2) <span style="font-weight:bold">RETURN</span> ldap_util.ldap_groups_va PIPELINED;
+</span></span></code></pre></div><p>The first two return a nested table collection, while the third returns a VARRAY. These two collections can be pipelined because they correspond to native SQL datatypes in Oracle; not so for associative arrays. In order to pipeline the associative array returned from ldap_util.get_user_groups_aa, we need to map that collection to one of the other types. Here, we map it to a nested table. The iterative logic is the same, though, as the other two functions.</p>
 <p>Now we can verify that our approach worked by issuing some simple queries, supported by the SQL &ldquo;TABLE&rdquo; construct.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">    <span style="font-weight:bold">SQL</span>&gt; <span style="font-weight:bold">select</span> * <span style="font-weight:bold">from</span> <span style="font-weight:bold">table</span>(ldap_util_pipelined.get_user_groups_nt(<span style="font-style:italic">&#39;jaugusti&#39;</span>));
-
-    CN        DESCRIPTION                                        DISTINGUISHED_NAME                            NAME      SAMACCOUN
-    <span style="font-style:italic">--------- -------------------------------------------------- --------------------------------------------- --------- ---------
-</span><span style="font-style:italic"></span>    TIMCO_GRP Employees working <span style="font-weight:bold">on</span> the Timco Industries account. CN=TIMCO_GRP,OU=<span style="font-weight:bold">Global</span> Groups,DC=acme,DC=com  TIMCO_GRP TIMCO_GRP
-</code></pre></div><p>As you can see, the individual attributes of the record structure form the columns of our new table, and we can reference those columns directly, if we wish.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">    <span style="font-weight:bold">SQL</span>&gt; <span style="font-weight:bold">select</span> cn <span style="font-weight:bold">from</span> <span style="font-weight:bold">table</span>(ldap_util_pipelined.get_user_groups_nt(<span style="font-style:italic">&#39;kvongkas&#39;</span>));
-
-    CN
-    <span style="font-style:italic">---------------
-</span><span style="font-style:italic"></span>    MONEYBROS_GRP
-    MONACLE_GRP
-    SCHMAPPLE_GRP
-</code></pre></div><p>All that&rsquo;s left for us at this point is to construct a WHERE clause condition to use with Oracle&rsquo;s Virtual Private Database feature to limit data returned from queries against the table QUARTERLY_SALES_DATA. That condition could look something like this, assuming that our application connects to the database as the logged in user.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">    client_id <span style="font-weight:bold">IN</span> (<span style="font-weight:bold">SELECT</span> <span style="font-weight:bold">CASE</span> cn
-                           <span style="font-weight:bold">WHEN</span> <span style="font-style:italic">&#39;TIMCO_GRP&#39;</span> <span style="font-weight:bold">THEN</span> 100
-                           <span style="font-weight:bold">WHEN</span> <span style="font-style:italic">&#39;MONEYBROS_GRP&#39;</span> <span style="font-weight:bold">THEN</span> 200
-                           <span style="font-weight:bold">WHEN</span> <span style="font-style:italic">&#39;MONACLE_GRP&#39;</span> <span style="font-weight:bold">THEN</span> 300
-                           <span style="font-weight:bold">WHEN</span> <span style="font-style:italic">&#39;SCHMAPPLE_GRP&#39;</span> <span style="font-weight:bold">THEN</span> 400
-                         <span style="font-weight:bold">END</span>
-                    <span style="font-weight:bold">FROM</span> <span style="font-weight:bold">TABLE</span>(ldap_util_pipelined.get_user_groups_nt(<span style="font-weight:bold">USER</span>)))
-</code></pre></div><p>Here the mapping between AD group name and client ID is hardcoded in the CASE expression. A more flexible way would be to create a mapping table. Also, this is probably not a case study in writing a well performing VPD clause, but the real point here is that using SQL table functions and PL/SQL pipelined functions, we can translate data retrieved from an API, LDAP directory, or web service into table-like structures that we can query, join, and otherwise manipulate just like real tables.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    <span style="font-weight:bold">SQL</span>&gt; <span style="font-weight:bold">select</span> * <span style="font-weight:bold">from</span> <span style="font-weight:bold">table</span>(ldap_util_pipelined.get_user_groups_nt(<span style="font-style:italic">&#39;jaugusti&#39;</span>));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    CN        DESCRIPTION                                        DISTINGUISHED_NAME                            NAME      SAMACCOUN
+</span></span><span style="display:flex;"><span>    <span style="font-style:italic">--------- -------------------------------------------------- --------------------------------------------- --------- ---------
+</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>    TIMCO_GRP Employees working <span style="font-weight:bold">on</span> the Timco Industries account. CN=TIMCO_GRP,OU=<span style="font-weight:bold">Global</span> Groups,DC=acme,DC=com  TIMCO_GRP TIMCO_GRP
+</span></span></code></pre></div><p>As you can see, the individual attributes of the record structure form the columns of our new table, and we can reference those columns directly, if we wish.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    <span style="font-weight:bold">SQL</span>&gt; <span style="font-weight:bold">select</span> cn <span style="font-weight:bold">from</span> <span style="font-weight:bold">table</span>(ldap_util_pipelined.get_user_groups_nt(<span style="font-style:italic">&#39;kvongkas&#39;</span>));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    CN
+</span></span><span style="display:flex;"><span>    <span style="font-style:italic">---------------
+</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>    MONEYBROS_GRP
+</span></span><span style="display:flex;"><span>    MONACLE_GRP
+</span></span><span style="display:flex;"><span>    SCHMAPPLE_GRP
+</span></span></code></pre></div><p>All that&rsquo;s left for us at this point is to construct a WHERE clause condition to use with Oracle&rsquo;s Virtual Private Database feature to limit data returned from queries against the table QUARTERLY_SALES_DATA. That condition could look something like this, assuming that our application connects to the database as the logged in user.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    client_id <span style="font-weight:bold">IN</span> (<span style="font-weight:bold">SELECT</span> <span style="font-weight:bold">CASE</span> cn
+</span></span><span style="display:flex;"><span>                           <span style="font-weight:bold">WHEN</span> <span style="font-style:italic">&#39;TIMCO_GRP&#39;</span> <span style="font-weight:bold">THEN</span> 100
+</span></span><span style="display:flex;"><span>                           <span style="font-weight:bold">WHEN</span> <span style="font-style:italic">&#39;MONEYBROS_GRP&#39;</span> <span style="font-weight:bold">THEN</span> 200
+</span></span><span style="display:flex;"><span>                           <span style="font-weight:bold">WHEN</span> <span style="font-style:italic">&#39;MONACLE_GRP&#39;</span> <span style="font-weight:bold">THEN</span> 300
+</span></span><span style="display:flex;"><span>                           <span style="font-weight:bold">WHEN</span> <span style="font-style:italic">&#39;SCHMAPPLE_GRP&#39;</span> <span style="font-weight:bold">THEN</span> 400
+</span></span><span style="display:flex;"><span>                         <span style="font-weight:bold">END</span>
+</span></span><span style="display:flex;"><span>                    <span style="font-weight:bold">FROM</span> <span style="font-weight:bold">TABLE</span>(ldap_util_pipelined.get_user_groups_nt(<span style="font-weight:bold">USER</span>)))
+</span></span></code></pre></div><p>Here the mapping between AD group name and client ID is hardcoded in the CASE expression. A more flexible way would be to create a mapping table. Also, this is probably not a case study in writing a well performing VPD clause, but the real point here is that using SQL table functions and PL/SQL pipelined functions, we can translate data retrieved from an API, LDAP directory, or web service into table-like structures that we can query, join, and otherwise manipulate just like real tables.</p>
 
       </div>
 
@@ -517,7 +518,7 @@
 
         <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -549,14 +550,14 @@
   <footer class="footer">
     <section class="container">
       
-        <p>Oracle Database Developer and Performance Tuner, specialized on the Exadata platform. Working for Infolob from Irving, Texas. #OCICertified </p>
+        <p>Oracle Database Developer and Performance Tuner, specialized on the Exadata platform. Working for Infolob from Irving, Texas.</p>
       
       
         ©
         
           2012 -
         
-        2020
+        2022
          Toby Marks 
       
       

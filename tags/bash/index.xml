@@ -6,11 +6,7 @@
     <description>Recent content in bash on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 05 Apr 2012 21:19:05 +0000</lastBuildDate>
-    
-	<atom:link href="http://tobybase.com/tags/bash/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 05 Apr 2012 21:19:05 +0000</lastBuildDate><atom:link href="http://tobybase.com/tags/bash/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How To Make Bash Scripts crontab-Compatible</title>
       <link>http://tobybase.com/posts/2012-04-05-make-bash-scripts-crontab-compatible/</link>

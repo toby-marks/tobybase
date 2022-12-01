@@ -6,11 +6,7 @@
     <description>Recent content in Links on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 01 May 2018 09:05:54 -0500</lastBuildDate>
-    
-	<atom:link href="http://tobybase.com/links/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 01 May 2018 09:05:54 -0500</lastBuildDate><atom:link href="http://tobybase.com/links/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>They Don&#39;t Need ML</title>
       <link>http://tobybase.com/links/2018-05-01-sql-over-ml/</link>
@@ -18,7 +14,7 @@
       
       <guid>http://tobybase.com/links/2018-05-01-sql-over-ml/</guid>
       <description>I will write a query like select from order table where last shop date is 3 or greater months. When we get this information, we will send a nice &amp;ldquo;we miss you, come back and here&amp;rsquo;s X Naira voucher&amp;rdquo; email. The conversation rate for this one was always greater than 50%.
- So-called artificial intelligence and machine learning tools are in fashion these days, and the impetus is to apply them to all problem sets.</description>
+So-called artificial intelligence and machine learning tools are in fashion these days, and the impetus is to apply them to all problem sets.</description>
     </item>
     
     <item>
@@ -28,9 +24,9 @@
       
       <guid>http://tobybase.com/links/2018-04-19-finland-dumps-basic-income/</guid>
       <description>In recent years, a growing number of tech entrepreneurs have endorsed universal basic income (UBI), a system system in which every individual receives a standard amount of money, simply for being alive.
- And…
- These tech moguls recognize that UBI, as well as combatting poverty, could also help solve the problem of increased robotization in the workforce, a problem they are very much part of creating.
- This will be interesting.</description>
+And…
+These tech moguls recognize that UBI, as well as combatting poverty, could also help solve the problem of increased robotization in the workforce, a problem they are very much part of creating.
+This will be interesting. Official results of the experiment are to be published in 2019.</description>
     </item>
     
     <item>
@@ -40,7 +36,7 @@
       
       <guid>http://tobybase.com/links/2018-04-10-oracle-sees-automation/</guid>
       <description>If the tactical tasks are reduced &amp;ndash; or even eliminated &amp;ndash; DBAs will have more time to spend on higher level tasks, like data security, data lifecycle management, data architecture and data modeling, Colgan said.
- I can&amp;rsquo;t be too worried about automation replacing the need for database professionals. The first time I recall hearing such claims was in 1999 with the advent of Oracle 9i. If what Colgan says is true, and there is every reason to believe it is, then the day to day work of DBAs and consultants like myself is only bound to become more interesting and productive.</description>
+I can&amp;rsquo;t be too worried about automation replacing the need for database professionals. The first time I recall hearing such claims was in 1999 with the advent of Oracle 9i. If what Colgan says is true, and there is every reason to believe it is, then the day to day work of DBAs and consultants like myself is only bound to become more interesting and productive.</description>
     </item>
     
     <item>
@@ -95,7 +91,7 @@ Update: still works in macOS Sierra.</description>
       <pubDate>Fri, 25 May 2012 00:00:00 +0000</pubDate>
       
       <guid>http://tobybase.com/links/2012-05-25-sqlfiddle-is-a-sql-sandbox/</guid>
-      <description>Build your own mini-schema and run queries against it Publish your experiments for your friends to tweak Try out examples from your favorite SQL book without having to create your a database Works for Oracle, PostgreSQL, MySQL, and SQL Server flavors  All in all, a pretty cool. Very useful for bloggers or teams.</description>
+      <description>Build your own mini-schema and run queries against it Publish your experiments for your friends to tweak Try out examples from your favorite SQL book without having to create your a database Works for Oracle, PostgreSQL, MySQL, and SQL Server flavors All in all, a pretty cool. Very useful for bloggers or teams.</description>
     </item>
     
   </channel>

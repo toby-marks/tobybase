@@ -17,9 +17,10 @@
     <meta property="og:title" content="Connect to Autonomous Database in the Cloud with SQL Developer and SQLcl" />
 <meta property="og:description" content="Connect with SQL Developer Web If you don&rsquo;t have SQL Developer installed, or you just want a quick and easy way to work with your new autonomous database, you can get started right away with SQL Developer Web, available from the Service Console. SQL Developer Web is a scaled down version of the desktop tool that allows you to query and enter data, run scripts, compile database objects, and monitor and administrate your database." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://tobybase.com/posts/connecting-to-autonomous-with-sql-dev/" />
+<meta property="og:url" content="http://tobybase.com/posts/connecting-to-autonomous-with-sql-dev/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-01-17T16:59:40-06:00" />
 <meta property="article:modified_time" content="2020-01-17T16:59:40-06:00" />
+<meta property="og:see_also" content="http://tobybase.com/posts/connecting-to-autonomous-with-instant-client/" /><meta property="og:see_also" content="http://tobybase.com/posts/up-and-running-on-oracle-autonomous-database/" />
 
 
 
@@ -57,7 +58,7 @@
     <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-16x16.png" sizes="16x16">
 
-    <meta name="generator" content="Hugo 0.71.1" />
+    <meta name="generator" content="Hugo 0.107.0">
   </head>
 
   
@@ -157,20 +158,20 @@
 <p>For Authentication Type, choose Default. Your username should be &lsquo;admin&rsquo;. Enter the password you provided during the database configuration process. For Connection Type, choose Cloud Wallet, and simply point to the wallet file you downloaded earlier. You do not have to decrompress the file. Test your connection and save. That&rsquo;s it.</p>
 <h3 id="connect-with-sqlcl">Connect with SQLcl</h3>
 <p>If you&rsquo;re using a command line client like SQLcl, you will likely need to extract the contents of the wallet file (the ZIP file you just downloaded), and place them in your TNS_ADMIN diretory. If you don&rsquo;t have a TNS_ADMIN directory, create an environmental parameter TNS_ADMIN and point to the directory where the expanded contents of the wallet are located. Here is what is included in the wallet file.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">toby@michael:~$ cd $TNS_ADMIN
-toby@michael:~/oracle/admin/atpsb$ ll
-total 64
-drwxrwxr-x 2 toby toby  4096 Jan  9 16:42 ./
-drwxrwxr-x 4 toby toby  4096 Jan 10 16:48 ../
--rw-rw-r-- 1 toby toby  6733 Jan  9 16:38 cwallet.sso
--rw-rw-r-- 1 toby toby  6688 Jan  9 16:38 ewallet.p12
--rw-rw-r-- 1 toby toby  3276 Jan  9 16:38 keystore.jks
--rw-rw-r-- 1 toby toby   301 Jan  9 16:38 ojdbc.properties
--rw-rw-r-- 1 toby toby   114 Jan  9 16:38 sqlnet.ora
--rw-rw-r-- 1 toby toby  1791 Jan  9 16:38 tnsnames.ora
--rw-rw-r-- 1 toby toby  3336 Jan  9 16:38 truststore.jks
--rw-rw-r-- 1 toby toby 20050 Jan  9 16:38 Wallet_ATPSB.zip
-</code></pre></div><p>As you can see it not only contains the tnsnames.ora and sqlnet.ora files normally used to connect to a local database, but also certificate and wallet files required to open and maintain a secure connection to your database in the cloud.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>toby@michael:~$ cd $TNS_ADMIN
+</span></span><span style="display:flex;"><span>toby@michael:~/oracle/admin/atpsb$ ll
+</span></span><span style="display:flex;"><span>total 64
+</span></span><span style="display:flex;"><span>drwxrwxr-x 2 toby toby  4096 Jan  9 16:42 ./
+</span></span><span style="display:flex;"><span>drwxrwxr-x 4 toby toby  4096 Jan 10 16:48 ../
+</span></span><span style="display:flex;"><span>-rw-rw-r-- 1 toby toby  6733 Jan  9 16:38 cwallet.sso
+</span></span><span style="display:flex;"><span>-rw-rw-r-- 1 toby toby  6688 Jan  9 16:38 ewallet.p12
+</span></span><span style="display:flex;"><span>-rw-rw-r-- 1 toby toby  3276 Jan  9 16:38 keystore.jks
+</span></span><span style="display:flex;"><span>-rw-rw-r-- 1 toby toby   301 Jan  9 16:38 ojdbc.properties
+</span></span><span style="display:flex;"><span>-rw-rw-r-- 1 toby toby   114 Jan  9 16:38 sqlnet.ora
+</span></span><span style="display:flex;"><span>-rw-rw-r-- 1 toby toby  1791 Jan  9 16:38 tnsnames.ora
+</span></span><span style="display:flex;"><span>-rw-rw-r-- 1 toby toby  3336 Jan  9 16:38 truststore.jks
+</span></span><span style="display:flex;"><span>-rw-rw-r-- 1 toby toby 20050 Jan  9 16:38 Wallet_ATPSB.zip
+</span></span></code></pre></div><p>As you can see it not only contains the tnsnames.ora and sqlnet.ora files normally used to connect to a local database, but also certificate and wallet files required to open and maintain a secure connection to your database in the cloud.</p>
 <p>Take a look at the tnsnames.ora file, and you&rsquo;ll see something like this:</p>
 <p><img src="https://res.cloudinary.com/tobyblog/image/upload/v1579367810/img/Screen_Shot_2020-01-18_at_11.16.39_AM.jpg" alt=""></p>
 <p>You&rsquo;ll notice that <em>three</em> TNS entries were created for your database, <code>_high</code>, <code>_medium</code>, and <code>_low</code>. <a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/connect-predefined.html#GUID-9747539B-FD46-44F1-8FF8-F5AC650F15BE">These represent the priority</a> given (or resources allocated) to processes connecting to those services. Mostly you&rsquo;ll want to use the <code>_high</code> connection, unless you plan to have lower priority users or background processes connecting to Autonomous Database.</p>
@@ -218,7 +219,7 @@ drwxrwxr-x 4 toby toby  4096 Jan 10 16:48 ../
 
         <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -250,14 +251,14 @@ drwxrwxr-x 4 toby toby  4096 Jan 10 16:48 ../
   <footer class="footer">
     <section class="container">
       
-        <p>Oracle Database Developer and Performance Tuner, specialized on the Exadata platform. Working for Infolob from Irving, Texas. #OCICertified </p>
+        <p>Oracle Database Developer and Performance Tuner, specialized on the Exadata platform. Working for Infolob from Irving, Texas.</p>
       
       
         ©
         
           2012 -
         
-        2020
+        2022
          Toby Marks 
       
       

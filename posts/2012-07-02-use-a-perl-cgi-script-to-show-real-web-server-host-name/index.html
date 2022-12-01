@@ -20,9 +20,10 @@
 <meta property="og:description" content="Here is a short and simple Perl CGI script that you can use to expose the hostname of your web server, as opposed to just the server/domain portion of the URL string:
 #!/usr/bin/perl print &#34;Content-type: text/html\n\n&#34;; print `hostname`; 1; Name the file something like hostname.cgi and place it in your web server&rsquo;s /cgi-bin/ directory, or if your web server is configured appropriately, just name it hostname.pl and drop it wherever you like." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://tobybase.com/posts/2012-07-02-use-a-perl-cgi-script-to-show-real-web-server-host-name/" />
+<meta property="og:url" content="http://tobybase.com/posts/2012-07-02-use-a-perl-cgi-script-to-show-real-web-server-host-name/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2012-07-02T22:40:00+00:00" />
 <meta property="article:modified_time" content="2017-02-22T00:00:00+00:00" />
+
 
 
     
@@ -59,7 +60,7 @@
     <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-16x16.png" sizes="16x16">
 
-    <meta name="generator" content="Hugo 0.71.1" />
+    <meta name="generator" content="Hugo 0.107.0">
   </head>
 
   
@@ -134,39 +135,39 @@
       <div>
         
         <p>Here is a short and simple Perl CGI script that you can use to expose the hostname of your web server, as opposed to just the server/domain portion of the URL string:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl">    <span style="font-style:italic">#!/usr/bin/perl</span>
-    
-    <span style="font-weight:bold">print</span> <span style="font-style:italic">&#34;Content-type: text/html\n\n&#34;</span>;
-    <span style="font-weight:bold">print</span> <span style="font-style:italic">`hostname`</span>;
-    
-    1;
-</code></pre></div><p>Name the file something like <code>hostname.cgi</code> and place it in your web server&rsquo;s <code>/cgi-bin/</code> directory, or if your web server is configured appropriately, just name it <code>hostname.pl</code> and drop it wherever you like.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span>    <span style="font-style:italic">#!/usr/bin/perl</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">print</span> <span style="font-style:italic">&#34;Content-type: text/html\n\n&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">print</span> <span style="font-style:italic">`hostname`</span>;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    1;
+</span></span></code></pre></div><p>Name the file something like <code>hostname.cgi</code> and place it in your web server&rsquo;s <code>/cgi-bin/</code> directory, or if your web server is configured appropriately, just name it <code>hostname.pl</code> and drop it wherever you like.</p>
 <p>The following script can be used to dump all the CGI environment variables.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl">    <span style="font-style:italic">#!/usr/bin/perl</span>
-    
-    <span style="font-weight:bold">print</span> <span style="font-style:italic">&#34;Content-type: text/html\n\n&#34;</span>;
-    <span style="font-weight:bold">print</span> <span style="font-style:italic">&#34;&lt;font size=+1&gt;Environment&lt;/font&gt;\n&#34;</span>;
-    <span style="font-weight:bold">foreach</span> (sort keys %ENV)
-    {
-      <span style="font-weight:bold">print</span> <span style="font-style:italic">&#34;&lt;b&gt;$_&lt;/b&gt;: $ENV{$_}&lt;br&gt;\n&#34;</span>;
-    }
-    
-    1;
-</code></pre></div><p>Note that this includes <code>SERVER_NAME</code>, but what that really gives you is the &ldquo;server&rdquo; portion of the URL string. In other words, if your URL is http://www.google.com/, then the <code>SERVER_NAME</code> CGI environment variable would be &ldquo;<a href="http://www.google.com">www.google.com</a>&rdquo;. Fine, but the first script can be used to identify the actual server being called, for example, when your page is hosted on multiple servers load-balanced under a virtual domain name.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span>    <span style="font-style:italic">#!/usr/bin/perl</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">print</span> <span style="font-style:italic">&#34;Content-type: text/html\n\n&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">print</span> <span style="font-style:italic">&#34;&lt;font size=+1&gt;Environment&lt;/font&gt;\n&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">foreach</span> (sort keys %ENV)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">print</span> <span style="font-style:italic">&#34;&lt;b&gt;$_&lt;/b&gt;: $ENV{$_}&lt;br&gt;\n&#34;</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    1;
+</span></span></code></pre></div><p>Note that this includes <code>SERVER_NAME</code>, but what that really gives you is the &ldquo;server&rdquo; portion of the URL string. In other words, if your URL is http://www.google.com/, then the <code>SERVER_NAME</code> CGI environment variable would be &ldquo;<a href="https://www.google.com">www.google.com</a>&rdquo;. Fine, but the first script can be used to identify the actual server being called, for example, when your page is hosted on multiple servers load-balanced under a virtual domain name.</p>
 <p>Of course, you could combine the two scripts to give you everything:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl">    <span style="font-style:italic">#!/usr/bin/perl</span>
-    
-    <span style="font-weight:bold">print</span> <span style="font-style:italic">&#34;Content-type: text/html\n\n&#34;</span>;
-    <span style="font-weight:bold">print</span> <span style="font-style:italic">&#34;&lt;font size=+1&gt;Environment&lt;/font&gt;\n&#34;</span>;
-    <span style="font-weight:bold">foreach</span> (sort keys %ENV)
-    {
-      <span style="font-weight:bold">print</span> <span style="font-style:italic">&#34;&lt;b&gt;$_&lt;/b&gt;: $ENV{$_}&lt;br&gt;\n&#34;</span>;
-    }
-    
-    <span style="font-weight:bold">print</span> <span style="font-style:italic">&#34;&lt;b&gt;REAL SERVER HOSTNAME:&lt;/b&gt; &#34;</span>,<span style="font-style:italic">`hostname`</span>;
-    
-    1;
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span>    <span style="font-style:italic">#!/usr/bin/perl</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">print</span> <span style="font-style:italic">&#34;Content-type: text/html\n\n&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">print</span> <span style="font-style:italic">&#34;&lt;font size=+1&gt;Environment&lt;/font&gt;\n&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">foreach</span> (sort keys %ENV)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">print</span> <span style="font-style:italic">&#34;&lt;b&gt;$_&lt;/b&gt;: $ENV{$_}&lt;br&gt;\n&#34;</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">print</span> <span style="font-style:italic">&#34;&lt;b&gt;REAL SERVER HOSTNAME:&lt;/b&gt; &#34;</span>,<span style="font-style:italic">`hostname`</span>;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    1;
+</span></span></code></pre></div>
       </div>
 
 
@@ -176,7 +177,7 @@
 
         <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -208,14 +209,14 @@
   <footer class="footer">
     <section class="container">
       
-        <p>Oracle Database Developer and Performance Tuner, specialized on the Exadata platform. Working for Infolob from Irving, Texas. #OCICertified </p>
+        <p>Oracle Database Developer and Performance Tuner, specialized on the Exadata platform. Working for Infolob from Irving, Texas.</p>
       
       
         ©
         
           2012 -
         
-        2020
+        2022
          Toby Marks 
       
       

@@ -6,11 +6,7 @@
     <description>Recent content in SQL Developer on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 05 Jun 2020 17:37:14 -0500</lastBuildDate>
-    
-	<atom:link href="http://tobybase.com/tags/sql-developer/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 05 Jun 2020 17:37:14 -0500</lastBuildDate><atom:link href="http://tobybase.com/tags/sql-developer/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Enable OCI Thick Client Connections in SQL Developer on Windows</title>
       <link>http://tobybase.com/posts/enable-oci-connections-in-sql-developer/</link>
@@ -37,8 +33,8 @@ I have personally observed this behavior on every version of SQL Developer since
       
       <guid>http://tobybase.com/posts/2013-07-19-fix-sql-developer-on-a-retina-display-macbook/</guid>
       <description>I just purchased a new Macbook Pro 13-inch with Retina Display and was horrified to see how fuzzy SQL Developer looked on the high-res screen. Thanks to Thunderforge on the Stack Overflow forums for this tip:
- Java 7u40 Early Access now supports HiDPI (Retina) displays, as shown by this changelog. So retina support is now available on Java 6, Java 7u40 or higher, and Java 8.
- I am currently running the Early Adopter release of SQL Developer 4.</description>
+Java 7u40 Early Access now supports HiDPI (Retina) displays, as shown by this changelog. So retina support is now available on Java 6, Java 7u40 or higher, and Java 8.
+I am currently running the Early Adopter release of SQL Developer 4.</description>
     </item>
     
     <item>

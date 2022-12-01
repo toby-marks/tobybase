@@ -20,9 +20,10 @@ The solution involves removing all of the Network Connect files and allowing you
 <meta property="og:description" content="If you use Juniper&rsquo;s Network Connect app to connect to your office VPN over HTTPS, you might occasionally experience strange errors like &ldquo;A software error caused the Network Connect tunneling service to terminate.&rdquo; Shortly after that, the application may either crash or prompt you for login credentials again.
 The solution involves removing all of the Network Connect files and allowing your browser to download and install the app all over again, as it did the first time you tried to connect to your office VPN." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://tobybase.com/posts/ewwww/" />
+<meta property="og:url" content="http://tobybase.com/posts/ewwww/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2016-02-04T22:50:09+00:00" />
 <meta property="article:modified_time" content="2016-02-04T22:50:09+00:00" />
+
 
 
     
@@ -59,7 +60,7 @@ The solution involves removing all of the Network Connect files and allowing you
     <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-16x16.png" sizes="16x16">
 
-    <meta name="generator" content="Hugo 0.71.1" />
+    <meta name="generator" content="Hugo 0.107.0">
   </head>
 
   
@@ -139,11 +140,11 @@ The solution involves removing all of the Network Connect files and allowing you
 <p>The solution involves removing all of the Network Connect files and allowing your browser to download and install the app all over again, as it did the first time you tried to connect to your office VPN.</p>
 <p>(Note: as a precaution you may want to simply move the Network Connect.app file from /Applications to ~/Desktop, just in case your browser is not able to download it as needed.)</p>
 <p>To remove all files associated with the Network Connect application, execute the following commands in Terminal.app.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="font-style:italic"># sudo rm -rf /Applications/Network\ Connect.app`</span>
-<span style="font-style:italic"># sudo rm -rf /usr/local/juniper`</span>
-<span style="font-style:italic"># sudo rm -rf ~/Library/Application\ Support/Juniper\ Networks`</span>
-<span style="font-style:italic"># sudo rm ~/Library/Preferences/net.juniper.NetworkConnect.plist`</span>
-</code></pre></div><p>Now try connecting to your office VPN again and the browser should prompt you to redownload the application. When I tried this I got an error the first time on Firefox saying the installation failed, but I was able to manually verify that the files were in place. My second attempt succeeded. Go figure.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="font-style:italic"># sudo rm -rf /Applications/Network\ Connect.app`</span>
+</span></span><span style="display:flex;"><span><span style="font-style:italic"># sudo rm -rf /usr/local/juniper`</span>
+</span></span><span style="display:flex;"><span><span style="font-style:italic"># sudo rm -rf ~/Library/Application\ Support/Juniper\ Networks`</span>
+</span></span><span style="display:flex;"><span><span style="font-style:italic"># sudo rm ~/Library/Preferences/net.juniper.NetworkConnect.plist`</span>
+</span></span></code></pre></div><p>Now try connecting to your office VPN again and the browser should prompt you to redownload the application. When I tried this I got an error the first time on Firefox saying the installation failed, but I was able to manually verify that the files were in place. My second attempt succeeded. Go figure.</p>
 
       </div>
 
@@ -154,7 +155,7 @@ The solution involves removing all of the Network Connect files and allowing you
 
         <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -186,14 +187,14 @@ The solution involves removing all of the Network Connect files and allowing you
   <footer class="footer">
     <section class="container">
       
-        <p>Oracle Database Developer and Performance Tuner, specialized on the Exadata platform. Working for Infolob from Irving, Texas. #OCICertified </p>
+        <p>Oracle Database Developer and Performance Tuner, specialized on the Exadata platform. Working for Infolob from Irving, Texas.</p>
       
       
         ©
         
           2012 -
         
-        2020
+        2022
          Toby Marks 
       
       

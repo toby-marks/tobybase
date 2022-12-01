@@ -6,11 +6,7 @@
     <description>Recent content in blog on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 17 Jan 2017 22:58:59 -0600</lastBuildDate>
-    
-	<atom:link href="http://tobybase.com/categories/blog/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 17 Jan 2017 22:58:59 -0600</lastBuildDate><atom:link href="http://tobybase.com/categories/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Announcing… tobybase.com</title>
       <link>http://tobybase.com/posts/announcing-tobybase/</link>

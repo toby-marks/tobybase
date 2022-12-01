@@ -6,11 +6,7 @@
     <description>Recent content in OVM on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 20 May 2020 16:36:06 -0500</lastBuildDate>
-    
-	<atom:link href="http://tobybase.com/tags/ovm/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 20 May 2020 16:36:06 -0500</lastBuildDate><atom:link href="http://tobybase.com/tags/ovm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Configure Static Networking in a Linux VM</title>
       <link>http://tobybase.com/posts/configure-static-networking/</link>

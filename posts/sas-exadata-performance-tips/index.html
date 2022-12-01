@@ -17,9 +17,10 @@
     <meta property="og:title" content="3 Tips for Running SAS Queries on Oracle" />
 <meta property="og:description" content="Some helpful tips for boosting the performance of SAS queries on Oracle database." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://tobybase.com/posts/sas-exadata-performance-tips/" />
+<meta property="og:url" content="http://tobybase.com/posts/sas-exadata-performance-tips/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2019-09-23T13:54:50-05:00" />
 <meta property="article:modified_time" content="2019-09-23T13:54:50-05:00" />
+
 
 
     
@@ -56,7 +57,7 @@
     <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-16x16.png" sizes="16x16">
 
-    <meta name="generator" content="Hugo 0.71.1" />
+    <meta name="generator" content="Hugo 0.107.0">
   </head>
 
   
@@ -117,7 +118,7 @@
           </div>
           <div class="categories">
   <i class="fas fa-folder"></i>
-    <a href="http://tobybase.com/categories/sql-pl/sql/">SQL &amp; PL/SQL</a></div>
+    <a href="http://tobybase.com/categories/sql/">SQL</a></div>
 
           <div class="tags">
   <i class="fas fa-tag"></i>
@@ -137,56 +138,56 @@
 <p>This is most critical. In Oracle, SQL hints are specified in a specially formatted inline comment. Running a query or DML statement without those hints could be detrimental to performance.</p>
 <p>To retain these hints in SAS you will need to add the <em>Preserve_Comments</em> option to the CONNECT statement. Then any hints you add to your queries will be passed through to the Oracle optimizer.</p>
 <p>Here&rsquo;s an example:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">Proc Sql;
- 
-Connect to Oracle (Uid = XXXX PW = &#39;XXXX&#39; Path = MyConnection Preserve_Comments);
- 
-Create Table A1 as Select * From Connection To Oracle (
-	SELECT /*+ PARALLEL(4) */ * FROM myschema.mytable
-);
-
-Disconnect From Oracle;
-
-Quit;                              
-</code></pre></div><p>Restriction: This option is valid only in the explicit SQL pass-through method, not in the implicit libname method. For more details on implicit and explicit connection methods please click here</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>Proc Sql;
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>Connect to Oracle (Uid = XXXX PW = &#39;XXXX&#39; Path = MyConnection Preserve_Comments);
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>Create Table A1 as Select * From Connection To Oracle (
+</span></span><span style="display:flex;"><span>	SELECT /*+ PARALLEL(4) */ * FROM myschema.mytable
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Disconnect From Oracle;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Quit;                              
+</span></span></code></pre></div><p>Restriction: This option is valid only in the explicit SQL pass-through method, not in the implicit libname method. For more details on implicit and explicit connection methods please click here</p>
 <h3 id="use-readbuff-to-optimize-fetches">Use ReadBuff to Optimize Fetches</h3>
 <p><em>ReadBuff</em> is another connection option that can be used to enhance query performance, especially when running queries against Oracle Exadata. It allows you to specify the number of rows that are held in memory for input into SAS. Just be careful not to set this too high, or you may run out of memory.</p>
 <p>A value of <code>ReadBuff = 1</code> means that one row is fetched from the database at a time. For large queries this can be very inefficient. If you don&rsquo;t specify a value for ReadBuff, the number of rows returned is set to the default, which can be anywhere from one row to a &ldquo;best guess&rdquo; estimate based on the row length of your data. It is recommended that users start with a buffer size of 5000, increasing or decreasing in increments of 500 until you determine the optimum buffer size for your purposes.</p>
 <p>If you set this number too high (e.g. one million records) you can grind your system to a halt as your server struggles to retrieve all that data over the network and load it into memory. It&rsquo;s better to start with smaller increments of no more than 100,000, depending on the size of your records.</p>
 <p>For example:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">Libname MyLIB Oracle Uid=XXXX PW=&#39;XXXX&#39; Path=MyConnection ReadBuff=100000;
- 
-Data A1;
-Set myschema.mytable;
-Run;
- 
-Proc Sql;
-
-Connect to Oracle (Uid = ‘XXXX’ PW = &#39;XXXX&#39; Path = MyConnection ReadBuff=100000);
-
-Create Table A1 as Select * From Connection To Oracle (
-	SELECT * FROM myschema.mytable
-);
-
-Disconnect From Oracle;
-
-Quit;
-</code></pre></div><h3 id="use-insertbuff-to-optimize-dml">Use InsertBuff to Optimize DML</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>Libname MyLIB Oracle Uid=XXXX PW=&#39;XXXX&#39; Path=MyConnection ReadBuff=100000;
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>Data A1;
+</span></span><span style="display:flex;"><span>Set myschema.mytable;
+</span></span><span style="display:flex;"><span>Run;
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>Proc Sql;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Connect to Oracle (Uid = ‘XXXX’ PW = &#39;XXXX&#39; Path = MyConnection ReadBuff=100000);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Create Table A1 as Select * From Connection To Oracle (
+</span></span><span style="display:flex;"><span>	SELECT * FROM myschema.mytable
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Disconnect From Oracle;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Quit;
+</span></span></code></pre></div><h3 id="use-insertbuff-to-optimize-dml">Use InsertBuff to Optimize DML</h3>
 <p>InsertBuff works much the same way as ReadBuff. It uses memory to cache rows so that you can insert many records into Oracle at a time, as opposed to executing many single row inserts. As a general rule of thumb we tended to use <code>InsertBuff = 100000</code>. The SAS engine calculates how many rows it can insert at one time. The same caveats apply about not setting this value too high; just make sure you&rsquo;re not using up all your available memory. And test to optimize the setting for your purposes and hardware configuration.</p>
 <p>An example of using InsertBuff:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">Libname MyLIB Oracle Uid=XXXX[My_Group_Space] PW=&#39;XXXX&#39; Path=MyConnection InsertBuff=100000;
- 
-Data My_Group.Test1;
-Set myschema.mytable;
-Run;
- 
-Proc Sql;
-
-Create Table My_Group.Test1 as
-	SELECT * FROM myschema.mytable;
- 
-Quit;
-</code></pre></div><p>Hope these tips help some of you. If it did, let me know.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>Libname MyLIB Oracle Uid=XXXX[My_Group_Space] PW=&#39;XXXX&#39; Path=MyConnection InsertBuff=100000;
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>Data My_Group.Test1;
+</span></span><span style="display:flex;"><span>Set myschema.mytable;
+</span></span><span style="display:flex;"><span>Run;
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>Proc Sql;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Create Table My_Group.Test1 as
+</span></span><span style="display:flex;"><span>	SELECT * FROM myschema.mytable;
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>Quit;
+</span></span></code></pre></div><p>Hope these tips help some of you. If it did, let me know.</p>
 
       </div>
 
@@ -197,7 +198,7 @@ Quit;
 
         <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -229,14 +230,14 @@ Quit;
   <footer class="footer">
     <section class="container">
       
-        <p>Oracle Database Developer and Performance Tuner, specialized on the Exadata platform. Working for Infolob from Irving, Texas. #OCICertified </p>
+        <p>Oracle Database Developer and Performance Tuner, specialized on the Exadata platform. Working for Infolob from Irving, Texas.</p>
       
       
         ©
         
           2012 -
         
-        2020
+        2022
          Toby Marks 
       
       

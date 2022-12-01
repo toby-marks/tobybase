@@ -6,11 +6,7 @@
     <description>Recent content in tools on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 19 May 2020 17:09:28 -0500</lastBuildDate>
-    
-	<atom:link href="http://tobybase.com/tags/tools/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 19 May 2020 17:09:28 -0500</lastBuildDate><atom:link href="http://tobybase.com/tags/tools/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Restore Files From a Previous Version in Git/Github</title>
       <link>http://tobybase.com/posts/how-to-recover-a-prior-version-on-github/</link>
@@ -28,8 +24,8 @@
       
       <guid>http://tobybase.com/posts/problems-connecting-with-anyconnect-vpn/</guid>
       <description>[NOTE: problem identified on my personal laptop with macOS 10.15.2, Cisco AnyConnect Secure Mobility Client 4.6.03049]
-What to Do When You Encounter This Error  AnyConnect cannot confirm it is connected to your secure gateway. The local network may not be trustworthy. Please try another network.
- This is a potentially misleading explanation, as the problem in my case was due to a corrupted VPN certificate.
+What to Do When You Encounter This Error AnyConnect cannot confirm it is connected to your secure gateway. The local network may not be trustworthy. Please try another network.
+This is a potentially misleading explanation, as the problem in my case was due to a corrupted VPN certificate.
 To fix the problem on macOS, do the following.</description>
     </item>
     
@@ -60,8 +56,8 @@ The solution involves removing all of the Network Connect files and allowing you
       
       <guid>http://tobybase.com/posts/2013-07-19-fix-sql-developer-on-a-retina-display-macbook/</guid>
       <description>I just purchased a new Macbook Pro 13-inch with Retina Display and was horrified to see how fuzzy SQL Developer looked on the high-res screen. Thanks to Thunderforge on the Stack Overflow forums for this tip:
- Java 7u40 Early Access now supports HiDPI (Retina) displays, as shown by this changelog. So retina support is now available on Java 6, Java 7u40 or higher, and Java 8.
- I am currently running the Early Adopter release of SQL Developer 4.</description>
+Java 7u40 Early Access now supports HiDPI (Retina) displays, as shown by this changelog. So retina support is now available on Java 6, Java 7u40 or higher, and Java 8.
+I am currently running the Early Adopter release of SQL Developer 4.</description>
     </item>
     
     <item>
@@ -101,7 +97,7 @@ That fixes the CPU issue, but somewhat annoyingly moves the menu out of the menu
       <pubDate>Fri, 25 May 2012 00:00:00 +0000</pubDate>
       
       <guid>http://tobybase.com/links/2012-05-25-sqlfiddle-is-a-sql-sandbox/</guid>
-      <description>Build your own mini-schema and run queries against it Publish your experiments for your friends to tweak Try out examples from your favorite SQL book without having to create your a database Works for Oracle, PostgreSQL, MySQL, and SQL Server flavors  All in all, a pretty cool. Very useful for bloggers or teams.</description>
+      <description>Build your own mini-schema and run queries against it Publish your experiments for your friends to tweak Try out examples from your favorite SQL book without having to create your a database Works for Oracle, PostgreSQL, MySQL, and SQL Server flavors All in all, a pretty cool. Very useful for bloggers or teams.</description>
     </item>
     
   </channel>

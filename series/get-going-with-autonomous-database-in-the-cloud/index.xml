@@ -6,11 +6,7 @@
     <description>Recent content in Get Going With Autonomous Database in the Cloud on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 17 Jan 2020 17:08:16 -0600</lastBuildDate>
-    
-	<atom:link href="http://tobybase.com/series/get-going-with-autonomous-database-in-the-cloud/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 17 Jan 2020 17:08:16 -0600</lastBuildDate><atom:link href="http://tobybase.com/series/get-going-with-autonomous-database-in-the-cloud/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Connect to Autonomous Database in the Cloud with Oracle Instant Client</title>
       <link>http://tobybase.com/posts/connecting-to-autonomous-with-instant-client/</link>

@@ -6,10 +6,27 @@
     <description>Recent content in Oracle on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 05 Jun 2020 17:37:14 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 29 Aug 2022 10:38:47 -0500</lastBuildDate><atom:link href="http://tobybase.com/tags/oracle/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Method for extracting tokens from a delimited string in SQL</title>
+      <link>http://tobybase.com/posts/extract-tokens-from-delimited-string-in-sql/</link>
+      <pubDate>Mon, 29 Aug 2022 10:38:47 -0500</pubDate>
+      
+      <guid>http://tobybase.com/posts/extract-tokens-from-delimited-string-in-sql/</guid>
+      <description>There are several ways to extract tokens from a delimited string in Oracle SQL. The most basic uses the INSTR and SUBSTR functions.
+Suppose you wanted to extract the third token from this simple period (.) delimited string: one.two.three.four.five
+You could do something like the following.
+SELECT SUBSTR( the_string, INSTR(the_string, &amp;#39;.&amp;#39;, 1, 2) + 1, INSTR(the_string, &amp;#39;.&amp;#39;, 1, 3) - INSTR(the_string, &amp;#39;.&amp;#39;, 1, 2) - 1 ) FROM ( SELECT &amp;#39;one.</description>
+    </item>
     
-	<atom:link href="http://tobybase.com/tags/oracle/index.xml" rel="self" type="application/rss+xml" />
-    
+    <item>
+      <title>How to Pivot a Delimited String of Arbitrary Length to Rows in SQL</title>
+      <link>http://tobybase.com/posts/pivot-delimited-string-to-rows/</link>
+      <pubDate>Mon, 29 Aug 2022 10:18:55 -0500</pubDate>
+      
+      <guid>http://tobybase.com/posts/pivot-delimited-string-to-rows/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Enable OCI Thick Client Connections in SQL Developer on Windows</title>
@@ -27,9 +44,9 @@
       
       <guid>http://tobybase.com/posts/translating-mdiff-to-oracle/</guid>
       <description>Teradata defines its MDIFF function as follows:
- MDIFF
+MDIFF
 Returns the moving difference between the specified value expression for the current row and the preceding width rows for each row in the partition.
- Here &amp;ldquo;the preceding width rows&amp;rdquo; means something like the preceding n rows, where n is sometimes interpreted as the sum of all of the preceding rows, but generally as the value of the last row.
+Here &amp;ldquo;the preceding width rows&amp;rdquo; means something like the preceding n rows, where n is sometimes interpreted as the sum of all of the preceding rows, but generally as the value of the last row.
 Teradata&amp;rsquo;s docs also has this to say about MDIFF:</description>
     </item>
     
@@ -97,8 +114,7 @@ I have personally observed this behavior on every version of SQL Developer since
       <pubDate>Fri, 10 Mar 2017 14:56:00 +0000</pubDate>
       
       <guid>http://tobybase.com/posts/infolob-lift-and-shift-howto-4/</guid>
-      <description>In the last of a four-part video series, our Director of Cloud Services Brian Hill creates a new compute instance in Oracle Cloud Compute Services based on his custom Windows virtual machine image.
-  </description>
+      <description>In the last of a four-part video series, our Director of Cloud Services Brian Hill creates a new compute instance in Oracle Cloud Compute Services based on his custom Windows virtual machine image.</description>
     </item>
     
     <item>
@@ -107,8 +123,7 @@ I have personally observed this behavior on every version of SQL Developer since
       <pubDate>Fri, 10 Mar 2017 14:53:00 +0000</pubDate>
       
       <guid>http://tobybase.com/posts/infolob-lift-and-shift-howto-3/</guid>
-      <description>In part three of a four-part video series, our Director of Cloud Services Brian Hill creates a bootable storage volume in Oracle Cloud Compute Services with his new Windows image.
-  </description>
+      <description>In part three of a four-part video series, our Director of Cloud Services Brian Hill creates a bootable storage volume in Oracle Cloud Compute Services with his new Windows image.</description>
     </item>
     
     <item>
@@ -117,8 +132,7 @@ I have personally observed this behavior on every version of SQL Developer since
       <pubDate>Fri, 10 Mar 2017 14:47:00 +0000</pubDate>
       
       <guid>http://tobybase.com/posts/infolob-lift-and-shift-howto-2/</guid>
-      <description>In part two of a four-part video series, our Director of Cloud Services Brian Hill creates an image in Oracle Cloud Compute Services based on a Windows virtual machine.
-  </description>
+      <description>In part two of a four-part video series, our Director of Cloud Services Brian Hill creates an image in Oracle Cloud Compute Services based on a Windows virtual machine.</description>
     </item>
     
     <item>
@@ -127,8 +141,7 @@ I have personally observed this behavior on every version of SQL Developer since
       <pubDate>Fri, 10 Mar 2017 14:41:00 +0000</pubDate>
       
       <guid>http://tobybase.com/posts/infolob-lift-and-shift-howto-1/</guid>
-      <description>In part one of a four-part video series, our Director of Cloud Services Brian Hill demonstrates how to prepare your virtual machine for upload to the cloud.
-  </description>
+      <description>In part one of a four-part video series, our Director of Cloud Services Brian Hill demonstrates how to prepare your virtual machine for upload to the cloud.</description>
     </item>
     
     <item>
@@ -159,8 +172,8 @@ This is my attempt to turn that around.</description>
       
       <guid>http://tobybase.com/posts/2013-07-19-fix-sql-developer-on-a-retina-display-macbook/</guid>
       <description>I just purchased a new Macbook Pro 13-inch with Retina Display and was horrified to see how fuzzy SQL Developer looked on the high-res screen. Thanks to Thunderforge on the Stack Overflow forums for this tip:
- Java 7u40 Early Access now supports HiDPI (Retina) displays, as shown by this changelog. So retina support is now available on Java 6, Java 7u40 or higher, and Java 8.
- I am currently running the Early Adopter release of SQL Developer 4.</description>
+Java 7u40 Early Access now supports HiDPI (Retina) displays, as shown by this changelog. So retina support is now available on Java 6, Java 7u40 or higher, and Java 8.
+I am currently running the Early Adopter release of SQL Developer 4.</description>
     </item>
     
     <item>
@@ -191,7 +204,7 @@ In Java 6 on OS X, the hotkey for pressing the Help and Apply buttons was OPTION
       
       <guid>http://tobybase.com/posts/2012-11-14-query-an-xml-file-like-an-external-table/</guid>
       <description>Oracle&amp;rsquo;s external table feature allows you to treat structured files on the database server as tables for query and DML purposes. To use an example from the linked documentation, a tab-delimited file like this:
-56 november, 15, 1980 baker mary alice 09/01/2004 87 december, 20, 1970 roper lisa marie 01/01/1999  &amp;hellip;could be queried like this:
+56 november, 15, 1980 baker mary alice 09/01/2004 87 december, 20, 1970 roper lisa marie 01/01/1999 &amp;hellip;could be queried like this:
 SELECT employee_number, employee_first_name, substr(employee_middle_name, 1, 1), employee_last_name, employee_hire_date, to_date(employee_dob,&amp;#39;month, dd, yyyy&amp;#39;) FROM employees; After defining the external table like this:</description>
     </item>
     
@@ -202,8 +215,8 @@ SELECT employee_number, employee_first_name, substr(employee_middle_name, 1, 1),
       
       <guid>http://tobybase.com/posts/2012-11-12-restricting-access-to-bi-publisher-reports/</guid>
       <description>In my last post I described how to configure BI Publisher to authenticate against an LDAP server, typically a corporate Active Directory server. Aside from authentication, you can also use LDAP group membership to determine who has access to a given report. Here&amp;rsquo;s how you do it.
-  Create a group in your LDAP/AD directory and assign your target users to that group.
-  Revisit your LDAP authentication settings.</description>
+Create a group in your LDAP/AD directory and assign your target users to that group.
+Revisit your LDAP authentication settings. These are located on the Admin Tab, on the Security Configuration page.</description>
     </item>
     
     <item>
@@ -212,7 +225,7 @@ SELECT employee_number, employee_first_name, substr(employee_middle_name, 1, 1),
       <pubDate>Mon, 12 Nov 2012 17:32:00 +0000</pubDate>
       
       <guid>http://tobybase.com/posts/2012-11-12-configure-oracle-bi-publisher-to-authenticate-with-active-directory/</guid>
-      <description>Log in to BI Publisher as an administrator. Click on the Admin tab. Click on Security Configuration. For Security Model, choose LDAP and enter the following parameters:    Setting Example Value     URL ldap://ad.mycompany.com:389 Your company&amp;rsquo;s LDAP server and port.   Administrator Username CN=ADMIN,OU=Users,OU=Shared Services,DC=mycompany,DC=com The fully qualified DN of the account you use to sign in to LDAP.   Administrator Password myxlplyx The password for the above account.</description>
+      <description>Log in to BI Publisher as an administrator. Click on the Admin tab. Click on Security Configuration. For Security Model, choose LDAP and enter the following parameters: Setting Example Value URL ldap://ad.mycompany.com:389 Your company&amp;rsquo;s LDAP server and port. Administrator Username CN=ADMIN,OU=Users,OU=Shared Services,DC=mycompany,DC=com The fully qualified DN of the account you use to sign in to LDAP. Administrator Password myxlplyx The password for the above account. Distinguished Name for Users DC=mycompany,DC=com The &amp;ldquo;root&amp;rdquo; level at which to search for users.</description>
     </item>
     
     <item>

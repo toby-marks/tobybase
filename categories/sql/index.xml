@@ -1,14 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>SQL &amp; PL/SQL on 👨🏻‍💻 Tobybase</title>
-    <link>http://tobybase.com/categories/sql-pl/sql/</link>
-    <description>Recent content in SQL &amp; PL/SQL on 👨🏻‍💻 Tobybase</description>
+    <title>SQL on 👨🏻‍💻 Tobybase</title>
+    <link>http://tobybase.com/categories/sql/</link>
+    <description>Recent content in SQL on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
+    <lastBuildDate>Mon, 29 Aug 2022 10:38:47 -0500</lastBuildDate><atom:link href="http://tobybase.com/categories/sql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Method for extracting tokens from a delimited string in SQL</title>
+      <link>http://tobybase.com/posts/extract-tokens-from-delimited-string-in-sql/</link>
+      <pubDate>Mon, 29 Aug 2022 10:38:47 -0500</pubDate>
+      
+      <guid>http://tobybase.com/posts/extract-tokens-from-delimited-string-in-sql/</guid>
+      <description>There are several ways to extract tokens from a delimited string in Oracle SQL. The most basic uses the INSTR and SUBSTR functions.
+Suppose you wanted to extract the third token from this simple period (.) delimited string: one.two.three.four.five
+You could do something like the following.
+SELECT SUBSTR( the_string, INSTR(the_string, &amp;#39;.&amp;#39;, 1, 2) + 1, INSTR(the_string, &amp;#39;.&amp;#39;, 1, 3) - INSTR(the_string, &amp;#39;.&amp;#39;, 1, 2) - 1 ) FROM ( SELECT &amp;#39;one.</description>
+    </item>
     
-	<atom:link href="http://tobybase.com/categories/sql-pl/sql/index.xml" rel="self" type="application/rss+xml" />
-    
+    <item>
+      <title>How to Pivot a Delimited String of Arbitrary Length to Rows in SQL</title>
+      <link>http://tobybase.com/posts/pivot-delimited-string-to-rows/</link>
+      <pubDate>Mon, 29 Aug 2022 10:18:55 -0500</pubDate>
+      
+      <guid>http://tobybase.com/posts/pivot-delimited-string-to-rows/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Translating Teradata&#39;s MDIFF Function to Oracle SQL</title>
@@ -17,9 +35,9 @@
       
       <guid>http://tobybase.com/posts/translating-mdiff-to-oracle/</guid>
       <description>Teradata defines its MDIFF function as follows:
- MDIFF
+MDIFF
 Returns the moving difference between the specified value expression for the current row and the preceding width rows for each row in the partition.
- Here &amp;ldquo;the preceding width rows&amp;rdquo; means something like the preceding n rows, where n is sometimes interpreted as the sum of all of the preceding rows, but generally as the value of the last row.
+Here &amp;ldquo;the preceding width rows&amp;rdquo; means something like the preceding n rows, where n is sometimes interpreted as the sum of all of the preceding rows, but generally as the value of the last row.
 Teradata&amp;rsquo;s docs also has this to say about MDIFF:</description>
     </item>
     
@@ -50,7 +68,7 @@ Use PRESERVE_COMMENTS This is most critical. In Oracle, SQL hints are specified 
       
       <guid>http://tobybase.com/posts/2012-11-14-query-an-xml-file-like-an-external-table/</guid>
       <description>Oracle&amp;rsquo;s external table feature allows you to treat structured files on the database server as tables for query and DML purposes. To use an example from the linked documentation, a tab-delimited file like this:
-56 november, 15, 1980 baker mary alice 09/01/2004 87 december, 20, 1970 roper lisa marie 01/01/1999  &amp;hellip;could be queried like this:
+56 november, 15, 1980 baker mary alice 09/01/2004 87 december, 20, 1970 roper lisa marie 01/01/1999 &amp;hellip;could be queried like this:
 SELECT employee_number, employee_first_name, substr(employee_middle_name, 1, 1), employee_last_name, employee_hire_date, to_date(employee_dob,&amp;#39;month, dd, yyyy&amp;#39;) FROM employees; After defining the external table like this:</description>
     </item>
     
