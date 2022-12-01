@@ -5,5 +5,6 @@ date = 2022-08-29T10:18:55-05:00
 series = []
 categories = ["SQL"]
 tags = ["Oracle", "database"]
+draft="True"
 +++
 

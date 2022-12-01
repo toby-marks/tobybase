@@ -5,6 +5,7 @@ date = 2022-08-29T10:38:47-05:00
 series = []
 categories = ["SQL"]
 tags = ["Oracle", "database"]
+draft="true"
 +++
 
 There are several ways to extract tokens from a delimited string in Oracle SQL. The most basic uses the `INSTR` and `SUBSTR` functions.
