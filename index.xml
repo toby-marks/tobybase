@@ -6,28 +6,7 @@
     <description>Recent content on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 29 Aug 2022 10:38:47 -0500</lastBuildDate><atom:link href="http://tobybase.com/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Method for extracting tokens from a delimited string in SQL</title>
-      <link>http://tobybase.com/posts/extract-tokens-from-delimited-string-in-sql/</link>
-      <pubDate>Mon, 29 Aug 2022 10:38:47 -0500</pubDate>
-      
-      <guid>http://tobybase.com/posts/extract-tokens-from-delimited-string-in-sql/</guid>
-      <description>There are several ways to extract tokens from a delimited string in Oracle SQL. The most basic uses the INSTR and SUBSTR functions.
-Suppose you wanted to extract the third token from this simple period (.) delimited string: one.two.three.four.five
-You could do something like the following.
-SELECT SUBSTR( the_string, INSTR(the_string, &amp;#39;.&amp;#39;, 1, 2) + 1, INSTR(the_string, &amp;#39;.&amp;#39;, 1, 3) - INSTR(the_string, &amp;#39;.&amp;#39;, 1, 2) - 1 ) FROM ( SELECT &amp;#39;one.</description>
-    </item>
-    
-    <item>
-      <title>How to Pivot a Delimited String of Arbitrary Length to Rows in SQL</title>
-      <link>http://tobybase.com/posts/pivot-delimited-string-to-rows/</link>
-      <pubDate>Mon, 29 Aug 2022 10:18:55 -0500</pubDate>
-      
-      <guid>http://tobybase.com/posts/pivot-delimited-string-to-rows/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Sat, 06 Jun 2020 12:01:34 -0500</lastBuildDate><atom:link href="http://tobybase.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>&#39;Invalid Format&#39; Error Connecting to Server with SSH and Private Key</title>
       <link>http://tobybase.com/posts/invalid-format-connecting-to-server-with-ssh/</link>

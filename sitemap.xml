@@ -2,37 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://tobybase.com/</loc>
-    <lastmod>2022-08-29T10:38:47-05:00</lastmod>
-  </url><url>
-    <loc>http://tobybase.com/categories/</loc>
-    <lastmod>2022-08-29T10:38:47-05:00</lastmod>
-  </url><url>
-    <loc>http://tobybase.com/tags/database/</loc>
-    <lastmod>2022-08-29T10:38:47-05:00</lastmod>
-  </url><url>
-    <loc>http://tobybase.com/posts/extract-tokens-from-delimited-string-in-sql/</loc>
-    <lastmod>2022-08-29T10:38:47-05:00</lastmod>
-  </url><url>
-    <loc>http://tobybase.com/tags/oracle/</loc>
-    <lastmod>2022-08-29T10:38:47-05:00</lastmod>
-  </url><url>
-    <loc>http://tobybase.com/posts/</loc>
-    <lastmod>2022-08-29T10:38:47-05:00</lastmod>
-  </url><url>
-    <loc>http://tobybase.com/categories/sql/</loc>
-    <lastmod>2022-08-29T10:38:47-05:00</lastmod>
-  </url><url>
-    <loc>http://tobybase.com/tags/</loc>
-    <lastmod>2022-08-29T10:38:47-05:00</lastmod>
-  </url><url>
-    <loc>http://tobybase.com/posts/pivot-delimited-string-to-rows/</loc>
-    <lastmod>2022-08-29T10:18:55-05:00</lastmod>
-  </url><url>
     <loc>http://tobybase.com/posts/invalid-format-connecting-to-server-with-ssh/</loc>
     <lastmod>2020-06-06T12:01:34-05:00</lastmod>
   </url><url>
+    <loc>http://tobybase.com/</loc>
+    <lastmod>2020-06-06T12:01:34-05:00</lastmod>
+  </url><url>
+    <loc>http://tobybase.com/categories/</loc>
+    <lastmod>2020-06-06T12:01:34-05:00</lastmod>
+  </url><url>
     <loc>http://tobybase.com/categories/linux/</loc>
+    <lastmod>2020-06-06T12:01:34-05:00</lastmod>
+  </url><url>
+    <loc>http://tobybase.com/posts/</loc>
     <lastmod>2020-06-06T12:01:34-05:00</lastmod>
   </url><url>
     <loc>http://tobybase.com/posts/enable-oci-connections-in-sql-developer/</loc>
@@ -41,7 +23,13 @@
     <loc>http://tobybase.com/tags/microsoft-windows/</loc>
     <lastmod>2020-06-05T17:37:14-05:00</lastmod>
   </url><url>
+    <loc>http://tobybase.com/tags/oracle/</loc>
+    <lastmod>2020-06-05T17:37:14-05:00</lastmod>
+  </url><url>
     <loc>http://tobybase.com/tags/sql-developer/</loc>
+    <lastmod>2020-06-05T17:37:14-05:00</lastmod>
+  </url><url>
+    <loc>http://tobybase.com/tags/</loc>
     <lastmod>2020-06-05T17:37:14-05:00</lastmod>
   </url><url>
     <loc>http://tobybase.com/categories/tools/</loc>
@@ -78,6 +66,9 @@
     <lastmod>2020-05-29T13:41:02-05:00</lastmod>
   </url><url>
     <loc>http://tobybase.com/tags/migrations/</loc>
+    <lastmod>2020-05-27T10:22:08-05:00</lastmod>
+  </url><url>
+    <loc>http://tobybase.com/categories/sql/</loc>
     <lastmod>2020-05-27T10:22:08-05:00</lastmod>
   </url><url>
     <loc>http://tobybase.com/tags/teradata/</loc>
@@ -411,6 +402,9 @@
     <lastmod>2017-02-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://tobybase.com/tags/jvm/</loc>
+    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://tobybase.com/tags/database/</loc>
     <lastmod>2017-02-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://tobybase.com/series/table-functions/</loc>
