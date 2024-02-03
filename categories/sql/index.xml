@@ -6,80 +6,56 @@
     <description>Recent content in SQL on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 27 May 2020 10:22:08 -0500</lastBuildDate><atom:link href="http://tobybase.com/categories/sql/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 27 May 2020 10:22:08 -0500</lastBuildDate>
+    <atom:link href="http://tobybase.com/categories/sql/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Translating Teradata&#39;s MDIFF Function to Oracle SQL</title>
       <link>http://tobybase.com/posts/translating-mdiff-to-oracle/</link>
       <pubDate>Wed, 27 May 2020 10:22:08 -0500</pubDate>
-      
       <guid>http://tobybase.com/posts/translating-mdiff-to-oracle/</guid>
-      <description>Teradata defines its MDIFF function as follows:
-MDIFF
-Returns the moving difference between the specified value expression for the current row and the preceding width rows for each row in the partition.
-Here &amp;ldquo;the preceding width rows&amp;rdquo; means something like the preceding n rows, where n is sometimes interpreted as the sum of all of the preceding rows, but generally as the value of the last row.
-Teradata&amp;rsquo;s docs also has this to say about MDIFF:</description>
+      <description>Teradata defines its MDIFF function as follows:&#xA;MDIFF&#xA;Returns the moving difference between the specified value expression for the current row and the preceding width rows for each row in the partition.&#xA;Here &amp;ldquo;the preceding width rows&amp;rdquo; means something like the preceding n rows, where n is sometimes interpreted as the sum of all of the preceding rows, but generally as the value of the last row.&#xA;Teradata&amp;rsquo;s docs also has this to say about MDIFF:</description>
     </item>
-    
     <item>
       <title>An Example of Dynamic SQL Using a CLOB</title>
       <link>http://tobybase.com/posts/dynamic-sql-with-clob/</link>
       <pubDate>Fri, 22 May 2020 13:28:39 -0500</pubDate>
-      
       <guid>http://tobybase.com/posts/dynamic-sql-with-clob/</guid>
-      <description>You might not know this, but you can use the EXECUTE IMMEDIATE command with a CLOB, the same as with a VARCHAR2 variable.
-declare l_sql clob; l_str1 varchar2(32767); l_str2 varchar2(32767); begin dbms_lob.createtemporary(l_sql, false); l_str1 := &amp;#39;some large SQL chunk&amp;#39;; l_str2 := &amp;#39;and the rest of large SQL chunk&amp;#39;; l_sql := l_str1; dbms_lob.writeappend(l_sql, length(l_str2), l_str2); execute immediate l_sql; dbms_lob.freetemporary(l_sql); end; </description>
+      <description>You might not know this, but you can use the EXECUTE IMMEDIATE command with a CLOB, the same as with a VARCHAR2 variable.&#xA;declare l_sql clob; l_str1 varchar2(32767); l_str2 varchar2(32767); begin dbms_lob.createtemporary(l_sql, false); l_str1 := &amp;#39;some large SQL chunk&amp;#39;; l_str2 := &amp;#39;and the rest of large SQL chunk&amp;#39;; l_sql := l_str1; dbms_lob.writeappend(l_sql, length(l_str2), l_str2); execute immediate l_sql; dbms_lob.freetemporary(l_sql); end; </description>
     </item>
-    
     <item>
       <title>3 Tips for Running SAS Queries on Oracle</title>
       <link>http://tobybase.com/posts/sas-exadata-performance-tips/</link>
       <pubDate>Mon, 23 Sep 2019 13:54:50 -0500</pubDate>
-      
       <guid>http://tobybase.com/posts/sas-exadata-performance-tips/</guid>
-      <description>I don&amp;rsquo;t know a whole lot about SAS, but on my current gig I am frequently called upon to tune queries that run in that environment. Here are three things I have learned to keep in mind as a SAS developer when running against Oracle database.
-Use PRESERVE_COMMENTS This is most critical. In Oracle, SQL hints are specified in a specially formatted inline comment. Running a query or DML statement without those hints could be detrimental to performance.</description>
+      <description>I don&amp;rsquo;t know a whole lot about SAS, but on my current gig I am frequently called upon to tune queries that run in that environment. Here are three things I have learned to keep in mind as a SAS developer when running against Oracle database.&#xA;Use PRESERVE_COMMENTS This is most critical. In Oracle, SQL hints are specified in a specially formatted inline comment. Running a query or DML statement without those hints could be detrimental to performance.</description>
     </item>
-    
     <item>
       <title>How To Use SQL to Query an XML Document Using Oracle External Tables</title>
       <link>http://tobybase.com/posts/2012-11-14-query-an-xml-file-like-an-external-table/</link>
       <pubDate>Wed, 14 Nov 2012 00:00:00 +0000</pubDate>
-      
       <guid>http://tobybase.com/posts/2012-11-14-query-an-xml-file-like-an-external-table/</guid>
-      <description>Oracle&amp;rsquo;s external table feature allows you to treat structured files on the database server as tables for query and DML purposes. To use an example from the linked documentation, a tab-delimited file like this:
-56 november, 15, 1980 baker mary alice 09/01/2004 87 december, 20, 1970 roper lisa marie 01/01/1999 &amp;hellip;could be queried like this:
-SELECT employee_number, employee_first_name, substr(employee_middle_name, 1, 1), employee_last_name, employee_hire_date, to_date(employee_dob,&amp;#39;month, dd, yyyy&amp;#39;) FROM employees; After defining the external table like this:</description>
+      <description>Oracle&amp;rsquo;s external table feature allows you to treat structured files on the database server as tables for query and DML purposes. To use an example from the linked documentation, a tab-delimited file like this:&#xA;56 november, 15, 1980 baker mary alice 09/01/2004 87 december, 20, 1970 roper lisa marie 01/01/1999 &amp;hellip;could be queried like this:&#xA;SELECT employee_number, employee_first_name, substr(employee_middle_name, 1, 1), employee_last_name, employee_hire_date, to_date(employee_dob,&amp;#39;month, dd, yyyy&amp;#39;) FROM employees; After defining the external table like this:</description>
     </item>
-    
     <item>
       <title>Use DML Error Logging</title>
       <link>http://tobybase.com/posts/2012-06-07-dml-error-logging/</link>
       <pubDate>Thu, 07 Jun 2012 17:04:00 +0000</pubDate>
-      
       <guid>http://tobybase.com/posts/2012-06-07-dml-error-logging/</guid>
-      <description>Introduced with Oracle 10gR2, DML Error Logging allows you to make standard SQL INSERT, UPDATE, and MERGE statements behave more like the SQL*Loader utility, logging errors to a table rather than failing and rolling back the first time an error condition is encountered.
-The syntax is the same for all DML statements. Just add the following clause to the end of your DML:
-LOG ERRORS The database will automatically create an error log table for you.</description>
+      <description>Introduced with Oracle 10gR2, DML Error Logging allows you to make standard SQL INSERT, UPDATE, and MERGE statements behave more like the SQL*Loader utility, logging errors to a table rather than failing and rolling back the first time an error condition is encountered.&#xA;The syntax is the same for all DML statements. Just add the following clause to the end of your DML:&#xA;LOG ERRORS The database will automatically create an error log table for you.</description>
     </item>
-    
     <item>
       <title>Table Functions: 9i Feature Worth Revisiting (Part 2)</title>
       <link>http://tobybase.com/posts/2012-04-27-table-functions-9i-feature-worth-revisiting-part-2/</link>
       <pubDate>Fri, 27 Apr 2012 22:35:00 +0000</pubDate>
-      
       <guid>http://tobybase.com/posts/2012-04-27-table-functions-9i-feature-worth-revisiting-part-2/</guid>
       <description>In part one of this series I showed a simple example of how table functions can be used to treat PL/SQL collection types as tables in a SQL query. We used a nested table collection type to which we manually added a few entries. In this example, I intend to show a more practical use of table functions using all three PL/SQL collection types: associative arrays, nested tables, and VARRAYs.</description>
     </item>
-    
     <item>
       <title>Table Functions: 9i Feature Worth Revisiting (Part 1)</title>
       <link>http://tobybase.com/posts/2012-04-27-table-functions-9i-feature-worth-revisiting-part-1/</link>
       <pubDate>Fri, 27 Apr 2012 22:27:00 +0000</pubDate>
-      
       <guid>http://tobybase.com/posts/2012-04-27-table-functions-9i-feature-worth-revisiting-part-1/</guid>
-      <description>Yes, they&amp;rsquo;ve been around for a while, but if you haven&amp;rsquo;t made use of table functions lately you might want to reacquaint yourself with this old gem. Table functions allow you to query the contents of PL/SQL collection types using SQL&amp;rsquo;s TABLE operator. Here is a simple example.
-CREATE OR REPLACE PACKAGE example AS TYPE nested_table_typ IS TABLE OF VARCHAR2(100); FUNCTION get_nested_table_data RETURN nested_table_typ PIPELINED; END example; / CREATE OR REPLACE PACKAGE BODY example AS FUNCTION get_nested_table_data RETURN nested_table_typ PIPELINED IS BEGIN PIPE ROW (&amp;#39;one&amp;#39;); PIPE ROW (&amp;#39;two&amp;#39;); PIPE ROW (&amp;#39;three&amp;#39;); RETURN; END get_nested_table_data; END example; / The package function example.</description>
+      <description>Yes, they&amp;rsquo;ve been around for a while, but if you haven&amp;rsquo;t made use of table functions lately you might want to reacquaint yourself with this old gem. Table functions allow you to query the contents of PL/SQL collection types using SQL&amp;rsquo;s TABLE operator. Here is a simple example.&#xA;CREATE OR REPLACE PACKAGE example AS TYPE nested_table_typ IS TABLE OF VARCHAR2(100); FUNCTION get_nested_table_data RETURN nested_table_typ PIPELINED; END example; / CREATE OR REPLACE PACKAGE BODY example AS FUNCTION get_nested_table_data RETURN nested_table_typ PIPELINED IS BEGIN PIPE ROW (&amp;#39;one&amp;#39;); PIPE ROW (&amp;#39;two&amp;#39;); PIPE ROW (&amp;#39;three&amp;#39;); RETURN; END get_nested_table_data; END example; / The package function example.</description>
     </item>
-    
   </channel>
 </rss>

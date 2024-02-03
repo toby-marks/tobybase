@@ -11,8 +11,7 @@
 CREATE OR REPLACE PACKAGE example AS TYPE nested_table_typ IS TABLE OF VARCHAR2(100); FUNCTION get_nested_table_data RETURN nested_table_typ PIPELINED; END example; / CREATE OR REPLACE PACKAGE BODY example AS FUNCTION get_nested_table_data RETURN nested_table_typ PIPELINED IS BEGIN PIPE ROW (&#39;one&#39;); PIPE ROW (&#39;two&#39;); PIPE ROW (&#39;three&#39;); RETURN; END get_nested_table_data; END example; / The package function example.">
     <meta name="keywords" content="oracle,infolob,blog,consultant,developer,tuning,exadata,personal">
 
-    <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Table Functions: 9i Feature Worth Revisiting (Part 1)"/>
+    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Table Functions: 9i Feature Worth Revisiting (Part 1)"/>
 <meta name="twitter:description" content="Yes, they&rsquo;ve been around for a while, but if you haven&rsquo;t made use of table functions lately you might want to reacquaint yourself with this old gem. Table functions allow you to query the contents of PL/SQL collection types using SQL&rsquo;s TABLE operator. Here is a simple example.
 CREATE OR REPLACE PACKAGE example AS TYPE nested_table_typ IS TABLE OF VARCHAR2(100); FUNCTION get_nested_table_data RETURN nested_table_typ PIPELINED; END example; / CREATE OR REPLACE PACKAGE BODY example AS FUNCTION get_nested_table_data RETURN nested_table_typ PIPELINED IS BEGIN PIPE ROW (&#39;one&#39;); PIPE ROW (&#39;two&#39;); PIPE ROW (&#39;three&#39;); RETURN; END get_nested_table_data; END example; / The package function example."/>
 
@@ -24,6 +23,7 @@ CREATE OR REPLACE PACKAGE example AS TYPE nested_table_typ IS TABLE OF VARCHAR2(
 <meta property="article:published_time" content="2012-04-27T22:27:00+00:00" />
 <meta property="article:modified_time" content="2017-02-22T00:00:00+00:00" />
 <meta property="og:see_also" content="http://tobybase.com/posts/2012-04-27-table-functions-9i-feature-worth-revisiting-part-2/" />
+
 
 
 
@@ -61,7 +61,7 @@ CREATE OR REPLACE PACKAGE example AS TYPE nested_table_typ IS TABLE OF VARCHAR2(
     <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-16x16.png" sizes="16x16">
 
-    <meta name="generator" content="Hugo 0.107.0">
+    <meta name="generator" content="Hugo 0.122.0">
   </head>
 
   
@@ -209,7 +209,7 @@ CREATE OR REPLACE PACKAGE example AS TYPE nested_table_typ IS TABLE OF VARCHAR2(
 
 
         <div id="disqus_thread"></div>
-<script type="application/javascript">
+<script>
     window.disqus_config = function () {
     
     
@@ -249,7 +249,7 @@ CREATE OR REPLACE PACKAGE example AS TYPE nested_table_typ IS TABLE OF VARCHAR2(
         
           2012 -
         
-        2022
+        2024
          Toby Marks 
       
       

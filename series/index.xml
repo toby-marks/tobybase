@@ -6,51 +6,42 @@
     <description>Recent content in Series on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 05 Jun 2020 17:23:31 -0500</lastBuildDate><atom:link href="http://tobybase.com/series/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 05 Jun 2020 17:23:31 -0500</lastBuildDate>
+    <atom:link href="http://tobybase.com/series/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>TIL</title>
       <link>http://tobybase.com/series/til/</link>
       <pubDate>Fri, 05 Jun 2020 17:23:31 -0500</pubDate>
-      
       <guid>http://tobybase.com/series/til/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Get Going With Autonomous Database in the Cloud</title>
       <link>http://tobybase.com/series/get-going-with-autonomous-database-in-the-cloud/</link>
       <pubDate>Fri, 17 Jan 2020 17:08:16 -0600</pubDate>
-      
       <guid>http://tobybase.com/series/get-going-with-autonomous-database-in-the-cloud/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Infolob on YouTube</title>
       <link>http://tobybase.com/series/infolob-on-youtube/</link>
       <pubDate>Fri, 10 Mar 2017 14:56:00 +0000</pubDate>
-      
       <guid>http://tobybase.com/series/infolob-on-youtube/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>BI Publisher</title>
       <link>http://tobybase.com/series/bi-publisher/</link>
       <pubDate>Mon, 12 Nov 2012 18:12:00 +0000</pubDate>
-      
       <guid>http://tobybase.com/series/bi-publisher/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Table Functions</title>
       <link>http://tobybase.com/series/table-functions/</link>
       <pubDate>Fri, 27 Apr 2012 22:35:00 +0000</pubDate>
-      
       <guid>http://tobybase.com/series/table-functions/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

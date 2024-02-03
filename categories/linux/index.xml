@@ -6,40 +6,28 @@
     <description>Recent content in linux on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 06 Jun 2020 12:01:34 -0500</lastBuildDate><atom:link href="http://tobybase.com/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 06 Jun 2020 12:01:34 -0500</lastBuildDate>
+    <atom:link href="http://tobybase.com/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>&#39;Invalid Format&#39; Error Connecting to Server with SSH and Private Key</title>
       <link>http://tobybase.com/posts/invalid-format-connecting-to-server-with-ssh/</link>
       <pubDate>Sat, 06 Jun 2020 12:01:34 -0500</pubDate>
-      
       <guid>http://tobybase.com/posts/invalid-format-connecting-to-server-with-ssh/</guid>
-      <description>If you get an &amp;lsquo;invalid format&amp;rsquo; error when trying to SSH in to a remote server using a private key file that you know is valid, it may be because the key was generated with PuTTY.
-If the key begins with PuTTY-User-Key-File and you are using SSH/openSSH (ie. command line SSH) to connect to your server, you will need to first convert the key file using the puttygen tool that comes with PuTTY.</description>
+      <description>If you get an &amp;lsquo;invalid format&amp;rsquo; error when trying to SSH in to a remote server using a private key file that you know is valid, it may be because the key was generated with PuTTY.&#xA;If the key begins with PuTTY-User-Key-File and you are using SSH/openSSH (ie. command line SSH) to connect to your server, you will need to first convert the key file using the puttygen tool that comes with PuTTY.</description>
     </item>
-    
     <item>
       <title>How to Share Files Between a Photon OS VM and the VM Host</title>
       <link>http://tobybase.com/posts/share-files-between-photon-vm-and-host/</link>
       <pubDate>Fri, 29 May 2020 13:41:02 -0500</pubDate>
-      
       <guid>http://tobybase.com/posts/share-files-between-photon-vm-and-host/</guid>
-      <description>(The following is adapted from the official Photon OS FAQ.)
-How do I transfer or share files between #Photon and my host machine? Use vmhgfs-fuse to transfer files between Photon and your host machine:
-Enable Shared folders in the Workstation or Fusion UI (edit the VM settings and choose Options-&amp;gt;Enabled shared folders).
-Make sure open-vm-tools is installed (it is installed by default in the Minimal installation and OVA import).
-Run vmware-hgfsclient to list the shares.</description>
+      <description>(The following is adapted from the official Photon OS FAQ.)&#xA;How do I transfer or share files between #Photon and my host machine? Use vmhgfs-fuse to transfer files between Photon and your host machine:&#xA;Enable Shared folders in the Workstation or Fusion UI (edit the VM settings and choose Options-&amp;gt;Enabled shared folders).&#xA;Make sure open-vm-tools is installed (it is installed by default in the Minimal installation and OVA import).&#xA;Run vmware-hgfsclient to list the shares.</description>
     </item>
-    
     <item>
       <title>How to Configure Static Networking in a Linux VM</title>
       <link>http://tobybase.com/posts/configure-static-networking/</link>
       <pubDate>Wed, 20 May 2020 16:36:06 -0500</pubDate>
-      
       <guid>http://tobybase.com/posts/configure-static-networking/</guid>
-      <description>I originally had this requirement after creating a new persistent linux virtual machine in OVM that needed static addressing. This is just standard linux setup, though, and can be adapted to both virtual and physical machines.
-Turn on Networking # sudo vi /etc/sysconfig/network Make sure networking is enabled and configure the hostname.
-NETWORKING=yes HOSTNAME=myhost.mycompany.local Configure the Network Interface # sudo vi /etc/sysconfig/network-scripts/ifcfg-eth0 Here is a sample config for static IPs.</description>
+      <description>I originally had this requirement after creating a new persistent linux virtual machine in OVM that needed static addressing. This is just standard linux setup, though, and can be adapted to both virtual and physical machines.&#xA;Turn on Networking # sudo vi /etc/sysconfig/network Make sure networking is enabled and configure the hostname.&#xA;NETWORKING=yes HOSTNAME=myhost.mycompany.local Configure the Network Interface # sudo vi /etc/sysconfig/network-scripts/ifcfg-eth0 Here is a sample config for static IPs.</description>
     </item>
-    
   </channel>
 </rss>

@@ -6,25 +6,21 @@
     <description>Recent content in Development on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 24 Jul 2013 00:00:00 +0000</lastBuildDate><atom:link href="http://tobybase.com/categories/development/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 24 Jul 2013 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://tobybase.com/categories/development/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Use Preview to View Formatted man Pages</title>
       <link>http://tobybase.com/links/2013-07-24-view-man-pages/</link>
       <pubDate>Wed, 24 Jul 2013 00:00:00 +0000</pubDate>
-      
       <guid>http://tobybase.com/links/2013-07-24-view-man-pages/</guid>
-      <description>This is an elegant solution for viewing, searching, and archiving man pages that eliminates the necessity for third party apps.
-Update: still works in macOS Sierra.</description>
+      <description>This is an elegant solution for viewing, searching, and archiving man pages that eliminates the necessity for third party apps.&#xA;Update: still works in macOS Sierra.</description>
     </item>
-    
     <item>
       <title>Let the Database Do the Work</title>
       <link>http://tobybase.com/links/2012-06-01-oracle-row-vs-set-processing/</link>
       <pubDate>Fri, 01 Jun 2012 00:00:00 +0000</pubDate>
-      
       <guid>http://tobybase.com/links/2012-06-01-oracle-row-vs-set-processing/</guid>
       <description>If you&amp;rsquo;re writing database-driven reports for the web, Craig Shallahamer shows why you should let the (Oracle) database handle as much of your selection and transformation logic as possible.</description>
     </item>
-    
   </channel>
 </rss>

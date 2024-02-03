@@ -11,8 +11,7 @@
 declare l_sql clob; l_str1 varchar2(32767); l_str2 varchar2(32767); begin dbms_lob.createtemporary(l_sql, false); l_str1 := &#39;some large SQL chunk&#39;; l_str2 := &#39;and the rest of large SQL chunk&#39;; l_sql := l_str1; dbms_lob.writeappend(l_sql, length(l_str2), l_str2); execute immediate l_sql; dbms_lob.freetemporary(l_sql); end; ">
     <meta name="keywords" content="oracle,infolob,blog,consultant,developer,tuning,exadata,personal">
 
-    <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="An Example of Dynamic SQL Using a CLOB"/>
+    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="An Example of Dynamic SQL Using a CLOB"/>
 <meta name="twitter:description" content="You might not know this, but you can use the EXECUTE IMMEDIATE command with a CLOB, the same as with a VARCHAR2 variable.
 declare l_sql clob; l_str1 varchar2(32767); l_str2 varchar2(32767); begin dbms_lob.createtemporary(l_sql, false); l_str1 := &#39;some large SQL chunk&#39;; l_str2 := &#39;and the rest of large SQL chunk&#39;; l_sql := l_str1; dbms_lob.writeappend(l_sql, length(l_str2), l_str2); execute immediate l_sql; dbms_lob.freetemporary(l_sql); end; "/>
 
@@ -23,6 +22,7 @@ declare l_sql clob; l_str1 varchar2(32767); l_str2 varchar2(32767); begin dbms_l
 <meta property="og:url" content="http://tobybase.com/posts/dynamic-sql-with-clob/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-05-22T13:28:39-05:00" />
 <meta property="article:modified_time" content="2020-05-22T13:28:39-05:00" />
+
 
 
 
@@ -60,7 +60,7 @@ declare l_sql clob; l_str1 varchar2(32767); l_str2 varchar2(32767); begin dbms_l
     <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-16x16.png" sizes="16x16">
 
-    <meta name="generator" content="Hugo 0.107.0">
+    <meta name="generator" content="Hugo 0.122.0">
   </head>
 
   
@@ -160,7 +160,7 @@ declare l_sql clob; l_str1 varchar2(32767); l_str2 varchar2(32767); begin dbms_l
 
 
         <div id="disqus_thread"></div>
-<script type="application/javascript">
+<script>
     window.disqus_config = function () {
     
     
@@ -200,7 +200,7 @@ declare l_sql clob; l_str1 varchar2(32767); l_str2 varchar2(32767); begin dbms_l
         
           2012 -
         
-        2022
+        2024
          Toby Marks 
       
       

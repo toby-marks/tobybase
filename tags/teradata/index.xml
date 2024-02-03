@@ -6,19 +6,14 @@
     <description>Recent content in Teradata on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 27 May 2020 10:22:08 -0500</lastBuildDate><atom:link href="http://tobybase.com/tags/teradata/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 27 May 2020 10:22:08 -0500</lastBuildDate>
+    <atom:link href="http://tobybase.com/tags/teradata/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Translating Teradata&#39;s MDIFF Function to Oracle SQL</title>
       <link>http://tobybase.com/posts/translating-mdiff-to-oracle/</link>
       <pubDate>Wed, 27 May 2020 10:22:08 -0500</pubDate>
-      
       <guid>http://tobybase.com/posts/translating-mdiff-to-oracle/</guid>
-      <description>Teradata defines its MDIFF function as follows:
-MDIFF
-Returns the moving difference between the specified value expression for the current row and the preceding width rows for each row in the partition.
-Here &amp;ldquo;the preceding width rows&amp;rdquo; means something like the preceding n rows, where n is sometimes interpreted as the sum of all of the preceding rows, but generally as the value of the last row.
-Teradata&amp;rsquo;s docs also has this to say about MDIFF:</description>
+      <description>Teradata defines its MDIFF function as follows:&#xA;MDIFF&#xA;Returns the moving difference between the specified value expression for the current row and the preceding width rows for each row in the partition.&#xA;Here &amp;ldquo;the preceding width rows&amp;rdquo; means something like the preceding n rows, where n is sometimes interpreted as the sum of all of the preceding rows, but generally as the value of the last row.&#xA;Teradata&amp;rsquo;s docs also has this to say about MDIFF:</description>
     </item>
-    
   </channel>
 </rss>

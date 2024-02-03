@@ -6,42 +6,35 @@
     <description>Recent content in Tools on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 05 Jun 2020 17:37:14 -0500</lastBuildDate><atom:link href="http://tobybase.com/categories/tools/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 05 Jun 2020 17:37:14 -0500</lastBuildDate>
+    <atom:link href="http://tobybase.com/categories/tools/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Enable OCI Thick Client Connections in SQL Developer on Windows</title>
       <link>http://tobybase.com/posts/enable-oci-connections-in-sql-developer/</link>
       <pubDate>Fri, 05 Jun 2020 17:37:14 -0500</pubDate>
-      
       <guid>http://tobybase.com/posts/enable-oci-connections-in-sql-developer/</guid>
       <description>Jeff Smith has an excellent article on how to enable OCI Thick Client connections in SQL Developer, and all the reasons you might want to. For me, it all comes down to the ability to cancel a running query or process in a timely manner. The &amp;ldquo;hang&amp;rdquo; normally associated with canceling JDBC-based thin client connections is pretty unacceptable. With thick client you get the same level of responsiveness as you would in a console SQL*Plus session.</description>
     </item>
-    
     <item>
       <title>TIL: How to Replace Newline in Atom</title>
       <link>http://tobybase.com/posts/til-replacing-newlins-in-atom/</link>
       <pubDate>Fri, 05 Jun 2020 17:23:31 -0500</pubDate>
-      
       <guid>http://tobybase.com/posts/til-replacing-newlins-in-atom/</guid>
       <description>Newline characters are matched as \r\n in Atom. To remove all newlines from a file or selection of text, do a regex search for \r\n and replace with nothing.</description>
     </item>
-    
     <item>
       <title>Safari 5.1.7 on my MacBookPro OSX 10.7.4 freezes unexpectedly</title>
       <link>http://tobybase.com/links/2012-07-25-safari-517-freezes-on-macbook-pro/</link>
       <pubDate>Wed, 25 Jul 2012 00:00:00 +0000</pubDate>
-      
       <guid>http://tobybase.com/links/2012-07-25-safari-517-freezes-on-macbook-pro/</guid>
       <description>Lately I&amp;rsquo;ve been experiencing strange problems when clicking on links in Safari 5.1.7. Usually the progress indicator would either flash momentarily and do nothing, or else it would never appear at all. Pages would sometimes load, but after an unusual delay and with no indication that the browser was actually doing anything. I switched to Chrome as my default browser for a few days, but that was about all I could stand.</description>
     </item>
-    
     <item>
       <title>Use SQLFiddle to Test New Features, Run Demos</title>
       <link>http://tobybase.com/links/2012-05-25-sqlfiddle-is-a-sql-sandbox/</link>
       <pubDate>Fri, 25 May 2012 00:00:00 +0000</pubDate>
-      
       <guid>http://tobybase.com/links/2012-05-25-sqlfiddle-is-a-sql-sandbox/</guid>
       <description>Build your own mini-schema and run queries against it Publish your experiments for your friends to tweak Try out examples from your favorite SQL book without having to create your a database Works for Oracle, PostgreSQL, MySQL, and SQL Server flavors All in all, a pretty cool. Very useful for bloggers or teams.</description>
     </item>
-    
   </channel>
 </rss>

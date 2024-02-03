@@ -11,8 +11,7 @@
 # git log commit 07c5f535743e3f70fcdf09c0d032580820ca38c9 Author: Toby Base &lt;xxxxx@gmail.com&gt; Date: Tue May 19 14:33:17 2020 -0500 Created content/post/my-newest-article.">
     <meta name="keywords" content="oracle,infolob,blog,consultant,developer,tuning,exadata,personal">
 
-    <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="How to Restore Files From a Previous Version in Git/Github"/>
+    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="How to Restore Files From a Previous Version in Git/Github"/>
 <meta name="twitter:description" content="Get the hash of the &ldquo;good&rdquo; version you want to recover You first need to identify where things went wrong. Then get the commit identifier (also called the hash) for the version immediately prior to that. (Also make sure you&rsquo;re pulling from the appropriate branch; for simplicity&rsquo;s sake, this example assumes all changes are being committed to the master branch.)
 # git log commit 07c5f535743e3f70fcdf09c0d032580820ca38c9 Author: Toby Base &lt;xxxxx@gmail.com&gt; Date: Tue May 19 14:33:17 2020 -0500 Created content/post/my-newest-article."/>
 
@@ -23,6 +22,7 @@
 <meta property="og:url" content="http://tobybase.com/posts/how-to-recover-a-prior-version-on-github/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-05-19T17:09:28-05:00" />
 <meta property="article:modified_time" content="2020-05-19T00:00:00+00:00" />
+
 
 
 
@@ -60,7 +60,7 @@
     <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-16x16.png" sizes="16x16">
 
-    <meta name="generator" content="Hugo 0.107.0">
+    <meta name="generator" content="Hugo 0.122.0">
   </head>
 
   
@@ -138,26 +138,26 @@
         
         <h3 id="get-the-hash-of-the-good-version-you-want-to-recover">Get the hash of the &ldquo;good&rdquo; version you want to recover</h3>
 <p>You first need to identify where things went wrong. Then get the commit identifier (also called the hash) for the version immediately prior to that. (Also make sure you&rsquo;re pulling from the appropriate branch; for simplicity&rsquo;s sake, this example assumes all changes are being committed to the master branch.)</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span># git log
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span><span style="font-style:italic"># git log</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>commit 07c5f535743e3f70fcdf09c0d032580820ca38c9
-</span></span><span style="display:flex;"><span>Author: Toby Base &lt;xxxxx@gmail.com&gt;
+</span></span><span style="display:flex;"><span>Author: Toby Base &lt;xxxxx<span style="">@</span>gmail.com&gt;
 </span></span><span style="display:flex;"><span>Date:   Tue May 19 14:33:17 2020 -0500
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    Created content/post/my-newest-article.md
 </span></span><span style="display:flex;"><span>    (Oh no! Accidentally deleted some files after the last commit!)
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>commit 85add47b28670abaf99b17e010edeafb2fbb3189
-</span></span><span style="display:flex;"><span>Author: Toby Base &lt;xxxxx@gmail.com&gt;
+</span></span><span style="display:flex;"><span>Author: Toby Base &lt;xxxxx<span style="">@</span>gmail.com&gt;
 </span></span><span style="display:flex;"><span>Date:   Fri Feb 7 21:04:39 2020 +0000
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    Updated content/post/oracle-cloud-day-dallas.md
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>commit c3a520e136dc90e7982bc50d56a33aa3c3885f85
-</span></span><span style="display:flex;"><span>Author: Toby Base &lt;xxxxx@gmail.com&gt;
+</span></span><span style="display:flex;"><span>Author: Toby Base &lt;xxxxx<span style="">@</span>gmail.com&gt;
 </span></span><span style="display:flex;"><span>Date:   Fri Feb 7 21:02:29 2020 +0000
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    Created static/uploads/BC9419D3-B290-4CF3-845C-5C008A19419C.jpeg
+</span></span><span style="display:flex;"><span>    Created <span style="font-weight:bold">static</span>/uploads/BC9419D3-B290-4CF3-845C-5C008A19419C.jpeg
 </span></span></code></pre></div><p>In my case, I know I deleted files in the commit on May 19. So I want to restore those files from the version right before that, the one with hash <code>85add47b28670abaf99b17e010edeafb2fbb3189</code>.</p>
 <h3 id="flash-back-to-the-state-of-the-repository-at-the-desired-commit">Flash back to the state of the repository at the desired commit</h3>
 <p>Do this only if you don&rsquo;t care about eliminating commit history or losing changes since the specified commit.</p>
@@ -191,7 +191,7 @@
 
 
         <div id="disqus_thread"></div>
-<script type="application/javascript">
+<script>
     window.disqus_config = function () {
     
     
@@ -231,7 +231,7 @@
         
           2012 -
         
-        2022
+        2024
          Toby Marks 
       
       

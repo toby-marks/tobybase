@@ -6,293 +6,210 @@
     <description>Recent content in Oracle on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 05 Jun 2020 17:37:14 -0500</lastBuildDate><atom:link href="http://tobybase.com/tags/oracle/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 05 Jun 2020 17:37:14 -0500</lastBuildDate>
+    <atom:link href="http://tobybase.com/tags/oracle/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Enable OCI Thick Client Connections in SQL Developer on Windows</title>
       <link>http://tobybase.com/posts/enable-oci-connections-in-sql-developer/</link>
       <pubDate>Fri, 05 Jun 2020 17:37:14 -0500</pubDate>
-      
       <guid>http://tobybase.com/posts/enable-oci-connections-in-sql-developer/</guid>
       <description>Jeff Smith has an excellent article on how to enable OCI Thick Client connections in SQL Developer, and all the reasons you might want to. For me, it all comes down to the ability to cancel a running query or process in a timely manner. The &amp;ldquo;hang&amp;rdquo; normally associated with canceling JDBC-based thin client connections is pretty unacceptable. With thick client you get the same level of responsiveness as you would in a console SQL*Plus session.</description>
     </item>
-    
     <item>
       <title>Translating Teradata&#39;s MDIFF Function to Oracle SQL</title>
       <link>http://tobybase.com/posts/translating-mdiff-to-oracle/</link>
       <pubDate>Wed, 27 May 2020 10:22:08 -0500</pubDate>
-      
       <guid>http://tobybase.com/posts/translating-mdiff-to-oracle/</guid>
-      <description>Teradata defines its MDIFF function as follows:
-MDIFF
-Returns the moving difference between the specified value expression for the current row and the preceding width rows for each row in the partition.
-Here &amp;ldquo;the preceding width rows&amp;rdquo; means something like the preceding n rows, where n is sometimes interpreted as the sum of all of the preceding rows, but generally as the value of the last row.
-Teradata&amp;rsquo;s docs also has this to say about MDIFF:</description>
+      <description>Teradata defines its MDIFF function as follows:&#xA;MDIFF&#xA;Returns the moving difference between the specified value expression for the current row and the preceding width rows for each row in the partition.&#xA;Here &amp;ldquo;the preceding width rows&amp;rdquo; means something like the preceding n rows, where n is sometimes interpreted as the sum of all of the preceding rows, but generally as the value of the last row.&#xA;Teradata&amp;rsquo;s docs also has this to say about MDIFF:</description>
     </item>
-    
     <item>
       <title>An Example of Dynamic SQL Using a CLOB</title>
       <link>http://tobybase.com/posts/dynamic-sql-with-clob/</link>
       <pubDate>Fri, 22 May 2020 13:28:39 -0500</pubDate>
-      
       <guid>http://tobybase.com/posts/dynamic-sql-with-clob/</guid>
-      <description>You might not know this, but you can use the EXECUTE IMMEDIATE command with a CLOB, the same as with a VARCHAR2 variable.
-declare l_sql clob; l_str1 varchar2(32767); l_str2 varchar2(32767); begin dbms_lob.createtemporary(l_sql, false); l_str1 := &amp;#39;some large SQL chunk&amp;#39;; l_str2 := &amp;#39;and the rest of large SQL chunk&amp;#39;; l_sql := l_str1; dbms_lob.writeappend(l_sql, length(l_str2), l_str2); execute immediate l_sql; dbms_lob.freetemporary(l_sql); end; </description>
+      <description>You might not know this, but you can use the EXECUTE IMMEDIATE command with a CLOB, the same as with a VARCHAR2 variable.&#xA;declare l_sql clob; l_str1 varchar2(32767); l_str2 varchar2(32767); begin dbms_lob.createtemporary(l_sql, false); l_str1 := &amp;#39;some large SQL chunk&amp;#39;; l_str2 := &amp;#39;and the rest of large SQL chunk&amp;#39;; l_sql := l_str1; dbms_lob.writeappend(l_sql, length(l_str2), l_str2); execute immediate l_sql; dbms_lob.freetemporary(l_sql); end; </description>
     </item>
-    
     <item>
       <title>Oracle Cloud Day Dallas</title>
       <link>http://tobybase.com/posts/oracle-cloud-day-dallas/</link>
       <pubDate>Fri, 07 Feb 2020 21:00:00 +0000</pubDate>
-      
       <guid>http://tobybase.com/posts/oracle-cloud-day-dallas/</guid>
       <description>Tobybase representing at Oracle Cloud Day in Dallas. Just another day in my so-called autonomous life…</description>
     </item>
-    
     <item>
       <title>Get Up and Running Fast On Oracle Autonomous Database in the Cloud</title>
       <link>http://tobybase.com/posts/up-and-running-on-oracle-autonomous-database/</link>
       <pubDate>Thu, 09 Jan 2020 16:58:15 -0600</pubDate>
-      
       <guid>http://tobybase.com/posts/up-and-running-on-oracle-autonomous-database/</guid>
       <description>Provision Your New Autonomous Database in Minutes With Autonomous Database and Autonomous Data Warehouse, Oracle is promising to leverage the power of AI and machine learning to automate upgrade, maintenance, and tuning operations in the database - vastly reducing the drudgery of DBA work and freeing up human minds to add more value to their companies. As a developer, you don&amp;rsquo;t have to wait to start experimenting with these exciting new features.</description>
     </item>
-    
     <item>
       <title>3 Tips for Running SAS Queries on Oracle</title>
       <link>http://tobybase.com/posts/sas-exadata-performance-tips/</link>
       <pubDate>Mon, 23 Sep 2019 13:54:50 -0500</pubDate>
-      
       <guid>http://tobybase.com/posts/sas-exadata-performance-tips/</guid>
-      <description>I don&amp;rsquo;t know a whole lot about SAS, but on my current gig I am frequently called upon to tune queries that run in that environment. Here are three things I have learned to keep in mind as a SAS developer when running against Oracle database.
-Use PRESERVE_COMMENTS This is most critical. In Oracle, SQL hints are specified in a specially formatted inline comment. Running a query or DML statement without those hints could be detrimental to performance.</description>
+      <description>I don&amp;rsquo;t know a whole lot about SAS, but on my current gig I am frequently called upon to tune queries that run in that environment. Here are three things I have learned to keep in mind as a SAS developer when running against Oracle database.&#xA;Use PRESERVE_COMMENTS This is most critical. In Oracle, SQL hints are specified in a specially formatted inline comment. Running a query or DML statement without those hints could be detrimental to performance.</description>
     </item>
-    
     <item>
       <title>Fix High CPU Usage / Memory Leak in SQL Developer 18&#43; for Windows</title>
       <link>http://tobybase.com/posts/sqldev-memory-leak/</link>
       <pubDate>Wed, 01 May 2019 16:47:39 -0500</pubDate>
-      
       <guid>http://tobybase.com/posts/sqldev-memory-leak/</guid>
-      <description>If you run SQL Developer on Windows and experience high CPU usage and/or memory leak issues that freeze your PC, then you might want to try disabling some features that are likely causing the problem.
-I have personally observed this behavior on every version of SQL Developer since 18.2. Only my PC laptop is affected; my Macbook installation runs fine. I use the prepackaged Java 8 JDK. I have several colleagues who run the same configuration on Windows with no issues at all, so go figure.</description>
+      <description>If you run SQL Developer on Windows and experience high CPU usage and/or memory leak issues that freeze your PC, then you might want to try disabling some features that are likely causing the problem.&#xA;I have personally observed this behavior on every version of SQL Developer since 18.2. Only my PC laptop is affected; my Macbook installation runs fine. I use the prepackaged Java 8 JDK. I have several colleagues who run the same configuration on Windows with no issues at all, so go figure.</description>
     </item>
-    
     <item>
       <title>Access Denied Attaching Block Volume to Windows VM in OCI</title>
       <link>http://tobybase.com/posts/2018-04-10-oci-add-block-volume-on-windows/</link>
       <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
-      
       <guid>http://tobybase.com/posts/2018-04-10-oci-add-block-volume-on-windows/</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;If you are getting the above error when trying to add a block volume to a Windows VM in Oracle Cloud Infrastructure, the solution is quite simple.&lt;/p&gt;</description>
+      <description>&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt;If you are getting the above error when trying to add a block volume to a Windows VM in Oracle Cloud Infrastructure, the solution is quite simple.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Move Your VM to Oracle Cloud - Part 4</title>
       <link>http://tobybase.com/posts/infolob-lift-and-shift-howto-4/</link>
       <pubDate>Fri, 10 Mar 2017 14:56:00 +0000</pubDate>
-      
       <guid>http://tobybase.com/posts/infolob-lift-and-shift-howto-4/</guid>
       <description>In the last of a four-part video series, our Director of Cloud Services Brian Hill creates a new compute instance in Oracle Cloud Compute Services based on his custom Windows virtual machine image.</description>
     </item>
-    
     <item>
       <title>Move Your VM to Oracle Cloud - Part 3</title>
       <link>http://tobybase.com/posts/infolob-lift-and-shift-howto-3/</link>
       <pubDate>Fri, 10 Mar 2017 14:53:00 +0000</pubDate>
-      
       <guid>http://tobybase.com/posts/infolob-lift-and-shift-howto-3/</guid>
       <description>In part three of a four-part video series, our Director of Cloud Services Brian Hill creates a bootable storage volume in Oracle Cloud Compute Services with his new Windows image.</description>
     </item>
-    
     <item>
       <title>Move Your VM to Oracle Cloud - Part 2</title>
       <link>http://tobybase.com/posts/infolob-lift-and-shift-howto-2/</link>
       <pubDate>Fri, 10 Mar 2017 14:47:00 +0000</pubDate>
-      
       <guid>http://tobybase.com/posts/infolob-lift-and-shift-howto-2/</guid>
       <description>In part two of a four-part video series, our Director of Cloud Services Brian Hill creates an image in Oracle Cloud Compute Services based on a Windows virtual machine.</description>
     </item>
-    
     <item>
       <title>Move Your VM to Oracle Cloud - Part 1</title>
       <link>http://tobybase.com/posts/infolob-lift-and-shift-howto-1/</link>
       <pubDate>Fri, 10 Mar 2017 14:41:00 +0000</pubDate>
-      
       <guid>http://tobybase.com/posts/infolob-lift-and-shift-howto-1/</guid>
       <description>In part one of a four-part video series, our Director of Cloud Services Brian Hill demonstrates how to prepare your virtual machine for upload to the cloud.</description>
     </item>
-    
     <item>
       <title>Announcing the Infolob YouTube Channel</title>
       <link>http://tobybase.com/posts/infolob-youtube-channel/</link>
       <pubDate>Fri, 10 Mar 2017 00:00:00 +0000</pubDate>
-      
       <guid>http://tobybase.com/posts/infolob-youtube-channel/</guid>
-      <description>I am honored to work with some wonderful and truly smart folks over at Infolob in Irving, Texas. The company recently started a YouTube channel and we are looking to add lots of great videos soon for your enjoyment and education.
-Check us out!
-In this short Oracle Platinum Partner Spotlight video, our Chief Technologist Tim Fox explains what we do as a company and the kinds of services we provide.</description>
+      <description>I am honored to work with some wonderful and truly smart folks over at Infolob in Irving, Texas. The company recently started a YouTube channel and we are looking to add lots of great videos soon for your enjoyment and education.&#xA;Check us out!&#xA;In this short Oracle Platinum Partner Spotlight video, our Chief Technologist Tim Fox explains what we do as a company and the kinds of services we provide.</description>
     </item>
-    
     <item>
       <title>Announcing… tobybase.com</title>
       <link>http://tobybase.com/posts/announcing-tobybase/</link>
       <pubDate>Tue, 17 Jan 2017 22:58:59 -0600</pubDate>
-      
       <guid>http://tobybase.com/posts/announcing-tobybase/</guid>
-      <description>Welcome one and all to my new professional blog, tobybase.com. My name is Toby Marks and I work as a Oracle Consultant at Infolob Solutions in Irving, Texas. My old blog is still up on Tumblr, and there are a few items there that folks still find useful. Most of the content is a bit dated, though, as I&amp;rsquo;ve been out of the blogging game for a while.
-This is my attempt to turn that around.</description>
+      <description>Welcome one and all to my new professional blog, tobybase.com. My name is Toby Marks and I work as a Oracle Consultant at Infolob Solutions in Irving, Texas. My old blog is still up on Tumblr, and there are a few items there that folks still find useful. Most of the content is a bit dated, though, as I&amp;rsquo;ve been out of the blogging game for a while.&#xA;This is my attempt to turn that around.</description>
     </item>
-    
     <item>
       <title>How to Fix SQL Developer on a Retina Display Mac(book)</title>
       <link>http://tobybase.com/posts/2013-07-19-fix-sql-developer-on-a-retina-display-macbook/</link>
       <pubDate>Fri, 19 Jul 2013 22:32:00 +0000</pubDate>
-      
       <guid>http://tobybase.com/posts/2013-07-19-fix-sql-developer-on-a-retina-display-macbook/</guid>
-      <description>I just purchased a new Macbook Pro 13-inch with Retina Display and was horrified to see how fuzzy SQL Developer looked on the high-res screen. Thanks to Thunderforge on the Stack Overflow forums for this tip:
-Java 7u40 Early Access now supports HiDPI (Retina) displays, as shown by this changelog. So retina support is now available on Java 6, Java 7u40 or higher, and Java 8.
-I am currently running the Early Adopter release of SQL Developer 4.</description>
+      <description>I just purchased a new Macbook Pro 13-inch with Retina Display and was horrified to see how fuzzy SQL Developer looked on the high-res screen. Thanks to Thunderforge on the Stack Overflow forums for this tip:&#xA;Java 7u40 Early Access now supports HiDPI (Retina) displays, as shown by this changelog. So retina support is now available on Java 6, Java 7u40 or higher, and Java 8.&#xA;I am currently running the Early Adopter release of SQL Developer 4.</description>
     </item>
-    
     <item>
       <title>How To Reset Page Numbering Between Document Sections in BI Publisher&#39;s Template Builder for Word</title>
       <link>http://tobybase.com/posts/2013-06-14-resetting-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/</link>
       <pubDate>Fri, 14 Jun 2013 21:47:00 +0000</pubDate>
-      
       <guid>http://tobybase.com/posts/2013-06-14-resetting-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/</guid>
-      <description>Under normal circumstances, it is fairly easy in Microsoft Word to reset page numbering when starting a new section of your document. However, such a simple thing can be non-trivial when dealing with the BI Publisher Template Builder plugin for Microsoft Office (available from Oracle — see BI Publisher Desktop).
-In short, doing this the normal way did not work for me, and in researching the issue I ran across a number of folks who were having the same problem.</description>
+      <description>Under normal circumstances, it is fairly easy in Microsoft Word to reset page numbering when starting a new section of your document. However, such a simple thing can be non-trivial when dealing with the BI Publisher Template Builder plugin for Microsoft Office (available from Oracle — see BI Publisher Desktop).&#xA;In short, doing this the normal way did not work for me, and in researching the issue I ran across a number of folks who were having the same problem.</description>
     </item>
-    
     <item>
       <title>Button Hotkeys in SQL Developer on OS X</title>
       <link>http://tobybase.com/posts/2013-01-09-button-hotkeys-in-sql-developer-on-os-x/</link>
       <pubDate>Wed, 09 Jan 2013 19:09:45 +0000</pubDate>
-      
       <guid>http://tobybase.com/posts/2013-01-09-button-hotkeys-in-sql-developer-on-os-x/</guid>
-      <description>In Windows, most applications provide menu and button accelerator keys that allow you to control the application without having to use a mouse. Java Swing apps like SQL Developer allow you to do the same, ostensibly in a cross-platform compatible manner.
-One place I use this frequently is the Enter Binds dialog window that pops up when running a query using bind variables.
-In Java 6 on OS X, the hotkey for pressing the Help and Apply buttons was OPTION-H and OPTION-A, respectively.</description>
+      <description>In Windows, most applications provide menu and button accelerator keys that allow you to control the application without having to use a mouse. Java Swing apps like SQL Developer allow you to do the same, ostensibly in a cross-platform compatible manner.&#xA;One place I use this frequently is the Enter Binds dialog window that pops up when running a query using bind variables.&#xA;In Java 6 on OS X, the hotkey for pressing the Help and Apply buttons was OPTION-H and OPTION-A, respectively.</description>
     </item>
-    
     <item>
       <title>How To Use SQL to Query an XML Document Using Oracle External Tables</title>
       <link>http://tobybase.com/posts/2012-11-14-query-an-xml-file-like-an-external-table/</link>
       <pubDate>Wed, 14 Nov 2012 00:00:00 +0000</pubDate>
-      
       <guid>http://tobybase.com/posts/2012-11-14-query-an-xml-file-like-an-external-table/</guid>
-      <description>Oracle&amp;rsquo;s external table feature allows you to treat structured files on the database server as tables for query and DML purposes. To use an example from the linked documentation, a tab-delimited file like this:
-56 november, 15, 1980 baker mary alice 09/01/2004 87 december, 20, 1970 roper lisa marie 01/01/1999 &amp;hellip;could be queried like this:
-SELECT employee_number, employee_first_name, substr(employee_middle_name, 1, 1), employee_last_name, employee_hire_date, to_date(employee_dob,&amp;#39;month, dd, yyyy&amp;#39;) FROM employees; After defining the external table like this:</description>
+      <description>Oracle&amp;rsquo;s external table feature allows you to treat structured files on the database server as tables for query and DML purposes. To use an example from the linked documentation, a tab-delimited file like this:&#xA;56 november, 15, 1980 baker mary alice 09/01/2004 87 december, 20, 1970 roper lisa marie 01/01/1999 &amp;hellip;could be queried like this:&#xA;SELECT employee_number, employee_first_name, substr(employee_middle_name, 1, 1), employee_last_name, employee_hire_date, to_date(employee_dob,&amp;#39;month, dd, yyyy&amp;#39;) FROM employees; After defining the external table like this:</description>
     </item>
-    
     <item>
       <title>How To Restrict Access to BI Publisher Reports</title>
       <link>http://tobybase.com/posts/2012-11-12-restricting-access-to-bi-publisher-reports/</link>
       <pubDate>Mon, 12 Nov 2012 18:12:00 +0000</pubDate>
-      
       <guid>http://tobybase.com/posts/2012-11-12-restricting-access-to-bi-publisher-reports/</guid>
-      <description>In my last post I described how to configure BI Publisher to authenticate against an LDAP server, typically a corporate Active Directory server. Aside from authentication, you can also use LDAP group membership to determine who has access to a given report. Here&amp;rsquo;s how you do it.
-Create a group in your LDAP/AD directory and assign your target users to that group.
-Revisit your LDAP authentication settings. These are located on the Admin Tab, on the Security Configuration page.</description>
+      <description>In my last post I described how to configure BI Publisher to authenticate against an LDAP server, typically a corporate Active Directory server. Aside from authentication, you can also use LDAP group membership to determine who has access to a given report. Here&amp;rsquo;s how you do it.&#xA;Create a group in your LDAP/AD directory and assign your target users to that group.&#xA;Revisit your LDAP authentication settings. These are located on the Admin Tab, on the Security Configuration page.</description>
     </item>
-    
     <item>
       <title>How To Configure Oracle BI Publisher to Authenticate With Active Directory</title>
       <link>http://tobybase.com/posts/2012-11-12-configure-oracle-bi-publisher-to-authenticate-with-active-directory/</link>
       <pubDate>Mon, 12 Nov 2012 17:32:00 +0000</pubDate>
-      
       <guid>http://tobybase.com/posts/2012-11-12-configure-oracle-bi-publisher-to-authenticate-with-active-directory/</guid>
       <description>Log in to BI Publisher as an administrator. Click on the Admin tab. Click on Security Configuration. For Security Model, choose LDAP and enter the following parameters: Setting Example Value URL ldap://ad.mycompany.com:389 Your company&amp;rsquo;s LDAP server and port. Administrator Username CN=ADMIN,OU=Users,OU=Shared Services,DC=mycompany,DC=com The fully qualified DN of the account you use to sign in to LDAP. Administrator Password myxlplyx The password for the above account. Distinguished Name for Users DC=mycompany,DC=com The &amp;ldquo;root&amp;rdquo; level at which to search for users.</description>
     </item>
-    
     <item>
       <title>How to Avoid the &#34;Job scheduling failed because the user has no permission to access this report&#34; Error in BI Publisher</title>
       <link>http://tobybase.com/posts/2012-08-27-bi-publisher-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report/</link>
       <pubDate>Mon, 27 Aug 2012 20:48:08 +0000</pubDate>
-      
       <guid>http://tobybase.com/posts/2012-08-27-bi-publisher-job-scheduling-failed-because-the-user-has-no-permission-to-access-this-report/</guid>
-      <description>You can get this error if you are trying to schedule a report and your BI Publisher installation uses LDAP authentication.
-To avoid it, make sure that the &amp;ldquo;Administrator&amp;rdquo; account you use to connect to your LDAP server is in the XMLP_ADMIN group. The LDAP settings are located on the Admin tab, under Security Settings / Security Configuration.</description>
+      <description>You can get this error if you are trying to schedule a report and your BI Publisher installation uses LDAP authentication.&#xA;To avoid it, make sure that the &amp;ldquo;Administrator&amp;rdquo; account you use to connect to your LDAP server is in the XMLP_ADMIN group. The LDAP settings are located on the Admin tab, under Security Settings / Security Configuration.</description>
     </item>
-    
     <item>
       <title>How To Fix High CPU Usage by SQL Developer on OS X</title>
       <link>http://tobybase.com/posts/2012-07-20-easy-fix-for-high-cpu-usage-in-sql-developer-on-os-x/</link>
       <pubDate>Fri, 20 Jul 2012 16:32:00 +0000</pubDate>
-      
       <guid>http://tobybase.com/posts/2012-07-20-easy-fix-for-high-cpu-usage-in-sql-developer-on-os-x/</guid>
-      <description>I&amp;rsquo;ve been fighting for a couple of years now with an annoying performance bug in SQL Developer for OS X. After using the application for a while CPU usage would spike to around 100%, even when idle. This is a known issue associated with the &amp;ldquo;Look and Feel&amp;rdquo; preference.
-Basically, don&amp;rsquo;t use the &amp;ldquo;Mac OS X&amp;rdquo; setting. Instead, use the &amp;ldquo;Oracle&amp;rdquo; setting. The theme doesn&amp;rsquo;t matter.
-That fixes the CPU issue, but somewhat annoyingly moves the menu out of the menu bar at the top of the screen and into the application window, a la Windows, making the interface inconsistent with pretty much every other app I use on my Mac.</description>
+      <description>I&amp;rsquo;ve been fighting for a couple of years now with an annoying performance bug in SQL Developer for OS X. After using the application for a while CPU usage would spike to around 100%, even when idle. This is a known issue associated with the &amp;ldquo;Look and Feel&amp;rdquo; preference.&#xA;Basically, don&amp;rsquo;t use the &amp;ldquo;Mac OS X&amp;rdquo; setting. Instead, use the &amp;ldquo;Oracle&amp;rdquo; setting. The theme doesn&amp;rsquo;t matter.&#xA;That fixes the CPU issue, but somewhat annoyingly moves the menu out of the menu bar at the top of the screen and into the application window, a la Windows, making the interface inconsistent with pretty much every other app I use on my Mac.</description>
     </item>
-    
     <item>
       <title>How To Run Oracle Forms 11g Applications on OS X Lion</title>
       <link>http://tobybase.com/posts/2012-07-12-run-oracle-forms-11g-applications-on-os-x-lion/</link>
       <pubDate>Thu, 12 Jul 2012 22:28:24 +0000</pubDate>
-      
       <guid>http://tobybase.com/posts/2012-07-12-run-oracle-forms-11g-applications-on-os-x-lion/</guid>
       <description>Need to run your company&amp;rsquo;s Oracle Forms application from your Mac, and can&amp;rsquo;t? Annoyed with having to crank up a virtual machine for just that one task? Even with the latest published Java version for OS X (1.6.0_33, as of today), you may find that some of the newer Forms applications just won&amp;rsquo;t run. Well, fret no longer. A solution may already be here, at least for Safari and Firefox.</description>
     </item>
-    
     <item>
       <title>OS X Software for Oracle Developers</title>
       <link>http://tobybase.com/posts/2012-06-27-os-x-software-for-oracle-developers/</link>
       <pubDate>Wed, 27 Jun 2012 21:39:00 +0000</pubDate>
-      
       <guid>http://tobybase.com/posts/2012-06-27-os-x-software-for-oracle-developers/</guid>
       <description>One of the great things about working for Enkitec is that it&amp;rsquo;s a very Mac-friendly shop. When I arrived there in 2007 there were a handful of us running Macs and the attitude at the top seemed to be respectful, but skeptical. They allowed me to use my own laptop, which at the time was a 15-inch Intel Core2 Duo Macbook Pro, with the understanding that I could request a standard-issue Dell laptop at any time should the need arise.</description>
     </item>
-    
     <item>
       <title>Use DML Error Logging</title>
       <link>http://tobybase.com/posts/2012-06-07-dml-error-logging/</link>
       <pubDate>Thu, 07 Jun 2012 17:04:00 +0000</pubDate>
-      
       <guid>http://tobybase.com/posts/2012-06-07-dml-error-logging/</guid>
-      <description>Introduced with Oracle 10gR2, DML Error Logging allows you to make standard SQL INSERT, UPDATE, and MERGE statements behave more like the SQL*Loader utility, logging errors to a table rather than failing and rolling back the first time an error condition is encountered.
-The syntax is the same for all DML statements. Just add the following clause to the end of your DML:
-LOG ERRORS The database will automatically create an error log table for you.</description>
+      <description>Introduced with Oracle 10gR2, DML Error Logging allows you to make standard SQL INSERT, UPDATE, and MERGE statements behave more like the SQL*Loader utility, logging errors to a table rather than failing and rolling back the first time an error condition is encountered.&#xA;The syntax is the same for all DML statements. Just add the following clause to the end of your DML:&#xA;LOG ERRORS The database will automatically create an error log table for you.</description>
     </item>
-    
     <item>
       <title>ODBC Connection Fails for MS Access App on Citrix </title>
       <link>http://tobybase.com/posts/2012-05-11-odbc-connection-fails-for-ms-access-app-on-citrix/</link>
       <pubDate>Fri, 11 May 2012 20:54:00 +0000</pubDate>
-      
       <guid>http://tobybase.com/posts/2012-05-11-odbc-connection-fails-for-ms-access-app-on-citrix/</guid>
       <description>I ran into an interesting problem recently when attempting to publish an MS Access application with Citrix XenApp. The application pulled data from an Oracle database, so an ODBC connection was created on the Citrix server. What we found was that when a non-privileged user tried to run the application, the connection failed. When the Citrix server admin ran it, however, it worked. Furthermore, as long as the admin was logged in, anybody else could run the application successfully; when he logged out, the users&amp;rsquo; connections broke again.</description>
     </item>
-    
     <item>
       <title>Table Functions: 9i Feature Worth Revisiting (Part 2)</title>
       <link>http://tobybase.com/posts/2012-04-27-table-functions-9i-feature-worth-revisiting-part-2/</link>
       <pubDate>Fri, 27 Apr 2012 22:35:00 +0000</pubDate>
-      
       <guid>http://tobybase.com/posts/2012-04-27-table-functions-9i-feature-worth-revisiting-part-2/</guid>
       <description>In part one of this series I showed a simple example of how table functions can be used to treat PL/SQL collection types as tables in a SQL query. We used a nested table collection type to which we manually added a few entries. In this example, I intend to show a more practical use of table functions using all three PL/SQL collection types: associative arrays, nested tables, and VARRAYs.</description>
     </item>
-    
     <item>
       <title>Table Functions: 9i Feature Worth Revisiting (Part 1)</title>
       <link>http://tobybase.com/posts/2012-04-27-table-functions-9i-feature-worth-revisiting-part-1/</link>
       <pubDate>Fri, 27 Apr 2012 22:27:00 +0000</pubDate>
-      
       <guid>http://tobybase.com/posts/2012-04-27-table-functions-9i-feature-worth-revisiting-part-1/</guid>
-      <description>Yes, they&amp;rsquo;ve been around for a while, but if you haven&amp;rsquo;t made use of table functions lately you might want to reacquaint yourself with this old gem. Table functions allow you to query the contents of PL/SQL collection types using SQL&amp;rsquo;s TABLE operator. Here is a simple example.
-CREATE OR REPLACE PACKAGE example AS TYPE nested_table_typ IS TABLE OF VARCHAR2(100); FUNCTION get_nested_table_data RETURN nested_table_typ PIPELINED; END example; / CREATE OR REPLACE PACKAGE BODY example AS FUNCTION get_nested_table_data RETURN nested_table_typ PIPELINED IS BEGIN PIPE ROW (&amp;#39;one&amp;#39;); PIPE ROW (&amp;#39;two&amp;#39;); PIPE ROW (&amp;#39;three&amp;#39;); RETURN; END get_nested_table_data; END example; / The package function example.</description>
+      <description>Yes, they&amp;rsquo;ve been around for a while, but if you haven&amp;rsquo;t made use of table functions lately you might want to reacquaint yourself with this old gem. Table functions allow you to query the contents of PL/SQL collection types using SQL&amp;rsquo;s TABLE operator. Here is a simple example.&#xA;CREATE OR REPLACE PACKAGE example AS TYPE nested_table_typ IS TABLE OF VARCHAR2(100); FUNCTION get_nested_table_data RETURN nested_table_typ PIPELINED; END example; / CREATE OR REPLACE PACKAGE BODY example AS FUNCTION get_nested_table_data RETURN nested_table_typ PIPELINED IS BEGIN PIPE ROW (&amp;#39;one&amp;#39;); PIPE ROW (&amp;#39;two&amp;#39;); PIPE ROW (&amp;#39;three&amp;#39;); RETURN; END get_nested_table_data; END example; / The package function example.</description>
     </item>
-    
     <item>
       <title>Invalidating Toplink Session Cache To Avoid Stale Data</title>
       <link>http://tobybase.com/posts/2012-03-09-invalidating-toplink-session-cache-to-avoid-stale-data/</link>
       <pubDate>Fri, 09 Mar 2012 18:42:00 +0000</pubDate>
-      
       <guid>http://tobybase.com/posts/2012-03-09-invalidating-toplink-session-cache-to-avoid-stale-data/</guid>
       <description>Toplink is a Java framework that maps objects to database tables. It is the reference implementation for the Java Persistence Architecture, or JPA. Developers use Toplink to manage data persistence (storage), queries, and transactions in an Oracle database. By default, Toplink makes use of a special cache called a Session Cache, maintained on the server, which is meant to speed up performance. Queried data is stored in the Session Cache and used in subsequent queries to reduce or eliminate calls to the database.</description>
     </item>
-    
   </channel>
 </rss>

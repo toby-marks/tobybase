@@ -6,16 +6,14 @@
     <description>Recent content in AI on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 01 May 2018 09:05:54 -0500</lastBuildDate><atom:link href="http://tobybase.com/categories/ai/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 May 2018 09:05:54 -0500</lastBuildDate>
+    <atom:link href="http://tobybase.com/categories/ai/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>They Don&#39;t Need ML</title>
       <link>http://tobybase.com/links/2018-05-01-sql-over-ml/</link>
       <pubDate>Tue, 01 May 2018 09:05:54 -0500</pubDate>
-      
       <guid>http://tobybase.com/links/2018-05-01-sql-over-ml/</guid>
-      <description>I will write a query like select from order table where last shop date is 3 or greater months. When we get this information, we will send a nice &amp;ldquo;we miss you, come back and here&amp;rsquo;s X Naira voucher&amp;rdquo; email. The conversation rate for this one was always greater than 50%.
-So-called artificial intelligence and machine learning tools are in fashion these days, and the impetus is to apply them to all problem sets.</description>
+      <description>I will write a query like select from order table where last shop date is 3 or greater months. When we get this information, we will send a nice &amp;ldquo;we miss you, come back and here&amp;rsquo;s X Naira voucher&amp;rdquo; email. The conversation rate for this one was always greater than 50%.&#xA;So-called artificial intelligence and machine learning tools are in fashion these days, and the impetus is to apply them to all problem sets.</description>
     </item>
-    
   </channel>
 </rss>
