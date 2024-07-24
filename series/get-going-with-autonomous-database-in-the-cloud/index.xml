@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Get Going With Autonomous Database in the Cloud on 👨🏻‍💻 Tobybase</title>
-    <link>https://tobybase.com/series/get-going-with-autonomous-database-in-the-cloud/</link>
+    <link>//tobybase.com/series/get-going-with-autonomous-database-in-the-cloud/</link>
     <description>Recent content in Get Going With Autonomous Database in the Cloud on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 17 Jan 2020 17:08:16 -0600</lastBuildDate>
-    <atom:link href="https://tobybase.com/series/get-going-with-autonomous-database-in-the-cloud/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//tobybase.com/series/get-going-with-autonomous-database-in-the-cloud/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Connect to Autonomous Database in the Cloud with Oracle Instant Client</title>
-      <link>https://tobybase.com/posts/connecting-to-autonomous-with-instant-client/</link>
+      <link>//tobybase.com/posts/connecting-to-autonomous-with-instant-client/</link>
       <pubDate>Fri, 17 Jan 2020 17:08:16 -0600</pubDate>
-      <guid>https://tobybase.com/posts/connecting-to-autonomous-with-instant-client/</guid>
+      <guid>//tobybase.com/posts/connecting-to-autonomous-with-instant-client/</guid>
       <description>The easiest and fastest way to query and create data in your new cloud database is with SQL Developer Web, provided free with every new instance of Autonomous Database and Autonomous Data Warehouse in the Cloud. Second fastest would be with a local installation of SQL Developer or SQLcl. But if you want an authentic SQL*Plus environment, then you&amp;rsquo;ll need Oracle Instant Client.&#xA;You have two options for running SQL*Plus under Instant Client: download and install a platform-native version, or else run Instant Client in a Docker container.</description>
     </item>
     <item>
       <title>Connect to Autonomous Database in the Cloud with SQL Developer and SQLcl</title>
-      <link>https://tobybase.com/posts/connecting-to-autonomous-with-sql-dev/</link>
+      <link>//tobybase.com/posts/connecting-to-autonomous-with-sql-dev/</link>
       <pubDate>Fri, 17 Jan 2020 16:59:40 -0600</pubDate>
-      <guid>https://tobybase.com/posts/connecting-to-autonomous-with-sql-dev/</guid>
+      <guid>//tobybase.com/posts/connecting-to-autonomous-with-sql-dev/</guid>
       <description>Connect with SQL Developer Web If you don&amp;rsquo;t have SQL Developer installed, or you just want a quick and easy way to work with your new autonomous database, you can get started right away with SQL Developer Web, available from the Service Console. SQL Developer Web is a scaled down version of the desktop tool that allows you to query and enter data, run scripts, compile database objects, and monitor and administrate your database.</description>
     </item>
     <item>
       <title>Get Up and Running Fast On Oracle Autonomous Database in the Cloud</title>
-      <link>https://tobybase.com/posts/up-and-running-on-oracle-autonomous-database/</link>
+      <link>//tobybase.com/posts/up-and-running-on-oracle-autonomous-database/</link>
       <pubDate>Thu, 09 Jan 2020 16:58:15 -0600</pubDate>
-      <guid>https://tobybase.com/posts/up-and-running-on-oracle-autonomous-database/</guid>
+      <guid>//tobybase.com/posts/up-and-running-on-oracle-autonomous-database/</guid>
       <description>Provision Your New Autonomous Database in Minutes With Autonomous Database and Autonomous Data Warehouse, Oracle is promising to leverage the power of AI and machine learning to automate upgrade, maintenance, and tuning operations in the database - vastly reducing the drudgery of DBA work and freeing up human minds to add more value to their companies. As a developer, you don&amp;rsquo;t have to wait to start experimenting with these exciting new features.</description>
     </item>
   </channel>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>SQL*Loader on 👨🏻‍💻 Tobybase</title>
-    <link>https://tobybase.com/tags/sqlloader/</link>
+    <link>//tobybase.com/tags/sqlloader/</link>
     <description>Recent content in SQL*Loader on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 22 Feb 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://tobybase.com/tags/sqlloader/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//tobybase.com/tags/sqlloader/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Use DML Error Logging</title>
-      <link>https://tobybase.com/posts/2012-06-07-dml-error-logging/</link>
+      <link>//tobybase.com/posts/2012-06-07-dml-error-logging/</link>
       <pubDate>Thu, 07 Jun 2012 17:04:00 +0000</pubDate>
-      <guid>https://tobybase.com/posts/2012-06-07-dml-error-logging/</guid>
+      <guid>//tobybase.com/posts/2012-06-07-dml-error-logging/</guid>
       <description>Introduced with Oracle 10gR2, DML Error Logging allows you to make standard SQL INSERT, UPDATE, and MERGE statements behave more like the SQL*Loader utility, logging errors to a table rather than failing and rolling back the first time an error condition is encountered.&#xA;The syntax is the same for all DML statements. Just add the following clause to the end of your DML:&#xA;LOG ERRORS The database will automatically create an error log table for you.</description>
     </item>
   </channel>

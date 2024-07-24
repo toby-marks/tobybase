@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>safari on 👨🏻‍💻 Tobybase</title>
-    <link>https://tobybase.com/tags/safari/</link>
+    <link>//tobybase.com/tags/safari/</link>
     <description>Recent content in safari on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 25 Jul 2012 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://tobybase.com/tags/safari/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//tobybase.com/tags/safari/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Safari 5.1.7 on my MacBookPro OSX 10.7.4 freezes unexpectedly</title>
-      <link>https://tobybase.com/links/2012-07-25-safari-517-freezes-on-macbook-pro/</link>
+      <link>//tobybase.com/links/2012-07-25-safari-517-freezes-on-macbook-pro/</link>
       <pubDate>Wed, 25 Jul 2012 00:00:00 +0000</pubDate>
-      <guid>https://tobybase.com/links/2012-07-25-safari-517-freezes-on-macbook-pro/</guid>
+      <guid>//tobybase.com/links/2012-07-25-safari-517-freezes-on-macbook-pro/</guid>
       <description>Lately I&amp;rsquo;ve been experiencing strange problems when clicking on links in Safari 5.1.7. Usually the progress indicator would either flash momentarily and do nothing, or else it would never appear at all. Pages would sometimes load, but after an unusual delay and with no indication that the browser was actually doing anything. I switched to Chrome as my default browser for a few days, but that was about all I could stand.</description>
     </item>
   </channel>

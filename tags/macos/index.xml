@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>macos on 👨🏻‍💻 Tobybase</title>
-    <link>https://tobybase.com/tags/macos/</link>
+    <link>//tobybase.com/tags/macos/</link>
     <description>Recent content in macos on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 27 Jan 2020 15:20:10 -0600</lastBuildDate>
-    <atom:link href="https://tobybase.com/tags/macos/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//tobybase.com/tags/macos/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Error in Cisco AnyConnect Client: &#34;Cannot Confirm it is Connected&#34;</title>
-      <link>https://tobybase.com/posts/problems-connecting-with-anyconnect-vpn/</link>
+      <link>//tobybase.com/posts/problems-connecting-with-anyconnect-vpn/</link>
       <pubDate>Mon, 27 Jan 2020 15:20:10 -0600</pubDate>
-      <guid>https://tobybase.com/posts/problems-connecting-with-anyconnect-vpn/</guid>
+      <guid>//tobybase.com/posts/problems-connecting-with-anyconnect-vpn/</guid>
       <description>[NOTE: problem identified on my personal laptop with macOS 10.15.2, Cisco AnyConnect Secure Mobility Client 4.6.03049]&#xA;What to Do When You Encounter This Error AnyConnect cannot confirm it is connected to your secure gateway. The local network may not be trustworthy. Please try another network.&#xA;This is a potentially misleading explanation, as the problem in my case was due to a corrupted VPN certificate.&#xA;To fix the problem on macOS, do the following.</description>
     </item>
     <item>
       <title>Use Preview to View Formatted man Pages</title>
-      <link>https://tobybase.com/links/2013-07-24-view-man-pages/</link>
+      <link>//tobybase.com/links/2013-07-24-view-man-pages/</link>
       <pubDate>Wed, 24 Jul 2013 00:00:00 +0000</pubDate>
-      <guid>https://tobybase.com/links/2013-07-24-view-man-pages/</guid>
+      <guid>//tobybase.com/links/2013-07-24-view-man-pages/</guid>
       <description>This is an elegant solution for viewing, searching, and archiving man pages that eliminates the necessity for third party apps.&#xA;Update: still works in macOS Sierra.</description>
     </item>
     <item>
       <title>Safari 5.1.7 on my MacBookPro OSX 10.7.4 freezes unexpectedly</title>
-      <link>https://tobybase.com/links/2012-07-25-safari-517-freezes-on-macbook-pro/</link>
+      <link>//tobybase.com/links/2012-07-25-safari-517-freezes-on-macbook-pro/</link>
       <pubDate>Wed, 25 Jul 2012 00:00:00 +0000</pubDate>
-      <guid>https://tobybase.com/links/2012-07-25-safari-517-freezes-on-macbook-pro/</guid>
+      <guid>//tobybase.com/links/2012-07-25-safari-517-freezes-on-macbook-pro/</guid>
       <description>Lately I&amp;rsquo;ve been experiencing strange problems when clicking on links in Safari 5.1.7. Usually the progress indicator would either flash momentarily and do nothing, or else it would never appear at all. Pages would sometimes load, but after an unusual delay and with no indication that the browser was actually doing anything. I switched to Chrome as my default browser for a few days, but that was about all I could stand.</description>
     </item>
   </channel>

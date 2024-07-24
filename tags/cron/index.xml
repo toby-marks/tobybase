@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>cron on 👨🏻‍💻 Tobybase</title>
-    <link>https://tobybase.com/tags/cron/</link>
+    <link>//tobybase.com/tags/cron/</link>
     <description>Recent content in cron on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 22 Feb 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://tobybase.com/tags/cron/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//tobybase.com/tags/cron/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How To Make Bash Scripts crontab-Compatible</title>
-      <link>https://tobybase.com/posts/2012-04-05-make-bash-scripts-crontab-compatible/</link>
+      <link>//tobybase.com/posts/2012-04-05-make-bash-scripts-crontab-compatible/</link>
       <pubDate>Thu, 05 Apr 2012 21:19:05 +0000</pubDate>
-      <guid>https://tobybase.com/posts/2012-04-05-make-bash-scripts-crontab-compatible/</guid>
+      <guid>//tobybase.com/posts/2012-04-05-make-bash-scripts-crontab-compatible/</guid>
       <description>When writing shell scripts in bash, consider whether your script can be automated in a batch scheduler like cron. If you reference any external resources in your script relative to the directory in which it resides, those references may break when running your script through cron.&#xA;By default, crontab runs scripts in the user&amp;rsquo;s home directory, as specified in /etc/passwd. For user &amp;ldquo;Tim&amp;rdquo; with home directory /home/tim, a sample crontab might look something like the following:</description>
     </item>
   </channel>

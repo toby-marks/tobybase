@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>OVM on 👨🏻‍💻 Tobybase</title>
-    <link>https://tobybase.com/tags/ovm/</link>
+    <link>//tobybase.com/tags/ovm/</link>
     <description>Recent content in OVM on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 20 May 2020 16:36:06 -0500</lastBuildDate>
-    <atom:link href="https://tobybase.com/tags/ovm/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//tobybase.com/tags/ovm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Configure Static Networking in a Linux VM</title>
-      <link>https://tobybase.com/posts/configure-static-networking/</link>
+      <link>//tobybase.com/posts/configure-static-networking/</link>
       <pubDate>Wed, 20 May 2020 16:36:06 -0500</pubDate>
-      <guid>https://tobybase.com/posts/configure-static-networking/</guid>
+      <guid>//tobybase.com/posts/configure-static-networking/</guid>
       <description>I originally had this requirement after creating a new persistent linux virtual machine in OVM that needed static addressing. This is just standard linux setup, though, and can be adapted to both virtual and physical machines.&#xA;Turn on Networking # sudo vi /etc/sysconfig/network Make sure networking is enabled and configure the hostname.&#xA;NETWORKING=yes HOSTNAME=myhost.mycompany.local Configure the Network Interface # sudo vi /etc/sysconfig/network-scripts/ifcfg-eth0 Here is a sample config for static IPs.</description>
     </item>
   </channel>

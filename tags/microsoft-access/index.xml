@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Microsoft Access on 👨🏻‍💻 Tobybase</title>
-    <link>https://tobybase.com/tags/microsoft-access/</link>
+    <link>//tobybase.com/tags/microsoft-access/</link>
     <description>Recent content in Microsoft Access on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 22 Feb 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://tobybase.com/tags/microsoft-access/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//tobybase.com/tags/microsoft-access/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ODBC Connection Fails for MS Access App on Citrix </title>
-      <link>https://tobybase.com/posts/2012-05-11-odbc-connection-fails-for-ms-access-app-on-citrix/</link>
+      <link>//tobybase.com/posts/2012-05-11-odbc-connection-fails-for-ms-access-app-on-citrix/</link>
       <pubDate>Fri, 11 May 2012 20:54:00 +0000</pubDate>
-      <guid>https://tobybase.com/posts/2012-05-11-odbc-connection-fails-for-ms-access-app-on-citrix/</guid>
+      <guid>//tobybase.com/posts/2012-05-11-odbc-connection-fails-for-ms-access-app-on-citrix/</guid>
       <description>I ran into an interesting problem recently when attempting to publish an MS Access application with Citrix XenApp. The application pulled data from an Oracle database, so an ODBC connection was created on the Citrix server. What we found was that when a non-privileged user tried to run the application, the connection failed. When the Citrix server admin ran it, however, it worked. Furthermore, as long as the admin was logged in, anybody else could run the application successfully; when he logged out, the users&amp;rsquo; connections broke again.</description>
     </item>
   </channel>

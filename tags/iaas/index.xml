@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>IaaS on 👨🏻‍💻 Tobybase</title>
-    <link>https://tobybase.com/tags/iaas/</link>
+    <link>//tobybase.com/tags/iaas/</link>
     <description>Recent content in IaaS on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 10 Apr 2018 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://tobybase.com/tags/iaas/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//tobybase.com/tags/iaas/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Access Denied Attaching Block Volume to Windows VM in OCI</title>
-      <link>https://tobybase.com/posts/2018-04-10-oci-add-block-volume-on-windows/</link>
+      <link>//tobybase.com/posts/2018-04-10-oci-add-block-volume-on-windows/</link>
       <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
-      <guid>https://tobybase.com/posts/2018-04-10-oci-add-block-volume-on-windows/</guid>
+      <guid>//tobybase.com/posts/2018-04-10-oci-add-block-volume-on-windows/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt;If you are getting the above error when trying to add a block volume to a Windows VM in Oracle Cloud Infrastructure, the solution is quite simple.&lt;/p&gt;</description>
     </item>
   </channel>

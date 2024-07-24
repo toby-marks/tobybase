@@ -2,66 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>virtual machines on 👨🏻‍💻 Tobybase</title>
-    <link>https://tobybase.com/tags/virtual-machines/</link>
+    <link>//tobybase.com/tags/virtual-machines/</link>
     <description>Recent content in virtual machines on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 29 May 2020 13:41:02 -0500</lastBuildDate>
-    <atom:link href="https://tobybase.com/tags/virtual-machines/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//tobybase.com/tags/virtual-machines/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Share Files Between a Photon OS VM and the VM Host</title>
-      <link>https://tobybase.com/posts/share-files-between-photon-vm-and-host/</link>
+      <link>//tobybase.com/posts/share-files-between-photon-vm-and-host/</link>
       <pubDate>Fri, 29 May 2020 13:41:02 -0500</pubDate>
-      <guid>https://tobybase.com/posts/share-files-between-photon-vm-and-host/</guid>
+      <guid>//tobybase.com/posts/share-files-between-photon-vm-and-host/</guid>
       <description>(The following is adapted from the official Photon OS FAQ.)&#xA;How do I transfer or share files between #Photon and my host machine? Use vmhgfs-fuse to transfer files between Photon and your host machine:&#xA;Enable Shared folders in the Workstation or Fusion UI (edit the VM settings and choose Options-&amp;gt;Enabled shared folders).&#xA;Make sure open-vm-tools is installed (it is installed by default in the Minimal installation and OVA import).&#xA;Run vmware-hgfsclient to list the shares.</description>
     </item>
     <item>
       <title>How to Configure Static Networking in a Linux VM</title>
-      <link>https://tobybase.com/posts/configure-static-networking/</link>
+      <link>//tobybase.com/posts/configure-static-networking/</link>
       <pubDate>Wed, 20 May 2020 16:36:06 -0500</pubDate>
-      <guid>https://tobybase.com/posts/configure-static-networking/</guid>
+      <guid>//tobybase.com/posts/configure-static-networking/</guid>
       <description>I originally had this requirement after creating a new persistent linux virtual machine in OVM that needed static addressing. This is just standard linux setup, though, and can be adapted to both virtual and physical machines.&#xA;Turn on Networking # sudo vi /etc/sysconfig/network Make sure networking is enabled and configure the hostname.&#xA;NETWORKING=yes HOSTNAME=myhost.mycompany.local Configure the Network Interface # sudo vi /etc/sysconfig/network-scripts/ifcfg-eth0 Here is a sample config for static IPs.</description>
     </item>
     <item>
       <title>Access Denied Attaching Block Volume to Windows VM in OCI</title>
-      <link>https://tobybase.com/posts/2018-04-10-oci-add-block-volume-on-windows/</link>
+      <link>//tobybase.com/posts/2018-04-10-oci-add-block-volume-on-windows/</link>
       <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
-      <guid>https://tobybase.com/posts/2018-04-10-oci-add-block-volume-on-windows/</guid>
+      <guid>//tobybase.com/posts/2018-04-10-oci-add-block-volume-on-windows/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt;If you are getting the above error when trying to add a block volume to a Windows VM in Oracle Cloud Infrastructure, the solution is quite simple.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Move Your VM to Oracle Cloud - Part 4</title>
-      <link>https://tobybase.com/posts/infolob-lift-and-shift-howto-4/</link>
+      <link>//tobybase.com/posts/infolob-lift-and-shift-howto-4/</link>
       <pubDate>Fri, 10 Mar 2017 14:56:00 +0000</pubDate>
-      <guid>https://tobybase.com/posts/infolob-lift-and-shift-howto-4/</guid>
+      <guid>//tobybase.com/posts/infolob-lift-and-shift-howto-4/</guid>
       <description>In the last of a four-part video series, our Director of Cloud Services Brian Hill creates a new compute instance in Oracle Cloud Compute Services based on his custom Windows virtual machine image.</description>
     </item>
     <item>
       <title>Move Your VM to Oracle Cloud - Part 3</title>
-      <link>https://tobybase.com/posts/infolob-lift-and-shift-howto-3/</link>
+      <link>//tobybase.com/posts/infolob-lift-and-shift-howto-3/</link>
       <pubDate>Fri, 10 Mar 2017 14:53:00 +0000</pubDate>
-      <guid>https://tobybase.com/posts/infolob-lift-and-shift-howto-3/</guid>
+      <guid>//tobybase.com/posts/infolob-lift-and-shift-howto-3/</guid>
       <description>In part three of a four-part video series, our Director of Cloud Services Brian Hill creates a bootable storage volume in Oracle Cloud Compute Services with his new Windows image.</description>
     </item>
     <item>
       <title>Move Your VM to Oracle Cloud - Part 2</title>
-      <link>https://tobybase.com/posts/infolob-lift-and-shift-howto-2/</link>
+      <link>//tobybase.com/posts/infolob-lift-and-shift-howto-2/</link>
       <pubDate>Fri, 10 Mar 2017 14:47:00 +0000</pubDate>
-      <guid>https://tobybase.com/posts/infolob-lift-and-shift-howto-2/</guid>
+      <guid>//tobybase.com/posts/infolob-lift-and-shift-howto-2/</guid>
       <description>In part two of a four-part video series, our Director of Cloud Services Brian Hill creates an image in Oracle Cloud Compute Services based on a Windows virtual machine.</description>
     </item>
     <item>
       <title>Move Your VM to Oracle Cloud - Part 1</title>
-      <link>https://tobybase.com/posts/infolob-lift-and-shift-howto-1/</link>
+      <link>//tobybase.com/posts/infolob-lift-and-shift-howto-1/</link>
       <pubDate>Fri, 10 Mar 2017 14:41:00 +0000</pubDate>
-      <guid>https://tobybase.com/posts/infolob-lift-and-shift-howto-1/</guid>
+      <guid>//tobybase.com/posts/infolob-lift-and-shift-howto-1/</guid>
       <description>In part one of a four-part video series, our Director of Cloud Services Brian Hill demonstrates how to prepare your virtual machine for upload to the cloud.</description>
     </item>
     <item>
       <title>Announcing the Infolob YouTube Channel</title>
-      <link>https://tobybase.com/posts/infolob-youtube-channel/</link>
+      <link>//tobybase.com/posts/infolob-youtube-channel/</link>
       <pubDate>Fri, 10 Mar 2017 00:00:00 +0000</pubDate>
-      <guid>https://tobybase.com/posts/infolob-youtube-channel/</guid>
+      <guid>//tobybase.com/posts/infolob-youtube-channel/</guid>
       <description>I am honored to work with some wonderful and truly smart folks over at Infolob in Irving, Texas. The company recently started a YouTube channel and we are looking to add lots of great videos soon for your enjoyment and education.&#xA;Check us out!&#xA;In this short Oracle Platinum Partner Spotlight video, our Chief Technologist Tim Fox explains what we do as a company and the kinds of services we provide.</description>
     </item>
   </channel>

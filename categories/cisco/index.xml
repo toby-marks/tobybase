@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cisco on 👨🏻‍💻 Tobybase</title>
-    <link>https://tobybase.com/categories/cisco/</link>
+    <link>//tobybase.com/categories/cisco/</link>
     <description>Recent content in Cisco on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 27 Jan 2020 15:20:10 -0600</lastBuildDate>
-    <atom:link href="https://tobybase.com/categories/cisco/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//tobybase.com/categories/cisco/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Error in Cisco AnyConnect Client: &#34;Cannot Confirm it is Connected&#34;</title>
-      <link>https://tobybase.com/posts/problems-connecting-with-anyconnect-vpn/</link>
+      <link>//tobybase.com/posts/problems-connecting-with-anyconnect-vpn/</link>
       <pubDate>Mon, 27 Jan 2020 15:20:10 -0600</pubDate>
-      <guid>https://tobybase.com/posts/problems-connecting-with-anyconnect-vpn/</guid>
+      <guid>//tobybase.com/posts/problems-connecting-with-anyconnect-vpn/</guid>
       <description>[NOTE: problem identified on my personal laptop with macOS 10.15.2, Cisco AnyConnect Secure Mobility Client 4.6.03049]&#xA;What to Do When You Encounter This Error AnyConnect cannot confirm it is connected to your secure gateway. The local network may not be trustworthy. Please try another network.&#xA;This is a potentially misleading explanation, as the problem in my case was due to a corrupted VPN certificate.&#xA;To fix the problem on macOS, do the following.</description>
     </item>
   </channel>

@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Series on 👨🏻‍💻 Tobybase</title>
-    <link>https://tobybase.com/series/</link>
+    <link>//tobybase.com/series/</link>
     <description>Recent content in Series on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 05 Jun 2020 17:23:31 -0500</lastBuildDate>
-    <atom:link href="https://tobybase.com/series/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//tobybase.com/series/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>TIL</title>
-      <link>https://tobybase.com/series/til/</link>
+      <link>//tobybase.com/series/til/</link>
       <pubDate>Fri, 05 Jun 2020 17:23:31 -0500</pubDate>
-      <guid>https://tobybase.com/series/til/</guid>
+      <guid>//tobybase.com/series/til/</guid>
       <description></description>
     </item>
     <item>
       <title>Get Going With Autonomous Database in the Cloud</title>
-      <link>https://tobybase.com/series/get-going-with-autonomous-database-in-the-cloud/</link>
+      <link>//tobybase.com/series/get-going-with-autonomous-database-in-the-cloud/</link>
       <pubDate>Fri, 17 Jan 2020 17:08:16 -0600</pubDate>
-      <guid>https://tobybase.com/series/get-going-with-autonomous-database-in-the-cloud/</guid>
+      <guid>//tobybase.com/series/get-going-with-autonomous-database-in-the-cloud/</guid>
       <description></description>
     </item>
     <item>
       <title>Infolob on YouTube</title>
-      <link>https://tobybase.com/series/infolob-on-youtube/</link>
+      <link>//tobybase.com/series/infolob-on-youtube/</link>
       <pubDate>Fri, 10 Mar 2017 14:56:00 +0000</pubDate>
-      <guid>https://tobybase.com/series/infolob-on-youtube/</guid>
+      <guid>//tobybase.com/series/infolob-on-youtube/</guid>
       <description></description>
     </item>
     <item>
       <title>BI Publisher</title>
-      <link>https://tobybase.com/series/bi-publisher/</link>
+      <link>//tobybase.com/series/bi-publisher/</link>
       <pubDate>Mon, 12 Nov 2012 18:12:00 +0000</pubDate>
-      <guid>https://tobybase.com/series/bi-publisher/</guid>
+      <guid>//tobybase.com/series/bi-publisher/</guid>
       <description></description>
     </item>
     <item>
       <title>Table Functions</title>
-      <link>https://tobybase.com/series/table-functions/</link>
+      <link>//tobybase.com/series/table-functions/</link>
       <pubDate>Fri, 27 Apr 2012 22:35:00 +0000</pubDate>
-      <guid>https://tobybase.com/series/table-functions/</guid>
+      <guid>//tobybase.com/series/table-functions/</guid>
       <description></description>
     </item>
   </channel>

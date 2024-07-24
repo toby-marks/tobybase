@@ -2,437 +2,437 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on 👨🏻‍💻 Tobybase</title>
-    <link>https://tobybase.com/tags/</link>
+    <link>//tobybase.com/tags/</link>
     <description>Recent content in Tags on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 05 Jun 2020 17:37:14 -0500</lastBuildDate>
-    <atom:link href="https://tobybase.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//tobybase.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Microsoft Windows</title>
-      <link>https://tobybase.com/tags/microsoft-windows/</link>
+      <link>//tobybase.com/tags/microsoft-windows/</link>
       <pubDate>Fri, 05 Jun 2020 17:37:14 -0500</pubDate>
-      <guid>https://tobybase.com/tags/microsoft-windows/</guid>
+      <guid>//tobybase.com/tags/microsoft-windows/</guid>
       <description></description>
     </item>
     <item>
       <title>Oracle</title>
-      <link>https://tobybase.com/tags/oracle/</link>
+      <link>//tobybase.com/tags/oracle/</link>
       <pubDate>Fri, 05 Jun 2020 17:37:14 -0500</pubDate>
-      <guid>https://tobybase.com/tags/oracle/</guid>
+      <guid>//tobybase.com/tags/oracle/</guid>
       <description></description>
     </item>
     <item>
       <title>SQL Developer</title>
-      <link>https://tobybase.com/tags/sql-developer/</link>
+      <link>//tobybase.com/tags/sql-developer/</link>
       <pubDate>Fri, 05 Jun 2020 17:37:14 -0500</pubDate>
-      <guid>https://tobybase.com/tags/sql-developer/</guid>
+      <guid>//tobybase.com/tags/sql-developer/</guid>
       <description></description>
     </item>
     <item>
       <title>Atom</title>
-      <link>https://tobybase.com/tags/atom/</link>
+      <link>//tobybase.com/tags/atom/</link>
       <pubDate>Fri, 05 Jun 2020 17:23:31 -0500</pubDate>
-      <guid>https://tobybase.com/tags/atom/</guid>
+      <guid>//tobybase.com/tags/atom/</guid>
       <description></description>
     </item>
     <item>
       <title>containers</title>
-      <link>https://tobybase.com/tags/containers/</link>
+      <link>//tobybase.com/tags/containers/</link>
       <pubDate>Fri, 29 May 2020 13:41:02 -0500</pubDate>
-      <guid>https://tobybase.com/tags/containers/</guid>
+      <guid>//tobybase.com/tags/containers/</guid>
       <description></description>
     </item>
     <item>
       <title>Photon OS</title>
-      <link>https://tobybase.com/tags/photon-os/</link>
+      <link>//tobybase.com/tags/photon-os/</link>
       <pubDate>Fri, 29 May 2020 13:41:02 -0500</pubDate>
-      <guid>https://tobybase.com/tags/photon-os/</guid>
+      <guid>//tobybase.com/tags/photon-os/</guid>
       <description></description>
     </item>
     <item>
       <title>virtual machines</title>
-      <link>https://tobybase.com/tags/virtual-machines/</link>
+      <link>//tobybase.com/tags/virtual-machines/</link>
       <pubDate>Fri, 29 May 2020 13:41:02 -0500</pubDate>
-      <guid>https://tobybase.com/tags/virtual-machines/</guid>
+      <guid>//tobybase.com/tags/virtual-machines/</guid>
       <description></description>
     </item>
     <item>
       <title>VMWare</title>
-      <link>https://tobybase.com/tags/vmware/</link>
+      <link>//tobybase.com/tags/vmware/</link>
       <pubDate>Fri, 29 May 2020 13:41:02 -0500</pubDate>
-      <guid>https://tobybase.com/tags/vmware/</guid>
+      <guid>//tobybase.com/tags/vmware/</guid>
       <description></description>
     </item>
     <item>
       <title>migrations</title>
-      <link>https://tobybase.com/tags/migrations/</link>
+      <link>//tobybase.com/tags/migrations/</link>
       <pubDate>Wed, 27 May 2020 10:22:08 -0500</pubDate>
-      <guid>https://tobybase.com/tags/migrations/</guid>
+      <guid>//tobybase.com/tags/migrations/</guid>
       <description></description>
     </item>
     <item>
       <title>Teradata</title>
-      <link>https://tobybase.com/tags/teradata/</link>
+      <link>//tobybase.com/tags/teradata/</link>
       <pubDate>Wed, 27 May 2020 10:22:08 -0500</pubDate>
-      <guid>https://tobybase.com/tags/teradata/</guid>
+      <guid>//tobybase.com/tags/teradata/</guid>
       <description></description>
     </item>
     <item>
       <title>Docker</title>
-      <link>https://tobybase.com/tags/docker/</link>
+      <link>//tobybase.com/tags/docker/</link>
       <pubDate>Wed, 20 May 2020 16:36:06 -0500</pubDate>
-      <guid>https://tobybase.com/tags/docker/</guid>
+      <guid>//tobybase.com/tags/docker/</guid>
       <description></description>
     </item>
     <item>
       <title>OVM</title>
-      <link>https://tobybase.com/tags/ovm/</link>
+      <link>//tobybase.com/tags/ovm/</link>
       <pubDate>Wed, 20 May 2020 16:36:06 -0500</pubDate>
-      <guid>https://tobybase.com/tags/ovm/</guid>
+      <guid>//tobybase.com/tags/ovm/</guid>
       <description></description>
     </item>
     <item>
       <title>git</title>
-      <link>https://tobybase.com/tags/git/</link>
+      <link>//tobybase.com/tags/git/</link>
       <pubDate>Tue, 19 May 2020 17:09:28 -0500</pubDate>
-      <guid>https://tobybase.com/tags/git/</guid>
+      <guid>//tobybase.com/tags/git/</guid>
       <description></description>
     </item>
     <item>
       <title>GitHub</title>
-      <link>https://tobybase.com/tags/github/</link>
+      <link>//tobybase.com/tags/github/</link>
       <pubDate>Tue, 19 May 2020 17:09:28 -0500</pubDate>
-      <guid>https://tobybase.com/tags/github/</guid>
+      <guid>//tobybase.com/tags/github/</guid>
       <description></description>
     </item>
     <item>
       <title>tools</title>
-      <link>https://tobybase.com/tags/tools/</link>
+      <link>//tobybase.com/tags/tools/</link>
       <pubDate>Tue, 19 May 2020 17:09:28 -0500</pubDate>
-      <guid>https://tobybase.com/tags/tools/</guid>
+      <guid>//tobybase.com/tags/tools/</guid>
       <description></description>
     </item>
     <item>
       <title>Infolob</title>
-      <link>https://tobybase.com/tags/infolob/</link>
+      <link>//tobybase.com/tags/infolob/</link>
       <pubDate>Fri, 07 Feb 2020 21:00:00 +0000</pubDate>
-      <guid>https://tobybase.com/tags/infolob/</guid>
+      <guid>//tobybase.com/tags/infolob/</guid>
       <description></description>
     </item>
     <item>
       <title>OCI</title>
-      <link>https://tobybase.com/tags/oci/</link>
+      <link>//tobybase.com/tags/oci/</link>
       <pubDate>Fri, 07 Feb 2020 21:00:00 +0000</pubDate>
-      <guid>https://tobybase.com/tags/oci/</guid>
+      <guid>//tobybase.com/tags/oci/</guid>
       <description></description>
     </item>
     <item>
       <title>macos</title>
-      <link>https://tobybase.com/tags/macos/</link>
+      <link>//tobybase.com/tags/macos/</link>
       <pubDate>Mon, 27 Jan 2020 15:20:10 -0600</pubDate>
-      <guid>https://tobybase.com/tags/macos/</guid>
+      <guid>//tobybase.com/tags/macos/</guid>
       <description></description>
     </item>
     <item>
       <title>VPN</title>
-      <link>https://tobybase.com/tags/vpn/</link>
+      <link>//tobybase.com/tags/vpn/</link>
       <pubDate>Mon, 27 Jan 2020 15:20:10 -0600</pubDate>
-      <guid>https://tobybase.com/tags/vpn/</guid>
+      <guid>//tobybase.com/tags/vpn/</guid>
       <description></description>
     </item>
     <item>
       <title>Oracle Autonomous Data Warehouse</title>
-      <link>https://tobybase.com/tags/oracle-autonomous-data-warehouse/</link>
+      <link>//tobybase.com/tags/oracle-autonomous-data-warehouse/</link>
       <pubDate>Fri, 17 Jan 2020 17:08:16 -0600</pubDate>
-      <guid>https://tobybase.com/tags/oracle-autonomous-data-warehouse/</guid>
+      <guid>//tobybase.com/tags/oracle-autonomous-data-warehouse/</guid>
       <description></description>
     </item>
     <item>
       <title>Oracle Autonomous Database</title>
-      <link>https://tobybase.com/tags/oracle-autonomous-database/</link>
+      <link>//tobybase.com/tags/oracle-autonomous-database/</link>
       <pubDate>Fri, 17 Jan 2020 17:08:16 -0600</pubDate>
-      <guid>https://tobybase.com/tags/oracle-autonomous-database/</guid>
+      <guid>//tobybase.com/tags/oracle-autonomous-database/</guid>
       <description></description>
     </item>
     <item>
       <title>SAS</title>
-      <link>https://tobybase.com/tags/sas/</link>
+      <link>//tobybase.com/tags/sas/</link>
       <pubDate>Mon, 23 Sep 2019 13:54:50 -0500</pubDate>
-      <guid>https://tobybase.com/tags/sas/</guid>
+      <guid>//tobybase.com/tags/sas/</guid>
       <description></description>
     </item>
     <item>
       <title>tuning</title>
-      <link>https://tobybase.com/tags/tuning/</link>
+      <link>//tobybase.com/tags/tuning/</link>
       <pubDate>Mon, 23 Sep 2019 13:54:50 -0500</pubDate>
-      <guid>https://tobybase.com/tags/tuning/</guid>
+      <guid>//tobybase.com/tags/tuning/</guid>
       <description></description>
     </item>
     <item>
       <title>IaaS</title>
-      <link>https://tobybase.com/tags/iaas/</link>
+      <link>//tobybase.com/tags/iaas/</link>
       <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
-      <guid>https://tobybase.com/tags/iaas/</guid>
+      <guid>//tobybase.com/tags/iaas/</guid>
       <description></description>
     </item>
     <item>
       <title>Juniper</title>
-      <link>https://tobybase.com/tags/juniper/</link>
+      <link>//tobybase.com/tags/juniper/</link>
       <pubDate>Thu, 04 Feb 2016 22:50:09 +0000</pubDate>
-      <guid>https://tobybase.com/tags/juniper/</guid>
+      <guid>//tobybase.com/tags/juniper/</guid>
       <description></description>
     </item>
     <item>
       <title>BI Publisher</title>
-      <link>https://tobybase.com/tags/bi-publisher/</link>
+      <link>//tobybase.com/tags/bi-publisher/</link>
       <pubDate>Fri, 14 Jun 2013 21:47:00 +0000</pubDate>
-      <guid>https://tobybase.com/tags/bi-publisher/</guid>
+      <guid>//tobybase.com/tags/bi-publisher/</guid>
       <description></description>
     </item>
     <item>
       <title>Microsoft Word</title>
-      <link>https://tobybase.com/tags/microsoft-word/</link>
+      <link>//tobybase.com/tags/microsoft-word/</link>
       <pubDate>Fri, 14 Jun 2013 21:47:00 +0000</pubDate>
-      <guid>https://tobybase.com/tags/microsoft-word/</guid>
+      <guid>//tobybase.com/tags/microsoft-word/</guid>
       <description></description>
     </item>
     <item>
       <title>APEX</title>
-      <link>https://tobybase.com/tags/apex/</link>
+      <link>//tobybase.com/tags/apex/</link>
       <pubDate>Tue, 18 Dec 2012 00:00:00 +0000</pubDate>
-      <guid>https://tobybase.com/tags/apex/</guid>
+      <guid>//tobybase.com/tags/apex/</guid>
       <description></description>
     </item>
     <item>
       <title>iReport</title>
-      <link>https://tobybase.com/tags/ireport/</link>
+      <link>//tobybase.com/tags/ireport/</link>
       <pubDate>Tue, 18 Dec 2012 00:00:00 +0000</pubDate>
-      <guid>https://tobybase.com/tags/ireport/</guid>
+      <guid>//tobybase.com/tags/ireport/</guid>
       <description></description>
     </item>
     <item>
       <title>Jaspersoft</title>
-      <link>https://tobybase.com/tags/jaspersoft/</link>
+      <link>//tobybase.com/tags/jaspersoft/</link>
       <pubDate>Tue, 18 Dec 2012 00:00:00 +0000</pubDate>
-      <guid>https://tobybase.com/tags/jaspersoft/</guid>
+      <guid>//tobybase.com/tags/jaspersoft/</guid>
       <description></description>
     </item>
     <item>
       <title>PL-JRXML2PDF</title>
-      <link>https://tobybase.com/tags/pl-jrxml2pdf/</link>
+      <link>//tobybase.com/tags/pl-jrxml2pdf/</link>
       <pubDate>Tue, 18 Dec 2012 00:00:00 +0000</pubDate>
-      <guid>https://tobybase.com/tags/pl-jrxml2pdf/</guid>
+      <guid>//tobybase.com/tags/pl-jrxml2pdf/</guid>
       <description></description>
     </item>
     <item>
       <title>XML</title>
-      <link>https://tobybase.com/tags/xml/</link>
+      <link>//tobybase.com/tags/xml/</link>
       <pubDate>Wed, 14 Nov 2012 00:00:00 +0000</pubDate>
-      <guid>https://tobybase.com/tags/xml/</guid>
+      <guid>//tobybase.com/tags/xml/</guid>
       <description></description>
     </item>
     <item>
       <title>LDAP</title>
-      <link>https://tobybase.com/tags/ldap/</link>
+      <link>//tobybase.com/tags/ldap/</link>
       <pubDate>Mon, 12 Nov 2012 17:32:00 +0000</pubDate>
-      <guid>https://tobybase.com/tags/ldap/</guid>
+      <guid>//tobybase.com/tags/ldap/</guid>
       <description></description>
     </item>
     <item>
       <title>Microsoft Active Directory</title>
-      <link>https://tobybase.com/tags/microsoft-active-directory/</link>
+      <link>//tobybase.com/tags/microsoft-active-directory/</link>
       <pubDate>Mon, 12 Nov 2012 17:32:00 +0000</pubDate>
-      <guid>https://tobybase.com/tags/microsoft-active-directory/</guid>
+      <guid>//tobybase.com/tags/microsoft-active-directory/</guid>
       <description></description>
     </item>
     <item>
       <title>CSS</title>
-      <link>https://tobybase.com/tags/css/</link>
+      <link>//tobybase.com/tags/css/</link>
       <pubDate>Fri, 26 Oct 2012 21:09:00 +0000</pubDate>
-      <guid>https://tobybase.com/tags/css/</guid>
+      <guid>//tobybase.com/tags/css/</guid>
       <description></description>
     </item>
     <item>
       <title>Firefox</title>
-      <link>https://tobybase.com/tags/firefox/</link>
+      <link>//tobybase.com/tags/firefox/</link>
       <pubDate>Fri, 26 Oct 2012 21:09:00 +0000</pubDate>
-      <guid>https://tobybase.com/tags/firefox/</guid>
+      <guid>//tobybase.com/tags/firefox/</guid>
       <description></description>
     </item>
     <item>
       <title>HTML</title>
-      <link>https://tobybase.com/tags/html/</link>
+      <link>//tobybase.com/tags/html/</link>
       <pubDate>Fri, 26 Oct 2012 21:09:00 +0000</pubDate>
-      <guid>https://tobybase.com/tags/html/</guid>
+      <guid>//tobybase.com/tags/html/</guid>
       <description></description>
     </item>
     <item>
       <title>apple</title>
-      <link>https://tobybase.com/tags/apple/</link>
+      <link>//tobybase.com/tags/apple/</link>
       <pubDate>Wed, 25 Jul 2012 00:00:00 +0000</pubDate>
-      <guid>https://tobybase.com/tags/apple/</guid>
+      <guid>//tobybase.com/tags/apple/</guid>
       <description></description>
     </item>
     <item>
       <title>macbook</title>
-      <link>https://tobybase.com/tags/macbook/</link>
+      <link>//tobybase.com/tags/macbook/</link>
       <pubDate>Wed, 25 Jul 2012 00:00:00 +0000</pubDate>
-      <guid>https://tobybase.com/tags/macbook/</guid>
+      <guid>//tobybase.com/tags/macbook/</guid>
       <description></description>
     </item>
     <item>
       <title>safari</title>
-      <link>https://tobybase.com/tags/safari/</link>
+      <link>//tobybase.com/tags/safari/</link>
       <pubDate>Wed, 25 Jul 2012 00:00:00 +0000</pubDate>
-      <guid>https://tobybase.com/tags/safari/</guid>
+      <guid>//tobybase.com/tags/safari/</guid>
       <description></description>
     </item>
     <item>
       <title>Oracle Forms</title>
-      <link>https://tobybase.com/tags/oracle-forms/</link>
+      <link>//tobybase.com/tags/oracle-forms/</link>
       <pubDate>Thu, 12 Jul 2012 22:28:24 +0000</pubDate>
-      <guid>https://tobybase.com/tags/oracle-forms/</guid>
+      <guid>//tobybase.com/tags/oracle-forms/</guid>
       <description></description>
     </item>
     <item>
       <title>CGI</title>
-      <link>https://tobybase.com/tags/cgi/</link>
+      <link>//tobybase.com/tags/cgi/</link>
       <pubDate>Mon, 02 Jul 2012 22:40:00 +0000</pubDate>
-      <guid>https://tobybase.com/tags/cgi/</guid>
+      <guid>//tobybase.com/tags/cgi/</guid>
       <description></description>
     </item>
     <item>
       <title>DML</title>
-      <link>https://tobybase.com/tags/dml/</link>
+      <link>//tobybase.com/tags/dml/</link>
       <pubDate>Thu, 07 Jun 2012 17:04:00 +0000</pubDate>
-      <guid>https://tobybase.com/tags/dml/</guid>
+      <guid>//tobybase.com/tags/dml/</guid>
       <description></description>
     </item>
     <item>
       <title>SQL*Loader</title>
-      <link>https://tobybase.com/tags/sqlloader/</link>
+      <link>//tobybase.com/tags/sqlloader/</link>
       <pubDate>Thu, 07 Jun 2012 17:04:00 +0000</pubDate>
-      <guid>https://tobybase.com/tags/sqlloader/</guid>
+      <guid>//tobybase.com/tags/sqlloader/</guid>
       <description></description>
     </item>
     <item>
       <title>sql</title>
-      <link>https://tobybase.com/tags/sql/</link>
+      <link>//tobybase.com/tags/sql/</link>
       <pubDate>Fri, 25 May 2012 00:00:00 +0000</pubDate>
-      <guid>https://tobybase.com/tags/sql/</guid>
+      <guid>//tobybase.com/tags/sql/</guid>
       <description></description>
     </item>
     <item>
       <title>Microsoft Access</title>
-      <link>https://tobybase.com/tags/microsoft-access/</link>
+      <link>//tobybase.com/tags/microsoft-access/</link>
       <pubDate>Fri, 11 May 2012 20:54:00 +0000</pubDate>
-      <guid>https://tobybase.com/tags/microsoft-access/</guid>
+      <guid>//tobybase.com/tags/microsoft-access/</guid>
       <description></description>
     </item>
     <item>
       <title>Microsoft Office</title>
-      <link>https://tobybase.com/tags/microsoft-office/</link>
+      <link>//tobybase.com/tags/microsoft-office/</link>
       <pubDate>Fri, 11 May 2012 20:54:00 +0000</pubDate>
-      <guid>https://tobybase.com/tags/microsoft-office/</guid>
+      <guid>//tobybase.com/tags/microsoft-office/</guid>
       <description></description>
     </item>
     <item>
       <title>ODBC</title>
-      <link>https://tobybase.com/tags/odbc/</link>
+      <link>//tobybase.com/tags/odbc/</link>
       <pubDate>Fri, 11 May 2012 20:54:00 +0000</pubDate>
-      <guid>https://tobybase.com/tags/odbc/</guid>
+      <guid>//tobybase.com/tags/odbc/</guid>
       <description></description>
     </item>
     <item>
       <title>instrumentation</title>
-      <link>https://tobybase.com/tags/instrumentation/</link>
+      <link>//tobybase.com/tags/instrumentation/</link>
       <pubDate>Wed, 02 May 2012 21:41:00 +0000</pubDate>
-      <guid>https://tobybase.com/tags/instrumentation/</guid>
+      <guid>//tobybase.com/tags/instrumentation/</guid>
       <description></description>
     </item>
     <item>
       <title>jhat</title>
-      <link>https://tobybase.com/tags/jhat/</link>
+      <link>//tobybase.com/tags/jhat/</link>
       <pubDate>Wed, 02 May 2012 21:41:00 +0000</pubDate>
-      <guid>https://tobybase.com/tags/jhat/</guid>
+      <guid>//tobybase.com/tags/jhat/</guid>
       <description></description>
     </item>
     <item>
       <title>jmap</title>
-      <link>https://tobybase.com/tags/jmap/</link>
+      <link>//tobybase.com/tags/jmap/</link>
       <pubDate>Wed, 02 May 2012 21:41:00 +0000</pubDate>
-      <guid>https://tobybase.com/tags/jmap/</guid>
+      <guid>//tobybase.com/tags/jmap/</guid>
       <description></description>
     </item>
     <item>
       <title>jstack</title>
-      <link>https://tobybase.com/tags/jstack/</link>
+      <link>//tobybase.com/tags/jstack/</link>
       <pubDate>Wed, 02 May 2012 21:41:00 +0000</pubDate>
-      <guid>https://tobybase.com/tags/jstack/</guid>
+      <guid>//tobybase.com/tags/jstack/</guid>
       <description></description>
     </item>
     <item>
       <title>jstat</title>
-      <link>https://tobybase.com/tags/jstat/</link>
+      <link>//tobybase.com/tags/jstat/</link>
       <pubDate>Wed, 02 May 2012 21:41:00 +0000</pubDate>
-      <guid>https://tobybase.com/tags/jstat/</guid>
+      <guid>//tobybase.com/tags/jstat/</guid>
       <description></description>
     </item>
     <item>
       <title>jvm</title>
-      <link>https://tobybase.com/tags/jvm/</link>
+      <link>//tobybase.com/tags/jvm/</link>
       <pubDate>Wed, 02 May 2012 21:41:00 +0000</pubDate>
-      <guid>https://tobybase.com/tags/jvm/</guid>
+      <guid>//tobybase.com/tags/jvm/</guid>
       <description></description>
     </item>
     <item>
       <title>database</title>
-      <link>https://tobybase.com/tags/database/</link>
+      <link>//tobybase.com/tags/database/</link>
       <pubDate>Fri, 27 Apr 2012 22:35:00 +0000</pubDate>
-      <guid>https://tobybase.com/tags/database/</guid>
+      <guid>//tobybase.com/tags/database/</guid>
       <description></description>
     </item>
     <item>
       <title>bash</title>
-      <link>https://tobybase.com/tags/bash/</link>
+      <link>//tobybase.com/tags/bash/</link>
       <pubDate>Thu, 05 Apr 2012 21:19:05 +0000</pubDate>
-      <guid>https://tobybase.com/tags/bash/</guid>
+      <guid>//tobybase.com/tags/bash/</guid>
       <description></description>
     </item>
     <item>
       <title>cron</title>
-      <link>https://tobybase.com/tags/cron/</link>
+      <link>//tobybase.com/tags/cron/</link>
       <pubDate>Thu, 05 Apr 2012 21:19:05 +0000</pubDate>
-      <guid>https://tobybase.com/tags/cron/</guid>
+      <guid>//tobybase.com/tags/cron/</guid>
       <description></description>
     </item>
     <item>
       <title>Oracle Application Server</title>
-      <link>https://tobybase.com/tags/oracle-application-server/</link>
+      <link>//tobybase.com/tags/oracle-application-server/</link>
       <pubDate>Fri, 09 Mar 2012 18:42:00 +0000</pubDate>
-      <guid>https://tobybase.com/tags/oracle-application-server/</guid>
+      <guid>//tobybase.com/tags/oracle-application-server/</guid>
       <description></description>
     </item>
     <item>
       <title>Toplink</title>
-      <link>https://tobybase.com/tags/toplink/</link>
+      <link>//tobybase.com/tags/toplink/</link>
       <pubDate>Fri, 09 Mar 2012 18:42:00 +0000</pubDate>
-      <guid>https://tobybase.com/tags/toplink/</guid>
+      <guid>//tobybase.com/tags/toplink/</guid>
       <description></description>
     </item>
     <item>
       <title>Weblogic</title>
-      <link>https://tobybase.com/tags/weblogic/</link>
+      <link>//tobybase.com/tags/weblogic/</link>
       <pubDate>Fri, 09 Mar 2012 18:42:00 +0000</pubDate>
-      <guid>https://tobybase.com/tags/weblogic/</guid>
+      <guid>//tobybase.com/tags/weblogic/</guid>
       <description></description>
     </item>
     <item>
       <title>unix/linux</title>
-      <link>https://tobybase.com/tags/unix/linux/</link>
+      <link>//tobybase.com/tags/unix/linux/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://tobybase.com/tags/unix/linux/</guid>
+      <guid>//tobybase.com/tags/unix/linux/</guid>
       <description></description>
     </item>
   </channel>

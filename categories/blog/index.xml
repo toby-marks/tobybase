@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>blog on 👨🏻‍💻 Tobybase</title>
-    <link>https://tobybase.com/categories/blog/</link>
+    <link>//tobybase.com/categories/blog/</link>
     <description>Recent content in blog on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 17 Jan 2017 22:58:59 -0600</lastBuildDate>
-    <atom:link href="https://tobybase.com/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//tobybase.com/categories/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Announcing… tobybase.com</title>
-      <link>https://tobybase.com/posts/announcing-tobybase/</link>
+      <link>//tobybase.com/posts/announcing-tobybase/</link>
       <pubDate>Tue, 17 Jan 2017 22:58:59 -0600</pubDate>
-      <guid>https://tobybase.com/posts/announcing-tobybase/</guid>
+      <guid>//tobybase.com/posts/announcing-tobybase/</guid>
       <description>Welcome one and all to my new professional blog, tobybase.com. My name is Toby Marks and I work as a Oracle Consultant at Infolob Solutions in Irving, Texas. My old blog is still up on Tumblr, and there are a few items there that folks still find useful. Most of the content is a bit dated, though, as I&amp;rsquo;ve been out of the blogging game for a while.&#xA;This is my attempt to turn that around.</description>
     </item>
   </channel>

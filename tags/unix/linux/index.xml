@@ -2,51 +2,51 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>unix/linux on 👨🏻‍💻 Tobybase</title>
-    <link>https://tobybase.com/tags/unix/linux/</link>
+    <link>//tobybase.com/tags/unix/linux/</link>
     <description>Recent content in unix/linux on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <atom:link href="https://tobybase.com/tags/unix/linux/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//tobybase.com/tags/unix/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>&#39;Invalid Format&#39; Error Connecting to Server with SSH and Private Key</title>
-      <link>https://tobybase.com/posts/invalid-format-connecting-to-server-with-ssh/</link>
+      <link>//tobybase.com/posts/invalid-format-connecting-to-server-with-ssh/</link>
       <pubDate>Sat, 06 Jun 2020 12:01:34 -0500</pubDate>
-      <guid>https://tobybase.com/posts/invalid-format-connecting-to-server-with-ssh/</guid>
+      <guid>//tobybase.com/posts/invalid-format-connecting-to-server-with-ssh/</guid>
       <description>If you get an &amp;lsquo;invalid format&amp;rsquo; error when trying to SSH in to a remote server using a private key file that you know is valid, it may be because the key was generated with PuTTY.&#xA;If the key begins with PuTTY-User-Key-File and you are using SSH/openSSH (ie. command line SSH) to connect to your server, you will need to first convert the key file using the puttygen tool that comes with PuTTY.</description>
     </item>
     <item>
       <title>How to Share Files Between a Photon OS VM and the VM Host</title>
-      <link>https://tobybase.com/posts/share-files-between-photon-vm-and-host/</link>
+      <link>//tobybase.com/posts/share-files-between-photon-vm-and-host/</link>
       <pubDate>Fri, 29 May 2020 13:41:02 -0500</pubDate>
-      <guid>https://tobybase.com/posts/share-files-between-photon-vm-and-host/</guid>
+      <guid>//tobybase.com/posts/share-files-between-photon-vm-and-host/</guid>
       <description>(The following is adapted from the official Photon OS FAQ.)&#xA;How do I transfer or share files between #Photon and my host machine? Use vmhgfs-fuse to transfer files between Photon and your host machine:&#xA;Enable Shared folders in the Workstation or Fusion UI (edit the VM settings and choose Options-&amp;gt;Enabled shared folders).&#xA;Make sure open-vm-tools is installed (it is installed by default in the Minimal installation and OVA import).&#xA;Run vmware-hgfsclient to list the shares.</description>
     </item>
     <item>
       <title>How to Configure Static Networking in a Linux VM</title>
-      <link>https://tobybase.com/posts/configure-static-networking/</link>
+      <link>//tobybase.com/posts/configure-static-networking/</link>
       <pubDate>Wed, 20 May 2020 16:36:06 -0500</pubDate>
-      <guid>https://tobybase.com/posts/configure-static-networking/</guid>
+      <guid>//tobybase.com/posts/configure-static-networking/</guid>
       <description>I originally had this requirement after creating a new persistent linux virtual machine in OVM that needed static addressing. This is just standard linux setup, though, and can be adapted to both virtual and physical machines.&#xA;Turn on Networking # sudo vi /etc/sysconfig/network Make sure networking is enabled and configure the hostname.&#xA;NETWORKING=yes HOSTNAME=myhost.mycompany.local Configure the Network Interface # sudo vi /etc/sysconfig/network-scripts/ifcfg-eth0 Here is a sample config for static IPs.</description>
     </item>
     <item>
       <title>How to Use ps to List Top Memory, CPU Eating Processes</title>
-      <link>https://tobybase.com/posts/2013-07-24-linux-unix-use-ps-to-list-top-memory-cpu-eating-processes/</link>
+      <link>//tobybase.com/posts/2013-07-24-linux-unix-use-ps-to-list-top-memory-cpu-eating-processes/</link>
       <pubDate>Wed, 24 Jul 2013 21:42:00 +0000</pubDate>
-      <guid>https://tobybase.com/posts/2013-07-24-linux-unix-use-ps-to-list-top-memory-cpu-eating-processes/</guid>
+      <guid>//tobybase.com/posts/2013-07-24-linux-unix-use-ps-to-list-top-memory-cpu-eating-processes/</guid>
       <description>The ps command is a versatile and configurable way to look at the processes running on your system, though I&amp;rsquo;ve generally gotten by with a lazy ps -ef to find out whatever I needed to know. Recently, though, a client&amp;rsquo;s server began running out of memory, and as a number of processes were running on the server, the culprit was not immediately clear. I wanted to provide them with a quick, simple diagnostic tool they could use the next time they received an alert.</description>
     </item>
     <item>
       <title>How To Use a Perl CGI Script to Show Real Web Server Host Name</title>
-      <link>https://tobybase.com/posts/2012-07-02-use-a-perl-cgi-script-to-show-real-web-server-host-name/</link>
+      <link>//tobybase.com/posts/2012-07-02-use-a-perl-cgi-script-to-show-real-web-server-host-name/</link>
       <pubDate>Mon, 02 Jul 2012 22:40:00 +0000</pubDate>
-      <guid>https://tobybase.com/posts/2012-07-02-use-a-perl-cgi-script-to-show-real-web-server-host-name/</guid>
+      <guid>//tobybase.com/posts/2012-07-02-use-a-perl-cgi-script-to-show-real-web-server-host-name/</guid>
       <description>Here is a short and simple Perl CGI script that you can use to expose the hostname of your web server, as opposed to just the server/domain portion of the URL string:&#xA;#!/usr/bin/perl print &amp;#34;Content-type: text/html\n\n&amp;#34;; print `hostname`; 1; Name the file something like hostname.cgi and place it in your web server&amp;rsquo;s /cgi-bin/ directory, or if your web server is configured appropriately, just name it hostname.pl and drop it wherever you like.</description>
     </item>
     <item>
       <title>How To Make Bash Scripts crontab-Compatible</title>
-      <link>https://tobybase.com/posts/2012-04-05-make-bash-scripts-crontab-compatible/</link>
+      <link>//tobybase.com/posts/2012-04-05-make-bash-scripts-crontab-compatible/</link>
       <pubDate>Thu, 05 Apr 2012 21:19:05 +0000</pubDate>
-      <guid>https://tobybase.com/posts/2012-04-05-make-bash-scripts-crontab-compatible/</guid>
+      <guid>//tobybase.com/posts/2012-04-05-make-bash-scripts-crontab-compatible/</guid>
       <description>When writing shell scripts in bash, consider whether your script can be automated in a batch scheduler like cron. If you reference any external resources in your script relative to the directory in which it resides, those references may break when running your script through cron.&#xA;By default, crontab runs scripts in the user&amp;rsquo;s home directory, as specified in /etc/passwd. For user &amp;ldquo;Tim&amp;rdquo; with home directory /home/tim, a sample crontab might look something like the following:</description>
     </item>
   </channel>
