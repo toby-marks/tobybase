@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Oracle Application Server on 👨🏻‍💻 Tobybase</title>
-    <link>http://tobybase.com/tags/oracle-application-server/</link>
+    <link>https://tobybase.com/tags/oracle-application-server/</link>
     <description>Recent content in Oracle Application Server on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 22 Feb 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://tobybase.com/tags/oracle-application-server/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tobybase.com/tags/oracle-application-server/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Invalidating Toplink Session Cache To Avoid Stale Data</title>
-      <link>http://tobybase.com/posts/2012-03-09-invalidating-toplink-session-cache-to-avoid-stale-data/</link>
+      <link>https://tobybase.com/posts/2012-03-09-invalidating-toplink-session-cache-to-avoid-stale-data/</link>
       <pubDate>Fri, 09 Mar 2012 18:42:00 +0000</pubDate>
-      <guid>http://tobybase.com/posts/2012-03-09-invalidating-toplink-session-cache-to-avoid-stale-data/</guid>
+      <guid>https://tobybase.com/posts/2012-03-09-invalidating-toplink-session-cache-to-avoid-stale-data/</guid>
       <description>Toplink is a Java framework that maps objects to database tables. It is the reference implementation for the Java Persistence Architecture, or JPA. Developers use Toplink to manage data persistence (storage), queries, and transactions in an Oracle database. By default, Toplink makes use of a special cache called a Session Cache, maintained on the server, which is meant to speed up performance. Queried data is stored in the Session Cache and used in subsequent queries to reduce or eliminate calls to the database.</description>
     </item>
   </channel>

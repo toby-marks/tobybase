@@ -2,73 +2,73 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Links on 👨🏻‍💻 Tobybase</title>
-    <link>http://tobybase.com/links/</link>
+    <link>https://tobybase.com/links/</link>
     <description>Recent content in Links on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 01 May 2018 09:05:54 -0500</lastBuildDate>
-    <atom:link href="http://tobybase.com/links/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tobybase.com/links/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>They Don&#39;t Need ML</title>
-      <link>http://tobybase.com/links/2018-05-01-sql-over-ml/</link>
+      <link>https://tobybase.com/links/2018-05-01-sql-over-ml/</link>
       <pubDate>Tue, 01 May 2018 09:05:54 -0500</pubDate>
-      <guid>http://tobybase.com/links/2018-05-01-sql-over-ml/</guid>
+      <guid>https://tobybase.com/links/2018-05-01-sql-over-ml/</guid>
       <description>I will write a query like select from order table where last shop date is 3 or greater months. When we get this information, we will send a nice &amp;ldquo;we miss you, come back and here&amp;rsquo;s X Naira voucher&amp;rdquo; email. The conversation rate for this one was always greater than 50%.&#xA;So-called artificial intelligence and machine learning tools are in fashion these days, and the impetus is to apply them to all problem sets.</description>
     </item>
     <item>
       <title>Finland is killing its world-famous basic income experiment	</title>
-      <link>http://tobybase.com/links/2018-04-19-finland-dumps-basic-income/</link>
+      <link>https://tobybase.com/links/2018-04-19-finland-dumps-basic-income/</link>
       <pubDate>Thu, 19 Apr 2018 15:18:45 -0500</pubDate>
-      <guid>http://tobybase.com/links/2018-04-19-finland-dumps-basic-income/</guid>
+      <guid>https://tobybase.com/links/2018-04-19-finland-dumps-basic-income/</guid>
       <description>In recent years, a growing number of tech entrepreneurs have endorsed universal basic income (UBI), a system system in which every individual receives a standard amount of money, simply for being alive.&#xA;And…&#xA;These tech moguls recognize that UBI, as well as combatting poverty, could also help solve the problem of increased robotization in the workforce, a problem they are very much part of creating.&#xA;This will be interesting. Official results of the experiment are to be published in 2019.</description>
     </item>
     <item>
       <title>Oracle Sees Autonomous Database Changing DBA Roles for the Good</title>
-      <link>http://tobybase.com/links/2018-04-10-oracle-sees-automation/</link>
+      <link>https://tobybase.com/links/2018-04-10-oracle-sees-automation/</link>
       <pubDate>Tue, 10 Apr 2018 12:47:23 -0500</pubDate>
-      <guid>http://tobybase.com/links/2018-04-10-oracle-sees-automation/</guid>
+      <guid>https://tobybase.com/links/2018-04-10-oracle-sees-automation/</guid>
       <description>If the tactical tasks are reduced &amp;ndash; or even eliminated &amp;ndash; DBAs will have more time to spend on higher level tasks, like data security, data lifecycle management, data architecture and data modeling, Colgan said.&#xA;I can&amp;rsquo;t be too worried about automation replacing the need for database professionals. The first time I recall hearing such claims was in 1999 with the advent of Oracle 9i. If what Colgan says is true, and there is every reason to believe it is, then the day to day work of DBAs and consultants like myself is only bound to become more interesting and productive.</description>
     </item>
     <item>
       <title>2017 Was Bad for Facebook. 2018 Will Be Worse.</title>
-      <link>http://tobybase.com/links/2017-12-15-2018-bad-year-for-facebook/</link>
+      <link>https://tobybase.com/links/2017-12-15-2018-bad-year-for-facebook/</link>
       <pubDate>Fri, 15 Dec 2017 00:00:00 +0000</pubDate>
-      <guid>http://tobybase.com/links/2017-12-15-2018-bad-year-for-facebook/</guid>
+      <guid>https://tobybase.com/links/2017-12-15-2018-bad-year-for-facebook/</guid>
       <description>While Facebook remains the biggest platform, Google and Twitter are facing similar pressure from governments in the U.S. and in Europe. Germany enacted a law requiring the social networks to remove hate speech promptly or face fines. In the U.S., the activities of a Russian troll farm during the 2016 election campaign prompted scrutiny of Facebook&amp;rsquo;s ad selling practices and a (rather ham-handed) legislative attempt to force some transparency.</description>
     </item>
     <item>
       <title>Infolob on YouTube</title>
-      <link>http://tobybase.com/links/2017-12-14-infolob-youtube/</link>
+      <link>https://tobybase.com/links/2017-12-14-infolob-youtube/</link>
       <pubDate>Thu, 14 Dec 2017 00:00:00 +0000</pubDate>
-      <guid>http://tobybase.com/links/2017-12-14-infolob-youtube/</guid>
+      <guid>https://tobybase.com/links/2017-12-14-infolob-youtube/</guid>
       <description>If you find this content helpful, do the &amp;ldquo;like and subscribe&amp;rdquo; thing to stay informed.</description>
     </item>
     <item>
       <title>Use Preview to View Formatted man Pages</title>
-      <link>http://tobybase.com/links/2013-07-24-view-man-pages/</link>
+      <link>https://tobybase.com/links/2013-07-24-view-man-pages/</link>
       <pubDate>Wed, 24 Jul 2013 00:00:00 +0000</pubDate>
-      <guid>http://tobybase.com/links/2013-07-24-view-man-pages/</guid>
+      <guid>https://tobybase.com/links/2013-07-24-view-man-pages/</guid>
       <description>This is an elegant solution for viewing, searching, and archiving man pages that eliminates the necessity for third party apps.&#xA;Update: still works in macOS Sierra.</description>
     </item>
     <item>
       <title>Safari 5.1.7 on my MacBookPro OSX 10.7.4 freezes unexpectedly</title>
-      <link>http://tobybase.com/links/2012-07-25-safari-517-freezes-on-macbook-pro/</link>
+      <link>https://tobybase.com/links/2012-07-25-safari-517-freezes-on-macbook-pro/</link>
       <pubDate>Wed, 25 Jul 2012 00:00:00 +0000</pubDate>
-      <guid>http://tobybase.com/links/2012-07-25-safari-517-freezes-on-macbook-pro/</guid>
+      <guid>https://tobybase.com/links/2012-07-25-safari-517-freezes-on-macbook-pro/</guid>
       <description>Lately I&amp;rsquo;ve been experiencing strange problems when clicking on links in Safari 5.1.7. Usually the progress indicator would either flash momentarily and do nothing, or else it would never appear at all. Pages would sometimes load, but after an unusual delay and with no indication that the browser was actually doing anything. I switched to Chrome as my default browser for a few days, but that was about all I could stand.</description>
     </item>
     <item>
       <title>Let the Database Do the Work</title>
-      <link>http://tobybase.com/links/2012-06-01-oracle-row-vs-set-processing/</link>
+      <link>https://tobybase.com/links/2012-06-01-oracle-row-vs-set-processing/</link>
       <pubDate>Fri, 01 Jun 2012 00:00:00 +0000</pubDate>
-      <guid>http://tobybase.com/links/2012-06-01-oracle-row-vs-set-processing/</guid>
+      <guid>https://tobybase.com/links/2012-06-01-oracle-row-vs-set-processing/</guid>
       <description>If you&amp;rsquo;re writing database-driven reports for the web, Craig Shallahamer shows why you should let the (Oracle) database handle as much of your selection and transformation logic as possible.</description>
     </item>
     <item>
       <title>Use SQLFiddle to Test New Features, Run Demos</title>
-      <link>http://tobybase.com/links/2012-05-25-sqlfiddle-is-a-sql-sandbox/</link>
+      <link>https://tobybase.com/links/2012-05-25-sqlfiddle-is-a-sql-sandbox/</link>
       <pubDate>Fri, 25 May 2012 00:00:00 +0000</pubDate>
-      <guid>http://tobybase.com/links/2012-05-25-sqlfiddle-is-a-sql-sandbox/</guid>
+      <guid>https://tobybase.com/links/2012-05-25-sqlfiddle-is-a-sql-sandbox/</guid>
       <description>Build your own mini-schema and run queries against it Publish your experiments for your friends to tweak Try out examples from your favorite SQL book without having to create your a database Works for Oracle, PostgreSQL, MySQL, and SQL Server flavors All in all, a pretty cool. Very useful for bloggers or teams.</description>
     </item>
   </channel>

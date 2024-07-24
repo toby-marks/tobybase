@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>PL-JRXML2PDF on 👨🏻‍💻 Tobybase</title>
-    <link>http://tobybase.com/tags/pl-jrxml2pdf/</link>
+    <link>https://tobybase.com/tags/pl-jrxml2pdf/</link>
     <description>Recent content in PL-JRXML2PDF on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 22 Feb 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://tobybase.com/tags/pl-jrxml2pdf/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tobybase.com/tags/pl-jrxml2pdf/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Generate PDF Reports for Free in Oracle Apex Using PL-JRXML2PDF and iReport Designer</title>
-      <link>http://tobybase.com/posts/2012-12-18-video-post/</link>
+      <link>https://tobybase.com/posts/2012-12-18-video-post/</link>
       <pubDate>Tue, 18 Dec 2012 00:00:00 +0000</pubDate>
-      <guid>http://tobybase.com/posts/2012-12-18-video-post/</guid>
+      <guid>https://tobybase.com/posts/2012-12-18-video-post/</guid>
       <description>Using Jaspersoft&amp;rsquo;s free iReport Designer tool and the open source PL-JRXML2PDF project, you can generate PDF reports from Oracle Apex for free, without having to install the JasperReports and JasperReports Server components. Watch my video tutorial to find out how.</description>
     </item>
   </channel>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>tuning on 👨🏻‍💻 Tobybase</title>
-    <link>http://tobybase.com/tags/tuning/</link>
+    <link>https://tobybase.com/tags/tuning/</link>
     <description>Recent content in tuning on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 23 Sep 2019 13:54:50 -0500</lastBuildDate>
-    <atom:link href="http://tobybase.com/tags/tuning/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tobybase.com/tags/tuning/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>3 Tips for Running SAS Queries on Oracle</title>
-      <link>http://tobybase.com/posts/sas-exadata-performance-tips/</link>
+      <link>https://tobybase.com/posts/sas-exadata-performance-tips/</link>
       <pubDate>Mon, 23 Sep 2019 13:54:50 -0500</pubDate>
-      <guid>http://tobybase.com/posts/sas-exadata-performance-tips/</guid>
+      <guid>https://tobybase.com/posts/sas-exadata-performance-tips/</guid>
       <description>I don&amp;rsquo;t know a whole lot about SAS, but on my current gig I am frequently called upon to tune queries that run in that environment. Here are three things I have learned to keep in mind as a SAS developer when running against Oracle database.&#xA;Use PRESERVE_COMMENTS This is most critical. In Oracle, SQL hints are specified in a specially formatted inline comment. Running a query or DML statement without those hints could be detrimental to performance.</description>
     </item>
   </channel>

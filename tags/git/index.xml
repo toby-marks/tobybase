@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>git on 👨🏻‍💻 Tobybase</title>
-    <link>http://tobybase.com/tags/git/</link>
+    <link>https://tobybase.com/tags/git/</link>
     <description>Recent content in git on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 19 May 2020 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://tobybase.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tobybase.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Restore Files From a Previous Version in Git/Github</title>
-      <link>http://tobybase.com/posts/how-to-recover-a-prior-version-on-github/</link>
+      <link>https://tobybase.com/posts/how-to-recover-a-prior-version-on-github/</link>
       <pubDate>Tue, 19 May 2020 17:09:28 -0500</pubDate>
-      <guid>http://tobybase.com/posts/how-to-recover-a-prior-version-on-github/</guid>
+      <guid>https://tobybase.com/posts/how-to-recover-a-prior-version-on-github/</guid>
       <description>Get the hash of the &amp;ldquo;good&amp;rdquo; version you want to recover You first need to identify where things went wrong. Then get the commit identifier (also called the hash) for the version immediately prior to that. (Also make sure you&amp;rsquo;re pulling from the appropriate branch; for simplicity&amp;rsquo;s sake, this example assumes all changes are being committed to the master branch.)&#xA;# git log commit 07c5f535743e3f70fcdf09c0d032580820ca38c9 Author: Toby Base &amp;lt;xxxxx@gmail.com&amp;gt; Date: Tue May 19 14:33:17 2020 -0500 Created content/post/my-newest-article.</description>
     </item>
   </channel>

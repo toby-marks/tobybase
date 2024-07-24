@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>News on 👨🏻‍💻 Tobybase</title>
-    <link>http://tobybase.com/categories/news/</link>
+    <link>https://tobybase.com/categories/news/</link>
     <description>Recent content in News on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 01 May 2018 09:05:54 -0500</lastBuildDate>
-    <atom:link href="http://tobybase.com/categories/news/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tobybase.com/categories/news/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>They Don&#39;t Need ML</title>
-      <link>http://tobybase.com/links/2018-05-01-sql-over-ml/</link>
+      <link>https://tobybase.com/links/2018-05-01-sql-over-ml/</link>
       <pubDate>Tue, 01 May 2018 09:05:54 -0500</pubDate>
-      <guid>http://tobybase.com/links/2018-05-01-sql-over-ml/</guid>
+      <guid>https://tobybase.com/links/2018-05-01-sql-over-ml/</guid>
       <description>I will write a query like select from order table where last shop date is 3 or greater months. When we get this information, we will send a nice &amp;ldquo;we miss you, come back and here&amp;rsquo;s X Naira voucher&amp;rdquo; email. The conversation rate for this one was always greater than 50%.&#xA;So-called artificial intelligence and machine learning tools are in fashion these days, and the impetus is to apply them to all problem sets.</description>
     </item>
     <item>
       <title>Finland is killing its world-famous basic income experiment	</title>
-      <link>http://tobybase.com/links/2018-04-19-finland-dumps-basic-income/</link>
+      <link>https://tobybase.com/links/2018-04-19-finland-dumps-basic-income/</link>
       <pubDate>Thu, 19 Apr 2018 15:18:45 -0500</pubDate>
-      <guid>http://tobybase.com/links/2018-04-19-finland-dumps-basic-income/</guid>
+      <guid>https://tobybase.com/links/2018-04-19-finland-dumps-basic-income/</guid>
       <description>In recent years, a growing number of tech entrepreneurs have endorsed universal basic income (UBI), a system system in which every individual receives a standard amount of money, simply for being alive.&#xA;And…&#xA;These tech moguls recognize that UBI, as well as combatting poverty, could also help solve the problem of increased robotization in the workforce, a problem they are very much part of creating.&#xA;This will be interesting. Official results of the experiment are to be published in 2019.</description>
     </item>
     <item>
       <title>Oracle Sees Autonomous Database Changing DBA Roles for the Good</title>
-      <link>http://tobybase.com/links/2018-04-10-oracle-sees-automation/</link>
+      <link>https://tobybase.com/links/2018-04-10-oracle-sees-automation/</link>
       <pubDate>Tue, 10 Apr 2018 12:47:23 -0500</pubDate>
-      <guid>http://tobybase.com/links/2018-04-10-oracle-sees-automation/</guid>
+      <guid>https://tobybase.com/links/2018-04-10-oracle-sees-automation/</guid>
       <description>If the tactical tasks are reduced &amp;ndash; or even eliminated &amp;ndash; DBAs will have more time to spend on higher level tasks, like data security, data lifecycle management, data architecture and data modeling, Colgan said.&#xA;I can&amp;rsquo;t be too worried about automation replacing the need for database professionals. The first time I recall hearing such claims was in 1999 with the advent of Oracle 9i. If what Colgan says is true, and there is every reason to believe it is, then the day to day work of DBAs and consultants like myself is only bound to become more interesting and productive.</description>
     </item>
     <item>
       <title>2017 Was Bad for Facebook. 2018 Will Be Worse.</title>
-      <link>http://tobybase.com/links/2017-12-15-2018-bad-year-for-facebook/</link>
+      <link>https://tobybase.com/links/2017-12-15-2018-bad-year-for-facebook/</link>
       <pubDate>Fri, 15 Dec 2017 00:00:00 +0000</pubDate>
-      <guid>http://tobybase.com/links/2017-12-15-2018-bad-year-for-facebook/</guid>
+      <guid>https://tobybase.com/links/2017-12-15-2018-bad-year-for-facebook/</guid>
       <description>While Facebook remains the biggest platform, Google and Twitter are facing similar pressure from governments in the U.S. and in Europe. Germany enacted a law requiring the social networks to remove hate speech promptly or face fines. In the U.S., the activities of a Russian troll farm during the 2016 election campaign prompted scrutiny of Facebook&amp;rsquo;s ad selling practices and a (rather ham-handed) legislative attempt to force some transparency.</description>
     </item>
     <item>
       <title>Announcing the Infolob YouTube Channel</title>
-      <link>http://tobybase.com/posts/infolob-youtube-channel/</link>
+      <link>https://tobybase.com/posts/infolob-youtube-channel/</link>
       <pubDate>Fri, 10 Mar 2017 00:00:00 +0000</pubDate>
-      <guid>http://tobybase.com/posts/infolob-youtube-channel/</guid>
+      <guid>https://tobybase.com/posts/infolob-youtube-channel/</guid>
       <description>I am honored to work with some wonderful and truly smart folks over at Infolob in Irving, Texas. The company recently started a YouTube channel and we are looking to add lots of great videos soon for your enjoyment and education.&#xA;Check us out!&#xA;In this short Oracle Platinum Partner Spotlight video, our Chief Technologist Tim Fox explains what we do as a company and the kinds of services we provide.</description>
     </item>
   </channel>

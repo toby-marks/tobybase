@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Microsoft Word on 👨🏻‍💻 Tobybase</title>
-    <link>http://tobybase.com/tags/microsoft-word/</link>
+    <link>https://tobybase.com/tags/microsoft-word/</link>
     <description>Recent content in Microsoft Word on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 22 Feb 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://tobybase.com/tags/microsoft-word/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tobybase.com/tags/microsoft-word/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How To Reset Page Numbering Between Document Sections in BI Publisher&#39;s Template Builder for Word</title>
-      <link>http://tobybase.com/posts/2013-06-14-resetting-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/</link>
+      <link>https://tobybase.com/posts/2013-06-14-resetting-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/</link>
       <pubDate>Fri, 14 Jun 2013 21:47:00 +0000</pubDate>
-      <guid>http://tobybase.com/posts/2013-06-14-resetting-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/</guid>
+      <guid>https://tobybase.com/posts/2013-06-14-resetting-page-numbering-between-document-sections-in-bi-publishers-template-builder-for-word/</guid>
       <description>Under normal circumstances, it is fairly easy in Microsoft Word to reset page numbering when starting a new section of your document. However, such a simple thing can be non-trivial when dealing with the BI Publisher Template Builder plugin for Microsoft Office (available from Oracle — see BI Publisher Desktop).&#xA;In short, doing this the normal way did not work for me, and in researching the issue I ran across a number of folks who were having the same problem.</description>
     </item>
   </channel>

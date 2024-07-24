@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Database on 👨🏻‍💻 Tobybase</title>
-    <link>http://tobybase.com/categories/database/</link>
+    <link>https://tobybase.com/categories/database/</link>
     <description>Recent content in Database on 👨🏻‍💻 Tobybase</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 10 Apr 2018 12:47:23 -0500</lastBuildDate>
-    <atom:link href="http://tobybase.com/categories/database/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tobybase.com/categories/database/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Oracle Sees Autonomous Database Changing DBA Roles for the Good</title>
-      <link>http://tobybase.com/links/2018-04-10-oracle-sees-automation/</link>
+      <link>https://tobybase.com/links/2018-04-10-oracle-sees-automation/</link>
       <pubDate>Tue, 10 Apr 2018 12:47:23 -0500</pubDate>
-      <guid>http://tobybase.com/links/2018-04-10-oracle-sees-automation/</guid>
+      <guid>https://tobybase.com/links/2018-04-10-oracle-sees-automation/</guid>
       <description>If the tactical tasks are reduced &amp;ndash; or even eliminated &amp;ndash; DBAs will have more time to spend on higher level tasks, like data security, data lifecycle management, data architecture and data modeling, Colgan said.&#xA;I can&amp;rsquo;t be too worried about automation replacing the need for database professionals. The first time I recall hearing such claims was in 1999 with the advent of Oracle 9i. If what Colgan says is true, and there is every reason to believe it is, then the day to day work of DBAs and consultants like myself is only bound to become more interesting and productive.</description>
     </item>
     <item>
       <title>Let the Database Do the Work</title>
-      <link>http://tobybase.com/links/2012-06-01-oracle-row-vs-set-processing/</link>
+      <link>https://tobybase.com/links/2012-06-01-oracle-row-vs-set-processing/</link>
       <pubDate>Fri, 01 Jun 2012 00:00:00 +0000</pubDate>
-      <guid>http://tobybase.com/links/2012-06-01-oracle-row-vs-set-processing/</guid>
+      <guid>https://tobybase.com/links/2012-06-01-oracle-row-vs-set-processing/</guid>
       <description>If you&amp;rsquo;re writing database-driven reports for the web, Craig Shallahamer shows why you should let the (Oracle) database handle as much of your selection and transformation logic as possible.</description>
     </item>
     <item>
       <title>Use SQLFiddle to Test New Features, Run Demos</title>
-      <link>http://tobybase.com/links/2012-05-25-sqlfiddle-is-a-sql-sandbox/</link>
+      <link>https://tobybase.com/links/2012-05-25-sqlfiddle-is-a-sql-sandbox/</link>
       <pubDate>Fri, 25 May 2012 00:00:00 +0000</pubDate>
-      <guid>http://tobybase.com/links/2012-05-25-sqlfiddle-is-a-sql-sandbox/</guid>
+      <guid>https://tobybase.com/links/2012-05-25-sqlfiddle-is-a-sql-sandbox/</guid>
       <description>Build your own mini-schema and run queries against it Publish your experiments for your friends to tweak Try out examples from your favorite SQL book without having to create your a database Works for Oracle, PostgreSQL, MySQL, and SQL Server flavors All in all, a pretty cool. Very useful for bloggers or teams.</description>
     </item>
   </channel>

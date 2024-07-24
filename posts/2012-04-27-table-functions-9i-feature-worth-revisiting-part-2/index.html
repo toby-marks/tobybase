@@ -16,23 +16,23 @@
     <meta property="og:title" content="Table Functions: 9i Feature Worth Revisiting (Part 2)" />
 <meta property="og:description" content="In part one of this series I showed a simple example of how table functions can be used to treat PL/SQL collection types as tables in a SQL query. We used a nested table collection type to which we manually added a few entries. In this example, I intend to show a more practical use of table functions using all three PL/SQL collection types: associative arrays, nested tables, and VARRAYs." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://tobybase.com/posts/2012-04-27-table-functions-9i-feature-worth-revisiting-part-2/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://tobybase.com/posts/2012-04-27-table-functions-9i-feature-worth-revisiting-part-2/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2012-04-27T22:35:00+00:00" />
 <meta property="article:modified_time" content="2017-02-22T00:00:00+00:00" />
-<meta property="og:see_also" content="http://tobybase.com/posts/2012-04-27-table-functions-9i-feature-worth-revisiting-part-1/" />
+<meta property="og:see_also" content="https://tobybase.com/posts/2012-04-27-table-functions-9i-feature-worth-revisiting-part-1/" />
 
 
 
 
     
-      <base href="http://tobybase.com/posts/2012-04-27-table-functions-9i-feature-worth-revisiting-part-2/">
+      <base href="https://tobybase.com/posts/2012-04-27-table-functions-9i-feature-worth-revisiting-part-2/">
     
     <title>
   Table Functions: 9i Feature Worth Revisiting (Part 2) · 👨🏻‍💻 Tobybase
 </title>
 
     
-      <link rel="canonical" href="http://tobybase.com/posts/2012-04-27-table-functions-9i-feature-worth-revisiting-part-2/">
+      <link rel="canonical" href="https://tobybase.com/posts/2012-04-27-table-functions-9i-feature-worth-revisiting-part-2/">
     
 
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
@@ -42,7 +42,7 @@
     
       
       
-      <link rel="stylesheet" href="http://tobybase.com/css/coder.min.a4f332213a21ce8eb521670c614470c58923aaaf385e2a73982c31dd7642decb.css" integrity="sha256-pPMyITohzo61IWcMYURwxYkjqq84XipzmCwx3XZC3ss=" crossorigin="anonymous" media="screen" />
+      <link rel="stylesheet" href="https://tobybase.com/css/coder.min.a4f332213a21ce8eb521670c614470c58923aaaf385e2a73982c31dd7642decb.css" integrity="sha256-pPMyITohzo61IWcMYURwxYkjqq84XipzmCwx3XZC3ss=" crossorigin="anonymous" media="screen" />
     
 
     
@@ -50,13 +50,13 @@
     
 
     
-      <link rel="stylesheet" href="http://tobybase.com/css/custom.css" />
+      <link rel="stylesheet" href="https://tobybase.com/css/custom.css" />
     
 
     
 
-    <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="http://tobybase.com/img/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="https://tobybase.com/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://tobybase.com/img/favicon-16x16.png" sizes="16x16">
 
     <meta name="generator" content="Hugo 0.122.0">
   </head>
@@ -67,7 +67,7 @@
     <main class="wrapper">
       <nav class="navigation">
   <section class="container">
-    <a class="navigation-title" href="http://tobybase.com/">
+    <a class="navigation-title" href="https://tobybase.com/">
       👨🏻‍💻 Tobybase
     </a>
     
@@ -77,15 +77,15 @@
       
         
           <li class="navigation-item">
-            <a class="navigation-link" href="http://tobybase.com/posts/">Blog</a>
+            <a class="navigation-link" href="https://tobybase.com/posts/">Blog</a>
           </li>
         
           <li class="navigation-item">
-            <a class="navigation-link" href="http://tobybase.com/links/">Links</a>
+            <a class="navigation-link" href="https://tobybase.com/links/">Links</a>
           </li>
         
           <li class="navigation-item">
-            <a class="navigation-link" href="http://tobybase.com/about/">About</a>
+            <a class="navigation-link" href="https://tobybase.com/about/">About</a>
           </li>
         
       
@@ -119,20 +119,20 @@
           </div>
           <div class="categories">
   <i class="fas fa-folder"></i>
-    <a href="http://tobybase.com/categories/sql/">SQL</a></div>
+    <a href="https://tobybase.com/categories/sql/">SQL</a></div>
 
           <div class="tags">
   <i class="fas fa-tag"></i>
-    <a href="http://tobybase.com/tags/oracle/">Oracle</a>
+    <a href="https://tobybase.com/tags/oracle/">Oracle</a>
       <span class="separator">•</span>
-    <a href="http://tobybase.com/tags/database/">database</a></div>
+    <a href="https://tobybase.com/tags/database/">database</a></div>
 
         </div>
       </header>
 
       <div>
         
-        <p>In <a href="http://tobybase.com/posts/2012-04-27-table-functions-9i-feature-worth-revisiting-part-1/-1">part one of this series</a> I showed a simple example of how table functions can be used to treat PL/SQL collection types as tables in a SQL query. We used a nested table collection type to which we manually added a few entries. In this example, I intend to show a more practical use of table functions using all three PL/SQL collection types: associative arrays, nested tables, and VARRAYs.</p>
+        <p>In <a href="https://tobybase.com/posts/2012-04-27-table-functions-9i-feature-worth-revisiting-part-1/-1">part one of this series</a> I showed a simple example of how table functions can be used to treat PL/SQL collection types as tables in a SQL query. We used a nested table collection type to which we manually added a few entries. In this example, I intend to show a more practical use of table functions using all three PL/SQL collection types: associative arrays, nested tables, and VARRAYs.</p>
 <p>Let&rsquo;s revisit a use case I alluded to in my earlier blog entry: incorporating LDAP data into a query. Suppose your task is to code a custom authorization scheme for an enterprise application reporting system. You want row access to be determined by a user&rsquo;s group memberships in the company&rsquo;s Active Directory server. If a user is assigned to &ldquo;the Company A group&rdquo; in Active Directory, he gets to see Company A&rsquo;s data. You can configure that kind of restriction at a database level using <a href="http://www.oracle.com/technetwork/database/security/index-088277.html">Oracle&rsquo;s Virtual Private Database</a> feature. Configuring VPD is beyond the scope of this blog entry, but ultimately you will be associating a table to a portion of a SQL WHERE clause that gets appended to every query written against that table. You can find more documentation on VPD <a href="http://download.oracle.com/docs/cd/B28359_01/network.111/b28531/vpd.htm">on the OTN site</a>. In this case, let&rsquo;s assume you know that another team has written a PL/SQL database package to query data from Active Directory, and you want to make use of that code. The only problem is that all the functions in that package return collections of various types, and you need to be able to access that information from the WHERE clause you are building with VPD. This is where table functions come in handy.</p>
 <p>Let&rsquo;s begin by setting up our example schema. We&rsquo;ll be looking at client sales data. First, let&rsquo;s set up our clients.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    <span style="font-weight:bold">CREATE</span> <span style="font-weight:bold">TABLE</span> clients (
@@ -505,7 +505,7 @@
         
           
             <li>
-              <a href="http://tobybase.com/posts/2012-04-27-table-functions-9i-feature-worth-revisiting-part-1/">Table Functions: 9i Feature Worth Revisiting (Part 1)</a>
+              <a href="https://tobybase.com/posts/2012-04-27-table-functions-9i-feature-worth-revisiting-part-1/">Table Functions: 9i Feature Worth Revisiting (Part 1)</a>
             </li>
           
         
