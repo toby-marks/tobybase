@@ -1,6 +1,6 @@
 [build]
 publish = "public"
-command = "hugo --themesDir=.. --baseURL $URL"
+command = "hugo --baseURL $URL"
 
 [build.environment]
 HUGO_VERSION = "0.147.7"
