@@ -1,4 +1,4 @@
-baseurl = "//tobybase.com"
+baseurl = "https://tobybase.com"
 title = "👨🏻‍💻 Tobybase"
 theme = "hugo-coder"
 languagecode = "en"
