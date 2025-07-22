@@ -4,7 +4,7 @@ command = "hugo --baseURL $URL"
 
 [build.environment]
 HUGO_VERSION = "0.147.7"
-HUGO_THEME = "coder"
+HUGO_THEME = "hugo-coder"
 
 [context.deploy-preview]
 command = "hugo --themesDir=.. --buildFuture --buildDrafts --baseURL $DEPLOY_PRIME_URL"
