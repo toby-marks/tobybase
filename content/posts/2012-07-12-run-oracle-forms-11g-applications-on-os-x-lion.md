@@ -10,4 +10,4 @@ Need to run your company's Oracle Forms application from your Mac, and can't? An
 
 Although it's not a strictly certified configuration, you may have better luck by running the JRE 1.7 Java plug-in, which was recently made available as a pre-release download. This works for OS X Lion 10.7.3 and above. Download the plug-in [from here](http://jdk7.java.net/macportpreview/) and follow the simple instructions on the page to install it. Now give your application another try, and hopefully you'll get the results I did! 
 
-![](/img/2012-07-12-run-oracle-forms-11g-applications-on-os-x-lion/8267cef641541001f78e2a3845a1349c5cc5c74dc6bf17b8a32fe537d9beaadd.jpg)
+![](/images/2012-07-12-run-oracle-forms-11g-applications-on-os-x-lion/8267cef641541001f78e2a3845a1349c5cc5c74dc6bf17b8a32fe537d9beaadd.jpg)

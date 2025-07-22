@@ -10,12 +10,12 @@ Occasionally when debugging my Javascript code I need to be able to analyze the 
 
 When you want to debug an object, simply pass it as a parameter to `console.debug`. Here is an example where I wanted to find out about the event trigger object passed to my event handler:
 
-![](/img/2012-10-26-use-firebugs-consoledebug-command-to-analyze-javascript-dom-objects/eda67a171f00051639dcf0d35e00ebfdd9309cf03876d1d915dfd7b1f1f7766f.png)
+![](/images/2012-10-26-use-firebugs-consoledebug-command-to-analyze-javascript-dom-objects/eda67a171f00051639dcf0d35e00ebfdd9309cf03876d1d915dfd7b1f1f7766f.png)
 
 After triggering the event, I opened the Firebug window and navigated to the console. From there I could drill down on the displayed results to get information about my unknown DOM object. 
 
-![](/img/2012-10-26-use-firebugs-consoledebug-command-to-analyze-javascript-dom-objects/55db6e09e44319deee6ef4a9938a20d72369d922637897e02b1b7d20a900cb43.png)
+![](/images/2012-10-26-use-firebugs-consoledebug-command-to-analyze-javascript-dom-objects/55db6e09e44319deee6ef4a9938a20d72369d922637897e02b1b7d20a900cb43.png)
 
-![](/img/2012-10-26-use-firebugs-consoledebug-command-to-analyze-javascript-dom-objects/38a39525404522f27ab3bf776a697f7e486f958723402ccff101a98014d54c0d.png)
+![](/images/2012-10-26-use-firebugs-consoledebug-command-to-analyze-javascript-dom-objects/38a39525404522f27ab3bf776a697f7e486f958723402ccff101a98014d54c0d.png)
 
 Turns out in this case that the event handler was attached to the wrong object, due to the "id" value being placed one level above in the DOM hierarchy than I was expecting. Tricky, but I was able to spot the problem immediately using this method.

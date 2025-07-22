@@ -10,7 +10,7 @@ In Windows, most applications provide menu and button accelerator keys that allo
 
 One place I use this frequently is the Enter Binds dialog window that pops up when running a query using bind variables. 
 
-![](/img/2013-01-09-button-hotkeys-in-sql-developer-on-os-x/f953827dc3e74e57df43fd0e48ff22b40ce119efaa74ce3712fd989522b02a6f.png)
+![](/images/2013-01-09-button-hotkeys-in-sql-developer-on-os-x/f953827dc3e74e57df43fd0e48ff22b40ce119efaa74ce3712fd989522b02a6f.png)
 
 In Java 6 on OS X, the hotkey for pressing the Help and Apply buttons was OPTION-H and OPTION-A, respectively.
 

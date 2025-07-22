@@ -10,7 +10,7 @@ The `ps` command is a versatile and configurable way to look at the processes ru
 
 If you look at the man page for `ps` you'll find a number of options available for sorting the list of processes returned as well as for filtering the columns displayed.
 
-![](/img/2013-07-24-linux-unix-use-ps-to-list-top-memory-cpu-eating-processes/ac6287b65af17b95d247ea063f0aa1bfc6f106f3b69adf0ae73ed8258d3a6c7b.png)
+![](/images/2013-07-24-linux-unix-use-ps-to-list-top-memory-cpu-eating-processes/ac6287b65af17b95d247ea063f0aa1bfc6f106f3b69adf0ae73ed8258d3a6c7b.png)
 
 Some examples of `ps` options, from RHEL 5.6:
 
@@ -67,4 +67,4 @@ alias pscpu="while :; do clear; ps -ecr -o %cpu,pid,user,state,args | head -n 10
 
 I have one alias for retrieving my top memory-utilizing processes and one for my top CPU-utilizing processes. The `while` loop in the alias implements a functionality similar to that of the Linux `watch` command, clearing the screen and running the process indefinitely until it is forcibly quit. For my own purposes I wanted to display some additional columns, like username and process state. I also changed the sort ordering to display the largest processes at the top of the list.
 
-![](/img/2013-07-24-linux-unix-use-ps-to-list-top-memory-cpu-eating-processes/2bcd3b2c40d8bc37893b47399aed325508e95c655492de8866a8365eede7008f.png)
+![](/images/2013-07-24-linux-unix-use-ps-to-list-top-memory-cpu-eating-processes/2bcd3b2c40d8bc37893b47399aed325508e95c655492de8866a8365eede7008f.png)
