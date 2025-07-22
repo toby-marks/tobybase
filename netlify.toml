@@ -3,7 +3,7 @@ publish = "public"
 command = "hugo --themesDir=../.. --baseURL $URL"
 
 [build.environment]
-HUGO_VERSION = "0.147.7+extended+withdeploy"
+HUGO_VERSION = "0.147.7"
 HUGO_THEME = "coder"
 
 [context.deploy-preview]
