@@ -177,20 +177,17 @@ url = "https://tobybase.com/index.xml"
 rel = "alternate"
 type = "application/rss+xml"
 
-[languages.en]
-languageName = ":us:"
-
-[[languages.en.menu.main]]
+[[menu.main]]
 name = "Blog"
 weight = 1
 url  = "/posts/"
 
-[[languages.en.menu.main]]
+[[menu.main]]
 name = "Links"
 weight = 2
 url  = "/links/"
 
-[[languages.en.menu.main]]
+[[menu.main]]
 name = "About"
 weight = 3
 url = "/about/"
