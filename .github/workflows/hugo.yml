@@ -60,6 +60,8 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
+      - name: Index site with pagefind
+        run: npx -y pagefind --site public
 
   # Deployment job
   deploy:
